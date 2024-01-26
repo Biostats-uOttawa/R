@@ -332,7 +332,7 @@ div.csl-indent {
 </header><p>Summarising your data, either numerically or graphically, is an important (if often overlooked) component of any data analysis. Fortunately, R has excellent graphics capabilities and can be used whether you want to produce plots for initial data exploration, model validation or highly complex publication quality figures. There are three main systems for producing graphics in R; base R graphics, lattice graphics and ggplot2.</p>
 <p>The base R graphics system is the original plotting system that’s been around (and has evolved) since the first days of R. When creating plots with base R we tend to use high level functions (like the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function) to first create our plot and then use one or more low level functions (like <code><a href="https://rdrr.io/r/graphics/lines.html">lines()</a></code> and <code><a href="https://rdrr.io/r/graphics/text.html">text()</a></code> etc) to add additional information to these plots. This can seem a little weird (and time consuming) when you first start creating fancy plots in R, but it does allow you to customise almost every aspect of your plot and build complexity up in layers. The flip side to this flexibility is that you’ll often need to make many decisions about how you want your plot to look rather than rely on the software to make these decisions for you. Having said that, it’s generally very quick and easy to generate simple exploratory plots with base R graphics.</p>
 <p>The lattice system is implemented in the <code>lattice()</code> package that comes pre-installed with the standard installation of R. However, it won’t be loaded by default so you’ll first need to use <code><a href="https://lattice.r-forge.r-project.org/">library(lattice)</a></code> to access all the plotting functions. Unlike base R graphics, lattice plots are mostly generated all in one go using a single function so there’s no need to use high and low level plotting functions to customise the look of a plot. This can be a real advantage as things like margin sizes and plot spacing are adjusted automatically. Lattice plots also make a few more decisions for you about how the plots will look but this comes with a slight cost as customising lattice plots to get them to look exactly how you want can become quite involved. Where lattice plots really shine is plotting complex multi-dimensional data using panel plots (also called trellis plots). We’ll see a couple of examples of these types of plots later in the Chapter.</p>
-<p><code>ggplot2</code> was based on a book called <em>Grammar of Graphics</em> by <span class="citation" data-cites="wilkinson2005">Wilkinson (<a href="#ref-wilkinson2005" role="doc-biblioref">2005</a>)</span>. For an interesting summary of Wilkinson’s book [here][leland-summary]. The <em>Grammar of Graphics</em> approach breaks figures down into their various components (e.g.&nbsp;the underlying statistics, the geometric arrangement, the theme, see <span class="citation" data-cites="ref">(<a href="#ref-ref" role="doc-biblioref"><strong>ref?</strong></a>)</span>(fig:ggplot2_fw)). Users are thus able to manipulate each of these components (i.e.&nbsp;layers) and produce a tailor-made figure fit for their specific needs.</p>
+<p><code>ggplot2</code> was based on a book called <em>Grammar of Graphics</em> by <span class="citation" data-cites="wilkinson2005">Wilkinson (<a href="98-references.html#ref-wilkinson2005" role="doc-biblioref">2005</a>)</span>. For an interesting summary of Wilkinson’s book [here][leland-summary]. The <em>Grammar of Graphics</em> approach breaks figures down into their various components (e.g.&nbsp;the underlying statistics, the geometric arrangement, the theme, see <a href="#fig-ggplot-str" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>). Users are thus able to manipulate each of these components (i.e.&nbsp;layers) and produce a tailor-made figure fit for their specific needs.</p>
 <p>Each of these systems have their strengths and weaknesses and we often use them interchangeably. In this Chapter we’ll introduce you to the both base R plotting function and the<code>ggplot2</code> package. It’s important to note that <code>ggplot2</code> is not <strong>required</strong> to make “fancy” and informative figures in R. If you prefer using base R graphics then feel free to continue as almost all <code>ggplot2</code> type figures can be created using base R (we often use either approach depending on what we’re doing). The difference between<code>ggplot2</code> and base R is how you <em>get</em> to the end product rather than any substantial differences in the end product itself. This is, never-the-less, a common belief probably due to the fact that making a moderately attractive figure is (in our opinion at least), easier to do with <code>ggplot2</code> as many aesthetic decisions are made for the user, without you necessarily even knowing that a decision was ever made!</p>
 <p>With that in mind, let’s get started making some figures.</p>
 <section id="simple-base-r-plots" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="simple-base-r-plots">
@@ -374,9 +374,13 @@ div.csl-indent {
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">shootarea</span> <span class="op">~</span> <span class="va">weight</span>, data <span class="op">=</span> <span class="va">flowers</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-plot5" class="quarto-figure quarto-figure-center quarto-float anchored" width="75%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-graphics_short_files/figure-html/fig-plot5-1.png" id="fig-plot5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -403,9 +407,13 @@ div.csl-indent {
 <span class="header-section-number">4.2</span> ggplot2</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/full_connected.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-<figcaption>framework behind ggplot2</figcaption></figure>
+<div id="fig-ggplot-str" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-ggplot-str-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/full_connected.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ggplot-str-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Structure of graphics with ggplot2
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -416,7 +424,7 @@ div.csl-indent {
 <li>a geometry layer</li>
 </ul>
 <p>The data and mapping are provided within the called to the <code>ggplot()</code> function with the <code>data</code> and <code>mapping</code> arguments. The geometry layer is added using specific functions.</p>
-<p>To redo the figure <span class="citation" data-cites="ref">(<a href="#ref-ref" role="doc-biblioref"><strong>ref?</strong></a>)</span>(fig:plot5), that contain only a scatterplot of point we can use the <code>geom_point()</code> function.</p>
+<p>To redo the <a href="#fig-plot5" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>, that contain only a scatterplot of point we can use the <code>geom_point()</code> function.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">flowers</span>,</span>
@@ -424,9 +432,13 @@ div.csl-indent {
 <span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot5_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-plot5-gg" class="quarto-figure quarto-figure-center quarto-float anchored" width="75%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-gg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-graphics_short_files/figure-html/fig-plot5-gg-1.png" id="fig-plot5-gg" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-plot5-gg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -435,11 +447,11 @@ div.csl-indent {
 <span class="header-section-number">4.3</span> Simple plots</h2>
 <section id="scatterplots" class="level3" data-number="4.3.1"><h3 data-number="4.3.1" class="anchored" data-anchor-id="scatterplots">
 <span class="header-section-number">4.3.1</span> Scatterplots</h3>
-<p>Simple type of plots really useful to have a look at the relation between 2 variables for example. Here are the code to do it using either base R <span class="citation" data-cites="ref">(<a href="#ref-ref" role="doc-biblioref"><strong>ref?</strong></a>)</span>(fig:plot5)</p>
+<p>Simple type of plots really useful to have a look at the relation between 2 variables for example. Here are the code to do it using base R (<a href="#fig-plot5" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>)</p>
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">shootarea</span> <span class="op">~</span> <span class="va">weight</span>, data <span class="op">=</span> <span class="va">flowers</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>or ggplot <span class="citation" data-cites="ref">(<a href="#ref-ref" role="doc-biblioref"><strong>ref?</strong></a>)</span>(fig:plot5_gg)</p>
+<p>or ggplot (<a href="#fig-plot5-gg" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>)</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">flowers</span>,</span>
@@ -457,7 +469,7 @@ div.csl-indent {
 <span>  <span class="fu">stat_smooth</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot5_gg_line-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot5-gg-line-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -484,7 +496,7 @@ div.csl-indent {
 </div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot7_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot7-gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -507,7 +519,7 @@ div.csl-indent {
 <span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"petunia height"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot8_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot8-gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -546,7 +558,7 @@ div.csl-indent {
 <span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"petunia height"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot10_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot10-gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -570,7 +582,7 @@ div.csl-indent {
 <span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"weight (g)"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot11_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot11-gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -595,7 +607,7 @@ div.csl-indent {
 <span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Weight (g)"</span>, x <span class="op">=</span> <span class="st">"Nitrogen Concentration"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot12_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot12-gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -635,7 +647,7 @@ div.csl-indent {
 <span>  <span class="fu">facet_grid</span><span class="op">(</span><span class="va">.</span> <span class="op">~</span> <span class="va">treat</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot14_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot14-gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -666,7 +678,7 @@ div.csl-indent {
 <span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Weight (g)"</span>, x <span class="op">=</span> <span class="st">"Nitrogen Concentration"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot16_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot16-gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -707,7 +719,7 @@ div.csl-indent {
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggdotchart</span><span class="op">(</span>data<span class="op">=</span><span class="va">flowers</span>, x<span class="op">=</span><span class="st">"height"</span>, y<span class="op">=</span> <span class="st">"nitrogen"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot19_gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<figure class="figure"><p><img src="04-graphics_short_files/figure-html/plot19-gg-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -857,7 +869,7 @@ div.csl-indent {
 <p><strong>Went for walk to be edited</strong></p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-wilkinson2005" class="csl-entry" role="listitem">
 Wilkinson, L. 2005. The <span>Grammar</span> of <span>Graphics</span>. <span>Springer Science &amp; Business Media</span>.
 </div>

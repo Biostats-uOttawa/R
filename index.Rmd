@@ -1,19 +1,23 @@
 
 # Preface {.unnumbered}
 
+
+```{r links, child="_links.md"}
+```
 ```{r create_chunk_options2, include=FALSE, eval=knitr::is_latex_output()}
 # source('scripts_and_filters/create_chunk_options.R')
 source("wrap_lines.R")
 ```
-----
 
 ## The aim of this book {.unnumbered}
 
-The aim of this book is to introduce you to using R, a powerful and flexible interactive environment for statistical computing and research. R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be a little steep and somewhat daunting. It is not intended to cover everything there is to know about R but simply to help you climb the initial learning curve and provide you with the basic skills and experience (and confidence!) to enable you to further your experience in using R.
+The aim of this book is to introduce you to using R, a powerful and flexible interactive environment for statistical computing and research.
+R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be a little steep and somewhat daunting.
+It is not intended to cover everything there is to know about R but simply to help you climb the initial learning curve and provide you with the basic skills and experience (and confidence!) to enable you to further your experience in using R.
 
 ## How to use this book {.unnumbered}
 
-For the best experience we recommend that you read the web version of this book which you can find [here][book]. The web version includes a navbar at the top of the page where you can toggle the sidebars on and off , search through the book, change the page color and suggest revisions if you spot a typo or mistake. You can also download a pdf and epub versions of the book. 
+For the best experience we recommend that you read the web version of this book which you can find [here][book]. The web version includes a navbar at the top of the page where you can toggle the sidebars on and off, search through the book, change the page color and suggest revisions if you spot a typo or mistake. You can also download a pdf and epub versions of the book. 
 
 We use a few typographical conventions throughout this book. 
 
@@ -27,10 +31,32 @@ In the book text we refer to R functions using code font followed by a set of ro
 
 We refer to objects that we create using code font without the round brackets, i.e. `obj1`, `obj2` etc.
 
-A series of actions required to access menu commands in RStudio are identified as `File` -> `New File` -> `R Script` which translates to 'click on the File menu, then click on New File and then select R Script'.
+A series of actions required to access menu commands in RStudio or VSCode are identified as `File` -> `New File` -> `R Script` which translates to 'click on the File menu, then click on New File and then select R Script'.
 
 Clickable links to sections in the book or to external websites are highlighted in light blue text, i.e. [link][cran].
 
+The manual tries to highlight some part of the text using the following boxes and icons.
+
+
+::: {.callout-caution}
+# Exercises
+:::
+
+::: {.callout-note}
+# Solutions
+:::
+
+::: {.callout-warning}
+warnings
+:::
+
+::: {.callout-important}
+important points
+:::
+
+::: {.callout-note}
+notes
+:::
 
 ## Some R pointers {.unnumbered}
 
@@ -46,15 +72,13 @@ Good luck and don’t forget to have fun.
 
 ## Thanks {.unnumbered}
 
-This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau. It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified following my own needs and teaching perspective of R. This also included a full translation in french to provide this resource in both language.
+This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau [@douglas2023]. It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified and updated following my own needs and teaching perspective of R. This also included a full translation in french to provide this resource in both language.
 
 ## License {.unnumbered}
 
-I share this modified version of the [original book][RbookAD] under the license [License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+I share this modified version of the [original book][https://intro2r.com/] under the license [License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ![License Creative Commons](images/license_cc.png)
 
 If you teach R, feel free to use some or all of the content in this book to help support your own students. The only thing I ask is that you acknowledge the original source and authors. If you find this book useful or have any comments or suggestions I would love to hear from you  ([contact info][whoarewe]).
 
-```{r links, child="_links.md"}
-```

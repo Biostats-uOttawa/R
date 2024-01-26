@@ -64,7 +64,7 @@ book:
   appendices:
     - 99-Appendix.Rmd
 
-bibliography: [book.bib, packages.bib]
+bibliography: [book.bib, grateful-refs.bib]
 biblio-style: apalike
 csl: ecology.csl
 
