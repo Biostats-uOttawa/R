@@ -19,3 +19,4 @@ extra/
 !docs/*_files/
 
 /.quarto/
+/_book/
