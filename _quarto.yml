@@ -7,6 +7,7 @@ execute:
   freeze: auto
 
 book:
+  google-analytics: G-6LLMGL3T2Q
   title: "On the R-way to hell"
   subtitle: "An introduction to the marvelous world of R"
   description: "Early version needed to be severely updated/modified"
