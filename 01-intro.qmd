@@ -68,7 +68,7 @@ Note: you must install R before you install RStudio (see [previous section](#ins
 
 VSCode is freely available for Windows, Mac and Linux operating systems and can be downloaded from the [VS Code site][vscode].
 Note: you must install R before you install RStudio (see [previous section](#install_r) for details).
-In addition you need to install the R extension to VSCode.
+In addition you need to install the [R extension to VSCode](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r).
 
 ### Alternatives to RStudio and VSCode
 
@@ -200,6 +200,52 @@ We will go over how to view the help files and how to search for help in [Chapte
 
 ### VSCode{#vscode_orient}
 
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics(path = "images/ch-01/vs_orient.png")
+```
+
+#### Left panel
+
+Contains :
+
+* File manager and file outline
+* R support including R environment/ R search / R help / install packages
+* Github interaction
+
+::: {#fig-vs-left-panel layout-ncol=3}
+
+![file](images/ch-01/vs_file_panel.png){#fig-vsfile}
+
+![git](images/ch-01/vs_git_panel.png){#fig-vsgit}
+
+![r-ext](images/ch-01/vs_r_ext_panel.png){#fig-vsr}
+
+VS Code left panel
+:::
+
+
+#### Editor tabs
+
+Includes:
+
+- plot panel (with history and navigation)
+- edition of scripts
+- preview panels
+
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics(path = "images/ch-01/vs_editor_tabs.png")
+```
+
+#### Terminal window
+
+Contains:
+
+- the terminal allowing to have an R session or any other type of terminals needed (bash/tmux/). It can be split and run multiple sessions at the same time
+- a problems pane highlighting both grammar and coding problems
+
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics(path = "images/ch-01/vs_term_panel.png")
+```
 
 ## R packages {#packages}
 
