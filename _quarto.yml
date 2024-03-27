@@ -50,14 +50,14 @@ book:
             href: https://biostats-uottawa.github.io/intro_r_fr.html
 
   chapters:
-    - index.Rmd
-    - 01-intro.Rmd
+    - index.qmd
+    - 01-intro.qmd
     - 02-basics.Rmd
     - 03-data.Rmd
-    - 04-graphics_short.qmd
-    - 05-stats.Rmd
+#    - 04-graphics_short.qmd
+    - 05-stats.qmd
     - 06-programming.Rmd
-    - 07-rmarkdown.Rmd
+    - 07-rmarkdown.qmd
     - 08-github.Rmd
     - 98-references.qmd
   appendices:

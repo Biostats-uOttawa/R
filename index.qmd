@@ -33,8 +33,15 @@ We refer to objects that we create using code font without the round brackets, i
 
 A series of actions required to access menu commands in RStudio or VSCode are identified as `File` -> `New File` -> `R Script` which translates to 'click on the File menu, then click on New File and then select R Script'.
 
-Clickable links to sections in the book or to external websites are highlighted in light blue text, i.e. [link][cran].
+::: {.callout-important}
+# Important Notation
 
+- **IDE**: when we refer to IDE we mean either RStudio of VScode
+
+- **\[Rq\]md**: We refer to R markdown or Quarto documents
+:::
+
+<!--
 The manual tries to highlight some part of the text using the following boxes and icons.
 
 
@@ -58,6 +65,8 @@ important points
 notes
 :::
 
+-->
+
 ## Some R pointers {.unnumbered}
 
 - Use R often and use it regularly - find any excuse to fire up R and get coding. This will help build and maintain all important momentum. 
@@ -72,7 +81,7 @@ Good luck and don’t forget to have fun.
 
 ## Thanks {.unnumbered}
 
-This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau [@douglas2023]. It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified and updated following my own needs and teaching perspective of R. This also included a full translation in french to provide this resource in both language.
+This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau [@douglas2023]. It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified and updated following my own needs and teaching perspective of R. This also included a full translation in french to provide this resource in both language and a plan to extend the project to multilingual versions.
 
 ## License {.unnumbered}
 

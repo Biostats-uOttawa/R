@@ -1,7 +1,9 @@
 # Simple Statistics in R {#stats_r}
 
->To be developed (need to decide what I want in that chapter)
->Potentially just list a few functions since it is not at all about stats but more about rather
+:::{.callout-warning}
+To be developed (need to decide what I want in that chapter)
+Potentially just list a few functions since it is not at all about stats but more about r
+:::
 
 ## Simple linear modelling {#simple_lm}
 

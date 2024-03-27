@@ -1,4 +1,11 @@
 # Graphics with R {#graphics_r}
+
+<!-- need to
+add info about ggplot
+redo diagram with mermaid
+do a ggplot extensive description
+-->
+
 ```{r, include = FALSE}
 library(ggplot2)
 library(ggcleveland)

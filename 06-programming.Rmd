@@ -1,14 +1,10 @@
 # Programming in R {#prog_r}
 
-After learning the basics, programming in R is the next big step towards attaining coding nirvana. In R this freedom is gained by being able to wield and manipulate code to get it to do exactly what you want, rather than contort, bend and restrict yourself to what others have built. It's worth remembering that many packages are written with the goal of solving a problem the author had. Your problem may be similar, but not exactly the same. In such cases you could contort, bend and restrict your data so that it works with the package, or you could build your own functions that solve your specific problems.
-
-But there are already a vast number of R packages available, surely more than enough to cover everything you could possibly want to do? Why then, would you ever need to use R as a programming language? Why not just stick to the functions from a package? Well, in some cases you'll want to customise those existing functions to suit your specific needs. Or you may want to implement an approach that's hot off the press or you've come up with an entirely novel idea, which means there won't be any pre-existing packages that work for you. Both of these are not particularly common early-on when you start using R, but you may well find as you progress, the reliance on existing functions becomes a little limiting. In addition, if you ever start using more advanced statistical approaches (i.e. Bayesian inference coded through Stan or JAGS) then an understanding of basic programming constructs, especially loops, becomes fundamental.
-
-In this Chapter we'll explore the basics of the programming side of R. Even if you never create your own function, you will at the very least use functions on a daily basis. Pulling back the curtain and showing the nitty-gritty of how these work will hopefully, in the worst case, help your confidence and in the best case, provide a starting point for doing some clever coding.
+After learning the basics, programming in R is the next big step. There are already a vast number of R packages available, surely more than enough to cover everything you could possibly want to do? Why then, would you ever need to create you own R functions? Why not just stick to the functions from a package? Well, in some cases you'll want to customise those existing functions to suit your specific needs. Or you may want to implement a new approach which means there won't be any pre-existing packages that work for you. Both of these are not particularly common. Functions are mainly used to do one thing well in a simple manner without having to type of the code necessary to do that function each time. We can see functions as a short-cut to copy-pasting. If you have to do a similar task 4 times or more, build a function for it, and simply call that function 4 times or call it in a loop .
 
 ## Looking behind the curtain
 
-A good way to start learning to program in R is to see what others have done. We can start by briefly peeking behind the curtain. In [Chapter 5](#graphics_r) we made use of the `theme_classic()` function when customising our `ggplot` figures. With many functions in R, if you want to have a quick glance at the machinery behind the scenes, we can simply write the function name but without the `()`. This is the same trick we used in [Chapter 5](#graphics_r) to alter the `theme_classic()` style of `ggplot2`\index{ggplot2 package} to make `theme_rbook()`\index{theme\_rbook()}.
+A good way to start learning to program in R is to see what others have done. We can start by briefly peeking behind the curtain. In [Chapter 5](#graphics_r) we made use of the `theme_classic()` function when customising our `ggplot` figures. With many functions in R, if you want to have a quick glance at the machinery behind the scenes, we can simply write the function name but without the `()`. This is the same trick we used in [Chapter 5](#graphics_r) to alter the `theme_classic()` style of `ggplot2` to make `theme_rbook()`\index{theme\_rbook()}.
 
 Note that to view the source code of base R packages (those that come with R) requires some additional steps which we won't cover here (see this [link][show-code] if you're interested), but for most other packages that you install yourself, generally entering the function name without `()` will show the source code of the function.
 
@@ -16,7 +12,7 @@ Note that to view the source code of base R packages (those that come with R) re
 library(ggplot2)
 ```
 
-```{r theme_function }
+```{r theme_function}
 theme_classic
 ```
 
@@ -44,7 +40,7 @@ This can be illustrated in the pseudocode below. When we make a function we can 
 nameOfFunction <- function(argument1, argument2, ...) {expression}
 ```
 
-The first thing to note is that we've used the function `function()`\index{function()} to create a new function called `nameOfFunction`. To walk through the above code; we're creating a function called `nameOfFunction`. Within the round brackets we specify what information (i.e. arguments) the function requires to run (as many or as few as needed). These arguments are then passed to the expression part of the function. The expression can be any valid R command or set of R commands and is usually contained between a pair of braces `{ }` (if a function is only one line long you can omit the braces). Once you run the above code, you can then use your new function by typing:
+The first thing to note is that we've used the function `function()` to create a new function called `nameOfFunction`. To walk through the above code; we're creating a function called `nameOfFunction`. Within the round brackets we specify what information (i.e. arguments) the function requires to run (as many or as few as needed). These arguments are then passed to the expression part of the function. The expression can be any valid R command or set of R commands and is usually contained between a pair of braces `{ }` (if a function is only one line long you can omit the braces). Once you run the above code, you can then use your new function by typing:
 
 ```{r run_function, out.width="75%", eval = FALSE}
 nameOfFunction(argument1, argument2)
@@ -52,7 +48,7 @@ nameOfFunction(argument1, argument2)
 
 Confused? Let's work through an example to help clear things up.
 
-First we are going to create a data frame called `city`, where columns `porto`, `aberdeen`, `nairobi`, and `genoa` are filled with 100 random values drawn from a bag (using the `rnorm()`\index{rnorm()} function to draw random values from a Normal distribution with mean 0 and standard deviation of 1). We also include a "problem", for us to solve later, by including 10 `NA` values within the `nairobi` column (using `rep(NA, 10)`).
+First we are going to create a data frame called `city`, where columns `porto`, `aberdeen`, `nairobi`, and `genoa` are filled with 100 random values drawn from a bag (using the `rnorm()` function to draw random values from a Normal distribution with mean 0 and standard deviation of 1). We also include a "problem", for us to solve later, by including 10 `NA` values within the `nairobi` column (using `rep(NA, 10)`).
 
 ```{r df, out.width="75%"}
 city <- data.frame(
@@ -108,7 +104,7 @@ y <- city$nairobi
 aberdeen_nairobi <- x * y
 ```
 
-This is essentially what a function does. OK down to business, let's call our new function `multiply_columns()` and define it with two arguments, `x` and `y`. In the function code we simply return the value of `x * y` using the `return()`\index{return()} function. Using the `return()` function is not strictly necessary in this example as R will automatically return the value of the last line of code in our function. We include it here to make this explicit. 
+This is essentially what a function does. OK down to business, let's call our new function `multiply_columns()` and define it with two arguments, `x` and `y`. In the function code we simply return the value of `x * y` using the `return()` function. Using the `return()` function is not strictly necessary in this example as R will automatically return the value of the last line of code in our function. We include it here to make this explicit. 
 
 ```{r first_function}
 multiply_columns <- function(x, y) {
@@ -125,7 +121,7 @@ porto_aberdeen_func
 
 If we're only interested in multiplying `city$porto` and `city$aberdeen`, it would be overkill to create a function to do something once. However, the benefit of creating a function is that we now have that function added to our environment which we can use as often as we like. We also have the code to create the function, meaning we can use it in completely new projects, reducing the amount of code that has to be written (and retested) from scratch each time. As a rule of thumb, you should consider writing a function whenever you’ve copied and pasted a block of code more than twice.
 
-To satisfy ourselves that the function has worked properly, we can compare the `porto_aberdeen` variable with our new variable `porto_aberdeen_func` using the `identical()`\index{identical()} function. The `identical()` function tests whether two objects are *exactly* identical and returns either a `TRUE` or `FALSE` value. Use `?identical` if you want to know more about this function.
+To satisfy ourselves that the function has worked properly, we can compare the `porto_aberdeen` variable with our new variable `porto_aberdeen_func` using the `identical()` function. The `identical()` function tests whether two objects are *exactly* identical and returns either a `TRUE` or `FALSE` value. Use `?identical` if you want to know more about this function.
 
 ```{r identical_check }
 identical(porto_aberdeen, porto_aberdeen_func)
@@ -165,7 +161,7 @@ The core of our function is still the same. We still have `x * y`, but we've now
 
 `x * y` does not apply any logic. It merely takes the value of `x` and multiplies it by the value of `y`. Conditional statements are how you inject some logic into your code. The most commonly used conditional statement is `if`. Whenever you see an `if` statement, read it as *'If X is TRUE, do a thing'*. Including an `else` statement simply extends the logic to *'If X is TRUE, do a thing, or else do something different'*.
 
-Both the `if`\index{if()} and `else`\index{else} statements allow you to run sections of code, depending on a condition is either `TRUE` or `FALSE`. The pseudocode below shows you the general form.
+Both the `if` and `else` statements allow you to run sections of code, depending on a condition is either `TRUE` or `FALSE`. The pseudocode below shows you the general form.
 
 ```r
   if (condition) {
@@ -177,17 +173,15 @@ Both the `if`\index{if()} and `else`\index{else} statements allow you to run sec
 
 To delve into this a bit more, we can use an old programmer joke to set up a problem.
 
----
 
-A programmer's partner says: *'Please go to the store and buy a carton of milk and if they have eggs, get six.'* 
+> A programmer's partner says: *'Please go to the store and buy a carton of milk and if they have eggs, get six.'* 
+> 
+> The programmer returned with 6 cartons of milk.
+> 
+> When the partner sees this, and exclaims *'Why the heck did you buy six cartons of milk?'*
+> 
+> The programmer replied *'They had eggs'*
 
-The programmer returned with 6 cartons of milk.
-
-When the partner sees this, and exclaims *'Why the heck did you buy six cartons of milk?'*
-
-The programmer replied *'They had eggs'*
-
----
 
 
 At the risk of explaining a joke, the conditional statement here is whether or not the store had eggs. If coded as per the original request, the programmer should bring 6 cartons of milk if the store had eggs (condition = TRUE), or else bring 1 carton of milk if there weren't any eggs (condition = FALSE). In R this is coded as:
@@ -210,7 +204,7 @@ n.milk
 
 And just like the joke, our R code has missed that the condition was to determine whether or not to buy eggs, not more milk (this is actually a loose example of the [Winograd Scheme][winograd], designed to test the *intelligence* of artificial intelligence by whether it can reason what the intended referent of a sentence is).
 
-We could code the exact same egg-milk joke conditional statement using an `ifelse()`\index{ifelse()} function.
+We could code the exact same egg-milk joke conditional statement using an `ifelse()` function.
 
 ```{r ifelse }
 eggs <- TRUE
@@ -261,7 +255,10 @@ multiply_columns <- function(x, y) {
 }
 ```
 
-In this new version of the function we still use `x * y` as before but this time we've assigned the values from this calculation to a temporary vector called `temp_var` so we can use it in our conditional statements. Note, this `temp_var` variable is *local* to our function and will not exist outside of the function due something called [R's scoping rules][scoping]. We then use an `if` statement to determine whether our `temp_var` variable contains any `NA` values. The way this works is that we first use the `is.na()`\index{is.na()} function to test whether each value in our `temp_var` variable is an `NA`. The `is.na()` function returns `TRUE` if the value is an `NA` and `FALSE` if the value isn't an `NA`. We then nest the `is.na(temp_var)` function inside the function `any()`\index{any()} to test whether **any** of the values returned by `is.na(temp_var)` are `TRUE`. If at least one value is `TRUE` the `any()` function will return a `TRUE`. So, if there are any `NA` values in our `temp_var` variable the condition for the `if()` function will be `TRUE` whereas if there are no `NA` values present then the condition will be `FALSE`. If the condition is `TRUE` the `warning()`\index{warning()} function generates a warning message for the user and then returns the `temp_var` variable. If the condition is `FALSE` the code below the `else` statement is executed which just returns the `temp_var` variable. 
+In this new version of the function we still use `x * y` as before but this time we've assigned the values from this calculation to a temporary vector called `temp_var` so we can use it in our conditional statements. Note, this `temp_var` variable is *local* to our function and will not exist outside of the function due something called [R's scoping rules][scoping]. We then use an `if` statement to determine whether our `temp_var` variable contains any `NA` values. The way this works is that we first use the `is.na()` function to test whether each value in our `temp_var` variable is an `NA`.
+The `is.na()` function returns `TRUE` if the value is an `NA` and `FALSE` if the value isn't an `NA`. We then nest the `is.na(temp_var)` function inside the function `any()` to test whether **any** of the values returned by `is.na(temp_var)` are `TRUE`.
+If at least one value is `TRUE` the `any()` function will return a `TRUE`. So, if there are any `NA` values in our `temp_var` variable the condition for the `if()` function will be `TRUE` whereas if there are no `NA` values present then the condition will be `FALSE`.
+If the condition is `TRUE` the `warning()` function generates a warning message for the user and then returns the `temp_var` variable. If the condition is `FALSE` the code below the `else` statement is executed which just returns the `temp_var` variable. 
 
 So if we run our modified `multiple_columns()` function on the columns `city$Aberdeen` and `city$nairobi` (which contains `NA`s) we will receive an warning message.
 
@@ -409,7 +406,7 @@ for (i in 1:(ncol(city) - 1)) {
 }
 ```
 
-When we specify our `for` loop notice how we subtracted 1 from `ncol(city)`. The `ncol()`\index{ncol()} function returns the number of columns in our `city` data frame which is `4` and so our loop runs from `i = 1` to `i = 4 - 1` which is `i = 3`. We'll come back to why we need to subtract 1 from this in a minute.
+When we specify our `for` loop notice how we subtracted 1 from `ncol(city)`. The `ncol()` function returns the number of columns in our `city` data frame which is `4` and so our loop runs from `i = 1` to `i = 4 - 1` which is `i = 3`. We'll come back to why we need to subtract 1 from this in a minute.
 
 So in the first iteration of the loop `i` takes on the value `1`. The `multiply_columns()` function multiplies the `city[, 1]` (`porto`) and `city[, 1 + 1]` (`aberdeen`) columns and stores it in the `temp[[1]]` which is the first element of the `temp` list. 
 
