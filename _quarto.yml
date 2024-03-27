@@ -52,9 +52,9 @@ book:
   chapters:
     - index.qmd
     - 01-intro.qmd
-    - 02-basics.Rmd
+    - 02-basics.qmd
     - 03-data.Rmd
-#    - 04-graphics_short.qmd
+    - 04-graphics_short.qmd
     - 05-stats.qmd
     - 06-programming.Rmd
     - 07-rmarkdown.qmd
