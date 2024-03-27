@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.544">
+<meta name="generator" content="quarto-1.4.550">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
-<meta name="dcterms.date" content="2024-01-29">
+<meta name="dcterms.date" content="2024-03-27">
 <meta name="description" content="Early version needed to be severely updated/modified">
 <title>On the R-way to hell</title>
 <style>
@@ -121,7 +121,13 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="css/style.css">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6LLMGL3T2Q"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
+</script><link rel="stylesheet" href="css/style.css">
 </head>
 <body class="nav-sidebar floating nav-fixed">
 
@@ -255,7 +261,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07-rmarkdown.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown / Quarto</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -305,7 +311,7 @@ div.csl-indent {
   <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
   </ul>
 </li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/index.Rmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -332,7 +338,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024-01-29</p>
+      <p class="date">2024-03-27</p>
     </div>
   </div>
   
@@ -372,64 +378,47 @@ div.csl-indent {
 <p>In the book text we refer to R functions using code font followed by a set of round brackets, i.e.&nbsp;<code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> or <code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code> etc.</p>
 <p>We refer to objects that we create using code font without the round brackets, i.e.&nbsp;<code>obj1</code>, <code>obj2</code> etc.</p>
 <p>A series of actions required to access menu commands in RStudio or VSCode are identified as <code>File</code> -&gt; <code>New File</code> -&gt; <code>R Script</code> which translates to ‘click on the File menu, then click on New File and then select R Script’.</p>
-<p>Clickable links to sections in the book or to external websites are highlighted in light blue text, i.e.&nbsp;<a href="https://cloud.r-project.org">link</a>.</p>
-<p>The manual tries to highlight some part of the text using the following boxes and icons.</p>
-<div class="callout callout-style-simple callout-caution callout-titled">
+<div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercises
+Important Notation
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>IDE</strong>: when we refer to IDE we mean either RStudio of VScode</p></li>
+<li><p><strong>[Rq]md</strong>: We refer to R markdown or Quarto documents</p></li>
+</ul>
+</div>
+</div>
+<!--
+The manual tries to highlight some part of the text using the following boxes and icons.
 
-</div>
-</div>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solutions
-</div>
-</div>
-<div class="callout-body-container callout-body">
 
-</div>
-</div>
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>warnings</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>important points</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>notes</p>
-</div>
-</div>
-</div>
+::: {.callout-caution}
+# Exercises
+:::
+
+::: {.callout-note}
+# Solutions
+:::
+
+::: {.callout-warning}
+warnings
+:::
+
+::: {.callout-important}
+important points
+:::
+
+::: {.callout-note}
+notes
+:::
+
+-->
 </section><section id="some-r-pointers" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="some-r-pointers">Some R pointers</h2>
 <ul>
 <li>Use R often and use it regularly - find any excuse to fire up R and get coding. This will help build and maintain all important momentum.</li>
@@ -442,7 +431,7 @@ Solutions
 </ul>
 <p>Good luck and don’t forget to have fun.</p>
 </section><section id="thanks" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="thanks">Thanks</h2>
-<p>This book started as a fork on github from the excellent <a href="https://intro2r.com/">An introduction to R</a> book by Douglas, Roos, Mancini, Couto and Lusseau <span class="citation" data-cites="douglas2023">(<a href="98-references.html#ref-douglas2023" role="doc-biblioref">Douglas 2023</a>)</span>. It was forked on April 23rd, 2023 from <a href="https://github.com/alexd106/Rbook">Alexd106 github repository</a> then modified and updated following my own needs and teaching perspective of R. This also included a full translation in french to provide this resource in both language.</p>
+<p>This book started as a fork on github from the excellent <a href="https://intro2r.com/">An introduction to R</a> book by Douglas, Roos, Mancini, Couto and Lusseau <span class="citation" data-cites="douglas2023">(<a href="98-references.html#ref-douglas2023" role="doc-biblioref">Douglas 2023</a>)</span>. It was forked on April 23rd, 2023 from <a href="https://github.com/alexd106/Rbook">Alexd106 github repository</a> then modified and updated following my own needs and teaching perspective of R. This also included a full translation in french to provide this resource in both language and a plan to extend the project to multilingual versions.</p>
 </section><section id="license" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
 <p>I share this modified version of the [original book][https://intro2r.com/] under the license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -990,7 +979,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-intro.html" class="pagination-link" aria-label="<span class='chapter-number'>1</span>&nbsp; <span class='chapter-title'>Getting started</span>">
+      <a href="./01-intro.html" class="pagination-link" aria-label="Getting started">
         <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1002,7 +991,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/index.Rmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

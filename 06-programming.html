@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.544">
+<meta name="generator" content="quarto-1.4.550">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -101,7 +101,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6LLMGL3T2Q"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
+</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -260,7 +266,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07-rmarkdown.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown / Quarto</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -331,9 +337,7 @@ window.Quarto = {
   
 
 
-</header><p>After learning the basics, programming in R is the next big step towards attaining coding nirvana. In R this freedom is gained by being able to wield and manipulate code to get it to do exactly what you want, rather than contort, bend and restrict yourself to what others have built. It’s worth remembering that many packages are written with the goal of solving a problem the author had. Your problem may be similar, but not exactly the same. In such cases you could contort, bend and restrict your data so that it works with the package, or you could build your own functions that solve your specific problems.</p>
-<p>But there are already a vast number of R packages available, surely more than enough to cover everything you could possibly want to do? Why then, would you ever need to use R as a programming language? Why not just stick to the functions from a package? Well, in some cases you’ll want to customise those existing functions to suit your specific needs. Or you may want to implement an approach that’s hot off the press or you’ve come up with an entirely novel idea, which means there won’t be any pre-existing packages that work for you. Both of these are not particularly common early-on when you start using R, but you may well find as you progress, the reliance on existing functions becomes a little limiting. In addition, if you ever start using more advanced statistical approaches (i.e.&nbsp;Bayesian inference coded through Stan or JAGS) then an understanding of basic programming constructs, especially loops, becomes fundamental.</p>
-<p>In this Chapter we’ll explore the basics of the programming side of R. Even if you never create your own function, you will at the very least use functions on a daily basis. Pulling back the curtain and showing the nitty-gritty of how these work will hopefully, in the worst case, help your confidence and in the best case, provide a starting point for doing some clever coding.</p>
+</header><p>After learning the basics, programming in R is the next big step. There are already a vast number of R packages available, surely more than enough to cover everything you could possibly want to do? Why then, would you ever need to create you own R functions? Why not just stick to the functions from a package? Well, in some cases you’ll want to customise those existing functions to suit your specific needs. Or you may want to implement a new approach which means there won’t be any pre-existing packages that work for you. Both of these are not particularly common. Functions are mainly used to do one thing well in a simple manner without having to type of the code necessary to do that function each time. We can see functions as a short-cut to copy-pasting. If you have to do a similar task 4 times or more, build a function for it, and simply call that function 4 times or call it in a loop .</p>
 <section id="looking-behind-the-curtain" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="looking-behind-the-curtain">
 <span class="header-section-number">6.1</span> Looking behind the curtain</h2>
 <p>A good way to start learning to program in R is to see what others have done. We can start by briefly peeking behind the curtain. In <a href="04-graphics_short.html">Chapter 5</a> we made use of the <code>theme_classic()</code> function when customising our <code>ggplot</code> figures. With many functions in R, if you want to have a quick glance at the machinery behind the scenes, we can simply write the function name but without the <code>()</code>. This is the same trick we used in <a href="04-graphics_short.html">Chapter 5</a> to alter the <code>theme_classic()</code> style of <code>ggplot2</code> to make <code>theme_rbook()</code>.</p>
@@ -518,12 +522,12 @@ produced NAs</code></pre>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  Code executed when condition is <span class="cn">FALSE</span></span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>To delve into this a bit more, we can use an old programmer joke to set up a problem.</p>
-<hr>
+<blockquote class="blockquote">
 <p>A programmer’s partner says: <em>‘Please go to the store and buy a carton of milk and if they have eggs, get six.’</em></p>
 <p>The programmer returned with 6 cartons of milk.</p>
 <p>When the partner sees this, and exclaims <em>‘Why the heck did you buy six cartons of milk?’</em></p>
 <p>The programmer replied <em>‘They had eggs’</em></p>
-<hr>
+</blockquote>
 <p>At the risk of explaining a joke, the conditional statement here is whether or not the store had eggs. If coded as per the original request, the programmer should bring 6 cartons of milk if the store had eggs (condition = TRUE), or else bring 1 carton of milk if there weren’t any eggs (condition = FALSE). In R this is coded as:</p>
 <div class="cell">
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">eggs</span> <span class="op">&lt;-</span> <span class="cn">TRUE</span> <span class="co"># Whether there were eggs in the store</span></span>
@@ -1465,13 +1469,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./05-stats.html" class="pagination-link  aria-label=" statistics="" in="" r="">
+      <a href="./05-stats.html" class="pagination-link" aria-label="Simple Statistics in R">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Statistics in R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./07-rmarkdown.html" class="pagination-link" aria-label="<span class='chapter-number'>7</span>&nbsp; <span class='chapter-title'>Reproducible reports with R markdown</span>">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./07-rmarkdown.html" class="pagination-link" aria-label="Reproducible reports with R markdown / Quarto">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown / Quarto</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

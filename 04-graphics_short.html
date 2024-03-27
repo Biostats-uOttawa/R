@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.544">
+<meta name="generator" content="quarto-1.4.550">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -121,7 +121,13 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="css/style.css">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6LLMGL3T2Q"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
+</script><link rel="stylesheet" href="css/style.css">
 </head>
 <body class="nav-sidebar floating nav-fixed">
 
@@ -255,7 +261,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07-rmarkdown.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown / Quarto</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -329,7 +335,11 @@ div.csl-indent {
   
 
 
-</header><p>Summarising your data, either numerically or graphically, is an important (if often overlooked) component of any data analysis. Fortunately, R has excellent graphics capabilities and can be used whether you want to produce plots for initial data exploration, model validation or highly complex publication quality figures. There are three main systems for producing graphics in R; base R graphics, lattice graphics and ggplot2.</p>
+</header><!-- need to
+add info about ggplot
+redo diagram with mermaid
+do a ggplot extensive description
+--><p>Summarising your data, either numerically or graphically, is an important (if often overlooked) component of any data analysis. Fortunately, R has excellent graphics capabilities and can be used whether you want to produce plots for initial data exploration, model validation or highly complex publication quality figures. There are three main systems for producing graphics in R; base R graphics, lattice graphics and ggplot2.</p>
 <p>The base R graphics system is the original plotting system that’s been around (and has evolved) since the first days of R. When creating plots with base R we tend to use high level functions (like the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function) to first create our plot and then use one or more low level functions (like <code><a href="https://rdrr.io/r/graphics/lines.html">lines()</a></code> and <code><a href="https://rdrr.io/r/graphics/text.html">text()</a></code> etc) to add additional information to these plots. This can seem a little weird (and time consuming) when you first start creating fancy plots in R, but it does allow you to customise almost every aspect of your plot and build complexity up in layers. The flip side to this flexibility is that you’ll often need to make many decisions about how you want your plot to look rather than rely on the software to make these decisions for you. Having said that, it’s generally very quick and easy to generate simple exploratory plots with base R graphics.</p>
 <p>The lattice system is implemented in the <code>lattice()</code> package that comes pre-installed with the standard installation of R. However, it won’t be loaded by default so you’ll first need to use <code><a href="https://lattice.r-forge.r-project.org/">library(lattice)</a></code> to access all the plotting functions. Unlike base R graphics, lattice plots are mostly generated all in one go using a single function so there’s no need to use high and low level plotting functions to customise the look of a plot. This can be a real advantage as things like margin sizes and plot spacing are adjusted automatically. Lattice plots also make a few more decisions for you about how the plots will look but this comes with a slight cost as customising lattice plots to get them to look exactly how you want can become quite involved. Where lattice plots really shine is plotting complex multi-dimensional data using panel plots (also called trellis plots). We’ll see a couple of examples of these types of plots later in the Chapter.</p>
 <p><code>ggplot2</code> was based on a book called <em>Grammar of Graphics</em> by <span class="citation" data-cites="wilkinson2005">Wilkinson (<a href="98-references.html#ref-wilkinson2005" role="doc-biblioref">2005</a>)</span>. For an interesting summary of Wilkinson’s book [here][leland-summary]. The <em>Grammar of Graphics</em> approach breaks figures down into their various components (e.g.&nbsp;the underlying statistics, the geometric arrangement, the theme, see <a href="#fig-ggplot-str" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>). Users are thus able to manipulate each of these components (i.e.&nbsp;layers) and produce a tailor-made figure fit for their specific needs.</p>
@@ -374,7 +384,7 @@ div.csl-indent {
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">shootarea</span> <span class="op">~</span> <span class="va">weight</span>, data <span class="op">=</span> <span class="va">flowers</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-plot5" class="quarto-figure quarto-figure-center quarto-float anchored" width="75%" data-fig-align="center">
+<div id="fig-plot5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="75%">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-graphics_short_files/figure-html/fig-plot5-1.png" id="fig-plot5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
 </div>
@@ -432,7 +442,7 @@ Figure&nbsp;4.2: Structure of graphics with ggplot2
 <span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-plot5-gg" class="quarto-figure quarto-figure-center quarto-float anchored" width="75%" data-fig-align="center">
+<div id="fig-plot5-gg" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="75%">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-gg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-graphics_short_files/figure-html/fig-plot5-gg-1.png" id="fig-plot5-gg" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
 </div>
@@ -1405,12 +1415,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./03-data.html" class="pagination-link  aria-label=" in="" r="">
+      <a href="./03-data.html" class="pagination-link" aria-label="Data in R">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data in R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05-stats.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Simple Statistics in R</span>">
+      <a href="./05-stats.html" class="pagination-link" aria-label="Simple Statistics in R">
         <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Statistics in R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
