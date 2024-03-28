@@ -1,7 +1,7 @@
 project:
-  output-dir: _book/en
+  output-dir: _book/es
 
-lang: en-CA
+lang: es-es
 
 book:
   title: "On the R-way to hell"

@@ -1,5 +1,11 @@
 project:
   type: book
+#  post-render: 
+#    - _remove-files.r
+
+profile:
+  default: en
+  group: [en, fr, es]
 
 execute: 
   cache: true

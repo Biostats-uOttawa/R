@@ -1,5 +1,7 @@
 project:
-  output-dir: _book/en
+  output-dir: _book/fr
+
+lang: fr-fr
 
 book:
   title: "On the R-way to hell"
@@ -29,16 +31,24 @@ book:
           - text: Bio4558 (français)
             href: https://biostats-uottawa.github.io/bio4558_cours/
 
+#    right:
+#      - icon: flag
+#        menu:
+#        - href: ../fr/
+#          text: French
+#        - href: ../es/
+#          text: Espanol
+          
   chapters:
     - index.qmd
     - 01-intro.qmd
     - 02-basics.qmd
-    - 03-data.Rmd
+    - 03-data.qmd
     - 04-graphics_short.qmd
     - 05-stats.qmd
-    - 06-programming.Rmd
+    - 06-programming.qmd
     - 07-rmarkdown.qmd
-    - 08-github.Rmd
+    - 08-github.qmd
     - 98-references.qmd
   appendices:
     - 99-App-data.qmd
