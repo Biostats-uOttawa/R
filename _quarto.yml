@@ -34,8 +34,6 @@ book:
     collapse-below: lg
     title: "R Way"
     left:
-      - text: Slides
-        href: https://biostats-uottawa.github.io/intro_r_en.html/#slides 
       - text: Data
         href: https://biostats-uottawa.github.io/intro_r_en.html/#data
       - text: Other resources
@@ -46,8 +44,6 @@ book:
             href: https://biostats-uottawa.github.io/bio4158_course/
           - text: Bio4558 (français)
             href: https://biostats-uottawa.github.io/bio4558_cours/
-          - text: Chemin de l'enf-R
-            href: https://biostats-uottawa.github.io/intro_r_fr.html
 
   chapters:
     - index.qmd
