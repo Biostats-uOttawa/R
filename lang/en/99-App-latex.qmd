@@ -4,16 +4,17 @@ Installing R markdown on your computer is pretty straight forward and should be 
 
 This guide assumes you have already installed [R][r-proj] and an IDE ([RStudio IDE][rstudio] or [VSCode][vscode]. An IDE is not required but recommended, because it makes it easier to work with R Markdown. If you don't have RStudio IDE installed, you will also have to install [Pandoc][pandoc]. If you have RStudio installed there is no need to install Pandoc separately because it's bundled with RStudio. Next you can install the `rmarkdown` package in RStudio using the following code:
 
-```{r, eval = FALSE}
-# Install from CRAN
-install.packages('rmarkdown', dep = TRUE)
+```{r}
+#| eval: false
+install.packages("rmarkdown", dep = TRUE)
 ```
 
 The `dep = TRUE` argument will also install a bunch of additional R packages on which rmarkdown depends.
   
 If you want to generate PDF output, you will need to install LaTeX. For R Markdown users who have not installed LaTeX before, we recommend that you install [TinyTeX][tinytex]. You can install TinyTex from within RStudio using the following code:
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
 install.packages('tinytex')
 tinytex::install_tinytex()  # install TinyTeX
 ```
