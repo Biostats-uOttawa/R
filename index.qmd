@@ -90,7 +90,7 @@ Good luck and don’t forget to have fun.
 
 This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau [@douglas2023].
 It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified and updated following my own needs and teaching perspective of R.
-This also included a full translation in french to provide this resource in both language and a plan to extend the project to multilingual versions.
+This also a part of a multilingual R book project to improve equity and diversity. It started wiuth a french translation and wwas/will be extended to many more languages.
 
 ## License {.unnumbered}
 
@@ -102,3 +102,4 @@ If you teach R, feel free to use some or all of the content in this book to help
 The only thing I ask is that you acknowledge the original source and authors.
 If you find this book useful or have any comments or suggestions I would love to hear from you  ([contact info][whoarewe]).
 
+## Who are we ?
