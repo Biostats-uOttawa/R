@@ -60,7 +60,7 @@ There are reasonably comprehensive instruction to install R for each OS ([Window
 Whichever operating system you're using, once you have installed R you need to check its working properly.
 The easiest way to do this is to start R by double clicking on the R icon (Windows or Mac) or by typing `R` into the Console (Linux).
 You should see the R Console and you should be able to type R commands into the Console after the command prompt `>`.
-Try typing the following R code and then press enter
+Try typing the following R code and then press enter:
 
 ```{r, out.width="75%", fig.align="center"}
 plot(1:10)
@@ -459,7 +459,7 @@ You however need to create a new folder with a R file (or text file) and save as
 
 The working directory is the default location where R will look for files you want to load and where it will put any files you save.
 One of the great things about using RStudio Projects is that when you open a project it will automatically set your working directory to the appropriate location.
-You can check the file path of your working directory by using either `getwd()` or `here()` functions
+You can check the file path of your working directory by using either `getwd()` or `here()` functions.
 
 
 ```{r}
@@ -493,7 +493,7 @@ dat <- read.csv("data/mydata.csv")
 
 Because the file path `data/mydata.csv` is relative to the project directory it doesn't matter where you collaborator saves the project directory on their computer it will still work.
 
-If you weren't using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file. Neither option would be reproducible on other computers
+If you weren't using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file. Neither option would be reproducible on other computers.
 
 ```{r rel-fp2, echo=TRUE, eval=FALSE}
 setwd("/home/julien/Documents/courses/biostats/R_way")
@@ -509,7 +509,7 @@ dat <- read.csv("/home/julien/Documents/courses/biostats/R_way/data/mydata.csv")
 
 For those of you who want to take the notion of relative file paths a step further, take a look at the `here()` function in the `here` [package][here].
 The `here()` function allows you to build file paths for any file relative to the project root directory that are also operating system agnostic (works on a Mac, Windows or Linux machine).
-For example, to import our `mydata.csv` file from the `data` directory just use 
+For example, to import our `mydata.csv` file from the `data` directory just use: 
 
 ```{r rel-fp23, echo=TRUE, eval=FALSE}
 library(here) # you may need to install the here package first
@@ -520,7 +520,7 @@ dat <- read.csv(here("data", "mydata.csv"))
 ## Directory structure {#dir_struct}
 
 In addition to using RStudio Projects, it's also really good practice to structure your working directory in a consistent and logical way to help both you and your collaborators.
-We frequently use the following directory structure in our R based projects
+We frequently use the following directory structure in our R based projects.
 
 <!--
 obtained from tree -L 2
@@ -642,7 +642,7 @@ Having said that, different projects will have different requirements so we happ
 You can create your directory structure using Windows Explorer (or Finder on a Mac) or within your IDE by clicking on the 'New folder' button in the 'Files' pane.
 
 
-An alternative approach is to use the `dir.create()` functions in the R Console
+An alternative approach is to use the `dir.create()` functions in the R Console.
 
 ```{r dir, echo=TRUE, eval=FALSE}
 # create directory called 'data'
@@ -699,29 +699,24 @@ A really good alternative is to use the `session_info()` function from the `xfun
 Here's an example of including meta-information at the start of an R script
 
 ```{r, echo=TRUE, eval=FALSE}
-# Title: Time series analysis of snouters
+# Title: Time series analysis of lasagna consumption
 
 # Purpose : This script performs a time series analyses on
-#           snouter count data.
-#           Data consists of counts of snouter species
-#           collected from 18 islands in the Hy-yi-yi
-#           archipelago between 1950 and 1957.
-#           For details of snouter biology see:
-#           https://en.wikipedia.org/wiki/Rhinogradentia
+#           lasagna meals kids want to have each week.
+#           Data consists of counts of (dreamed) lasagna meals per week
+#           collected from 24 kids at the "Food-dreaming" school
+#           between 2042 and 2056.
 
-# Project number: #007
+# data file: lasagna_dreams.csv
 
-# datile: snouter_pop.txt
+# Author: A. Stomach
+# Contact details: a.stomach@food.uni.com
 
-# Author: A.
-Nother
-# Contact details: a.nother@uir.ac.uk
-
-# Date script created: Mon Dec 2 16:06:44 2019 -----------
+# Date script created: Fri Mar 29 17:06:44 2010 -----------
 # Date script last modified: Thu Dec 12 16:07:12 2019 ----
 
 # package dependencies
-library(PopSnouter)
+library(tidyverse)
 library(ggplot2)
 
 print("put your lovely R code here")
