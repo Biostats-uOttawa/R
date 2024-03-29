@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: _book
 #  post-render: 
 #    - _remove-files.r
 
@@ -38,14 +39,14 @@ format:
     author-meta: "Julien Martin"
     callout-appearance: simple
 
-  pdf:
-    documentclass: scrbook
-    include-in-header: latex/preamble.tex
-    include-before-body: latex/before_body.tex
-    include-after-body: latex/after_body.tex
-    toc-depth: 2
-
-  epub:
-    dev: svglite
-    stylesheet: css/epub.css
-    toc: true
+#  pdf:
+#    documentclass: scrbook
+#    include-in-header: latex/preamble.tex
+#    include-before-body: latex/before_body.tex
+#    include-after-body: latex/after_body.tex
+#    toc-depth: 2
+#
+#  epub:
+#    dev: svglite
+#    stylesheet: css/epub.css
+#    toc: true
