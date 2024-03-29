@@ -67,24 +67,9 @@ notes
 
 -->
 
-## Some R pointers {.unnumbered}
+## Who are we ?
 
-- Use R often and use it regularly.
-This will help build and maintain all important momentum.
-- Learning R is not a memory test.
-One of advantage of a scripting language is that you will always have your (well annotated) code to refer back to when you forget how to do something.
-- You don't need to know everything about R to be productive.
-- If you get stuck, search online, it's not cheating and writing a good search query is a skill in itself.
-- If you find yourself staring at code for hours trying to figure out why it's not working then walk away for a few minutes.
-- In R there are many ways to tackle a particular problem.
-If your code does what you want it to do in a reasonable time and robustly then don't worry about it.
-- R is just a tool to help you answer your interesting questions.
-Don't lose sight of what's important - your research question(s) and your data.
-No amount of skill using R will help if your data collection is fundamentally flawed or your question vague.
-- Recognize that there will be times when things will get a little tough or frustrating.
-Try to accept these periods as part of the natural process of learning a new skill (we've all been there) and remember, the time and energy you invest now will be more than payed back in the not too distant future.
-
-Good luck and don’t forget to have fun.
+- [Julien Martin][whoarewe]
 
 ## Thanks {.unnumbered}
 
@@ -102,4 +87,3 @@ If you teach R, feel free to use some or all of the content in this book to help
 The only thing I ask is that you acknowledge the original source and authors.
 If you find this book useful or have any comments or suggestions I would love to hear from you  ([contact info][whoarewe]).
 
-## Who are we ?
