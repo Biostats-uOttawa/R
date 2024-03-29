@@ -16,3 +16,7 @@
 ## 04-graphics
 
 - [ ] clean and add ggplot descriptions
+
+- whoarewe section
+- link for radina httpgd and r debugger in intro
+
