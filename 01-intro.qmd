@@ -47,15 +47,15 @@ Try to accept these periods as part of the natural process of learning a new ski
 
 Good luck and don’t forget to have fun.
 
-## Installing R {#install_r}
+## Installation
+
+### Installing R {#install_r}
 
 To get up and running the first thing you need to do is install R.
 R is freely available for Windows, Mac and Linux operating systems from the [Comprehensive R Archive Network (CRAN) website][cran].
 For Windows and Mac users we suggest you download and install the pre-compiled binary versions.
 There are reasonably comprehensive instruction to install R for each OS ([Windows][cran-windows],[Mac][cran-mac] or [linux][cran-linux] ).
 
-
-### Testing R
 
 Whichever operating system you're using, once you have installed R you need to check its working properly.
 The easiest way to do this is to start R by double clicking on the R icon (Windows or Mac) or by typing `R` into the Console (Linux).
@@ -70,26 +70,34 @@ A plot of the numbers 1 to 10 on both the x and y axes should appear.
 If you see this, you're good to go.
 If not then we suggest you make a note of any errors produced and then use Google to troubleshoot.
 
-## Installing an IDE
+### Installing an IDE
 
 We strongly recommend to use an **I**ntegrated **D**evelopment **E**nvironment (IDE) software to work with R.
 One simple and extremely popular IDE is [RStudio][rstudio].
 An alternative to RStudio is Visual Studio Code, or [VSCode][vscode].
 An IDE can be thought of as an add-on to R which provides a more user-friendly interface, incorporating the R Console, a script editor and other useful functionality (like R markdown and Git Hub integration).
 
-### RStudio
+::: {.callout-caution}
+You must install R before you install RStudio (see [previous section](#install_r) for details).
+:::
+
+#### RStudio
 
 RStudio is freely available for Windows, Mac and Linux operating systems and can be downloaded from the [RStudio site][rstudio-download].
 You should select the 'RStudio Desktop' version.
-Note: you must install R before you install RStudio (see [previous section](#install_r) for details).
 
-### VSCode
+#### VSCode
 
 VSCode is freely available for Windows, Mac and Linux operating systems and can be downloaded from the [VS Code site][vscode].
-Note: you must install R before you install RStudio (see [previous section](#install_r) for details).
-In addition you need to install the [R extension to VSCode](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r).
 
-### Alternatives to RStudio and VSCode
+In addition you need to install the [R extension to VSCode](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r).
+To make VSCode a true powerhouse for working with R we strongly recommend you to also install:
+
+- [radian](): A modern R console that corrects many limitations of the official R terminal and supports many features such as syntax highlighting and auto-completion.
+- [VSCode-R-Debugger](): A VS Code extension to support R debugging capabilities.
+- [httpgd](): An R package to provide a graphics device that asynchronously serves SVG graphics via HTTP and WebSockets.
+
+#### Alternatives to RStudio and VSCode
 
 Rather than using an 'all in one' IDE many people choose to use R and a separate script editor to write and execute R code.
 If you're not familiar with what a script editor is, you can think of it as a bit like a word processor but specifically designed for writing code.
@@ -98,7 +106,7 @@ Some script editors are only available for certain operating systems and not all
 Suggestions for script editors are provided below.
 Which one you choose is up to you: one of the great things about R is that *YOU* get to choose how you want to use R.
 
-#### Advanced text editors
+##### Advanced text editors
 A light yet efficient way to work with R is using advanced text editors such as:
 
 - [Atom][atom] (all operating systems)
@@ -110,7 +118,7 @@ A light yet efficient way to work with R is using advanced text editors such as:
 - [Sublime Text][sublime] (all operating systems)
 - [vim][vim] and its extension [NVim-R][nvim-r] (Linux)
 
-#### Integrated development environments
+##### Integrated development environments
 
 These environments are more powerful than simple text editors, and are similar to RStudio:
 
