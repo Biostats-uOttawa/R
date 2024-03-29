@@ -28,6 +28,25 @@ In this Chapter we'll cover:
 * some good habits to get into when working on projects
 * and finally some advice on documenting your workflow and writing nice readable R code.
 
+## Some R pointers {.unnumbered}
+
+- Use R often and use it regularly.
+This will help build and maintain all important momentum.
+- Learning R is not a memory test.
+One of advantage of a scripting language is that you will always have your (well annotated) code to refer back to when you forget how to do something.
+- You don't need to know everything about R to be productive.
+- If you get stuck, search online, it's not cheating and writing a good search query is a skill in itself.
+- If you find yourself staring at code for hours trying to figure out why it's not working then walk away for a few minutes.
+- In R there are many ways to tackle a particular problem.
+If your code does what you want it to do in a reasonable time and robustly then don't worry about it.
+- R is just a tool to help you answer your interesting questions.
+Don't lose sight of what's important - your research question(s) and your data.
+No amount of skill using R will help if your data collection is fundamentally flawed or your question vague.
+- Recognize that there will be times when things will get a little tough or frustrating.
+Try to accept these periods as part of the natural process of learning a new skill (we've all been there) and remember, the time and energy you invest now will be more than payed back in the not too distant future.
+
+Good luck and don’t forget to have fun.
+
 ## Installing R {#install_r}
 
 To get up and running the first thing you need to do is install R.
@@ -504,6 +523,7 @@ In addition to using RStudio Projects, it's also really good practice to structu
 We frequently use the following directory structure in our R based projects
 
 <!--
+obtained from tree -L 2
 ```bash
 root
 ├── data
@@ -522,63 +542,78 @@ root
 ```{dot}
 #| eval: false
 digraph {
-    rankdir=LR
-    ranksep=0.5
-    nodesep=0.5
+  rankdir=LR
+  ranksep=0.5
+  nodesep=0.5
+  node [
+    style = filled
+    shape=oval
+	]
+  root [fillcolor="red"]
+  data [fillcolor="lightblue"]
+  functions [fillcolor="lightgreen"]
+  outputs [fillcolor="orange"]
+  scripts [fillcolor="white"]
 
-    LOT1 [label= "raw\n processed\n metadata", shape = rect]
-        LOT2 [label= "R functions", shape = rect]
-          LOT4 [label= "analysis scripts\n R markdown documents", shape = rect]
-    LOT3 [label = "pdf\n html\n figures", shape=rect]
+  wd [label= "your working directory", shape = rect]
+  LOT1 [label= "raw\n processed\n metadata", shape = rect]
+  LOT2 [label= "R functions", shape = rect]
+  LOT4 [label= "analysis scripts\n R markdown documents", shape = rect]
+  LOT3 [label = "pdf\n html\n figures", shape=rect]
 
+  dot01 [shape=point width=0]
+  root -> dot01 [arrowhead=none]
+  dot01 -> wd [weight=20]
 
-    {rank=same
-        root
-        dot1 [shape=point width=0]
-        dot2 [shape=point width=0]
-        dot3 [shape=point width=0]
-        dot4 [shape=point width=0]
-        root -> dot1 -> dot2 -> dot3 -> dot4 [arrowhead=none]
-    }
-    dot1 -> data [weight=20]
-    {
-        rank=same
-        data
-        dot21  [shape=point width=0]
-        data -> dot21 [arrowhead=none]
-    }
-    dot21 -> LOT1 [weight=20]
-    dot2 -> functions
-    {
-        rank=same
-        functions
-        dot22  [shape=point width=0]
-        functions -> dot22 [arrowhead=none]
-    }
-    dot22 -> LOT2 [weight=20]
-    dot3 -> outputs [weight=20]
-    {
-        rank=same
-        outputs
-        dot23 [shape=point width=0]
-        outputs -> dot23 [arrowhead=none]
-    }
-    dot23 -> LOT3 [weight=20]
-    
-    dot4 -> scripts [weight=20]
-        {
-        rank=same
-        scripts
-        dot24 [shape=point width=0]
-        scripts -> dot24 [arrowhead=none]
-    }
-    dot24 -> LOT4 [weight=20]
+  {
+    rank=same
+    root
+    dot1 [shape=point width=0]
+    dot2 [shape=point width=0]
+    dot3 [shape=point width=0]
+    dot4 [shape=point width=0]
+    root -> dot1 -> dot2 -> dot3 -> dot4 [arrowhead=none]
+  }
+
+  dot1 -> data [weight=20]
+  {
+    rank=same
+    data
+    dot21  [shape=point width=0]
+    data -> dot21 [arrowhead=none]
+  }
+  dot21 -> LOT1 [weight=20]
+  dot2 -> functions
+  {
+    rank=same
+    functions
+    dot22  [shape=point width=0]
+    functions -> dot22 [arrowhead=none]
+  }
+  dot22 -> LOT2 [weight=20]
+  dot3 -> outputs [weight=20]
+  {
+    rank=same
+    outputs
+    dot23 [shape=point width=0]
+    outputs -> dot23 [arrowhead=none]
+  }
+  dot23 -> LOT3 [weight=20]
+  
+  dot4 -> scripts [weight=20]
+  {
+    rank=same
+    scripts
+    dot24 [shape=point width=0]
+    scripts -> dot24 [arrowhead=none]
+  }
+  dot24 -> LOT4 [weight=20]
 }
 ```
 
 In our working directory we have the following directories:
 
-  - **Root** - This is your project directory containing your `.Rproj` file. We tend to keep all the R scripts or \[Rq\]md document necessary for the analysis / report in this root folder.
+  - **Root** - This is your project directory containing your `.Rproj` file. We tend to keep all the R scripts or \[Rq\]md document necessary for the analysis / report in this root folder or in the scripts folder when there are too many.
 
  
   - **data** - We store all our data in this directory.
