@@ -273,8 +273,9 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li>
-<a href="#install_r" id="toc-install_r" class="nav-link active" data-scroll-target="#install_r"><span class="header-section-number">1.1</span> Installing R</a>
+<li><a href="#some-r-pointers" id="toc-some-r-pointers" class="nav-link active" data-scroll-target="#some-r-pointers">Some R pointers</a></li>
+  <li>
+<a href="#install_r" id="toc-install_r" class="nav-link" data-scroll-target="#install_r"><span class="header-section-number">1.1</span> Installing R</a>
   <ul class="collapse">
 <li><a href="#testing-r" id="toc-testing-r" class="nav-link" data-scroll-target="#testing-r"><span class="header-section-number">1.1.1</span> Testing R</a></li>
   </ul>
@@ -353,12 +354,24 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 <li>some good habits to get into when working on projects</li>
 <li>and finally some advice on documenting your workflow and writing nice readable R code.</li>
 </ul>
-<section id="install_r" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="install_r">
+<section id="some-r-pointers" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="some-r-pointers">Some R pointers</h2>
+<ul>
+<li>Use R often and use it regularly. This will help build and maintain all important momentum.</li>
+<li>Learning R is not a memory test. One of advantage of a scripting language is that you will always have your (well annotated) code to refer back to when you forget how to do something.</li>
+<li>You don’t need to know everything about R to be productive.</li>
+<li>If you get stuck, search online, it’s not cheating and writing a good search query is a skill in itself.</li>
+<li>If you find yourself staring at code for hours trying to figure out why it’s not working then walk away for a few minutes.</li>
+<li>In R there are many ways to tackle a particular problem. If your code does what you want it to do in a reasonable time and robustly then don’t worry about it.</li>
+<li>R is just a tool to help you answer your interesting questions. Don’t lose sight of what’s important - your research question(s) and your data. No amount of skill using R will help if your data collection is fundamentally flawed or your question vague.</li>
+<li>Recognize that there will be times when things will get a little tough or frustrating. Try to accept these periods as part of the natural process of learning a new skill (we’ve all been there) and remember, the time and energy you invest now will be more than payed back in the not too distant future.</li>
+</ul>
+<p>Good luck and don’t forget to have fun.</p>
+</section><section id="install_r" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="install_r">
 <span class="header-section-number">1.1</span> Installing R</h2>
 <p>To get up and running the first thing you need to do is install R. R is freely available for Windows, Mac and Linux operating systems from the <a href="https://cloud.r-project.org">Comprehensive R Archive Network (CRAN) website</a>. For Windows and Mac users we suggest you download and install the pre-compiled binary versions. There are reasonably comprehensive instruction to install R for each OS (<a href="https://cran.r-project.org/bin/windows/">Windows</a>,<a href="https://cran.r-project.org/bin/macosx/">Mac</a> or <a href="https://cran.r-project.org/bin/linux/">linux</a> ).</p>
 <section id="testing-r" class="level3" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="testing-r">
 <span class="header-section-number">1.1.1</span> Testing R</h3>
-<p>Whichever operating system you’re using, once you have installed R you need to check its working properly. The easiest way to do this is to start R by double clicking on the R icon (Windows or Mac) or by typing <code>R</code> into the Console (Linux). You should see the R Console and you should be able to type R commands into the Console after the command prompt <code>&gt;</code>. Try typing the following R code and then press enter</p>
+<p>Whichever operating system you’re using, once you have installed R you need to check its working properly. The easiest way to do this is to start R by double clicking on the R icon (Windows or Mac) or by typing <code>R</code> into the Console (Linux). You should see the R Console and you should be able to type R commands into the Console after the command prompt <code>&gt;</code>. Try typing the following R code and then press enter:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -693,7 +706,7 @@ Figure&nbsp;1.1: VS Code left panel
 <p>workspace are similar to RStudio projects. You however need to create a new folder with a R file (or text file) and save as workspace.</p>
 </section></section><section id="work-d" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="work-d">
 <span class="header-section-number">1.6</span> Working directories</h2>
-<p>The working directory is the default location where R will look for files you want to load and where it will put any files you save. One of the great things about using RStudio Projects is that when you open a project it will automatically set your working directory to the appropriate location. You can check the file path of your working directory by using either <code><a href="https://rdrr.io/r/base/getwd.html">getwd()</a></code> or <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> functions</p>
+<p>The working directory is the default location where R will look for files you want to load and where it will put any files you save. One of the great things about using RStudio Projects is that when you open a project it will automatically set your working directory to the appropriate location. You can check the file path of your working directory by using either <code><a href="https://rdrr.io/r/base/getwd.html">getwd()</a></code> or <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> functions.</p>
 <div class="cell">
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -710,7 +723,7 @@ Figure&nbsp;1.1: VS Code left panel
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/mydata.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Because the file path <code>data/mydata.csv</code> is relative to the project directory it doesn’t matter where you collaborator saves the project directory on their computer it will still work.</p>
-<p>If you weren’t using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file. Neither option would be reproducible on other computers</p>
+<p>If you weren’t using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file. Neither option would be reproducible on other computers.</p>
 <div class="cell">
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"/home/julien/Documents/courses/biostats/R_way"</span><span class="op">)</span></span>
 <span></span>
@@ -720,15 +733,16 @@ Figure&nbsp;1.1: VS Code left panel
 <div class="cell">
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"/home/julien/Documents/courses/biostats/R_way/data/mydata.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>For those of you who want to take the notion of relative file paths a step further, take a look at the <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> function in the <code>here</code> <a href="https://github.com/r-lib/here">package</a>. The <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> function allows you to build file paths for any file relative to the project root directory that are also operating system agnostic (works on a Mac, Windows or Linux machine). For example, to import our <code>mydata.csv</code> file from the <code>data</code> directory just use</p>
+<p>For those of you who want to take the notion of relative file paths a step further, take a look at the <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> function in the <code>here</code> <a href="https://github.com/r-lib/here">package</a>. The <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> function allows you to build file paths for any file relative to the project root directory that are also operating system agnostic (works on a Mac, Windows or Linux machine). For example, to import our <code>mydata.csv</code> file from the <code>data</code> directory just use:</p>
 <div class="cell">
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span> <span class="co"># you may need to install the here package first</span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"mydata.csv"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="dir_struct" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="dir_struct">
 <span class="header-section-number">1.7</span> Directory structure</h2>
-<p>In addition to using RStudio Projects, it’s also really good practice to structure your working directory in a consistent and logical way to help both you and your collaborators. We frequently use the following directory structure in our R based projects</p>
+<p>In addition to using RStudio Projects, it’s also really good practice to structure your working directory in a consistent and logical way to help both you and your collaborators. We frequently use the following directory structure in our R based projects.</p>
 <!--
+obtained from tree -L 2
 ```bash
 root
 ├── data
@@ -748,39 +762,43 @@ root
 <div>
 <p></p><figure class="figure"></figure><p></p>
 <div>
-<svg width="672" height="480" viewbox="0.00 0.00 384.32 478.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 474.8)"><polygon fill="white" stroke="transparent" points="-4,4 -4,-474.8 380.32,-474.8 380.32,4 -4,4"></polygon><!-- LOT1 --><g id="node1" class="node"><title>LOT1</title>
-<polygon fill="none" stroke="black" points="335.34,-374.2 260.94,-374.2 260.94,-315.4 335.34,-315.4 335.34,-374.2"></polygon><text text-anchor="middle" x="298.14" y="-357.4" font-family="Times,serif" font-size="14.00">raw</text><text text-anchor="middle" x="298.14" y="-340.6" font-family="Times,serif" font-size="14.00"> processed</text><text text-anchor="middle" x="298.14" y="-323.8" font-family="Times,serif" font-size="14.00"> metadata</text></g><!-- LOT2 --><g id="node2" class="node"><title>LOT2</title>
-<polygon fill="none" stroke="black" points="338.58,-254.8 257.7,-254.8 257.7,-218.8 338.58,-218.8 338.58,-254.8"></polygon><text text-anchor="middle" x="298.14" y="-232.6" font-family="Times,serif" font-size="14.00">R functions</text></g><!-- LOT4 --><g id="node3" class="node"><title>LOT4</title>
-<polygon fill="none" stroke="black" points="376.51,-41.4 219.77,-41.4 219.77,-0.2 376.51,-0.2 376.51,-41.4"></polygon><text text-anchor="middle" x="298.14" y="-25" font-family="Times,serif" font-size="14.00">analysis scripts</text><text text-anchor="middle" x="298.14" y="-8.2" font-family="Times,serif" font-size="14.00"> R markdown documents</text></g><!-- LOT3 --><g id="node4" class="node"><title>LOT3</title>
-<polygon fill="none" stroke="black" points="327.51,-158.2 268.76,-158.2 268.76,-99.4 327.51,-99.4 327.51,-158.2"></polygon><text text-anchor="middle" x="298.14" y="-141.4" font-family="Times,serif" font-size="14.00">pdf</text><text text-anchor="middle" x="298.14" y="-124.6" font-family="Times,serif" font-size="14.00"> html</text><text text-anchor="middle" x="298.14" y="-107.8" font-family="Times,serif" font-size="14.00"> figures</text></g><!-- root --><g id="node5" class="node"><title>root</title>
-<ellipse fill="none" stroke="black" cx="27" cy="-452.8" rx="27" ry="18"></ellipse><text text-anchor="middle" x="27" y="-448.6" font-family="Times,serif" font-size="14.00">root</text></g><!-- dot1 --><g id="node6" class="node"><title>dot1</title>
-<ellipse fill="black" stroke="black" cx="27" cy="-398.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot1 --><g id="edge1" class="edge"><title>root-&gt;dot1</title>
-<path fill="none" stroke="black" d="M27,-434.38C27,-422.66 27,-410.94 27,-399.22"></path></g><!-- dot2 --><g id="node7" class="node"><title>dot2</title>
-<ellipse fill="black" stroke="black" cx="27" cy="-290.8" rx="0" ry="0"></ellipse></g><!-- dot1&#45;&gt;dot2 --><g id="edge2" class="edge"><title>dot1-&gt;dot2</title>
-<path fill="none" stroke="black" d="M27,-398.38C27,-362.66 27,-326.94 27,-291.22"></path></g><!-- data --><g id="node10" class="node"><title>data</title>
-<ellipse fill="none" stroke="black" cx="136.98" cy="-398.8" rx="27.24" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-394.6" font-family="Times,serif" font-size="14.00">data</text></g><!-- dot1&#45;&gt;data --><g id="edge5" class="edge"><title>dot1-&gt;data</title>
-<path fill="none" stroke="black" d="M28.08,-398.8C30.05,-398.8 68.85,-398.8 99.36,-398.8"></path><polygon fill="black" stroke="black" points="99.73,-402.3 109.73,-398.8 99.73,-395.3 99.73,-402.3"></polygon></g><!-- dot3 --><g id="node8" class="node"><title>dot3</title>
-<ellipse fill="black" stroke="black" cx="27" cy="-182.8" rx="0" ry="0"></ellipse></g><!-- dot2&#45;&gt;dot3 --><g id="edge3" class="edge"><title>dot2-&gt;dot3</title>
-<path fill="none" stroke="black" d="M27,-290.38C27,-254.66 27,-218.94 27,-183.22"></path></g><!-- functions --><g id="node12" class="node"><title>functions</title>
-<ellipse fill="none" stroke="black" cx="136.98" cy="-290.8" rx="46.95" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-286.6" font-family="Times,serif" font-size="14.00">functions</text></g><!-- dot2&#45;&gt;functions --><g id="edge8" class="edge"><title>dot2-&gt;functions</title>
-<path fill="none" stroke="black" d="M28.08,-290.8C29.64,-290.8 54.32,-290.8 79.69,-290.8"></path><polygon fill="black" stroke="black" points="79.77,-294.3 89.77,-290.8 79.77,-287.3 79.77,-294.3"></polygon></g><!-- dot4 --><g id="node9" class="node"><title>dot4</title>
-<ellipse fill="black" stroke="black" cx="27" cy="-74.8" rx="0" ry="0"></ellipse></g><!-- dot3&#45;&gt;dot4 --><g id="edge4" class="edge"><title>dot3-&gt;dot4</title>
-<path fill="none" stroke="black" d="M27,-182.38C27,-146.66 27,-110.94 27,-75.22"></path></g><!-- outputs --><g id="node14" class="node"><title>outputs</title>
-<ellipse fill="none" stroke="black" cx="136.98" cy="-182.8" rx="39.45" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-178.6" font-family="Times,serif" font-size="14.00">outputs</text></g><!-- dot3&#45;&gt;outputs --><g id="edge11" class="edge"><title>dot3-&gt;outputs</title>
-<path fill="none" stroke="black" d="M28.08,-182.8C29.8,-182.8 59.49,-182.8 87.28,-182.8"></path><polygon fill="black" stroke="black" points="87.39,-186.3 97.39,-182.8 87.39,-179.3 87.39,-186.3"></polygon></g><!-- scripts --><g id="node16" class="node"><title>scripts</title>
-<ellipse fill="none" stroke="black" cx="136.98" cy="-74.8" rx="36.5" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-70.6" font-family="Times,serif" font-size="14.00">scripts</text></g><!-- dot4&#45;&gt;scripts --><g id="edge14" class="edge"><title>dot4-&gt;scripts</title>
-<path fill="none" stroke="black" d="M28.08,-74.8C29.86,-74.8 61.69,-74.8 90.31,-74.8"></path><polygon fill="black" stroke="black" points="90.65,-78.3 100.65,-74.8 90.65,-71.3 90.65,-78.3"></polygon></g><!-- dot21 --><g id="node11" class="node"><title>dot21</title>
-<ellipse fill="black" stroke="black" cx="136.98" cy="-344.8" rx="0" ry="0"></ellipse></g><!-- data&#45;&gt;dot21 --><g id="edge6" class="edge"><title>data-&gt;dot21</title>
-<path fill="none" stroke="black" d="M136.98,-380.38C136.98,-368.66 136.98,-356.94 136.98,-345.22"></path></g><!-- dot21&#45;&gt;LOT1 --><g id="edge7" class="edge"><title>dot21-&gt;LOT1</title>
-<path fill="none" stroke="black" d="M138.09,-344.8C141.16,-344.8 204.93,-344.8 250.77,-344.8"></path><polygon fill="black" stroke="black" points="250.83,-348.3 260.83,-344.8 250.83,-341.3 250.83,-348.3"></polygon></g><!-- dot22 --><g id="node13" class="node"><title>dot22</title>
-<ellipse fill="black" stroke="black" cx="136.98" cy="-236.8" rx="0" ry="0"></ellipse></g><!-- functions&#45;&gt;dot22 --><g id="edge9" class="edge"><title>functions-&gt;dot22</title>
-<path fill="none" stroke="black" d="M136.98,-272.38C136.98,-260.66 136.98,-248.94 136.98,-237.22"></path></g><!-- dot22&#45;&gt;LOT2 --><g id="edge10" class="edge"><title>dot22-&gt;LOT2</title>
-<path fill="none" stroke="black" d="M138.09,-236.8C141.09,-236.8 202.05,-236.8 247.61,-236.8"></path><polygon fill="black" stroke="black" points="247.65,-240.3 257.65,-236.8 247.65,-233.3 247.65,-240.3"></polygon></g><!-- dot23 --><g id="node15" class="node"><title>dot23</title>
-<ellipse fill="black" stroke="black" cx="136.98" cy="-128.8" rx="0" ry="0"></ellipse></g><!-- outputs&#45;&gt;dot23 --><g id="edge12" class="edge"><title>outputs-&gt;dot23</title>
-<path fill="none" stroke="black" d="M136.98,-164.38C136.98,-152.66 136.98,-140.94 136.98,-129.22"></path></g><!-- dot23&#45;&gt;LOT3 --><g id="edge13" class="edge"><title>dot23-&gt;LOT3</title>
-<path fill="none" stroke="black" d="M138.09,-128.8C141.34,-128.8 212.47,-128.8 258.5,-128.8"></path><polygon fill="black" stroke="black" points="258.75,-132.3 268.75,-128.8 258.75,-125.3 258.75,-132.3"></polygon></g><!-- dot24 --><g id="node17" class="node"><title>dot24</title>
-<ellipse fill="black" stroke="black" cx="136.98" cy="-20.8" rx="0" ry="0"></ellipse></g><!-- scripts&#45;&gt;dot24 --><g id="edge15" class="edge"><title>scripts-&gt;dot24</title>
-<path fill="none" stroke="black" d="M136.98,-56.38C136.98,-44.66 136.98,-32.94 136.98,-21.22"></path></g><!-- dot24&#45;&gt;LOT4 --><g id="edge16" class="edge"><title>dot24-&gt;LOT4</title>
+<svg width="672" height="480" viewbox="0.00 0.00 384.32 478.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 474.8)"><polygon fill="white" stroke="transparent" points="-4,4 -4,-474.8 380.32,-474.8 380.32,4 -4,4"></polygon><!-- root --><g id="node1" class="node"><title>root</title>
+<ellipse fill="red" stroke="black" cx="27" cy="-452.8" rx="27" ry="18"></ellipse><text text-anchor="middle" x="27" y="-448.6" font-family="Times,serif" font-size="14.00">root</text></g><!-- dot01 --><g id="node11" class="node"><title>dot01</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-452.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot01 --><g id="edge1" class="edge"><title>root-&gt;dot01</title>
+<path fill="none" stroke="black" d="M54.14,-452.8C85.1,-452.8 132.88,-452.8 135.83,-452.8"></path></g><!-- dot1 --><g id="node12" class="node"><title>dot1</title>
+<ellipse fill="black" stroke="black" cx="27" cy="-398.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot1 --><g id="edge3" class="edge"><title>root-&gt;dot1</title>
+<path fill="none" stroke="black" d="M27,-434.38C27,-422.66 27,-410.94 27,-399.22"></path></g><!-- data --><g id="node2" class="node"><title>data</title>
+<ellipse fill="lightblue" stroke="black" cx="136.98" cy="-398.8" rx="27.24" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-394.6" font-family="Times,serif" font-size="14.00">data</text></g><!-- dot21 --><g id="node16" class="node"><title>dot21</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-344.8" rx="0" ry="0"></ellipse></g><!-- data&#45;&gt;dot21 --><g id="edge8" class="edge"><title>data-&gt;dot21</title>
+<path fill="none" stroke="black" d="M136.98,-380.38C136.98,-368.66 136.98,-356.94 136.98,-345.22"></path></g><!-- functions --><g id="node3" class="node"><title>functions</title>
+<ellipse fill="lightgreen" stroke="black" cx="136.98" cy="-290.8" rx="46.95" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-286.6" font-family="Times,serif" font-size="14.00">functions</text></g><!-- dot22 --><g id="node17" class="node"><title>dot22</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-236.8" rx="0" ry="0"></ellipse></g><!-- functions&#45;&gt;dot22 --><g id="edge11" class="edge"><title>functions-&gt;dot22</title>
+<path fill="none" stroke="black" d="M136.98,-272.38C136.98,-260.66 136.98,-248.94 136.98,-237.22"></path></g><!-- outputs --><g id="node4" class="node"><title>outputs</title>
+<ellipse fill="orange" stroke="black" cx="136.98" cy="-182.8" rx="39.45" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-178.6" font-family="Times,serif" font-size="14.00">outputs</text></g><!-- dot23 --><g id="node18" class="node"><title>dot23</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-128.8" rx="0" ry="0"></ellipse></g><!-- outputs&#45;&gt;dot23 --><g id="edge14" class="edge"><title>outputs-&gt;dot23</title>
+<path fill="none" stroke="black" d="M136.98,-164.38C136.98,-152.66 136.98,-140.94 136.98,-129.22"></path></g><!-- scripts --><g id="node5" class="node"><title>scripts</title>
+<ellipse fill="white" stroke="black" cx="136.98" cy="-74.8" rx="36.5" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-70.6" font-family="Times,serif" font-size="14.00">scripts</text></g><!-- dot24 --><g id="node19" class="node"><title>dot24</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-20.8" rx="0" ry="0"></ellipse></g><!-- scripts&#45;&gt;dot24 --><g id="edge17" class="edge"><title>scripts-&gt;dot24</title>
+<path fill="none" stroke="black" d="M136.98,-56.38C136.98,-44.66 136.98,-32.94 136.98,-21.22"></path></g><!-- wd --><g id="node6" class="node"><title>wd</title>
+<polygon fill="lightgrey" stroke="black" points="370.99,-470.8 225.28,-470.8 225.28,-434.8 370.99,-434.8 370.99,-470.8"></polygon><text text-anchor="middle" x="298.14" y="-448.6" font-family="Times,serif" font-size="14.00">your working directory</text></g><!-- LOT1 --><g id="node7" class="node"><title>LOT1</title>
+<polygon fill="lightgrey" stroke="black" points="335.34,-374.2 260.94,-374.2 260.94,-315.4 335.34,-315.4 335.34,-374.2"></polygon><text text-anchor="middle" x="298.14" y="-357.4" font-family="Times,serif" font-size="14.00">raw</text><text text-anchor="middle" x="298.14" y="-340.6" font-family="Times,serif" font-size="14.00"> processed</text><text text-anchor="middle" x="298.14" y="-323.8" font-family="Times,serif" font-size="14.00"> metadata</text></g><!-- LOT2 --><g id="node8" class="node"><title>LOT2</title>
+<polygon fill="lightgrey" stroke="black" points="338.58,-254.8 257.7,-254.8 257.7,-218.8 338.58,-218.8 338.58,-254.8"></polygon><text text-anchor="middle" x="298.14" y="-232.6" font-family="Times,serif" font-size="14.00">R functions</text></g><!-- LOT4 --><g id="node9" class="node"><title>LOT4</title>
+<polygon fill="lightgrey" stroke="black" points="376.51,-41.4 219.77,-41.4 219.77,-0.2 376.51,-0.2 376.51,-41.4"></polygon><text text-anchor="middle" x="298.14" y="-25" font-family="Times,serif" font-size="14.00">analysis scripts</text><text text-anchor="middle" x="298.14" y="-8.2" font-family="Times,serif" font-size="14.00"> R markdown documents</text></g><!-- LOT3 --><g id="node10" class="node"><title>LOT3</title>
+<polygon fill="lightgrey" stroke="black" points="327.51,-158.2 268.76,-158.2 268.76,-99.4 327.51,-99.4 327.51,-158.2"></polygon><text text-anchor="middle" x="298.14" y="-141.4" font-family="Times,serif" font-size="14.00">pdf</text><text text-anchor="middle" x="298.14" y="-124.6" font-family="Times,serif" font-size="14.00"> html</text><text text-anchor="middle" x="298.14" y="-107.8" font-family="Times,serif" font-size="14.00"> figures</text></g><!-- dot01&#45;&gt;wd --><g id="edge2" class="edge"><title>dot01-&gt;wd</title>
+<path fill="none" stroke="black" d="M138.09,-452.8C140.41,-452.8 177.22,-452.8 214.84,-452.8"></path><polygon fill="black" stroke="black" points="214.92,-456.3 224.92,-452.8 214.92,-449.3 214.92,-456.3"></polygon></g><!-- dot1&#45;&gt;data --><g id="edge7" class="edge"><title>dot1-&gt;data</title>
+<path fill="none" stroke="black" d="M28.08,-398.8C30.05,-398.8 68.85,-398.8 99.36,-398.8"></path><polygon fill="black" stroke="black" points="99.73,-402.3 109.73,-398.8 99.73,-395.3 99.73,-402.3"></polygon></g><!-- dot2 --><g id="node13" class="node"><title>dot2</title>
+<ellipse fill="black" stroke="black" cx="27" cy="-290.8" rx="0" ry="0"></ellipse></g><!-- dot1&#45;&gt;dot2 --><g id="edge4" class="edge"><title>dot1-&gt;dot2</title>
+<path fill="none" stroke="black" d="M27,-398.38C27,-362.66 27,-326.94 27,-291.22"></path></g><!-- dot2&#45;&gt;functions --><g id="edge10" class="edge"><title>dot2-&gt;functions</title>
+<path fill="none" stroke="black" d="M28.08,-290.8C29.64,-290.8 54.32,-290.8 79.69,-290.8"></path><polygon fill="black" stroke="black" points="79.77,-294.3 89.77,-290.8 79.77,-287.3 79.77,-294.3"></polygon></g><!-- dot3 --><g id="node14" class="node"><title>dot3</title>
+<ellipse fill="black" stroke="black" cx="27" cy="-182.8" rx="0" ry="0"></ellipse></g><!-- dot2&#45;&gt;dot3 --><g id="edge5" class="edge"><title>dot2-&gt;dot3</title>
+<path fill="none" stroke="black" d="M27,-290.38C27,-254.66 27,-218.94 27,-183.22"></path></g><!-- dot3&#45;&gt;outputs --><g id="edge13" class="edge"><title>dot3-&gt;outputs</title>
+<path fill="none" stroke="black" d="M28.08,-182.8C29.8,-182.8 59.49,-182.8 87.28,-182.8"></path><polygon fill="black" stroke="black" points="87.39,-186.3 97.39,-182.8 87.39,-179.3 87.39,-186.3"></polygon></g><!-- dot4 --><g id="node15" class="node"><title>dot4</title>
+<ellipse fill="black" stroke="black" cx="27" cy="-74.8" rx="0" ry="0"></ellipse></g><!-- dot3&#45;&gt;dot4 --><g id="edge6" class="edge"><title>dot3-&gt;dot4</title>
+<path fill="none" stroke="black" d="M27,-182.38C27,-146.66 27,-110.94 27,-75.22"></path></g><!-- dot4&#45;&gt;scripts --><g id="edge16" class="edge"><title>dot4-&gt;scripts</title>
+<path fill="none" stroke="black" d="M28.08,-74.8C29.86,-74.8 61.69,-74.8 90.31,-74.8"></path><polygon fill="black" stroke="black" points="90.65,-78.3 100.65,-74.8 90.65,-71.3 90.65,-78.3"></polygon></g><!-- dot21&#45;&gt;LOT1 --><g id="edge9" class="edge"><title>dot21-&gt;LOT1</title>
+<path fill="none" stroke="black" d="M138.09,-344.8C141.16,-344.8 204.93,-344.8 250.77,-344.8"></path><polygon fill="black" stroke="black" points="250.83,-348.3 260.83,-344.8 250.83,-341.3 250.83,-348.3"></polygon></g><!-- dot22&#45;&gt;LOT2 --><g id="edge12" class="edge"><title>dot22-&gt;LOT2</title>
+<path fill="none" stroke="black" d="M138.09,-236.8C141.09,-236.8 202.05,-236.8 247.61,-236.8"></path><polygon fill="black" stroke="black" points="247.65,-240.3 257.65,-236.8 247.65,-233.3 247.65,-240.3"></polygon></g><!-- dot23&#45;&gt;LOT3 --><g id="edge15" class="edge"><title>dot23-&gt;LOT3</title>
+<path fill="none" stroke="black" d="M138.09,-128.8C141.34,-128.8 212.47,-128.8 258.5,-128.8"></path><polygon fill="black" stroke="black" points="258.75,-132.3 268.75,-128.8 258.75,-125.3 258.75,-132.3"></polygon></g><!-- dot24&#45;&gt;LOT4 --><g id="edge18" class="edge"><title>dot24-&gt;LOT4</title>
 <path fill="none" stroke="black" d="M138.09,-20.8C140.3,-20.8 173.97,-20.8 209.75,-20.8"></path><polygon fill="black" stroke="black" points="209.88,-24.3 219.88,-20.8 209.88,-17.3 209.88,-24.3"></polygon></g></g></svg>
 </div>
 <p></p>
@@ -789,7 +807,7 @@ root
 </div>
 <p>In our working directory we have the following directories:</p>
 <ul>
-<li><p><strong>Root</strong> - This is your project directory containing your <code>.Rproj</code> file. We tend to keep all the R scripts or [Rq]md document necessary for the analysis / report in this root folder.</p></li>
+<li><p><strong>Root</strong> - This is your project directory containing your <code>.Rproj</code> file. We tend to keep all the R scripts or [Rq]md document necessary for the analysis / report in this root folder or in the scripts folder when there are too many.</p></li>
 <li><p><strong>data</strong> - We store all our data in this directory. The subdirectory called <code>data</code> contains raw data files and only raw data files. These files should be treated as <strong>read only</strong> and should not be changed in any way. If you need to process/clean/modify your data do this in R (not MS Excel) as you can document (and justify) any changes made. Any processed data should be saved to a separate file and stored in the <code>processed_data</code> subdirectory. Information about data collection methods, details of data download and any other useful metadata should be saved in a text document (see README text files below) in the <code>metadata</code> subdirectory.</p></li>
 <li><p><strong>functions</strong> - This is an optional directory where we save all of the custom R functions we’ve written for the current analysis. These can then be sourced into R using the <code><a href="https://rdrr.io/r/base/source.html">source()</a></code> function.</p></li>
 <li><p><strong>scripts</strong> - An optional directory where we save our R markdown documents and/or the main R scripts we have written for the current project are saved here if not in the root folder.</p></li>
@@ -797,7 +815,7 @@ root
 </ul>
 <p>Of course, the structure described above is just what works for us most of the time and should be viewed as a starting point for your own needs. We tend to have a fairly consistent directory structure across our projects as this allows us to quickly orientate ourselves when we return to a project after a while. Having said that, different projects will have different requirements so we happily add and remove directories as required.</p>
 <p>You can create your directory structure using Windows Explorer (or Finder on a Mac) or within your IDE by clicking on the ‘New folder’ button in the ‘Files’ pane.</p>
-<p>An alternative approach is to use the <code><a href="https://rdrr.io/r/base/files2.html">dir.create()</a></code> functions in the R Console</p>
+<p>An alternative approach is to use the <code><a href="https://rdrr.io/r/base/files2.html">dir.create()</a></code> functions in the R Console.</p>
 <div class="cell">
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create directory called 'data'</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">"data"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -827,29 +845,24 @@ root
 <p>A quick note or two about writing R code and creating R scripts. Unless you’re doing something really quick and dirty we suggest that you always write your R code as an R script. R scripts are what make R so useful. Not only do you have a complete record of your analysis, from data manipulation, visualisation and statistical analysis, you can also share this code (and data) with friends, colleagues and importantly when you submit and publish your research to a journal. With this in mind, make sure you include in your R script all the information required to make your work reproducible (author names, dates, sampling design etc). This information could be included as a series of comments <code>#</code> or, even better, by mixing executable code with narrative into an <a href="07-rmarkdown.html">R markdown</a> document. It’s also good practice to include the output of the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function at the end of any script which prints the R version, details of the operating system and also loaded packages. A really good alternative is to use the <code>session_info()</code> function from the <code>xfun</code> package for a more concise summary of our session environment.</p>
 <p>Here’s an example of including meta-information at the start of an R script</p>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Title: Time series analysis of snouters</span></span>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Title: Time series analysis of lasagna consumption</span></span>
 <span></span>
 <span><span class="co"># Purpose : This script performs a time series analyses on</span></span>
-<span><span class="co">#           snouter count data.</span></span>
-<span><span class="co">#           Data consists of counts of snouter species</span></span>
-<span><span class="co">#           collected from 18 islands in the Hy-yi-yi</span></span>
-<span><span class="co">#           archipelago between 1950 and 1957.</span></span>
-<span><span class="co">#           For details of snouter biology see:</span></span>
-<span><span class="co">#           https://en.wikipedia.org/wiki/Rhinogradentia</span></span>
+<span><span class="co">#           lasagna meals kids want to have each week.</span></span>
+<span><span class="co">#           Data consists of counts of (dreamed) lasagna meals per week</span></span>
+<span><span class="co">#           collected from 24 kids at the "Food-dreaming" school</span></span>
+<span><span class="co">#           between 2042 and 2056.</span></span>
 <span></span>
-<span><span class="co"># Project number: #007</span></span>
+<span><span class="co"># data file: lasagna_dreams.csv</span></span>
 <span></span>
-<span><span class="co"># datile: snouter_pop.txt</span></span>
+<span><span class="co"># Author: A. Stomach</span></span>
+<span><span class="co"># Contact details: a.stomach@food.uni.com</span></span>
 <span></span>
-<span><span class="co"># Author: A.</span></span>
-<span><span class="va">Nother</span></span>
-<span><span class="co"># Contact details: a.nother@uir.ac.uk</span></span>
-<span></span>
-<span><span class="co"># Date script created: Mon Dec 2 16:06:44 2019 -----------</span></span>
+<span><span class="co"># Date script created: Fri Mar 29 17:06:44 2010 -----------</span></span>
 <span><span class="co"># Date script last modified: Thu Dec 12 16:07:12 2019 ----</span></span>
 <span></span>
 <span><span class="co"># package dependencies</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">PopSnouter</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"put your lovely R code here"</span><span class="op">)</span></span>
