@@ -31,26 +31,25 @@ Functions in the text are shown with brackets at the end using code font, i.e.
 Objects are shown using code font without the round brackets, i.e.
 `obj1`, `obj2` etc.
 
+R packages in the text are shown using code font and followed by the `r emoji::emoji("package")` icon, i.e. `tidyverse` `r emoji::emoji("package")`.
+
 A series of actions required to access menu commands in RStudio or VSCode are identified as `File` -> `New File` -> `R Script` which translates to 'click on the File menu, then click on New File and then select R Script'.
 
-::: {.callout-important}
-# Important Notation
+When we refer to **IDE** (**I**ntegrated **D**evelopment **E**nvironment software) later in the text we mean either RStudio of VScode.
 
-- **IDE**: when we refer to IDE we mean either RStudio of VScode
+When we refer to **.\[Rq\]md**, we mean either R markdown (.Rmd) or Quarto (.qmd) documents and would generally talk of R markdown documents when referring to either `.Rmd` or `.qmd` files. 
 
-- **\[Rq\]md**: We refer to R markdown or Quarto documents
-:::
-
-<!--
 The manual tries to highlight some part of the text using the following boxes and icons.
 
 
 ::: {.callout-caution}
 # Exercises
+Stuff for you to do
 :::
 
 ::: {.callout-note}
 # Solutions
+R code and explanations
 :::
 
 ::: {.callout-warning}
@@ -65,7 +64,6 @@ important points
 notes
 :::
 
--->
 
 ## Who are we ?
 
