@@ -5,13 +5,13 @@
 ```{r links, child="_links.md"}
 ```
 
-## The aim of this book {.unnumbered}
+## Objectif du livre {.unnumbered}
 
 The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research.
 R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting.
 It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.
 
-## Multilingual book
+## Livre multilingue
 
 The book is provided as a multilingual book breaking that language barrier and potentially allow to facilitate the learn of R and its mainly english-speaking environment.
 We are always looking for volunteers to help developed the book further and add more languages to the growing list. Please [contact us][whoarewe] if you want to help 
@@ -25,7 +25,7 @@ List of languages:
 * spanish (in development, waiting for english to be polished)
 
 
-## How to use this book {.unnumbered}
+## Comment utiliser le livre {.unnumbered}
 
 For the best experience we recommend that you read the web version of this book which you can find <https://biostats-uottawa.github.io/R>.
 
@@ -84,13 +84,13 @@ notes
 
 - [Julien Martin][whoarewe]
 
-## Thanks {.unnumbered}
+## Remerciements {.unnumbered}
 
 This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau [@douglas2023].
 It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified and updated following my own needs and teaching perspective of R.
 This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.
 
-## License {.unnumbered}
+## Licence {.unnumbered}
 
 I share this modified version of the [original book][https://intro2r.com/] under the license [License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
