@@ -1,0 +1,113 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sur le chemin de l’enf-R",
+    "section": "",
+    "text": "Préface",
+    "crumbs": [
+      "Données",
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "index.html#objectif-du-livre",
+    "href": "index.html#objectif-du-livre",
+    "title": "Sur le chemin de l’enf-R",
+    "section": "Objectif du livre",
+    "text": "Objectif du livre\nThe aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research. R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting. It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.",
+    "crumbs": [
+      "Données",
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "index.html#livre-multilingue",
+    "href": "index.html#livre-multilingue",
+    "title": "Sur le chemin de l’enf-R",
+    "section": "Livre multilingue",
+    "text": "Livre multilingue\nThe book is provided as a multilingual book breaking that language barrier and potentially allow to facilitate the learn of R and its mainly english-speaking environment. We are always looking for volunteers to help developed the book further and add more languages to the growing list. Please contact us if you want to help\nOn the web version of the book, use  in the navigation bar to switch from one language to another. After switching to your preferred language, you can of course also download the pdf and epub versions in this language if you want to using .\nList of languages:\n\nenglish (publish but need polishing)\nfrench (in development, waiting for english to be polished)\nspanish (in development, waiting for english to be polished)",
+    "crumbs": [
+      "Données",
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "index.html#comment-utiliser-le-livre",
+    "href": "index.html#comment-utiliser-le-livre",
+    "title": "Sur le chemin de l’enf-R",
+    "section": "Comment utiliser le livre",
+    "text": "Comment utiliser le livre\nFor the best experience we recommend that you read the web version of this book which you can find https://biostats-uottawa.github.io/R.\nThe web version includes a navbar at the top of the page where you can toggle the sidebars on and off , search through the book , change the page color  and suggest revisions if you spot a typo or mistake . You can also download  a pdf and epub versions of the book.\nWe use a few typographical conventions throughout this book.\nR code and the resulting output are presented in code blocks in our book.\n\n2 + 2\n\n[1] 4\n\n\nFunctions in the text are shown with brackets at the end using code font, i.e. mean() or sd() etc.\nObjects are shown using code font without the round brackets, i.e. obj1, obj2 etc.\nR packages in the text are shown using code font and followed by the 📦 icon, i.e. tidyverse 📦.\nA series of actions required to access menu commands in RStudio or VSCode are identified as File -&gt; New File -&gt; R Script which translates to ‘click on the File menu, then click on New File and then select R Script’.\nWhen we refer to IDE (Integrated Development Environment software) later in the text we mean either RStudio of VScode.\nWhen we refer to .[Rq]md, we mean either R markdown (.Rmd) or Quarto (.qmd) documents and would generally talk of R markdown documents when referring to either .Rmd or .qmd files.\nThe manual tries to highlight some part of the text using the following boxes and icons.\n\n\n\n\n\n\nExercises\n\n\n\nStuff for you to do\n\n\n\n\n\n\n\n\nSolutions\n\n\n\nR code and explanations\n\n\n\n\n\n\n\n\nAvertissement\n\n\n\nwarnings\n\n\n\n\n\n\n\n\nImportant\n\n\n\nimportant points\n\n\n\n\n\n\n\n\nNote\n\n\n\nnotes",
+    "crumbs": [
+      "Données",
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "index.html#who-are-we",
+    "href": "index.html#who-are-we",
+    "title": "Sur le chemin de l’enf-R",
+    "section": "Who are we ?",
+    "text": "Who are we ?\n\nJulien Martin",
+    "crumbs": [
+      "Données",
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "index.html#remerciements",
+    "href": "index.html#remerciements",
+    "title": "Sur le chemin de l’enf-R",
+    "section": "Remerciements",
+    "text": "Remerciements\nThis book started as a fork on github from the excellent An introduction to R book by Douglas, Roos, Mancini, Couto and Lusseau (Douglas 2023). It was forked on April 23rd, 2023 from Alexd106 github repository then modified and updated following my own needs and teaching perspective of R. This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.",
+    "crumbs": [
+      "Données",
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "index.html#licence",
+    "href": "index.html#licence",
+    "title": "Sur le chemin de l’enf-R",
+    "section": "Licence",
+    "text": "Licence\nI share this modified version of the [original book][https://intro2r.com/] under the license License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.\n\n\nLicense Creative Commons\n\nIf you teach R, feel free to use some or all of the content in this book to help support your own students. The only thing I ask is that you acknowledge the original source and authors. If you find this book useful or have any comments or suggestions I would love to hear from you (contact info).\n\n\n\n\nDouglas, A. 2023. The Grammar of Graphics.",
+    "crumbs": [
+      "Données",
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "98-references.html",
+    "href": "98-references.html",
+    "title": "Références",
+    "section": "",
+    "text": "Paquets R\nCe livre a utilisé les paquets R (excluant leurs dépendances) listé dans le tableau Table 1. Comme recommandé par l’équipe de de développement de ‘tidyverse’, seul le paquets ‘tidyverse’ est cité et non pas chacun de ses composants.\nTable 1: Paquets utilisés dans le livre\n\n\n\n\nPaquets\nVersion\nCitation\n\n\n\nbase\n4.3.3\nR Core Team (2024)\n\n\nemoji\n15.0\nHvitfeldt (2022)\n\n\nGGally\n2.2.1\nSchloerke et al. (2024)\n\n\nggcleveland\n0.1.0\nPrunello et Mari (2021)\n\n\nggfortify\n0.4.16\n\nTang et al. (2016); Horikoshi et Tang (2018)\n\n\n\nggpubr\n0.6.0\nKassambara (2023)\n\n\ngrateful\n0.2.4\nFrancisco Rodriguez-Sanchez et Connor P. Jackson (2023)\n\n\nhexbin\n1.28.3\nCarr et al. (2023)\n\n\nkableExtra\n1.4.0\nZhu (2024)\n\n\nknitr\n1.45\n\nXie (2014); Xie (2015); Xie (2023)\n\n\n\npatchwork\n1.2.0\nPedersen (2024)\n\n\nquantreg\n5.97\nKoenker (2023)\n\n\nquarto\n1.4.1\nAllaire et Dervieux (2024)\n\n\nreshape2\n1.4.4\nWickham (2007)\n\n\nrmarkdown\n2.26\n\nXie et al. (2018); Xie et al. (2020); Allaire et al. (2024)\n\n\n\ntidyverse\n2.0.0\nWickham et al. (2019)\n\n\nvioplot\n0.4.0\nAdler et al. (2022)",
+    "crumbs": [
+      "Données",
+      "Références"
+    ]
+  },
+  {
+    "objectID": "98-references.html#paquets-r",
+    "href": "98-references.html#paquets-r",
+    "title": "Références",
+    "section": "",
+    "text": "Bibliographie\n\n\nAdler, D., S. T. Kelly, T. Elliott, and J. Adamson. 2022. vioplot: Violin plot.\n\n\nAllaire, J., and C. Dervieux. 2024. quarto: R interface to\n“Quarto” markdown publishing system.\n\n\nAllaire, J., Y. Xie, C. Dervieux, J. McPherson, J. Luraschi, K. Ushey,\nA. Atkins, H. Wickham, J. Cheng, W. Chang, and R. Iannone. 2024. rmarkdown: Dynamic documents for r.\n\n\nCarr, D., ported by Nicholas Lewin-Koh, M. Maechler, and contains copies\nof lattice functions written by Deepayan Sarkar. 2023. hexbin: Hexagonal binning routines.\n\n\nDouglas, A. 2023. The\nGrammar of Graphics.\n\n\nFrancisco Rodriguez-Sanchez, and Connor P. Jackson. 2023. grateful: Facilitate citation of r packages.\n\n\nHorikoshi, M., and Y. Tang. 2018. ggfortify: Data visualization tools for\nstatistical analysis results.\n\n\nHvitfeldt, E. 2022. emoji: Data and function to work with emojis.\n\n\nKassambara, A. 2023. ggpubr: “ggplot2” based publication ready plots.\n\n\nKoenker, R. 2023. quantreg: Quantile regression.\n\n\nPedersen, T. L. 2024. patchwork: The composer of plots.\n\n\nPrunello, M., and G. Mari. 2021. ggcleveland: Implementation of plots from\ncleveland’s visualizing data book.\n\n\nR Core Team. 2024. R:\nA language and environment for statistical computing. R Foundation\nfor Statistical Computing, Vienna, Austria.\n\n\nSchloerke, B., D. Cook, J. Larmarange, F. Briatte, M. Marbach, E. Thoen,\nA. Elberg, and J. Crowley. 2024. GGally:\nExtension to “ggplot2”.\n\n\nTang, Y., M. Horikoshi, and W. Li. 2016. ggfortify: Unified interface to visualize\nstatistical result of popular r packages. The R Journal 8:474–485.\n\n\nWickham, H. 2007. Reshaping\ndata with the reshape package. Journal\nof Statistical Software 21:1–20.\n\n\nWickham, H., M. Averick, J. Bryan, W. Chang, L. D. McGowan, R. François,\nG. Grolemund, A. Hayes, L. Henry, J. Hester, M. Kuhn, T. L. Pedersen, E.\nMiller, S. M. Bache, K. Müller, J. Ooms, D. Robinson, D. P. Seidel, V.\nSpinu, K. Takahashi, D. Vaughan, C. Wilke, K. Woo, and H. Yutani. 2019.\nWelcome to the tidyverse. Journal of Open Source Software\n4:1686.\n\n\nXie, Y. 2014. knitr: A comprehensive tool\nfor reproducible research in R. in V. Stodden, F.\nLeisch, and R. D. Peng, editors. Implementing reproducible computational\nresearch. Chapman; Hall/CRC.\n\n\nXie, Y. 2015. Dynamic documents with\nR and knitr. 2nd edition. Chapman; Hall/CRC, Boca\nRaton, Florida.\n\n\nXie, Y. 2023. knitr: A general-purpose package for dynamic\nreport generation in r.\n\n\nXie, Y., J. J. Allaire, and G. Grolemund. 2018. R markdown: The definitive\nguide. Chapman; Hall/CRC, Boca Raton, Florida.\n\n\nXie, Y., C. Dervieux, and E. Riederer. 2020. R markdown\ncookbook. Chapman; Hall/CRC, Boca Raton, Florida.\n\n\nZhu, H. 2024. kableExtra: Construct complex table with\n“kable” and pipe syntax.",
+    "crumbs": [
+      "Données",
+      "Références"
+    ]
+  },
+  {
+    "objectID": "99-App-data.html",
+    "href": "99-App-data.html",
+    "title": "Annexe A — Données utilisées dans le livre",
+    "section": "",
+    "text": "check what is done for BIO8940",
+    "crumbs": [
+      "Données",
+      "Annexes",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Données utilisées dans le livre</span>"
+    ]
+  }
+]
