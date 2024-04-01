@@ -7,15 +7,30 @@
 
 ## The aim of this book {.unnumbered}
 
-The aim of this book is to introduce you to using R, a powerful and flexible interactive environment for statistical computing and research.
-R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be a little steep and somewhat daunting.
-It is not intended to cover everything there is to know about R but simply to help you climb the initial learning curve and provide you with the basic skills and experience (and confidence!) to enable you to further your experience in using R.
+The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research.
+R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting.
+It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.
+
+## Multilingual book
+
+The book is provided as a multilingual book breaking that language barrier and potentially allow to facilitate the learn of R and its mainly english-speaking environment.
+We are always looking for volunteers to help developed the book further and add more languages to the growing list. Please [contact us][whoarewe] if you want to help 
+
+On the web version of the book, use {{< bi flag >}} in the navigation bar to switch from one language to another. After switching to your preferred language, you can of course also download the pdf and epub versions in this language if you want to using {{< bi  download >}}.
+
+List of languages:
+
+* english (publish but need polishing)
+* french (in development, waiting for english to be polished)
+* spanish (in development, waiting for english to be polished)
+
 
 ## How to use this book {.unnumbered}
 
-For the best experience we recommend that you read the web version of this book which you can find [here][book].
-The web version includes a navbar at the top of the page where you can toggle the sidebars on and off, search through the book, change the page color and suggest revisions if you spot a typo or mistake.
-You can also download a pdf and epub versions of the book.
+For the best experience we recommend that you read the web version of this book which you can find <https://biostats-uottawa.github.io/R>.
+
+The web version includes a navbar at the top of the page where you can toggle the sidebars on and off {{< bi  body-text >}}, search through the book {{< bi  search >}}, change the page color {{< bi  toggle-off >}} and suggest revisions if you spot a typo or mistake {{< bi  github >}}.
+You can also download {{< bi  download >}} a pdf and epub versions of the book.
 
 We use a few typographical conventions throughout this book.
 
@@ -73,7 +88,7 @@ notes
 
 This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau [@douglas2023].
 It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified and updated following my own needs and teaching perspective of R.
-This also a part of a multilingual R book project to improve equity and diversity. It started wiuth a french translation and wwas/will be extended to many more languages.
+This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.
 
 ## License {.unnumbered}
 
