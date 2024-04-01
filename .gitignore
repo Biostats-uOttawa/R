@@ -16,7 +16,8 @@ extra/
 *_files/
 *_freeze/
 
-!docs/*_files/
+#!docs/*_files/
 
+/site_libs/
 /.quarto/
 /_book/
