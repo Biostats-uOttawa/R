@@ -9,7 +9,7 @@ So, why has R become so popular and why should you learn how to use it? Some rea
 - R is available for Windows, Mac and Linux operating systems.
 - R has an extensive and coherent set of tools for statistical analysis.
 - R has an extensive and highly flexible graphical facility capable of producing publication quality figures.
-- R has an expanding set of freely available ‘packages’ to extend R's capabilities.
+- R has an expanding set of freely available ‘packages’ `r emoji::emoji("package")` to extend R's capabilities.
 - R has an extensive support network with numerous online and freely available documents.
 
 All of the reasons above are great reasons to use R.
@@ -28,7 +28,28 @@ In this Chapter we'll cover:
 * some good habits to get into when working on projects
 * and finally some advice on documenting your workflow and writing nice readable R code.
 
-## Installing R {#install_r}
+## Some R pointers {.unnumbered}
+
+- Use R often and use it regularly.
+This will help build and maintain all important momentum.
+- Learning R is not a memory test.
+One of advantage of a scripting language is that you will always have your (well annotated) code to refer back to when you forget how to do something.
+- You don't need to know everything about R to be productive.
+- If you get stuck, search online, it's not cheating and writing a good search query is a skill in itself.
+- If you find yourself staring at code for hours trying to figure out why it's not working then walk away for a few minutes.
+- In R there are many ways to tackle a particular problem.
+If your code does what you want it to do in a reasonable time and robustly then don't worry about it.
+- R is just a tool to help you answer your interesting questions.
+Don't lose sight of what's important - your research question(s) and your data.
+No amount of skill using R will help if your data collection is fundamentally flawed or your question vague.
+- Recognize that there will be times when things will get a little tough or frustrating.
+Try to accept these periods as part of the natural process of learning a new skill (we've all been there) and remember, the time and energy you invest now will be more than payed back in the not too distant future.
+
+Good luck and don’t forget to have fun.
+
+## Installation
+
+### Installing R {#install_r}
 
 To get up and running the first thing you need to do is install R.
 R is freely available for Windows, Mac and Linux operating systems from the [Comprehensive R Archive Network (CRAN) website][cran].
@@ -36,12 +57,10 @@ For Windows and Mac users we suggest you download and install the pre-compiled b
 There are reasonably comprehensive instruction to install R for each OS ([Windows][cran-windows],[Mac][cran-mac] or [linux][cran-linux] ).
 
 
-### Testing R
-
 Whichever operating system you're using, once you have installed R you need to check its working properly.
 The easiest way to do this is to start R by double clicking on the R icon (Windows or Mac) or by typing `R` into the Console (Linux).
 You should see the R Console and you should be able to type R commands into the Console after the command prompt `>`.
-Try typing the following R code and then press enter
+Try typing the following R code and then press enter:
 
 ```{r, out.width="75%", fig.align="center"}
 plot(1:10)
@@ -51,26 +70,38 @@ A plot of the numbers 1 to 10 on both the x and y axes should appear.
 If you see this, you're good to go.
 If not then we suggest you make a note of any errors produced and then use Google to troubleshoot.
 
-## Installing an IDE
+### Installing an IDE
 
 We strongly recommend to use an **I**ntegrated **D**evelopment **E**nvironment (IDE) software to work with R.
 One simple and extremely popular IDE is [RStudio][rstudio].
 An alternative to RStudio is Visual Studio Code, or [VSCode][vscode].
 An IDE can be thought of as an add-on to R which provides a more user-friendly interface, incorporating the R Console, a script editor and other useful functionality (like R markdown and Git Hub integration).
 
-### RStudio
+::: {.callout-caution}
+You must install R before you install an IDE (see [previous section](#install_r) for details).
+:::
+
+:::{.callout-note}
+When we refer to **IDE** later in the text we mean either RStudio of VScode
+:::
+
+#### RStudio
 
 RStudio is freely available for Windows, Mac and Linux operating systems and can be downloaded from the [RStudio site][rstudio-download].
 You should select the 'RStudio Desktop' version.
-Note: you must install R before you install RStudio (see [previous section](#install_r) for details).
 
-### VSCode
+#### VSCode
 
 VSCode is freely available for Windows, Mac and Linux operating systems and can be downloaded from the [VS Code site][vscode].
-Note: you must install R before you install RStudio (see [previous section](#install_r) for details).
-In addition you need to install the [R extension to VSCode](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r).
 
-### Alternatives to RStudio and VSCode
+In addition you need to install the [R extension to VSCode](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r).
+To make VSCode a true powerhouse for working with R we strongly recommend you to also install:
+
+- [radian](https://github.com/randy3k/radian): A modern R console that corrects many limitations of the official R terminal and supports many features such as syntax highlighting and auto-completion.
+- [VSCode-R-Debugger](https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger): A VS Code extension to support R debugging capabilities.
+- [httpgd](https://cran.r-project.org/web/packages/httpgd/index.html): An R package `r emoji::emoji("package")` to provide a graphics device that asynchronously serves SVG graphics via HTTP and WebSockets.
+
+#### Alternatives to RStudio and VSCode
 
 Rather than using an 'all in one' IDE many people choose to use R and a separate script editor to write and execute R code.
 If you're not familiar with what a script editor is, you can think of it as a bit like a word processor but specifically designed for writing code.
@@ -79,7 +110,7 @@ Some script editors are only available for certain operating systems and not all
 Suggestions for script editors are provided below.
 Which one you choose is up to you: one of the great things about R is that *YOU* get to choose how you want to use R.
 
-#### Advanced text editors
+##### Advanced text editors
 A light yet efficient way to work with R is using advanced text editors such as:
 
 - [Atom][atom] (all operating systems)
@@ -91,7 +122,7 @@ A light yet efficient way to work with R is using advanced text editors such as:
 - [Sublime Text][sublime] (all operating systems)
 - [vim][vim] and its extension [NVim-R][nvim-r] (Linux)
 
-#### Integrated development environments
+##### Integrated development environments
 
 These environments are more powerful than simple text editors, and are similar to RStudio:
 
@@ -285,20 +316,20 @@ The `ask = FALSE` argument avoids having to confirm every package download which
 ### Bioconductor packages
 
 To install packages from Bioconductor the process is a [little different][bioc-install].
-You first need to install the `BiocManager` package.
+You first need to install the `BiocManager` `r emoji::emoji("package")` package.
 You only need to do this once unless you subsequently reinstall or upgrade R
 
 ```{r, echo=TRUE, eval=FALSE}
 install.packages("BiocManager", dependencies = TRUE)
 ```
 
-Once the BiocManager package has been installed you can either install all of the 'core' Bioconductor packages with
+Once the `BiocManager``r emoji::emoji("package")` package has been installed you can either install all of the 'core' Bioconductor packages with
 
 ```{r, echo=TRUE, eval=FALSE}
 BiocManager::install()
 ```
 
-or install specific packages such as the 'GenomicRanges' and 'edgeR' packages
+or install specific packages such as the `GenomicRanges` `r emoji::emoji("package")`  and `edgeR` `r emoji::emoji("package")` packages
 
 ```{r, echo=TRUE, eval=FALSE}
 BiocManager::install(c("GenomicRanges", "edgeR"))
@@ -315,9 +346,9 @@ Again, you can use the `ask = FALSE` argument to avoid having to confirm every p
 ### GitHub packages
 
 There are multiple options for installing packages hosted on GitHub.
-Perhaps the most efficient method is to use the `install_github()` function from the `remotes` package (you installed this package [previously](#cran_packages)).
+Perhaps the most efficient method is to use the `install_github()` function from the `remotes` `r emoji::emoji("package")` package (you installed this package [previously](#cran_packages)).
 Before you use the function you will need to know the GitHub username of the repository owner and also the name of the repository.
-For example, the development version of `dplyr` from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name 'dplyr' (just Google 'github dplyr').
+For example, the development version of `dplyr` `r emoji::emoji("package")` from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name 'dplyr' (just Google 'github dplyr').
 To install this version from GitHub use
 
 ```{r, echo=TRUE, eval=FALSE}
@@ -331,17 +362,17 @@ The safest way (that we know of) to update a package installed from GitHub is to
 
 Once you have installed a package onto your computer it is not immediately available for you to use.
 To use a package you first need to load the package by using the `library()` function.
-For example, to load the `remotes` package you previously installed
+For example, to load the `remotes` `r emoji::emoji("package")`  package you previously installed
 
 ```{r, echo=TRUE, eval=FALSE}
 library(remotes)
 ```
 
 The `library()` function will also load any additional packages required and may print out additional package information.
-It is important to realise that every time you start a new R session (or restore a previously saved session) you need to load the packages you will be using.
+It is important to realize that every time you start a new R session (or restore a previously saved session) you need to load the packages you will be using.
 We tend to put all our `library()` statements required for our analysis near the top of our R scripts to make them easily accessible and easy to add to as our code develops.
 If you try to use a function without first loading the relevant R package you will receive an error message that R could not find the function.
-For example, if you try to use the `install_github()` function without loading the `remotes` package first you will receive the following error
+For example, if you try to use the `install_github()` function without loading the `remotes` `r emoji::emoji("package")` package first you will receive the following error
 
 ```{r, echo=TRUE, eval=FALSE}
 install_github("tidyverse/dplyr")
@@ -357,18 +388,212 @@ If, for example, you will only be using one or two functions in your script and 
 remotes::install_github("tidyverse/dplyr")
 ```
 
-This is how we were able to use the `install()` and `install_github()` functions [above][Bioconductor packages] without first loading the packages `BiocManager` and `remotes`.
+This is how we were able to use the `install()` and `install_github()` functions [above][Bioconductor packages] without first loading the packages `BiocManager` `r emoji::emoji("package")`  and `remotes` `r emoji::emoji("package")` .
 Most of the time we recommend using the `library()` function.
+
+## Working directories {#work-d}
+
+The working directory is the default location where R will look for files you want to load and where it will put any files you save.
+One of the great things about using RStudio Projects is that when you open a project it will automatically set your working directory to the appropriate location.
+You can check the file path of your working directory by using either `getwd()` or `here()` functions.
+
+
+```{r}
+getwd()
+```
+
+In the example above, the working directory is a folder called 'R_way' which is a subfolder of "biostats' in the 'courses' folder which in turn is in a 'Documents' folder located in the 'julien' folder which itself is in the 'home' folder.
+On a Windows based computer our working directory would also include a drive letter (i.e.
+`C:\home\julien\Documents\courses\biostats\R_way`).
+
+
+If you weren't using an IDE then you would have to set your working directory using the `setwd()` function at the start of every R script (something we did for many years).
+
+```{r wd, echo=TRUE, eval=FALSE}
+setwd("/home/julien/Documents/courses/biostats/R_way/")
+```
+
+However, the problem with `setwd()` is that it uses an *absolute* file path which is specific to the computer you are working on.
+If you want to send your script to someone else (or if you're working on a different computer) this absolute file path is not going to work on your friend/colleagues computer as their directory configuration will be different (you are unlikely to have a directory structure `/home/julien/Documents/courses/biostats/` on your computer).
+This results in a project that is not self-contained and not easily portable.
+IDEs solves this problem by allowing you to use *relative* file paths  which are relative to the *Root* project directory.
+The Root project directory is just the directory that contains the `.Rproj` file in Rstudio (`first_project.Rproj` in our case) or the base folder of your workspace in VScode.
+If you want to share your analysis with someone else, all you need to do is copy the entire project directory and send to your to your collaborator.
+They would then just need to open the project file and any R scripts that contain references to relative file paths will just work.
+For example, let's say that you've created a subdirectory called `data` in your Root project directory that contains a csv delimited datile called `mydata.csv` (we will cover directory structures [below](#dir_struct)).
+To import this datile in an RStudio project using the `read.csv()` function (don't worry about this now, we will cover this in much more detail in [Chapter 3](#data_r)) all you need to include in your R script is
+
+```{r rel-fp1, echo=TRUE, eval=FALSE}
+dat <- read.csv("data/mydata.csv")
+```
+
+Because the file path `data/mydata.csv` is relative to the project directory it doesn't matter where you collaborator saves the project directory on their computer it will still work.
+
+If you weren't using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file. Neither option would be reproducible on other computers.
+
+```{r rel-fp2, echo=TRUE, eval=FALSE}
+setwd("/home/julien/Documents/courses/biostats/R_way")
+
+dat <- read.csv("data/mydata.csv")
+```
+
+or
+
+```{r, echo=TRUE, eval=FALSE}
+dat <- read.csv("/home/julien/Documents/courses/biostats/R_way/data/mydata.csv")
+```
+
+For those of you who want to take the notion of relative file paths a step further, take a look at the `here()` function in the `here` [package][here].
+The `here()` function allows you to build file paths for any file relative to the project root directory that are also operating system agnostic (works on a Mac, Windows or Linux machine).
+For example, to import our `mydata.csv` file from the `data` directory just use: 
+
+```{r rel-fp23, echo=TRUE, eval=FALSE}
+library(here) # you may need to install the here package first
+dat <- read.csv(here("data", "mydata.csv"))
+
+```
+
+## Directory structure {#dir_struct}
+
+In addition to using RStudio Projects, it's also really good practice to structure your working directory in a consistent and logical way to help both you and your collaborators.
+We frequently use the following directory structure in our R based projects.
+
+<!--
+obtained from tree -L 2
+```bash
+root
+├── data
+│   ├── raw data
+│   ├── processed data
+│   └── metadata
+├── functions
+├── scripts
+└── output
+    ├── html
+    ├── pdfs
+    └── figures
+```
+-->
+
+```{dot}
+#| eval: false
+digraph {
+  rankdir=LR
+  ranksep=0.5
+  nodesep=0.5
+  node [
+    style = filled
+    shape=oval
+	]
+  root [fillcolor="red"]
+  data [fillcolor="lightblue"]
+  functions [fillcolor="lightgreen"]
+  outputs [fillcolor="orange"]
+  scripts [fillcolor="white"]
+
+  wd [label= "your working directory", shape = rect]
+  LOT1 [label= "raw\n processed\n metadata", shape = rect]
+  LOT2 [label= "R functions", shape = rect]
+  LOT4 [label= "analysis scripts\n R markdown documents", shape = rect]
+  LOT3 [label = "pdf\n html\n figures", shape=rect]
+
+  dot01 [shape=point width=0]
+  root -> dot01 [arrowhead=none]
+  dot01 -> wd [weight=20]
+
+  {
+    rank=same
+    root
+    dot1 [shape=point width=0]
+    dot2 [shape=point width=0]
+    dot3 [shape=point width=0]
+    dot4 [shape=point width=0]
+    root -> dot1 -> dot2 -> dot3 -> dot4 [arrowhead=none]
+  }
+
+  dot1 -> data [weight=20]
+  {
+    rank=same
+    data
+    dot21  [shape=point width=0]
+    data -> dot21 [arrowhead=none]
+  }
+  dot21 -> LOT1 [weight=20]
+  dot2 -> functions
+  {
+    rank=same
+    functions
+    dot22  [shape=point width=0]
+    functions -> dot22 [arrowhead=none]
+  }
+  dot22 -> LOT2 [weight=20]
+  dot3 -> outputs [weight=20]
+  {
+    rank=same
+    outputs
+    dot23 [shape=point width=0]
+    outputs -> dot23 [arrowhead=none]
+  }
+  dot23 -> LOT3 [weight=20]
+  
+  dot4 -> scripts [weight=20]
+  {
+    rank=same
+    scripts
+    dot24 [shape=point width=0]
+    scripts -> dot24 [arrowhead=none]
+  }
+  dot24 -> LOT4 [weight=20]
+}
+```
+
+In our working directory we have the following directories:
+
+  - **Root** - This is your project directory containing your `.Rproj` file. We tend to keep all the R scripts or \[Rq\]md document necessary for the analysis / report in this root folder or in the scripts folder when there are too many.
+
+ 
+  - **data** - We store all our data in this directory.
+  The subdirectory called `data` contains raw data files and only raw data files.
+  These files should be treated as **read only** and should not be changed in any way.
+  If you need to process/clean/modify your data do this in R (not MS Excel) as you can document (and justify) any changes made.
+  Any processed data should be saved to a separate file and stored in the `processed_data` subdirectory.
+  Information about data collection methods, details of data download and any other useful metadata should be saved in a text document (see README text files below) in the `metadata` subdirectory.
+   
+  - **functions** - This is an optional directory where we save all of the custom R functions we've written for the current analysis.
+  These can then be sourced into R using the `source()` function.
+
+ 
+  - **scripts** - An optional directory where we save our R markdown documents and/or the main R scripts we have written for the current project are saved here if not in the root folder.
+
+ 
+  - **output** - Outputs from our R scripts such as plots, HTML files and data summaries are saved in this directory.
+  This helps us and our collaborators distinguish what files are outputs and which are source files.
+
+
+Of course, the structure described above is just what works for us most of the time and should be viewed as a starting point for your own needs.
+We tend to have a fairly consistent directory structure across our projects as this allows us to quickly orientate ourselves when we return to a project after a while.
+Having said that, different projects will have different requirements so we happily add and remove directories as required.
+ 
+
+You can create your directory structure using Windows Explorer (or Finder on a Mac) or within your IDE by clicking on the 'New folder' button in the 'Files' pane.
+
+
+An alternative approach is to use the `dir.create()` functions in the R Console.
+
+```{r dir, echo=TRUE, eval=FALSE}
+# create directory called 'data'
+dir.create("data")
+```
 
 ## Projects organisation {#rsprojs}
 
-As with most things in life, when it comes to dealing with data and data analysis things are so much simpler if you're organised.
+As with most things in life, when it comes to dealing with data and data analysis things are so much simpler if you're organized.
 Clear project organisation makes it easier for both you (especially the future you) and your collaborators to make sense of what you've done.
 There's nothing more frustrating than coming back to a project months (sometimes years) later and have to spend days (or weeks) figuring out where everything is, what you did and why you did it.
 A well documented project that has a consistent and logical structure increases the likelihood that you can pick up where you left off with minimal fuss no matter how much time has passed.
-In addition, it's much easier to write code to automate tasks when files are well organised and are sensibly named.
+In addition, it's much easier to write code to automate tasks when files are well organized and are sensibly named.
 This is even more relevant nowadays as it's never been easier to collect vast amounts of data which can be saved across 1000's or even 100,000's of separate data files.
-Lastly, having a well organised project reduces the risk of introducing bugs or errors into your workflow and if they do occur (which inevitably they will at some point), it makes it easier to track down these errors and deal with them efficiently.
+Lastly, having a well organized project reduces the risk of introducing bugs or errors into your workflow and if they do occur (which inevitably they will at some point), it makes it easier to track down these errors and deal with them efficiently.
 
 There are also a few simple steps you can take right at the start of any project to help keep things shipshape.
 
@@ -436,184 +661,6 @@ workspace are similar to RStudio projects.
 You however need to create a new folder with a R file (or text file) and save as workspace.
 
 
-## Working directories {#work-d}
-
-The working directory is the default location where R will look for files you want to load and where it will put any files you save.
-One of the great things about using RStudio Projects is that when you open a project it will automatically set your working directory to the appropriate location.
-You can check the file path of your working directory by using either `getwd()` or `here()` functions
-
-
-```{r}
-getwd()
-```
-
-In the example above, the working directory is a folder called 'R_way' which is a subfolder of "biostats' in the 'courses' folder which in turn is in a 'Documents' folder located in the 'julien' folder which itself is in the 'home' folder.
-On a Windows based computer our working directory would also include a drive letter (i.e.
-`C:\home\julien\Documents\courses\biostats\R_way`).
-
-
-If you weren't using an IDE then you would have to set your working directory using the `setwd()` function at the start of every R script (something we did for many years).
-
-```{r wd, echo=TRUE, eval=FALSE}
-setwd("/home/julien/Documents/courses/biostats/R_way/")
-```
-
-However, the problem with `setwd()` is that it uses an *absolute* file path which is specific to the computer you are working on.
-If you want to send your script to someone else (or if you're working on a different computer) this absolute file path is not going to work on your friend/colleagues computer as their directory configuration will be different (you are unlikely to have a directory structure `/home/julien/Documents/courses/biostats/` on your computer).
-This results in a project that is not self-contained and not easily portable.
-IDEs solves this problem by allowing you to use *relative* file paths  which are relative to the *Root* project directory.
-The Root project directory is just the directory that contains the `.Rproj` file in Rstudio (`first_project.Rproj` in our case) or the base folder of your workspace in VScode.
-If you want to share your analysis with someone else, all you need to do is copy the entire project directory and send to your to your collaborator.
-They would then just need to open the project file and any R scripts that contain references to relative file paths will just work.
-For example, let's say that you've created a subdirectory called `data` in your Root project directory that contains a csv delimited datile called `mydata.csv` (we will cover directory structures [below](#dir_struct)).
-To import this datile in an RStudio project using the `read.csv()` function (don't worry about this now, we will cover this in much more detail in [Chapter 3](#data_r)) all you need to include in your R script is
-
-```{r rel-fp1, echo=TRUE, eval=FALSE}
-dat <- read.csv("data/mydata.csv")
-```
-
-Because the file path `data/mydata.csv` is relative to the project directory it doesn't matter where you collaborator saves the project directory on their computer it will still work.
-
-If you weren't using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file. Neither option would be reproducible on other computers
-
-```{r rel-fp2, echo=TRUE, eval=FALSE}
-setwd("/home/julien/Documents/courses/biostats/R_way")
-
-dat <- read.csv("data/mydata.csv")
-```
-
-or
-
-```{r, echo=TRUE, eval=FALSE}
-dat <- read.csv("/home/julien/Documents/courses/biostats/R_way/data/mydata.csv")
-```
-
-For those of you who want to take the notion of relative file paths a step further, take a look at the `here()` function in the `here` [package][here].
-The `here()` function allows you to build file paths for any file relative to the project root directory that are also operating system agnostic (works on a Mac, Windows or Linux machine).
-For example, to import our `mydata.csv` file from the `data` directory just use 
-
-```{r rel-fp23, echo=TRUE, eval=FALSE}
-library(here) # you may need to install the here package first
-dat <- read.csv(here("data", "mydata.csv"))
-
-```
-
-## Directory structure {#dir_struct}
-
-In addition to using RStudio Projects, it's also really good practice to structure your working directory in a consistent and logical way to help both you and your collaborators.
-We frequently use the following directory structure in our R based projects
-
-<!--
-```bash
-root
-├── data
-│   ├── raw data
-│   ├── processed data
-│   └── metadata
-├── functions
-├── scripts
-└── output
-    ├── html
-    ├── pdfs
-    └── figures
-```
--->
-
-```{dot}
-#| eval: false
-digraph {
-    rankdir=LR
-    ranksep=0.5
-    nodesep=0.5
-
-    LOT1 [label= "raw\n processed\n metadata", shape = rect]
-        LOT2 [label= "R functions", shape = rect]
-          LOT4 [label= "analysis scripts\n R markdown documents", shape = rect]
-    LOT3 [label = "pdf\n html\n figures", shape=rect]
-
-
-    {rank=same
-        root
-        dot1 [shape=point width=0]
-        dot2 [shape=point width=0]
-        dot3 [shape=point width=0]
-        dot4 [shape=point width=0]
-        root -> dot1 -> dot2 -> dot3 -> dot4 [arrowhead=none]
-    }
-    dot1 -> data [weight=20]
-    {
-        rank=same
-        data
-        dot21  [shape=point width=0]
-        data -> dot21 [arrowhead=none]
-    }
-    dot21 -> LOT1 [weight=20]
-    dot2 -> functions
-    {
-        rank=same
-        functions
-        dot22  [shape=point width=0]
-        functions -> dot22 [arrowhead=none]
-    }
-    dot22 -> LOT2 [weight=20]
-    dot3 -> outputs [weight=20]
-    {
-        rank=same
-        outputs
-        dot23 [shape=point width=0]
-        outputs -> dot23 [arrowhead=none]
-    }
-    dot23 -> LOT3 [weight=20]
-    
-    dot4 -> scripts [weight=20]
-        {
-        rank=same
-        scripts
-        dot24 [shape=point width=0]
-        scripts -> dot24 [arrowhead=none]
-    }
-    dot24 -> LOT4 [weight=20]
-}
-```
-
-In our working directory we have the following directories:
-
-  - **Root** - This is your project directory containing your `.Rproj` file. We tend to keep all the R scripts or \[Rq\]md document necessary for the analysis / report in this root folder.
-
- 
-  - **data** - We store all our data in this directory.
-  The subdirectory called `data` contains raw data files and only raw data files.
-  These files should be treated as **read only** and should not be changed in any way.
-  If you need to process/clean/modify your data do this in R (not MS Excel) as you can document (and justify) any changes made.
-  Any processed data should be saved to a separate file and stored in the `processed_data` subdirectory.
-  Information about data collection methods, details of data download and any other useful metadata should be saved in a text document (see README text files below) in the `metadata` subdirectory.
-   
-  - **functions** - This is an optional directory where we save all of the custom R functions we've written for the current analysis.
-  These can then be sourced into R using the `source()` function.
-
- 
-  - **scripts** - An optional directory where we save our R markdown documents and/or the main R scripts we have written for the current project are saved here if not in the root folder.
-
- 
-  - **output** - Outputs from our R scripts such as plots, HTML files and data summaries are saved in this directory.
-  This helps us and our collaborators distinguish what files are outputs and which are source files.
-
-
-Of course, the structure described above is just what works for us most of the time and should be viewed as a starting point for your own needs.
-We tend to have a fairly consistent directory structure across our projects as this allows us to quickly orientate ourselves when we return to a project after a while.
-Having said that, different projects will have different requirements so we happily add and remove directories as required.
- 
-
-You can create your directory structure using Windows Explorer (or Finder on a Mac) or within your IDE by clicking on the 'New folder' button in the 'Files' pane.
-
-
-An alternative approach is to use the `dir.create()` functions in the R Console
-
-```{r dir, echo=TRUE, eval=FALSE}
-# create directory called 'data'
-dir.create("data")
-```
-
 ## File names {#file_names}
 
 What you call your files matters more than you might think.
@@ -631,7 +678,7 @@ Although there's not really a recognized standard approach to naming files (actu
   - First, avoid using spaces in file names by replacing them with underscores or even hyphens.
 Why does this matter? One reason is that some command line software (especially many bioinformatic tools) won't recognise a file name with a space and you'll have to go through all sorts of shenanigans using escape characters to make sure spaces are handled correctly.
 Even if you don't think you will ever use command line software you may be doing so indirectly.
-Take R markdown for example, if you want to render an R markdown document to pdf using the `rmarkdown` package you will actually be using a command line LaTeX engine under the hood (called [Pandoc][pandoc]).
+Take R markdown for example, if you want to render an R markdown document to pdf using the `rmarkdown` `r emoji::emoji("package")` package you will actually be using a command line LaTeX engine under the hood (called [Pandoc][pandoc]).
 Another good reason not to use spaces in file names is that it makes searching for file names (or parts of file names) using [regular expressions][regex] in R (or any other language) much more difficult.
  
   - For the reasons given above, also avoid using special characters (i.e.
@@ -650,7 +697,7 @@ etc.
 Whatever file naming convention you decide to use, try to adopt early, stick with it and be consistent.
 You'll thank us!
 
-## Project documentation {#proj_doc}
+## Script documentation {#proj_doc}
 
 A quick note or two about writing R code and creating R scripts.
 Unless you're doing something really quick and dirty we suggest that you always write your R code as an R script.
@@ -659,34 +706,29 @@ Not only do you have a complete record of your analysis, from data manipulation,
 With this in mind, make sure you include in your R script all the information required to make your work reproducible (author names, dates, sampling design etc).
 This information could be included as a series of comments `#` or, even better, by mixing executable code with narrative into an [R markdown](#rmarkdown_r) document.
 It's also good practice to include the output of the `sessionInfo()` function at the end of any script which prints the R version, details of the operating system and also loaded packages.
-A really good alternative is to use the `session_info()` function from the `xfun` package for a more concise summary of our session environment.
+A really good alternative is to use the `session_info()` function from the `xfun` `r emoji::emoji("package")` package for a more concise summary of our session environment.
 
 Here's an example of including meta-information at the start of an R script
 
 ```{r, echo=TRUE, eval=FALSE}
-# Title: Time series analysis of snouters
+# Title: Time series analysis of lasagna consumption
 
 # Purpose : This script performs a time series analyses on
-#           snouter count data.
-#           Data consists of counts of snouter species
-#           collected from 18 islands in the Hy-yi-yi
-#           archipelago between 1950 and 1957.
-#           For details of snouter biology see:
-#           https://en.wikipedia.org/wiki/Rhinogradentia
+#           lasagna meals kids want to have each week.
+#           Data consists of counts of (dreamed) lasagna meals per week
+#           collected from 24 kids at the "Food-dreaming" school
+#           between 2042 and 2056.
 
-# Project number: #007
+# data file: lasagna_dreams.csv
 
-# datile: snouter_pop.txt
+# Author: A. Stomach
+# Contact details: a.stomach@food.uni.com
 
-# Author: A.
-Nother
-# Contact details: a.nother@uir.ac.uk
-
-# Date script created: Mon Dec 2 16:06:44 2019 -----------
+# Date script created: Fri Mar 29 17:06:44 2010 -----------
 # Date script last modified: Thu Dec 12 16:07:12 2019 ----
 
 # package dependencies
-library(PopSnouter)
+library(tidyverse)
 library(ggplot2)
 
 print("put your lovely R code here")
@@ -723,8 +765,8 @@ To help you with code formatting:
 
 - VSCode there is an embedded formatter in the R extension for VSCode.
 You can just use the keyboard shortcut to reformat the code nicely and automatically.
-- RStudio you can install the `styler` package which includes an RStudio add-in to allow you to automatically restyle selected code (or entire files and projects) with the click of your mouse.
-You can find more information about the `styler` package including how to install [here][styler].
+- RStudio you can install the `styler` `r emoji::emoji("package")` package which includes an RStudio add-in to allow you to automatically restyle selected code (or entire files and projects) with the click of your mouse.
+You can find more information about the `styler` `r emoji::emoji("package")` package including how to install [here][styler].
 Once installed, you can highlight the code you want to restyle, click on the 'Addins' button at the top of RStudio and select the 'Style Selection' option.
 Here is an example of poorly formatted R code
 
@@ -732,7 +774,7 @@ Here is an example of poorly formatted R code
 knitr::include_graphics(path = "images/ch-01/before_rcode.png")
 ```
 
-Now highlight the code and use the `styler` package to reformat
+Now highlight the code and use the `styler` `r emoji::emoji("package")` package to reformat
 
 ```{r styler, echo=FALSE, out.width="60%", fig.align="center"}
 knitr::include_graphics(path = "images/ch-01/styler.png")
@@ -781,5 +823,6 @@ If you want to cite a particular package you've used for your data analysis.
 citation(package = "here")
 ```
 
+To cite multiple packages, the package `grateful` `r emoji::emoji("package")` is extermely useful. See the [reference section](98-references.qmd) for an example output produced with grateful.
 ```{r links, child="_links.md"}
 ```

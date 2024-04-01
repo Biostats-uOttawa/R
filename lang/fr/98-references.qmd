@@ -1,9 +1,9 @@
-# References  {.unnumbered}
+# Références  {.unnumbered}
 
-## R packages {.unnumbered}
+## Paquets R {.unnumbered}
 
 
-This book was produced all packages listed in table @tab-Rlib.
+Ce livre a utilisé les paquets R listé dans le tableau @tab-Rlib.
 
 ```{r}
 #| label: tab-Rlib
@@ -22,7 +22,7 @@ knitr::kable(
 )
 ```
 
-### Bibliography  {.unnumbered}
+### Bibliographie  {.unnumbered}
 
 ::: {#refs}
 :::

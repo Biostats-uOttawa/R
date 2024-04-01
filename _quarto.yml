@@ -37,7 +37,7 @@ format:
     css: css/style.css
     code-link: true
     author-meta: "Julien Martin"
-    callout-appearance: simple
+#    callout-appearance: simple
 
 #  pdf:
 #    documentclass: scrbook
