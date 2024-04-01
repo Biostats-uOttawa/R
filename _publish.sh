@@ -1,6 +1,8 @@
 git checkout gh-pages
-git rm .
-cp _books/. .
+#git checkout main .gitignore
+git rm -r .
+cp -r _book/. .
+git add .
 git commit -a -m "update pages"
 git push
 git checkout main
