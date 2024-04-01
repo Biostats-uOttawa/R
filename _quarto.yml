@@ -40,10 +40,12 @@ book:
         menu:
           - text: Biostats uOttawa
             href: https://biostats-uottawa.github.io/
-          - text: Bio4158 (english)
+          - text: Bio4158 Biostats with R)
             href: https://biostats-uottawa.github.io/bio4158_course/
-          - text: Bio4558 (français)
+          - text: Bio4558 (Biostats avec R)
             href: https://biostats-uottawa.github.io/bio4558_cours/
+          - text: Bio8940 (Advanced biostats and open science)
+            href: https://biostats-uottawa.github.io/bio8940_course/
 
   chapters:
     - index.qmd
