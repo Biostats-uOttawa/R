@@ -20,7 +20,7 @@ book:
     collapse-below: lg
     title: "Chemin enf-R"
     left:
-      - text: Donnéesa
+      - text: Données
         href: 99-App-data.qmd
       - text: Autres ressources
         menu:
@@ -36,7 +36,7 @@ book:
     right:
       - icon: flag
         menu:
-        - href: ../en/
+        - href: ../en
           text: English
 #        - href: ../es/
 #          text: Español
