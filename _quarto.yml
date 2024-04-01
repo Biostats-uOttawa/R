@@ -39,14 +39,15 @@ format:
     author-meta: "Julien Martin"
 #    callout-appearance: simple
 
-#  pdf:
-#    documentclass: scrbook
-#    include-in-header: latex/preamble.tex
-#    include-before-body: latex/before_body.tex
-#    include-after-body: latex/after_body.tex
-#    toc-depth: 2
+  pdf:
+    documentclass: scrbook
+    include-in-header: latex/preamble.tex
+    include-before-body: latex/before_body.tex
+    include-after-body: latex/after_body.tex
+    toc-depth: 2
 #
-#  epub:
-#    dev: svglite
-#    stylesheet: css/epub.css
-#    toc: true
+  epub:
+    dev: svglite
+    stylesheet: css/epub.css
+    toc: true
+    epub-cover-image: images/cover_introR.jpg

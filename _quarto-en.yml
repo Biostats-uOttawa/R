@@ -18,7 +18,7 @@ book:
   navbar:
     background: light
     collapse-below: lg
-    title: "R Way"
+    title: R Way
     left:
       - text: Data
         href: 99-App-data.qmd
