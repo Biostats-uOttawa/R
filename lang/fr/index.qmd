@@ -3,6 +3,11 @@
 ```{r links, child="_links.md"}
 ```
 
+::: {.callout-warning}
+Première version en cours de traduction. 
+Pas encore revue par un humain
+:::
+
 ## L'objectif de ce livre {.unnumbered}
 
 L'objectif de ce livre est de te présenter R, un environnement interactif puissant et flexible pour le calcul et la recherche statistiques.

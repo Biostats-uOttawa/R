@@ -1,4 +1,4 @@
-# Pour commencer {#chap1}
+# Introduction {#chap1}
 
 Bien que R ne soit pas nouveau, sa popularité a augmenté rapidement depuis une dizaine d'années (voir [ici][r4stats] pour des données intéressantes).
 Il a été créé et développé à l'origine par Ross Ihaka et Robert Gentleman au cours des années 1990 et la première version stable a été publiée en 2000.
