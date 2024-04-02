@@ -21,3 +21,5 @@ extra/
 /site_libs/
 /.quarto/
 /_book/
+
+/.luarc.json
