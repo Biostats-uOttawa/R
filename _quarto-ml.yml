@@ -1,0 +1,53 @@
+project:
+  type: book
+  output-dir: _book
+#  post-render: 
+#    - _remove-files.r
+
+profile:
+  default: en
+  group: [en, fr, es]
+
+execute: 
+  cache: true
+  freeze: auto
+
+book:
+  google-analytics: G-6LLMGL3T2Q
+  date: today
+  date-format: iso 
+  reader-mode: true
+  search: true
+  cover-image: images/cover_introR.jpg
+  favicon: cover.jpg
+  site-url: https://biostats-uottawa.github.io/R_way/
+  repo-url: https://github.com/biostats-uottawa/R_way/
+  repo-actions: [edit, issue]
+  downloads: [pdf, epub]
+
+bibliography: [biblio/book.bib, biblio/grateful-refs.bib]
+biblio-style: apalike
+csl: biblio/ecology.csl
+
+format:
+  html:
+    theme:
+      light: cosmo #, css/theme.scss]
+      dark: [cosmo, css/theme-dark.scss]
+    css: css/style.css
+    code-link: true
+    author-meta: "Julien Martin"
+#    callout-appearance: simple
+
+  pdf:
+    documentclass: scrbook
+    include-in-header: latex/preamble.tex
+    include-before-body: latex/before_body.tex
+    include-after-body: latex/after_body.tex
+    toc-depth: 2
+#
+  epub:
+    dev: svglite
+    stylesheet: css/epub.css
+    toc: true
+    epub-cover-image: images/cover_introR.jpg

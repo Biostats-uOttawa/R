@@ -1,0 +1,55 @@
+project:
+  output-dir: _book/es
+
+lang: es-es
+
+book:
+  title: "On the R-way to hell"
+  subtitle: "An introduction to the marvelous world of R"
+  description: "Early version needed to be severely updated/modified"
+  author: <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
+
+  page-footer:
+    left: |
+      <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+
+  navbar:
+    background: light
+    collapse-below: lg
+    title: "R Way"
+    left:
+      - text: Data
+        href: 99-App-data.qmd
+      - text: Other resources
+        menu:
+          - text: Biostats uOttawa
+            href: https://biostats-uottawa.github.io/
+          - text: Bio4158 (english)
+            href: https://biostats-uottawa.github.io/bio4158_course/
+          - text: Bio4558 (français)
+            href: https://biostats-uottawa.github.io/bio4558_cours/
+
+#    right:
+#      - icon: flag
+#        menu:
+#        - href: ../fr/
+#          text: French
+#        - href: ../es/
+#          text: Espanol
+          
+  chapters:
+    - index.qmd
+    - 01-intro.qmd
+    - 02-basics.qmd
+    - 03-data.qmd
+    - 04-graphics_short.qmd
+    - 05-stats.qmd
+    - 06-programming.qmd
+    - 07-rmarkdown.qmd
+    - 08-github.qmd
+    - 98-references.qmd
+  appendices:
+    - 99-App-data.qmd
+    - 99-App-latex.qmd

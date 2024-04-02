@@ -1,0 +1,102 @@
+
+# Préface {.unnumbered}
+
+
+```{r links, child="_links.md"}
+```
+
+## Objectif du livre {.unnumbered}
+
+The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research.
+R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting.
+It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.
+
+## Livre multilingue
+
+The book is provided as a multilingual book breaking that language barrier and potentially allow to facilitate the learn of R and its mainly english-speaking environment.
+We are always looking for volunteers to help developed the book further and add more languages to the growing list. Please [contact us][whoarewe] if you want to help 
+
+On the web version of the book, use {{< bi flag >}} in the navigation bar to switch from one language to another. After switching to your preferred language, you can of course also download the pdf and epub versions in this language if you want to using {{< bi  download >}}.
+
+List of languages:
+
+* english (publish but need polishing)
+* french (in development, waiting for english to be polished)
+* spanish (in development, waiting for english to be polished)
+
+
+## Comment utiliser le livre {.unnumbered}
+
+For the best experience we recommend that you read the web version of this book which you can find <https://biostats-uottawa.github.io/R>.
+
+The web version includes a navbar at the top of the page where you can toggle the sidebars on and off {{< bi  body-text >}}, search through the book {{< bi  search >}}, change the page color {{< bi  toggle-off >}} and suggest revisions if you spot a typo or mistake {{< bi  github >}}.
+You can also download {{< bi  download >}} a pdf and epub versions of the book.
+
+We use a few typographical conventions throughout this book.
+
+R code and the resulting output are presented in code blocks in our book.
+
+```{r, echo=TRUE, eval=TRUE}
+2 + 2
+```
+
+Functions in the text are shown with brackets at the end using code font, i.e.
+`mean()` or `sd()` etc.
+
+Objects are shown using code font without the round brackets, i.e.
+`obj1`, `obj2` etc.
+
+R packages in the text are shown using code font and followed by the `r emoji::emoji("package")` icon, i.e. `tidyverse` `r emoji::emoji("package")`.
+
+A series of actions required to access menu commands in RStudio or VSCode are identified as `File` -> `New File` -> `R Script` which translates to 'click on the File menu, then click on New File and then select R Script'.
+
+When we refer to **IDE** (**I**ntegrated **D**evelopment **E**nvironment software) later in the text we mean either RStudio of VScode.
+
+When we refer to **.\[Rq\]md**, we mean either R markdown (.Rmd) or Quarto (.qmd) documents and would generally talk of R markdown documents when referring to either `.Rmd` or `.qmd` files. 
+
+The manual tries to highlight some part of the text using the following boxes and icons.
+
+
+::: {.callout-caution}
+# Exercises
+Stuff for you to do
+:::
+
+::: {.callout-note}
+# Solutions
+R code and explanations
+:::
+
+::: {.callout-warning}
+warnings
+:::
+
+::: {.callout-important}
+important points
+:::
+
+::: {.callout-note}
+notes
+:::
+
+
+## Who are we ?
+
+- [Julien Martin][whoarewe]
+
+## Remerciements {.unnumbered}
+
+This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau [@douglas2023].
+It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified and updated following my own needs and teaching perspective of R.
+This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.
+
+## Licence {.unnumbered}
+
+I share this modified version of the [original book][https://intro2r.com/] under the license [License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+![License Creative Commons](images/license_cc.png)
+
+If you teach R, feel free to use some or all of the content in this book to help support your own students.
+The only thing I ask is that you acknowledge the original source and authors.
+If you find this book useful or have any comments or suggestions I would love to hear from you  ([contact info][whoarewe]).
+

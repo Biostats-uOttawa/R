@@ -1,0 +1,57 @@
+project:
+  output-dir: _book/fr
+
+lang: fr-fr
+
+book:
+  title: "Sur le chemin de l'enf-R"
+  subtitle: "Une introduciton au monde merveilleux de R"
+  description: "En cours de traduction"
+  author: <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
+
+  page-footer:
+    left: |
+      <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
+    right: |
+      Ce livre a été crée avec <a href="https://quarto.org/">Quarto</a>.
+
+  navbar:
+    background: light
+    collapse-below: lg
+    title: "Chemin enf-R"
+    left:
+      - text: Données
+        href: 99-App-data.qmd
+      - text: Autres ressources
+        menu:
+          - text: Biostats uOttawa
+            href: https://biostats-uottawa.github.io/
+          - text: Biostats with R (Bio4158)
+            href: https://biostats-uottawa.github.io/bio4158_course/
+          - text: Biostats avec R (Bio4558)
+            href: https://biostats-uottawa.github.io/bio4558_cours/
+          - text: Biostats avancées et science ouverte (Bio8940)
+            href: https://biostats-uottawa.github.io/bio8940_course/
+
+    right:
+      - icon: flag
+        menu:
+        - href: ../en
+          text: English
+#        - href: ../es/
+#          text: Español
+          
+  chapters:
+    - index.qmd
+#    - 01-intro.qmd
+#    - 02-basics.qmd
+#    - 03-data.qmd
+#    - 04-graphics_short.qmd
+#    - 05-stats.qmd
+#    - 06-programming.qmd
+#    - 07-rmarkdown.qmd
+#    - 08-github.qmd
+    - 98-references.qmd
+  appendices:
+    - 99-App-data.qmd
+#    - 99-App-latex.qmd
