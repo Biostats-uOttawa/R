@@ -20,3 +20,4 @@ extra/
 
 /.quarto/
 /_book/
+.luarc.json
