@@ -83,7 +83,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./98-references.html" rel="next">
+<link href="./01-intro.html" rel="next">
 <link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -192,18 +192,18 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
           <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/biostats-uottawa/R_way/" title="Code source" class="quarto-navigation-tool px-1" aria-label="Code source"><i class="bi bi-github"></i></a>
     <div class="dropdown">
-      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <a href="" title="Télécharger" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Télécharger"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
 <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="./Sur-le-chemin-de-l-enf-R.pdf">
               <i class="bi bi-bi-file-pdf pe-1"></i>
-            Download PDF
+            Télécharger PDF
             </a>
           </li>
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="./Sur-le-chemin-de-l-enf-R.epub">
               <i class="bi bi-bi-journal pe-1"></i>
-            Download ePub
+            Télécharger ePub
             </a>
           </li>
       </ul>
@@ -232,6 +232,12 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Préface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -268,10 +274,10 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 <li>
 <a href="#pr%C3%A9face" id="toc-préface" class="nav-link active" data-scroll-target="#pr%C3%A9face">Préface</a>
   <ul class="collapse">
-<li><a href="#objectif-du-livre" id="toc-objectif-du-livre" class="nav-link" data-scroll-target="#objectif-du-livre">Objectif du livre</a></li>
+<li><a href="#lobjectif-de-ce-livre" id="toc-lobjectif-de-ce-livre" class="nav-link" data-scroll-target="#lobjectif-de-ce-livre">L’objectif de ce livre</a></li>
   <li><a href="#livre-multilingue" id="toc-livre-multilingue" class="nav-link" data-scroll-target="#livre-multilingue">Livre multilingue</a></li>
-  <li><a href="#comment-utiliser-le-livre" id="toc-comment-utiliser-le-livre" class="nav-link" data-scroll-target="#comment-utiliser-le-livre">Comment utiliser le livre</a></li>
-  <li><a href="#who-are-we" id="toc-who-are-we" class="nav-link" data-scroll-target="#who-are-we">Who are we&nbsp;?</a></li>
+  <li><a href="#comment-utiliser-ce-livre" id="toc-comment-utiliser-ce-livre" class="nav-link" data-scroll-target="#comment-utiliser-ce-livre">Comment utiliser ce livre</a></li>
+  <li><a href="#qui" id="toc-qui" class="nav-link" data-scroll-target="#qui">Qui sommes-nous ?</a></li>
   <li><a href="#remerciements" id="toc-remerciements" class="nav-link" data-scroll-target="#remerciements">Remerciements</a></li>
   <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence</a></li>
   </ul>
@@ -328,45 +334,58 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 <!--Data links-->
 <!--Resource Links-->
 <!--Misc Links-->
-<section id="objectif-du-livre" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="objectif-du-livre">Objectif du livre</h2>
-<p>The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research. R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting. It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avertissement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Première version en cours de traduction. Pas encore revue par un humain</p>
+</div>
+</div>
+<section id="lobjectif-de-ce-livre" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="lobjectif-de-ce-livre">L’objectif de ce livre</h2>
+<p>L’objectif de ce livre est de te présenter R, un environnement interactif puissant et flexible pour le calcul et la recherche statistiques. R n’est pas difficile à apprendre en soi, mais comme pour l’apprentissage de toute nouvelle langue (parlée ou informatique), la courbe d’apprentissage initiale peut être abrupte et quelque peu décourageante. Il ne s’agit pas de tout couvrir, mais simplement de t’aider à gravir la courbe d’apprentissage initiale (potentiellement plus rapidement) et de te fournir les compétences de base (et la confiance !) nécessaires pour commencer ton propre voyage avec R.</p>
 </section><section id="livre-multilingue" class="level2"><h2 class="anchored" data-anchor-id="livre-multilingue">Livre multilingue</h2>
-<p>The book is provided as a multilingual book breaking that language barrier and potentially allow to facilitate the learn of R and its mainly english-speaking environment. We are always looking for volunteers to help developed the book further and add more languages to the growing list. Please <a href="https://biostats-uottawa.github.io/people.html">contact us</a> if you want to help</p>
-<p>On the web version of the book, use <i class="bi-flag " style="" role="img" aria-hidden="true"></i> in the navigation bar to switch from one language to another. After switching to your preferred language, you can of course also download the pdf and epub versions in this language if you want to using <i class="bi-download " style="" role="img" aria-hidden="true"></i>.</p>
-<p>List of languages:</p>
+<p>Le livre est fourni comme un livre multilingue qui brise la barrière de la langue et permet potentiellement de faciliter l’apprentissage de R et de son environnement principalement anglophone. Nous sommes toujours à la recherche de bénévoles pour nous aider à développer le livre et à ajouter d’autres langues à la liste qui ne cesse de s’allonger . N’hésite pas à <a href="#qui">Contacte-nous</a> si tu veux nous aider</p>
+<p>Sur la page web, tu peux changer de langue via le <i class="bi-flag " style="" role="img" aria-hidden="true"></i> dans la barre de navigation. Après avoir changer de langue, tu peux télécharger le document en pdf ou epub pour cet langue <i class="bi-download " style="" role="img" aria-hidden="true"></i>.</p>
+<p>Liste des langues :</p>
 <ul>
-<li>english (publish but need polishing)</li>
-<li>french (in development, waiting for english to be polished)</li>
-<li>spanish (in development, waiting for english to be polished)</li>
-</ul></section><section id="comment-utiliser-le-livre" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="comment-utiliser-le-livre">Comment utiliser le livre</h2>
-<p>For the best experience we recommend that you read the web version of this book which you can find <a href="https://biostats-uottawa.github.io/R" class="uri">https://biostats-uottawa.github.io/R</a>.</p>
-<p>The web version includes a navbar at the top of the page where you can toggle the sidebars on and off <i class="bi-body-text " style="" role="img" aria-hidden="true"></i>, search through the book <i class="bi-search " style="" role="img" aria-hidden="true"></i>, change the page color <i class="bi-toggle-off " style="" role="img" aria-hidden="true"></i> and suggest revisions if you spot a typo or mistake <i class="bi-github " style="" role="img" aria-hidden="true"></i>. You can also download <i class="bi-download " style="" role="img" aria-hidden="true"></i> a pdf and epub versions of the book.</p>
-<p>We use a few typographical conventions throughout this book.</p>
-<p>R code and the resulting output are presented in code blocks in our book.</p>
+<li>anglais (publié mais à peaufiner)</li>
+<li>français (en développement, en attendant que l’anglais soit peaufiné)</li>
+<li>espagnol (en développement, en attendant que l’anglais soit peaufiné)</li>
+</ul></section><section id="comment-utiliser-ce-livre" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="comment-utiliser-ce-livre">Comment utiliser ce livre</h2>
+<p>Pour une meilleure expérience, nous te recommandons de lire la version web de ce livre que tu peux trouver à <a href="https://biostats-uottawa.github.io/R">https://biostats-uottawa.github.io/R</a>.</p>
+<p>La version web inclut une barre de navigation incluant des options pour faciliter la lecture <i class="bi-body-text " style="" role="img" aria-hidden="true"></i>, de recherche <i class="bi-search " style="" role="img" aria-hidden="true"></i>, pour changer la couleur <i class="bi-toggle-off " style="" role="img" aria-hidden="true"></i> et pour suggérer des modifications ou reporter des problèmes <i class="bi-github " style="" role="img" aria-hidden="true"></i>. Tu peux aussi télécharger le document <i class="bi-download " style="" role="img" aria-hidden="true"></i> au format pdf ou epub.</p>
+<p>Nous utilisons quelques conventions typographiques tout au long de ce livre.</p>
+<p>Le code R et la sortie qui en résulte sont présentés dans des blocs de code dans notre livre.</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">2</span> <span class="op">+</span> <span class="fl">2</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4</code></pre>
 </div>
 </div>
-<p>Functions in the text are shown with brackets at the end using code font, i.e. <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> or <code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code> etc.</p>
-<p>Objects are shown using code font without the round brackets, i.e. <code>obj1</code>, <code>obj2</code> etc.</p>
-<p>R packages in the text are shown using code font and followed by the 📦 icon, i.e.&nbsp;<code>tidyverse</code> 📦.</p>
-<p>A series of actions required to access menu commands in RStudio or VSCode are identified as <code>File</code> -&gt; <code>New File</code> -&gt; <code>R Script</code> which translates to ‘click on the File menu, then click on New File and then select R Script’.</p>
-<p>When we refer to <strong>IDE</strong> (<strong>I</strong>ntegrated <strong>D</strong>evelopment <strong>E</strong>nvironment software) later in the text we mean either RStudio of VScode.</p>
-<p>When we refer to <strong>.[Rq]md</strong>, we mean either R markdown (.Rmd) or Quarto (.qmd) documents and would generally talk of R markdown documents when referring to either <code>.Rmd</code> or <code>.qmd</code> files.</p>
-<p>The manual tries to highlight some part of the text using the following boxes and icons.</p>
+<p>Les fonctions dans le texte sont présentées avec des parenthèses à la fin en utilisant la police de code, c’est-à-dire <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> ou <code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code> etc.</p>
+<p>Les objets sont représentés à l’aide de la police de code sans les parenthèses, c’est-à-dire <code>obj1</code>, <code>obj2</code> etc.</p>
+<p>Les paquets R dans le texte sont indiqués en utilisant la police de code et suivis de l’icone 📦, exemple <code>tidyverse</code> 📦.</p>
+<p>Une série d’actions nécessaires pour accéder aux commandes de menu dans RStudio ou VSCode sont identifiées comme suit <code>File</code> -&gt; <code>New File</code> -&gt; <code>R Script</code> ce qui se traduit par “clique sur le menu Fichier, puis clique sur Nouveau fichier et sélectionne R Script”.</p>
+<p>Lorsque nous faisons référence à <strong>IDE</strong> (<strong>I</strong>ntégrée <strong>D</strong>développement <strong>E</strong>nvironnement) dans la suite du texte, il s’agit de RStudio ou de VScode.</p>
+<p>Lorsque nous parlons de <strong>.[Rq]md</strong> Nous entendons par là les documents R markdown (.Rmd) ou Quarto (.qmd) et nous parlerons généralement des documents R markdown en faisant référence à l’un ou l’autre des fichiers <code>.Rmd</code> ou <code>.qmd</code>.</p>
+<p>Le manuel tente de mettre en évidence certaines parties du texte à l’aide des encadrés et icônes suivants.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercises
+Exercices
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Stuff for you to do</p>
+<p>Des choses à faire pour toi</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -379,7 +398,7 @@ Solutions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>R code and explanations</p>
+<p>Code R et explications</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -392,7 +411,7 @@ Avertissement
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>warnings</p>
+<p>avertissements</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -405,7 +424,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>important points</p>
+<p>points importants</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -421,18 +440,18 @@ Note
 <p>notes</p>
 </div>
 </div>
-</section><section id="who-are-we" class="level2"><h2 class="anchored" data-anchor-id="who-are-we">Who are we&nbsp;?</h2>
+</section><section id="qui" class="level2"><h2 class="anchored" data-anchor-id="qui">Qui sommes-nous ?</h2>
 <ul>
-<li><a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a></li>
+<li>Julien Martin</li>
 </ul></section><section id="remerciements" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="remerciements">Remerciements</h2>
-<p>This book started as a fork on github from the excellent <a href="https://intro2r.com/">An introduction to R</a> book by Douglas, Roos, Mancini, Couto and Lusseau <span class="citation" data-cites="douglas2023">(<a href="98-references.html#ref-douglas2023" role="doc-biblioref">Douglas 2023</a>)</span>. It was forked on April 23rd, 2023 from <a href="https://github.com/alexd106/Rbook">Alexd106 github repository</a> then modified and updated following my own needs and teaching perspective of R. This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.</p>
+<p>Ce livre a commencé comme un fork sur github à partir de l’excellent <a href="https://intro2r.com/">An introduction to R</a>de Douglas, Roos, Mancini, Couto et Lusseau. <span class="citation" data-cites="douglas2023">(<a href="98-references.html#ref-douglas2023" role="doc-biblioref">Douglas 2023</a>)</span>. Il a été forké le 23 avril 2023 à partir de <a href="https://github.com/alexd106/Rbook">Dépôt github Alexd106</a> puis modifié et mis à jour en suivant mes propres besoins et ma perspective d’enseignement de R. Cela fait également partie d’un projet de livre R multilingue visant à améliorer l’équité et la diversité. Il a commencé par une traduction en français et a été/sera étendu à de nombreuses autres langues.</p>
 </section><section id="licence" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="licence">Licence</h2>
-<p>I share this modified version of the [original book][https://intro2r.com/] under the license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p>Je partage cette version modifiée du <a href="https://intro2r.com/">livre original</a> sous la licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="images/license_cc.png" class="img-fluid figure-img"></p>
-<figcaption>License Creative Commons</figcaption></figure>
+<figcaption>Licence Creative Commons</figcaption></figure>
 </div>
-<p>If you teach R, feel free to use some or all of the content in this book to help support your own students. The only thing I ask is that you acknowledge the original source and authors. If you find this book useful or have any comments or suggestions I would love to hear from you (<a href="https://biostats-uottawa.github.io/people.html">contact info</a>).</p>
+<p>Si tu enseignes R, n’hésite pas à utiliser tout ou partie du contenu de ce livre pour aider tes propres élèves. La seule chose que je te demande, c’est de citer la source originale et les auteurs. Si tu trouves ce livre utile ou si tu as des commentaires ou des suggestions, j’aimerais beaucoup que tu me les fasses parvenir (<a href="#qui">contact info</a>).</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
@@ -973,8 +992,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./98-references.html" class="pagination-link" aria-label="Références">
-        <span class="nav-page-text">Références</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./01-intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

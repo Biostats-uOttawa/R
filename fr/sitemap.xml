@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/index.html</loc>
-    <lastmod>2024-04-01T21:57:03.026Z</lastmod>
+    <lastmod>2024-04-02T02:05:28.510Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biostats-uottawa.github.io/R_way/01-intro.html</loc>
+    <lastmod>2024-04-02T02:05:28.510Z</lastmod>
   </url>
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/98-references.html</loc>
-    <lastmod>2024-04-01T21:57:03.026Z</lastmod>
+    <lastmod>2024-04-02T02:05:28.510Z</lastmod>
   </url>
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/99-App-data.html</loc>
-    <lastmod>2024-04-01T21:57:03.026Z</lastmod>
+    <lastmod>2024-04-02T02:05:28.510Z</lastmod>
   </url>
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/Sur-le-chemin-de-l-enf-R.pdf</loc>
-    <lastmod>2024-04-01T21:57:30.362Z</lastmod>
+    <lastmod>2024-04-02T02:06:04.938Z</lastmod>
   </url>
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/Sur-le-chemin-de-l-enf-R.epub</loc>
-    <lastmod>2024-04-01T21:57:31.670Z</lastmod>
+    <lastmod>2024-04-02T02:06:07.474Z</lastmod>
   </url>
 </urlset>
