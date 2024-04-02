@@ -20,3 +20,5 @@
 - whoarewe section
 - link for radina httpgd and r debugger in intro
 
+html produce bi-bi-file-pdf instead of bi-file-pdf icons
+same for bi bi-bi-journal
