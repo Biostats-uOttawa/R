@@ -1,102 +1,102 @@
-
 # Préface {.unnumbered}
-
 
 ```{r links, child="_links.md"}
 ```
 
-## Objectif du livre {.unnumbered}
+## L'objectif de ce livre {.unnumbered}
 
-The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research.
-R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting.
-It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.
+L'objectif de ce livre est de te présenter R, un environnement interactif puissant et flexible pour le calcul et la recherche statistiques.
+R n'est pas difficile à apprendre en soi, mais comme pour l'apprentissage de toute nouvelle langue (parlée ou informatique), la courbe d'apprentissage initiale peut être abrupte et quelque peu décourageante.
+Il ne s'agit pas de tout couvrir, mais simplement de t'aider à gravir la courbe d'apprentissage initiale (potentiellement plus rapidement) et de te fournir les compétences de base (et la confiance !) nécessaires pour commencer ton propre voyage avec R.
 
 ## Livre multilingue
 
-The book is provided as a multilingual book breaking that language barrier and potentially allow to facilitate the learn of R and its mainly english-speaking environment.
-We are always looking for volunteers to help developed the book further and add more languages to the growing list. Please [contact us][whoarewe] if you want to help 
+Le livre est fourni comme un livre multilingue qui brise la barrière de la langue et permet potentiellement de faciliter l'apprentissage de R et de son environnement principalement anglophone.
+Nous sommes toujours à la recherche de bénévoles pour nous aider à développer le livre et à ajouter d'autres langues à la liste qui ne cesse de s'allonger . N'hésite pas à [Contacte-nous](#qui) si tu veux nous aider
 
-On the web version of the book, use {{< bi flag >}} in the navigation bar to switch from one language to another. After switching to your preferred language, you can of course also download the pdf and epub versions in this language if you want to using {{< bi  download >}}.
+Sur la page web, tu peux changer de langue via le {{< bi flag >}} dans la barre de navigation. Après avoir changer de langue, tu peux télécharger le document en pdf ou epub pour cet langue {{< bi  download >}}.
 
-List of languages:
+Liste des langues :
 
-* english (publish but need polishing)
-* french (in development, waiting for english to be polished)
-* spanish (in development, waiting for english to be polished)
+- anglais (publié mais à peaufiner)
+- français (en développement, en attendant que l'anglais soit peaufiné)
+- espagnol (en développement, en attendant que l'anglais soit peaufiné)
 
+## Comment utiliser ce livre {.unnumbered}
 
-## Comment utiliser le livre {.unnumbered}
+Pour une meilleure expérience, nous te recommandons de lire la version web de ce livre que tu peux trouver à [https://biostats-uottawa.github.io/R](https://biostats-uottawa.github.io/R).
 
-For the best experience we recommend that you read the web version of this book which you can find <https://biostats-uottawa.github.io/R>.
+La version web inclut une barre de navigation incluant des options pour faciliter la lecture {{< bi  body-text >}}, de recherche {{< bi  search >}}, pour changer la couleur {{< bi  toggle-off >}} et pour suggérer des modifications ou reporter des problèmes {{< bi  github >}}.
+Tu peux aussi télécharger le document {{< bi  download >}} au format pdf ou epub.
 
-The web version includes a navbar at the top of the page where you can toggle the sidebars on and off {{< bi  body-text >}}, search through the book {{< bi  search >}}, change the page color {{< bi  toggle-off >}} and suggest revisions if you spot a typo or mistake {{< bi  github >}}.
-You can also download {{< bi  download >}} a pdf and epub versions of the book.
+Nous utilisons quelques conventions typographiques tout au long de ce livre.
 
-We use a few typographical conventions throughout this book.
-
-R code and the resulting output are presented in code blocks in our book.
+Le code R et la sortie qui en résulte sont présentés dans des blocs de code dans notre livre.
 
 ```{r, echo=TRUE, eval=TRUE}
 2 + 2
 ```
 
-Functions in the text are shown with brackets at the end using code font, i.e.
-`mean()` or `sd()` etc.
+Les fonctions dans le texte sont présentées avec des parenthèses à la fin en utilisant la police de code, c'est-à-dire
+`mean()` ou `sd()` etc.
 
-Objects are shown using code font without the round brackets, i.e.
+Les objets sont représentés à l'aide de la police de code sans les parenthèses, c'est-à-dire 
 `obj1`, `obj2` etc.
 
-R packages in the text are shown using code font and followed by the `r emoji::emoji("package")` icon, i.e. `tidyverse` `r emoji::emoji("package")`.
+Les paquets R dans le texte sont indiqués en utilisant la police de code et suivis de l'icone `r emoji::emoji("package")`, exemple `tidyverse` `r emoji::emoji("package")`.
 
-A series of actions required to access menu commands in RStudio or VSCode are identified as `File` -> `New File` -> `R Script` which translates to 'click on the File menu, then click on New File and then select R Script'.
+Une série d'actions nécessaires pour accéder aux commandes de menu dans RStudio ou VSCode sont identifiées comme suit `File` -> `New File` -> `R Script` ce qui se traduit par "clique sur le menu Fichier, puis clique sur Nouveau fichier et sélectionne R Script".
 
-When we refer to **IDE** (**I**ntegrated **D**evelopment **E**nvironment software) later in the text we mean either RStudio of VScode.
+Lorsque nous faisons référence à **IDE** (**I**ntégrée **D**développement **E**nvironnement) dans la suite du texte, il s'agit de RStudio ou de VScode.
 
-When we refer to **.\[Rq\]md**, we mean either R markdown (.Rmd) or Quarto (.qmd) documents and would generally talk of R markdown documents when referring to either `.Rmd` or `.qmd` files. 
+Lorsque nous parlons de **.[Rq]md** Nous entendons par là les documents R markdown (.Rmd) ou Quarto (.qmd) et nous parlerons généralement des documents R markdown en faisant référence à l'un ou l'autre des fichiers `.Rmd` ou `.qmd`.
 
-The manual tries to highlight some part of the text using the following boxes and icons.
-
+Le manuel tente de mettre en évidence certaines parties du texte à l'aide des encadrés et icônes suivants.
 
 ::: {.callout-caution}
-# Exercises
-Stuff for you to do
+
+# Exercices
+
+Des choses à faire pour toi
 :::
 
 ::: {.callout-note}
+
 # Solutions
-R code and explanations
+
+Code R et explications
 :::
 
 ::: {.callout-warning}
-warnings
+avertissements
 :::
 
 ::: {.callout-important}
-important points
+points importants
 :::
 
 ::: {.callout-note}
 notes
 :::
 
+## Qui sommes-nous ? {#qui}
 
-## Who are we ?
-
-- [Julien Martin][whoarewe]
+- Julien Martin
 
 ## Remerciements {.unnumbered}
 
-This book started as a fork on github from the excellent [An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini, Couto and Lusseau [@douglas2023].
-It was forked on April 23rd, 2023 from [Alexd106 github repository](https://github.com/alexd106/Rbook) then modified and updated following my own needs and teaching perspective of R.
-This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.
+Ce livre a commencé comme un fork sur github à partir de l'excellent [An introduction to R](https://intro2r.com/)de Douglas, Roos, Mancini, Couto et Lusseau. [@douglas2023].
+Il a été forké le 23 avril 2023 à partir de [Dépôt github Alexd106](https://github.com/alexd106/Rbook) puis modifié et mis à jour en suivant mes propres besoins et ma perspective d'enseignement de R.
+Cela fait également partie d'un projet de livre R multilingue visant à améliorer l'équité et la diversité. Il a commencé par une traduction en français et a été/sera étendu à de nombreuses autres langues.
 
 ## Licence {.unnumbered}
 
-I share this modified version of the [original book][https://intro2r.com/] under the license [License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+Je partage cette version modifiée du [livre original](https://intro2r.com/) sous la licence [Licence Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-![License Creative Commons](images/license_cc.png)
+![Licence Creative Commons](images/license_cc.png)
 
-If you teach R, feel free to use some or all of the content in this book to help support your own students.
-The only thing I ask is that you acknowledge the original source and authors.
-If you find this book useful or have any comments or suggestions I would love to hear from you  ([contact info][whoarewe]).
+Si tu enseignes R, n'hésite pas à utiliser tout ou partie du contenu de ce livre pour aider tes propres élèves.
+La seule chose que je te demande, c'est de citer la source originale et les auteurs.
+Si tu trouves ce livre utile ou si tu as des commentaires ou des suggestions, j'aimerais beaucoup que tu me les fasses parvenir ([contact info](#qui)).
+
 

@@ -24,7 +24,6 @@ book:
   repo-url: https://github.com/biostats-uottawa/R_way/
   repo-actions: [edit, issue]
   downloads: [pdf, epub]
-
 bibliography: [biblio/book.bib, biblio/grateful-refs.bib]
 biblio-style: apalike
 csl: biblio/ecology.csl

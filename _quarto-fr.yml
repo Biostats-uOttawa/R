@@ -2,7 +2,8 @@ project:
   output-dir: _book/fr
 
 lang: fr-fr
-
+language:
+  tools-download: "Télécharger"
 book:
   title: "Sur le chemin de l'enf-R"
   subtitle: "Une introduciton au monde merveilleux de R"
@@ -43,7 +44,7 @@ book:
           
   chapters:
     - index.qmd
-#    - 01-intro.qmd
+    - 01-intro.qmd
 #    - 02-basics.qmd
 #    - 03-data.qmd
 #    - 04-graphics_short.qmd
