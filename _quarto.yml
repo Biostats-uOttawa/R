@@ -51,7 +51,7 @@ format:
     number-sections: true
     documentclass: scrreprt
     pdf-engine: lualatex
-    keep-tex: true
+#    keep-tex: true
     classoption:
       - "chapterprefix=true"
       - "headings=big"

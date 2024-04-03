@@ -6,7 +6,7 @@ language:
   tools-download: "Télécharger"
 book:
   title: "Sur le chemin de l'enf-R"
-  subtitle: "Une introduciton au monde merveilleux de R"
+  subtitle: "Une introduction au monde merveilleux de R"
   description: "En cours de traduction"
   author: <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
 
