@@ -22,7 +22,7 @@ book:
     title: "Chemin enf-R"
     left:
       - text: Données
-        href: 99-App-data.qmd
+        href: 99-fichiers-donnees.qmd
       - text: Autres ressources
         menu:
           - text: Biostats uOttawa
@@ -46,13 +46,13 @@ book:
     - index.qmd
     - 01-intro.qmd
 #    - 02-basics.qmd
-#    - 03-data.qmd
-#    - 04-graphics_short.qmd
-#    - 05-stats.qmd
-#    - 06-programming.qmd
+#    - 03-donnees.qmd
+#    - 04-graphiques_short.qmd
+#    - 05-stats-simple.qmd
+#    - 06-programmation.qmd
 #    - 07-rmarkdown.qmd
 #    - 08-github.qmd
-    - 98-references.qmd
+    - 98-bibliographie.qmd
   appendices:
-    - 99-App-data.qmd
+    - 99-fichiers-donnees.qmd
 #    - 99-App-latex.qmd

@@ -21,7 +21,7 @@ book:
     title: R Way
     left:
       - text: Data
-        href: 99-App-data.qmd
+        href: 99-data-files.qmd
       - text: Other resources
         menu:
           - text: Biostats uOttawa
@@ -53,5 +53,5 @@ book:
     - 08-github.qmd
     - 98-references.qmd
   appendices:
-    - 99-App-data.qmd
-    - 99-App-latex.qmd
+    - 99-data-files.qmd
+    - 99-latex.qmd

@@ -86,7 +86,30 @@ notes
 
 ## Qui sommes-nous ? {#qui}
 
-- Julien Martin
+::: {.columns}
+
+:::: {.column width="25%"}
+![](images/author/julien.jpg){fig-align="center" width=90%}
+::::
+
+
+:::: {.column width="75%"}
+**Julien Martin** est professeur à l'Université d'Ottawa en Écologie évolutive. Il a découvert le merveilleux monde R avec la version 1.8.1 et l'enseigne depuis R v2.4.0.
+
+::::: {.content-visible when-format="pdf"}
+- {{< bi bookmarks >}}:uOttawa <https://www.uottawa.ca/faculty-science/professors/julien-martin/>, site labo <https://juliengamartin.github.io>
+- {{< bi twitter-x >}}: <https://twitter.com/jgamartin>
+- {{< bi github >}}: <https://github.com/juliengamartin>
+:::::
+
+::::: {.content-visible when-format="html"}
+- {{< bi bookmarks >}}: [site uOttawa](https://www.uottawa.ca/faculty-science/professors/julien-martin/), [site labo](https://juliengamartin.github.io)
+- {{< bi twitter-x >}}: [jgamartin](https://twitter.com/jgamartin)
+- {{< bi github >}}: [juliengamartin](https://github.com/juliengamartin)
+:::::
+
+::::
+:::
 
 ## Remerciements {.unnumbered}
 

@@ -82,7 +82,32 @@ notes
 
 ## Who are we ?
 
-- [Julien Martin][whoarewe]
+::::: {.columns}
+
+:::: {.column width="25%"}
+![](images/author/julien.jpg){fig-align="center" width=90%}
+::::
+
+
+:::: {.column width="75%"}
+**Julien Martin** is a Professor at the University of Ottawa working on Evolutionary Ecology and has discovered R with version 1.8.1 and teaches R since v2.4.0.
+
+::: {.content-visible when-format="pdf"}
+- {{< bi bookmarks >}}:uOttawa <https://www.uottawa.ca/faculty-science/professors/julien-martin/>, lab page <https://juliengamartin.github.io>
+- {{< bi twitter-x >}}: <https://twitter.com/jgamartin>
+- {{< bi github >}}: <https://github.com/juliengamartin>
+:::
+
+::: {.content-visible when-format="html"}
+- {{< bi bookmarks >}}: [uOttawa page](https://www.uottawa.ca/faculty-science/professors/julien-martin/), [lab page](https://juliengamartin.github.io)
+- {{< bi twitter-x >}}: [jgamartin](https://twitter.com/jgamartin)
+- {{< bi github >}}: [juliengamartin](https://github.com/juliengamartin)
+:::
+
+::::
+
+:::::
+
 
 ## Thanks {.unnumbered}
 
