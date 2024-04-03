@@ -7,7 +7,7 @@ Rbook.tex
 
 archive
 .DS_Store
-
+_extension/
 *.log
 _bookdown_files/
 extra/

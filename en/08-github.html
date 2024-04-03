@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./98-references.html" rel="next">
 <link href="./07-rmarkdown.html" rel="prev">
-<link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -91,7 +90,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item">
-    <a class="nav-link active" href="./99-App-data.html" aria-current="page"> 
+    <a class="nav-link active" href="./99-data-files.html" aria-current="page"> 
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -244,13 +243,13 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-App-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./99-data-files.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Data used in this book</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-App-latex.html" class="sidebar-item-text sidebar-link">
+  <a href="./99-latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and latex</span></span></a>
   </div>
 </li>
@@ -263,49 +262,18 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
-  <ul>
+  <ul class="collapse">
 <li><a href="#what-is-version-control" id="toc-what-is-version-control" class="nav-link active" data-scroll-target="#what-is-version-control"><span class="header-section-number">8.1</span> What is version control?</a></li>
   <li><a href="#why-use-version-control" id="toc-why-use-version-control" class="nav-link" data-scroll-target="#why-use-version-control"><span class="header-section-number">8.2</span> Why use version control?</a></li>
   <li><a href="#what-is-git-and-github" id="toc-what-is-git-and-github" class="nav-link" data-scroll-target="#what-is-git-and-github"><span class="header-section-number">8.3</span> What is Git and GitHub?</a></li>
-  <li>
-<a href="#setup_git" id="toc-setup_git" class="nav-link" data-scroll-target="#setup_git"><span class="header-section-number">8.4</span> Getting started</a>
-  <ul class="collapse">
-<li><a href="#install-git" id="toc-install-git" class="nav-link" data-scroll-target="#install-git"><span class="header-section-number">8.4.1</span> Install Git</a></li>
-  <li><a href="#configure-git" id="toc-configure-git" class="nav-link" data-scroll-target="#configure-git"><span class="header-section-number">8.4.2</span> Configure Git</a></li>
-  <li><a href="#rs_config" id="toc-rs_config" class="nav-link" data-scroll-target="#rs_config"><span class="header-section-number">8.4.3</span> Configure RStudio</a></li>
-  <li><a href="#vsc_config" id="toc-vsc_config" class="nav-link" data-scroll-target="#vsc_config"><span class="header-section-number">8.4.4</span> Configure VSCode</a></li>
-  <li><a href="#register-a-github-account" id="toc-register-a-github-account" class="nav-link" data-scroll-target="#register-a-github-account"><span class="header-section-number">8.4.5</span> Register a GitHub account</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#setting-up-a-project" id="toc-setting-up-a-project" class="nav-link" data-scroll-target="#setting-up-a-project"><span class="header-section-number">8.5</span> Setting up a project</a>
-  <ul class="collapse">
-<li><a href="#in-rstudio" id="toc-in-rstudio" class="nav-link" data-scroll-target="#in-rstudio"><span class="header-section-number">8.5.1</span> in RStudio</a></li>
-  <li><a href="#opt1" id="toc-opt1" class="nav-link" data-scroll-target="#opt1"><span class="header-section-number">8.5.2</span> Option 1 - GitHub first</a></li>
-  <li><a href="#opt2" id="toc-opt2" class="nav-link" data-scroll-target="#opt2"><span class="header-section-number">8.5.3</span> Option 2 - RStudio first</a></li>
-  <li><a href="#in-vscode" id="toc-in-vscode" class="nav-link" data-scroll-target="#in-vscode"><span class="header-section-number">8.5.4</span> in VSCode</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#use_git" id="toc-use_git" class="nav-link" data-scroll-target="#use_git"><span class="header-section-number">8.6</span> Using Git with RStudio</a>
-  <ul class="collapse">
-<li><a href="#tracking-changes" id="toc-tracking-changes" class="nav-link" data-scroll-target="#tracking-changes"><span class="header-section-number">8.6.1</span> Tracking changes</a></li>
-  <li><a href="#commit-history" id="toc-commit-history" class="nav-link" data-scroll-target="#commit-history"><span class="header-section-number">8.6.2</span> Commit history</a></li>
-  <li><a href="#undo" id="toc-undo" class="nav-link" data-scroll-target="#undo"><span class="header-section-number">8.6.3</span> Reverting changes</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#use_git_vsc" id="toc-use_git_vsc" class="nav-link" data-scroll-target="#use_git_vsc"><span class="header-section-number">8.7</span> Using Git with VSCode</a>
-  <ul class="collapse">
-<li><a href="#tracking-changes-1" id="toc-tracking-changes-1" class="nav-link" data-scroll-target="#tracking-changes-1">Tracking changes</a></li>
-  <li><a href="#commit-history-1" id="toc-commit-history-1" class="nav-link" data-scroll-target="#commit-history-1">Commit History</a></li>
-  <li><a href="#reverting-changes" id="toc-reverting-changes" class="nav-link" data-scroll-target="#reverting-changes">Reverting changes</a></li>
-  </ul>
-</li>
+  <li><a href="#setup_git" id="toc-setup_git" class="nav-link" data-scroll-target="#setup_git"><span class="header-section-number">8.4</span> Getting started</a></li>
+  <li><a href="#setting-up-a-project" id="toc-setting-up-a-project" class="nav-link" data-scroll-target="#setting-up-a-project"><span class="header-section-number">8.5</span> Setting up a project</a></li>
+  <li><a href="#use_git" id="toc-use_git" class="nav-link" data-scroll-target="#use_git"><span class="header-section-number">8.6</span> Using Git with RStudio</a></li>
+  <li><a href="#use_git_vsc" id="toc-use_git_vsc" class="nav-link" data-scroll-target="#use_git_vsc"><span class="header-section-number">8.7</span> Using Git with VSCode</a></li>
   <li><a href="#collab" id="toc-collab" class="nav-link" data-scroll-target="#collab"><span class="header-section-number">8.8</span> Collaborate with Git</a></li>
   <li><a href="#git-tips" id="toc-git-tips" class="nav-link" data-scroll-target="#git-tips"><span class="header-section-number">8.9</span> Git tips</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">8.10</span> Further resources</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/08-github.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/08-github.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -371,8 +339,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </section><section id="setup_git" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="setup_git">
 <span class="header-section-number">8.4</span> Getting started</h2>
 <p>This Chapter assumes that you have already installed the latest versions of R and an IDE (RStudio or VSCode). If you haven’t done this yet you can find instructions <a href="01-intro.html#install_r">here</a>.</p>
-<section id="install-git" class="level3" data-number="8.4.1"><h3 data-number="8.4.1" class="anchored" data-anchor-id="install-git">
-<span class="header-section-number">8.4.1</span> Install Git</h3>
+<section id="install-git" class="level3"><h3 class="anchored" data-anchor-id="install-git">Install Git</h3>
 <p>To get started, you first need to install Git. If you’re lucky you may already have Git installed (especially if you have a Mac or Linux computer). You can check if you already have Git installed by clicking on the Terminal tab in the Console window in RStudio and typing <code>git --version</code> (the space after the <code>git</code> command is important). If you see something that looks like <code>git version 2.25.0</code> (the version number may be different on your computer) then you already have Git installed (happy days). If you get an error (something like <code>git: command not found</code>) this means you don’t have Git installed (yet!).</p>
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
@@ -392,8 +359,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 sudo apt install git</code></pre>
 <p>You will need administrative privileges to do this. For other versions of Linux see <a href="https://git-scm.com/download/linux">here</a> for further installation instructions.</p>
 <p>Whatever version of Git you’re installing, once the installation has finished verify that the installation process has been successful by running the command <code>git --version</code> in the Terminal tab in RStudio (as described above). On some installations of Git (yes we’re looking at you MS Windows) this may still produce an error as you will also need to setup RStudio so it can find the Git executable (described <a href="#rs_config">below</a>).</p>
-</section><section id="configure-git" class="level3" data-number="8.4.2"><h3 data-number="8.4.2" class="anchored" data-anchor-id="configure-git">
-<span class="header-section-number">8.4.2</span> Configure Git</h3>
+</section><section id="configure-git" class="level3"><h3 class="anchored" data-anchor-id="configure-git">Configure Git</h3>
 <p>After installing Git, you need to configure it so you can use it. Click on the Terminal tab in the Console window again and type the following:</p>
 <pre><code>git config --global user.email 'you@youremail.com'
 
@@ -402,8 +368,7 @@ git config --global user.name 'Your Name'</code></pre>
 <p>If this was successful, you should see no error messages from these commands. To verify that you have successfully configured Git type the following into the Terminal</p>
 <pre><code>git config --global --list</code></pre>
 <p>You should see both your <code>user.name</code> and <code>user.email</code> configured.</p>
-</section><section id="rs_config" class="level3" data-number="8.4.3"><h3 data-number="8.4.3" class="anchored" data-anchor-id="rs_config">
-<span class="header-section-number">8.4.3</span> Configure RStudio</h3>
+</section><section id="rs_config" class="level3"><h3 class="anchored" data-anchor-id="rs_config">Configure RStudio</h3>
 <p>As you can see above, Git can be used from the command line, but it also integrates well with RStudio, providing a friendly graphical user interface. If you want to use RStudio’s Git integration (we recommend you do - at least at the start), you need to check that the path to the Git executable is specified correctly. In RStudio, go to the menu <code>Tools</code> -&gt; <code>Global Options</code> -&gt; <code>Git/SVN</code> and make sure that ‘Enable version control interface for RStudio projects’ is ticked and that the ‘Git executable:’ path is correct for your installation. If it’s not correct hit the <code>Browse...</code> button and navigate to where you installed git and click on the executable file. You will need to restart RStudio after doing this.</p>
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
@@ -414,23 +379,19 @@ git config --global user.name 'Your Name'</code></pre>
 </div>
 </div>
 </div>
-</section><section id="vsc_config" class="level3" data-number="8.4.4"><h3 data-number="8.4.4" class="anchored" data-anchor-id="vsc_config">
-<span class="header-section-number">8.4.4</span> Configure VSCode</h3>
+</section><section id="vsc_config" class="level3"><h3 class="anchored" data-anchor-id="vsc_config">Configure VSCode</h3>
 <blockquote class="blockquote">
 <p>to develop</p>
 </blockquote>
-</section><section id="register-a-github-account" class="level3" data-number="8.4.5"><h3 data-number="8.4.5" class="anchored" data-anchor-id="register-a-github-account">
-<span class="header-section-number">8.4.5</span> Register a GitHub account</h3>
+</section><section id="register-a-github-account" class="level3"><h3 class="anchored" data-anchor-id="register-a-github-account">Register a GitHub account</h3>
 <p>If all you want to do is to keep track of files and file versions on your local computer then Git is sufficient. If however, you would like to make an off-site copy of your project or make it available to your collaborators then you will need a web-based hosting service for your Git repositories. This is where GitHub comes into play (there are also other services like <a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org/product">Bitbucket</a> and <a href="https://savannah.gnu.org/">Savannah</a>). You can sign up for a free account on GitHub <a href="https://github.com/join?source=header-home">here</a>. You will need to specify a username, an email address and a strong password. We suggest that you use your University email address (if you have one) as this will also allow you to apply for a free <a href="https://help.github.com/en/github/teaching-and-learning-with-github-education/applying-for-an-educator-or-researcher-discount">educator or researcher account</a> later on which gives you some useful <a href="https://help.github.com/en/github/teaching-and-learning-with-github-education/about-github-education-for-educators-and-researchers">benefits</a> (don’t worry about this now though). When it comes to choosing a username we suggest you give this some thought. Choose a short(ish) rather than a long username, use all lowercase and hyphenate if you want to include multiple words, find a way of incorporating your actual name and lastly, choose a username that you will feel comfortable revealing to your future employer!</p>
 <p>Next click on the ‘Select a plan’ (you may have to solve a simple puzzle first to verify you’re human) and choose the ‘Free Plan’ option. Github will send an email to the email address you supplied for you to verify.</p>
 <p>Once you’ve completed all those steps you should have both Git and GitHub setup up ready for you to use (Finally!).</p>
 </section></section><section id="setting-up-a-project" class="level2" data-number="8.5"><h2 data-number="8.5" class="anchored" data-anchor-id="setting-up-a-project">
 <span class="header-section-number">8.5</span> Setting up a project</h2>
-<section id="in-rstudio" class="level3" data-number="8.5.1"><h3 data-number="8.5.1" class="anchored" data-anchor-id="in-rstudio">
-<span class="header-section-number">8.5.1</span> in RStudio</h3>
+<section id="in-rstudio" class="level3"><h3 class="anchored" data-anchor-id="in-rstudio">in RStudio</h3>
 <p>Now that you’re all set up, let’s create your first version controlled RStudio project. There are a couple of different approaches you can use to do this. You can either setup a remote GitHub repository first then connect an RStudio project to this repository (we’ll call this Option 1). Another option is to setup a local repository first and then link a remote GitHub repository to this repository (Option 2). You can also connect an existing project to a GitHub repository but we won’t cover this here. We suggest that if you’re completely new to Git and GitHub then use Option 1 as this approach sets up your local Git repository nicely and you can <strong>push</strong> and <strong>pull</strong> immediately. Option 2 requires a little more work and therefore there are more opportunities to go wrong. We will cover both of these options below.</p>
-</section><section id="opt1" class="level3" data-number="8.5.2"><h3 data-number="8.5.2" class="anchored" data-anchor-id="opt1">
-<span class="header-section-number">8.5.2</span> Option 1 - GitHub first</h3>
+</section><section id="opt1" class="level3"><h3 class="anchored" data-anchor-id="opt1">Option 1 - GitHub first</h3>
 <p>To use the GitHub first approach you will first need to create a <strong>repository (repo)</strong> on GitHub. Go to your <a href="https://github.com/">GitHub page</a> and sign in if necessary. Click on the ‘Repositories’ tab at the top and then on the green ‘New’ button on the right</p>
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
@@ -496,9 +457,8 @@ git config --global user.name 'Your Name'</code></pre>
 </div>
 </div>
 </div>
-</section><section id="opt2" class="level3" data-number="8.5.3"><h3 data-number="8.5.3" class="anchored" data-anchor-id="opt2">
-<span class="header-section-number">8.5.3</span> Option 2 - RStudio first</h3>
-<p>An alternative approach is to create a local RStudio project first and then link to a remote Github repository. As we mentioned before, this option is more involved than Option 1 so feel free to skip this now and come back later to it if you’re interested. This option is also useful if you just want to create a local RStudio project linked to a local Git repository (i.e.&nbsp;no GitHub involved). If you want to do this then just follow the instructions below omitting the GitHub bit.</p>
+</section><section id="opt2" class="level3"><h3 class="anchored" data-anchor-id="opt2">Option 2 - RStudio first</h3>
+<p>An alternative approach is to create a local RStudio project first and then link to a remote Github repository. As we mentioned before, this option is more involved than Option 1 so feel free to skip this now and come back later to it if you’re interested. This option is also useful if you just want to create a local RStudio project linked to a local Git repository (i.e. no GitHub involved). If you want to do this then just follow the instructions below omitting the GitHub bit.</p>
 <p>&nbsp;</p>
 <p>In RStudio click on the <code>File</code> -&gt; <code>New Project</code> menu and select the <code>New Directory</code> option.</p>
 <p>&nbsp;</p>
@@ -652,8 +612,7 @@ git config --global user.name 'Your Name'</code></pre>
 <p>You should now see the <code>README.md</code> file listed in your repository. It won’t actually exist on your computer yet as you will need to <strong>pull</strong> these changes back to your local repository, but more about that in the next section.</p>
 <p>&nbsp;</p>
 <p>Whether you followed Option 1 or Option 2 (or both) you have now successfully setup a version controlled RStudio project (and associated directory) and linked this to a GitHub repository. Git will now monitor this directory for any changes you make to files and also if you add or delete files. If the steps above seem like a bit of an ordeal, just remember, you only need to do this once for each project and it gets much easier over time.</p>
-</section><section id="in-vscode" class="level3" data-number="8.5.4"><h3 data-number="8.5.4" class="anchored" data-anchor-id="in-vscode">
-<span class="header-section-number">8.5.4</span> in VSCode</h3>
+</section><section id="in-vscode" class="level3"><h3 class="anchored" data-anchor-id="in-vscode">in VSCode</h3>
 <blockquote class="blockquote">
 <p>to develop</p>
 </blockquote>
@@ -663,7 +622,7 @@ git config --global user.name 'Your Name'</code></pre>
 <p>Typically, when using Git your workflow will go something like this:</p>
 <ol type="1">
 <li><p>You create/delete and edit files in your project directory on your computer as usual (saving these changes as you go)</p></li>
-<li><p>Once you’ve reached a natural ‘break point’ in your progress (i.e.&nbsp;you’d be sad if you lost this progress) you <strong>stage</strong> these files</p></li>
+<li><p>Once you’ve reached a natural ‘break point’ in your progress (i.e. you’d be sad if you lost this progress) you <strong>stage</strong> these files</p></li>
 <li><p>You then <strong>commit</strong> the changes you made to these staged files (along with a useful commit message) which creates a permanent snapshot of these changes</p></li>
 <li><p>You keep on with this cycle until you get to a point when you would like to <strong>push</strong> these changes to GitHub</p></li>
 <li><p>If you’re working with other people on the same project you may also need to <strong>pull</strong> their changes to your local computer</p></li>
@@ -788,8 +747,7 @@ git config --global user.name 'Your Name'</code></pre>
 </div>
 </div>
 </div>
-<section id="tracking-changes" class="level3" data-number="8.6.1"><h3 data-number="8.6.1" class="anchored" data-anchor-id="tracking-changes">
-<span class="header-section-number">8.6.1</span> Tracking changes</h3>
+<section id="tracking-changes" class="level3"><h3 class="anchored" data-anchor-id="tracking-changes">Tracking changes</h3>
 <p>After following the steps outlined above, you will have successfully modified an RStudio project by creating a new R markdown document, staged and then committed these changes and finally pushed the changes to your GitHub repository. Now let’s make some further changes to your R markdown file and follow the workflow once again but this time we ’ll take a look at how to identify changes made to files, examine the commit history and how to restore to a previous version of the document.</p>
 <p>In RStudio open up the <code>first_repo.Rproj</code> file you created previously (if not already open) then open the <code>first_doc.Rmd</code> file (click on the file name in the <code>Files</code> tab in RStudio).</p>
 <p>Let’s make some changes to this document. Delete the line beginning with ‘My first version controlled …’ and replace it with something more informative (see figure below). We will also change the plotted symbols to red and give the plot axes labels. Lastly, let’s add a summary table of the dataframe using the <code>kable()</code> and <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> functions (you may need to install the <code>knitr</code> package if you haven’t done so previously to use the <code>kable()</code> function) and finally render this document to pdf by changing the YAML option to <code>output: pdf_document</code>.</p>
@@ -858,8 +816,7 @@ git config --global user.name 'Your Name'</code></pre>
 </div>
 </div>
 </div>
-</section><section id="commit-history" class="level3" data-number="8.6.2"><h3 data-number="8.6.2" class="anchored" data-anchor-id="commit-history">
-<span class="header-section-number">8.6.2</span> Commit history</h3>
+</section><section id="commit-history" class="level3"><h3 class="anchored" data-anchor-id="commit-history">Commit history</h3>
 <p>One of the great things about Git and GitHub is that you can view the history of all the commits you have made along with the associated commit messages. You can do this locally using RStudio (or the Git command line) or if you have pushed your commits to GitHub you can check them out on the GitHub website.</p>
 <p>To view your commit history in RStudio click on the ‘History’ button (the one that looks like a clock) in the Git pane to bring up the history view in the ‘Review Changes’ window. You can also click on the ‘Commit’ or ‘Diff’ buttons which takes you to the same window (you just need to additionally click on the ‘History’ button in the ‘Review Changes’ window).</p>
 <p>&nbsp;</p>
@@ -915,8 +872,7 @@ git config --global user.name 'Your Name'</code></pre>
 </div>
 </div>
 </div>
-</section><section id="undo" class="level3" data-number="8.6.3"><h3 data-number="8.6.3" class="anchored" data-anchor-id="undo">
-<span class="header-section-number">8.6.3</span> Reverting changes</h3>
+</section><section id="undo" class="level3"><h3 class="anchored" data-anchor-id="undo">Reverting changes</h3>
 <p>One the great things about using Git is that you are able to revert to previous versions of files if you’ve made a mistake, broke something or just prefer and earlier approach. How you do this will depend on whether the changes you want to discard have been staged, committed or pushed to GitHub. We’ll go through some common scenarios below mostly using RStudio but occasionally we will need to resort to using the Terminal (still in RStudio though).</p>
 <section id="changes-saved-but-not-staged-committed-or-pushed" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="changes-saved-but-not-staged-committed-or-pushed">Changes saved but not staged, committed or pushed</h4>
 <p>If you have saved changes to your file(s) but not staged, committed or pushed these files to GitHub you can right click on the offending file in the Git pane and select ‘Revert …’. This will roll back all of the changes you have made to the same state as your last commit. Just be aware that you cannot undo this operation so use with caution.</p>
@@ -1048,7 +1004,7 @@ git checkout 2b4693d1 .
 <p>Typically, when using Git your workflow will go something like this:</p>
 <ol type="1">
 <li><p>You create/delete and edit files in your project directory on your computer as usual (saving these changes as you go)</p></li>
-<li><p>Once you’ve reached a natural ‘break point’ in your progress (i.e.&nbsp;you’d be sad if you lost this progress) you <strong>stage</strong> these files</p></li>
+<li><p>Once you’ve reached a natural ‘break point’ in your progress (i.e. you’d be sad if you lost this progress) you <strong>stage</strong> these files</p></li>
 <li><p>You then <strong>commit</strong> the changes you made to these staged files (along with a useful commit message) which creates a permanent snapshot of these changes</p></li>
 <li><p>You keep on with this cycle until you get to a point when you would like to <strong>push</strong> these changes to GitHub</p></li>
 <li><p>If you’re working with other people on the same project you may also need to <strong>pull</strong> their changes to your local computer</p></li>

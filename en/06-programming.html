@@ -64,7 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./07-rmarkdown.html" rel="next">
 <link href="./05-stats.html" rel="prev">
-<link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -150,7 +149,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item">
-    <a class="nav-link active" href="./99-App-data.html" aria-current="page"> 
+    <a class="nav-link active" href="./99-data-files.html" aria-current="page"> 
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -303,13 +302,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-App-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./99-data-files.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Data used in this book</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-App-latex.html" class="sidebar-item-text sidebar-link">
+  <a href="./99-latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and latex</span></span></a>
   </div>
 </li>
@@ -322,21 +321,13 @@ window.Quarto = {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
-  <ul>
+  <ul class="collapse">
 <li><a href="#looking-behind-the-curtain" id="toc-looking-behind-the-curtain" class="nav-link active" data-scroll-target="#looking-behind-the-curtain"><span class="header-section-number">6.1</span> Looking behind the curtain</a></li>
   <li><a href="#functions-in-r" id="toc-functions-in-r" class="nav-link" data-scroll-target="#functions-in-r"><span class="header-section-number">6.2</span> Functions in R</a></li>
   <li><a href="#conditional-statements" id="toc-conditional-statements" class="nav-link" data-scroll-target="#conditional-statements"><span class="header-section-number">6.3</span> Conditional statements</a></li>
   <li><a href="#combining-logical-operators" id="toc-combining-logical-operators" class="nav-link" data-scroll-target="#combining-logical-operators"><span class="header-section-number">6.4</span> Combining logical operators</a></li>
-  <li>
-<a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops"><span class="header-section-number">6.5</span> Loops</a>
-  <ul class="collapse">
-<li><a href="#for-loop" id="toc-for-loop" class="nav-link" data-scroll-target="#for-loop"><span class="header-section-number">6.5.1</span> For loop</a></li>
-  <li><a href="#while-loop" id="toc-while-loop" class="nav-link" data-scroll-target="#while-loop"><span class="header-section-number">6.5.2</span> While loop</a></li>
-  <li><a href="#when-to-use-a-loop" id="toc-when-to-use-a-loop" class="nav-link" data-scroll-target="#when-to-use-a-loop"><span class="header-section-number">6.5.3</span> When to use a loop?</a></li>
-  <li><a href="#if-not-loops-then-what" id="toc-if-not-loops-then-what" class="nav-link" data-scroll-target="#if-not-loops-then-what"><span class="header-section-number">6.5.4</span> If not loops, then what?</a></li>
-  </ul>
-</li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/06-programming.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  <li><a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops"><span class="header-section-number">6.5</span> Loops</a></li>
+  </ul><div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/06-programming.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -386,11 +377,11 @@ window.Quarto = {
 <p>If instead, we asked our loyal function to do the same, it would listen intently to our request, stand still for a few milliseconds, compose itself, and then start shouting <code>Error: 'data' must be a data frame, or other object ...</code>. It would then repeat this every single time we asked it to do the job. The point here, is that code and functions are not intelligent. They cannot find workarounds. It’s totally reliant on you, to tell it very explicitly what it needs to do step by step.</p>
 <p>Remember two things: the intelligence of code comes from the coder, not the computer and functions need exact instructions to work.</p>
 <p>To prevent functions from being <em>too</em> stupid you must provide the information the function needs in order for it to function. As with the <em>Francesinha</em> example, if we’d supplied a recipe list to the function, it would have managed just fine. We call this “fulfilling an argument”. The vast majority of functions require the user to fulfill at least one argument.</p>
-<p>This can be illustrated in the pseudocode below. When we make a function we can specify what arguments the user must fulfill (e.g.&nbsp;<code>argument1</code> and <code>argument2</code>), as well as what to do once it has this information (<code>expression</code>):</p>
+<p>This can be illustrated in the pseudocode below. When we make a function we can specify what arguments the user must fulfill (e.g. <code>argument1</code> and <code>argument2</code>), as well as what to do once it has this information (<code>expression</code>):</p>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nameOfFunction</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">argument1</span>, <span class="va">argument2</span>, <span class="va">...</span><span class="op">)</span> <span class="op">{</span><span class="va">expression</span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The first thing to note is that we’ve used the function <code>function()</code> to create a new function called <code>nameOfFunction</code>. To walk through the above code; we’re creating a function called <code>nameOfFunction</code>. Within the round brackets we specify what information (i.e.&nbsp;arguments) the function requires to run (as many or as few as needed). These arguments are then passed to the expression part of the function. The expression can be any valid R command or set of R commands and is usually contained between a pair of braces <code><a href="https://rdrr.io/r/base/Paren.html">{ }</a></code> (if a function is only one line long you can omit the braces). Once you run the above code, you can then use your new function by typing:</p>
+<p>The first thing to note is that we’ve used the function <code>function()</code> to create a new function called <code>nameOfFunction</code>. To walk through the above code; we’re creating a function called <code>nameOfFunction</code>. Within the round brackets we specify what information (i.e. arguments) the function requires to run (as many or as few as needed). These arguments are then passed to the expression part of the function. The expression can be any valid R command or set of R commands and is usually contained between a pair of braces <code><a href="https://rdrr.io/r/base/Paren.html">{ }</a></code> (if a function is only one line long you can omit the braces). Once you run the above code, you can then use your new function by typing:</p>
 <div class="cell">
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">nameOfFunction</span><span class="op">(</span><span class="va">argument1</span>, <span class="va">argument2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -625,11 +616,15 @@ produced NAs</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">good.day</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">code.working</span>, <span class="va">day</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="kw">if</span> <span class="op">(</span><span class="va">code.working</span> <span class="op">==</span> <span class="cn">TRUE</span> <span class="op">&amp;&amp;</span> <span class="va">day</span> <span class="op">==</span> <span class="st">"Friday"</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="st">"BEST. DAY. EVER. Stop while you are ahead and go to the pub!"</span></span>
+<span>    <span class="st">"BEST.</span></span>
+<span><span class="st">DAY.</span></span>
+<span><span class="st">EVER.</span></span>
+<span><span class="st">Stop while you are ahead and go to the pub!"</span></span>
 <span>  <span class="op">}</span> <span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span><span class="va">code.working</span> <span class="op">==</span> <span class="cn">FALSE</span> <span class="op">&amp;&amp;</span> <span class="va">day</span> <span class="op">==</span> <span class="st">"Friday"</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="st">"Oh well, but at least it's Friday! Pub time!"</span></span>
 <span>  <span class="op">}</span> <span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span><span class="va">code.working</span> <span class="op">==</span> <span class="cn">TRUE</span> <span class="op">&amp;&amp;</span> <span class="va">day</span> <span class="op">!=</span> <span class="st">"Friday"</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="st">"So close to a good day... shame it's not a Friday"</span></span>
+<span>    <span class="st">"So close to a good day...</span></span>
+<span><span class="st">shame it's not a Friday"</span></span>
 <span>  <span class="op">}</span> <span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span><span class="va">code.working</span> <span class="op">==</span> <span class="cn">FALSE</span> <span class="op">&amp;&amp;</span> <span class="va">day</span> <span class="op">!=</span> <span class="st">"Friday"</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="st">"Hello darkness."</span></span>
 <span>  <span class="op">}</span></span>
@@ -637,7 +632,7 @@ produced NAs</code></pre>
 <span></span>
 <span><span class="fu">good.day</span><span class="op">(</span>code.working <span class="op">=</span> <span class="cn">TRUE</span>, day <span class="op">=</span> <span class="st">"Friday"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "BEST. DAY. EVER. Stop while you are ahead and go to the pub!"</code></pre>
+<pre><code>[1] "BEST.\nDAY.\nEVER.\nStop while you are ahead and go to the pub!"</code></pre>
 </div>
 <div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">good.day</span><span class="op">(</span><span class="cn">FALSE</span>, <span class="st">"Tuesday"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -716,8 +711,7 @@ produced NAs</code></pre>
 <span class="header-section-number">6.5</span> Loops</h2>
 <p>R is very good at performing repetitive tasks. If we want a set of operations to be repeated several times we use what’s known as a loop. When you create a loop, R will execute the instructions in the loop a specified number of times or until a specified condition is met. There are three main types of loop in R: the <em>for</em> loop, the <em>while</em> loop and the <em>repeat</em> loop.</p>
 <p>Loops are one of the staples of all programming languages, not just R, and can be a powerful tool (although in our opinion, used far too frequently when writing R code).</p>
-<section id="for-loop" class="level3" data-number="6.5.1"><h3 data-number="6.5.1" class="anchored" data-anchor-id="for-loop">
-<span class="header-section-number">6.5.1</span> For loop</h3>
+<section id="for-loop" class="level3"><h3 class="anchored" data-anchor-id="for-loop">For loop</h3>
 <p>The most commonly used loop structure when you want to repeat a task a defined number of times is the <code>for</code> loop. The most basic example of a <code>for</code> loop is:</p>
 <div class="cell">
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span> <span class="op">{</span></span>
@@ -844,8 +838,7 @@ produced NAs</code></pre>
 </div>
 </div>
 <p>If you can follow the examples above, you’ll be in a good spot to begin writing some of your own for loops. That said there are other types of loops available to you.</p>
-</section><section id="while-loop" class="level3" data-number="6.5.2"><h3 data-number="6.5.2" class="anchored" data-anchor-id="while-loop">
-<span class="header-section-number">6.5.2</span> While loop</h3>
+</section><section id="while-loop" class="level3"><h3 class="anchored" data-anchor-id="while-loop">While loop</h3>
 <p>Another type of loop that you may use (albeit less frequently) is the <code>while</code> loop. The <code>while</code> loop is used when you want to keep looping until a specific logical condition is satisfied (contrast this with the <code>for</code> loop which will always iterate through an entire sequence).</p>
 <p>The basic structure of the while loop is:</p>
 <div class="cell">
@@ -868,21 +861,19 @@ produced NAs</code></pre>
 </div>
 <p>Here the loop will only continue to pass values to the main body of the loop (the <code>expression</code> body) when <code>i</code> is less than or equal to 4 (specified using the <code>&lt;=</code> operator in this example). Once <code>i</code> is greater than 4 the loop will stop.</p>
 <p>There is another, very rarely used type of loop; the <code>repeat</code> loop. The <code>repeat</code> loop has no conditional check so can keep iterating indefinitely (meaning a break, or “stop here”, has to be coded into it). It’s worthwhile being aware of it’s existence, but for now we don’t think you need to worry about it; the <code>for</code> and <code>while</code> loops will see you through the vast majority of your looping needs.</p>
-</section><section id="when-to-use-a-loop" class="level3" data-number="6.5.3"><h3 data-number="6.5.3" class="anchored" data-anchor-id="when-to-use-a-loop">
-<span class="header-section-number">6.5.3</span> When to use a loop?</h3>
+</section><section id="when-to-use-a-loop" class="level3"><h3 class="anchored" data-anchor-id="when-to-use-a-loop">When to use a loop?</h3>
 <p>Loops are fairly commonly used, though sometimes a little overused in our opinion. Equivalent tasks can be performed with functions, which are often more efficient than loops. Though this raises the question when should you use a loop?</p>
 <p>In general loops are implemented inefficiently in R and should be avoided when better alternatives exist, especially when you’re working with large datasets. However, loop are sometimes the only way to achieve the result we want.</p>
 <p><strong>Some examples of when using loops can be appropriate:</strong></p>
 <ul>
-<li><p>Some simulations (e.g.&nbsp;the Ricker model can, in part, be built using loops)</p></li>
+<li><p>Some simulations (e.g. the Ricker model can, in part, be built using loops)</p></li>
 <li><p>Recursive relationships (a relationship which depends on the value of the previous relationship [“to understand recursion, you must understand recursion”])</p></li>
 <li><p>More complex problems (e.g., how long since the last badger was seen at site <span class="math inline">\(j\)</span>, given a pine marten was seen at time <span class="math inline">\(t\)</span>, at the same location <span class="math inline">\(j\)</span> as the badger, where the pine marten was detected in a specific 6 hour period, but exclude badgers seen 30 minutes before the pine marten arrival, repeated for all pine marten detections)</p></li>
 <li><p>While loops (keep jumping until you’ve reached the moon)</p></li>
-</ul></section><section id="if-not-loops-then-what" class="level3" data-number="6.5.4"><h3 data-number="6.5.4" class="anchored" data-anchor-id="if-not-loops-then-what">
-<span class="header-section-number">6.5.4</span> If not loops, then what?</h3>
+</ul></section><section id="if-not-loops-then-what" class="level3"><h3 class="anchored" data-anchor-id="if-not-loops-then-what">If not loops, then what?</h3>
 <p>In short, use the apply family of functions; <code><a href="https://rdrr.io/r/base/apply.html">apply()</a></code>, <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code>, <code><a href="https://rdrr.io/r/base/tapply.html">tapply()</a></code>, <code><a href="https://rdrr.io/r/base/lapply.html">sapply()</a></code>, <code><a href="https://rdrr.io/r/base/lapply.html">vapply()</a></code>, and <code><a href="https://rdrr.io/r/base/mapply.html">mapply()</a></code>. The apply functions can often do the tasks of most “home-brewed” loops, sometimes faster (though that won’t really be an issue for most people) but more importantly with a much lower risk of error. A strategy to have in the back of your mind which may be useful is; for every loop you make, try to remake it using an apply function (often <code>lapply</code> or <code>sapply</code> will work). If you can, use the apply version. There’s nothing worse than realising there was a small, tiny, seemingly meaningless mistake in a loop which weeks, months or years down the line has propagated into a huge mess. We strongly recommend trying to use the apply functions whenever possible.</p>
 <section id="lapply" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="lapply">lapply</h4>
-<p>Your go to apply function will often be <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code> at least in the beginning. The way that <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code> works, and the reason it is often a good alternative to for loops, is that it will go through each element in a list and perform a task (i.e.&nbsp;run a function). It has the added benefit that it will output the results as a list - something you’d have to otherwise code yourself into a loop.</p>
+<p>Your go to apply function will often be <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code> at least in the beginning. The way that <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code> works, and the reason it is often a good alternative to for loops, is that it will go through each element in a list and perform a task (i.e. run a function). It has the added benefit that it will output the results as a list - something you’d have to otherwise code yourself into a loop.</p>
 <p>An <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code> has the following structure:</p>
 <div class="cell">
 <div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">FUN</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

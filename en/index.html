@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.4.550">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
-<meta name="dcterms.date" content="2024-04-01">
+<meta name="dcterms.date" content="2024-04-03">
 <meta name="description" content="Early version needed to be severely updated/modified">
 <title>On the R-way to hell</title>
 <style>
@@ -84,7 +84,6 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./01-intro.html" rel="next">
-<link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -96,7 +95,8 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -146,7 +146,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item">
-    <a class="nav-link active" href="./99-App-data.html" aria-current="page"> 
+    <a class="nav-link active" href="./99-data-files.html" aria-current="page"> 
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -299,13 +299,13 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-App-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./99-data-files.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Data used in this book</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-App-latex.html" class="sidebar-item-text sidebar-link">
+  <a href="./99-latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and latex</span></span></a>
   </div>
 </li>
@@ -318,7 +318,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
-  <ul>
+  <ul class="collapse">
 <li>
 <a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
   <ul class="collapse">
@@ -330,7 +330,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
   <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
   </ul>
 </li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -357,7 +357,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024-04-01</p>
+      <p class="date">2024-04-03</p>
     </div>
   </div>
   
@@ -386,15 +386,22 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 <p>The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research. R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting. It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.</p>
 </section><section id="multilingual-book" class="level2"><h2 class="anchored" data-anchor-id="multilingual-book">Multilingual book</h2>
 <p>The book is provided as a multilingual book breaking that language barrier and potentially allow to facilitate the learn of R and its mainly english-speaking environment. We are always looking for volunteers to help developed the book further and add more languages to the growing list. Please <a href="https://biostats-uottawa.github.io/people.html">contact us</a> if you want to help</p>
-<p>On the web version of the book, use <i class="bi-flag " style="" role="img" aria-hidden="true"></i> in the navigation bar to switch from one language to another. After switching to your preferred language, you can of course also download the pdf and epub versions in this language if you want to using <i class="bi-download " style="" role="img" aria-hidden="true"></i>.</p>
+<p>On the web version of the book, use <i class="fa-regular fa-flag" aria-label="flag"></i> in the navigation bar to switch from one language to another. After switching to your preferred language, you can of course also download the pdf and epub versions in this language if you want to using <i class="fa-solid fa-download" aria-label="download"></i>.</p>
 <p>List of languages:</p>
 <ul>
 <li>english (publish but need polishing)</li>
 <li>french (in development, waiting for english to be polished)</li>
 <li>spanish (in development, waiting for english to be polished)</li>
 </ul></section><section id="how-to-use-this-book" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to use this book</h2>
+<!-- bootstrap icons works with 
+bi body-text
+bi search
+bi toggle-off
+bi github
+but useless for pdf
+-->
 <p>For the best experience we recommend that you read the web version of this book which you can find <a href="https://biostats-uottawa.github.io/R" class="uri">https://biostats-uottawa.github.io/R</a>.</p>
-<p>The web version includes a navbar at the top of the page where you can toggle the sidebars on and off <i class="bi-body-text " style="" role="img" aria-hidden="true"></i>, search through the book <i class="bi-search " style="" role="img" aria-hidden="true"></i>, change the page color <i class="bi-toggle-off " style="" role="img" aria-hidden="true"></i> and suggest revisions if you spot a typo or mistake <i class="bi-github " style="" role="img" aria-hidden="true"></i>. You can also download <i class="bi-download " style="" role="img" aria-hidden="true"></i> a pdf and epub versions of the book.</p>
+<p>The web version includes a navbar at the top of the page where you can toggle the sidebars on and off <i class="fa-solid fa-align-left" aria-label="align-left"></i>, search through the book <i class="fa-solid fa-search" aria-label="search"></i>, change the page color <i class="fa-solid fa-toggle-off" aria-label="toggle-off"></i> and suggest revisions if you spot a typo or mistake <i class="fa-brands fa-github" aria-label="github"></i>. You can also download <i class="fa-solid fa-download" aria-label="download"></i> a pdf and epub versions of the book.</p>
 <p>We use a few typographical conventions throughout this book.</p>
 <p>R code and the resulting output are presented in code blocks in our book.</p>
 <div class="cell">
@@ -405,7 +412,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </div>
 <p>Functions in the text are shown with brackets at the end using code font, i.e. <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> or <code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code> etc.</p>
 <p>Objects are shown using code font without the round brackets, i.e. <code>obj1</code>, <code>obj2</code> etc.</p>
-<p>R packages in the text are shown using code font and followed by the 📦 icon, i.e.&nbsp;<code>tidyverse</code> 📦.</p>
+<p>R packages in the text are shown using code font and followed by the <span class="emoji" data-emoji="package">📦</span> icon, i.e. <code>tidyverse</code> <span class="emoji" data-emoji="package">📦</span>.</p>
 <p>A series of actions required to access menu commands in RStudio or VSCode are identified as <code>File</code> -&gt; <code>New File</code> -&gt; <code>R Script</code> which translates to ‘click on the File menu, then click on New File and then select R Script’.</p>
 <p>When we refer to <strong>IDE</strong> (<strong>I</strong>ntegrated <strong>D</strong>evelopment <strong>E</strong>nvironment software) later in the text we mean either RStudio of VScode.</p>
 <p>When we refer to <strong>.[Rq]md</strong>, we mean either R markdown (.Rmd) or Quarto (.qmd) documents and would generally talk of R markdown documents when referring to either <code>.Rmd</code> or <code>.qmd</code> files.</p>
@@ -476,9 +483,37 @@ Note
 </div>
 </div>
 </section><section id="who-are-we" class="level2"><h2 class="anchored" data-anchor-id="who-are-we">Who are we&nbsp;?</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[25, -5, 70]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/author/julien.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-start;">
+<p><strong>Julien Martin</strong> is a Professor at the University of Ottawa working on Evolutionary Ecology and has discovered R with version 1.8.1 and teaches R since v2.4.0.</p>
 <ul>
-<li><a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a></li>
-</ul></section><section id="thanks" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="thanks">Thanks</h2>
+<li>
+<i class="fa-solid fa-bookmark" aria-label="bookmark"></i>: <a href="https://www.uottawa.ca/faculty-science/professors/julien-martin/">uOttawa page</a>, <a href="https://juliengamartin.github.io">lab page</a>
+</li>
+<li>
+<i class="fa-brands fa-twitter" aria-label="twitter"></i>: <a href="https://twitter.com/jgamartin">jgamartin</a>
+</li>
+<li>
+<i class="fa-brands fa-github" aria-label="github"></i>: <a href="https://github.com/juliengamartin">juliengamartin</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="thanks" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="thanks">Thanks</h2>
 <p>This book started as a fork on github from the excellent <a href="https://intro2r.com/">An introduction to R</a> book by Douglas, Roos, Mancini, Couto and Lusseau <span class="citation" data-cites="douglas2023">(<a href="98-references.html#ref-douglas2023" role="doc-biblioref">Douglas 2023</a>)</span>. It was forked on April 23rd, 2023 from <a href="https://github.com/alexd106/Rbook">Alexd106 github repository</a> then modified and updated following my own needs and teaching perspective of R. This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.</p>
 </section><section id="license" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
 <p>I share this modified version of the [original book][https://intro2r.com/] under the license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>

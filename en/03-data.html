@@ -64,7 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./04-graphics_short.html" rel="next">
 <link href="./02-basics.html" rel="prev">
-<link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -125,7 +124,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item">
-    <a class="nav-link active" href="./99-App-data.html" aria-current="page"> 
+    <a class="nav-link active" href="./99-data-files.html" aria-current="page"> 
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -278,13 +277,13 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-App-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./99-data-files.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Data used in this book</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-App-latex.html" class="sidebar-item-text sidebar-link">
+  <a href="./99-latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and latex</span></span></a>
   </div>
 </li>
@@ -297,46 +296,15 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
-  <ul>
+  <ul class="collapse">
 <li><a href="#data-types" id="toc-data-types" class="nav-link active" data-scroll-target="#data-types"><span class="header-section-number">3.1</span> Data types</a></li>
-  <li>
-<a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures"><span class="header-section-number">3.2</span> Data structures</a>
-  <ul class="collapse">
-<li><a href="#scal_vecs" id="toc-scal_vecs" class="nav-link" data-scroll-target="#scal_vecs"><span class="header-section-number">3.2.1</span> Scalars and vectors</a></li>
-  <li><a href="#mat_array" id="toc-mat_array" class="nav-link" data-scroll-target="#mat_array"><span class="header-section-number">3.2.2</span> Matrices and arrays</a></li>
-  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists"><span class="header-section-number">3.2.3</span> Lists</a></li>
-  <li><a href="#df" id="toc-df" class="nav-link" data-scroll-target="#df"><span class="header-section-number">3.2.4</span> Data frames</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data"><span class="header-section-number">3.3</span> Importing data</a>
-  <ul class="collapse">
-<li><a href="#saving-files-to-import" id="toc-saving-files-to-import" class="nav-link" data-scroll-target="#saving-files-to-import"><span class="header-section-number">3.3.1</span> Saving files to import</a></li>
-  <li><a href="#import_fnc" id="toc-import_fnc" class="nav-link" data-scroll-target="#import_fnc"><span class="header-section-number">3.3.2</span> Import functions</a></li>
-  <li><a href="#common-import-frustrations" id="toc-common-import-frustrations" class="nav-link" data-scroll-target="#common-import-frustrations"><span class="header-section-number">3.3.3</span> Common import frustrations</a></li>
-  <li><a href="#import_other" id="toc-import_other" class="nav-link" data-scroll-target="#import_other"><span class="header-section-number">3.3.4</span> Other import options</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#wrangling-data-frames" id="toc-wrangling-data-frames" class="nav-link" data-scroll-target="#wrangling-data-frames"><span class="header-section-number">3.4</span> Wrangling data frames</a>
-  <ul class="collapse">
-<li><a href="#positional-indexes" id="toc-positional-indexes" class="nav-link" data-scroll-target="#positional-indexes"><span class="header-section-number">3.4.1</span> Positional indexes</a></li>
-  <li><a href="#logical-indexes" id="toc-logical-indexes" class="nav-link" data-scroll-target="#logical-indexes"><span class="header-section-number">3.4.2</span> Logical indexes</a></li>
-  <li><a href="#ordering-data-frames" id="toc-ordering-data-frames" class="nav-link" data-scroll-target="#ordering-data-frames"><span class="header-section-number">3.4.3</span> Ordering data frames</a></li>
-  <li><a href="#adding-columns-and-rows" id="toc-adding-columns-and-rows" class="nav-link" data-scroll-target="#adding-columns-and-rows"><span class="header-section-number">3.4.4</span> Adding columns and rows</a></li>
-  <li><a href="#merging-data-frames" id="toc-merging-data-frames" class="nav-link" data-scroll-target="#merging-data-frames"><span class="header-section-number">3.4.5</span> Merging data frames</a></li>
-  <li><a href="#reshape" id="toc-reshape" class="nav-link" data-scroll-target="#reshape"><span class="header-section-number">3.4.6</span> Reshaping data frames</a></li>
-  </ul>
-</li>
-  <li><a href="#summarising-data-frames" id="toc-summarising-data-frames" class="nav-link" data-scroll-target="#summarising-data-frames"><span class="header-section-number">3.5</span> Summarising data frames</a></li>
-  <li>
-<a href="#exporting-data" id="toc-exporting-data" class="nav-link" data-scroll-target="#exporting-data"><span class="header-section-number">3.6</span> Exporting data</a>
-  <ul class="collapse">
-<li><a href="#export-functions" id="toc-export-functions" class="nav-link" data-scroll-target="#export-functions"><span class="header-section-number">3.6.1</span> Export functions</a></li>
-  <li><a href="#other-export-functions" id="toc-other-export-functions" class="nav-link" data-scroll-target="#other-export-functions"><span class="header-section-number">3.6.2</span> Other export functions</a></li>
-  </ul>
-</li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/03-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  <li><a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures"><span class="header-section-number">3.2</span> Data structures</a></li>
+  <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data"><span class="header-section-number">3.3</span> Importing data</a></li>
+  <li><a href="#wrangling-data-frames" id="toc-wrangling-data-frames" class="nav-link" data-scroll-target="#wrangling-data-frames"><span class="header-section-number">3.4</span> Wrangling data frames</a></li>
+  <li><a href="#introduction-to-the-tidyverse" id="toc-introduction-to-the-tidyverse" class="nav-link" data-scroll-target="#introduction-to-the-tidyverse"><span class="header-section-number">3.5</span> Introduction to the <code>tidyverse</code></a></li>
+  <li><a href="#summarising-data-frames" id="toc-summarising-data-frames" class="nav-link" data-scroll-target="#summarising-data-frames"><span class="header-section-number">3.6</span> Summarising data frames</a></li>
+  <li><a href="#exporting-data" id="toc-exporting-data" class="nav-link" data-scroll-target="#exporting-data"><span class="header-section-number">3.7</span> Exporting data</a></li>
+  </ul><div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/03-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -468,8 +436,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </table></section><section id="data-structures" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="data-structures">
 <span class="header-section-number">3.2</span> Data structures</h2>
 <p>Now that you’ve been introduced to some of the most important classes of data in R, let’s have a look at some of main structures that we have for storing these data.</p>
-<section id="scal_vecs" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="scal_vecs">
-<span class="header-section-number">3.2.1</span> Scalars and vectors</h3>
+<section id="scal_vecs" class="level3"><h3 class="anchored" data-anchor-id="scal_vecs">Scalars and vectors</h3>
 <p>Perhaps the simplest type of data structure is the vector. You’ve already been introduced to vectors in <a href="#funcs">Chapter 2</a> although some of the vectors you created only contained a single value. Vectors that have a single value (length 1) are called scalars. Vectors can contain numbers, characters, factors or logicals, but the key thing to remember is that all the elements inside a vector must be of the same class. In other words, vectors can contain either numbers, characters or logicals but not mixtures of these types of data. There is one important exception to this, you can include <code>NA</code> (remember this is special type of logical) to denote missing data in vectors with other data types.</p>
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
@@ -480,8 +447,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-</section><section id="mat_array" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="mat_array">
-<span class="header-section-number">3.2.2</span> Matrices and arrays</h3>
+</section><section id="mat_array" class="level3"><h3 class="anchored" data-anchor-id="mat_array">Matrices and arrays</h3>
 <p>Another useful data structure used in many disciplines such as population ecology, theoretical and applied statistics is the matrix. A matrix is simply a vector that has additional attributes called dimensions. Arrays are just multidimensional matrices. Again, matrices and arrays must contain elements all of the same data class.</p>
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
@@ -588,8 +554,7 @@ d 4 8 12 16</code></pre>
 [2,]    1    2</code></pre>
 </div>
 </div>
-</section><section id="lists" class="level3" data-number="3.2.3"><h3 data-number="3.2.3" class="anchored" data-anchor-id="lists">
-<span class="header-section-number">3.2.3</span> Lists</h3>
+</section><section id="lists" class="level3"><h3 class="anchored" data-anchor-id="lists">Lists</h3>
 <p>The next data structure we will quickly take a look at is a list. Whilst vectors and matrices are constrained to contain data of the same type, lists are able to store mixtures of data types. In fact we can even store other data structures such as vectors and arrays within a list or even have a list of a list. This makes for a very flexible data structure which is ideal for storing irregular or non-rectangular data (see <a href="06-programming.html">Chapter 7</a> for an example).</p>
 <p>To create a list we can use the <code><a href="https://rdrr.io/r/base/list.html">list()</a></code> function. Note how each of the three list elements are of different classes (character, logical, and numeric) and are of different lengths.</p>
 <div class="cell">
@@ -649,10 +614,9 @@ $time
 [3,]    3    6</code></pre>
 </div>
 </div>
-</section><section id="df" class="level3" data-number="3.2.4"><h3 data-number="3.2.4" class="anchored" data-anchor-id="df">
-<span class="header-section-number">3.2.4</span> Data frames</h3>
+</section><section id="df" class="level3"><h3 class="anchored" data-anchor-id="df">Data frames</h3>
 <p>By far the most commonly used data structure to store data in is the data frame. A data frame is a powerful two-dimensional object made up of rows and columns which looks superficially very similar to a matrix. However, whilst matrices are restricted to containing data all of the same type, data frames can contain a mixture of different types of data. Typically, in a data frame each row corresponds to an individual observation and each column corresponds to a different measured or recorded variable. This setup may be familiar to those of you who use LibreOffice Calc or Microsoft Excel to manage and store your data. Perhaps a useful way to think about data frames is that they are essentially made up of a bunch of vectors (columns) with each vector containing its own data type but the data type can be different between vectors.</p>
-<p>As an example, the data frame below contains the results of an experiment to determine the effect of removing the tip of petunia plants (<em>Petunia sp.</em>) grown at 3 levels of nitrogen on various measures of growth (note: data shown below are a subset of the full dataset). The data frame has 8 variables (columns) and each row represents an individual plant. The variables <code>treat</code> and <code>nitrogen</code> are factors (<a href="https://en.wikipedia.org/wiki/Categorical_variable">categorical</a> variables). The <code>treat</code> variable has 2 levels (<code>tip</code> and <code>notip</code>) and the <code>nitrogen</code> level variable has 3 levels (<code>low</code>, <code>medium</code> and <code>high</code>). The variables <code>height</code>, <code>weight</code>, <code>leafarea</code> and <code>shootarea</code> are numeric and the variable <code>flowers</code> is an integer representing the number of flowers. Although the variable <code>block</code> has numeric values, these do not really have any order and could also be treated as a factor (i.e.&nbsp;they could also have been called A and B).</p>
+<p>As an example, the data frame below contains the results of an experiment to determine the effect of removing the tip of petunia plants (<em>Petunia sp.</em>) grown at 3 levels of nitrogen on various measures of growth (note: data shown below are a subset of the full dataset). The data frame has 8 variables (columns) and each row represents an individual plant. The variables <code>treat</code> and <code>nitrogen</code> are factors (<a href="https://en.wikipedia.org/wiki/Categorical_variable">categorical</a> variables). The <code>treat</code> variable has 2 levels (<code>tip</code> and <code>notip</code>) and the <code>nitrogen</code> level variable has 3 levels (<code>low</code>, <code>medium</code> and <code>high</code>). The variables <code>height</code>, <code>weight</code>, <code>leafarea</code> and <code>shootarea</code> are numeric and the variable <code>flowers</code> is an integer representing the number of flowers. Although the variable <code>block</code> has numeric values, these do not really have any order and could also be treated as a factor (i.e. they could also have been called A and B).</p>
 <p>&nbsp;</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -849,8 +813,7 @@ $time
 </section></section><section id="importing-data" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="importing-data">
 <span class="header-section-number">3.3</span> Importing data</h2>
 <p>Although creating data frames from existing data structures is extremely useful, by far the most common approach is to create a data frame by importing data from an external file. To do this, you’ll need to have your data correctly formatted and saved in a file format that R is able to recognise. Fortunately for us, R is able to recognise a wide variety of file formats, although in reality you’ll probably end up only using two or three regularly.</p>
-<section id="saving-files-to-import" class="level3" data-number="3.3.1"><h3 data-number="3.3.1" class="anchored" data-anchor-id="saving-files-to-import">
-<span class="header-section-number">3.3.1</span> Saving files to import</h3>
+<section id="saving-files-to-import" class="level3"><h3 class="anchored" data-anchor-id="saving-files-to-import">Saving files to import</h3>
 <p>The easiest method of creating a data file to import into R is to enter your data into a spreadsheet using either Microsoft Excel or LibreOffice Calc and save the spreadsheet as a tab delimited file. We prefer LibreOffice Calc as it’s open source, platform independent and free but MS Excel is OK too (but see <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7">here</a> for some gotchas). Here’s the data from the petunia experiment we dicussed previously displayed in LibreOffice. If you want to follow along you can download the data file (<em>‘flower.xls’</em>) from the companion website <a href="https://biostats-uottawa.io/practical_data/data.html">here</a>.</p>
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
@@ -897,20 +860,19 @@ $time
 </div>
 </div>
 <p>&nbsp;</p>
-<p>There are a couple of things to bear in mind when saving files to import into R which will make your life easier in the long run. Keep your column headings (if you have them) short and informative. Also avoid spaces in your column headings by replacing them with an underscore or a dot (i.e.&nbsp;replace <code>shoot height</code> with <code>shoot_height</code> or <code>shoot.height</code>) and avoid using special characters (i.e.&nbsp;<code>leaf area (mm^2)</code>). Remember, if you have missing data in your data frame (empty cells) you should use an <code>NA</code> to represent these missing values. This will keep the data frame tidy.</p>
-</section><section id="import_fnc" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="import_fnc">
-<span class="header-section-number">3.3.2</span> Import functions</h3>
+<p>There are a couple of things to bear in mind when saving files to import into R which will make your life easier in the long run. Keep your column headings (if you have them) short and informative. Also avoid spaces in your column headings by replacing them with an underscore or a dot (i.e. replace <code>shoot height</code> with <code>shoot_height</code> or <code>shoot.height</code>) and avoid using special characters (i.e. <code>leaf area (mm^2)</code>). Remember, if you have missing data in your data frame (empty cells) you should use an <code>NA</code> to represent these missing values. This will keep the data frame tidy.</p>
+</section><section id="import_fnc" class="level3"><h3 class="anchored" data-anchor-id="import_fnc">Import functions</h3>
 <p>Once you’ve saved your data file in a suitable format we can now read this file into R. The workhorse function for importing data into R is the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function (we discuss some alternatives later in the chapter). The <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function is a very flexible function with a shed load of arguments (see <code><a href="https://rdrr.io/r/utils/read.table.html">?read.table</a></code>) but it’s quite simple to use. Let’s import a tab delimited file called <code>flower.txt</code> which contains the data we saw previously in this <a href="#df">Chapter</a> and assign it to an object called <code>flowers</code>. The file is located in a <code>data</code> directory which itself is located in our <a href="01-intro.html#dir_struct">root directory</a>. The first row of the data contains the variable (column) names. To use the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function to import this file</p>
 <div class="cell">
 <div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flowers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">'data/flower.txt'</span>, header <span class="op">=</span> <span class="cn">TRUE</span>, sep <span class="op">=</span> <span class="st">"\t"</span>,</span>
 <span>                        stringsAsFactors <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>There are a few things to note about the above command. First, the file path and the filename (including the file extension) needs to be enclosed in either single or double quotes (i.e.&nbsp;the <code>data/flower.txt</code> bit) as the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function expects this to be a character string. If your working directory is already set to the directory which contains the file, you don’t need to include the entire file path just the filename. In the example above, the file path is separated with a single forward slash <code>/</code>. This will work regardless of the operating system you are using and we recommend you stick with this. However, Windows users may be more familiar with the single backslash notation and if you want to keep using this you will need to include them as double backslashes. Note though that the double backslash notation will <strong>not</strong> work on computers using Mac OSX or Linux operating systems.</p>
+<p>There are a few things to note about the above command. First, the file path and the filename (including the file extension) needs to be enclosed in either single or double quotes (i.e. the <code>data/flower.txt</code> bit) as the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function expects this to be a character string. If your working directory is already set to the directory which contains the file, you don’t need to include the entire file path just the filename. In the example above, the file path is separated with a single forward slash <code>/</code>. This will work regardless of the operating system you are using and we recommend you stick with this. However, Windows users may be more familiar with the single backslash notation and if you want to keep using this you will need to include them as double backslashes. Note though that the double backslash notation will <strong>not</strong> work on computers using Mac OSX or Linux operating systems.</p>
 <div class="cell">
 <div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flowers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">'C:\\Documents\\Prog1\\data\\flower.txt'</span>, </span>
 <span>                      header <span class="op">=</span> <span class="cn">TRUE</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, stringsAsFactors <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The <code>header = TRUE</code> argument specifies that the first row of your data contains the variable names (i.e.&nbsp;<code>nitrogen</code>, <code>block</code> etc). If this is not the case you can specify <code>header = FALSE</code> (actually, this is the default value so you can omit this argument entirely). The <code>sep = "\t"</code> argument tells R that the file delimiter is a tab (<code>\t</code>).</p>
+<p>The <code>header = TRUE</code> argument specifies that the first row of your data contains the variable names (i.e. <code>nitrogen</code>, <code>block</code> etc). If this is not the case you can specify <code>header = FALSE</code> (actually, this is the default value so you can omit this argument entirely). The <code>sep = "\t"</code> argument tells R that the file delimiter is a tab (<code>\t</code>).</p>
 <p>After importing our data into R it doesn’t appear that R has done much, at least nothing appears in the R Console! To see the contents of the data frame we could just type the name of the object as we have done previously. <strong>BUT</strong> before you do that, think about why you’re doing this. If your data frame is anything other than tiny, all you’re going to do is fill up your Console with data. It’s not like you can easily check whether there are any errors or that your data has been imported correctly. A much better solution is to use our old friend the <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> function to return a compact and informative summary of your data frame.</p>
 <div class="cell">
 <div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">flowers</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -944,7 +906,7 @@ $time
  $ flowers  : int  1 10 10 1 4 9 7 6 5 8 ...</code></pre>
 </div>
 </div>
-<p>Other useful arguments include <code>dec =</code> and <code>na.strings =</code>. The <code>dec =</code> argument allows you to change the default character (<code>.</code>) used for a decimal point. This is useful if you’re in a country where decimal places are usually represented by a comma (i.e.&nbsp;<code>dec = ","</code>). The <code>na.strings =</code> argument allows you to import data where missing values are represented with a symbol other than <code>NA</code>. This can be quite common if you are importing data from other statistical software such as Minitab which represents missing values as a <code>*</code> (<code>na.strings = "*"</code>).</p>
+<p>Other useful arguments include <code>dec =</code> and <code>na.strings =</code>. The <code>dec =</code> argument allows you to change the default character (<code>.</code>) used for a decimal point. This is useful if you’re in a country where decimal places are usually represented by a comma (i.e. <code>dec = ","</code>). The <code>na.strings =</code> argument allows you to import data where missing values are represented with a symbol other than <code>NA</code>. This can be quite common if you are importing data from other statistical software such as Minitab which represents missing values as a <code>*</code> (<code>na.strings = "*"</code>).</p>
 <p>If we just wanted to see the names of our variables (columns) in the data frame we can use the <code><a href="https://rdrr.io/r/base/names.html">names()</a></code> function which will return a character vector of the variable names.</p>
 <div class="cell">
 <div class="sourceCode" id="cb65"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">flowers</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -965,14 +927,13 @@ $time
 <span><span class="va">flowers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.delim</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">'data/flower.txt'</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can even import spreadsheet files from MS Excel or other statistics software directly into R but our advice is that this should generally be avoided if possible as it just adds a layer of uncertainty between you and your data. In our opinion it’s almost always better to export your spreadsheets as tab or comma delimited files and then import them into R using the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function. If you’re hell bent on directly importing data from other software you will need to install the <code>foreign</code> package which has functions for importing Minitab, SPSS, Stata and SAS files or the <code>xlsx</code> package to import Excel spreadsheets.</p>
-</section><section id="common-import-frustrations" class="level3" data-number="3.3.3"><h3 data-number="3.3.3" class="anchored" data-anchor-id="common-import-frustrations">
-<span class="header-section-number">3.3.3</span> Common import frustrations</h3>
+</section><section id="common-import-frustrations" class="level3"><h3 class="anchored" data-anchor-id="common-import-frustrations">Common import frustrations</h3>
 <p>It’s quite common to get a bunch of really frustrating error messages when you first start importing data into R. Perhaps the most common is</p>
 <div class="sourceCode" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="fu">file</span>(file, <span class="st">"rt"</span>) <span class="sc">:</span> cannot open the connection</span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>In addition<span class="sc">:</span> Warning message<span class="sc">:</span></span>
 <span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>In <span class="fu">file</span>(file, <span class="st">"rt"</span>) <span class="sc">:</span></span>
 <span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>  cannot open file <span class="st">'flower.txt'</span><span class="sc">:</span> No such file or directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This error message is telling you that R cannot find the file you are trying to import. It usually rears its head for one of a couple of reasons (or all of them!). The first is that you’ve made a mistake in the spelling of either the filename or file path. Another common mistake is that you have forgotten to include the file extension in the filename (i.e.&nbsp;<code>.txt</code>). Lastly, the file is not where you say it is or you’ve used an incorrect file path. Using RStudio <a href="01-intro.html#rsprojs">Projects</a> and having a logical <a href="01-intro.html#dir_struct">directory structure</a> goes a long way to avoiding these types of errors.</p>
+<p>This error message is telling you that R cannot find the file you are trying to import. It usually rears its head for one of a couple of reasons (or all of them!). The first is that you’ve made a mistake in the spelling of either the filename or file path. Another common mistake is that you have forgotten to include the file extension in the filename (i.e. <code>.txt</code>). Lastly, the file is not where you say it is or you’ve used an incorrect file path. Using RStudio <a href="01-intro.html#rsprojs">Projects</a> and having a logical <a href="01-intro.html#dir_struct">directory structure</a> goes a long way to avoiding these types of errors.</p>
 <p>Another really common mistake is to forget to include the <code>header = TRUE</code> argument when the first row of the data contains variable names. For example, if we omit this argument when we import our <code>flowers.txt</code> file everything looks OK at first (no error message at least)</p>
 <div class="cell">
 <div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flowers_bad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">'data/flower.txt'</span>, sep <span class="op">=</span> <span class="st">"\t"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -993,8 +954,7 @@ $time
 </div>
 </div>
 <p>We can see an obvious problem, all of our variables have been imported as factors and our variables are named <code>V1</code>, <code>V2</code>, <code>V3</code> … <code>V8</code>. The problem happens because we haven’t told the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function that the first row contains the variable names and so it treats them as data. As soon as we have a single character string in any of our data vectors, R treats the vectors as character type data (remember all elements in a vector must contain the <a href="#scal_vecs">same type of data</a>).</p>
-</section><section id="import_other" class="level3" data-number="3.3.4"><h3 data-number="3.3.4" class="anchored" data-anchor-id="import_other">
-<span class="header-section-number">3.3.4</span> Other import options</h3>
+</section><section id="import_other" class="level3"><h3 class="anchored" data-anchor-id="import_other">Other import options</h3>
 <p>There are numerous other functions to import data from a variety of sources and formats. Most of these functions are contained in packages that you will need to install before using them. We list a couple of the more useful packages and functions below.</p>
 <p>The <code>fread()</code> function from the <code>read.table</code> package is great for importing large data files quickly and efficiently (much faster than the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function). One of the great things about the <code>fread()</code> function is that it will automatically detect many of the arguments you would normally need to specify (like <code>sep =</code> etc). One of the things you will need to consider though is that the <code>fread()</code> function will return a <code>data.table</code> object not a <code>data.frame</code> as would be the case with the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function. This is usually not a problem as you can pass a <code>data.table</code> object to any function that only accepts <code>data.frame</code> objects. To learn more about the differences between <code>data.table</code> and <code>data.frame</code> objects see <a href="http://datatable.r-forge.r-project.org/datatable-intro.pdf">here</a>.</p>
 <div class="cell">
@@ -1075,8 +1035,7 @@ $time
 </div>
 </div>
 <p>Just as we did with <a href="02-basics.html#vectors">vectors</a>, we also can access data in data frames using the square bracket <code>[ ]</code> notation. However, instead of just using a single index, we now need to use two indexes, one to specify the rows and one for the columns. To do this, we can use the notation <code>my_data[rows, columns]</code> where <code>rows</code> and <code>columns</code> are indexes and <code>my_data</code> is the name of the data frame. Again, just like with our vectors our indexes can be positional or the result of a logical test.</p>
-<section id="positional-indexes" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="positional-indexes">
-<span class="header-section-number">3.4.1</span> Positional indexes</h3>
+<section id="positional-indexes" class="level3"><h3 class="anchored" data-anchor-id="positional-indexes">Positional indexes</h3>
 <p>To use positional indexes we simple have to write the position of the rows and columns we want to extract inside the <code>[ ]</code>. For example, if for some reason we wanted to extract the first value (1<sup>st</sup> row ) of the <code>height</code> variable (4<sup>th</sup> column)</p>
 <div class="cell">
 <div class="sourceCode" id="cb86"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flowers</span><span class="op">[</span><span class="fl">1</span>, <span class="fl">4</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1269,8 +1228,7 @@ $time
 </div>
 </div>
 <p>We often use this method in preference to the positional index for selecting columns as it will still give us what we want even if we’ve changed the order of the columns in our data frame for some reason.</p>
-</section><section id="logical-indexes" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="logical-indexes">
-<span class="header-section-number">3.4.2</span> Logical indexes</h3>
+</section><section id="logical-indexes" class="level3"><h3 class="anchored" data-anchor-id="logical-indexes">Logical indexes</h3>
 <p>Just as we did with vectors, we can also extract data from our data frame based on a logical test. We can use all of the logical operators that we used for our vector examples so if these have slipped your mind maybe <a href="#Logical-index">pop back</a> and refresh your memory. Let’s extract all rows where <code>height</code> is greater than 12 and extract all columns by default (remember, if you don’t include a column index after the comma it means all columns).</p>
 <div class="cell">
 <div class="sourceCode" id="cb102"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">big_flowers</span> <span class="op">&lt;-</span> <span class="va">flowers</span><span class="op">[</span><span class="va">flowers</span><span class="op">$</span><span class="va">height</span> <span class="op">&gt;</span> <span class="fl">12</span>, <span class="op">]</span></span>
@@ -1313,7 +1271,7 @@ $time
 <span></span>
 <span><span class="va">flowers</span><span class="op">[</span><span class="va">flowers</span><span class="op">$</span><span class="va">height</span> <span class="op">!=</span> <span class="fl">8</span>, <span class="op">]</span>         <span class="co"># values  not equal to 8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We can also extract rows based on the value of a character string or factor level. Let’s extract all rows where the <code>nitrogen</code> level is equal to <code>high</code> (again we will output all columns). Notice that the double equals <code>==</code> sign must be used for a logical test and that the character string must be enclosed in either single or double quotes (i.e.&nbsp;<code>"high"</code>).</p>
+<p>We can also extract rows based on the value of a character string or factor level. Let’s extract all rows where the <code>nitrogen</code> level is equal to <code>high</code> (again we will output all columns). Notice that the double equals <code>==</code> sign must be used for a logical test and that the character string must be enclosed in either single or double quotes (i.e. <code>"high"</code>).</p>
 <div class="cell">
 <div class="sourceCode" id="cb108"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nit_high</span> <span class="op">&lt;-</span> <span class="va">flowers</span><span class="op">[</span><span class="va">flowers</span><span class="op">$</span><span class="va">nitrogen</span> <span class="op">==</span> <span class="st">"high"</span>, <span class="op">]</span>        </span>
 <span><span class="va">nit_high</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1489,8 +1447,7 @@ $time
 16   tip   medium     13.4</code></pre>
 </div>
 </div>
-</section><section id="ordering-data-frames" class="level3" data-number="3.4.3"><h3 data-number="3.4.3" class="anchored" data-anchor-id="ordering-data-frames">
-<span class="header-section-number">3.4.3</span> Ordering data frames</h3>
+</section><section id="ordering-data-frames" class="level3"><h3 class="anchored" data-anchor-id="ordering-data-frames">Ordering data frames</h3>
 <p>Remember when we used the function <code><a href="https://rdrr.io/r/base/order.html">order()</a></code> to order one vector based on the order of another vector (way back in <a href="02-basics.html#vec_ord">Chapter 2</a>). This comes in very handy if you want to reorder rows in your data frame. For example, if we want all of the rows in the data frame <code>flowers</code> to be ordered in ascending value of <code>height</code> and output all columns by default. If you’re reading this section of the book on the web you can scroll down in the output panels to see the entire ordered data frame. If you’re reading the pdf version of the book, note that some of the output from the code chunks has been truncated to save some space.</p>
 <div class="cell">
 <div class="sourceCode" id="cb120"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">height_ord</span> <span class="op">&lt;-</span> <span class="va">flowers</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span><span class="op">(</span><span class="va">flowers</span><span class="op">$</span><span class="va">height</span><span class="op">)</span>, <span class="op">]</span>        </span>
@@ -1597,7 +1554,7 @@ $time
 32   tip     high     2   17.2  19.20     10.9      89.9      14</code></pre>
 </div>
 </div>
-<p>We can also order by descending order of a variable (i.e.&nbsp;<code>leafarea</code>) using the <code>decreasing = TRUE</code> argument.</p>
+<p>We can also order by descending order of a variable (i.e. <code>leafarea</code>) using the <code>decreasing = TRUE</code> argument.</p>
 <div class="cell">
 <div class="sourceCode" id="cb122"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">leafarea_ord</span> <span class="op">&lt;-</span> <span class="va">flowers</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span><span class="op">(</span><span class="va">flowers</span><span class="op">$</span><span class="va">leafarea</span>, decreasing <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, <span class="op">]</span>        </span>
 <span><span class="va">leafarea_ord</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2130,8 +2087,7 @@ $time
 80 notip     high     2    5.2  17.70     19.1     181.1       8</code></pre>
 </div>
 </div>
-</section><section id="adding-columns-and-rows" class="level3" data-number="3.4.4"><h3 data-number="3.4.4" class="anchored" data-anchor-id="adding-columns-and-rows">
-<span class="header-section-number">3.4.4</span> Adding columns and rows</h3>
+</section><section id="adding-columns-and-rows" class="level3"><h3 class="anchored" data-anchor-id="adding-columns-and-rows">Adding columns and rows</h3>
 <p>Sometimes it’s useful to be able to add extra rows and columns of data to our data frames. There are multiple ways to achieve this (as there always is in R!) depending on your circumstances. To simply append additional rows to an existing data frame we can use the <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> function and to append columns the <code><a href="https://rdrr.io/r/base/cbind.html">cbind()</a></code> function. Let’s create a couple of test data frames to see this in action using our old friend the <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function.</p>
 <div class="cell">
 <div class="sourceCode" id="cb132"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># rbind for rows</span></span>
@@ -2238,8 +2194,7 @@ $time
  $ Fid         : Factor w/ 6 levels "1","2","3","4",..: 1 2 3 4 5 6</code></pre>
 </div>
 </div>
-</section><section id="merging-data-frames" class="level3" data-number="3.4.5"><h3 data-number="3.4.5" class="anchored" data-anchor-id="merging-data-frames">
-<span class="header-section-number">3.4.5</span> Merging data frames</h3>
+</section><section id="merging-data-frames" class="level3"><h3 class="anchored" data-anchor-id="merging-data-frames">Merging data frames</h3>
 <p>Instead of just appending either rows or columns to a data frame we can also merge two data frames together. Let’s say we have one data frame that contains taxonomic information on some common UK rocky shore invertebrates (called <code>taxa</code>) and another data frame that contains information on where they are usually found on the rocky shore (called <code>zone</code>). We can merge these two data frames together to produce a single data frame with both taxonomic and location information. Let’s first create both of these data frames (in reality you would probably just import your different datasets).</p>
 <div class="cell">
 <div class="sourceCode" id="cb150"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">taxa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>GENUS <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Patella"</span>, <span class="st">"Littorina"</span>, <span class="st">"Halichondria"</span>, <span class="st">"Semibalanus"</span><span class="op">)</span>,</span>
@@ -2327,8 +2282,7 @@ $time
 7    vulgata      Patella       patellidae    &lt;NA&gt;</code></pre>
 </div>
 </div>
-</section><section id="reshape" class="level3" data-number="3.4.6"><h3 data-number="3.4.6" class="anchored" data-anchor-id="reshape">
-<span class="header-section-number">3.4.6</span> Reshaping data frames</h3>
+</section><section id="reshape" class="level3"><h3 class="anchored" data-anchor-id="reshape">Reshaping data frames</h3>
 <p>Reshaping data into different formats is a common task. With rectangular type data (data frames have the same number of rows in each column) there are two main data frame shapes that you will come across: the ‘long’ format (sometimes called stacked) and the ‘wide’ format. An example of a long format data frame is given below. We can see that each row is a single observation from an individual subject and each subject can have multiple rows. This results in a single column of our <code>measurement</code>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb162"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">long_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
@@ -2435,8 +2389,12 @@ $time
 4       D   M  12.9  11.9    10.5</code></pre>
 </div>
 </div>
-</section></section><section id="summarising-data-frames" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="summarising-data-frames">
-<span class="header-section-number">3.5</span> Summarising data frames</h2>
+</section></section><section id="introduction-to-the-tidyverse" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="introduction-to-the-tidyverse">
+<span class="header-section-number">3.5</span> Introduction to the <code>tidyverse</code>
+</h2>
+<p>it seems it is not super tidy in here and we need to improve that</p>
+</section><section id="summarising-data-frames" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="summarising-data-frames">
+<span class="header-section-number">3.6</span> Summarising data frames</h2>
 <p>Now that we’re able to manipulate and extract data from our data frames our next task is to start exploring and getting to know our data. In this section we’ll start producing tables of useful summary statistics of the variables in our data frame and in the next two Chapters we’ll cover visualising our data with base R graphics and using the <code>ggplot2</code> package.</p>
 <p>A really useful starting point is to produce some simple summary statistics of all of the variables in our <code>flowers</code> data frame using the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function.</p>
 <div class="cell">
@@ -2458,7 +2416,7 @@ $time
  Max.   :49.20   Max.   :189.60   Max.   :17.000  </code></pre>
 </div>
 </div>
-<p>For numeric variables (i.e.&nbsp;<code>height</code>, <code>weight</code> etc) the mean, minimum, maximum, median, first (lower) quartile and third (upper) quartile are presented. For factor variables (i.e.&nbsp;<code>treat</code> and <code>nitrogen</code>) the number of observations in each of the factor levels is given. If a variable contains missing data then the number of <code>NA</code> values is also reported.</p>
+<p>For numeric variables (i.e. <code>height</code>, <code>weight</code> etc) the mean, minimum, maximum, median, first (lower) quartile and third (upper) quartile are presented. For factor variables (i.e. <code>treat</code> and <code>nitrogen</code>) the number of observations in each of the factor levels is given. If a variable contains missing data then the number of <code>NA</code> values is also reported.</p>
 <p>If we wanted to summarise a smaller subset of variables in our data frame we can use our indexing skills in combination with the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function. For example, to summarise only the <code>height</code>, <code>weight</code>, <code>leafarea</code> and <code>shootarea</code> variables we can include the appropriate column indexes when using the <code>[ ]</code>. Notice we include all rows by not specifying a row index.</p>
 <div class="cell">
 <div class="sourceCode" id="cb176"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">flowers</span><span class="op">[</span>, <span class="fl">4</span><span class="op">:</span><span class="fl">7</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2674,11 +2632,10 @@ high   5.70625 9.6000</code></pre>
 6     high   tip 10.0375</code></pre>
 </div>
 </div>
-</section><section id="exporting-data" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="exporting-data">
-<span class="header-section-number">3.6</span> Exporting data</h2>
+</section><section id="exporting-data" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="exporting-data">
+<span class="header-section-number">3.7</span> Exporting data</h2>
 <p>By now we hope you’re getting a feel for how powerful and useful R is for manipulating and summarising data (and we’ve only really scratched the surface). One of the great benefits of doing all your data wrangling in R is that you have a permanent record of all the things you’ve done to your data. Gone are the days of making undocumented changes in Excel or Calc! By treating your data as ‘read only’ and documenting all of your decisions in R you will have made great strides towards making your analysis more reproducible and transparent to others. It’s important to realise, however, that any changes you’ve made to your data frame in R will not change the original data file you imported into R (and that’s a good thing). Happily it’s straightforward to export data frames to external files in a wide variety of formats.</p>
-<section id="export-functions" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="export-functions">
-<span class="header-section-number">3.6.1</span> Export functions</h3>
+<section id="export-functions" class="level3"><h3 class="anchored" data-anchor-id="export-functions">Export functions</h3>
 <p>The main workhorse function for exporting data frames is the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. As with the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function, the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function is very flexible with lots of arguments to help customise it’s behaviour. As an example, let’s take our original <code>flowers</code> data frame, do some useful stuff to it and then export these changes to an external file.</p>
 <p>Let’s order the rows in the data frame in ascending order of <code>height</code> within each level <code>nitrogen</code>. We will also apply a square root transformation on the number of flowers variable (<code>flowers</code>) and a log<sub>10</sub> transformation on the <code>height</code> variable and save these as additional columns in our data frame (hopefully this will be somewhat familiar to you!).</p>
 <div class="cell">
@@ -2725,8 +2682,7 @@ high   5.70625 9.6000</code></pre>
 <div class="cell">
 <div class="sourceCode" id="cb218"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span><span class="op">(</span><span class="va">flowers_df2</span>, file <span class="op">=</span> <span class="st">'data/flowers_04_12.csv'</span>, row.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="other-export-functions" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="other-export-functions">
-<span class="header-section-number">3.6.2</span> Other export functions</h3>
+</section><section id="other-export-functions" class="level3"><h3 class="anchored" data-anchor-id="other-export-functions">Other export functions</h3>
 <p>As with importing data files into R, there are also many alternative functions for exporting data to external files beyond the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. If you followed the <a href="#import_other">‘Other import functions’</a> section of this Chapter you will already have the required packages installed.</p>
 <p>The <code>fwrite()</code> function from the <code>read.table</code> package is very efficient at exporting large data objects and is much faster than the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. It’s also quite simple to use as it has most of the same arguments as <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code>. To export a tab delimited text file we just need to specify the data frame name, the output file name and file path and the separator between columns.</p>
 <div class="cell">
