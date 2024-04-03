@@ -3,7 +3,7 @@
 ## Paquets R {.unnumbered}
 
 
-Ce livre a utilisé les paquets R (excluant leurs dépendances) listé dans le tableau @tbl-r-lib. 
+Ce livre a utilisé les paquets R (excluant leurs dépendances) listé dans le tableau @tbl-r-lib.
 Comme recommandé par l'équipe de de développement de 'tidyverse', seul le paquets 'tidyverse' est cité et non pas chacun de ses composants.
 
 ```{r}
@@ -25,7 +25,7 @@ knitr::kable(
 )
 ```
 
-### Bibliographie  {.unnumbered}
+## Bibliographie  {.unnumbered}
 
 ::: {#refs}
 :::

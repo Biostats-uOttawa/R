@@ -19,7 +19,7 @@ Il ne s'agit pas de tout couvrir, mais simplement de t'aider à gravir la courbe
 Le livre est fourni comme un livre multilingue qui brise la barrière de la langue et permet potentiellement de faciliter l'apprentissage de R et de son environnement principalement anglophone.
 Nous sommes toujours à la recherche de bénévoles pour nous aider à développer le livre et à ajouter d'autres langues à la liste qui ne cesse de s'allonger . N'hésite pas à [Contacte-nous](#qui) si tu veux nous aider
 
-Sur la page web, tu peux changer de langue via le {{< bi flag >}} dans la barre de navigation. Après avoir changer de langue, tu peux télécharger le document en pdf ou epub pour cet langue {{< bi  download >}}.
+Sur la page web, tu peux changer de langue via le {{< fa flag >}} dans la barre de navigation. Après avoir changer de langue, tu peux télécharger le document en pdf ou epub pour cet langue {{< fa download >}}.
 
 Liste des langues :
 
@@ -31,8 +31,8 @@ Liste des langues :
 
 Pour une meilleure expérience, nous te recommandons de lire la version web de ce livre que tu peux trouver à [https://biostats-uottawa.github.io/R](https://biostats-uottawa.github.io/R).
 
-La version web inclut une barre de navigation incluant des options pour faciliter la lecture {{< bi  body-text >}}, de recherche {{< bi  search >}}, pour changer la couleur {{< bi  toggle-off >}} et pour suggérer des modifications ou reporter des problèmes {{< bi  github >}}.
-Tu peux aussi télécharger le document {{< bi  download >}} au format pdf ou epub.
+La version web inclut une barre de navigation incluant des options pour faciliter la lecture {{< fa align-left >}}, de recherche {{< fa  search >}}, pour changer la couleur {{< fa toggle-off >}} et pour suggérer des modifications ou reporter des problèmes {{< fa brands github >}}.
+Tu peux aussi télécharger le document {{< fa download >}} au format pdf ou epub.
 
 Nous utilisons quelques conventions typographiques tout au long de ce livre.
 
@@ -48,7 +48,7 @@ Les fonctions dans le texte sont présentées avec des parenthèses à la fin en
 Les objets sont représentés à l'aide de la police de code sans les parenthèses, c'est-à-dire 
 `obj1`, `obj2` etc.
 
-Les paquets R dans le texte sont indiqués en utilisant la police de code et suivis de l'icone `r emoji::emoji("package")`, exemple `tidyverse` `r emoji::emoji("package")`.
+Les paquets R dans le texte sont indiqués en utilisant la police de code et suivis de l'icone :package:, exemple `tidyverse` :package:.
 
 Une série d'actions nécessaires pour accéder aux commandes de menu dans RStudio ou VSCode sont identifiées comme suit `File` -> `New File` -> `R Script` ce qui se traduit par "clique sur le menu Fichier, puis clique sur Nouveau fichier et sélectionne R Script".
 
@@ -86,28 +86,24 @@ notes
 
 ## Qui sommes-nous ? {#qui}
 
-::: {.columns}
+::: {layout="[25, -5, 70]"}
 
-:::: {.column width="25%"}
-![](images/author/julien.jpg){fig-align="center" width=90%}
-::::
+![](images/author/julien.jpg){fig-align="center"}
 
-
-:::: {.column width="75%"}
+:::: {}
 **Julien Martin** est professeur à l'Université d'Ottawa en Écologie évolutive. Il a découvert le merveilleux monde R avec la version 1.8.1 et l'enseigne depuis R v2.4.0.
 
 ::::: {.content-visible when-format="pdf"}
-- {{< bi bookmarks >}}:uOttawa <https://www.uottawa.ca/faculty-science/professors/julien-martin/>, site labo <https://juliengamartin.github.io>
-- {{< bi twitter-x >}}: <https://twitter.com/jgamartin>
-- {{< bi github >}}: <https://github.com/juliengamartin>
+- {{< fa bookmark >}}:uOttawa <https://www.uottawa.ca/faculty-science/professors/julien-martin/>, site labo <https://juliengamartin.github.io>
+- {{< fa brands twitter >}}: <https://twitter.com/jgamartin>
+- {{< fa brands github >}}: <https://github.com/juliengamartin>
 :::::
 
 ::::: {.content-visible when-format="html"}
-- {{< bi bookmarks >}}: [site uOttawa](https://www.uottawa.ca/faculty-science/professors/julien-martin/), [site labo](https://juliengamartin.github.io)
-- {{< bi twitter-x >}}: [jgamartin](https://twitter.com/jgamartin)
-- {{< bi github >}}: [juliengamartin](https://github.com/juliengamartin)
+- {{< fa bookmark >}}: [site uOttawa](https://www.uottawa.ca/faculty-science/professors/julien-martin/), [site labo](https://juliengamartin.github.io)
+- {{< fa brands twitter >}}: [jgamartin](https://twitter.com/jgamartin)
+- {{< fa brands github >}}: [juliengamartin](https://github.com/juliengamartin)
 :::::
-
 ::::
 :::
 
@@ -127,4 +123,4 @@ Si tu enseignes R, n'hésite pas à utiliser tout ou partie du contenu de ce liv
 La seule chose que je te demande, c'est de citer la source originale et les auteurs.
 Si tu trouves ce livre utile ou si tu as des commentaires ou des suggestions, j'aimerais beaucoup que tu me les fasses parvenir ([contact info](#qui)).
 
-
+\clearpage\pagenumbering{arabic}\setcounter{page}{1}

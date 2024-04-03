@@ -3,7 +3,8 @@
 ## R packages {.unnumbered}
 
 
-This book was produced all packages (excluding dependencies) listed in table @tbl-r-lib. As recommended by the 'tidyverse' team, all citations to tidyverse packages are collapsed into a single citation.
+This book was produced all packages (excluding dependencies) listed in table @tbl-r-lib.
+As recommended by the 'tidyverse' team, all citations to tidyverse packages are collapsed into a single citation.
 
 ```{r}
 #| label: tbl-r-lib
@@ -24,7 +25,7 @@ knitr::kable(
 )
 ```
 
-### Bibliography  {.unnumbered}
+## Bibliography  {.unnumbered}
 
 ::: {#refs}
 :::

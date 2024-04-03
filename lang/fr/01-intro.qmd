@@ -9,7 +9,7 @@ Alors, pourquoi R est-il devenu si populaire et pourquoi devrais-tu apprendre à
 - R est disponible pour les systèmes d'exploitation Windows, Mac et Linux.
 - R dispose d'un ensemble complet et cohérent d'outils d'analyse statistique.
 - R dispose d'une facilité graphique étendue et très flexible capable de produire des figures de qualité pour la publication.
-- R dispose d'un ensemble croissant de "paquets" disponibles gratuitement `r emoji::emoji("package")` qui permettent d'étendre les capacités de R.
+- R dispose d'un ensemble croissant de "paquets" disponibles gratuitement :package: qui permettent d'étendre les capacités de R.
 - R dispose d'un vaste réseau d'assistance avec de nombreux documents en ligne et disponibles gratuitement.
 
 Toutes les raisons ci-dessus sont d'excellentes raisons d'utiliser R.
@@ -97,7 +97,7 @@ Pour faire de VSCode une véritable centrale pour travailler avec R, nous te rec
 
 - [radian](https://github.com/randy3k/radian) radian : Une console R moderne qui corrige de nombreuses limitations du terminal R officiel et prend en charge de nombreuses fonctionnalités telles que la coloration syntaxique et l'autocomplétion.
 - [VSCode-R-Debugger](https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger) VSCode-R-Debugger : Une extension de VS Code pour prendre en charge les capacités de débogage de R.
-- [httpgd](https://cran.r-project.org/web/packages/httpgd/index.html): Un paquetage R `r emoji::emoji("package")` pour fournir un dispositif graphique qui sert de façon asynchrone des graphiques SVG via HTTP et WebSockets.
+- [httpgd](https://cran.r-project.org/web/packages/httpgd/index.html): Un paquetage R :package: pour fournir un dispositif graphique qui sert de façon asynchrone des graphiques SVG via HTTP et WebSockets.
 
 #### Alternatives à RStudio et VSCode
 
@@ -266,7 +266,8 @@ knitr::include_graphics(path = "images/ch-01/vs_editor_tabs.png")
 
 Contient :
 
-- le terminal permettant d'avoir une session R ou tout autre type de terminaux nécessaires (bash/tmux/). Il peut être divisé et exécuter plusieurs sessions en même temps.
+- le terminal permettant d'avoir une session R ou tout autre type de terminaux nécessaires (bash/tmux/).
+Il peut être divisé et exécuter plusieurs sessions en même temps.
 - un panneau de problèmes mettant en évidence les problèmes de grammaire et de codage
 
 ```{r, echo=FALSE, out.width="75%", fig.align="center"}
@@ -310,21 +311,21 @@ La fonction `ask = FALSE` évite d'avoir à confirmer chaque téléchargement de
 
 ### Paquets Bioconductor
 
-Pour installer les paquets de Bioconductor, le processus est un peu différent.      [un peu différent]     [bioc-install]     .
-Tu dois d'abord installer le `BiocManager` `r emoji::emoji("package")` paquet.
-Tu ne dois le faire qu'une seule fois, à moins que tu ne réinstalles ou mettes à jour R
+Pour installer les paquets de Bioconductor, le processus est [un peu différent][bioc-install].
+Tu dois d'abord installer le `BiocManager` :package: paquet.
+Tu ne dois le faire qu'une seule fois, à moins que tu ne réinstalles ou mettes à jour R.
 
 ```{r, echo=TRUE, eval=FALSE}
 install.packages("BiocManager", dependencies = TRUE)
 ```
 
-Une fois que le ```BiocManager``r emoji::emoji("package")``` a été installé, tu peux soit installer tous les paquets "de base" de Bioconductor à l'aide de la commande
+Une fois que le `BiocManager` :package: a été installé, tu peux soit installer tous les paquets "de base" de Bioconductor à l'aide de la commande
 
 ```{r, echo=TRUE, eval=FALSE}
 BiocManager::install()
 ```
 
-ou installer des paquets spécifiques tels que le `GenomicRanges` `r emoji::emoji("package")`  et `edgeR` `r emoji::emoji("package")` paquets
+ou installer des paquets spécifiques tels que le `GenomicRanges` :package:  et `edgeR` :package: paquets
 
 ```{r, echo=TRUE, eval=FALSE}
 BiocManager::install(c("GenomicRanges", "edgeR"))
@@ -341,9 +342,9 @@ Encore une fois, tu peux utiliser la fonction `ask = FALSE` pour éviter d'avoir
 ### Paquets GitHub
 
 Il existe de multiples options pour installer des paquets hébergés sur GitHub.
-La méthode la plus efficace est sans doute d'utiliser la fonction `install_github()` de la fonction `remotes` `r emoji::emoji("package")` (tu as installé ce paquet [précédemment](#cran_packages)).
+La méthode la plus efficace est sans doute d'utiliser la fonction `install_github()` de la fonction `remotes` :package: (tu as installé ce paquet [précédemment](#cran_packages)).
 Avant d'utiliser la fonction, tu devras connaître le nom d'utilisateur GitHub du propriétaire du dépôt ainsi que le nom du dépôt.
-Par exemple, la version de développement de `dplyr` `r emoji::emoji("package")` de Hadley Wickham est hébergée sur le compte GitHub de tidyverse et porte le nom de dépôt " dplyr " (il suffit de taper " github dplyr " sur Google).
+Par exemple, la version de développement de `dplyr` :package: de Hadley Wickham est hébergée sur le compte GitHub de tidyverse et porte le nom de dépôt " dplyr " (il suffit de taper " github dplyr " sur Google).
 Pour installer cette version depuis GitHub, utilise
 
 ```{r, echo=TRUE, eval=FALSE}
@@ -356,7 +357,7 @@ Le moyen le plus sûr (à notre connaissance) de mettre à jour un paquetage ins
 
 Une fois que tu as installé un paquet sur ton ordinateur, il n'est pas immédiatement disponible pour que tu puisses l'utiliser.
 Pour utiliser un paquet, tu dois d'abord le charger à l'aide de la commande `library()` en utilisant la fonction
-Par exemple, pour charger le paquet `remotes` `r emoji::emoji("package")`  que tu as précédemment installé
+Par exemple, pour charger le paquet `remotes` :package:  que tu as précédemment installé
 
 ```{r, echo=TRUE, eval=FALSE}
 library(remotes)
@@ -366,7 +367,7 @@ Le `library()` chargera également tous les paquets supplémentaires nécessaire
 Il est important de savoir qu'à chaque fois que tu démarres une nouvelle session R (ou que tu restaures une session précédemment sauvegardée), tu dois charger les paquets que tu vas utiliser.
 Nous avons tendance à mettre tous nos `library()` nécessaires à notre analyse en haut de nos scripts R pour les rendre facilement accessibles et faciles à compléter au fur et à mesure que notre code se développe.
 Si tu essaies d'utiliser une fonction sans avoir au préalable chargé le package R correspondant, tu recevras un message d'erreur indiquant que R n'a pas pu trouver la fonction.
-Par exemple, si tu essaies d'utiliser la fonction `install_github()` sans charger le paquetage `remotes` `r emoji::emoji("package")` tu recevras l'erreur suivante
+Par exemple, si tu essaies d'utiliser la fonction `install_github()` sans charger le paquetage `remotes` :package: tu recevras l'erreur suivante
 
 ```{r, echo=TRUE, eval=FALSE}
 install_github("tidyverse/dplyr")
@@ -382,7 +383,7 @@ Si, par exemple, tu n'utilises qu'une ou deux fonctions dans ton script et que t
 remotes::install_github("tidyverse/dplyr")
 ```
 
-C'est ainsi que nous avons pu utiliser le `install()` et `install_github()`fonctions [ci-dessus][Paquets Bioconductor] sans charger les paquets au préalable`BiocManager` `r emoji::emoji("package")`  et `remotes` `r emoji::emoji("package")` .
+C'est ainsi que nous avons pu utiliser le `install()` et `install_github()`fonctions [ci-dessus][Paquets Bioconductor] sans charger les paquets au préalable`BiocManager` :package:  et `remotes` :package: .
 La plupart du temps, nous recommandons d'utiliser le `library()` fonction.
 
 ## Répertoires de travail {#work-d}
@@ -421,7 +422,8 @@ dat <- read.csv("data/mydata.csv")
 
 Parce que le chemin d'accès au fichier `data/mydata.csv` est relatif au répertoire du projet, peu importe l'endroit où ton collaborateur enregistre le répertoire du projet sur son ordinateur, il fonctionnera toujours.
 
-Si tu n'utilises pas un projet RStudio ou un espace de travail VScode, tu devras soit définir le répertoire de travail en fournissant le chemin complet de ton répertoire, soit spécifier le chemin complet du fichier de données. Aucune de ces deux options n'est reproductible sur d'autres ordinateurs.
+Si tu n'utilises pas un projet RStudio ou un espace de travail VScode, tu devras soit définir le répertoire de travail en fournissant le chemin complet de ton répertoire, soit spécifier le chemin complet du fichier de données.
+Aucune de ces deux options n'est reproductible sur d'autres ordinateurs.
 
 ```{r rel-fp2, echo=TRUE, eval=FALSE}
 setwd("/home/julien/Documents/courses/biostats/R_way")
@@ -541,7 +543,8 @@ digraph {
 
 Dans notre répertoire de travail, nous avons les répertoires suivants :
 
-- **Racine** - C'est le répertoire de ton projet qui contient tes `.Rproj`fichier .  Nous avons tendance à garder tous les scripts R ou [Rq]md nécessaires à l'analyse/au rapport dans ce dossier racine ou dans le dossier scripts lorsqu'il y en a trop.
+- **Racine** - C'est le répertoire de ton projet qui contient tes `.Rproj`fichier .
+ Nous avons tendance à garder tous les scripts R ou [Rq]md nécessaires à l'analyse/au rapport dans ce dossier racine ou dans le dossier scripts lorsqu'il y en a trop.
 
 - **données** - Nous stockons toutes nos données dans ce répertoire.
   Le sous-répertoire appelé `data` contient des fichiers de données brutes et uniquement des fichiers de données brutes.
@@ -586,7 +589,8 @@ Il y a aussi quelques mesures simples que tu peux prendre dès le début d'un pr
 Une bonne façon d'organiser les choses est d'utiliser les espaces de travail RStudio Projects ou VSCode, appelés par la suite `project`.
 A `project` conserve tous tes scripts R, tes documents R markdown, tes fonctions R et tes données en un seul endroit.
 Ce qu'il y a de bien avec `project` est que chacun a son propre répertoire, son propre historique et ses propres documents sources, de sorte que les différentes analyses sur lesquelles tu travailles restent complètement séparées les unes des autres.
-Cela signifie que tu peux très facilement passer d'une analyse à l'autre. `projects` sans craindre qu'elles n'interfèrent l'une avec l'autre.
+Cela signifie que tu peux très facilement passer d'une analyse à l'autre.
+`projects` sans craindre qu'elles n'interfèrent l'une avec l'autre.
 
 ### RStudio
 
@@ -662,7 +666,7 @@ Bien qu'il n'y ait pas vraiment d'approche standard reconnue pour nommer les fic
 - Tout d'abord, évite d'utiliser des espaces dans les noms de fichiers en les remplaçant par des traits de soulignement ou même des traits d'union.
   Pourquoi cela est-il important ? L'une des raisons est que certains logiciels de ligne de commande (en particulier de nombreux outils bioinformatiques) ne reconnaissent pas un nom de fichier comportant un espace et que tu devras te livrer à toutes sortes de manigances en utilisant des caractères d'échappement pour t'assurer que les espaces sont traités correctement.
   Même si tu ne penses pas utiliser un jour un logiciel de ligne de commande, il se peut que tu le fasses indirectement.
-  Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande `rmarkdown` `r emoji::emoji("package")`tu utiliseras en fait un moteur LaTeX en ligne de commande sous le capot (appelé [Pandoc][pandoc]).
+  Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande `rmarkdown` :package:tu utiliseras en fait un moteur LaTeX en ligne de commande sous le capot (appelé [Pandoc][pandoc]).
   Une autre bonne raison de ne pas utiliser d'espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l'aide d '          [expressions régulières][regex] dans R (ou tout autre langage).
 
 - Pour les raisons évoquées plus haut, évite également d'utiliser des caractères spéciaux (c'est-à-dire
@@ -688,9 +692,10 @@ Un petit mot ou deux sur l'écriture du code R et la création de scripts R.
 Les scripts R sont ce qui rend R si utile.
 Non seulement tu as un enregistrement complet de ton analyse, de la manipulation des données à la visualisation et à l'analyse statistique, mais tu peux aussi partager ce code (et ces données) avec tes amis, tes collègues et, surtout, lorsque tu soumets et publies tes recherches dans une revue.
 Dans cette optique, assure-toi d'inclure dans ton script R toutes les informations nécessaires pour rendre ton travail reproductible (noms des auteurs, dates, plan d'échantillonnage, etc).
-Ces informations peuvent être incluses sous la forme d'une série de commentaires `#` ou, mieux encore, en mélangeant le code exécutable et la narration dans un script R. [R markdown](#rmarkdown_r) R.
+Ces informations peuvent être incluses sous la forme d'une série de commentaires `#` ou, mieux encore, en mélangeant le code exécutable et la narration dans un script R.
+[R markdown](#rmarkdown_r) R.
 C'est aussi une bonne pratique d'inclure la sortie de la fonction `sessionInfo()` à la fin de tout script qui imprime la version de R, les détails du système d'exploitation et les paquets chargés.
-Une très bonne alternative consiste à utiliser la fonction `session_info()` de la fonction `xfun` `r emoji::emoji("package")` pour obtenir un résumé plus concis de l'environnement de notre session.
+Une très bonne alternative consiste à utiliser la fonction `session_info()` de la fonction `xfun` :package: pour obtenir un résumé plus concis de l'environnement de notre session.
 
 Voici un exemple d'inclusion de méta-informations au début d'un script R
 
@@ -705,7 +710,8 @@ Voici un exemple d'inclusion de méta-informations au début d'un script R
 
 # data file: lasagna_dreams.csv
 
-# Author: A. Stomach
+# Author: A.
+Stomach
 # Contact details: a.stomach@food.uni.com
 
 # Date script created: Fri Mar 29 17:06:44 2010 -----------
@@ -742,14 +748,15 @@ Tu peux créer un fichier README pour ton projet dans RStudio en cliquant sur le
 La façon dont tu écris ton code dépend plus ou moins de toi, même si ton objectif doit être de le rendre aussi facile à lire que possible (pour toi et pour les autres).
 Bien qu'il n'y ait pas de règles (ni de police du code), nous t'encourageons à prendre l'habitude d'écrire un code R lisible en adoptant un style particulier.
 Nous te suggérons de suivre le [guide de style R]de Google     [style-google] dans la mesure du possible.
-Ce guide de style t'aidera à décider où utiliser les espaces, comment indenter le code et comment utiliser les carrés. `[ ]` et du curly `{ }` entre autres choses.
+Ce guide de style t'aidera à décider où utiliser les espaces, comment indenter le code et comment utiliser les carrés.
+`[ ]` et du curly `{ }` entre autres choses.
 
 Pour t'aider à formater ton code :
 
 - VSCode il y a un formateur intégré dans l'extension R pour VSCode.
   Il te suffit d'utiliser le raccourci clavier pour reformater joliment et automatiquement le code.
-- Pour RStudio, tu peux installer l'extension `styler` `r emoji::emoji("package")` qui comprend un complément RStudio te permettant de remanier automatiquement le code sélectionné (ou des fichiers et des projets entiers) d'un simple clic de souris.
-  Tu peux trouver plus d'informations sur le `styler` `r emoji::emoji("package")`y compris comment l'installer [ici][styliste].
+- Pour RStudio, tu peux installer l'extension `styler` :package: qui comprend un complément RStudio te permettant de remanier automatiquement le code sélectionné (ou des fichiers et des projets entiers) d'un simple clic de souris.
+  Tu peux trouver plus d'informations sur le `styler` :package:y compris comment l'installer [ici][styliste].
   Une fois installé, tu peux mettre en évidence le code que tu veux remanier, cliquer sur le bouton "Addins" en haut de RStudio et sélectionner l'option "Style Selection".
   Voici un exemple de code R mal formaté
 
@@ -757,7 +764,7 @@ Pour t'aider à formater ton code :
 knitr::include_graphics(path = "images/ch-01/before_rcode.png")
 ```
 
-Mets maintenant le code en surbrillance et utilise l'option `styler` `r emoji::emoji("package")` pour reformater
+Mets maintenant le code en surbrillance et utilise l'option `styler` :package: pour reformater
 
 ```{r styler, echo=FALSE, out.width="60%", fig.align="center"}
 knitr::include_graphics(path = "images/ch-01/styler.png")
@@ -773,7 +780,8 @@ knitr::include_graphics(path = "images/ch-01/after_rcode.png")
 
 Ne sois pas cette personne qui perd des données et des analyses durement gagnées (et souvent coûteuses).
 Ne sois pas cette personne qui pense que ça ne m'arrivera jamais - ça arrivera ! Pense toujours au pire scénario absolu, à quelque chose qui te donne des sueurs froides en te réveillant la nuit, et fais tout ton possible pour que cela n'arrive jamais.
-Pour être clair, si tu comptes copier tes précieux fichiers sur un disque dur externe ou une clé USB, c'est... **PAS** une stratégie de sauvegarde efficace.
+Pour être clair, si tu comptes copier tes précieux fichiers sur un disque dur externe ou une clé USB, c'est...
+**PAS** une stratégie de sauvegarde efficace.
 Ces choses tournent mal tout le temps lorsque tu les glisses dans ton sac à dos ou ton "sac pour la vie" et que tu les trimballes entre ton bureau et ta maison.
 Même si tu les laisses branchés sur ton ordinateur, que se passe-t-il lorsque le bâtiment brûle (nous avons bien dit le pire des cas !) ?
 
@@ -784,9 +792,11 @@ La plupart (toutes ?) des universités disposent d'une forme de stockage en rés
 D'autres options incluent des services basés sur le cloud tels que Google Drive et Dropbox (pour n'en citer que quelques-uns), mais assure-toi que tu ne stockes pas de données sensibles sur ces services et que tu es à l'aise avec les politiques de confidentialité qui font souvent l'effet d'une douche froide.
 
 Alors que ces services sont plutôt bons pour stocker des fichiers, ils ne sont pas vraiment utiles pour les sauvegardes incrémentielles.
-Pour trouver les versions précédentes des fichiers, il faut souvent passer un temps fou à parcourir plusieurs fichiers nommés *'final.doc'*, *'final_v2.doc'* et *'final_usethisone.doc'* etc. jusqu'à ce que tu trouves celui que tu cherches.
+Pour trouver les versions précédentes des fichiers, il faut souvent passer un temps fou à parcourir plusieurs fichiers nommés *'final.doc'*, *'final_v2.doc'* et *'final_usethisone.doc'* etc.
+jusqu'à ce que tu trouves celui que tu cherches.
 Le meilleur moyen que nous connaissons pour à la fois sauvegarder les fichiers et gérer les différentes versions des fichiers est d'utiliser Git et GitHub.
-Pour en savoir plus sur la façon dont tu peux utiliser RStudio, Git et GitHub ensemble, consulte la page Git et GitHub. [Chapitre](#github_r).
+Pour en savoir plus sur la façon dont tu peux utiliser RStudio, Git et GitHub ensemble, consulte la page Git et GitHub.
+[Chapitre](#github_r).
 
 ## Citation de R
 
@@ -804,7 +814,8 @@ Si tu veux citer un logiciel particulier que tu as utilisé pour l'analyse de te
 citation(package = "here")
 ```
 
-Pour citer plusieurs paquets, le paquet `grateful` `r emoji::emoji("package")` est extrêmement utile. Voir le [section de référence](98-references.qmd) pour un exemple de résultat produit avec grateful.
+Pour citer plusieurs paquets, le paquet `grateful` :package: est extrêmement utile.
+Voir @tbl-r-lib pour un exemple de résultat produit avec grateful.
 
 ```{r links, child="_links.md"}
 ```

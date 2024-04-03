@@ -9,7 +9,7 @@ So, why has R become so popular and why should you learn how to use it? Some rea
 - R is available for Windows, Mac and Linux operating systems.
 - R has an extensive and coherent set of tools for statistical analysis.
 - R has an extensive and highly flexible graphical facility capable of producing publication quality figures.
-- R has an expanding set of freely available ‘packages’ `r emoji::emoji("package")` to extend R's capabilities.
+- R has an expanding set of freely available ‘packages’ :package: to extend R's capabilities.
 - R has an extensive support network with numerous online and freely available documents.
 
 All of the reasons above are great reasons to use R.
@@ -99,7 +99,7 @@ To make VSCode a true powerhouse for working with R we strongly recommend you to
 
 - [radian](https://github.com/randy3k/radian): A modern R console that corrects many limitations of the official R terminal and supports many features such as syntax highlighting and auto-completion.
 - [VSCode-R-Debugger](https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger): A VS Code extension to support R debugging capabilities.
-- [httpgd](https://cran.r-project.org/web/packages/httpgd/index.html): An R package `r emoji::emoji("package")` to provide a graphics device that asynchronously serves SVG graphics via HTTP and WebSockets.
+- [httpgd](https://cran.r-project.org/web/packages/httpgd/index.html): An R package :package: to provide a graphics device that asynchronously serves SVG graphics via HTTP and WebSockets.
 
 #### Alternatives to RStudio and VSCode
 
@@ -271,7 +271,8 @@ knitr::include_graphics(path = "images/ch-01/vs_editor_tabs.png")
 
 Contains:
 
-- the terminal allowing to have an R session or any other type of terminals needed (bash/tmux/). It can be split and run multiple sessions at the same time
+- the terminal allowing to have an R session or any other type of terminals needed (bash/tmux/).
+It can be split and run multiple sessions at the same time
 - a problems pane highlighting both grammar and coding problems
 
 ```{r, echo=FALSE, out.width="75%", fig.align="center"}
@@ -316,20 +317,20 @@ The `ask = FALSE` argument avoids having to confirm every package download which
 ### Bioconductor packages
 
 To install packages from Bioconductor the process is a [little different][bioc-install].
-You first need to install the `BiocManager` `r emoji::emoji("package")` package.
+You first need to install the `BiocManager` :package: package.
 You only need to do this once unless you subsequently reinstall or upgrade R
 
 ```{r, echo=TRUE, eval=FALSE}
 install.packages("BiocManager", dependencies = TRUE)
 ```
 
-Once the `BiocManager``r emoji::emoji("package")` package has been installed you can either install all of the 'core' Bioconductor packages with
+Once the `BiocManager`:package: package has been installed you can either install all of the 'core' Bioconductor packages with
 
 ```{r, echo=TRUE, eval=FALSE}
 BiocManager::install()
 ```
 
-or install specific packages such as the `GenomicRanges` `r emoji::emoji("package")`  and `edgeR` `r emoji::emoji("package")` packages
+or install specific packages such as the `GenomicRanges` :package:  and `edgeR` :package: packages
 
 ```{r, echo=TRUE, eval=FALSE}
 BiocManager::install(c("GenomicRanges", "edgeR"))
@@ -346,9 +347,9 @@ Again, you can use the `ask = FALSE` argument to avoid having to confirm every p
 ### GitHub packages
 
 There are multiple options for installing packages hosted on GitHub.
-Perhaps the most efficient method is to use the `install_github()` function from the `remotes` `r emoji::emoji("package")` package (you installed this package [previously](#cran_packages)).
+Perhaps the most efficient method is to use the `install_github()` function from the `remotes` :package: package (you installed this package [previously](#cran_packages)).
 Before you use the function you will need to know the GitHub username of the repository owner and also the name of the repository.
-For example, the development version of `dplyr` `r emoji::emoji("package")` from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name 'dplyr' (just Google 'github dplyr').
+For example, the development version of `dplyr` :package: from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name 'dplyr' (just Google 'github dplyr').
 To install this version from GitHub use
 
 ```{r, echo=TRUE, eval=FALSE}
@@ -362,7 +363,7 @@ The safest way (that we know of) to update a package installed from GitHub is to
 
 Once you have installed a package onto your computer it is not immediately available for you to use.
 To use a package you first need to load the package by using the `library()` function.
-For example, to load the `remotes` `r emoji::emoji("package")`  package you previously installed
+For example, to load the `remotes` :package:  package you previously installed
 
 ```{r, echo=TRUE, eval=FALSE}
 library(remotes)
@@ -372,7 +373,7 @@ The `library()` function will also load any additional packages required and may
 It is important to realize that every time you start a new R session (or restore a previously saved session) you need to load the packages you will be using.
 We tend to put all our `library()` statements required for our analysis near the top of our R scripts to make them easily accessible and easy to add to as our code develops.
 If you try to use a function without first loading the relevant R package you will receive an error message that R could not find the function.
-For example, if you try to use the `install_github()` function without loading the `remotes` `r emoji::emoji("package")` package first you will receive the following error
+For example, if you try to use the `install_github()` function without loading the `remotes` :package: package first you will receive the following error
 
 ```{r, echo=TRUE, eval=FALSE}
 install_github("tidyverse/dplyr")
@@ -388,7 +389,7 @@ If, for example, you will only be using one or two functions in your script and 
 remotes::install_github("tidyverse/dplyr")
 ```
 
-This is how we were able to use the `install()` and `install_github()` functions [above][Bioconductor packages] without first loading the packages `BiocManager` `r emoji::emoji("package")`  and `remotes` `r emoji::emoji("package")` .
+This is how we were able to use the `install()` and `install_github()` functions [above][Bioconductor packages] without first loading the packages `BiocManager` :package:  and `remotes` :package: .
 Most of the time we recommend using the `library()` function.
 
 ## Working directories {#work-d}
@@ -429,7 +430,8 @@ dat <- read.csv("data/mydata.csv")
 
 Because the file path `data/mydata.csv` is relative to the project directory it doesn't matter where you collaborator saves the project directory on their computer it will still work.
 
-If you weren't using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file. Neither option would be reproducible on other computers.
+If you weren't using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file.
+Neither option would be reproducible on other computers.
 
 ```{r rel-fp2, echo=TRUE, eval=FALSE}
 setwd("/home/julien/Documents/courses/biostats/R_way")
@@ -549,7 +551,8 @@ digraph {
 
 In our working directory we have the following directories:
 
-  - **Root** - This is your project directory containing your `.Rproj` file. We tend to keep all the R scripts or \[Rq\]md document necessary for the analysis / report in this root folder or in the scripts folder when there are too many.
+  - **Root** - This is your project directory containing your `.Rproj` file.
+We tend to keep all the R scripts or \[Rq\]md document necessary for the analysis / report in this root folder or in the scripts folder when there are too many.
 
  
   - **data** - We store all our data in this directory.
@@ -678,7 +681,7 @@ Although there's not really a recognized standard approach to naming files (actu
   - First, avoid using spaces in file names by replacing them with underscores or even hyphens.
 Why does this matter? One reason is that some command line software (especially many bioinformatic tools) won't recognise a file name with a space and you'll have to go through all sorts of shenanigans using escape characters to make sure spaces are handled correctly.
 Even if you don't think you will ever use command line software you may be doing so indirectly.
-Take R markdown for example, if you want to render an R markdown document to pdf using the `rmarkdown` `r emoji::emoji("package")` package you will actually be using a command line LaTeX engine under the hood (called [Pandoc][pandoc]).
+Take R markdown for example, if you want to render an R markdown document to pdf using the `rmarkdown` :package: package you will actually be using a command line LaTeX engine under the hood (called [Pandoc][pandoc]).
 Another good reason not to use spaces in file names is that it makes searching for file names (or parts of file names) using [regular expressions][regex] in R (or any other language) much more difficult.
  
   - For the reasons given above, also avoid using special characters (i.e.
@@ -706,7 +709,7 @@ Not only do you have a complete record of your analysis, from data manipulation,
 With this in mind, make sure you include in your R script all the information required to make your work reproducible (author names, dates, sampling design etc).
 This information could be included as a series of comments `#` or, even better, by mixing executable code with narrative into an [R markdown](#rmarkdown_r) document.
 It's also good practice to include the output of the `sessionInfo()` function at the end of any script which prints the R version, details of the operating system and also loaded packages.
-A really good alternative is to use the `session_info()` function from the `xfun` `r emoji::emoji("package")` package for a more concise summary of our session environment.
+A really good alternative is to use the `session_info()` function from the `xfun` :package: package for a more concise summary of our session environment.
 
 Here's an example of including meta-information at the start of an R script
 
@@ -765,8 +768,8 @@ To help you with code formatting:
 
 - VSCode there is an embedded formatter in the R extension for VSCode.
 You can just use the keyboard shortcut to reformat the code nicely and automatically.
-- RStudio you can install the `styler` `r emoji::emoji("package")` package which includes an RStudio add-in to allow you to automatically restyle selected code (or entire files and projects) with the click of your mouse.
-You can find more information about the `styler` `r emoji::emoji("package")` package including how to install [here][styler].
+- RStudio you can install the `styler` :package: package which includes an RStudio add-in to allow you to automatically restyle selected code (or entire files and projects) with the click of your mouse.
+You can find more information about the `styler` :package: package including how to install [here][styler].
 Once installed, you can highlight the code you want to restyle, click on the 'Addins' button at the top of RStudio and select the 'Style Selection' option.
 Here is an example of poorly formatted R code
 
@@ -774,7 +777,7 @@ Here is an example of poorly formatted R code
 knitr::include_graphics(path = "images/ch-01/before_rcode.png")
 ```
 
-Now highlight the code and use the `styler` `r emoji::emoji("package")` package to reformat
+Now highlight the code and use the `styler` :package: package to reformat
 
 ```{r styler, echo=FALSE, out.width="60%", fig.align="center"}
 knitr::include_graphics(path = "images/ch-01/styler.png")
@@ -823,6 +826,7 @@ If you want to cite a particular package you've used for your data analysis.
 citation(package = "here")
 ```
 
-To cite multiple packages, the package `grateful` `r emoji::emoji("package")` is extermely useful. See the [reference section](98-references.qmd) for an example output produced with grateful.
+To cite multiple packages, the package `grateful` :package: is extermely useful.
+See @tbl-r-lib for an example output produced with grateful.
 ```{r links, child="_links.md"}
 ```
