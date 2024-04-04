@@ -19,7 +19,7 @@ book:
   date-format: iso 
   reader-mode: true
   search: true
-  cover-image: images/cover_introR.jpg
+
 #  favicon: cover.jpg
   site-url: https://biostats-uottawa.github.io/R_way/
   repo-url: https://github.com/biostats-uottawa/R_way/
@@ -72,14 +72,10 @@ format:
       - latex/before-body.tex
 #        - title.tex
 #      - toc.tex
-#    include-in-header: latex/preamble.tex
-#    include-before-body: latex/before_body.tex
-#    include-after-body: latex/after_body.tex
 
 
-#
   epub:
     dev: svglite
     stylesheet: css/epub.css
     toc: true
-    epub-cover-image: images/cover_introR.jpg
+#    epub-cover-image: images/cover_introR.jpg

@@ -6,3 +6,4 @@ quarto render
 
 # done in quarto.yml already 
 quarto run _remove-files.r
+quarto run _title-page.r

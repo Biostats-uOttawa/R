@@ -3,11 +3,17 @@ project:
 
 lang: en-CA
 
+cit-title: |
+  Do what you think is interesting,  
+  do something that you think is fun and worthwhile,  
+  because otherwise you won’t do it well anyway.
+cit-author: Brian W. Kernighan
+
 book:
   title: "On the R-way to hell"
   subtitle: "An introduction to the marvelous world of R"
   description: "Early version needed to be severely updated/modified"
-  author: <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
+  author: Julien Martin
 
   page-footer:
     left: |
@@ -40,7 +46,8 @@ book:
           text: Français
 #        - href: ../es/
 #          text: Español
-          
+
+  cover-image: images/cover/cover_en.png
   chapters:
     - index.qmd
     - 01-intro.qmd

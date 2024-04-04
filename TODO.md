@@ -2,6 +2,9 @@
 
 - [ ] switch to qmd
 - [ ] read and clean
+adding title page image
+- function for html links
+- functions for cleaning wrong bi icons
 
 ## 01-intro
 
@@ -16,9 +19,6 @@
 ## 04-graphics
 
 - [ ] clean and add ggplot descriptions
-
-- whoarewe section
-- link for radina httpgd and r debugger in intro
 
 html produce bi-bi-file-pdf instead of bi-file-pdf icons
 same for bi bi-bi-journal

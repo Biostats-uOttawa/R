@@ -123,4 +123,6 @@ Si tu enseignes R, n'hésite pas à utiliser tout ou partie du contenu de ce liv
 La seule chose que je te demande, c'est de citer la source originale et les auteurs.
 Si tu trouves ce livre utile ou si tu as des commentaires ou des suggestions, j'aimerais beaucoup que tu me les fasses parvenir ([contact info](#qui)).
 
+::: {.content-visible when-format="pdf"}
 \clearpage\pagenumbering{arabic}\setcounter{page}{1}
+:::

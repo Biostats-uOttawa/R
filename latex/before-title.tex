@@ -34,7 +34,9 @@
   RawFeature={fallback=emojifallback}
 ]
 
-
+% for title page image
+\usepackage{eso-pic}
+  \usepackage{graphicx}
 %% for toc 
 $if(toc)$
 $if(toc-title)$
@@ -45,4 +47,4 @@ $if(colorlinks)$
 $endif$
 \setcounter{tocdepth}{$toc-depth$}
 $endif$
-\pagenumbering{roman}
+

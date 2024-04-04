@@ -4,11 +4,18 @@ project:
 lang: fr-fr
 language:
   tools-download: "Télécharger"
+
+cit-title: |
+  Faites ce que vous pensez être intéressant,  
+  faites quelque chose que vous pensez être utile et amusant,  
+  parce que sinon, vous ne le ferez pas bien de toute façon.
+cit-author: Brian W. Kernighan
+
 book:
   title: "Sur le chemin de l'enf-R"
   subtitle: "Une introduction au monde merveilleux de R"
   description: "En cours de traduction"
-  author: <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
+  author: Julien Martin
 
   page-footer:
     left: |
@@ -41,7 +48,9 @@ book:
           text: English
 #        - href: ../es/
 #          text: Español
-          
+
+  cover-image: images/cover/cover_fr.png
+  
   chapters:
     - index.qmd
     - 01-intro.qmd
