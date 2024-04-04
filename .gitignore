@@ -2,21 +2,14 @@
 .Rhistory
 .RData
 .Ruserdata
-Rbook.log
-Rbook.tex
 
-archive
-.DS_Store
 _extension/
-*.log
-_bookdown_files/
-extra/
 .vscode/
 *_cache/
 *_files/
 *_freeze/
 
-!docs/*_files/
-
+!en/*_files/
+!fr/*_files/
 /.quarto/
 /_book/
