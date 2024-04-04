@@ -11,5 +11,6 @@ _extension/
 
 !en/*_files/
 !fr/*_files/
+
 /.quarto/
 /_book/
