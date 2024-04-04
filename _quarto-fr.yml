@@ -46,7 +46,7 @@ book:
         menu:
         - href: ../en
           text: English
-#        - href: ../es/
+#        - href: ../es
 #          text: Español
 
   cover-image: images/cover/cover_fr.png
