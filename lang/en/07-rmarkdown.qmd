@@ -111,8 +111,8 @@ If you need to modify or extend your current analysis you just need to update yo
 
 To use Quarto you will first need to install the `Quarto` software and the `quarto` R package (with its dependencies).
 You can find instructions on how to do this for both Windows and Mac OSX operating systems [here](#install-rm).
-If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of LaTeX on your computer.
-If you've not installed LaTeX before, we recommend that you install [TinyTeX][tinytex].
+If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of {{< latex >}} on your computer.
+If you've not installed {{< latex >}} before, we recommend that you install [TinyTeX][tinytex].
 Again, instructions on how to do this can be found [here](#install-rm).
 
 ## Create a Quarto document, `.qmd` {#new_rm}
@@ -940,7 +940,7 @@ When rendering my Quarto document to pdf my tables and/or figures are split over
 
 **Solution:**
 
-Add a page break using the LateX `\pagebreak` notation before your offending table or figure
+Add a page break using the {{< latex >}} `\pagebreak` notation before your offending table or figure
 
 \  
 

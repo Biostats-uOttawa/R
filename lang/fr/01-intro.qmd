@@ -452,25 +452,10 @@ dat <- read.csv(here("data", "mydata.csv"))
 En plus d'utiliser RStudio Projects, c'est aussi une très bonne pratique de structurer ton répertoire de travail d'une manière cohérente et logique pour t'aider et aider tes collaborateurs.
 Nous utilisons fréquemment la structure de répertoire suivante dans nos projets basés sur R.
 
-<!--
-obtenu à partir de tree -L 2
-``bash
-racine
-├── données
-│ ├── données brutes
-│ ├─── données traitées
-│ └─── métadonnées
-├─── fonctions
-├─── scripts
-└─── sortie
-    ├── html
-    ├── pdfs
-    └─── figures
-```
--->
+
 
 ```{dot}
-#| eval: false
+#| eval: true
 digraph {
   rankdir=LR
   ranksep=0.5
@@ -479,16 +464,16 @@ digraph {
     style = filled
     shape=oval
 	]
-  root [fillcolor="red"]
-  data [fillcolor="lightblue"]
-  functions [fillcolor="lightgreen"]
-  outputs [fillcolor="orange"]
-  scripts [fillcolor="white"]
+  root [label="racine" fillcolor="red"]
+  data [label="Données" fillcolor="lightblue"]
+  functions [label="Fonctions" fillcolor="lightgreen"]
+  outputs [label="Sorties" fillcolor="orange"]
+  scripts [label="Scripts" fillcolor="white"]
 
-  wd [label= "your working directory", shape = rect]
-  LOT1 [label= "raw\n processed\n metadata", shape = rect]
-  LOT2 [label= "R functions", shape = rect]
-  LOT4 [label= "analysis scripts\n R markdown documents", shape = rect]
+  wd [label= "répertoire de travail", shape = rect]
+  LOT1 [label= "brutes\n traitées\n metadonnées", shape = rect]
+  LOT2 [label= "fonctions R", shape = rect]
+  LOT4 [label= "scripts analyse\n documents R markdown", shape = rect]
   LOT3 [label = "pdf\n html\n figures", shape=rect]
 
   dot01 [shape=point width=0]
@@ -666,7 +651,7 @@ Bien qu'il n'y ait pas vraiment d'approche standard reconnue pour nommer les fic
 - Tout d'abord, évite d'utiliser des espaces dans les noms de fichiers en les remplaçant par des traits de soulignement ou même des traits d'union.
   Pourquoi cela est-il important ? L'une des raisons est que certains logiciels de ligne de commande (en particulier de nombreux outils bioinformatiques) ne reconnaissent pas un nom de fichier comportant un espace et que tu devras te livrer à toutes sortes de manigances en utilisant des caractères d'échappement pour t'assurer que les espaces sont traités correctement.
   Même si tu ne penses pas utiliser un jour un logiciel de ligne de commande, il se peut que tu le fasses indirectement.
-  Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande `rmarkdown` :package:tu utiliseras en fait un moteur LaTeX en ligne de commande sous le capot (appelé [Pandoc][pandoc]).
+  Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande `rmarkdown` :package:tu utiliseras en fait un moteur {{< latex >}} en ligne de commande sous le capot (appelé [Pandoc][pandoc]).
   Une autre bonne raison de ne pas utiliser d'espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l'aide d '          [expressions régulières][regex] dans R (ou tout autre langage).
 
 - Pour les raisons évoquées plus haut, évite également d'utiliser des caractères spéciaux (c'est-à-dire

@@ -1,4 +1,4 @@
-# Installing R Markdown and latex {#install-rm}
+# Installing R Markdown and LateX  {#install-rm}
 
 Installing R markdown on your computer is pretty straight forward and should be painless.
 If you're getting started with R markdown we suggest that you use RStudio but of course RStudio is not required and there are other options available.
@@ -17,8 +17,8 @@ install.packages("rmarkdown", dep = TRUE)
 
 The `dep = TRUE` argument will also install a bunch of additional R packages on which rmarkdown depends.
   
-If you want to generate PDF output, you will need to install LaTeX.
-For R Markdown users who have not installed LaTeX before, we recommend that you install [TinyTeX][tinytex].
+If you want to generate PDF output, you will need to install {{< latex >}}.
+For R Markdown users who have not installed {{< latex >}} before, we recommend that you install [TinyTeX][tinytex].
 You can install TinyTex from within R using the `tinytex` :package: package with the following code:
 
 ```{r}
@@ -27,8 +27,8 @@ install.packages('tinytex')
 tinytex::install_tinytex()  # install TinyTeX
 ```
 
-TinyTeX is a lightweight, portable, cross-platform, and easy-to-maintain LaTeX distribution.
-The R companion package `tinytex` :package: can help you automatically install missing LaTeX packages when compiling LaTeX or R Markdown documents to PDF.
+TinyTeX is a lightweight, portable, cross-platform, and easy-to-maintain {{< latex >}} distribution.
+The R companion package `tinytex` :package: can help you automatically install missing {{< latex >}} packages when compiling {{< latex >}} or R Markdown documents to PDF.
 
 ## MS Windows
 
@@ -44,7 +44,7 @@ You can download the latest version of [MacTeX here][mactex].
 
 ## Linux
 
-An alternative to TinyTex on linux would be to use a full fledge distribution of latex such as [TexLive][texlive]
+An alternative to TinyTex on linux would be to use a full fledge distribution of {{< latex >}} such as [TexLive][texlive]
 
 
 ```{r links, child="_links.md"}
