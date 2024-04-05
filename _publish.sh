@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-read -p "Have you updated the language links with fix_links? " -r
+read -p "Have you updated the language links with fix_links? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
