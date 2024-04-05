@@ -2,36 +2,34 @@
 function latex()
   if quarto.doc.is_format("pdf") then
     return pandoc.RawBlock('tex', '{\\LaTeX}')
+  elseif quarto.doc.is_format("html:js") then
+    return pandoc.Math('InlineMath', "\\LaTeX")
   elseif quarto.doc.is_format("epub") then
     return pandoc.RawBlock('html',
-      '<span style="letter-spacing:-3px;">L</span><sup style="font-size: inherit; letter-spacing:-1px;">A</sup><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X')
-  elseif quarto.doc.is_format("html") then
-    return pandoc.Math('InlineMath', "\\LaTeX")
-  else
+    '<span style="letter-spacing:-3px;">L</span><sup style="font-size: inherit; letter-spacing:-1px;">A</sup><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X')
+  else 
     return pandoc.Span('LaTeX')
   end
 end
 
-function tex()
+function tex() 
   if quarto.doc.is_format("pdf") then
     return pandoc.RawBlock('tex', '{\\TeX}')
-  elseif quarto.doc.is_format("epub") then
-    return pandoc.RawBlock('html',
-      '<span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X')
-  elseif quarto.doc.is_format("html") then
+  elseif quarto.doc.is_format("html:js") then
     return pandoc.Math('InlineMath', "\\TeX")
-  else
+  elseif quarto.doc.is_format("epub") then
+    return pandoc.RawBlock('html', 'T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X')
+  else 
     return pandoc.Span('TeX')
   end
 end
-
+  
 -- shortcode that provides a nicely formatted 'bibtex' string
 function bibtex()
   if quarto.doc.is_format("pdf") then
     return pandoc.RawBlock('tex', '\\textsc{Bib}{\\TeX}')
   elseif quarto.doc.is_format("html") then
-    return pandoc.RawBlock('html',
-      '<span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X')
+    return pandoc.RawBlock('html', '<span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X')
   else
     return pandoc.Span('BibTeX')
   end
@@ -57,7 +55,7 @@ function vdots()
   end
 end
 
-function ddots()
+function ddots() 
   if quarto.doc.is_format("pdf") then
     return pandoc.Math('InlineMath', "\\ddots")
   elseif quarto.doc.is_format("html") then
@@ -71,15 +69,15 @@ function pct()
   local pct
   if quarto.doc.is_format("pdf") then
     return pandoc.Math('InlineMath', '\\%')
-  else
+  else 
     return pandoc.Str("%")
   end
 end
-
-function R2()
+ 
+function R2() 
   if quarto.doc.is_format("pdf") then
     return pandoc.Math('InlineMath', "R^2")
   else
-    return { pandoc.Str("R"), pandoc.Superscript("2") }
+    return {pandoc.Str("R"), pandoc.Superscript("2")} 
   end
 end

@@ -3,7 +3,7 @@
 .RData
 .Ruserdata
 
-_extension/
+#_extension/
 .vscode/
 *_cache/
 *_files/
