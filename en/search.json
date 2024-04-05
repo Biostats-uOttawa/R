@@ -70,7 +70,18 @@
     "href": "index.html#license",
     "title": "On the R-way to hell",
     "section": "License",
-    "text": "License\nI share this modified version of the [original book][https://intro2r.com/] under the license License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.\n\n\nLicense Creative Commons\n\nIf you teach R, feel free to use some or all of the content in this book to help support your own students. The only thing I ask is that you acknowledge the original source and authors. If you find this book useful or have any comments or suggestions I would love to hear from you (contact info).\n\n\n\n\nDouglas, A. 2023. The Grammar of Graphics.",
+    "text": "License\nI share this modified version of the [original book][https://intro2r.com/] under the license License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.\n\n\nLicense Creative Commons\n\nIf you teach R, feel free to use some or all of the content in this book to help support your own students. The only thing I ask is that you acknowledge the original source and authors. If you find this book useful or have any comments or suggestions I would love to hear from you (contact info).",
+    "crumbs": [
+      "Data",
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#citing-the-book",
+    "href": "index.html#citing-the-book",
+    "title": "On the R-way to hell",
+    "section": "Citing the book",
+    "text": "Citing the book\nJulien Martin. (2024). On the R-way to hell. A multilingual introduction to R book (v0.5.0). Zenodo. https://doi.org/10.5281/zenodo.10929586\n\n\n\n\nDouglas, A. 2023. The Grammar of Graphics.",
     "crumbs": [
       "Data",
       "Preface"

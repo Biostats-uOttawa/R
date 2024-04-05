@@ -70,7 +70,18 @@
     "href": "index.html#licence",
     "title": "Sur le chemin de l’enf-R",
     "section": "Licence",
-    "text": "Licence\nJe partage cette version modifiée du livre original sous la licence Licence Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.\n\n\nLicence Creative Commons\n\nSi tu enseignes R, n’hésite pas à utiliser tout ou partie du contenu de ce livre pour aider tes propres élèves. La seule chose que je te demande, c’est de citer la source originale et les auteurs. Si tu trouves ce livre utile ou si tu as des commentaires ou des suggestions, j’aimerais beaucoup que tu me les fasses parvenir (contact info).\n\n\n\n\nDouglas, A. 2023. The Grammar of Graphics.",
+    "text": "Licence\nJe partage cette version modifiée du livre original sous la licence Licence Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.\n\n\nLicence Creative Commons\n\nSi tu enseignes R, n’hésite pas à utiliser tout ou partie du contenu de ce livre pour aider tes propres élèves. La seule chose que je te demande, c’est de citer la source originale et les auteurs. Si tu trouves ce livre utile ou si tu as des commentaires ou des suggestions, j’aimerais beaucoup que tu me les fasses parvenir (contact info).",
+    "crumbs": [
+      "Données",
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "index.html#citer-le-livre",
+    "href": "index.html#citer-le-livre",
+    "title": "Sur le chemin de l’enf-R",
+    "section": "Citer le livre",
+    "text": "Citer le livre\nJulien Martin. (2024). Sur le chemin de l’enf-R. Un livre multilingue d’introduction à R (v0.5.0). Zenodo. https://doi.org/10.5281/zenodo.10929586\n\n\n\n\nDouglas, A. 2023. The Grammar of Graphics.",
     "crumbs": [
       "Données",
       "Préface"
