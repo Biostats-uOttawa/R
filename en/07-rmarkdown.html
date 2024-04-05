@@ -107,7 +107,32 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </script><script src="site_libs/kePrint-0.0.1/kePrint.js"></script><link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="css/style.css">
 </head>
 <body class="nav-sidebar floating nav-fixed">
 
@@ -285,7 +310,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./99-latex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and latex</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and LateX</span></span></a>
   </div>
 </li>
       </ul>
@@ -393,7 +418,7 @@ Warning
 <li><p>Increases the efficiency of your workflow. If you need to modify or extend your current analysis you just need to update your Quarto document and these changes will automatically be included in your final document.</p></li>
 </ul></section><section id="get-started-with-quarto" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="get-started-with-quarto">
 <span class="header-section-number">7.4</span> Get started with Quarto</h2>
-<p>To use Quarto you will first need to install the <code>Quarto</code> software and the <code>quarto</code> R package (with its dependencies). You can find instructions on how to do this for both Windows and Mac OSX operating systems <a href="99-latex.html">here</a>. If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of LaTeX on your computer. If you’ve not installed LaTeX before, we recommend that you install <a href="https://yihui.name/tinytex/">TinyTeX</a>. Again, instructions on how to do this can be found <a href="99-latex.html">here</a>.</p>
+<p>To use Quarto you will first need to install the <code>Quarto</code> software and the <code>quarto</code> R package (with its dependencies). You can find instructions on how to do this for both Windows and Mac OSX operating systems <a href="99-latex.html">here</a>. If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of <span class="math inline">\(\LaTeX\)</span> on your computer. If you’ve not installed <span class="math inline">\(\LaTeX\)</span> before, we recommend that you install <a href="https://yihui.name/tinytex/">TinyTeX</a>. Again, instructions on how to do this can be found <a href="99-latex.html">here</a>.</p>
 </section><section id="new_rm" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="new_rm">
 <span class="header-section-number">7.5</span> Create a Quarto document, <code>.qmd</code>
 </h2>
@@ -554,7 +579,7 @@ Warning
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p>Interestingly there is no underline Quarto syntax by default. We think this is because bold and italics are used to emphasise content (a semantic meaning) whereas an underline is considered a stylistic element (there may well be other <a href="https://softwareengineering.stackexchange.com/questions/207727/why-there-is-no-markdown-for-underline">reasons</a>). If you really want to underline text you can use <code>&lt;span style="text-decoration:underline"&gt;underline this text&lt;/span&gt;</code> for HTML output or <code>$\text{\underline{This sentence underlined using \LaTeX}}$</code> for pdf output. We just avoid underlining!</p>
+<p>Interestingly there is no underline in R markdown syntax by default, for multiple more or less esoteric reasons, but Quarto fixed that problem. An underline is considered a stylistic element (there may well be other <a href="https://softwareengineering.stackexchange.com/questions/207727/why-there-is-no-markdown-for-underline">reasons</a>). If you are using Quarto you can simply do<code>[text to underline]{.underline}</code> to <u>underline your text</u>.</p>
 </section><section id="white-space-and-line-breaks" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="white-space-and-line-breaks">White space and line breaks</h4>
 <p>One of the things that can be confusing for new users of Quarto is the use of spaces and carriage returns (the enter key on your keyboard). In Quarto multiple spaces within the text are generally ignored as are carriage returns. For example this Quarto text</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>These      data were      obtained from a</span>
@@ -1272,7 +1297,7 @@ The mean Sepal length was
 <p><strong>Problem:</strong></p>
 <p>When rendering my Quarto document to pdf my tables and/or figures are split over two pages.</p>
 <p><strong>Solution:</strong></p>
-<p>Add a page break using the LateX <code>\pagebreak</code> notation before your offending table or figure</p>
+<p>Add a page break using the <span class="math inline">\(\LaTeX\)</span> <code>\pagebreak</code> notation before your offending table or figure</p>
 <p>&nbsp;</p>
 <p><strong>Problem:</strong></p>
 <p>The code in my rendered document looks ugly!</p>

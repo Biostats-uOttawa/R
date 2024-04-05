@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
-<title>On the R-way to hell - Appendix B — Installing R Markdown and latex</title>
+<title>On the R-way to hell - Appendix B — Installing R Markdown and LateX</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,6 +105,31 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
+</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
 </script><link rel="stylesheet" href="css/style.css">
 </head>
 <body class="nav-sidebar floating nav-fixed">
@@ -159,7 +184,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-flag">
 <li>
-    <a class="dropdown-item" href="./../fr">
+    <a class="dropdown-item" href="./../fr/99-fichiers-donnees.html">
  <span class="dropdown-text">Français</span></a>
   </li>  
     </ul>
@@ -197,7 +222,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./99-data-files.html">Appendices</a></li><li class="breadcrumb-item"><a href="./99-latex.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and latex</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./99-data-files.html">Appendices</a></li><li class="breadcrumb-item"><a href="./99-latex.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and LateX</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -283,7 +308,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./99-latex.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and latex</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and LateX</span></span></a>
   </div>
 </li>
       </ul>
@@ -302,8 +327,8 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
   </ul><div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/99-latex.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./99-data-files.html">Appendices</a></li><li class="breadcrumb-item"><a href="./99-latex.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and latex</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="install-rm" class="quarto-section-identifier">Appendix B — Installing R Markdown and latex</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./99-data-files.html">Appendices</a></li><li class="breadcrumb-item"><a href="./99-latex.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and LateX</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="install-rm" class="quarto-section-identifier">Appendix B — Installing R Markdown and LateX</span></h1>
 </div>
 
 
@@ -323,12 +348,12 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"rmarkdown"</span>, dep <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>dep = TRUE</code> argument will also install a bunch of additional R packages on which rmarkdown depends.</p>
-<p>If you want to generate PDF output, you will need to install LaTeX. For R Markdown users who have not installed LaTeX before, we recommend that you install <a href="https://yihui.name/tinytex/">TinyTeX</a>. You can install TinyTex from within R using the <code>tinytex</code> <span class="emoji" data-emoji="package">📦</span> package with the following code:</p>
+<p>If you want to generate PDF output, you will need to install <span class="math inline">\(\LaTeX\)</span>. For R Markdown users who have not installed <span class="math inline">\(\LaTeX\)</span> before, we recommend that you install <a href="https://yihui.name/tinytex/">TinyTeX</a>. You can install TinyTex from within R using the <code>tinytex</code> <span class="emoji" data-emoji="package">📦</span> package with the following code:</p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'tinytex'</span><span class="op">)</span></span>
 <span><span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span><span class="op">(</span><span class="op">)</span>  <span class="co"># install TinyTeX</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>TinyTeX is a lightweight, portable, cross-platform, and easy-to-maintain LaTeX distribution. The R companion package <code>tinytex</code> <span class="emoji" data-emoji="package">📦</span> can help you automatically install missing LaTeX packages when compiling LaTeX or R Markdown documents to PDF.</p>
+<p>TinyTeX is a lightweight, portable, cross-platform, and easy-to-maintain <span class="math inline">\(\LaTeX\)</span> distribution. The R companion package <code>tinytex</code> <span class="emoji" data-emoji="package">📦</span> can help you automatically install missing <span class="math inline">\(\LaTeX\)</span> packages when compiling <span class="math inline">\(\LaTeX\)</span> or R Markdown documents to PDF.</p>
 <section id="ms-windows" class="level2" data-number="B.1"><h2 data-number="B.1" class="anchored" data-anchor-id="ms-windows">
 <span class="header-section-number">B.1</span> MS Windows</h2>
 <p>An alternative option would be to install MiKTeX instead. You can download the latest distribution of <a href="https://miktex.org/download">MiKTeX</a>. Installing MiKTeX is pretty straight forward, but it can sometimes be a pain to get it to play nicely with RStudio. If at all possible we recommend that you use TinyTex.</p>
@@ -337,7 +362,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 <p>If for some reason TinyTeX does not work on your Mac computer then you can try to install MacTeX instead. You can download the latest version of <a href="http://www.tug.org/mactex/mactex-download.html">MacTeX here</a>.</p>
 </section><section id="linux" class="level2" data-number="B.3"><h2 data-number="B.3" class="anchored" data-anchor-id="linux">
 <span class="header-section-number">B.3</span> Linux</h2>
-<p>An alternative to TinyTex on linux would be to use a full fledge distribution of latex such as <a href="https://tug.org/texlive/">TexLive</a></p>
+<p>An alternative to TinyTex on linux would be to use a full fledge distribution of <span class="math inline">\(\LaTeX\)</span> such as <a href="https://tug.org/texlive/">TexLive</a></p>
 <!--course website Links-->
 <!--cran Links-->
 <!--RStudio-->

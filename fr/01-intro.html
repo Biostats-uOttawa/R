@@ -106,6 +106,31 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
+</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
 </script><link rel="stylesheet" href="css/style.css">
 </head>
 <body class="nav-sidebar floating nav-fixed">
@@ -160,7 +185,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-flag">
 <li>
-    <a class="dropdown-item" href="./../en">
+    <a class="dropdown-item" href="./../en/01-intro.html">
  <span class="dropdown-text">English</span></a>
   </li>  
     </ul>
@@ -634,91 +659,54 @@ Figure&nbsp;1.1: VS Code panneau de gauche
 </section><section id="dir_struct" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="dir_struct">
 <span class="header-section-number">1.5</span> Structure du répertoire</h2>
 <p>En plus d’utiliser RStudio Projects, c’est aussi une très bonne pratique de structurer ton répertoire de travail d’une manière cohérente et logique pour t’aider et aider tes collaborateurs. Nous utilisons fréquemment la structure de répertoire suivante dans nos projets basés sur R.</p>
-<!--
-obtenu à partir de tree -L 2
-``bash
-racine
-├── données
-│ ├── données brutes
-│ ├─── données traitées
-│ └─── métadonnées
-├─── fonctions
-├─── scripts
-└─── sortie
-    ├── html
-    ├── pdfs
-    └─── figures
-```
--->
-<pre class="{dot}"><code>#| eval: false
-digraph {
-  rankdir=LR
-  ranksep=0.5
-  nodesep=0.5
-  node [
-    style = filled
-    shape=oval
-    ]
-  root [fillcolor="red"]
-  data [fillcolor="lightblue"]
-  functions [fillcolor="lightgreen"]
-  outputs [fillcolor="orange"]
-  scripts [fillcolor="white"]
-
-  wd [label= "your working directory", shape = rect]
-  LOT1 [label= "raw\n processed\n metadata", shape = rect]
-  LOT2 [label= "R functions", shape = rect]
-  LOT4 [label= "analysis scripts\n R markdown documents", shape = rect]
-  LOT3 [label = "pdf\n html\n figures", shape=rect]
-
-  dot01 [shape=point width=0]
-  root -&gt; dot01 [arrowhead=none]
-  dot01 -&gt; wd [weight=20]
-
-  {
-    rank=same
-    root
-    dot1 [shape=point width=0]
-    dot2 [shape=point width=0]
-    dot3 [shape=point width=0]
-    dot4 [shape=point width=0]
-    root -&gt; dot1 -&gt; dot2 -&gt; dot3 -&gt; dot4 [arrowhead=none]
-  }
-
-  dot1 -&gt; data [weight=20]
-  {
-    rank=same
-    data
-    dot21  [shape=point width=0]
-    data -&gt; dot21 [arrowhead=none]
-  }
-  dot21 -&gt; LOT1 [weight=20]
-  dot2 -&gt; functions
-  {
-    rank=same
-    functions
-    dot22  [shape=point width=0]
-    functions -&gt; dot22 [arrowhead=none]
-  }
-  dot22 -&gt; LOT2 [weight=20]
-  dot3 -&gt; outputs [weight=20]
-  {
-    rank=same
-    outputs
-    dot23 [shape=point width=0]
-    outputs -&gt; dot23 [arrowhead=none]
-  }
-  dot23 -&gt; LOT3 [weight=20]
-  
-  dot4 -&gt; scripts [weight=20]
-  {
-    rank=same
-    scripts
-    dot24 [shape=point width=0]
-    scripts -&gt; dot24 [arrowhead=none]
-  }
-  dot24 -&gt; LOT4 [weight=20]
-}</code></pre>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"></figure><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 403.88 478.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 474.8)"><polygon fill="white" stroke="transparent" points="-4,4 -4,-474.8 399.88,-474.8 399.88,4 -4,4"></polygon><!-- root --><g id="node1" class="node"><title>root</title>
+<ellipse fill="red" stroke="black" cx="34.62" cy="-452.8" rx="34.75" ry="18"></ellipse><text text-anchor="middle" x="34.62" y="-448.6" font-family="Times,serif" font-size="14.00">racine</text></g><!-- dot01 --><g id="node11" class="node"><title>dot01</title>
+<ellipse fill="black" stroke="black" cx="154.38" cy="-452.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot01 --><g id="edge1" class="edge"><title>root-&gt;dot01</title>
+<path fill="none" stroke="black" d="M69.37,-452.8C103.07,-452.8 150.31,-452.8 153.23,-452.8"></path></g><!-- dot1 --><g id="node12" class="node"><title>dot1</title>
+<ellipse fill="black" stroke="black" cx="34.62" cy="-398.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot1 --><g id="edge3" class="edge"><title>root-&gt;dot1</title>
+<path fill="none" stroke="black" d="M34.62,-434.38C34.62,-422.66 34.62,-410.94 34.62,-399.22"></path></g><!-- data --><g id="node2" class="node"><title>data</title>
+<ellipse fill="lightblue" stroke="black" cx="154.38" cy="-398.8" rx="45.24" ry="18"></ellipse><text text-anchor="middle" x="154.38" y="-394.6" font-family="Times,serif" font-size="14.00">Données</text></g><!-- dot21 --><g id="node16" class="node"><title>dot21</title>
+<ellipse fill="black" stroke="black" cx="154.38" cy="-344.8" rx="0" ry="0"></ellipse></g><!-- data&#45;&gt;dot21 --><g id="edge8" class="edge"><title>data-&gt;dot21</title>
+<path fill="none" stroke="black" d="M154.38,-380.38C154.38,-368.66 154.38,-356.94 154.38,-345.22"></path></g><!-- functions --><g id="node3" class="node"><title>functions</title>
+<ellipse fill="lightgreen" stroke="black" cx="154.38" cy="-290.8" rx="49.26" ry="18"></ellipse><text text-anchor="middle" x="154.38" y="-286.6" font-family="Times,serif" font-size="14.00">Fonctions</text></g><!-- dot22 --><g id="node17" class="node"><title>dot22</title>
+<ellipse fill="black" stroke="black" cx="154.38" cy="-236.8" rx="0" ry="0"></ellipse></g><!-- functions&#45;&gt;dot22 --><g id="edge11" class="edge"><title>functions-&gt;dot22</title>
+<path fill="none" stroke="black" d="M154.38,-272.38C154.38,-260.66 154.38,-248.94 154.38,-237.22"></path></g><!-- outputs --><g id="node4" class="node"><title>outputs</title>
+<ellipse fill="orange" stroke="black" cx="154.38" cy="-182.8" rx="37.72" ry="18"></ellipse><text text-anchor="middle" x="154.38" y="-178.6" font-family="Times,serif" font-size="14.00">Sorties</text></g><!-- dot23 --><g id="node18" class="node"><title>dot23</title>
+<ellipse fill="black" stroke="black" cx="154.38" cy="-128.8" rx="0" ry="0"></ellipse></g><!-- outputs&#45;&gt;dot23 --><g id="edge14" class="edge"><title>outputs-&gt;dot23</title>
+<path fill="none" stroke="black" d="M154.38,-164.38C154.38,-152.66 154.38,-140.94 154.38,-129.22"></path></g><!-- scripts --><g id="node5" class="node"><title>scripts</title>
+<ellipse fill="white" stroke="black" cx="154.38" cy="-74.8" rx="37.72" ry="18"></ellipse><text text-anchor="middle" x="154.38" y="-70.6" font-family="Times,serif" font-size="14.00">Scripts</text></g><!-- dot24 --><g id="node19" class="node"><title>dot24</title>
+<ellipse fill="black" stroke="black" cx="154.38" cy="-20.8" rx="0" ry="0"></ellipse></g><!-- scripts&#45;&gt;dot24 --><g id="edge17" class="edge"><title>scripts-&gt;dot24</title>
+<path fill="none" stroke="black" d="M154.38,-56.38C154.38,-44.66 154.38,-32.94 154.38,-21.22"></path></g><!-- wd --><g id="node6" class="node"><title>wd</title>
+<polygon fill="lightgrey" stroke="black" points="381.36,-470.8 254.03,-470.8 254.03,-434.8 381.36,-434.8 381.36,-470.8"></polygon><text text-anchor="middle" x="317.69" y="-448.6" font-family="Times,serif" font-size="14.00">répertoire de travail</text></g><!-- LOT1 --><g id="node7" class="node"><title>LOT1</title>
+<polygon fill="lightgrey" stroke="black" points="364.56,-374.2 270.82,-374.2 270.82,-315.4 364.56,-315.4 364.56,-374.2"></polygon><text text-anchor="middle" x="317.69" y="-357.4" font-family="Times,serif" font-size="14.00">brutes</text><text text-anchor="middle" x="317.69" y="-340.6" font-family="Times,serif" font-size="14.00"> traitées</text><text text-anchor="middle" x="317.69" y="-323.8" font-family="Times,serif" font-size="14.00"> metadonnées</text></g><!-- LOT2 --><g id="node8" class="node"><title>LOT2</title>
+<polygon fill="lightgrey" stroke="black" points="358.13,-254.8 277.25,-254.8 277.25,-218.8 358.13,-218.8 358.13,-254.8"></polygon><text text-anchor="middle" x="317.69" y="-232.6" font-family="Times,serif" font-size="14.00">fonctions R</text></g><!-- LOT4 --><g id="node9" class="node"><title>LOT4</title>
+<polygon fill="lightgrey" stroke="black" points="396.06,-41.4 239.32,-41.4 239.32,-0.2 396.06,-0.2 396.06,-41.4"></polygon><text text-anchor="middle" x="317.69" y="-25" font-family="Times,serif" font-size="14.00">scripts analyse</text><text text-anchor="middle" x="317.69" y="-8.2" font-family="Times,serif" font-size="14.00"> documents R markdown</text></g><!-- LOT3 --><g id="node10" class="node"><title>LOT3</title>
+<polygon fill="lightgrey" stroke="black" points="347.07,-158.2 288.32,-158.2 288.32,-99.4 347.07,-99.4 347.07,-158.2"></polygon><text text-anchor="middle" x="317.69" y="-141.4" font-family="Times,serif" font-size="14.00">pdf</text><text text-anchor="middle" x="317.69" y="-124.6" font-family="Times,serif" font-size="14.00"> html</text><text text-anchor="middle" x="317.69" y="-107.8" font-family="Times,serif" font-size="14.00"> figures</text></g><!-- dot01&#45;&gt;wd --><g id="edge2" class="edge"><title>dot01-&gt;wd</title>
+<path fill="none" stroke="black" d="M155.49,-452.8C158.06,-452.8 202.37,-452.8 243.88,-452.8"></path><polygon fill="black" stroke="black" points="244.07,-456.3 254.07,-452.8 244.07,-449.3 244.07,-456.3"></polygon></g><!-- dot1&#45;&gt;data --><g id="edge7" class="edge"><title>dot1-&gt;data</title>
+<path fill="none" stroke="black" d="M35.71,-398.8C37.55,-398.8 69.02,-398.8 98.95,-398.8"></path><polygon fill="black" stroke="black" points="98.99,-402.3 108.99,-398.8 98.99,-395.3 98.99,-402.3"></polygon></g><!-- dot2 --><g id="node13" class="node"><title>dot2</title>
+<ellipse fill="black" stroke="black" cx="34.62" cy="-290.8" rx="0" ry="0"></ellipse></g><!-- dot1&#45;&gt;dot2 --><g id="edge4" class="edge"><title>dot1-&gt;dot2</title>
+<path fill="none" stroke="black" d="M34.62,-398.38C34.62,-362.66 34.62,-326.94 34.62,-291.22"></path></g><!-- dot2&#45;&gt;functions --><g id="edge10" class="edge"><title>dot2-&gt;functions</title>
+<path fill="none" stroke="black" d="M35.71,-290.8C37.47,-290.8 66.26,-290.8 94.91,-290.8"></path><polygon fill="black" stroke="black" points="95,-294.3 105,-290.8 95,-287.3 95,-294.3"></polygon></g><!-- dot3 --><g id="node14" class="node"><title>dot3</title>
+<ellipse fill="black" stroke="black" cx="34.62" cy="-182.8" rx="0" ry="0"></ellipse></g><!-- dot2&#45;&gt;dot3 --><g id="edge5" class="edge"><title>dot2-&gt;dot3</title>
+<path fill="none" stroke="black" d="M34.62,-290.38C34.62,-254.66 34.62,-218.94 34.62,-183.22"></path></g><!-- dot3&#45;&gt;outputs --><g id="edge13" class="edge"><title>dot3-&gt;outputs</title>
+<path fill="none" stroke="black" d="M35.71,-182.8C37.71,-182.8 74.42,-182.8 106.32,-182.8"></path><polygon fill="black" stroke="black" points="106.45,-186.3 116.45,-182.8 106.45,-179.3 106.45,-186.3"></polygon></g><!-- dot4 --><g id="node15" class="node"><title>dot4</title>
+<ellipse fill="black" stroke="black" cx="34.62" cy="-74.8" rx="0" ry="0"></ellipse></g><!-- dot3&#45;&gt;dot4 --><g id="edge6" class="edge"><title>dot3-&gt;dot4</title>
+<path fill="none" stroke="black" d="M34.62,-182.38C34.62,-146.66 34.62,-110.94 34.62,-75.22"></path></g><!-- dot4&#45;&gt;scripts --><g id="edge16" class="edge"><title>dot4-&gt;scripts</title>
+<path fill="none" stroke="black" d="M35.71,-74.8C37.71,-74.8 74.42,-74.8 106.32,-74.8"></path><polygon fill="black" stroke="black" points="106.45,-78.3 116.45,-74.8 106.45,-71.3 106.45,-78.3"></polygon></g><!-- dot21&#45;&gt;LOT1 --><g id="edge9" class="edge"><title>dot21-&gt;LOT1</title>
+<path fill="none" stroke="black" d="M155.49,-344.8C158.41,-344.8 215.37,-344.8 260.76,-344.8"></path><polygon fill="black" stroke="black" points="260.84,-348.3 270.84,-344.8 260.84,-341.3 260.84,-348.3"></polygon></g><!-- dot22&#45;&gt;LOT2 --><g id="edge12" class="edge"><title>dot22-&gt;LOT2</title>
+<path fill="none" stroke="black" d="M155.49,-236.8C158.54,-236.8 220.68,-236.8 266.89,-236.8"></path><polygon fill="black" stroke="black" points="267.08,-240.3 277.08,-236.8 267.08,-233.3 267.08,-240.3"></polygon></g><!-- dot23&#45;&gt;LOT3 --><g id="edge15" class="edge"><title>dot23-&gt;LOT3</title>
+<path fill="none" stroke="black" d="M155.49,-128.8C158.8,-128.8 231.57,-128.8 278.2,-128.8"></path><polygon fill="black" stroke="black" points="278.29,-132.3 288.29,-128.8 278.29,-125.3 278.29,-132.3"></polygon></g><!-- dot24&#45;&gt;LOT4 --><g id="edge18" class="edge"><title>dot24-&gt;LOT4</title>
+<path fill="none" stroke="black" d="M155.49,-20.8C157.75,-20.8 192.39,-20.8 228.97,-20.8"></path><polygon fill="black" stroke="black" points="229.32,-24.3 239.32,-20.8 229.32,-17.3 229.32,-24.3"></polygon></g></g></svg>
+</div>
+<p></p>
+</div>
+</div>
+</div>
 <p>Dans notre répertoire de travail, nous avons les répertoires suivants :</p>
 <ul>
 <li><p><strong>Racine</strong> - C’est le répertoire de ton projet qui contient tes <code>.Rproj</code>fichier . Nous avons tendance à garder tous les scripts R ou [Rq]md nécessaires à l’analyse/au rapport dans ce dossier racine ou dans le dossier scripts lorsqu’il y en a trop.</p></li>
@@ -731,7 +719,7 @@ digraph {
 <p>Tu peux créer ta structure de répertoires à l’aide de l’Explorateur Windows (ou du Finder sur Mac) ou dans ton IDE en cliquant sur le bouton “Nouveau dossier” dans le panneau “Fichiers”.</p>
 <p>Une autre approche consiste à utiliser la fonction <code><a href="https://rdrr.io/r/base/files2.html">dir.create()</a></code> de la console R.</p>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create directory called 'data'</span></span>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create directory called 'data'</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">"data"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="rsprojs" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="rsprojs">
@@ -810,9 +798,9 @@ digraph {
 </div>
 <p>Bien qu’il n’y ait pas vraiment d’approche standard reconnue pour nommer les fichiers (en fait <a href="https://en.wikipedia.org/wiki/Filename">il y a</a> mais tout le monde ne l’utilise pas), il y a quelques points à garder à l’esprit.</p>
 <ul>
-<li><p>Tout d’abord, évite d’utiliser des espaces dans les noms de fichiers en les remplaçant par des traits de soulignement ou même des traits d’union. Pourquoi cela est-il important ? L’une des raisons est que certains logiciels de ligne de commande (en particulier de nombreux outils bioinformatiques) ne reconnaissent pas un nom de fichier comportant un espace et que tu devras te livrer à toutes sortes de manigances en utilisant des caractères d’échappement pour t’assurer que les espaces sont traités correctement. Même si tu ne penses pas utiliser un jour un logiciel de ligne de commande, il se peut que tu le fasses indirectement. Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande <code>rmarkdown</code> <span class="emoji" data-emoji="package">📦</span>tu utiliseras en fait un moteur LaTeX en ligne de commande sous le capot (appelé <a href="http://pandoc.org">Pandoc</a>). Une autre bonne raison de ne pas utiliser d’espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l’aide d ’ <a href="https://en.wikipedia.org/wiki/Regular_expression">expressions régulières</a> dans R (ou tout autre langage).</p></li>
-<li><p>Pour les raisons évoquées plus haut, évite également d’utiliser des caractères spéciaux (c’est-à-dire @£$%^&amp;*(:/) dans tes noms de fichiers.</p></li>
-<li><p>Si tu mets en place des versions de tes fichiers avec des numéros séquentiels (par ex. fichier1, fichier2, fichier3 …) et que tu as plus de 9 fichiers, tu dois utiliser 01, 02, 03 … 10 pour t’assurer que les fichiers sont imprimés dans le bon ordre (vois ce qui se passe si tu ne le fais pas). Si tu as plus de 99 fichiers, utilise 001, 002, 003… etc.</p></li>
+<li><p>Tout d’abord, évite d’utiliser des espaces dans les noms de fichiers en les remplaçant par des traits de soulignement ou même des traits d’union. Pourquoi cela est-il important ? L’une des raisons est que certains logiciels de ligne de commande (en particulier de nombreux outils bioinformatiques) ne reconnaissent pas un nom de fichier comportant un espace et que tu devras te livrer à toutes sortes de manigances en utilisant des caractères d’échappement pour t’assurer que les espaces sont traités correctement. Même si tu ne penses pas utiliser un jour un logiciel de ligne de commande, il se peut que tu le fasses indirectement. Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande <code>rmarkdown</code> <span class="emoji" data-emoji="package">📦</span> tu utiliseras en fait un moteur <span class="math inline">\(\LaTeX\)</span> en ligne de commande sous le capot (appelé <a href="http://pandoc.org">Pandoc</a>). Une autre bonne raison de ne pas utiliser d’espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l’aide d’<a href="https://en.wikipedia.org/wiki/Regular_expression">expressions régulières</a> dans R (ou tout autre langage).</p></li>
+<li><p>Pour les raisons évoquées plus haut, évite également d’utiliser des caractères spéciaux (c’est-à-dire @£$%^&amp;*(:/)) dans tes noms de fichiers.</p></li>
+<li><p>Si tu mets en place des versions de tes fichiers avec des numéros séquentiels (par ex. fichier1, fichier2, fichier3, …) et que tu as plus de 9 fichiers, tu dois utiliser 01, 02, 03 … 10 pour t’assurer que les fichiers sont imprimés dans le bon ordre (vois ce qui se passe si tu ne le fais pas). Si tu as plus de 99 fichiers, utilise 001, 002, 003… etc.</p></li>
 <li><p>Si les noms de tes fichiers contiennent des dates, utilise le format ISO 8601 AAAA-MM-JJ (ou AAAAMMJJ) pour t’assurer que tes fichiers sont classés dans le bon ordre chronologique.</p></li>
 <li><p>N’utilise jamais le mot <em>final</em> dans un nom de fichier - il ne l’est jamais !</p></li>
 </ul>
@@ -822,7 +810,7 @@ digraph {
 <p>Un petit mot ou deux sur l’écriture du code R et la création de scripts R. À moins que tu ne fasses quelque chose de vraiment rapide et sale, nous te suggérons de toujours écrire ton code R sous la forme d’un script R. Les scripts R sont ce qui rend R si utile. Non seulement tu as un enregistrement complet de ton analyse, de la manipulation des données à la visualisation et à l’analyse statistique, mais tu peux aussi partager ce code (et ces données) avec tes amis, tes collègues et, surtout, lorsque tu soumets et publies tes recherches dans une revue. Dans cette optique, assure-toi d’inclure dans ton script R toutes les informations nécessaires pour rendre ton travail reproductible (noms des auteurs, dates, plan d’échantillonnage, etc). Ces informations peuvent être incluses sous la forme d’une série de commentaires <code>#</code> ou, mieux encore, en mélangeant le code exécutable et la narration dans un script R. <a href="#rmarkdown_r">R markdown</a> R. C’est aussi une bonne pratique d’inclure la sortie de la fonction <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> à la fin de tout script qui imprime la version de R, les détails du système d’exploitation et les paquets chargés. Une très bonne alternative consiste à utiliser la fonction <code>session_info()</code> de la fonction <code>xfun</code> <span class="emoji" data-emoji="package">📦</span> pour obtenir un résumé plus concis de l’environnement de notre session.</p>
 <p>Voici un exemple d’inclusion de méta-informations au début d’un script R</p>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Title: Time series analysis of lasagna consumption</span></span>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Title: Time series analysis of lasagna consumption</span></span>
 <span></span>
 <span><span class="co"># Purpose : This script performs a time series analyses on</span></span>
 <span><span class="co">#           lasagna meals kids want to have each week.</span></span>
@@ -887,14 +875,14 @@ digraph {
 </div>
 </section><section id="sauvegarde-des-projets" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="sauvegarde-des-projets">
 <span class="header-section-number">1.10</span> Sauvegarde des projets</h2>
-<p>Ne sois pas cette personne qui perd des données et des analyses durement gagnées (et souvent coûteuses). Ne sois pas cette personne qui pense que ça ne m’arrivera jamais - ça arrivera ! Pense toujours au pire scénario absolu, à quelque chose qui te donne des sueurs froides en te réveillant la nuit, et fais tout ton possible pour que cela n’arrive jamais. Pour être clair, si tu comptes copier tes précieux fichiers sur un disque dur externe ou une clé USB, c’est… <strong>PAS</strong> une stratégie de sauvegarde efficace. Ces choses tournent mal tout le temps lorsque tu les glisses dans ton sac à dos ou ton “sac pour la vie” et que tu les trimballes entre ton bureau et ta maison. Même si tu les laisses branchés sur ton ordinateur, que se passe-t-il lorsque le bâtiment brûle (nous avons bien dit le pire des cas !) ?</p>
+<p>Ne sois pas cette personne qui perd des données et des analyses durement gagnées (et souvent coûteuses). Ne sois pas cette personne qui pense que ça ne m’arrivera jamais - ça arrivera ! Pense toujours au pire scénario absolu, à quelque chose qui te donne des sueurs froides en te réveillant la nuit, et fais tout ton possible pour que cela n’arrive jamais. Pour être clair, si tu comptes copier tes précieux fichiers sur un disque dur externe ou une clé USB, ce n’est… <strong>PAS</strong> une stratégie de sauvegarde efficace. Ces choses tournent mal tout le temps lorsque tu les glisses dans ton sac à dos ou ton “sac pour la vie” et que tu les trimballes entre ton bureau et ta maison. Même si tu les laisses branchés sur ton ordinateur, que se passe-t-il lorsque le bâtiment brûle (nous avons bien dit le pire des cas !) ?</p>
 <p>Idéalement, tes sauvegardes devraient être hors site et incrémentielles. Heureusement, il existe de nombreuses options pour sauvegarder tes fichiers. La première chose à faire est de chercher dans ton propre institut. La plupart (toutes ?) des universités disposent d’une forme de stockage en réseau qui devrait être facilement accessible et qui est également soutenue par un plan complet de reprise après sinistre. D’autres options incluent des services basés sur le cloud tels que Google Drive et Dropbox (pour n’en citer que quelques-uns), mais assure-toi que tu ne stockes pas de données sensibles sur ces services et que tu es à l’aise avec les politiques de confidentialité qui font souvent l’effet d’une douche froide.</p>
 <p>Alors que ces services sont plutôt bons pour stocker des fichiers, ils ne sont pas vraiment utiles pour les sauvegardes incrémentielles. Pour trouver les versions précédentes des fichiers, il faut souvent passer un temps fou à parcourir plusieurs fichiers nommés <em>‘final.doc’</em>, <em>‘final_v2.doc’</em> et <em>‘final_usethisone.doc’</em> etc. jusqu’à ce que tu trouves celui que tu cherches. Le meilleur moyen que nous connaissons pour à la fois sauvegarder les fichiers et gérer les différentes versions des fichiers est d’utiliser Git et GitHub. Pour en savoir plus sur la façon dont tu peux utiliser RStudio, Git et GitHub ensemble, consulte la page Git et GitHub. <a href="#github_r">Chapitre</a>.</p>
 </section><section id="citation-de-r" class="level2" data-number="1.11"><h2 data-number="1.11" class="anchored" data-anchor-id="citation-de-r">
 <span class="header-section-number">1.11</span> Citation de R</h2>
 <p>De nombreuses personnes ont investi énormément de temps et d’énergie pour faire de R l’excellent logiciel que tu utilises aujourd’hui. Si tu utilises R dans ton travail (et nous espérons que tu le feras), n’oublie pas de le citer. Pour obtenir la citation la plus récente de R, tu peux utiliser le site <code><a href="https://rdrr.io/r/utils/citation.html">citation()</a></code> fonction.</p>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>To cite R in publications use:
 
@@ -920,7 +908,7 @@ citing R packages.</code></pre>
 </div>
 <p>Si tu veux citer un logiciel particulier que tu as utilisé pour l’analyse de tes données.</p>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">"here"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">"here"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>To cite package 'here' in publications use:
 
