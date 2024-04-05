@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -171,7 +171,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
     <a href="https://github.com/biostats-uottawa/R_way/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
 <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="./On-the-R-way-to-hell.pdf">
               <i class="bi bi-bi-file-pdf pe-1"></i>
@@ -214,7 +214,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="./01-start.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
   </div>
 </li>
@@ -792,7 +792,7 @@ $time
  $ names : chr  "Joanna" "Charlotte" "Helen" "Karen" ...</code></pre>
 </div>
 </div>
-<p>The <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> function gives us the data frame dimensions and also reminds us that <code>dataf</code> is a <code>data.frame</code> type object. It also lists all of the variables (columns) contained in the data frame, tells us what type of data the variables contain and prints out the first five values. We often copy this summary and place it in our R scripts with comments at the beginning of each line so we can easily refer back to it whilst writing our code. We showed you how to comment blocks in RStudio <a href="01-intro.html#proj_doc">here</a>.</p>
+<p>The <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> function gives us the data frame dimensions and also reminds us that <code>dataf</code> is a <code>data.frame</code> type object. It also lists all of the variables (columns) contained in the data frame, tells us what type of data the variables contain and prints out the first five values. We often copy this summary and place it in our R scripts with comments at the beginning of each line so we can easily refer back to it whilst writing our code. We showed you how to comment blocks in RStudio <a href="01-start.html#proj_doc">here</a>.</p>
 <p>Also notice that R has automatically decided that our <code>p.names</code> variable should be a character (<code>chr</code>) class variable when we first created the data frame. Whether this is a good idea or not will depend on how you want to use this variable in later analysis. If we decide that this wasn’t such a good idea we can change the default behaviour of the <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function by including the argument <code>stringsAsFactors = TRUE</code>. Now our strings are automatically converted to factors.</p>
 <div class="cell">
 <div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p.height</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">180</span>, <span class="fl">155</span>, <span class="fl">160</span>, <span class="fl">167</span>, <span class="fl">181</span><span class="op">)</span></span>
@@ -849,7 +849,7 @@ $time
 </div>
 <p>&nbsp;</p>
 <p>The resulting file will annoyingly have a ‘.csv’ extension even though we’ve saved it as a tab delimited file. Either live with it or rename the file with a ‘.txt’ extension instead.</p>
-<p>In MS Excel, select <code>File</code> -&gt; <code>Save as ...</code> from the main menu and navigate to the folder where you want to save the file. Enter the file name (keep it fairly short, <a href="01-intro.html#file_names">no spaces</a>!) in the ‘Save as:’ dialogue box. In the ‘File format:’ dialogue box click on the down arrow to open the drop down menu and select ‘Text (Tab delimited)’ as your file type. Select OK to save the file.</p>
+<p>In MS Excel, select <code>File</code> -&gt; <code>Save as ...</code> from the main menu and navigate to the folder where you want to save the file. Enter the file name (keep it fairly short, <a href="01-start.html#file_names">no spaces</a>!) in the ‘Save as:’ dialogue box. In the ‘File format:’ dialogue box click on the down arrow to open the drop down menu and select ‘Text (Tab delimited)’ as your file type. Select OK to save the file.</p>
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -862,7 +862,7 @@ $time
 <p>&nbsp;</p>
 <p>There are a couple of things to bear in mind when saving files to import into R which will make your life easier in the long run. Keep your column headings (if you have them) short and informative. Also avoid spaces in your column headings by replacing them with an underscore or a dot (i.e. replace <code>shoot height</code> with <code>shoot_height</code> or <code>shoot.height</code>) and avoid using special characters (i.e. <code>leaf area (mm^2)</code>). Remember, if you have missing data in your data frame (empty cells) you should use an <code>NA</code> to represent these missing values. This will keep the data frame tidy.</p>
 </section><section id="import_fnc" class="level3"><h3 class="anchored" data-anchor-id="import_fnc">Import functions</h3>
-<p>Once you’ve saved your data file in a suitable format we can now read this file into R. The workhorse function for importing data into R is the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function (we discuss some alternatives later in the chapter). The <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function is a very flexible function with a shed load of arguments (see <code><a href="https://rdrr.io/r/utils/read.table.html">?read.table</a></code>) but it’s quite simple to use. Let’s import a tab delimited file called <code>flower.txt</code> which contains the data we saw previously in this <a href="#df">Chapter</a> and assign it to an object called <code>flowers</code>. The file is located in a <code>data</code> directory which itself is located in our <a href="01-intro.html#dir_struct">root directory</a>. The first row of the data contains the variable (column) names. To use the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function to import this file</p>
+<p>Once you’ve saved your data file in a suitable format we can now read this file into R. The workhorse function for importing data into R is the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function (we discuss some alternatives later in the chapter). The <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function is a very flexible function with a shed load of arguments (see <code><a href="https://rdrr.io/r/utils/read.table.html">?read.table</a></code>) but it’s quite simple to use. Let’s import a tab delimited file called <code>flower.txt</code> which contains the data we saw previously in this <a href="#df">Chapter</a> and assign it to an object called <code>flowers</code>. The file is located in a <code>data</code> directory which itself is located in our <a href="01-start.html#dir_struct">root directory</a>. The first row of the data contains the variable (column) names. To use the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function to import this file</p>
 <div class="cell">
 <div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flowers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">'data/flower.txt'</span>, header <span class="op">=</span> <span class="cn">TRUE</span>, sep <span class="op">=</span> <span class="st">"\t"</span>,</span>
 <span>                        stringsAsFactors <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -933,7 +933,7 @@ $time
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>In addition<span class="sc">:</span> Warning message<span class="sc">:</span></span>
 <span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>In <span class="fu">file</span>(file, <span class="st">"rt"</span>) <span class="sc">:</span></span>
 <span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>  cannot open file <span class="st">'flower.txt'</span><span class="sc">:</span> No such file or directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This error message is telling you that R cannot find the file you are trying to import. It usually rears its head for one of a couple of reasons (or all of them!). The first is that you’ve made a mistake in the spelling of either the filename or file path. Another common mistake is that you have forgotten to include the file extension in the filename (i.e. <code>.txt</code>). Lastly, the file is not where you say it is or you’ve used an incorrect file path. Using RStudio <a href="01-intro.html#rsprojs">Projects</a> and having a logical <a href="01-intro.html#dir_struct">directory structure</a> goes a long way to avoiding these types of errors.</p>
+<p>This error message is telling you that R cannot find the file you are trying to import. It usually rears its head for one of a couple of reasons (or all of them!). The first is that you’ve made a mistake in the spelling of either the filename or file path. Another common mistake is that you have forgotten to include the file extension in the filename (i.e. <code>.txt</code>). Lastly, the file is not where you say it is or you’ve used an incorrect file path. Using RStudio <a href="01-start.html#rsprojs">Projects</a> and having a logical <a href="01-start.html#dir_struct">directory structure</a> goes a long way to avoiding these types of errors.</p>
 <p>Another really common mistake is to forget to include the <code>header = TRUE</code> argument when the first row of the data contains variable names. For example, if we omit this argument when we import our <code>flowers.txt</code> file everything looks OK at first (no error message at least)</p>
 <div class="cell">
 <div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flowers_bad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">'data/flower.txt'</span>, sep <span class="op">=</span> <span class="st">"\t"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2940,6 +2940,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/biostats-uottawa\.github\.io\/R_way\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -2974,7 +2992,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

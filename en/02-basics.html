@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -63,7 +63,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./03-data.html" rel="next">
-<link href="./01-intro.html" rel="prev">
+<link href="./01-start.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -171,7 +171,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
     <a href="https://github.com/biostats-uottawa/R_way/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
 <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="./On-the-R-way-to-hell.pdf">
               <i class="bi bi-bi-file-pdf pe-1"></i>
@@ -214,7 +214,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="./01-start.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
   </div>
 </li>
@@ -334,8 +334,8 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </ul>
 <section id="getting-started" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="getting-started">
 <span class="header-section-number">2.1</span> Getting started</h2>
-<p>In <a href="01-intro.html">Chapter 1</a> we learned about the <a href="01-intro.html#cons">R Console</a> and creating scripts and <a href="01-intro.html#rsprojs">Projects</a>. We also saw how you write your R code in a script and then source this code into the console to get it to run (if you’ve forgotten how to do this, pop back to the <a href="01-intro.html#cons">console</a> section to refresh your memory). Writing your code in a script means that you’ll always have a permanent record of everything you’ve done (provided you save your script) and also allows you to make loads of comments to remind your future self what you’ve done. So, while you’re working through this Chapter we suggest that you create a new script (or RStudio <a href="01-intro.html#rsprojs">Project</a>) to write your code as you follow along.</p>
-<p>As we saw in the previous <a href="01-intro.html">Chapter</a>, at a basic level we can use R much as you would use a calculator. We can type an arithmetic expression into our script, then source it into the console and receive a result. For example, if we type the expression <code>2 + 2</code> and then source this line of code we get the answer <code>4</code> (reassuringly!)</p>
+<p>In <a href="01-start.html">Chapter 1</a> we learned about the <a href="01-start.html#cons">R Console</a> and creating scripts and <a href="01-start.html#rsprojs">Projects</a>. We also saw how you write your R code in a script and then source this code into the console to get it to run (if you’ve forgotten how to do this, pop back to the <a href="01-start.html#cons">console</a> section to refresh your memory). Writing your code in a script means that you’ll always have a permanent record of everything you’ve done (provided you save your script) and also allows you to make loads of comments to remind your future self what you’ve done. So, while you’re working through this Chapter we suggest that you create a new script (or RStudio <a href="01-start.html#rsprojs">Project</a>) to write your code as you follow along.</p>
+<p>As we saw in the previous <a href="01-start.html">Chapter</a>, at a basic level we can use R much as you would use a calculator. We can type an arithmetic expression into our script, then source it into the console and receive a result. For example, if we type the expression <code>2 + 2</code> and then source this line of code we get the answer <code>4</code> (reassuringly!)</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">2</span> <span class="op">+</span> <span class="fl">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -469,7 +469,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </div>
 </section></section><section id="using-functions-in-r" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="using-functions-in-r">
 <span class="header-section-number">2.3</span> Using functions in R</h2>
-<p>Up until now we’ve been creating simple objects by directly assigning a single value to an object. It’s very likely that you’ll soon want to progress to creating more complicated objects as your R experience grows and the complexity of your tasks increase. Happily, R has a multitude of functions to help you do this. You can think of a function as an object which contains a series of instructions to perform a specific task. The base installation of R comes with many functions already defined or you can increase the power of R by installing one of the 10000’s of <a href="01-intro.html#packages">packages</a> now available. Once you get a bit more experience with using R you may want to define your own functions to perform tasks that are specific to your goals (more about this in <a href="06-programming.html">Chapter 6</a>).</p>
+<p>Up until now we’ve been creating simple objects by directly assigning a single value to an object. It’s very likely that you’ll soon want to progress to creating more complicated objects as your R experience grows and the complexity of your tasks increase. Happily, R has a multitude of functions to help you do this. You can think of a function as an object which contains a series of instructions to perform a specific task. The base installation of R comes with many functions already defined or you can increase the power of R by installing one of the 10000’s of <a href="01-start.html#packages">packages</a> now available. Once you get a bit more experience with using R you may want to define your own functions to perform tasks that are specific to your goals (more about this in <a href="06-programming.html">Chapter 6</a>).</p>
 <p>The first function we will learn about is the <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> function. The <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> function is short for concatenate and we use it to join together a series of values and store them in a data structure called a <a href="https://www.datamentor.io/r-programming/vector/"><strong>vector</strong></a> (more on vectors in <a href="03-data.html">Chapter 3</a>).</p>
 <div class="cell">
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">6</span>, <span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">7</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -951,7 +951,7 @@ gtag('config', 'G-6LLMGL3T2Q', { 'anonymize_ip': true});
 </ul></section></section><section id="saving-stuff-in-r" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="saving-stuff-in-r">
 <span class="header-section-number">2.6</span> Saving stuff in R</h2>
 <p>Your approach to saving work in R and RStudio depends on what you want to save. Most of the time the only thing you will need to save is the R code in your script(s). Remember your script is a reproducible record of everything you’ve done so all you need to do is open up your script in a new RStudio session and source it into the R Console and you’re back to where you left off.</p>
-<p>Unless you’ve followed our <a href="01-intro.html#rsprojs">suggestion</a> about changing the default settings for RStudio Projects you will be asked whether you want to save your workspace image every time you exit RStudio. We suggest that 99.9% of the time that you don’t want do this. By starting with a clean RStudio session each time we come back to our analysis we can be sure to avoid any potential conflicts with things we’ve done in previous sessions.</p>
+<p>Unless you’ve followed our <a href="01-start.html#rsprojs">suggestion</a> about changing the default settings for RStudio Projects you will be asked whether you want to save your workspace image every time you exit RStudio. We suggest that 99.9% of the time that you don’t want do this. By starting with a clean RStudio session each time we come back to our analysis we can be sure to avoid any potential conflicts with things we’ve done in previous sessions.</p>
 <p>There are, however, some occasions when saving objects you’ve created in R is useful. For example, let’s say you’re creating an object that takes hours (even days) of computational time to generate. It would be extremely inconvenient to have to wait all this time each time you come back to your analysis (although we would suggest exporting this to an external file is a better solution). In this case we can save this object as an external <code>.RData</code> file which we can load back into RStudio the next time we want to use it. To save an object to an <code>.RData</code> file you can use the <code><a href="https://rdrr.io/r/base/save.html">save()</a></code> function (notice we don’t need to use the assignment operator here)</p>
 <div class="cell">
 <div class="sourceCode" id="cb129"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/save.html">save</a></span><span class="op">(</span><span class="va">nameOfObject</span>, file <span class="op">=</span> <span class="st">"name_of_file.RData"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1203,6 +1203,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/biostats-uottawa\.github\.io\/R_way\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1237,7 +1255,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1511,7 +1533,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./01-intro.html" class="pagination-link" aria-label="Getting started">
+      <a href="./01-start.html" class="pagination-link" aria-label="Getting started">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started</span></span>
       </a>          
   </div>
