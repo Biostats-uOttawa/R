@@ -1,16 +1,16 @@
+lang <- c("en", "fr")
+
+
 files <- list.files("_book",
   pattern = ".html", recursive = TRUE
 )
 
 files <- files[-length(files)]
-unlist(str_split(files, "/"))
 
 dat0 <- tibble(f_files = files, v1 = files) %>%
   separate(v1, into = c("lang", "file"), sep = "/") %>%
   separate(file, into = c("nb", "name"), sep = "-") %>%
   drop_na()
-
-lang <- c("en", "fr")
 
 
 for (i in lang) {

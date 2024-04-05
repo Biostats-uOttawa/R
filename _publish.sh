@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-read -p "Have you updated the language links with fix_links? " -n 1 -r
+read -p "Have you updated the language links with fix_links? " 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+read -p "Have you committed all your changes? " 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -15,6 +19,6 @@ then
   git checkout main
   echo "done"
 else
-  echo "run _fix-links.r then run _publish.sh again"
+  echo "run _fix-links.r and commit your changes then run _publish.sh again"
 fi
-
+fi
