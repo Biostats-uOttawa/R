@@ -131,12 +131,9 @@ If you teach R, feel free to use some or all of the content in this book to help
 The only thing I ask is that you acknowledge the original source and authors.
 If you find this book useful or have any comments or suggestions I would love to hear from you  ([contact info][whoarewe]).
 
-
-
 ## Citing the book
 
-Julien Martin. (2024). On the R-way to hell. A multilingual introduction to R book (v0.5.0). Zenodo. https://doi.org/10.5281/zenodo.10929586
-
+Julien Martin. ({{< meta year >}}). On the R-way to hell. A multilingual introduction to R book. Version: {{< meta version >}} ({{< meta date >}}).DOI: [{{< meta doi >}}](https://zenodo.org/doi/10.5281/zenodo.10929585)
 
 
 

@@ -4,6 +4,8 @@ project:
 
 #  post-render: 
 #    - _remove-files.r
+version: 0.6.0
+year: 2024
 
 profile:
   default: en
@@ -25,6 +27,7 @@ book:
   repo-url: https://github.com/biostats-uottawa/R_way/
   repo-actions: [edit, issue]
   downloads: [pdf, epub]
+  doi: 10.5281/zenodo.10929585
 
 bibliography: [biblio/book.bib, biblio/grateful-refs.bib]
 biblio-style: apalike
@@ -42,6 +45,7 @@ format:
     css: css/style.css
     code-link: true
     author-meta: "Julien Martin"
+
 #    callout-appearance: simple
 
   pdf: 
