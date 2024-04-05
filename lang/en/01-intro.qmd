@@ -685,7 +685,7 @@ Take R markdown for example, if you want to render an R markdown document to pdf
 Another good reason not to use spaces in file names is that it makes searching for file names (or parts of file names) using [regular expressions][regex] in R (or any other language) much more difficult.
  
   - For the reasons given above, also avoid using special characters (i.e.
-@£$%^&*(:/) in your file names.
+@£$%^&*(:/)) in your file names.
  
   - If you are versioning your files with sequential numbers (i.e.
 file1, file2, file3 ...) and you have more than 9 files you should use 01, 02, 03 ..

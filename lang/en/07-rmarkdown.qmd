@@ -296,10 +296,9 @@ Some of the most common Quarto syntax for providing emphasis and formatting text
 
 \  
 
-Interestingly there is no underline Quarto syntax by default.
-We think this is because bold and italics are used to emphasise content (a semantic meaning) whereas an underline is considered a stylistic element (there may well be other [reasons][underline]).
-If you really want to underline text you can use `<span style="text-decoration:underline">underline this text</span>` for HTML output or `$\text{\underline{This sentence underlined using \LaTeX}}$` for pdf output.
-We just avoid underlining!
+Interestingly there is no underline in R markdown syntax by default, for multiple more or less esoteric reasons, but Quarto fixed that problem.
+An underline is considered a stylistic element (there may well be other [reasons][underline]).
+If you are using Quarto you can simply do`[text to underline]{.underline}` to [underline your text]{.underline}.
 
 #### White space and line breaks {-}
 

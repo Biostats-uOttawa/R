@@ -651,14 +651,14 @@ Bien qu'il n'y ait pas vraiment d'approche standard reconnue pour nommer les fic
 - Tout d'abord, évite d'utiliser des espaces dans les noms de fichiers en les remplaçant par des traits de soulignement ou même des traits d'union.
   Pourquoi cela est-il important ? L'une des raisons est que certains logiciels de ligne de commande (en particulier de nombreux outils bioinformatiques) ne reconnaissent pas un nom de fichier comportant un espace et que tu devras te livrer à toutes sortes de manigances en utilisant des caractères d'échappement pour t'assurer que les espaces sont traités correctement.
   Même si tu ne penses pas utiliser un jour un logiciel de ligne de commande, il se peut que tu le fasses indirectement.
-  Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande `rmarkdown` :package:tu utiliseras en fait un moteur {{< latex >}} en ligne de commande sous le capot (appelé [Pandoc][pandoc]).
-  Une autre bonne raison de ne pas utiliser d'espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l'aide d '          [expressions régulières][regex] dans R (ou tout autre langage).
+  Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande `rmarkdown` :package: tu utiliseras en fait un moteur {{< latex >}} en ligne de commande sous le capot (appelé [Pandoc][pandoc]).
+  Une autre bonne raison de ne pas utiliser d'espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l'aide d'[expressions régulières][regex] dans R (ou tout autre langage).
 
 - Pour les raisons évoquées plus haut, évite également d'utiliser des caractères spéciaux (c'est-à-dire
-  @£$%^\&\*(:/) dans tes noms de fichiers.
+  @£$%^\&\*(:/)) dans tes noms de fichiers.
 
 - Si tu mets en place des versions de tes fichiers avec des numéros séquentiels (par ex.
-  fichier1, fichier2, fichier3 ...) et que tu as plus de 9 fichiers, tu dois utiliser 01, 02, 03 ...
+  fichier1, fichier2, fichier3, ...) et que tu as plus de 9 fichiers, tu dois utiliser 01, 02, 03 ...
   10 pour t'assurer que les fichiers sont imprimés dans le bon ordre (vois ce qui se passe si tu ne le fais pas).
   Si tu as plus de 99 fichiers, utilise 001, 002, 003...
   etc.
@@ -765,7 +765,7 @@ knitr::include_graphics(path = "images/ch-01/after_rcode.png")
 
 Ne sois pas cette personne qui perd des données et des analyses durement gagnées (et souvent coûteuses).
 Ne sois pas cette personne qui pense que ça ne m'arrivera jamais - ça arrivera ! Pense toujours au pire scénario absolu, à quelque chose qui te donne des sueurs froides en te réveillant la nuit, et fais tout ton possible pour que cela n'arrive jamais.
-Pour être clair, si tu comptes copier tes précieux fichiers sur un disque dur externe ou une clé USB, c'est...
+Pour être clair, si tu comptes copier tes précieux fichiers sur un disque dur externe ou une clé USB, ce n'est...
 **PAS** une stratégie de sauvegarde efficace.
 Ces choses tournent mal tout le temps lorsque tu les glisses dans ton sac à dos ou ton "sac pour la vie" et que tu les trimballes entre ton bureau et ta maison.
 Même si tu les laisses branchés sur ton ordinateur, que se passe-t-il lorsque le bâtiment brûle (nous avons bien dit le pire des cas !) ?
