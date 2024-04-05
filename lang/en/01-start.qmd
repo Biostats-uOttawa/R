@@ -68,7 +68,7 @@ plot(1:10)
 
 A plot of the numbers 1 to 10 on both the x and y axes should appear.
 If you see this, you're good to go.
-If not then we suggest you make a note of any errors produced and then use Google to troubleshoot.
+If not then we suggest you make a note of any errors produced and then use your preferred search engine to troubleshoot.
 
 ### Installing an IDE
 
@@ -349,7 +349,7 @@ Again, you can use the `ask = FALSE` argument to avoid having to confirm every p
 There are multiple options for installing packages hosted on GitHub.
 Perhaps the most efficient method is to use the `install_github()` function from the `remotes` :package: package (you installed this package [previously](#cran_packages)).
 Before you use the function you will need to know the GitHub username of the repository owner and also the name of the repository.
-For example, the development version of `dplyr` :package: from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name 'dplyr' (just Google 'github dplyr').
+For example, the development version of `dplyr` :package: from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name 'dplyr' (just search for 'github dplyr').
 To install this version from GitHub use
 
 ```{r, echo=TRUE, eval=FALSE}

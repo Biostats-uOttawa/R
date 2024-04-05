@@ -155,7 +155,7 @@ char_obj3 <- char_obj + char_obj2
 The error message is essentially telling you that either one or both of the objects `char_obj` and `char_obj2` is not a number and therefore cannot be added together.
 
 When you first start learning R, dealing with errors and warnings can be frustrating as they're often difficult to understand (what's an [*argument*][r_arg]? what's a [*binary operator*][bin_op]?).
-One way to find out more information about a particular error is to Google a generalised version of the error message.
+One way to find out more information about a particular error is to search for a generalised version of the error message.
 For the above error try Googling [*'non-numeric argument to binary operator error + r'*][non_num_err] or even [*'common r error messages'*][com_err].
 
 Another error message that you'll get quite a lot when you first start using R is `Error: object 'XXX' not found`.
