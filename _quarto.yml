@@ -16,7 +16,7 @@ execute:
   freeze: auto
 
 book:
-  google-analytics: G-6LLMGL3T2Q
+  google-analytics: G-SLXFYRXJR4
   date: today
   date-format: iso 
   reader-mode: true
