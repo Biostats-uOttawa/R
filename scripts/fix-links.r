@@ -1,5 +1,13 @@
-lang <- c("en", "fr")
+## !/usr/bin/Rscript
+# lang <- Sys.getenv("QUARTO_PROFILE")
 
+args <- commandArgs(trailingOnly = TRUE)
+
+#lang <- c("en", "fr")
+
+library(tidyverse)
+
+lang <- args
 
 files <- list.files("_book",
   pattern = ".html", recursive = TRUE
