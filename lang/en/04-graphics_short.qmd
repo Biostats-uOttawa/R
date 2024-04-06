@@ -43,6 +43,8 @@ the underlying statistics, the geometric arrangement, the theme, see @fig-ggplot
 Users are thus able to manipulate each of these components (i.e.
 layers) and produce a tailor-made figure fit for their specific needs.
 
+![The Grammar of Graphics. Visual by Thomas de Beus](images/ch-04/graph-grammar.png){fig-align="center" #fig-ggplot-str}
+
 Each of these systems have their strengths and weaknesses and we often use them interchangeably.
 In this Chapter we'll introduce you to the both base R plotting function and the`ggplot2` package.
 It's important to note that `ggplot2` is not **required** to make "fancy" and informative figures in R.
@@ -133,13 +135,12 @@ You will see an example of this in [Chapter 5](#simple_lm) where we use the `plo
 
 ## ggplot2
 
-
-```{r fig-ggplot-str, echo = FALSE, out.width = "50%", fig.align = "center", fig.cap = "Structure of graphics with ggplot2"}
+```{r fig-ggplot-str2, echo = FALSE, out.width = "50%", fig.align = "center", fig.cap = "Structure of graphics with ggplot2", eval = FALSE}
 
 knitr::include_graphics(path = "images/full_connected.png")
 ```
 
-As mentionned earlier `ggplot` grammar requires several elements to produce a graphic and a minimum of 3 are required:
+As mentionned earlier `ggplot` grammar requires several elements to produce a graphic (@fig-ggplot-str) and a minimum of 3 are required:
 
 - a data frame
 - a mapping system defining x and y
@@ -147,6 +148,8 @@ As mentionned earlier `ggplot` grammar requires several elements to produce a gr
 
 The data and mapping are provided within the called to the `ggplot()` function with the `data` and `mapping` arguments.
 The geometry layer is added using specific functions.
+
+In fact all layers are needed but default simple values of the other layers are automatically provided.
 
 To redo the @fig-plot5, that contain only a scatterplot of point we can use the `geom_point()` function.
 
