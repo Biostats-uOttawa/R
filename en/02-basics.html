@@ -296,14 +296,35 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
-  <ul class="collapse">
+  <ul>
 <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started"><span class="header-section-number">2.1</span> Getting started</a></li>
-  <li><a href="#objects-in-r" id="toc-objects-in-r" class="nav-link" data-scroll-target="#objects-in-r"><span class="header-section-number">2.2</span> Objects in R</a></li>
+  <li>
+<a href="#objects-in-r" id="toc-objects-in-r" class="nav-link" data-scroll-target="#objects-in-r"><span class="header-section-number">2.2</span> Objects in R</a>
+  <ul class="collapse">
+<li><a href="#r_objs" id="toc-r_objs" class="nav-link" data-scroll-target="#r_objs"><span class="header-section-number">2.2.1</span> Creating objects</a></li>
+  <li><a href="#naming-objects" id="toc-naming-objects" class="nav-link" data-scroll-target="#naming-objects"><span class="header-section-number">2.2.2</span> Naming objects</a></li>
+  </ul>
+</li>
   <li><a href="#using-functions-in-r" id="toc-using-functions-in-r" class="nav-link" data-scroll-target="#using-functions-in-r"><span class="header-section-number">2.3</span> Using functions in R</a></li>
-  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors"><span class="header-section-number">2.4</span> Working with vectors</a></li>
-  <li><a href="#help" id="toc-help" class="nav-link" data-scroll-target="#help"><span class="header-section-number">2.5</span> Getting help</a></li>
+  <li>
+<a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors"><span class="header-section-number">2.4</span> Working with vectors</a>
+  <ul class="collapse">
+<li><a href="#extracting-elements" id="toc-extracting-elements" class="nav-link" data-scroll-target="#extracting-elements"><span class="header-section-number">2.4.1</span> Extracting elements</a></li>
+  <li><a href="#replacing-elements" id="toc-replacing-elements" class="nav-link" data-scroll-target="#replacing-elements"><span class="header-section-number">2.4.2</span> Replacing elements</a></li>
+  <li><a href="#vec_ord" id="toc-vec_ord" class="nav-link" data-scroll-target="#vec_ord"><span class="header-section-number">2.4.3</span> Ordering elements</a></li>
+  <li><a href="#vectorisation" id="toc-vectorisation" class="nav-link" data-scroll-target="#vectorisation"><span class="header-section-number">2.4.4</span> Vectorisation</a></li>
+  <li><a href="#na_vals" id="toc-na_vals" class="nav-link" data-scroll-target="#na_vals"><span class="header-section-number">2.4.5</span> Missing data</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#help" id="toc-help" class="nav-link" data-scroll-target="#help"><span class="header-section-number">2.5</span> Getting help</a>
+  <ul class="collapse">
+<li><a href="#r-help" id="toc-r-help" class="nav-link" data-scroll-target="#r-help"><span class="header-section-number">2.5.1</span> R help</a></li>
+  <li><a href="#rhelp" id="toc-rhelp" class="nav-link" data-scroll-target="#rhelp"><span class="header-section-number">2.5.2</span> Other sources of help</a></li>
+  </ul>
+</li>
   <li><a href="#saving-stuff-in-r" id="toc-saving-stuff-in-r" class="nav-link" data-scroll-target="#saving-stuff-in-r"><span class="header-section-number">2.6</span> Saving stuff in R</a></li>
-  </ul><div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/02-basics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/02-basics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -373,7 +394,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </section><section id="objects-in-r" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="objects-in-r">
 <span class="header-section-number">2.2</span> Objects in R</h2>
 <p>At the heart of almost everything you will do (or ever likely to do) in R is the concept that everything in R is an <a href="https://journal.r-project.org/archive/2009-1/RJournal_2009-1_Chambers.pdf">object</a>. These objects can be almost anything, from a single number or character string (like a word) to highly complex structures like the output of a plot, a summary of your statistical analysis or a set of R commands that perform a specific task. Understanding how you create objects and assign values to objects is key to understanding R.</p>
-<section id="r_objs" class="level3"><h3 class="anchored" data-anchor-id="r_objs">Creating objects</h3>
+<section id="r_objs" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="r_objs">
+<span class="header-section-number">2.2.1</span> Creating objects</h3>
 <p>To create an object we simply give the object a name. We can then assign a value to this object using the <em>assignment operator</em> <code>&lt;-</code> (sometimes called the <em>gets operator</em>). The assignment operator is a composite symbol comprised of a ‘less than’ symbol <code>&lt;</code> and a hyphen <code>-</code> .</p>
 <div class="cell">
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_obj</span> <span class="op">&lt;-</span> <span class="fl">48</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -455,7 +477,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <span><span class="co"># Error: object 'no_obj' not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>R returns an error message because we haven’t created (defined) the object <code>no_obj</code> yet. Another clue that there’s a problem with this code is that, if you check your environment, you’ll see that object <code>my_obj4</code> has not been created.</p>
-</section><section id="naming-objects" class="level3"><h3 class="anchored" data-anchor-id="naming-objects">Naming objects</h3>
+</section><section id="naming-objects" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="naming-objects">
+<span class="header-section-number">2.2.2</span> Naming objects</h3>
 <p>Naming your objects is one of the most difficult things you will do in R. Ideally your object names should be kept both short and informative which is not always easy. If you need to create objects with multiple words in their name then use either an underscore or a dot between words or capitalise the different words. We prefer the underscore format and never include uppercases in names (called <a href="https://en.wikipedia.org/wiki/Snake_case"><em>snake case</em></a>)</p>
 <div class="cell">
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">output_summary</span> <span class="op">&lt;-</span> <span class="st">"my analysis"</span> <span class="co"># recommended#</span></span>
@@ -588,7 +611,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </section><section id="vectors" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="vectors">
 <span class="header-section-number">2.4</span> Working with vectors</h2>
 <p>Manipulating, summarising and sorting data using R is an important skill to master but one which many people find a little confusing at first. We’ll go through a few simple examples here using vectors to illustrate some important concepts but will build on this in much more detail in <a href="03-data.html">Chapter 3</a> where we will look at more complicated (and useful) data structures.</p>
-<section id="extracting-elements" class="level3"><h3 class="anchored" data-anchor-id="extracting-elements">Extracting elements</h3>
+<section id="extracting-elements" class="level3" data-number="2.4.1"><h3 data-number="2.4.1" class="anchored" data-anchor-id="extracting-elements">
+<span class="header-section-number">2.4.1</span> Extracting elements</h3>
 <p>To extract (also known as indexing or subscripting) one or more values (more generally known as elements) from a vector we use the square bracket <code>[ ]</code> notation. The general approach is to name the object you wish to extract from, then a set of square brackets with an index of the element you wish to extract contained within the square brackets. This index can be a position or the result of a logical test.</p>
 <section id="positional-index" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="positional-index">Positional index</h4>
 <p>To extract elements based on their position we simply write the position inside the <code>[ ]</code>. For example, to extract the 3rd value of <code>my_vec</code></p>
@@ -685,7 +709,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <pre><code>[1] 2 1 7</code></pre>
 </div>
 </div>
-</section></section><section id="replacing-elements" class="level3"><h3 class="anchored" data-anchor-id="replacing-elements">Replacing elements</h3>
+</section></section><section id="replacing-elements" class="level3" data-number="2.4.2"><h3 data-number="2.4.2" class="anchored" data-anchor-id="replacing-elements">
+<span class="header-section-number">2.4.2</span> Replacing elements</h3>
 <p>We can change the values of some elements in a vector using our <code>[ ]</code> notation in combination with the assignment operator <code>&lt;-</code>. For example, to replace the 4<sup>th</sup> value of our <code>my_vec</code> object from <code>6</code> to <code>500</code></p>
 <div class="cell">
 <div class="sourceCode" id="cb87"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_vec</span><span class="op">[</span><span class="fl">4</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">500</span></span>
@@ -709,7 +734,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <pre><code>[1] 1000 1000 1000  500 1000  100  100    7</code></pre>
 </div>
 </div>
-</section><section id="vec_ord" class="level3"><h3 class="anchored" data-anchor-id="vec_ord">Ordering elements</h3>
+</section><section id="vec_ord" class="level3" data-number="2.4.3"><h3 data-number="2.4.3" class="anchored" data-anchor-id="vec_ord">
+<span class="header-section-number">2.4.3</span> Ordering elements</h3>
 <p>In addition to extracting particular elements from a vector we can also order the values contained in a vector. To sort the values from lowest to highest value we can use the <code><a href="https://rdrr.io/r/base/sort.html">sort()</a></code> function</p>
 <div class="cell">
 <div class="sourceCode" id="cb93"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">vec_sort</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span><span class="op">(</span><span class="va">my_vec</span><span class="op">)</span></span>
@@ -764,7 +790,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </div>
 </div>
 <p>You’re probably thinking ‘what’s the use of this?’ Well, imagine you have a dataset which contains two columns of data and you want to sort each column. If you just use <code><a href="https://rdrr.io/r/base/sort.html">sort()</a></code> to sort each column separately, the values of each column will become uncoupled from each other. By using the ‘order()’ on one column, a vector of positional indices is created of the values of the column in ascending order This vector can be used on the second column, as the index of elements which will return a vector of values based on the first column.</p>
-</section><section id="vectorisation" class="level3"><h3 class="anchored" data-anchor-id="vectorisation">Vectorisation</h3>
+</section><section id="vectorisation" class="level3" data-number="2.4.4"><h3 data-number="2.4.4" class="anchored" data-anchor-id="vectorisation">
+<span class="header-section-number">2.4.4</span> Vectorisation</h3>
 <p>One of the great things about R functions is that most of them are vectorised. This means that the function will operate on all elements of a vector without needing to apply the function on each element separately. For example, to multiple each element of a vector by 5 we can simply use</p>
 <div class="cell">
 <div class="sourceCode" id="cb107"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create a vector</span></span>
@@ -803,7 +830,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <pre><code>[1]  4  7  8  3 10 22</code></pre>
 </div>
 </div>
-</section><section id="na_vals" class="level3"><h3 class="anchored" data-anchor-id="na_vals">Missing data</h3>
+</section><section id="na_vals" class="level3" data-number="2.4.5"><h3 data-number="2.4.5" class="anchored" data-anchor-id="na_vals">
+<span class="header-section-number">2.4.5</span> Missing data</h3>
 <p>In R, missing data is usually represented by an <code>NA</code> symbol meaning ‘Not Available’. Data may be missing for a whole bunch of reasons, maybe your machine broke down, maybe you broke down, maybe the weather was too bad to collect data on a particular day etc etc. Missing data can be a pain in the proverbial both from an R perspective and also a statistical perspective. From an R perspective missing data can be problematic as different functions deal with missing data in different ways. For example, let’s say we collected air temperature readings over 10 days, but our thermometer broke on day 2 and again on day 9 so we have no data for those days</p>
 <div class="cell">
 <div class="sourceCode" id="cb115"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">7.2</span>, <span class="cn">NA</span>, <span class="fl">7.1</span>, <span class="fl">6.9</span>, <span class="fl">6.5</span>, <span class="fl">5.8</span>, <span class="fl">5.8</span>, <span class="fl">5.5</span>, <span class="cn">NA</span>, <span class="fl">5.5</span><span class="op">)</span></span>
@@ -836,7 +864,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </section></section><section id="help" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="help">
 <span class="header-section-number">2.5</span> Getting help</h2>
 <p>This book is intended as a relatively brief introduction to R and as such you will soon be using functions and packages that go beyond this scope of this introductory text. Fortunately, one of the strengths of R is its comprehensive and easily accessible help system and wealth of online resources where you can obtain further information.</p>
-<section id="r-help" class="level3"><h3 class="anchored" data-anchor-id="r-help">R help</h3>
+<section id="r-help" class="level3" data-number="2.5.1"><h3 data-number="2.5.1" class="anchored" data-anchor-id="r-help">
+<span class="header-section-number">2.5.1</span> R help</h3>
 <p>To access R’s built-in help facility to get information on any function simply use the <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code> function. For example, to open the help page for our friend the <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> function.</p>
 <div class="cell">
 <div class="sourceCode" id="cb121"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/help.html">help</a></span><span class="op">(</span><span class="st">"mean"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -900,7 +929,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <div class="cell">
 <div class="sourceCode" id="cb128"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/RSiteSearch.html">RSiteSearch</a></span><span class="op">(</span><span class="st">"regression"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="rhelp" class="level3"><h3 class="anchored" data-anchor-id="rhelp">Other sources of help</h3>
+</section><section id="rhelp" class="level3" data-number="2.5.2"><h3 data-number="2.5.2" class="anchored" data-anchor-id="rhelp">
+<span class="header-section-number">2.5.2</span> Other sources of help</h3>
 <p>There really has never been a better time to start learning R. There are a plethora of freely available online resources ranging from whole courses to subject specific tutorials and mailing lists. There are also plenty of paid for options if that’s your thing but unless you’ve money to burn there really is no need to part with your hard earned cash. Some resources we have found helpful are listed below.</p>
 <p><strong>General R resources</strong></p>
 <ul>
