@@ -2,7 +2,9 @@
 # Preface {.unnumbered}
 
 
-```{r links, child="_links.md"}
+```{r}
+#| label: links
+#| child: _links.md
 ```
 
 ## The aim of this book {.unnumbered}
@@ -44,7 +46,9 @@ We use a few typographical conventions throughout this book.
 
 R code and the resulting output are presented in code blocks in our book.
 
-```{r, echo=TRUE, eval=TRUE}
+```{r}
+#| echo: true
+#| eval: true
 2 + 2
 ```
 

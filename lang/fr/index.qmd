@@ -1,6 +1,8 @@
 # Préface {.unnumbered}
 
-```{r links, child="_links.md"}
+```{r}
+#| label: links
+#| child: _links.md
 ```
 
 ::: {.callout-warning}
@@ -38,7 +40,9 @@ Nous utilisons quelques conventions typographiques tout au long de ce livre.
 
 Le code R et la sortie qui en résulte sont présentés dans des blocs de code dans notre livre.
 
-```{r, echo=TRUE, eval=TRUE}
+```{r}
+#| echo: true
+#| eval: true
 2 + 2
 ```
 

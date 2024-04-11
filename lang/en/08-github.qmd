@@ -32,7 +32,12 @@ So why should you worry about version control? Well, first of all it helps avoid
 
 \  
 
-```{r youNeedVC1, echo=FALSE, out.width="75%", fig.align="center", fig.cap="You need version control"}
+```{r}
+#| label: youNeedVC1
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
+#| fig-cap: You need version control
 knitr::include_graphics(path = "images/Messy_folder.PNG")
 ```
 
@@ -42,7 +47,11 @@ usually arising from this (familiar?) scenario
 
 \  
 
-```{r youNeedVC2, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: youNeedVC2
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/final_doc.png")
 ```
 
@@ -71,7 +80,11 @@ If other people are working on the same project (**repository**), or maybe you'r
 
 \  
 
-```{r git-cart, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: git-cart
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/Github_cartoon2.png")
 ```
 
@@ -93,7 +106,11 @@ If you get an error (something like `git: command not found`) this means you don
 
 \  
 
-```{r git-version, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: git-version
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/git_version.png")
 ```
 
@@ -161,7 +178,11 @@ You will need to restart RStudio after doing this.
 
 \  
 
-```{r git-rs, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: git-rs
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/git_path.png")
 ```
 
@@ -206,7 +227,11 @@ Click on the 'Repositories' tab at the top and then on the green 'New' button on
 
 \  
 
-```{r new-repo1, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-repo1
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_repo.png")
 ```
 
@@ -216,7 +241,11 @@ Give your new repo a name (let's call it `first_repo` for this Chapter), select 
 
 \  
 
-```{r new-repo2, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-repo2
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_repo_opt.png")
 ```
 
@@ -228,7 +257,11 @@ Next click on the green 'Clone or Download' button and copy the `https//...` URL
 
 \  
 
-```{r new-repo3, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-repo3
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_repo_clone.png")
 ```
 
@@ -240,7 +273,11 @@ In the pop up window select `Version Control`.
 
 \  
 
-```{r new-proj1, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj1
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/proj_setup1.png")
 ```
 
@@ -254,7 +291,11 @@ We also tick the `Open in new session` option.
 
 \  
 
-```{r new-proj2, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj2
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/proj_setup2.png")
 ```
 
@@ -269,7 +310,11 @@ Any changes you make to files in this directory will be version controlled by Gi
 
 \  
 
-```{r new-proj2a, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj2a
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/proj_setup3.png")
 ```
 
@@ -287,7 +332,11 @@ In RStudio click on the `File` -> `New Project` menu and select the `New Directo
 
 \  
 
-```{r new-proj3, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj3
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS1.png")
 ```
 
@@ -297,7 +346,11 @@ In the pop up window select the `New Project` option
 
 \  
 
-```{r new-proj4, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj4
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/proj_setup_RS.png")
 ```
 
@@ -308,7 +361,11 @@ Make sure the `Create a git repository` option is ticked
 
 \  
 
-```{r new-proj5, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj5
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS2.png")
 ```
 
@@ -320,7 +377,11 @@ You can check this by looking in the `Files` tab in RStudio (usually in the bott
 
 \  
 
-```{r new-proj6, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj6
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS3.png")
 ```
 
@@ -334,7 +395,11 @@ To get our two files under version control click on the 'Git' tab which is usual
 
 \  
 
-```{r new-proj7, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj7
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS4.png")
 ```
 
@@ -345,7 +410,11 @@ Next, tick the boxes under the 'Staged' column for both files and then click on 
 
 \  
 
-```{r new-proj8, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj8
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS5.png")
 ```
 
@@ -359,7 +428,11 @@ The two files should now have disappeared from the Git pane in RStudio indicatin
 
 \  
 
-```{r new-proj9, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj9
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS6.png")
 ```
 
@@ -375,7 +448,11 @@ This time **do not** tick the 'Initialize this repository with a README' (this i
 \  
 
 
-```{r new-proj10, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj10
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS7.png")
 ```
 
@@ -387,7 +464,11 @@ The code we are interested in is the code under `...or push an existing reposito
 
 \  
 
-```{r new-proj11, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj11
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS8.png")
 ```
 
@@ -407,7 +488,11 @@ You should see something like this
 
 \  
 
-```{r new-proj12, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj12
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_prog_RS9.png")
 ```
 
@@ -417,7 +502,11 @@ If you take a look at your repo back on GitHub (click on the `/second_repo` link
 
 \  
 
-```{r new-proj13, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj13
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS10.png")
 ```
 
@@ -434,7 +523,11 @@ In your repository on GitHub click on the green `Add a README` button.
 
 \  
 
-```{r new-proj14, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj14
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS11.png")
 ```
 
@@ -444,7 +537,11 @@ Now write a short description of your project in the `<> Edit new file` section 
 
 \  
 
-```{r new-proj15, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new-proj15
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/new_proj_RS12.png")
 ```
 
@@ -486,7 +583,11 @@ You keep on with this cycle until you get to a point when you would like to **pu
 5.
 If you're working with other people on the same project you may also need to **pull** their changes to your local computer  
 
-```{r workflow, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: workflow
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/workflow_3.png")
 ```
 
@@ -500,7 +601,11 @@ Either use the `File` -> `Open Project` menu or click on the top right project i
 
 \  
 
-```{r rm0, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rm0
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd0.png")
 ```
 
@@ -516,7 +621,11 @@ Your R markdown document should look something like the following (it doesn't ma
 
 \  
 
-```{r rm1, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: rm1
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd.png")
 ```
 
@@ -526,7 +635,11 @@ Take a look at the 'Git' tab which should list your new R markdown document (`fi
 
 \  
 
-```{r rm2, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rm2
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd2.png")
 ```
 
@@ -539,7 +652,11 @@ In our case all of the files are to be added (capital A) as we have just created
 
 \  
 
-```{r rm3, echo=FALSE, out.width="15%", fig.align="center"}
+```{r}
+#| label: rm3
+#| echo: false
+#| out-width: 15%
+#| fig-align: center
 knitr::include_graphics(path = "images/rstudio_git_cols.png")
 ```
 
@@ -550,7 +667,11 @@ This is done by clicking on the 'Commit' button.
 
 \  
 
-```{r rm4, echo=FALSE, out.width="50%", fig.align="center"}
+```{r}
+#| label: rm4
+#| echo: false
+#| out-width: 50%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd3.png")
 ```
 
@@ -569,7 +690,11 @@ Now click on the 'Commit' button to commit these changes.
 
 \  
 
-```{r rm5, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rm5
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd4.png")
 ```
 
@@ -581,7 +706,11 @@ Note that the staged files have now been removed.
 
 \  
 
-```{r rm6, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: rm6
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd5.png")
 ```
 
@@ -597,7 +726,11 @@ You will see a summary of the push you just performed.
 Hit the 'Close' button and then close the 'Review Changes' window.
 
 \  
-```{r rm7, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: rm7
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd6.png")
 ```
 
@@ -609,7 +742,11 @@ Along side the file name you will see your last commit message ('First commit' i
 
 \  
 
-```{r rm8, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: rm8
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd7.png")
 ```
 
@@ -619,7 +756,11 @@ To see the contents of the file click on the `first_doc.Rmd` file name.
 
 \  
 
-```{r rm9, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: rm9
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/first_Rmd8.png")
 ```
 
@@ -639,7 +780,11 @@ Lastly, let's add a summary table of the dataframe using the `kable()` and `summ
 
 \  
 
-```{r mod1, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: mod1
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/mod1.png")
 ```
 
@@ -654,7 +799,11 @@ The status icons indicate that the `first_doc.Rmd` file has been modified (capit
 
 \  
 
-```{r mod2, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: mod2
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/mod2.png")
 ```
 
@@ -664,7 +813,11 @@ To stage these files tick the 'Staged' box for each file and click on the 'Commi
 
 \  
 
-```{r mod3, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: mod3
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/mod3.png")
 ```
 
@@ -677,7 +830,11 @@ Once you're happy, commit these changes by writing a suitable commit message and
 
 \  
 
-```{r mod4, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: mod4
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/mod4.png")
 ```
 
@@ -688,7 +845,11 @@ Go to your online GitHub repository and you will see your new commits, including
  
 \  
 
-```{r mod5, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: mod5
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/mod5.png")
 ```
 
@@ -698,7 +859,11 @@ To view the changes in `first_doc.Rmd` click on the file name for this file.
 
 \  
 
-```{r mod6, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: mod6
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/mod6.png")
 ```
 
@@ -714,7 +879,11 @@ You can also click on the 'Commit' or 'Diff' buttons which takes you to the same
 
 \ 
 
-```{r his1, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: his1
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/c_history.png")
 ```
 
@@ -730,7 +899,11 @@ You can also view the contents of each file by clicking on the 'View file @ SHA 
 
 \  
 
-```{r his2, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: his2
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/c_history2.png")
 ```
 
@@ -741,7 +914,11 @@ To view the commit history navigate to the repository and click on the 'commits'
 
 \  
 
-```{r his3, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: his3
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/c_history3.png")
 ```
 
@@ -753,7 +930,11 @@ To view the changes in files associated with the commit simply click on the rele
 
 \  
 
-```{r his4, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: his4
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/c_history4.png")
 ```
 
@@ -763,7 +944,11 @@ Which will display changes using the usual format of green for additions and red
 
 \  
 
-```{r his5, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: his5
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/c_history5.png")
 ```
 
@@ -782,7 +967,11 @@ Just be aware that you cannot undo this operation so use with caution.
 
 \  
 
-```{r rev1, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev1
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert1.png")
 ```
 
@@ -795,7 +984,11 @@ In a similar fashion you can discard chunks of code by clicking on the 'Discard 
 
 \  
 
-```{r rev2, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev2
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert2.png")
 ```
 
@@ -812,7 +1005,11 @@ You can do this by staging your file and then tick the 'Amend previous commit` b
 
 \  
 
-```{r rev3, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev3
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert3.png")
 ```
 
@@ -823,7 +1020,11 @@ We use the amend commit approach alot but it's important to understand that you 
 
 \  
 
-```{r rev4, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev4
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert4.png")
 ```
 
@@ -836,7 +1037,11 @@ If you spot a mistake that has happened multiple commits back or you just want t
 
 \  
 
-```{r rev5, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev5
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert5.png")
 ```
 
@@ -849,7 +1054,11 @@ Don't forget to stage and commit this new file.
 
 \  
 
-```{r rev6, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev6
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert6.png")
 ```
 
@@ -859,7 +1068,11 @@ knitr::include_graphics(path = "images/revert6.png")
 
 \  
 
-```{r rev7, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev7
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert7.png")
 ```
 
@@ -897,7 +1110,11 @@ Let's say we want to revert back to our 'First commit' which has a SHA identifie
 
 \  
 
-```{r rev8, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev8
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert8.png")
 ```
 
@@ -917,7 +1134,11 @@ Notice that if we look at our commit history all of the commits we have made are
 
 \  
 
-```{r rev9, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev9
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert9.png")
 ```
 
@@ -927,7 +1148,11 @@ and our repo on GitHub also reflects these changes
 
 \  
 
-```{r rev10, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: rev10
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/revert10.png")
 ```
 
@@ -953,7 +1178,11 @@ You keep on with this cycle until you get to a point when you would like to **pu
 5.
 If you're working with other people on the same project you may also need to **pull** their changes to your local computer  
 
-```{r workflow, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: workflow
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 ```
 
 \  
@@ -991,7 +1220,11 @@ On RStudio, in the git pane,  you can right clicking on the filename to exclude 
 
 \  
 
-```{r tip1, echo=FALSE, out.width="70%", fig.align="center"}
+```{r}
+#| label: tip1
+#| echo: false
+#| out-width: 70%
+#| fig-align: center
 knitr::include_graphics(path = "images/tip1.png")
 ```
 
@@ -1028,7 +1261,9 @@ We followed this structure (with modifications and different content) in the 'Re
 
 These are only a couple of examples, all you need to do is search for "version control with git and GitHub" to see how huge the community around these open source projects is and how many free resources are available for you to become a version control expert.
 
-```{r links, child="_links.md"}
+```{r}
+#| label: links
+#| child: _links.md
 ```
 
 

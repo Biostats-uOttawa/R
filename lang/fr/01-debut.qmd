@@ -60,7 +60,9 @@ Le plus simple est de lancer R en double-cliquant sur l'icône R (Windows ou Mac
 Tu devrais voir apparaître la Console R et tu devrais pouvoir taper des commandes R dans la Console après l'invite de commande `>`.
 Essaie de taper le code R suivant et appuie sur Entrée :
 
-```{r, out.width="75%", fig.align="center"}
+```{r}
+#| out-width: 75%
+#| fig-align: center
 plot(1:10)
 ```
 
@@ -135,7 +137,11 @@ Ces environnements sont plus puissants que de simples éditeurs de texte, et son
 
 Lorsque tu ouvres R studio pour la première fois, tu devrais voir la présentation suivante (elle peut être légèrement différente sur un ordinateur Windows).
 
-```{r rstudio_start, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| label: rstudio_start
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/rstudio.png")
 ```
 
@@ -154,7 +160,11 @@ Tu peux taper du code R directement dans la console à l'invite de la ligne de c
 Par exemple, si tu tapes `2 + 2` dans la console, tu devrais obtenir la réponse `4` (rassurante).
 Ne t'inquiète pas pour le `[1]` au début de la ligne pour l'instant.
 
-```{r rstudio_console, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| label: rstudio_console
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/rconsole_eval.png")
 ```
 
@@ -164,20 +174,32 @@ Un script R est un simple fichier texte avec une balise `.R` qui contient tes li
 Ces lignes de code sont ensuite introduites dans la console R, ligne par ligne.
 Pour créer un nouveau script R, clique sur le menu "Fichier" puis sélectionne Nouveau fichier --> Script R.
 
-```{r rstudio_newscript, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| label: rstudio_newscript
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/new_script.png")
 ```
 
 Tu remarqueras qu'une nouvelle fenêtre (appelée volet Source) apparaît en haut à gauche de RStudio et que la console se trouve maintenant en bas à gauche.
 La nouvelle fenêtre est un éditeur de script et c'est là que tu écriras ton code.
 
-```{r rstudio_new, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| label: rstudio_new
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/rstudio_new.png")
 ```
 
 Pour faire passer ton code de ton éditeur de script à la console, place ton curseur sur la ligne de code, puis clique sur le bouton "Exécuter" en haut à droite de la fenêtre de l'éditeur de script.
 
-```{r rstudio_run, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| label: rstudio_run
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/rstudio_run.png")
 ```
 
@@ -227,7 +249,10 @@ Tu peux accéder à chaque composant en cliquant sur l'onglet approprié dans le
 
 ### VSCode{#vscode_orient}
 
-```{r, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/vs_orient.png")
 ```
 
@@ -258,7 +283,10 @@ Comprend :
 - édition de scripts
 - panneaux de prévisualisation
 
-```{r, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/vs_editor_tabs.png")
 ```
 
@@ -270,7 +298,10 @@ Contient :
 Il peut être divisé et exécuter plusieurs sessions en même temps.
 - un panneau de problèmes mettant en évidence les problèmes de grammaire et de codage
 
-```{r, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/vs_term_panel.png")
 ```
 
@@ -293,7 +324,9 @@ Cependant, l'inconvénient potentiel de l'utilisation de la version de développ
 Pour installer un paquet à partir du CRAN, tu peux utiliser la commande `install.packages()` fonction.
 Par exemple, si tu veux installer le paquet `remotes` entre le code suivant dans la fenêtre Console de RStudio (note : tu auras besoin d'une connexion internet pour faire cela)
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 install.packages("remotes", dependencies = TRUE)
 ```
 
@@ -303,7 +336,9 @@ Le `dependencies = TRUE` permet de s'assurer que les paquets supplémentaires n�
 C'est une bonne pratique de mettre régulièrement à jour tes paquets précédemment installés pour avoir accès aux nouvelles fonctionnalités et aux corrections de bogues.
 Pour mettre à jour les paquets CRAN, tu peux utiliser la commande `update.packages()` (tu auras besoin d'une connexion Internet fonctionnelle pour cela)
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 update.packages(ask = FALSE)
 ```
 
@@ -315,25 +350,33 @@ Pour installer les paquets de Bioconductor, le processus est [un peu différent]
 Tu dois d'abord installer le `BiocManager` :package: paquet.
 Tu ne dois le faire qu'une seule fois, à moins que tu ne réinstalles ou mettes à jour R.
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 install.packages("BiocManager", dependencies = TRUE)
 ```
 
 Une fois que le `BiocManager` :package: a été installé, tu peux soit installer tous les paquets "de base" de Bioconductor à l'aide de la commande
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 BiocManager::install()
 ```
 
 ou installer des paquets spécifiques tels que le `GenomicRanges` :package:  et `edgeR` :package: paquets
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 BiocManager::install(c("GenomicRanges", "edgeR"))
 ```
 
 Pour mettre à jour les paquets de Bioconductor, il suffit d'utiliser la commande `BiocManager::install()` à nouveau
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 BiocManager::install(ask = FALSE)
 ```
 
@@ -347,7 +390,9 @@ Avant d'utiliser la fonction, tu devras connaître le nom d'utilisateur GitHub d
 Par exemple, la version de développement de `dplyr` :package: de Hadley Wickham est hébergée sur le compte GitHub de tidyverse et porte le nom de dépôt " dplyr " (il suffit de taper " github dplyr " sur Google).
 Pour installer cette version depuis GitHub, utilise
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 remotes::install_github("tidyverse/dplyr")
 ```
 
@@ -359,7 +404,9 @@ Une fois que tu as installé un paquet sur ton ordinateur, il n'est pas immédia
 Pour utiliser un paquet, tu dois d'abord le charger à l'aide de la commande `library()` en utilisant la fonction
 Par exemple, pour charger le paquet `remotes` :package:  que tu as précédemment installé
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 library(remotes)
 ```
 
@@ -369,7 +416,9 @@ Nous avons tendance à mettre tous nos `library()` nécessaires à notre analyse
 Si tu essaies d'utiliser une fonction sans avoir au préalable chargé le package R correspondant, tu recevras un message d'erreur indiquant que R n'a pas pu trouver la fonction.
 Par exemple, si tu essaies d'utiliser la fonction `install_github()` sans charger le paquetage `remotes` :package: tu recevras l'erreur suivante
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 install_github("tidyverse/dplyr")
 
 # Error in install_github("tidyverse/dplyr") :
@@ -379,7 +428,9 @@ install_github("tidyverse/dplyr")
 Parfois, il peut être utile d'utiliser une fonction sans utiliser d'abord le package `library()` fonction.
 Si, par exemple, tu n'utilises qu'une ou deux fonctions dans ton script et que tu ne veux pas charger toutes les autres fonctions d'un paquet, tu peux accéder directement à la fonction en spécifiant le nom du paquet suivi de deux points, puis du nom de la fonction.
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 remotes::install_github("tidyverse/dplyr")
 ```
 
@@ -402,7 +453,10 @@ Sur un ordinateur fonctionnant sous Windows, notre répertoire de travail compre
 
 Si tu n'utilises pas d'IDE, tu dois définir ton répertoire de travail à l'aide de la commande `setwd()` au début de chaque script R (ce que nous avons fait pendant de nombreuses années).
 
-```{r wd, echo=TRUE, eval=FALSE}
+```{r}
+#| label: wd
+#| echo: true
+#| eval: false
 setwd("/home/julien/Documents/courses/biostats/R_way/")
 ```
 
@@ -416,7 +470,10 @@ Il lui suffira alors d'ouvrir le fichier du projet et tous les scripts R qui con
 Par exemple, disons que tu as créé un sous-répertoire appelé `data` dans ton répertoire de projet racine qui contient un fichier délimité en csv appelé `mydata.csv` (nous aborderons les structures de répertoire [ci-dessous](#dir_struct)).
 Pour importer cette base de données dans un projet RStudio à l'aide de la fonction `read.csv()` (ne t'inquiète pas pour l'instant, nous aborderons ce sujet de façon beaucoup plus détaillée dans la section [chapitre 3](#data_r)), tout ce que tu dois inclure dans ton script R est
 
-```{r rel-fp1, echo=TRUE, eval=FALSE}
+```{r}
+#| label: rel-fp1
+#| echo: true
+#| eval: false
 dat <- read.csv("data/mydata.csv")
 ```
 
@@ -425,7 +482,10 @@ Parce que le chemin d'accès au fichier `data/mydata.csv` est relatif au répert
 Si tu n'utilises pas un projet RStudio ou un espace de travail VScode, tu devras soit définir le répertoire de travail en fournissant le chemin complet de ton répertoire, soit spécifier le chemin complet du fichier de données.
 Aucune de ces deux options n'est reproductible sur d'autres ordinateurs.
 
-```{r rel-fp2, echo=TRUE, eval=FALSE}
+```{r}
+#| label: rel-fp2
+#| echo: true
+#| eval: false
 setwd("/home/julien/Documents/courses/biostats/R_way")
 
 dat <- read.csv("data/mydata.csv")
@@ -433,7 +493,9 @@ dat <- read.csv("data/mydata.csv")
 
 ou
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 dat <- read.csv("/home/julien/Documents/courses/biostats/R_way/data/mydata.csv")
 ```
 
@@ -441,7 +503,10 @@ Pour ceux qui veulent pousser plus loin la notion de chemins d'accès relatifs, 
 Les `here()` te permet de construire des chemins d'accès pour n'importe quel fichier par rapport au répertoire racine du projet qui sont également indépendants du système d'exploitation (fonctionne sur une machine Mac, Windows ou Linux).
 Par exemple, pour importer notre `mydata.csv` à partir du répertoire `data` il suffit d'utiliser :
 
-```{r rel-fp23, echo=TRUE, eval=FALSE}
+```{r}
+#| label: rel-fp23
+#| echo: true
+#| eval: false
 library(here) # you may need to install the here package first
 dat <- read.csv(here("data", "mydata.csv"))
 
@@ -554,7 +619,10 @@ Tu peux créer ta structure de répertoires à l'aide de l'Explorateur Windows (
 
 Une autre approche consiste à utiliser la fonction `dir.create()` de la console R.
 
-```{r dir, echo=TRUE, eval=FALSE}
+```{r}
+#| label: dir
+#| echo: true
+#| eval: false
 # create directory called 'data'
 dir.create("data")
 ```
@@ -583,19 +651,31 @@ Pour créer un projet, ouvre RStudio et sélectionne `File` -> `New Project...` 
 Tu peux créer soit un tout nouveau projet, soit un projet à partir d'un répertoire existant, soit un projet à version contrôlée (voir la rubrique [Chapitre GitHub](#github_r) pour plus de détails à ce sujet).
 Dans ce chapitre, nous allons créer un projet dans un nouveau répertoire.
 
-```{r new_proj, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new_proj
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/new_proj.png")
 ```
 
 Tu peux également créer un nouveau projet en cliquant sur le bouton "Projet" en haut à droite de RStudio et en sélectionnant "Nouveau projet...
 
-```{r new_proj1, echo=FALSE, out.width="30%", fig.align="center"}
+```{r}
+#| label: new_proj1
+#| echo: false
+#| out-width: 30%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/new_proj1.png")
 ```
 
 Dans la fenêtre suivante, sélectionne 'Nouveau projet'.
 
-```{r new_proj2, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new_proj2
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/new_proj2.png")
 ```
 
@@ -604,7 +684,11 @@ Si tu veux changer l'emplacement du répertoire sur ton ordinateur, clique sur l
 Nous cochons toujours la case "Ouvrir dans une nouvelle session".
 Enfin, clique sur 'Créer un projet' pour créer le nouveau projet.
 
-```{r new_proj3, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new_proj3
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/new_proj3.png")
 ```
 
@@ -612,7 +696,11 @@ Une fois ton nouveau projet créé, tu auras un nouveau dossier sur ton ordinate
 Ce projet `.Rproj` contient diverses options de projet (mais tu ne devrais pas vraiment interagir avec lui) et peut également être utilisé comme raccourci pour ouvrir le projet directement à partir du système de fichiers (il suffit de double-cliquer dessus).
 Tu peux le vérifier dans l'onglet 'Fichiers' de RStudio (ou dans Finder si tu es sur un Mac ou dans l'Explorateur de fichiers sous Windows).
 
-```{r new_proj4, echo=FALSE, out.width="80%", fig.align="center"}
+```{r}
+#| label: new_proj4
+#| echo: false
+#| out-width: 80%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/new_proj4.png")
 ```
 
@@ -622,7 +710,11 @@ Ainsi, à chaque fois que tu ouvres ton projet, tu démarres avec une session R 
 Tu n'es pas obligé de faire cela (beaucoup de gens ne le font pas) mais nous préférons commencer avec un espace de travail complètement propre chaque fois que nous ouvrons nos projets pour éviter tout conflit potentiel avec des choses que nous avons faites dans des sessions précédentes (ce qui conduit parfois à des résultats surprenants et à des maux de tête pour trouver le problème).
 L'inconvénient de cette méthode est que tu devras réexécuter ton code R à chaque fois que tu ouvriras ton projet.
 
-```{r new_proj5, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: new_proj5
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/new_proj5.png")
 ```
 
@@ -642,7 +734,12 @@ Pour qu'un nom de fichier soit "bon", il faut qu'il soit informatif et relativem
 Ce n'est pas toujours un compromis facile et il faut souvent y réfléchir.
 Dans l'idéal, tu devrais essayer d'éviter les éléments suivants !
 
-```{r fn, echo=FALSE, out.width="30%", fig.align="center", fig.cap="source:https://xkcd.com/1459/"}
+```{r}
+#| label: fn
+#| echo: false
+#| out-width: 30%
+#| fig-align: center
+#| fig-cap: source:https://xkcd.com/1459/
 knitr::include_graphics(path = "images/ch-01/xkcd_files.png")
 ```
 
@@ -684,7 +781,9 @@ Une très bonne alternative consiste à utiliser la fonction `session_info()` de
 
 Voici un exemple d'inclusion de méta-informations au début d'un script R
 
-```{r, echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
 # Title: Time series analysis of lasagna consumption
 
 # Purpose : This script performs a time series analyses on
@@ -745,19 +844,31 @@ Pour t'aider à formater ton code :
   Une fois installé, tu peux mettre en évidence le code que tu veux remanier, cliquer sur le bouton "Addins" en haut de RStudio et sélectionner l'option "Style Selection".
   Voici un exemple de code R mal formaté
 
-```{r poor_code, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| label: poor_code
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/before_rcode.png")
 ```
 
 Mets maintenant le code en surbrillance et utilise l'option `styler` :package: pour reformater
 
-```{r styler, echo=FALSE, out.width="60%", fig.align="center"}
+```{r}
+#| label: styler
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/styler.png")
 ```
 
 Pour produire un code joliment formaté
 
-```{r better_code, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| label: better_code
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 knitr::include_graphics(path = "images/ch-01/after_rcode.png")
 ```
 
@@ -789,20 +900,27 @@ De nombreuses personnes ont investi énormément de temps et d'énergie pour fai
 Si tu utilises R dans ton travail (et nous espérons que tu le feras), n'oublie pas de le citer.
 Pour obtenir la citation la plus récente de R, tu peux utiliser le site `citation()` fonction.
 
-```{r citation, echo=TRUE}
+```{r}
+#| label: citation
+#| echo: true
 citation()
 ```
 
 Si tu veux citer un logiciel particulier que tu as utilisé pour l'analyse de tes données.
 
-```{r pack-citation, echo=TRUE, warning=FALSE}
+```{r}
+#| label: pack-citation
+#| echo: true
+#| warning: false
 citation(package = "here")
 ```
 
 Pour citer plusieurs paquets, le paquet `grateful` :package: est extrêmement utile.
 Voir @tbl-r-lib pour un exemple de résultat produit avec grateful.
 
-```{r links, child="_links.md"}
+```{r}
+#| label: links
+#| child: _links.md
 ```
 
 

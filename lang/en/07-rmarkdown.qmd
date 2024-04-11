@@ -1,6 +1,8 @@
 # Reproducible reports with R markdown / Quarto {#rmarkdown_r}
 
-```{r, include=FALSE, message = FALSE}
+```{r}
+#| include: false
+#| message: false
 library(knitr)
 suppressPackageStartupMessages(library(knitr))
 ```
@@ -55,7 +57,10 @@ By now all of you will (hopefully) be using R to explore and analyse your intere
 As such, you're already well along the road to making your analysis more reproducible, transparent and shareable.
 However, perhaps your current workflow looks something like this:
 
-```{r, echo=FALSE, fig.align='center', out.width='90%'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 90%
 include_graphics("images/workflow1.png")
 ```
 
@@ -77,7 +82,10 @@ This can be both time consuming and confusing and should be avoided.
 
 Perhaps a more efficient and robust workflow would look something like this: 
 
-```{r, echo=FALSE, fig.align='center', out.width='90%'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 90%
 include_graphics("images/workflow2.png")
 ```
 
@@ -116,7 +124,10 @@ We can change all of this later so don’t worry about it for the moment.
 
  
 
-```{r, echo=FALSE, fig.align='center', out.width='85%'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 85%
 include_graphics("images/new_rm2.png")
 ```
 
@@ -129,7 +140,10 @@ However, just for now we will use this document to practice converting Quarto to
 
  
 
-```{r, echo=FALSE, fig.align='center', out.width='85%'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 85%
 include_graphics("images/new_file_rm.png")
 ```
 
@@ -144,7 +158,10 @@ Now, to convert your `.qmd` file to a HTML document click on the little black tr
 
  
 
-```{r, echo=FALSE, fig.align='center', out.width='85%'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 85%
 include_graphics("images/knit_rm.png")
 ```
 
@@ -155,7 +172,10 @@ Notice that there is a new `Quarto` tab in your console window which provides yo
 
  
 
-```{r, echo=FALSE, fig.align='center', out.width='85%'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 85%
 include_graphics("images/Rmarkdown_console.png")
 ```
 
@@ -167,7 +187,10 @@ RStudio will also display a preview of the rendered file in a new window for you
 
  
 
-```{r, echo=FALSE, fig.align='center', out.width='85%'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 85%
 include_graphics("images/html_rendered.png")
 ```
 
@@ -184,7 +207,10 @@ Again, you can change the output format using the `output_format=` argument as w
 
  
 
-```{r, class.source='fold-show', echo=TRUE, eval=FALSE}
+```{r}
+#| echo: true
+#| eval: false
+#| class-source: fold-show
 library(rmarkdown)
 
 render('my_first_rmarkdown.Rmd', output_format = 'html_document')
@@ -203,7 +229,10 @@ Normally each Quarto document is composed of 3 main components, 1) a YAML header
 
  
 
-```{r, echo=FALSE, fig.align='left', out.width='85%'}
+```{r}
+#| echo: false
+#| fig-align: left
+#| out-width: 85%
 include_graphics("images/rm_components.png")
 ```
 
@@ -353,7 +382,9 @@ For example
 
 results in headings in decreasing size order
 
-```{asis, echo=TRUE, eval=knitr::is_html_output()}
+```{asis}
+#| echo: true
+#| eval: !expr knitr::is_html_output()
 ># Benthic Biodiversity experiment {.unlisted .unnumbered}
 >## Benthic Biodiversity experiment {.unlisted .unnumbered}
 >### Benthic Biodiversity experiment {.unlisted .unnumbered}
@@ -460,7 +491,10 @@ include_graphics("images/Cute_grey_kitten.jpg")
 ```
 ````
 
-```{r, echo=FALSE, fig.align='center', out.width='50%'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 50%
 include_graphics("images/Cute_grey_kitten.jpg")
 ```
 
@@ -532,7 +566,9 @@ summary(dataf)
 ```
 ````
 
-```{r, summary-stats, class.source='fold-show' }
+```{r }
+#| label: summary-stats
+#| class-source: fold-show
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -553,7 +589,9 @@ summary(dataf)
 ```
 ````
 
-```{r, summary-stats2, echo=FALSE}
+```{r}
+#| label: summary-stats2
+#| echo: false
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -573,7 +611,10 @@ summary(dataf)
 ```
 ````
 
-```{r, summary-stats3, results='hide', class.source='fold-show'}
+```{r}
+#| label: summary-stats3
+#| results: hide
+#| class-source: fold-show
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -592,7 +633,10 @@ summary(dataf)
 ```
 ````
 
-```{r, summary-stats4, include=FALSE, class.source='fold-show'}
+```{r}
+#| label: summary-stats4
+#| include: false
+#| class-source: fold-show
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -633,7 +677,9 @@ plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 ````
 
-```{r, simple-plot, class.source='fold-show'}
+```{r}
+#| label: simple-plot
+#| class-source: fold-show
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -652,7 +698,12 @@ plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 ````
 
-```{r, simple-plot2, class.source='fold-show', fig.width=4, fig.height=3, fig.align='center'}
+```{r}
+#| label: simple-plot2
+#| class-source: fold-show
+#| fig-width: 4
+#| fig-height: 3
+#| fig-align: center
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -672,7 +723,11 @@ plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 ````
 
-```{r, simple-plot-cap, class.source='fold-show', fig.cap="A simple plot", fig.align='center'}
+```{r}
+#| label: simple-plot-cap
+#| class-source: fold-show
+#| fig-cap: A simple plot
+#| fig-align: center
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -692,7 +747,10 @@ plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 ````
 
-```{r, simple-plot3, class.source='fold-show', fig.show='hide'}
+```{r}
+#| label: simple-plot3
+#| class-source: fold-show
+#| fig-show: hide
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -716,7 +774,9 @@ ggplot(dataf, aes(x = x, y = y)) +
 ```
 ````
 
-```{r, simple-ggplot, class.source='fold-show'}
+```{r}
+#| label: simple-ggplot
+#| class-source: fold-show
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -742,7 +802,10 @@ iris[1:10,]
 ```
 ````
 
-```{r, ugly-table, echo=FALSE, warning=FALSE}
+```{r}
+#| label: ugly-table
+#| echo: false
+#| warning: false
 
 iris[1:10,]
 
@@ -791,12 +854,20 @@ kable(iris[1:10,])
 ```
 ````
 
-```{r, kable-table-html, echo=FALSE, eval=knitr::is_html_output(), warning=FALSE}
+```{r}
+#| label: kable-table-html
+#| echo: false
+#| eval: !expr knitr::is_html_output()
+#| warning: false
 library(knitr)
 kable(iris[1:10,])
 ```
 
-```{r, kable-table-latex, echo=FALSE, eval=knitr::is_latex_output(), warning=FALSE}
+```{r}
+#| label: kable-table-latex
+#| echo: false
+#| eval: !expr knitr::is_latex_output()
+#| warning: false
 library(knitr)
 kable(iris[1:10,], "latex", booktabs = T)
 ```
@@ -814,12 +885,20 @@ kable(iris[1:10,], digits = 0, align = 'c',
 ```
 ````
 
-```{r, kable-table2-html, eval=knitr::is_html_output(), echo=FALSE, warning=FALSE}
+```{r}
+#| label: kable-table2-html
+#| eval: !expr knitr::is_html_output()
+#| echo: false
+#| warning: false
 library(knitr)
 kable(iris[1:10,], digits=0, align = 'c', col.names = c('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
 ```
 
-```{r, kable-table2-latex, echo=FALSE, eval=knitr::is_latex_output(), warning=FALSE}
+```{r}
+#| label: kable-table2-latex
+#| echo: false
+#| eval: !expr knitr::is_latex_output()
+#| warning: false
 library(knitr)
 kable(iris[1:10,], "latex", booktabs = T, digits=0, align = 'c', col.names = c('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
 ```
@@ -836,13 +915,21 @@ kable(iris[1:10,]) %>%
 ```
 ````
 
-```{r, kableExtra-table-html, echo=FALSE, eval=knitr::is_html_output(), warning=FALSE}
+```{r}
+#| label: kableExtra-table-html
+#| echo: false
+#| eval: !expr knitr::is_html_output()
+#| warning: false
 library(kableExtra)
 kable(iris[1:10,]) %>%
   kable_styling(bootstrap_options = "striped", font_size = 10)
 ```
 
-```{r, kableExtra-table-latex, echo=FALSE, eval=knitr::is_latex_output(), warning=FALSE}
+```{r}
+#| label: kableExtra-table-latex
+#| echo: false
+#| eval: !expr knitr::is_latex_output()
+#| warning: false
 library(kableExtra)
 kable(iris[1:10,],"latex", booktabs = T) %>%
   kable_styling(bootstrap_options = "striped", font_size = 10, position = "center")
@@ -960,7 +1047,9 @@ Another useful and concise Quarto reference guide can be found [here][rmd-ref]
 
 A quick and easy R Markdown [cheatsheet][rmd-cheat]
 
-```{r links, child="_links.md"}
+```{r}
+#| label: links
+#| child: _links.md
 ```
   
 

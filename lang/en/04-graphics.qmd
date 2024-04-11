@@ -6,7 +6,8 @@ redo diagram with mermaid
 do a ggplot extensive description
 -->
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 library(ggplot2)
 library(ggcleveland)
 library(GGally)
@@ -61,7 +62,11 @@ It's impossible to cover every aspect of producing graphics in R in this book so
 The most common high level function used to produce plots in R is (rather unsurprisingly) the `plot()` function.
 For example, let's plot the `weight` of petunia plants from our `flowers` data frame which we imported in [Chapter 3](#import_fnc).
 
-```{r plot1, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot1
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 flowers <- read.csv(file = "data/flower.csv")
 
 plot(flowers$weight)
@@ -73,14 +78,20 @@ The `weight` variable name has been automatically included as a y axis label and
 
 If we'd only included the variable `weight` rather than `flowers$weight`, the `plot()` function will display an error as the variable `weight` only exists in the `flowers` data frame object.
 
-```{r plot2, echo=TRUE, eval=FALSE}
+```{r}
+#| label: plot2
+#| echo: true
+#| eval: false
 plot(weight)
 ## Error in plot(weight) : object 'weight' not found
 ```
 
 As many of the base R plotting functions don't have a `data =` argument to specify the data frame name directly we can use the `with()` function in combination with `plot()` as a shortcut.
 
-```{r plot3, echo=TRUE, eval=FALSE}
+```{r}
+#| label: plot3
+#| echo: true
+#| eval: false
 with(flowers, plot(weight))
 ```
 
@@ -88,7 +99,11 @@ To plot a scatterplot of one numeric variable against another numeric variable w
 For example to plot `shootarea` on the y axis and `weight` of the x axis.
 
 
-```{r plot4, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot4
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 plot(x = flowers$weight, y = flowers$shootarea)
 ```
 
@@ -97,7 +112,11 @@ You can also use the formula notation when using the `plot()` function.
 However, in contrast to the previous method the formula method requires you to specify the y axis variable first, then a `~` and then our x axis variable.
 
 
-```{r fig-plot5, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: fig-plot5
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 plot(shootarea ~ weight, data = flowers)
 ```
 
@@ -113,7 +132,11 @@ See [later](#mult_graphs) in the Chapter for more details about this.
 The top left plot is `type = "l"`, the top right `type = "b"`, bottom left `type = "o"` and bottom right is `type = "c"`.
  
 
-```{r plot6, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot6
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 my_x <- 1:10
 my_y <- seq(from = 1, to = 20, by = 2)
 
@@ -134,7 +157,12 @@ You will see an example of this in [Chapter 5](#simple_lm) where we use the `plo
 ## ggplot2
 
 
-```{r fig-ggplot-str, echo = FALSE, out.width = "50%", fig.align = "center", fig.cap = "Structure of graphics with ggplot2"}
+```{r}
+#| label: fig-ggplot-str
+#| echo: false
+#| out-width: 50%
+#| fig-align: center
+#| fig-cap: Structure of graphics with ggplot2
 
 knitr::include_graphics(path = "images/full_connected.png")
 ```
@@ -150,7 +178,11 @@ The geometry layer is added using specific functions.
 
 To redo the @fig-plot5, that contain only a scatterplot of points we can use the `geom_point()` function.
 
-```{r fig-plot5-gg, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: fig-plot5-gg
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(
   data = flowers,
   mapping = aes(x = weight, y = shootarea)
@@ -167,15 +199,23 @@ Now that we have basic understanding of `ggplot`we can explore some graphics usi
 Simple type of plots really useful to have a look at the relation between 2 variables for example.
 Here are the code to do it using base R (@fig-plot5) 
 
-```{r fig-plot5, eval = FALSE}
+```{r}
+#| label: fig-plot5
+#| eval: false
 ```
  or ggplot (@fig-plot5-gg)
-```{r fig-plot5-gg, eval = FALSE}
+```{r}
+#| label: fig-plot5-gg
+#| eval: false
 ```
 
 One gig advantage of `ggplot` for simple scatterplot is the ease with which we can add a regression, smoother (loes or gam) line to the plot using `stat_smooth()`function to add a statistic layer to the plot.
 
-```{r plot5-gg-line, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: plot5-gg-line
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(
   data = flowers,
   mapping = aes(x = weight, y = shootarea)
@@ -192,12 +232,20 @@ In ggplot, we need to use `geom_histogram()`.
 Let's generate a histogram of the `height` values.
 
 With base R
-```{r plot7, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot7
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 hist(flowers$height)
 ```
 
 with ggplot2
-```{r plot7-gg, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot7-gg
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 ggplot(flowers, aes(x = height)) +
   geom_histogram()
 ```
@@ -208,12 +256,20 @@ We first generate a sequence from zero to the maximum value of `height` (18 roun
 We can then use this sequence with the `breaks =` argument.
 While we're at it, let's also replace the ugly title for something a little better using the `main =` argument
 
-```{r plot8, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot8
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 brk <- seq(from = 0, to = 18, by = 1)
 hist(flowers$height, breaks = brk, main = "petunia height")
 ```
 
-```{r plot8-gg, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot8-gg
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 brk <- seq(from = 0, to = 18, by = 1)
 ggplot(flowers, aes(x = height)) +
   geom_histogram(breaks = brk) +
@@ -222,7 +278,12 @@ ggplot(flowers, aes(x = height)) +
 
 You can also display the histogram as a proportion rather than a frequency by using the `freq = FALSE` argument to `hist()` or indicating `aes(y = after_stat(density))` in `geom_histogram()`.
 
-```{r plot9, eval = FALSE,  echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot9
+#| eval: false
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 brk <- seq(from = 0, to = 18, by = 1)
 hist(flowers$height,
   breaks = brk, main = "petunia height",
@@ -237,7 +298,11 @@ An alternative to plotting just a straight up histogram is to add a [kernel dens
 In base R, you first need to compute the kernel density estimates using the `density()` and then ad the estimates to plot as a line using the `lines()` function.
 
 
-```{r plot10, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot10
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 dens <- density(flowers$height)
 hist(flowers$height,
   breaks = brk, main = "petunia height",
@@ -248,7 +313,11 @@ lines(dens)
 
 With ggplot, you can simply add the `geom_density()` layer to the plot
 
-```{r plot10-gg, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot10-gg
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 ggplot(flowers, aes(x = height)) +
   geom_histogram(aes(y = after_stat(density)), breaks = brk) +
   geom_density() +
@@ -270,11 +339,19 @@ For example, let's create a boxplot of the variable `weight` from our `flowers` 
 We can also include a y axis label using the `ylab =` argument.
  
 
-```{r plot11, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot11
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 boxplot(flowers$weight, ylab = "weight (g)")
 ```
 
-```{r plot11-gg, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: plot11-gg
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(flowers, aes(y = weight)) +
   geom_boxplot() +
   labs(y = "weight (g)")
@@ -296,7 +373,11 @@ For example, let's plot our `weight` variable again, but this time see how this 
 When we use the formula notation with `boxplot()` we can use the `data =` argument to save some typing.
 We'll also introduce an x axis label using the `xlab =` argument.
 
-```{r plot12, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot12
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 boxplot(weight ~ nitrogen,
   data = flowers,
   ylab = "Weight (g)", xlab = "nitrogen level"
@@ -304,7 +385,11 @@ boxplot(weight ~ nitrogen,
 ```
 
 
-```{r plot12-gg, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: plot12-gg
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(flowers, aes(y = weight, x = nitrogen)) +
   geom_boxplot() +
   labs(y = "Weight (g)", x = "Nitrogen Concentration")
@@ -315,7 +400,11 @@ To change the order we need to change the order of our levels of the `nitrogen` 
 Let's plot our boxplot with our factor levels going from `low` to `high`.
 
 
-```{r plot13, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot13
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 flowers$nitrogen <- factor(flowers$nitrogen,
   levels = c("low", "medium", "high")
 )
@@ -328,14 +417,22 @@ We can also group our variables by two factors in the same plot.
 Let's plot our `weight` variable but this time plot a separate box for each `nitrogen` and treatment (`treat`) combination.
  
 
-```{r plot14, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot14
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 boxplot(weight ~ nitrogen * treat,
   data = flowers,
   ylab = "weight (g)", xlab = "nitrogen level"
 )
 ```
 
-```{r plot14-gg, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot14-gg
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 ggplot(flowers, aes(y = weight, x = nitrogen)) +
   geom_boxplot() +
   labs(y = "Weight (g)", x = "Nitrogen Concentration") +
@@ -354,7 +451,13 @@ The nice thing about the `vioplot()` function is that you use it in pretty much 
 We'll also use the argument `col = "lightblue"` to change the fill colour to light blue.
 
 
-```{r plot16, echo=TRUE, out.width="75%", fig.align="center", warning=FALSE, message=FALSE}
+```{r}
+#| label: plot16
+#| echo: true
+#| warning: false
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 library(vioplot)
 vioplot(weight ~ nitrogen,
   data = flowers,
@@ -366,7 +469,13 @@ vioplot(weight ~ nitrogen,
 In the violin plot above we have our familiar boxplot for each `nitrogen` level but this time the median value is represented by a white circle.
 Plotted around each boxplot is the kernel density plot which represents the distribution of the data for each nitrogen level.
 
-```{r plot16-gg, echo=TRUE, out.width="75%", fig.align="center", warning=FALSE, message=FALSE}
+```{r}
+#| label: plot16-gg
+#| echo: true
+#| warning: false
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(flowers, aes(y = weight, x = nitrogen)) +
   geom_violin() +
   geom_boxplot(width = 0.1) +
@@ -380,7 +489,11 @@ A really useful (if undervalued) plot to help identify outliers is the Cleveland
 You can produce a dotplot in R very simply by using the `dotchart()` function.
 
 
-```{r plot17, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot17
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 dotchart(flowers$height)
 ```
 
@@ -388,7 +501,11 @@ In the dotplot above the data from the `height` variable is plotted along the x 
 In this plot we have a single value extending to the right at about 17 cm but it doesn't appear particularly large compared to the rest.
 An example of a dotplot with an unusual observation is given below.
 
-```{r plot18, echo=FALSE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot18
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
 out_height <- flowers$height
 out_height[30] <- 53
 dotchart(out_height)
@@ -397,12 +514,20 @@ dotchart(out_height)
 We can also group the values in our `height` variable by a factor variable such as `nitrogen` using the `groups =` argument.
 This is useful for identifying unusual observations within a factor level that might be obscured when looking at all the data together.
 
-```{r plot19, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot19
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 dotchart(flowers$height, groups = flowers$nitrogen)
 ```
 
 <!-- TO DO -->
-```{r plot19-gg, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot19-gg
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 ggdotchart(data=flowers, x="height", y= "nitrogen")
 ```
 
@@ -417,7 +542,11 @@ Let's create a multi-panel scatterplot of all of the numeric variables in our `f
 Note, you may need to click on the 'Zoom' button in RStudio to display the plot clearly.
 
 
-```{r plot20, echo=TRUE, out.width="75%", fig.align="center" }
+```{r }
+#| label: plot20
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 pairs(flowers[, c(
   "height", "weight", "leafarea",
   "shootarea", "flowers"
@@ -448,7 +577,9 @@ ggpairs(flowers[, c(
 The `pairs()` function can be tweak to do similar things and more but is more involved.
 Have a lok at the great help file for the `pairs()` function (`?pairs`)which provide all the details to do something like the plot below.
 
-```{r plot22, echo=FALSE}
+```{r}
+#| label: plot22
+#| echo: false
 panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...) {
   usr <- par("usr")
   par(usr = c(0, 1, 0, 1))
@@ -490,7 +621,11 @@ This third variable can be either numeric or a factor.
 As an example, let's look at how the relationship between the number of flowers (`flowers` variable) and the `weight` of petunia plants changes dependent on `leafarea`.
 Note the `coplot()` function has a `data =` argument so no need to use the `$` notation.
 
-```{r plot26, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot26
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 coplot(flowers ~ weight | leafarea, data = flowers)
 ```
 
@@ -518,7 +653,11 @@ For example, we can examine the relationship between `flowers` and `weight` vari
 The bottom left plot is the relationship between `flowers` and `weight` for those plants in the `low` nitrogen treatment.
 The top left plot shows the same relationship but for plants in the `high` nitrogen treatment.
 
-```{r plot28, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot28
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 coplot(flowers ~ weight | nitrogen, data = flowers)
 ```
 
@@ -583,7 +722,8 @@ It is perhaps most clear what the statistical layer is doing in the early `geom_
 
 \  
 
-```{r stat-layer}
+```{r}
+#| label: stat-layer
 ggplot(data = flowers, aes(x = weight, y = shootarea)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE)
@@ -600,11 +740,18 @@ It's entirely possible that you'll be able to use `ggplot2` for the vast majorit
 
 If we wanted to recreate the above figure using the statistics layer we would do it like this:
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/statistics.png")
 ```
 
-```{r stat_smooth-lm, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: stat_smooth-lm
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   geom_point() +
   # using stat_smooth instead of geom_smooth
@@ -625,11 +772,19 @@ We'll show two here; `xlim()`and `ylim()`, and `coord_cartesian()`.
 Using both of these we'll set the x axis to only show data between 10 and 15 g and the y axis to only show the area of the shoot between 50 and 150 mm^2^.
 We'll start with limiting the axes:
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/coords.png")
 ```
 
-```{r axis-limits, out.width = "75%", fig.align = "center", warning=FALSE, message=FALSE}
+```{r}
+#| label: axis-limits
+#| warning: false
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   geom_point(aes(colour = nitrogen, shape = nitrogen), size = 2, alpha = 0.6) +
   geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
@@ -665,11 +820,18 @@ Notice that for low nitrogen concentration, the line is being drawn using only t
 `coord_cartesian()` works in much the same way, but instead of chopping out data, it instead zooms in.
 Doing so means that the entire dataset is maintained (and any trends are maintained).
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/coords.png")
 ```
 
-```{r coord_cartesian, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: coord_cartesian
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   geom_point(aes(colour = nitrogen, shape = nitrogen), size = 2, alpha = 0.6) +
   geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
@@ -720,7 +882,11 @@ We'll move both the points and the overall black dashed line down in the code so
 
 \  
 
-```{r layering-layers, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: layering-layers
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
   # Move one line down
@@ -759,11 +925,18 @@ Remember that we'll also need to change our label for the legend.
 We'll start with the default option.
 Here we only need to change nitrogen (which is a factor) to flowers (which is continuous) in the `colour =` argument within `aes()`:
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/scales.png")
 ```
 
-```{r continuous-colour, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: continuous-colour
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   # Deleted geom_smooths for illustrative purposes only
   # (and also removed alpha argument from geom_point)
@@ -791,11 +964,18 @@ While the code has worked, we have a hard time distinguishing between the differ
 It would help ourselves (and our audience), if we changed the colours to something more noticeably different, using `scale_colour_gradient()`.
 This works much as `scale_colour_manual()` except that this time we specify the `low =` and `high =` values using arguments.
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/scales.png")
 ```
 
-```{r scale_colour_gradient, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: scale_colour_gradient
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
   xlab("Weight of flower (g)") +
@@ -825,11 +1005,18 @@ This is exactly what `scale_colour_gradient2()` allows.
 `scale_colour_gradient2()` works in much the same way as `scale_colour_gradient()` except that we have two additional arguments to worry about; `midpoint =` where we specify a value for the midpoint, and `mid =` where we state the colour the midpoint should take.
 We'll set the midpoint using `mean()`.
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/scales.png")
 ```
 
-```{r scale_colour_gradient2, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: scale_colour_gradient2
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
   xlab("Weight of flower (g)") +
@@ -863,11 +1050,18 @@ Try doing so and you'll likely see a grey colour bar and grey points.
 Instead `values =` represent the proportional ranges where we want the colour to occupy.
 In the code below, we use 0, 0.25, 0.5, 0.75 and 1 as our proportions, corresponding to 4 colours (note that we have one fewer colour than proportions given as the colours occupy a range and not a value).
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/scales.png")
 ```
 
-```{r scale_colour_gradientn, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: scale_colour_gradientn
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
   xlab("Weight of flower (g)") +
@@ -899,11 +1093,18 @@ Previously, we altered to size of points to be a constant number (e.g.
 `size = 2`).
 What if instead we wanted size to change according to a variable in our dataset? We can do this very easily by including a continuous variable with the `size =` argument.
 
-```{r, echo=FALSE, out.width="15%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 15%
+#| fig-align: center
 knitr::include_graphics(path = "images/scales_mapping.png")
 ```
 
-```{r cont-point-size, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: cont-point-size
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flowers) +
   # Moving size into aes and changing to a continuous variable
   geom_point(aes(colour = nitrogen, shape = nitrogen, size = height), alpha = 0.6) +
@@ -941,11 +1142,18 @@ coding this into `theme_rbook()`).
 Instead we can change it *on the fly* depending on the individual figure.
 To do so, we can use a `theme()` layer and the argument `legend.position =`, followed swiftly by another layer specifying that we still want to use `theme_rbook()`.
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/theme.png")
 ```
 
-```{r moving-legend, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: moving-legend
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -979,11 +1187,18 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
 Suppose we don't want a legend at all.
 How would we go about hiding it?
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/theme.png")
 ```
 
-```{r hiding-legend, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: hiding-legend
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -1014,11 +1229,18 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
 
 What if we really don't want points included in the legend? Instead of stating this using `theme()`, we'll include it within `geom_point()` using `show.legend = FALSE`.
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/theme.png")
 ```
 
-```{r hiding-part-of-legend, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: hiding-part-of-legend
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   # Including show.legend = FALSE to prevent inclusion in legend
   geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6, show.legend = FALSE) +
@@ -1053,11 +1275,18 @@ We'll use Times New Roman in this example, which is referred to as `serif`.
 
 Not happy with your font options? Check out the `extrafont`  package which expands your 'fontage'.
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/geoms.png")
 ```
 
-```{r geom_text, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: geom_text
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -1093,7 +1322,11 @@ Let's see how that works:
 
 \  
 
-```{r tag-A, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: tag-A
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -1129,11 +1362,18 @@ factors); and `scale_y_continuous()` and `scale_x_continuous()` for continuous d
 Within these layers, the argument we want to use is called `breaks =`, though we need to use this in combination with `seq()` (see [Chapter 2](#funcs) for a reminder on how the `seq()` function works).
 We'll alter the x axis ticks in this example, with a tick label every 2.5 units.
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/scales.png")
 ```
 
-```{r axis-ticks, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: axis-ticks
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -1166,11 +1406,18 @@ The names can end up overlapping to such an extent that your axis tick labels me
 In such cases it's best to rotate the text to make it readable.
 Doing so isn't too much of a pain and we'll be using `theme()` again to set the text angle to 45 degrees in addition to a little vertical adjustment so that the text doesn't get too close or run too far away from the axis.
 
-```{r, echo=FALSE, out.width="7.5%", fig.align='center'}
+```{r}
+#| echo: false
+#| out-width: 7.5%
+#| fig-align: center
 knitr::include_graphics(path = "images/theme.png")
 ```
 
-```{r rotate-axis, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: rotate-axis
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -1209,7 +1456,11 @@ In base R, one of the most common methods to plot multiple graphs is to use the 
 With this method, you first need to specify the number of rows and columns of plots you would like and then run the code for each plot.
 For example, to plot two graphs side by side we would use `par(mfrow = c(1, 2))` to split the device into 1 row and two columns.
 
-```{r plot55, echo=TRUE, out.width="75%", fig.align="center"}
+```{r}
+#| label: plot55
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
 par(mfrow = c(1, 2))
 plot(flowers$weight, flowers$shootarea,
   xlab = "weight",
@@ -1226,12 +1477,20 @@ The approach we recommend is using the package `patchwork`.
 
 First you will need to install and make the `patchwork` package available.
 
-```{r loading-patchwork, eval = FALSE, echo = TRUE, message=FALSE}
+```{r}
+#| label: loading-patchwork
+#| eval: false
+#| echo: true
+#| message: false
 install.packages("patchwork")
 library(patchwork)
 ```
 
-```{r loading-patchwork_true, eval = TRUE, echo = FALSE, message=FALSE}
+```{r}
+#| label: loading-patchwork_true
+#| eval: true
+#| echo: false
+#| message: false
 library(patchwork)
 ```
 
@@ -1243,13 +1502,19 @@ We need to assign each figure to a separate object and then use these objects wh
 For instance, we can assigned our "final figure" plot to an object called `final_figure` (we're not very imaginative!), you haven't see the code yet so you'll just have to take our word for it! You may see this method used a lot in other textbooks or online, especially when adding addition layers.
 Something like this:
 
-```{r named-ggplot-example, eval = FALSE, message=FALSE}
+```{r}
+#| label: named-ggplot-example
+#| eval: false
+#| message: false
 p <- ggplot(df, mapping = aes(x = x, y = y))
 ```
 
 And later to add additional layers:
 
-```{r named-ggplot-example-adding-layer, eval = FALSE, message=FALSE}
+```{r}
+#| label: named-ggplot-example-adding-layer
+#| eval: false
+#| message: false
 p + geom_point()
 ```
 
@@ -1258,7 +1523,12 @@ Anyway, let's remind ourselves of the final figure.
 
 \  
 
-```{r calling-figure-name, echo=FALSE, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: calling-figure-name
+#| echo: false
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 final_figure
 ```
 
@@ -1268,7 +1538,11 @@ We'll now assign the code we wrote when creating our previous plot to an object 
 
 \  
 
-```{r naming-figure, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: naming-figure
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 # Naming our figure object
 rbook_figure <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   geom_point() +
@@ -1289,7 +1563,12 @@ Let's try to plot both figures, one on top of the other.
 
 \  
 
-```{r side-by-side-patchwork, echo=TRUE, out.width = "85%", fig.align = "center", message=FALSE}
+```{r}
+#| label: side-by-side-patchwork
+#| echo: true
+#| message: false
+#| out-width: 85%
+#| fig-align: center
 rbook_figure / final_figure
 ```
 
@@ -1301,7 +1580,11 @@ We can take this one step further and assign nested `patchwork` figures to an ob
 
 \  
 
-```{r labelled-nested, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: labelled-nested
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 nested_compare <- rbook_figure / final_figure
 
 nested_compare +
@@ -1320,7 +1603,11 @@ We'll use the `patchwork` operator `+` to link them all together and see how tha
 
 \  
 
-```{r patchwork1, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: patchwork1
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 a <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
   geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
   theme_classic()
@@ -1349,7 +1636,11 @@ We can solve that by using the `plot_layout()` function and collecting the guide
 
 \  
 
-```{r patchwork_collected, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: patchwork_collected
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 nested_1 +
   plot_layout(guides = "collect")
 ```
@@ -1363,7 +1654,11 @@ To show how you can use `patchwork` and `ggplot2` together, we'll also add in an
 
 \  
 
-```{r patchwork_removed, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: patchwork_removed
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 # note the use of '&' instead of '+'
 nested_1 &
   theme(legend.position = "none") &
@@ -1379,7 +1674,11 @@ Each plot will either be five units wide or five unites tall.
 
 \  
 
-```{r patchwork_plot_layout, out.width = "75%", fig.align = "center", message=FALSE}
+```{r}
+#| label: patchwork_plot_layout
+#| message: false
+#| out-width: 75%
+#| fig-align: center
 grid_layout <- "
 AAAAA
 B###C
@@ -1414,7 +1713,10 @@ Once we've used the `pdf()` function we can then write all of the code we used t
 Once the code has run we need to close the pdf plotting device using the `dev.off()` function.
 
 
-```{r plot60, echo=TRUE, eval = FALSE}
+```{r}
+#| label: plot60
+#| echo: true
+#| eval: false
 pdf(file = "output/my_plot.pdf")
 par(mar = c(4.1, 4.4, 4.1, 1.9), xaxs = "i", yaxs = "i")
 plot(flowers$weight, flowers$shootarea,
@@ -1430,7 +1732,10 @@ dev.off()
 
 If we want to save this plot in png format we simply use the `png()` function in more or less the same way we used the `pdf()` function.
 
-```{r plot61, echo=TRUE, eval = FALSE}
+```{r}
+#| label: plot61
+#| echo: true
+#| eval: false
 png("output/my_plot.png")
 par(mar = c(4.1, 4.4, 4.1, 1.9), xaxs = "i", yaxs = "i")
 plot(flowers$weight, flowers$shootarea,
@@ -1450,5 +1755,7 @@ See `?png` for more details.
 
 
 
-```{r links, child="_links.md"}
+```{r}
+#| label: links
+#| child: _links.md
 ```

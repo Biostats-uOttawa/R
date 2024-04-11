@@ -47,7 +47,9 @@ You can download the latest version of [MacTeX here][mactex].
 An alternative to TinyTex on linux would be to use a full fledge distribution of {{< latex >}} such as [TexLive][texlive]
 
 
-```{r links, child="_links.md"}
+```{r}
+#| label: links
+#| child: _links.md
 ```
 
 

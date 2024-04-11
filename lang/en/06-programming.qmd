@@ -18,11 +18,16 @@ This is the same trick we used in [Chapter 5](#graphics_r) to alter the `theme_c
 
 Note that to view the source code of base R packages (those that come with R) requires some additional steps which we won't cover here (see this [link][show-code] if you're interested), but for most other packages that you install yourself, generally entering the function name without `()` will show the source code of the function.
 
-```{r libraries, echo = FALSE, message=FALSE, warning=FALSE}
+```{r}
+#| label: libraries
+#| echo: false
+#| message: false
+#| warning: false
 library(ggplot2)
 ```
 
-```{r theme_function}
+```{r}
+#| label: theme_function
 theme_classic
 ```
 
@@ -66,7 +71,9 @@ This can be illustrated in the pseudocode below.
 When we make a function we can specify what arguments the user must fulfill (e.g.
 `argument1` and `argument2`), as well as what to do once it has this information (`expression`):
 
-```{r generic_function, eval = FALSE}
+```{r}
+#| label: generic_function
+#| eval: false
 nameOfFunction <- function(argument1, argument2, ...) {expression}
 ```
 
@@ -78,7 +85,10 @@ These arguments are then passed to the expression part of the function.
 The expression can be any valid R command or set of R commands and is usually contained between a pair of braces `{ }` (if a function is only one line long you can omit the braces).
 Once you run the above code, you can then use your new function by typing:
 
-```{r run_function, out.width="75%", eval = FALSE}
+```{r}
+#| label: run_function
+#| eval: false
+#| out-width: 75%
 nameOfFunction(argument1, argument2)
 ```
 
@@ -87,7 +97,9 @@ Confused? Let's work through an example to help clear things up.
 First we are going to create a data frame called `city`, where columns `porto`, `aberdeen`, `nairobi`, and `genoa` are filled with 100 random values drawn from a bag (using the `rnorm()` function to draw random values from a Normal distribution with mean 0 and standard deviation of 1).
 We also include a "problem", for us to solve later, by including 10 `NA` values within the `nairobi` column (using `rep(NA, 10)`).
 
-```{r df, out.width="75%"}
+```{r}
+#| label: df
+#| out-width: 75%
 city <- data.frame(
   porto = rnorm(100),
   aberdeen = rnorm(100),
@@ -99,7 +111,9 @@ city <- data.frame(
 Let's say that you want to multiply the values in the variables `Porto` and `Aberdeen` and create a new object called `porto_aberdeen`.
 We can do this "by hand" using:
 
-```{r manual, out.width="75%"}
+```{r}
+#| label: manual
+#| out-width: 75%
 porto_aberdeen <- city$porto * city$aberdeen
 ```
 
@@ -112,7 +126,9 @@ Something to keep in mind for later is that doing these kinds of operations with
 But what if we want to repeat this multiplication many times? Let's say we wanted to multiply columns `porto` and `aberdeen`, `aberdeen` and `genoa`, and `nairobi` and `genoa`.
 In this case we could copy and paste the code, replacing the relevant information.
 
-```{r simple, out.width="75%"}
+```{r}
+#| label: simple
+#| out-width: 75%
 porto_aberdeen <- city$porto * city$aberdeen
 aberdeen_genoa <- city$aberdeen * city$aberdeen
 nairobi_genoa <- city$nairobi * city$genoa
@@ -126,7 +142,9 @@ If we were to write this as a function, there is only one source of potential er
 In this case, we're using some fairly trivial code where it's maybe hard to make a genuine mistake.
 But what if we increased the complexity?
 
-```{r complex, eval = FALSE}
+```{r}
+#| label: complex
+#| eval: false
 city$porto * city$aberdeen / city$porto + (city$porto * 10^(city$aberdeen)) 
                   - city$aberdeen - (city$porto * sqrt(city$aberdeen + 10))
 ```
@@ -138,7 +156,9 @@ If we did this, we could recycle the `x * y` code.
 Whenever we wanted to multiple columns together, we assign a city to either `x` or `y`.
 We'll assign the multiplication to the objects `porto_aberdeen` and `aberdeen_nairobi` so we can come back to them later.
 
-```{r manual_function, eval = FALSE}
+```{r}
+#| label: manual_function
+#| eval: false
 # Assign x and y values
 x <- city$porto
 y <- city$aberdeen
@@ -160,7 +180,8 @@ In the function code we simply return the value of `x * y` using the `return()` 
 Using the `return()` function is not strictly necessary in this example as R will automatically return the value of the last line of code in our function.
 We include it here to make this explicit.
 
-```{r first_function}
+```{r}
+#| label: first_function
 multiply_columns <- function(x, y) {
   return(x * y)
 }
@@ -169,7 +190,8 @@ multiply_columns <- function(x, y) {
 Now that we've defined our function we can use it.
 Let's use the function to multiple the columns `city$porto` and `city$aberdeen` and assign the result to a new object called `porto_aberdeen_func`
 
-```{r first_function2 }
+```{r }
+#| label: first_function2
 porto_aberdeen_func <- multiply_columns(x = city$porto, y = city$aberdeen)
 porto_aberdeen_func
 ```
@@ -183,7 +205,8 @@ To satisfy ourselves that the function has worked properly, we can compare the `
 The `identical()` function tests whether two objects are *exactly* identical and returns either a `TRUE` or `FALSE` value.
 Use `?identical` if you want to know more about this function.
 
-```{r identical_check }
+```{r }
+#| label: identical_check
 identical(porto_aberdeen, porto_aberdeen_func)
 ```
 
@@ -193,7 +216,9 @@ We recommend getting into a habit of checking that the function you've created w
 Now let's use our `multiply_columns()` function to multiply columns `aberdeen` and `nairobi`.
 Notice now that argument `x` is given the value `city$aberdeen`and `y` the value `city$nairobi`.
 
-```{r calc_w_na, eval = T }
+```{r }
+#| label: calc_w_na
+#| eval: !expr T
 aberdeen_nairobi_func <- multiply_columns(x = city$aberdeen, y = city$nairobi)
 aberdeen_nairobi_func
 ```
@@ -208,7 +233,8 @@ Despite these `NA` values, the function appeared to have worked but it gave us n
 In such cases we may prefer if it had warned us that something was wrong.
 How can we get the function to let us know when `NA` values are produced? Here's one way.
 
-```{r example condition }
+```{r }
+#| label: example condition
 multiply_columns <- function(x, y) {
   temp_var <- x * y
   if (any(is.na(temp_var))) {
@@ -265,7 +291,8 @@ At the risk of explaining a joke, the conditional statement here is whether or n
 If coded as per the original request, the programmer should bring 6 cartons of milk if the store had eggs (condition = TRUE), or else bring 1 carton of milk if there weren't any eggs (condition = FALSE).
 In R this is coded as:
 
-```{r joke_logic }
+```{r }
+#| label: joke_logic
 eggs <- TRUE # Whether there were eggs in the store
 
   if (eggs == TRUE) { # If there are eggs
@@ -277,7 +304,8 @@ eggs <- TRUE # Whether there were eggs in the store
 
 We can then check `n.milk` to see how many milk cartons they returned with.
 
-```{r n_milk }
+```{r }
+#| label: n_milk
 n.milk
 ```
 
@@ -285,7 +313,8 @@ And just like the joke, our R code has missed that the condition was to determin
 
 We could code the exact same egg-milk joke conditional statement using an `ifelse()` function.
 
-```{r ifelse }
+```{r }
+#| label: ifelse
 eggs <- TRUE
 n.milk <- ifelse(eggs == TRUE, yes = 6, no = 1)
 ```
@@ -296,7 +325,8 @@ The logic is read in the same way; "If there are eggs, assign a value of 6 to `n
 
 We can check again to make sure the logic is still returning 6 cartons of milk:
 
-```{r ifelse_check }
+```{r }
+#| label: ifelse_check
 n.milk
 ```
 
@@ -305,7 +335,8 @@ We learned above how to avoid lots of copy and pasting by creating a function.
 Just as with the simple `x * y` expression in our previous `multiply_columns()` function, the logical statements above are straightforward to code and well suited to be turned into a function.
 How about we do just that and wrap this logical statement up in a function?
 
-```{r joke_function }
+```{r }
+#| label: joke_function
 milk <- function(eggs) {
   if (eggs == TRUE) {
     6
@@ -320,7 +351,8 @@ The user of the function specifies if eggs is either `TRUE` or `FALSE`, and the 
 
 Let's quickly try:
 
-```{r joke_func_check }
+```{r }
+#| label: joke_func_check
 milk(eggs = TRUE)
 ```
 
@@ -331,7 +363,8 @@ In reality, it's generally viewed as better practice to explicitly state which a
 
 OK, lets go back to the `multiply_columns()` function we created above and explain how we've used conditional statements to warn the user if `NA` values are produced when we multiple any two columns together.
 
-```{r mult-example }
+```{r }
+#| label: mult-example
 multiply_columns <- function(x, y) {
   temp_var <- x * y
   if (any(is.na(temp_var))) {
@@ -376,7 +409,9 @@ To accomplish this, we'll be using `if` and `else` statements.
 The complexity will come from `if` statements immediately following the relevant `else` statement.
 We'll use such conditional statements four times to achieve all combinations of it being a Friday or not, and if your code is working or not.
 
-```{r, out.width="75%", fig.align="center" }
+```{r }
+#| out-width: 75%
+#| fig-align: center
 good.day <- function(code.working, day) {
   if (code.working == TRUE && day == "Friday") {
     "BEST.
@@ -435,7 +470,8 @@ Loops are one of the staples of all programming languages, not just R, and can b
 The most commonly used loop structure when you want to repeat a task a defined number of times is the `for` loop.
 The most basic example of a `for` loop is:
 
-```{r basic_for_loop }
+```{r }
+#| label: basic_for_loop
 for (i in 1:5) {
   print(i)
 }
@@ -448,14 +484,16 @@ Loops conventionally use `i` as the counter, short for iteration, but you are fr
 
 So, if we were to do the first iteration of the loop manually
 
-```{r manual_loop }
+```{r }
+#| label: manual_loop
 i <- 1
 print(i)
 ```
  
 Once this first iteration is complete, the for loop *loops* back to the beginning and replaces `i` with the next value in our `1:5` sequence (`2` in this case):
 
-```{r manual_loop_2 }
+```{r }
+#| label: manual_loop_2
 i <- 2
 print(i)
 ```
@@ -466,7 +504,8 @@ To reinforce how `for` loops work and introduce you to a valuable feature of loo
 This can be used, for example, if we're using a loop to iterate through a vector but want to select the next row (or any other value).
 To show this we'll simply add 1 to the value of our index every time we iterate our loop.
 
-```{r altering_i }
+```{r }
+#| label: altering_i
 for (i in 1:5) {
   print(i + 1)
 }
@@ -475,14 +514,16 @@ for (i in 1:5) {
 As in the previous loop, the first value in our sequence is 1.
 The loop begins by replacing `i` with `1`, but this time we've specified that a value of `1` must be added to `i` in the expression resulting in a value of `1 + 1`.
 
-```{r altering_i_1 }
+```{r }
+#| label: altering_i_1
 i <- 1
 i + 1
 ```
 
 As before, once the iteration is complete, the loop moves onto the next value in the sequence and replaces `i` with the next value (`2` in this case) so that `i + 1` becomes `2 + 1`.
 
-```{r altering_i_2 }
+```{r }
+#| label: altering_i_2
 i <- 2
 i + 1
 ```
@@ -497,7 +538,8 @@ Previously in the Chapter we created a function to multiply two columns and used
 We could have used a loop for this.
 Let's remind ourselves what our data look like and the code for the `multiple_columns()` function.
 
-```{r recreate_data_function }
+```{r }
+#| label: recreate_data_function
 # Recreating our dataset
 city <- data.frame(
   porto = rnorm(100),
@@ -520,7 +562,8 @@ multiply_columns <- function(x, y) {
 
 To use a list to iterate over these columns we need to first create an empty list (remember [lists](#lists)?) which we call `temp` (short for temporary) which will be used to store the output of the `for` loop.
 
-```{r loop_function }
+```{r }
+#| label: loop_function
 temp <- list()
 for (i in 1:(ncol(city) - 1)) {
   temp[[i]] <- multiply_columns(x = city[, i], y = city[, i + 1])
@@ -545,7 +588,8 @@ So can you see why we used `ncol(city) - 1` when we first set up our loop? As we
 Again, it's a good idea to test that we are getting something sensible from our loop (remember, check, check and check again!).
 To do this we can use the `identical()` function to compare the variables we created `by hand` with each iteration of the loop manually.
 
-```{r compare_3_methods }
+```{r }
+#| label: compare_3_methods
 porto_aberdeen_func <- multiply_columns(city$porto, city$aberdeen)
 i <- 1
 identical(multiply_columns(city[, i], city[, i + 1]), porto_aberdeen_func)
@@ -565,7 +609,8 @@ The `while` loop is used when you want to keep looping until a specific logical 
 
 The basic structure of the while loop is:
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
 while(logical_condition){ expression }
 ```
 
@@ -626,7 +671,8 @@ It has the added benefit that it will output the results as a list - something y
 
 An `lapply()` has the following structure:
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
 lapply(X, FUN)
 ```
 
@@ -659,6 +705,8 @@ sapply(0:4, function(a) {a + 1})
 
 As you can see, in both cases, we get exactly the same results as when we used the for loop.
 
-```{r links, child="_links.md"}
+```{r}
+#| label: links
+#| child: _links.md
 ```
 
