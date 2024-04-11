@@ -50,14 +50,27 @@ book:
   cover-image: images/cover/cover_en.png
   chapters:
     - index.qmd
-    - 01-start.qmd
-    - 02-basics.qmd
-    - 03-data.qmd
-    - 04-graphics_short.qmd
-    - 05-stats.qmd
-    - 06-programming.qmd
-    - 07-rmarkdown.qmd
-    - 08-github.qmd
+    - part: Starting with R
+      chapters:
+        - 01-start.qmd
+        - 02-basics.qmd
+    - part: Data and graphics
+      chapters:
+        - 03-data.qmd
+        - 04-graphics_short.qmd
+    - part: Linear models
+      chapters:
+        - 05-stats.qmd
+#    - part: Mixed models
+#      chapters:
+#        - you.qmd
+#    - part: Generalized additive models
+#    - part: Multivariate analysis
+    - part: Programming and writing with R
+      chapters:
+        - 06-programming.qmd
+        - 07-rmarkdown.qmd
+        - 08-github.qmd
     - 98-references.qmd
   appendices:
     - 99-data-files.qmd
