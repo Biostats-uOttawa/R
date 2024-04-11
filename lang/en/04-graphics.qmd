@@ -139,7 +139,7 @@ You will see an example of this in [Chapter 5](#simple_lm) where we use the `plo
 knitr::include_graphics(path = "images/full_connected.png")
 ```
 
-As mentionned earlier `ggplot` grammar requires several elements to produce a graphic and a minimum of 3 are required:
+As mentionned earlier `ggplot` grammar requires several elements to produce a graphic and a minimum of 3 need to be specified:
 
 - a data frame
 - a mapping system defining x and y
@@ -148,7 +148,7 @@ As mentionned earlier `ggplot` grammar requires several elements to produce a gr
 The data and mapping are provided within the called to the `ggplot()` function with the `data` and `mapping` arguments.
 The geometry layer is added using specific functions.
 
-To redo the @fig-plot5, that contain only a scatterplot of point we can use the `geom_point()` function.
+To redo the @fig-plot5, that contain only a scatterplot of points we can use the `geom_point()` function.
 
 ```{r fig-plot5-gg, out.width = "75%", fig.align = "center", message=FALSE}
 ggplot(

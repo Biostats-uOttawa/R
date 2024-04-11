@@ -55,20 +55,15 @@ By now all of you will (hopefully) be using R to explore and analyse your intere
 As such, you're already well along the road to making your analysis more reproducible, transparent and shareable.
 However, perhaps your current workflow looks something like this:
 
-\  
-
 ```{r, echo=FALSE, fig.align='center', out.width='90%'}
 include_graphics("images/workflow1.png")
 ```
-
-\  
 
 Your data is imported from your favourite spreadsheet software into R, you write your R code to explore and analyse your data, you save plots as external files, copy tables of analysis output and then manually combine all of this and your written prose into a single MS Word document (maybe a paper or thesis chapter).
 Whilst there is nothing particularly wrong with this approach (and it's certainly better than using point and click software to analyse your data) there are some limitations:
 
 - It's not particularly reproducible.
 Because this workflow separates your R code from the final document there are multiple opportunities for undocumented decisions to be made (which plots did you use? what analysis did/didn't you include? etc).
-   
 
 - It's inefficient.
 If you need to go back and change something (create a new plot or update your analysis etc) you will need to create or amend multiple documents increasing the risk of mistakes creeping into your workflow.
@@ -82,13 +77,10 @@ This can be both time consuming and confusing and should be avoided.
 
 Perhaps a more efficient and robust workflow would look something like this: 
 
-\  
-
 ```{r, echo=FALSE, fig.align='center', out.width='90%'}
 include_graphics("images/workflow2.png")
 ```
 
-\ 
 
 Your data is imported into R as before but this time all of the R code you used to analyse your data, produce your plots and your written text (Introduction, Materials and Methods, Discussion etc) is contained within a single Quarto document which is then used (along with your data) to automatically create your final document.
 This is exactly what Quarto allows you to do.
@@ -122,26 +114,26 @@ Within RStudio, click on the menu `File` -> `New File` -> `Quarto...`.
 In the pop up window, give the document a 'Title' and enter the 'Author' information (your name) and select HTML as the default output.
 We can change all of this later so don’t worry about it for the moment.
 
-\  
+ 
 
 ```{r, echo=FALSE, fig.align='center', out.width='85%'}
 include_graphics("images/new_rm2.png")
 ```
 
-\  
+ 
 
 You will notice that when your new Quarto document is created it includes some example Quarto code.
 Normally you would just highlight and delete everything in the document except the information at the top between the `---` delimiters (this is called the YAML header which we will discuss in a bit) and then start writing your own code.
 However, just for now we will use this document to practice converting Quarto to both html and pdf formats and check everything is working.
    
 
-\  
+ 
 
 ```{r, echo=FALSE, fig.align='center', out.width='85%'}
 include_graphics("images/new_file_rm.png")
 ```
 
-\  
+ 
 
 Once you've created your Quarto document it's good practice to save this file somewhere convenient.
 You can do this by selecting `File` -> `Save` from RStudio menu (or use the keyboard shortcut ctrl + s on Windows or cmd + s on a Mac) and enter an appropriate file name (maybe call it `my_first_rmarkdown`).
@@ -150,36 +142,36 @@ Notice the file extension of your new Quarto file is `.qmd`.
 
 Now, to convert your `.qmd` file to a HTML document click on the little black triangle next to the `Knit` icon at the top of the source window and select `knit to HTML`  
 
-\  
+ 
 
 ```{r, echo=FALSE, fig.align='center', out.width='85%'}
 include_graphics("images/knit_rm.png")
 ```
 
-\  
+ 
 
 RStudio will now 'knit' (or render) your `.qmd` file into a HTML file.
 Notice that there is a new `Quarto` tab in your console window which provides you with information on the rendering process and will also display any errors if something goes wrong.
 
-\  
+ 
 
 ```{r, echo=FALSE, fig.align='center', out.width='85%'}
 include_graphics("images/Rmarkdown_console.png")
 ```
 
-\  
+ 
 
 If everything went smoothly a new HTML file will have been created and saved in the same directory as your `.Rmd` file (ours will be called `my_first_rmarkdown.html`).
 To view this document simply double click on the file to open in a browser (like Chrome or Firefox) to display the rendered content.
 RStudio will also display a preview of the rendered file in a new window for you to check out (your window might look slightly different if you're using a Windows computer).
 
-\  
+ 
 
 ```{r, echo=FALSE, fig.align='center', out.width='85%'}
 include_graphics("images/html_rendered.png")
 ```
 
-\  
+ 
 
 Great, you've just rendered your first Quarto document.
 If you want to knit your `.Rmd` file to a pdf document then all you need to do is choose `knit to PDF` instead of `knit to HTML` when you click on the `knit` icon.
@@ -190,7 +182,7 @@ You can also knit an `.Rmd` file using the command line in the console rather th
 To do this, just use the `render()` function from the  `rmarkdown` package as shown below.
 Again, you can change the output format using the `output_format=` argument as well as many other options.
 
-\  
+ 
 
 ```{r, class.source='fold-show', echo=TRUE, eval=FALSE}
 library(rmarkdown)
@@ -209,13 +201,13 @@ rmarkdown::render('my_first_rmarkdown.Rmd', output_format = 'html_document')
 OK, now that you can render a Quarto file in RStudio into both HTML and pdf formats let's take a closer look at the different components of a typical Quarto document.
 Normally each Quarto document is composed of 3 main components, 1) a YAML header, 2) formatted text and 3) code chunks.
 
-\  
+ 
 
 ```{r, echo=FALSE, fig.align='left', out.width='85%'}
 include_graphics("images/rm_components.png")
 ```
 
-\  
+ 
 
 ### YAML header
 
@@ -284,7 +276,7 @@ At the start of the experiment replicate mesocosms were filled with 20 cm^2^ of 
 
 Some of the most common Quarto syntax for providing emphasis and formatting text is given below.
 
-\  
+ 
 
 |     Goal       |    Quarto       |     output        |
 |:--------------:|:-------------------:|:-----------------:|
@@ -294,7 +286,7 @@ Some of the most common Quarto syntax for providing emphasis and formatting text
 |  superscript   |   `mytext^2^`  |   mytext^2^  |
 |  subscript     |   `mytext~2~`    |   mytext~2~    |
 
-\  
+ 
 
 Interestingly there is no underline in R markdown syntax by default, for multiple more or less esoteric reasons, but Quarto fixed that problem.
 An underline is considered a stylistic element (there may well be other [reasons][underline]).
@@ -397,7 +389,7 @@ Notice that the sub-items need to be indented.
 - item 4
 ```
 
-\  
+ 
 
 >- item 1
 >- item 2
@@ -406,7 +398,7 @@ Notice that the sub-items need to be indented.
 >- item 3
 >- item 4
 
-\  
+ 
 
 If you need an ordered list 
 
@@ -424,7 +416,7 @@ item 3
 item 4
 ```
 
-\  
+ 
 
 >1.
 item 1
@@ -667,7 +659,7 @@ dataf <- data.frame(x = x, y = y)
 plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 
-\  
+ 
 
 You can add a figure caption using the `fig.cap=` option.
 
@@ -687,7 +679,7 @@ dataf <- data.frame(x = x, y = y)
 plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 
-\  
+ 
 
 If you want to suppress the figure in the final document use the `fig.show='hide'` option.
 
@@ -707,7 +699,7 @@ dataf <- data.frame(x = x, y = y)
 plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 
-\  
+ 
 
 If you're using a package like [`ggplot2`][ggplot] to create your plots then don't forget you will need to make the package available with the `library()` function in the code chunk (or in a preceding code chunk).
 
@@ -734,7 +726,7 @@ ggplot(dataf, aes(x = x, y = y)) +
   geom_point()
 ```
 
-\  
+ 
 
 Again, there are a large number of chunk options specific to producing plots and figures.
 See [here][rmd-ref] for more details.
@@ -758,7 +750,7 @@ iris[1:10,]
 
 But how ugly is that! You can create slightly nicer looking tables using native markdown syntax (this doesn't need to be in a code chunk).
 
-\  
+ 
 ```markdown
     |     x      |    y       |
     |:----------:|:----------:|
@@ -769,7 +761,7 @@ But how ugly is that! You can create slightly nicer looking tables using native 
     |  5         |   1        |
 ```
 
-\  
+ 
 
 |     x      |    y       |
 |:----------:|:----------:|
@@ -779,7 +771,7 @@ But how ugly is that! You can create slightly nicer looking tables using native 
 |  4         |   2        |
 |  5         |   1        |
 
-\  
+ 
 
 The `:-------:` lets Quarto know that the line above should be treated as a header and the lines below as the body of the table.
 Alignment within the table is set by the position of the `:`.
@@ -831,7 +823,7 @@ kable(iris[1:10,], digits=0, align = 'c', col.names = c('sepal length', 'sepal w
 library(knitr)
 kable(iris[1:10,], "latex", booktabs = T, digits=0, align = 'c', col.names = c('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
 ```
-\  
+ 
 
 You can further enhance the look of your `kable` tables using the `kableExtra` package (don't forget to install the package first!).
 See [here][kableExtra] :package: for more details and a helpful tutorial.
@@ -856,7 +848,7 @@ kable(iris[1:10,],"latex", booktabs = T) %>%
   kable_styling(bootstrap_options = "striped", font_size = 10, position = "center")
 ```
 
-\  
+ 
 
 If you want even more control and customisation options for your tables take a look at the [`gt`][gt] package.
 `gt`stands for grammar of tables and is based on similar principle for tables that are used for plots in ggplot.
@@ -911,7 +903,7 @@ This code chunk won’t be displayed in the final document due to the `include =
 `tidy.opts = list(width.cutoff = 60), tidy=TRUE` defines the margin cutoff point and wraps text to the next line.
 Play around with this value to get it right (60-80 should be OK for most documents).
 
-\  
+ 
 
 **Problem:** 
 
@@ -931,7 +923,7 @@ suppressPackageStartupMessages(library(ggplot2))
 The `message=FALSE` and `warning=FALSE` arguments suppress messages and warnings.
 The `suppressPackageStartupMessages(library(ggplot2))` will load the `ggplot2` package but suppress startup messages.
 
-\  
+ 
 
 **Problem:**
 
@@ -941,7 +933,7 @@ When rendering my Quarto document to pdf my tables and/or figures are split over
 
 Add a page break using the {{< latex >}} `\pagebreak` notation before your offending table or figure
 
-\  
+ 
 
 **Problem:**
 

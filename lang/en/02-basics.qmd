@@ -555,10 +555,9 @@ mean_temp <- mean(temp)
 mean_temp
 ```
 
-Flippin heck, what's happened here? Why does the `mean()` function return an `NA`? Actually, R is doing something very sensible (at least in our opinion!).
 If a vector has a missing value then the only possible value to return when calculating a mean is `NA`.
 R doesn't know that you perhaps want to ignore the `NA` values (R can't read your mind - yet!).
-Happily, if we look at the help file (use `help("mean")` - see the [next section](#help) for more details) associated with the `mean()` function we can see there is an argument `na.rm = ` which is set to `FALSE` by default.
+If we look at the help file (using `?mean` - see the [next section](#help) for more details) associated with the `mean()` function we can see there is an argument `na.rm = ` which is set to `FALSE` by default.
 
 > na.rm - a logical value indicating whether NA values should be stripped before the computation proceeds.
 
@@ -661,8 +660,8 @@ You can then bring up the help file for the relevant function.
 help("kmeans")
 ```
 
-An extremely useful function is `RSiteSearch()` which enables you to search for keywords and phrases in function help pages and vignettes for all CRAN packages, and in CRAN task views.
-This function allows you to access the https://www.r-project.org/search.html search engine directly from the Console with the results displayed in your web browser
+Another function is `RSiteSearch()` which enables you to search for keywords and phrases in function help pages and vignettes for all CRAN packages.
+This function allows you to access the search engine of the R website <https://www.r-project.org/search.html> directly from the Console with the results displayed in your web browser.
 
 ```{r, echo=TRUE, eval=FALSE}
 RSiteSearch("regression")
@@ -675,7 +674,7 @@ There are a plethora of freely available online resources ranging from whole cou
 There are also plenty of paid for options if that's your thing but unless you've money to burn there really is no need to part with your hard earned cash.
 Some resources we have found helpful are listed below.
 
-**General R resources**
+#### General R resources
 
 - [R-Project][r-docs]: User contributed documentation
 - [The R Journal][r-journal]: Journal of the R project for statistical computing
@@ -683,7 +682,7 @@ Some resources we have found helpful are listed below.
 - [RStudio's printable cheatsheets][rstudio-cheat]
 - [Rseek][rseek] A custom Google search for R-related sites
 
-**Getting help**
+#### Getting help
 
 - [Google it!][google-cust]: Try Googling any error messages you get.
 It's not cheating and everyone does it! You'll be surprised how many other people have probably had the same problem and solved it.
@@ -693,7 +692,7 @@ It's not cheating and everyone does it! You'll be surprised how many other peopl
 Make sure you search for similar questions before asking your own, and make sure you include a [reproducible example][stack-repro] to get the most useful advice.
 A reproducible example is a minimal example that lets others who are trying to help you to see the error themselves.
 
-**R markdown resources**
+#### R markdown resources
 
 - [Basic markdown and R markdown reference][bio-con]
 - [A good markdown reference][md-ref]
@@ -703,14 +702,14 @@ A reproducible example is a minimal example that lets others who are trying to h
 - [The R markdown documentation][rs-rm-docs] including a [getting started guide][rm-lesson], a [gallery of demos][rm-gallery], and several [articles][rs-articles] for more advanced usage.
 - [The knitr website][knitr] has lots of useful reference material about how knitr works.
 
-**Git and GitHub resources**
+#### Git and GitHub resources
 
 - [Happy Git][git_happy]: Great resource for using Git and GitHub
 - [Version control with RStudio][rs-Git]: RStudio document for using version control
 - [Using Git from RStudio][git-rs]: Good 10 minute guide
 - [The R Class][rclass]: In depth guide to using Git and GitHub with RStudio
 
-**R programming**
+#### R programming
 
 - [R Programming for Data Science][r-rprog]: In depth guide to R programming
 - [R for Data Science][r4ds]: Fantastic book, tidyverse orientated
@@ -750,4 +749,3 @@ load(file = "name_of_file.RData")
 
 ```{r links, child="_links.md"}
 ```
-

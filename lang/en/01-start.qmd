@@ -666,7 +666,7 @@ You however need to create a new folder with a R file (or text file) and save as
 
 ## File names {#file_names}
 
-What you call your files matters more than you might think.
+What you name your files matters more than you might think.
 Naming files is also more difficult than you think.
 The key requirement for a 'good' file name is that it's informative whilst also being relatively short.
 This is not always an easy compromise and often requires some thought.
@@ -678,27 +678,27 @@ knitr::include_graphics(path = "images/ch-01/xkcd_files.png")
 
 Although there's not really a recognized standard approach to naming files (actually [there is][file_wiki], just not everyone uses it), there are a couple of things to bear in mind.
 
-  - First, avoid using spaces in file names by replacing them with underscores or even hyphens.
+- Avoid using spaces in file names by replacing them with underscores or hyphens.
 Why does this matter? One reason is that some command line software (especially many bioinformatic tools) won't recognise a file name with a space and you'll have to go through all sorts of shenanigans using escape characters to make sure spaces are handled correctly.
 Even if you don't think you will ever use command line software you may be doing so indirectly.
-Take R markdown for example, if you want to render an R markdown document to pdf using the `rmarkdown` :package: package you will actually be using a command line {{< latex >}} engine under the hood (called [Pandoc][pandoc]).
+Take R markdown for example, if you want to render an R markdown document to pdf using the `rmarkdown` :package: package you will actually be using a command line {{< latex >}} engine under the hood.
 Another good reason not to use spaces in file names is that it makes searching for file names (or parts of file names) using [regular expressions][regex] in R (or any other language) much more difficult.
- 
-  - For the reasons given above, also avoid using special characters (i.e.
+
+- Avoid using special characters (i.e.
 @£$%^&*(:/)) in your file names.
- 
-  - If you are versioning your files with sequential numbers (i.e.
-file1, file2, file3 ...) and you have more than 9 files you should use 01, 02, 03 ..
-10 as this will ensure the files are printed in the correct order (see what happens if you don't).
-If you have more than 99 files then use 001, 002, 003...
-etc.
- 
-  - If your file names include dates, use the ISO 8601 format YYYY-MM-DD (or YYYYMMDD) to ensure your files are listed in proper chronological order.
- 
-  - Never use the word *final* in any file name - it never is!
+
+- If you are versioning your files with sequential numbers (i.e.
+file1, file2, file3 ...).
+If you plan to have more than 9 files you should use 01, 02, 03, ..., 10
+as this will ensure the files are listed in the correct order.
+If you plan to have more than 99 files then use 001, 002, 003, ...
+
+- For dates, use the ISO 8601 format YYYY-MM-DD (or YYYYMMDD) to ensure your files are listed in proper chronological order.
+
+- Never use the word *final* in any file name - it extremely rarely is!
 
 Whatever file naming convention you decide to use, try to adopt early, stick with it and be consistent.
-You'll thank us!
+
 
 ## Script documentation {#proj_doc}
 
@@ -744,7 +744,7 @@ xfun::session_info()
 This is just one example and there are no hard and fast rules so feel free to develop a system that works for you.
 A really useful shortcut in RStudio is to automatically include a time and date stamp in your R script.
 To do this, write `ts` where you want to insert your time stamp in your R script and then press the 'shift + tab' keys.
-RStudio will magically convert `ts` into the current date and time and also automatically comment out this line with a `#`.
+RStudio will convert `ts` into the current date and time and also automatically comment out this line with a `#`.
 Another really useful RStudio shortcut is to comment out multiple lines in your script with a `#` symbol.
 To do this, highlight the lines of text you want to comment and then press 'ctrl + shift + c' (or 'cmd + shift + c' on a mac).
 To uncomment the lines just use 'ctrl + shift + c' again.
@@ -792,7 +792,8 @@ knitr::include_graphics(path = "images/ch-01/after_rcode.png")
 ## Backing up projects
 
 Don't be that person who loses hard won (and often expensive) data and analyses.
-Don't be that person who thinks it'll never happen to me - it will! Always think of the absolute worst case scenario, something that makes you wake up in a cold sweat at night, and do all you can to make sure this never happens.
+Don't be that person who thinks it'll never happen to me - it will!
+Always think of the absolute worst case scenario, something that makes you wake up in a cold sweat at night, and do all you can to make sure this never happens.
 Just to be clear, if you're relying on copying your precious files to an external hard disk or USB stick this is **NOT** an effective backup strategy.
 These things go wrong all the time as you lob them into your rucksack or 'bag for life' and then lug them between your office and home.
 Even if you do leave them plugged into your computer what happens when the building burns down (we did say worst case!)? 
@@ -810,7 +811,7 @@ The best way we know for both backing up files and managing different versions o
 To find out more about how you can use RStudio, Git and GitHub together see the Git and GitHub [Chapter](#github_r).
        
 
-## Citing R
+## Citing R and R packages
 
 Many people have invested huge amounts of time and energy making R the great piece of software you're now using.
 If you use R in your work (and we hope you do) please remember to give appropriate credit by citing R.
