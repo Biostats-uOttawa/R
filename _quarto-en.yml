@@ -27,7 +27,7 @@ book:
     title: R Way
     left:
       - text: Data
-        href: 99-data-files.qmd
+        href: 92-data-files.qmd
       - text: Other resources
         menu:
           - text: Biostats uOttawa
@@ -56,22 +56,33 @@ book:
         - 02-basics.qmd
     - part: Data and graphics
       chapters:
-        - 03-data.qmd
-        - 04-graphics_short.qmd
+        - 11-data.qmd
+        - 12-graphics_short.qmd
     - part: Linear models
       chapters:
-        - 05-stats.qmd
-#    - part: Mixed models
+        - 21-stats.qmd
+#        - 22-glm.qmd
+    - part: Mixed models
 #      chapters:
-#        - you.qmd
-#    - part: Generalized additive models
-#    - part: Multivariate analysis
+#        - 31-lme.qmd
+#        - 32-glme.qmd
+#        - 33-multi_lme.qmd
+    - part: Generalized additive models
+#        - 41-gam.qmd
+    - part: Multivariate analysis
+#        - 51-acp.qmd
+#        - 52-overview others.qmd
+    - part: Bayesian approach
+#        - 61-intro to Bayesian.qmd
+#        - 62-lm-brms.qmd
+#        - 63-lme-brms.qmd
+#        - 64-gam-brms.qmd
     - part: Programming and writing with R
       chapters:
-        - 06-programming.qmd
-        - 07-rmarkdown.qmd
-        - 08-github.qmd
-    - 98-references.qmd
+        - 81-programming.qmd
+        - 82-rmarkdown.qmd
+        - 83-github.qmd
+    - 91-references.qmd
   appendices:
-    - 99-data-files.qmd
-    - 99-latex.qmd
+    - 92-data-files.qmd
+    - 93-latex.qmd

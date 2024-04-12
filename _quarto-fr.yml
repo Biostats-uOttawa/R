@@ -29,7 +29,7 @@ book:
     title: "Chemin enf-R"
     left:
       - text: Données
-        href: 99-fichiers-donnees.qmd
+        href: 92-fichiers-donnees.qmd
       - text: Autres ressources
         menu:
           - text: Biostats uOttawa
@@ -53,15 +53,39 @@ book:
   
   chapters:
     - index.qmd
-    - 01-debut.qmd
-#    - 02-basics.qmd
-#    - 03-donnees.qmd
-#    - 04-graphiques_short.qmd
-#    - 05-stats-simple.qmd
-#    - 06-programmation.qmd
-#    - 07-rmarkdown.qmd
-#    - 08-github.qmd
-    - 98-bibliographie.qmd
+    - part: Débuter avec R
+      chapters:
+        - 01-debut.qmd
+#        - 02-basics.qmd
+    - part: Données et graphiques
+#      chapters:
+#        - 11-data.qmd
+#        - 12-graphics_short.qmd
+    - part: Modèles linéaires
+#      chapters:
+#        - 21-stats.qmd
+#        - 22-glm.qmd
+    - part: Modèles mixtes
+#      chapters:
+#        - 31-lme.qmd
+#        - 32-glme.qmd
+#        - 33-multi_lme.qmd
+    - part: Modèles additifs (gam)
+#        - 41-gam.qmd
+    - part: Analyse multivariées
+#        - 51-acp.qmd
+#        - 52-overview others.qmd
+    - part: Approche Bayesienne
+#        - 61-intro to Bayesian.qmd
+#        - 62-lm-brms.qmd
+#        - 63-lme-brms.qmd
+#        - 64-gam-brms.qmd
+    - part: Programmation et écriture avec R
+#      chapters:
+#        - 81-programming.qmd
+#        - 82-rmarkdown.qmd
+#        - 83-github.qmd
+    - 91-bibliographie.qmd
   appendices:
-    - 99-fichiers-donnees.qmd
-#    - 99-App-latex.qmd
+    - 92-fichiers-donnees.qmd
+#    - 93-latex.qmd
