@@ -753,11 +753,17 @@ They will appear only when you call the object.
 #| message: false
 #| out-width: 75%
 #| fig-align: center
-first_figure <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
+first_figure <- ggplot(
+  aes(x = height, y = shootarea, colour = nitrogen),
+  data = flowers
+) +
   geom_point() +
-  geom_smooth(method = "gam", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE) +
   facet_grid(block ~ treat)
-second_figure <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
+second_figure <- ggplot(
+  aes(x = weight, y = shootarea, colour = nitrogen),
+  data = flowers
+) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
   facet_grid(block ~ treat)
@@ -772,6 +778,7 @@ Let's try to plot both figures, one on top of the other.
 #| label: side-by-side-patchwork
 #| echo: true
 #| message: false
+#| warning: false
 #| out-width: 85%
 #| fig-align: center
 first_figure / second_figure
@@ -786,6 +793,7 @@ We can take this one step further and assign nested `patchwork` figures to an ob
 ```{r}
 #| label: labelled-nested
 #| message: false
+#| warning: false
 #| out-width: 75%
 #| fig-align: center
 nested_compare <- first_figure / second_figure
@@ -851,7 +859,7 @@ Other useful functions are; `jpeg()`, `tiff()` and `bmp()`.
 Additional arguments to these functions allow you to change the size, resolution and background colour of your saved images.
 See `?png` for more details.
 
-`ggplot2` :package: offer the really useful `ggsave()` function which simply saving plots a lot.
+`ggplot2` :package: provide a really useful function `ggsave()` function which simplify saving plots a lot but works only for ggplots.
 
 After producing a plot and seeing it in your IDE, you can simply run ggsave() with the adequate argument to save the last ggplot produced.
 You can of course, also, specify which plot to save.
@@ -864,4 +872,4 @@ ggsave("file.png")
 
 ## Customising ggplots {#sec-custom-plot}
 
-**Went for walk to be edited**
+**Went for a walk to be edited** :unicorn:
