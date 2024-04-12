@@ -441,7 +441,6 @@ Below is a table which summarises operators.
 The first two are logical operators and the final six are relational operators.
 You can use any of these when you make your own functions (or loops).
 
-\  
 
 | Operator | Technical Description    | What it means               | Example                              |
 |---------:|:-----------------------:|:----------------------------|:-------------------------------------|
@@ -454,7 +453,6 @@ You can use any of these when you make your own functions (or loops).
 | `==`     | Equal to                | X is equal to Y             | `if(X == Y)`                         |
 | `!=`     | Not equal to            | X is not equal to Y         | `if(X != Y)`                         |
 
-\  
 
 ## Loops
 

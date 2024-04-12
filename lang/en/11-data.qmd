@@ -17,7 +17,6 @@ R has six basic types of data; numeric, integer, logical, complex and character.
 The keen eyed among you will notice we've only listed five data types here, the final data type is raw which we won't cover as it's not useful 99.99% of the time.
 We also won't cover complex numbers as we don't have the [imagination][complex_num]!
 
-\  
 
   - **Numeric** data are numbers that contain a decimal.
 Actually they can also be whole numbers but we'll gloss over that.
@@ -32,7 +31,6 @@ You can think of character strings as something like a word (or multiple words).
 A special type of character string is a *factor*, which is a string but with additional attributes (like levels or an order).
 We'll cover factors later.
 
-\  
 
 R is (usually) able to automatically distinguish between different classes of data by their nature and the context in which they're used although you should bear in mind that R can't actually read your mind and you may have to explicitly tell R how you want to treat a data type.
 You can find out the type (or class) of any object using the `class()` function.
@@ -104,7 +102,6 @@ Vectors can contain numbers, characters, factors or logicals, but the key thing 
 In other words, vectors can contain either numbers, characters or logicals but not mixtures of these types of data.
 There is one important exception to this, you can include `NA` (remember this is special type of logical) to denote missing data in vectors with other data types.
 
-\  
 
 ```{r}
 #| label: data_struc
@@ -121,7 +118,6 @@ A matrix is simply a vector that has additional attributes called dimensions.
 Arrays are just multidimensional matrices.
 Again, matrices and arrays must contain elements all of the same data class.
 
-\  
 
 ```{r}
 #| label: data_struc2
@@ -131,7 +127,6 @@ Again, matrices and arrays must contain elements all of the same data class.
 knitr::include_graphics(path = "images/mat_array.png")
 ```
 
-\ 
 
 A convenient way to create a matrix or an array is to use the `matrix()` and `array()` functions respectively.
 Below, we will create a matrix from a sequence 1 to 16 in four rows (`nrow = 4`) and fill the matrix row-wise (`byrow = TRUE`) rather than the default column-wise.
@@ -252,7 +247,6 @@ The variables `height`, `weight`, `leafarea` and `shootarea` are numeric and the
 Although the variable `block` has numeric values, these do not really have any order and could also be treated as a factor (i.e.
 they could also have been called A and B).
 
-\  
 
 ```{r }
 #| label: import-data-html
@@ -275,7 +269,6 @@ knitr::kable(rbind(head(flowers), tail(flowers)), row.names = FALSE, "latex", bo
 	kable_styling(latex_options = "striped")
 ```
 
-\  
 
 There are a couple of important things to bear in mind about data frames.
 These types of objects are known as rectangular data (or tidy data) as each column must have the same number of observations.
@@ -337,7 +330,6 @@ dataf <- data.frame(height = p.height, weight = p.weight, names = p.names,
 str(dataf)
 ```
 
-\  
 
 ## Importing data
 
@@ -354,7 +346,6 @@ Here's the data from the petunia experiment we dicussed previously displayed in 
 If you want to follow along you can download the data file (*'flower.xls'*) from the companion website [here][flow-data].
   
 
-\  
 
 ```{r}
 #| label: LO-calc0
@@ -364,7 +355,6 @@ If you want to follow along you can download the data file (*'flower.xls'*) from
 knitr::include_graphics(path = "images/libre_off.png")
 ```
 
-\  
 
 For those of you unfamiliar with the tab delimited file format it simply means that data in different columns are separated with a 'tab' character (yes, the same one as on your keyboard) and is usually saved as a file with a '.txt' extension (you might also see `.tsv` which is short for tab separated values).
 
@@ -372,7 +362,6 @@ To save a spreadsheet as a tab delimited file in LibreOffice Calc select `File` 
 You will need to specify the location you want to save your file in the 'Save in folder' option and the name of the file in the 'Name' option.
 In the drop down menu located above the 'Save' button change the default 'All formats' to 'Text CSV (.csv)'.
 
-\  
 
 ```{r}
 #| label: LO-calc
@@ -382,13 +371,11 @@ In the drop down menu located above the 'Save' button change the default 'All fo
 knitr::include_graphics(path = "images/libre_off1.png")
 ```
 
-\  
 
 Click the Save button and then select the 'Use Text CSV Format' option.
 In the next pop-up window select `{Tab}` from the drop down menu in the 'Field delimiter' option.
 Click on OK to save the file.
 
-\  
 
 ```{r}
 #| label: LO-calc2
@@ -398,7 +385,6 @@ Click on OK to save the file.
 knitr::include_graphics(path = "images/libre_off2.png")
 ```
 
-\  
 
 The resulting file will annoyingly have a '.csv' extension even though we've saved it as a tab delimited file.
 Either live with it or rename the file with a '.txt' extension instead.
@@ -408,7 +394,6 @@ Enter the file name (keep it fairly short, [no spaces](#file_names)!) in the 'Sa
 In the 'File format:' dialogue box click on the down arrow to open the drop down menu and select 'Text (Tab delimited)' as your file type.
 Select OK to save the file.
 
-\  
 
 ```{r}
 #| label: ms-excel
@@ -418,7 +403,6 @@ Select OK to save the file.
 knitr::include_graphics(path = "images/ms_excel1.png")
 ```
 
-\ 
 
 There are a couple of things to bear in mind when saving files to import into R which will make your life easier in the long run.
 Keep your column headings (if you have them) short and informative.
@@ -1278,7 +1262,6 @@ long_data <- data.frame(
 long_data
 ```
 
-\  
 
 We can also format the same data in the wide format as shown below.
 In this format we have multiple observations from each subject in a single row with measurements in different columns (`control`, `cond1` and `cond2`).
@@ -1295,7 +1278,6 @@ wide_data <- data.frame(subject = c("A", "B", "C", "D"),
 wide_data
 ```
 
-\  
 
 Whilst there's no inherent problem with either of these formats we will sometimes need to convert between the two because some functions will require a specific format for them to work.
 The most common format is the long format.
@@ -1582,7 +1564,6 @@ First start Excel and then select `File` -> `Open ..` in the main menu and then 
 Next.
 choose the 'Tab' option to set the delimiter and then click on the 'Finish' button.
 
-\  
 
 ```{r}
 #| label: imp1
@@ -1592,7 +1573,6 @@ choose the 'Tab' option to set the delimiter and then click on the 'Finish' butt
 knitr::include_graphics(path = "images/excel_export.png")
 ```
 
-\  
 
 We can of course export our files in a variety of other formats.
 Another popular option is to export files in csv (comma separated values) format.

@@ -30,7 +30,6 @@ This means that its can easily become part of your usual workflow with minimal a
 
 So why should you worry about version control? Well, first of all it helps avoid this (familiar?) situation when you're working on a project
 
-\  
 
 ```{r}
 #| label: youNeedVC1
@@ -41,11 +40,9 @@ So why should you worry about version control? Well, first of all it helps avoid
 knitr::include_graphics(path = "images/Messy_folder.PNG")
 ```
 
-\  
 
 usually arising from this (familiar?) scenario
 
-\  
 
 ```{r}
 #| label: youNeedVC2
@@ -55,7 +52,6 @@ usually arising from this (familiar?) scenario
 knitr::include_graphics(path = "images/final_doc.png")
 ```
 
-\  
 
 Version control automatically takes care of keeping a record of all the versions of a particular file and allows you to revert back to previous versions if you need to.
 Version control also helps you (especially the future you) keep track of all your files in a single place and it helps others (especially collaborators) review, contribute to and reuse your work through the GitHub website.
@@ -78,7 +74,6 @@ We can then **push** these changes to the remote GitHub repository to make a bac
 If other people are working on the same project (**repository**), or maybe you're working on a different computer, you can **pull** any changes back to your local repository so everything is synchronised.
          
 
-\  
 
 ```{r}
 #| label: git-cart
@@ -88,7 +83,6 @@ If other people are working on the same project (**repository**), or maybe you'r
 knitr::include_graphics(path = "images/Github_cartoon2.png")
 ```
 
-\  
 
 ## Getting started {#setup_git}
 
@@ -104,7 +98,6 @@ If you see something that looks like `git version 2.25.0` (the version number ma
 If you get an error (something like `git: command not found`) this means you don't have Git installed (yet!).
 
 
-\  
 
 ```{r}
 #| label: git-version
@@ -114,7 +107,6 @@ If you get an error (something like `git: command not found`) this means you don
 knitr::include_graphics(path = "images/git_version.png")
 ```
 
-\  
 
 You can also do this check outside RStudio by opening up a separate Terminal if you want.
 On Windows go to the 'Start menu' and in the search bar (or run box) type `cmd` and press enter.
@@ -176,7 +168,6 @@ In RStudio, go to the menu `Tools` -> `Global Options` -> `Git/SVN` and make sur
 If it's not correct hit the `Browse...` button and navigate to where you installed git and click on the executable file.
 You will need to restart RStudio after doing this.
 
-\  
 
 ```{r}
 #| label: git-rs
@@ -225,7 +216,6 @@ To use the GitHub first approach you will first need to create a **repository (r
 Go to your [GitHub page][github] and sign in if necessary.
 Click on the 'Repositories' tab at the top and then on the green 'New' button on the right 
 
-\  
 
 ```{r}
 #| label: new-repo1
@@ -235,11 +225,9 @@ Click on the 'Repositories' tab at the top and then on the green 'New' button on
 knitr::include_graphics(path = "images/new_repo.png")
 ```
 
-\  
 
 Give your new repo a name (let's call it `first_repo` for this Chapter), select 'Public', tick on the 'Initialize this repository with a README' (this is important) and then click on 'Create repository' (ignore the other options for now).
 
-\  
 
 ```{r}
 #| label: new-repo2
@@ -249,13 +237,11 @@ Give your new repo a name (let's call it `first_repo` for this Chapter), select 
 knitr::include_graphics(path = "images/new_repo_opt.png")
 ```
 
-\  
 
 Your new GitHub repository will now be created.
 Notice the README has been rendered in GitHub and is in markdown (.md) format (see [Chapter 8](#rmarkdown_r) on R markdown if this doesn't mean anything to you).
 Next click on the green 'Clone or Download' button and copy the `https//...` URL that pops up for later (either highlight it all and copy or click on the copy to clipboard icon to the right).
 
-\  
 
 ```{r}
 #| label: new-repo3
@@ -265,13 +251,11 @@ Next click on the green 'Clone or Download' button and copy the `https//...` URL
 knitr::include_graphics(path = "images/new_repo_clone.png")
 ```
 
-\  
 
 Ok, we now switch our attention to RStudio.
 In RStudio click on the `File` -> `New Project` menu.
 In the pop up window select `Version Control`.
 
-\  
 
 ```{r}
 #| label: new-proj1
@@ -281,7 +265,6 @@ In the pop up window select `Version Control`.
 knitr::include_graphics(path = "images/proj_setup1.png")
 ```
 
-\  
 
 Now paste the the URL you previously copied from GitHub into the `Repository URL:` box.
 This should then automatically fill out the `Project Directory Name:` section with the correct repository name (it's important that the name of this directory has the same name as the repository you created in GitHub).
@@ -289,7 +272,6 @@ You can then select where you want to create this directory by clicking on the `
 Navigate to where you want the directory created and click OK.
 We also tick the `Open in new session` option.
 
-\  
 
 ```{r}
 #| label: new-proj2
@@ -299,7 +281,6 @@ We also tick the `Open in new session` option.
 knitr::include_graphics(path = "images/proj_setup2.png")
 ```
 
-\  
 
 RStudio will now create a new directory with the same name as your repository on your local computer and will then **clone** your remote repository to this directory.
 The directory will contain three new files; `first_repo.Rproj` (or whatever you called your repository), `README.md` and `.gitignore`.
@@ -308,7 +289,6 @@ You will also have a `Git` tab in the top right pane with two files listed (we w
 That's it for Option 1, you now have a remote GitHub repository set up and this is linked to your local repository managed by RStudio.
 Any changes you make to files in this directory will be version controlled by Git.
 
-\  
 
 ```{r}
 #| label: new-proj2a
@@ -326,11 +306,9 @@ This option is also useful if you just want to create a local RStudio project li
 no GitHub involved).
 If you want to do this then just follow the instructions below omitting the GitHub bit.
 
-\  
 
 In RStudio click on the `File` -> `New Project` menu and select the `New Directory` option.
 
-\  
 
 ```{r}
 #| label: new-proj3
@@ -340,11 +318,9 @@ In RStudio click on the `File` -> `New Project` menu and select the `New Directo
 knitr::include_graphics(path = "images/new_proj_RS1.png")
 ```
 
-\  
 
 In the pop up window select the `New Project` option
 
-\  
 
 ```{r}
 #| label: new-proj4
@@ -354,12 +330,10 @@ In the pop up window select the `New Project` option
 knitr::include_graphics(path = "images/proj_setup_RS.png")
 ```
 
-\ 
 
 In the New Project window specify a `Directory name` (choose `second_repo` for this Chapter) and select where you would like to create this directory on you computer (click the `Browse` button).
 Make sure the `Create a git repository` option is ticked 
 
-\  
 
 ```{r}
 #| label: new-proj5
@@ -369,13 +343,11 @@ Make sure the `Create a git repository` option is ticked
 knitr::include_graphics(path = "images/new_proj_RS2.png")
 ```
 
-\  
 
 This will create a version controlled directory called `second_repo` on your computer that contains two files, `second_repo.Rproj` and `.gitignore` (there might also be a `.Rhistory` file but ignore this).
 You can check this by looking in the `Files` tab in RStudio (usually in the bottom right pane).
  
 
-\  
 
 ```{r}
 #| label: new-proj6
@@ -385,7 +357,6 @@ You can check this by looking in the `Files` tab in RStudio (usually in the bott
 knitr::include_graphics(path = "images/new_proj_RS3.png")
 ```
 
-\  
 
 OK, before we go on to create a repository on GitHub we need to do one more thing - we need to place our `second_repo.Rproj` and `.gitignore`files under version control.
 Unfortunately we haven't covered this in detail yet so just follow the next few instructions (blindly!) and we'll revisit them in the [Using Git](#use_git) section of this Chapter.
@@ -393,7 +364,6 @@ Unfortunately we haven't covered this in detail yet so just follow the next few 
 
 To get our two files under version control click on the 'Git' tab which is usually in the top tight pane in RStudio
 
-\  
 
 ```{r}
 #| label: new-proj7
@@ -403,12 +373,10 @@ To get our two files under version control click on the 'Git' tab which is usual
 knitr::include_graphics(path = "images/new_proj_RS4.png")
 ```
 
-\  
 
 You can see that both files are listed.
 Next, tick the boxes under the 'Staged' column for both files and then click on the 'Commit' button.
 
-\  
 
 ```{r}
 #| label: new-proj8
@@ -418,7 +386,6 @@ Next, tick the boxes under the 'Staged' column for both files and then click on 
 knitr::include_graphics(path = "images/new_proj_RS5.png")
 ```
 
-\  
 
 This will take you to the 'Review Changes' window.
 Type in the commit message 'First commit' in the 'Commit message' window and click on the 'Commit' button.
@@ -426,7 +393,6 @@ A new window will appear with some messages which you can ignore for now.
 Click 'Close' to close this window and also close the 'Review Changes' window.
 The two files should now have disappeared from the Git pane in RStudio indicating a successful commit.
 
-\  
 
 ```{r}
 #| label: new-proj9
@@ -436,7 +402,6 @@ The two files should now have disappeared from the Git pane in RStudio indicatin
 knitr::include_graphics(path = "images/new_proj_RS6.png")
 ```
 
-\  
 
 OK, that's those two files now under version control.
 Now we need to create a new repository on GitHub.
@@ -445,7 +410,6 @@ Click on the 'Repositories' tab and then click on the green 'New' button on the 
 Give your new repo the name `second_repo` (the same as your version controlled directory name) and select 'Public'.
 This time **do not** tick the 'Initialize this repository with a README' (this is important) and then click on 'Create repository'.
 
-\  
 
 
 ```{r}
@@ -456,13 +420,11 @@ This time **do not** tick the 'Initialize this repository with a README' (this i
 knitr::include_graphics(path = "images/new_proj_RS7.png")
 ```
 
-\  
 
 This will take you to a Quick setup page which provides you with some code for various situations.
 The code we are interested in is the code under `...or push an existing repository from the command line` heading.
  
 
-\  
 
 ```{r}
 #| label: new-proj11
@@ -472,7 +434,6 @@ The code we are interested in is the code under `...or push an existing reposito
 knitr::include_graphics(path = "images/new_proj_RS8.png")
 ```
 
-\  
 
 Highlight and copy the first line of code (note: yours will be slightly different as it will include your GitHub username not mine)  
 
@@ -486,7 +447,6 @@ Now go back to GitHub and copy the second line of code
 and paste this into the Terminal in RStudio.
 You should see something like this
 
-\  
 
 ```{r}
 #| label: new-proj12
@@ -496,11 +456,9 @@ You should see something like this
 knitr::include_graphics(path = "images/new_prog_RS9.png")
 ```
 
-\  
 
 If you take a look at your repo back on GitHub (click on the `/second_repo` link at the top) you will see the `second_repo.Rproj` and `.gitignore` files have now been **pushed** to GitHub from your local repository.
 
-\  
 
 ```{r}
 #| label: new-proj13
@@ -510,7 +468,6 @@ If you take a look at your repo back on GitHub (click on the `/second_repo` link
 knitr::include_graphics(path = "images/new_proj_RS10.png")
 ```
 
-\  
 
 The last thing we need to do is create and add a **README** file to your repository.
 A README file describes your project and is written using the same Markdown language you learned in the R markdown [Chapter](#rmarkdown_r).
@@ -521,7 +478,6 @@ Let's use the second option.
 
 In your repository on GitHub click on the green `Add a README` button.
 
-\  
 
 ```{r}
 #| label: new-proj14
@@ -531,11 +487,9 @@ In your repository on GitHub click on the green `Add a README` button.
 knitr::include_graphics(path = "images/new_proj_RS11.png")
 ```
 
-\  
 
 Now write a short description of your project in the `<> Edit new file` section and then click on the green `Commit new file` button.
 
-\  
 
 ```{r}
 #| label: new-proj15
@@ -545,13 +499,11 @@ Now write a short description of your project in the `<> Edit new file` section 
 knitr::include_graphics(path = "images/new_proj_RS12.png")
 ```
 
-\  
 
 You should now see the `README.md` file listed in your repository.
 It won't actually exist on your computer yet as you will need to **pull** these changes back to your local repository, but more about that in the next section.
  
 
-\  
 
 Whether you followed Option 1 or Option 2 (or both) you have now successfully setup a version controlled RStudio project (and associated directory) and linked this to a GitHub repository.
 Git will now monitor this directory for any changes you make to files and also if you add or delete files.
@@ -591,7 +543,6 @@ If you're working with other people on the same project you may also need to **p
 knitr::include_graphics(path = "images/workflow_3.png")
 ```
 
-\  
 
 OK, let's go through an example to help clarify this workflow.
 
@@ -599,7 +550,6 @@ OK, let's go through an example to help clarify this workflow.
 Open up the `first_repo.Rproj` you created previously during Option 1.
 Either use the `File` -> `Open Project` menu or click on the top right project icon and select the appropriate project.
 
-\  
 
 ```{r}
 #| label: rm0
@@ -609,7 +559,6 @@ Either use the `File` -> `Open Project` menu or click on the top right project i
 knitr::include_graphics(path = "images/first_Rmd0.png")
 ```
 
-\  
 
 Create an R markdown document inside this project by clicking on the `File` -> `New File` -> `R markdown` menu (remember from the R markdown [Chapter](#rmarkdown_r)?).
  
@@ -619,7 +568,6 @@ We'll use the inbuilt `cars` dataset to do this.
 Save this file (cmd + s for Mac or ctrl + s in Windows).
 Your R markdown document should look something like the following (it doesn't matter if it's not exactly the same).
 
-\  
 
 ```{r}
 #| label: rm1
@@ -629,11 +577,9 @@ Your R markdown document should look something like the following (it doesn't ma
 knitr::include_graphics(path = "images/first_Rmd.png")
 ```
 
-\  
 
 Take a look at the 'Git' tab which should list your new R markdown document (`first_doc.Rmd` in this example) along with `first_repo.Rproj`, and `.gitignore` (you created these files previously when following Option 1).
 
-\  
 
 ```{r}
 #| label: rm2
@@ -643,14 +589,12 @@ Take a look at the 'Git' tab which should list your new R markdown document (`fi
 knitr::include_graphics(path = "images/first_Rmd2.png")
 ```
 
-\  
 
 Following our workflow, we now need to **stage** these files.
 To do this tick the boxes under the 'Staged' column for all files.
 Notice that there is a status icon next to the box which gives you an indication of how the files were changed.
 In our case all of the files are to be added (capital A) as we have just created them.
 
-\  
 
 ```{r}
 #| label: rm3
@@ -660,12 +604,10 @@ In our case all of the files are to be added (capital A) as we have just created
 knitr::include_graphics(path = "images/rstudio_git_cols.png")
 ```
 
-\  
 
 After you have staged the files the next step is to **commit** the files.
 This is done by clicking on the 'Commit' button.
 
-\  
 
 ```{r}
 #| label: rm4
@@ -675,7 +617,6 @@ This is done by clicking on the 'Commit' button.
 knitr::include_graphics(path = "images/first_Rmd3.png")
 ```
 
-\  
 
 After clicking on the 'Commit' button you will be taken to the 'Review Changes' window.
 You should see the three files you staged from the previous step in the left pane.
@@ -688,7 +629,6 @@ This makes sense as Git keeps track of *what* has changed and so it is best not 
 It's traditional to enter the message 'First commit' (or 'Initial commit') when you commit files for the first time.
 Now click on the 'Commit' button to commit these changes.
 
-\  
 
 ```{r}
 #| label: rm5
@@ -698,13 +638,11 @@ Now click on the 'Commit' button to commit these changes.
 knitr::include_graphics(path = "images/first_Rmd4.png")
 ```
 
-\  
 
 A summary of the commit you just performed will be shown.
 Now click on the 'Close' button to return to the 'Review Changes' window.
 Note that the staged files have now been removed.
 
-\  
 
 ```{r}
 #| label: rm6
@@ -714,7 +652,6 @@ Note that the staged files have now been removed.
 knitr::include_graphics(path = "images/first_Rmd5.png")
 ```
 
-\  
 
 Now that you have committed your changes the next step is to **push** these changes to GitHub.
 Before you push your changes it's good practice to first **pull** any changes from GitHub.
@@ -725,7 +662,6 @@ Once you have pulled any changes click on the green 'Push' button to push your c
 You will see a summary of the push you just performed.
 Hit the 'Close' button and then close the 'Review Changes' window.
 
-\  
 ```{r}
 #| label: rm7
 #| echo: false
@@ -734,13 +670,11 @@ Hit the 'Close' button and then close the 'Review Changes' window.
 knitr::include_graphics(path = "images/first_Rmd6.png")
 ```
 
-\  
 
 To confirm the changes you made to the project have been pushed to GitHub, open your GitHub page, click on the Repositories link and then click on the  `first_repo` repository.
 You should see four files listed including the `first_doc.Rmd` you just pushed.
 Along side the file name you will see your last commit message ('First commit' in this case) and when you made the last commit.
 
-\  
 
 ```{r}
 #| label: rm8
@@ -750,11 +684,9 @@ Along side the file name you will see your last commit message ('First commit' i
 knitr::include_graphics(path = "images/first_Rmd7.png")
 ```
 
-\  
 
 To see the contents of the file click on the `first_doc.Rmd` file name.
 
-\  
 
 ```{r}
 #| label: rm9
@@ -778,7 +710,6 @@ Delete the line beginning with 'My first version controlled ...' and replace it 
 We will also change the plotted symbols to red and give the plot axes labels.
 Lastly, let's add a summary table of the dataframe using the `kable()` and `summary()` functions (you may need to install the `knitr` package if you haven't done so previously to use the `kable()` function) and finally render this document to pdf by changing the YAML option to `output: pdf_document`.
 
-\  
 
 ```{r}
 #| label: mod1
@@ -788,7 +719,6 @@ Lastly, let's add a summary table of the dataframe using the `kable()` and `summ
 knitr::include_graphics(path = "images/mod1.png")
 ```
 
-\  
 
 Now save these changes and then click the `knit` button to render to pdf.
 A new pdf file named `first_doc.pdf` will be created which you can view by clicking on the file name in the `Files` tab in RStudio.
@@ -797,7 +727,6 @@ A new pdf file named `first_doc.pdf` will be created which you can view by click
 Notice that these two files have been added to the `Git` tab in RStudio.
 The status icons indicate that the `first_doc.Rmd` file has been modified (capital M) and the `first_doc.pdf` file is currently untracked (question mark).
 
-\  
 
 ```{r}
 #| label: mod2
@@ -807,11 +736,9 @@ The status icons indicate that the `first_doc.Rmd` file has been modified (capit
 knitr::include_graphics(path = "images/mod2.png")
 ```
 
-\  
 
 To stage these files tick the 'Staged' box for each file and click on the 'Commit' button to take you to the 'Review Changes' window
 
-\  
 
 ```{r}
 #| label: mod3
@@ -821,14 +748,12 @@ To stage these files tick the 'Staged' box for each file and click on the 'Commi
 knitr::include_graphics(path = "images/mod3.png")
 ```
 
-\  
 
 Before you commit your changes notice the status of `first_doc.pdf` has changed from untracked to added (A).
 You can view the changes you have made to the `first_doc.Rmd` by clicking on the file name in the top left pane which will provide you with a useful summary of the changes in the bottom pane (technically called diffs).
 Lines that have been deleted are highlighted in red and lines that have been added are highlighted in green (note that from Git's point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of a new line).
 Once you're happy, commit these changes by writing a suitable commit message and click on the 'Commit' button.
 
-\  
 
 ```{r}
 #| label: mod4
@@ -838,12 +763,10 @@ Once you're happy, commit these changes by writing a suitable commit message and
 knitr::include_graphics(path = "images/mod4.png")
 ```
 
-\  
 
 To push the changes to GitHub, click on the 'Pull' button first (remember this is good practice even though you are only collaborating with yourself at the moment) and then click on the 'Push' button.
 Go to your online GitHub repository and you will see your new commits, including the `first_doc.pdf` file you created when you rendered your R markdown document.
  
-\  
 
 ```{r}
 #| label: mod5
@@ -853,11 +776,9 @@ Go to your online GitHub repository and you will see your new commits, including
 knitr::include_graphics(path = "images/mod5.png")
 ```
 
-\  
 
 To view the changes in `first_doc.Rmd` click on the file name for this file.
 
-\  
 
 ```{r}
 #| label: mod6
@@ -877,7 +798,6 @@ To view your commit history in RStudio click on the 'History' button (the one th
 You can also click on the 'Commit' or 'Diff' buttons which takes you to the same window (you just need to additionally click on the 'History' button in the 'Review Changes' window).
  
 
-\ 
 
 ```{r}
 #| label: his1
@@ -887,7 +807,6 @@ You can also click on the 'Commit' or 'Diff' buttons which takes you to the same
 knitr::include_graphics(path = "images/c_history.png")
 ```
 
-\  
 
 The history window is split into two parts.
 The top pane lists every commit you have made in this repository (with associated commit messages) starting with the most recent one at the top and oldest at the bottom.
@@ -897,7 +816,6 @@ These SHA identifiers are really important as you can use them to view and rever
 You can also view the contents of each file by clicking on the 'View file @ SHA key` link (in our case 'View file @ 2b4693d1').
  
 
-\  
 
 ```{r}
 #| label: his2
@@ -907,12 +825,10 @@ You can also view the contents of each file by clicking on the 'View file @ SHA 
 knitr::include_graphics(path = "images/c_history2.png")
 ```
 
-\  
 
 You can also view your commit history on GitHub website but this will be limited to only those commits you have already pushed to GitHub.
 To view the commit history navigate to the repository and click on the 'commits' link (in our case the link will be labelled '3 commits' as we have made 3 commits).
 
-\  
 
 ```{r}
 #| label: his3
@@ -922,13 +838,11 @@ To view the commit history navigate to the repository and click on the 'commits'
 knitr::include_graphics(path = "images/c_history3.png")
 ```
 
-\  
 
 You will see a list of all the commits you have made, along with commit messages, date of commit and the SHA identifier (these are the same SHA identifiers you saw in the RStudio history).
 You can even browse the repository at a particular point in time by clicking on the `<>` link.
 To view the changes in files associated with the commit simply click on the relevant commit link in the list.
 
-\  
 
 ```{r}
 #| label: his4
@@ -938,11 +852,9 @@ To view the changes in files associated with the commit simply click on the rele
 knitr::include_graphics(path = "images/c_history4.png")
 ```
 
-\  
 
 Which will display changes using the usual format of green for additions and red for deletions.
 
-\  
 
 ```{r}
 #| label: his5
@@ -965,7 +877,6 @@ If you have saved changes to your file(s) but not staged, committed or pushed th
 This will roll back all of the changes you have made to the same state as your last commit.
 Just be aware that you cannot undo this operation so use with caution.
 
-\  
 
 ```{r}
 #| label: rev1
@@ -975,14 +886,12 @@ Just be aware that you cannot undo this operation so use with caution.
 knitr::include_graphics(path = "images/revert1.png")
 ```
 
-\  
 
 You can also undo changes to just part of a file by opening up the 'Diff' window (click on the 'Diff' button in the Git pane).
 Select the line you wish to discard by double clicking on the line and then click on the 'Discard line' button.
 In a similar fashion you can discard chunks of code by clicking on the 'Discard chunk' button.
  
 
-\  
 
 ```{r}
 #| label: rev2
@@ -1003,7 +912,6 @@ If you have made a mistake or have forgotten to include a file in your last comm
 You can do this by staging your file and then tick the 'Amend previous commit` box in the 'Review Changes' window before committing.
   
 
-\  
 
 ```{r}
 #| label: rev3
@@ -1013,12 +921,10 @@ You can do this by staging your file and then tick the 'Amend previous commit` b
 knitr::include_graphics(path = "images/revert3.png")
 ```
 
-\  
 
 If we check out our commit history you can see that our latest commit contains both changes to the file rather than having two separate commits.
 We use the amend commit approach alot but it's important to understand that you should **not** do this if you have already pushed your last commit to GitHub as you are effectively rewriting history and all sorts bad things may happen! 
 
-\  
 
 ```{r}
 #| label: rev4
@@ -1028,14 +934,12 @@ We use the amend commit approach alot but it's important to understand that you 
 knitr::include_graphics(path = "images/revert4.png")
 ```
 
-\  
 
 If you spot a mistake that has happened multiple commits back or you just want to revert to a previous version of a document you have a number of options.
   
 
 **Option 1** - (probably the easiest but very unGit - but like, whatever!) is to look in your commit history in RStudio, find the commit that you would like to go back to and click on the 'View file @ ' button to show the file contents.
 
-\  
 
 ```{r}
 #| label: rev5
@@ -1045,14 +949,12 @@ If you spot a mistake that has happened multiple commits back or you just want t
 knitr::include_graphics(path = "images/revert5.png")
 ```
 
-\  
 
 You can then copy the contents of the file to the clipboard and paste it into your current file to replace your duff code or text.
 Alternatively, you can click on the 'Save As' button and save the file with a different file name.
 Once you have saved your new file you can delete your current unwanted file and then carry on working on your new file.
 Don't forget to stage and commit this new file.
 
-\  
 
 ```{r}
 #| label: rev6
@@ -1062,11 +964,9 @@ Don't forget to stage and commit this new file.
 knitr::include_graphics(path = "images/revert6.png")
 ```
 
-\
 
 **Option 2** - (Git like) Go to your Git history, find the commit you would like to roll back to and write down (or copy) its SHA identifier.
 
-\  
 
 ```{r}
 #| label: rev7
@@ -1076,7 +976,6 @@ knitr::include_graphics(path = "images/revert6.png")
 knitr::include_graphics(path = "images/revert7.png")
 ```
 
-\  
 
 Now go to the Terminal in RStudio and type `git checkout <SHA> <filename>`.
 In our case the SHA key is `2b4693d1` and the filename is `first_doc.Rmd` so our command would look like this:
@@ -1108,7 +1007,6 @@ The `revert` command in Git essentially creates a new commit based on a previous
 To rollback to a previous state (commit) you first need to identify the SHA for the commit you wish to go back to (as we did above) and then use the `revert` command in the Terminal.
 Let's say we want to revert back to our 'First commit' which has a SHA identifier `d27e79f1`.
 
-\  
 
 ```{r}
 #| label: rev8
@@ -1118,7 +1016,6 @@ Let's say we want to revert back to our 'First commit' which has a SHA identifie
 knitr::include_graphics(path = "images/revert8.png")
 ```
 
-\  
 
 We can use the `revert` command as shown below in the Terminal.
 The `--no-commit` option is used to prevent us from having to deal with each intermediate commit.
@@ -1132,7 +1029,6 @@ Notice also that the `first_doc.pdf` file has been deleted as this wasn't presen
 You can now stage and commit these files with a new commit message and finally push them to GitHub.
 Notice that if we look at our commit history all of the commits we have made are still present.
 
-\  
 
 ```{r}
 #| label: rev9
@@ -1142,11 +1038,9 @@ Notice that if we look at our commit history all of the commits we have made are
 knitr::include_graphics(path = "images/revert9.png")
 ```
 
-\  
 
 and our repo on GitHub also reflects these changes
 
-\  
 
 ```{r}
 #| label: rev10
@@ -1185,7 +1079,6 @@ If you're working with other people on the same project you may also need to **p
 #| fig-align: center
 ```
 
-\  
 
 OK, let's go through an example to help clarify this workflow.
 
@@ -1213,12 +1106,10 @@ This makes collaboration easier and also makes the process of reverting to previ
 We generally only push changes to GitHub when we're happy for our collaborators (or the rest of the world) to see our work.
 However, this is entirely up to you and depends on the project (and who you are working with) and what your priorities are when using Git.
 
-\  
 
 If you don't want to track a file in your repository (maybe they are too large or transient files) you can get Git to ignore the file by adding it to the `.gitignore` file.
 On RStudio, in the git pane,  you can right clicking on the filename to exclude and selecting 'Ignore...'
 
-\  
 
 ```{r}
 #| label: tip1
@@ -1228,13 +1119,11 @@ On RStudio, in the git pane,  you can right clicking on the filename to exclude 
 knitr::include_graphics(path = "images/tip1.png")
 ```
 
-\  
 
 This will add the filename to the `.gitignore` file.
 If you want to ignore multiple files or a particular type of file you can also include wildcards in the `.gitignore` file.
 For example to ignore all `png` files you can include the expression `*.png` in your `.gitignore` file and save.
 
-\  
 
 If it all goes pear shaped and you end up completely trashing your Git repository don't despair (we've all been there!).
 As long as your GitHub repository is good, all you need to do is delete the offending project directory on your computer, create a new RStudio project and link this with your remote GitHub repository using [Option 2](#opt2).

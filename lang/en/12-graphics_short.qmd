@@ -685,7 +685,6 @@ gg_coplot(flowers,
 |scatterplot matrix         |`ggpairs()`                   |`pairs()`                  |
 |conditioning plot          |`gg_coplot()`         |`coplot()`                 |
 
-\  
 
 
 Hopefully, you're getting the idea that we can create really informative exploratory plots quite easily using either base R or ggplot graphics.

@@ -17,19 +17,11 @@ We won't go into any detail of the underlying linear modelling theory but rather
 The main function for fitting linear models in R is the `lm()` function (short for linear model!).
 The `lm()` function has many arguments but the most important is the first argument which specifies the model you want to fit using a *model formula* which typically takes the general form: 
 
-\  
-
 >*response variable ~ explanatory variable(s)*
-
-\  
 
 This model formula is simply read as 
 
-\  
-
 >*'variation in the response variable modelled as a function (~) of the explanatory variable(s)'.* 
-
-\  
 
 The response variable is also commonly known as the 'dependent variable' and the explanatory variables are sometimes referred to as 'independent variables' (or less frequently as 'predictor variables').
 There is also an additional term in our model formula which represents the variation in our response variable **not** explained by our explanatory variables but you don't need to specify this when using the `lm()` function.
@@ -75,8 +67,6 @@ y ~ x * z
 It's important that you get comfortable with using model formula (and we've only given the briefest of explanations above) when using the `lm()` function (and other functions) as it's remarkably easy to specifiy a model which is either nonsense or isn't the model you really wanted to fit.
 A summary table of various linear model formula and equivalent R code given below.
 
-\  
-
 |Traditional name           |         Model formula      |          R code            |
 |:--------------------------|:---------------------------|:---------------------------|
 |Bivariate regression       | Y ~ X1 (continuous)        | `lm(Y ~ X)`                |
@@ -85,8 +75,6 @@ A summary table of various linear model formula and equivalent R code given belo
 |ANCOVA                     | Y ~ X1 (cat) + X2(cont)    | `lm(Y ~ X1 + X2)`          |
 |Multiple regression        | Y ~ X1 (cont) + X2(cont)   | `lm(Y ~ X1 + X2)`          |
 |Factorial ANOVA            | Y ~ X1 (cat) * X2(cat)     | `lm(Y ~ X1 * X2)` or `lm(Y ~ X1 + X2 + X1:X2)`|
-
-\  
 
 OK, time for an example.
 The data file `smoking.txt` summarises the results of a study investigating the possible relationship between mortality rate and smoking across 25 occupational groups in the UK.
@@ -105,8 +93,6 @@ smoke <- read.table('data/smoking.txt', header = TRUE, sep = "\t",
 str(smoke, vec.len = 2)
 # vec.len argument to limited number of ' first elements' to display
 ```
-
-\  
 
 Next, let's investigate the relationship between the `mortality` and `smoking` variables by plotting a scatter plot.
 We can use either the `ggplot2` package or base R graphics to do this.
@@ -348,8 +334,6 @@ As with most things R related, a complete description of the variety and flexibi
 Further information can be found in any of the excellent documents referred to in [Chapter 2](#rhelp).
 A table of some of the more common statistical functions is given below to get you started.
 
-\  
-
 |    R function        |       Use                                                              |
 |:---------------------|:-----------------------------------------------------------------------|
 | `glm()`              | Fit a generalised linear model with a specific error structure specified using the `family =` argument (Poisson, binomial, gamma) |
@@ -360,8 +344,6 @@ A table of some of the more common statistical functions is given below to get y
 | `gls()`              | Fit generalised least squares models. The R package `nlme` must be loaded |
 | `kruskal.test()`     | Performs a Kruskal-Wallis rank sum test                                |
 | `friedman.test()`    | Performs a Friedman’s test                                             |
-
-\  
 
 ```{r}
 #| label: links

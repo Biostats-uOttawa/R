@@ -30,7 +30,6 @@ The user specifies the data and then clicks the scatterplot button.
 This inherently locks the user into many choices made by the software developer and not the user.
 Think of how easily you can spot an Excel scatterplot because other than a couple of pre-set options, there's really not much you can do to change the way the plot displays the data - you are at the mercy of the [insert corporation here] Gods.
 
-\  
 
 ```{r}
 #| label: ggplot2_fw
@@ -42,7 +41,6 @@ library(knitr)
 knitr::include_graphics(path = "images/full_connected.png")
 ```
 
-\  
 
 While Wilkinson would eventually go on to become vice-president of SPSS, his (and his oft forgotten co-author's) ideas would, never-the-less, make their way into R via `ggplot2` as well as other implementations (e.g.
 tableau).
@@ -70,7 +68,6 @@ Much better that we all have slightly (or grossly) different views on what a goo
 
 So what's the figure we're going to make together?
 
-\  
 
 ```{r}
 #| label: final-figure-start
@@ -125,7 +122,6 @@ final_figure <- ggplot(aes(x = weight, y = shootarea), data = df) +
 final_figure
 ```
 
-\  
 
 Before we go further, let's take a second and talk about what this figure is showing.
 On the y axes of the four plots we have the surface area of flower shoots, and on the x axes we have the weight of the flowers.
@@ -224,7 +220,6 @@ knitr::include_graphics(path = "images/data_mapping.png")
 ggplot(mapping = aes(x = weight, y = shootarea), data = flower)
 ```
 
-\  
 
 That's already much better.
 At least it's no longer a blank grey canvas.
@@ -260,13 +255,11 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 		geom_point()     # Adding a geom to display data as point data
 ```
 
-\  
 
 When you first start using `ggplot2` there are three crucial layers that require your input.
 You can safely ignore the other layers initially as they all receive sensible (if sometimes ugly) defaults.
 The three crucial layers are:
 
-\  
 
 ```{r}
 #| echo: false
@@ -292,7 +285,6 @@ knitr::include_graphics(path = "images/mapping.png")
 knitr::include_graphics(path = "images/geoms.png")
 ```
 
-\  
 
 Given that 'data' only requires us to specify the dataset we want to use, it is trivially easy to complete.
 'Mapping' only requires you to specify what variables in the data to use, often just the x- and y-axes (specified using `aes()`).
@@ -326,7 +318,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	geom_line()     # Adding geom_line
 ```
 
-\  
 
 Not quite what we were going for.
 The problem that we have is that `geom_line()` is actually just playing join-the-dots in the order they appear in the data (an alternative to `geom_path()`\index{geom\_path()}).
@@ -350,7 +341,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	geom_smooth()    # Changing to geom_smooth
 ```
 
-\  
 
 Better, but still not what we wanted.
 The challenge here is that drawing a line is actually somewhat complicated.
@@ -382,7 +372,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	geom_smooth(method = "lm", se = FALSE)    # method and se 
 ```
 
-\  
 
 We get the straight line that we wanted, though it's still not matching the "final figure".
 We need to alter `geom_smooth()` so that it draws lines for each level of nitrogen concentration.
@@ -410,7 +399,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
   geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE)
 ```
 
-\  
 
 We're getting closer, especially since `ggplot2` has automatically created a legend for us.
 At this point it's a good time to talk about where to include information - whether to include it within a geom or in the main call to `ggplot()`.
@@ -437,7 +425,6 @@ ggplot() +
   						data = flower, method = "lm", se = FALSE)
 ```
 
-\  
 
 Doing so we get exactly the same figure.
 This ability to move information between the main `ggplot()`\index{ggplot()} call or in specific geoms is surprisingly powerful (although sometime confusing!).
@@ -463,7 +450,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
   geom_smooth(method = "lm", se = FALSE)
 ```
 
-\  
 
 This figure is now what we would consider to be the typical `ggplot2` figure (once you know to look for it, you'll see it everywhere).
 We have specified some information, with only a few lines of code, yet we have something that looks quite attractive.
@@ -506,7 +492,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
   facet_wrap(~ treat)
 ```
 
-\  
 
 That's pretty good.
 Notice how we can see the impact that the `tip` treatment has on shoot area now (generally lowering shoot area), where in the previous figure this was much more difficult to see? 
@@ -534,7 +519,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
   facet_wrap(~ treat + block)
 ```
 
-\  
 
 This facet layout is almost exactly what we want.
 Close but no cigar.
@@ -550,7 +534,6 @@ Made a mistake? Easy, change it back and rerun the code (see [Chapter 9](#github
 
 Let's try using `facet_grid` instead of `facet_wrap` to produce the following plot.
 
-\  
 
 ```{r}
 #| echo: false
@@ -571,7 +554,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
   facet_grid(~ treat + block)
 ```
 
-\  
 
 That's disappointing.
 It's pretty much the same as what we had before and is no closer to the "final figure".
@@ -649,7 +631,6 @@ p + geom_point()
 We prefer not to use this approach here, as we like to always have the code visible to you while you're reading this book.
 Anyway, let's remind ourselves of the final figure.
 
-\  
 
 ```{r}
 #| label: calling-figure-name
@@ -660,11 +641,9 @@ Anyway, let's remind ourselves of the final figure.
 final_figure
 ```
 
-\  
 
 We'll now assign the code we wrote when creating our previous plot to an object called `rbook_figure`:
 
-\  
 
 ```{r}
 #| label: naming-figure
@@ -678,7 +657,6 @@ rbook_figure <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data =
   facet_grid(block ~ treat)
 ```
 
-\  
 
 Now when the code is run, the figure won't be shown immediately.
 To show the figure we need to type the name of the object.
@@ -689,7 +667,6 @@ An old headache when using `ggplot2` was that it could be difficult to create a 
 We have two immediate and simple options with patchwork; arrange figures on top of each other (specified with a `/`) or arrange figures side-by-side (specified with either a `+` or a `|`).
 Let's try to plot both figures, one on top of the other.
 
-\  
 
 ```{r}
 #| label: side-by-side-patchwork
@@ -700,13 +677,11 @@ Let's try to plot both figures, one on top of the other.
 rbook_figure / final_figure
 ```
 
-\  
 
 *Play around*: Try to create a side-by-side version of the above figure (hint: try the other operators).
 
 We can take this one step further and assign nested `patchwork` figures to an object and use this in turn to create labels for individuals figures.
 
-\  
 
 ```{r}
 #| label: labelled-nested
@@ -719,7 +694,6 @@ nested_compare +
   plot_annotation(tag_levels = "A", tag_suffix = ")")
 ```
 
-\  
 
 This is only the basics of what the `patchwork` package can do but there are many other uses.
 We won't go into them in any great detail here, but later in the [tips and tricks](#tips) section we'll show you some more cool features.
@@ -739,7 +713,6 @@ Before we do, have a think about where we'd include this argument? Should it be 
 
 Let's include it in the `geom_point` geom
 
-\  
 
 ```{r}
 #| label: change-size
@@ -753,7 +726,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	facet_grid(block ~ treat)
 ```
 
-\  
 
 Pretty straight forward, we changed the size from the default of `size = 1` to a value that we decide for ourselves.
 What happens if you included size in `ggplot()` or within the `aes()` of `geom_point()`?
@@ -779,7 +751,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	facet_grid(block ~ treat)
 ```
 
-\  
 
 Try including `shape = nitrogen` without also including `aes()`\index{aes()} and see what happens.
 
@@ -789,7 +760,6 @@ While it's not actually that useful here, changing the transparency of points is
 Doing this is easily accomplished using the `alpha =` argument.
 Again, ask yourself where you think the `alpha =` argument should be included (hint: you should put it in the `geom_point` geom!).
 
-\  
 
 ```{r}
 #| label: change-alpha
@@ -803,13 +773,11 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	facet_grid(block ~ treat)
 ```
 
-\  
 
 We can also include user defined labels for the x and y axis.
 There are a couple of ways to do this, but a more familiar way may be to use the same syntax as used in base R figures; using `xlab()`\index{xlab()} and `ylab()`\index{ylab()}.
 We'll specify that these belong to the `ggplot` by using the `+` symbol.
 
-\  
 
 ```{r}
 #| label: axis-labels
@@ -825,13 +793,11 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	ylab("Area of shoot (cm^2)")
 ```
 
-\  
 
 Great.
 Just as we wanted, though getting the "(cm^2)" to show the square as a superscript would be ideal.
 Here, we're going to accomplish that using a function which is part of base R called `bquote()`\index{bquote()} which allows for special characters to be shown.
 
-\  
 
 ```{r}
 #| label: bquote
@@ -847,7 +813,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	ylab(bquote("Area of shoot"~(cm^2)))
 ```
 
-\  
 
 Let's now work on the legend title while also including a caption to warn people looking at the figure to treat the trend lines with caution.
 We'll use a new layer called `labs()`\index{labs()}, short for labels, which we could have also used for specifying the x and y axes labels (we didn't only for demonstration purposes, but give it a shot).
@@ -857,7 +822,6 @@ We'll be using `caption =` argument for our caption, but notice that there isn't
 So instead of `legend =` we'll use `colour =` and `shape =`.
 Here's how we do it:
 
-\  
 
 ```{r}
 #| label: extra-labels
@@ -882,7 +846,6 @@ Now's a good time to introduce the `\n`.
 This is a base R feature that tells R that a string should be continued on a new line.
 We can use that with "Nitrogen Concentration" so that the legend title becomes more compact.
 
-\  
 
 ```{r}
 #| label: compact-labels
@@ -900,7 +863,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 			 caption = "Regression assumptions are unvalidated")
 ```
 
-\  
 
 We can now move onto some more wholesale-stylistic choices using the themes layer.
 
@@ -971,7 +933,6 @@ light <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower
 	(minimal | light)
 ```
 
-\  
 
 In terms of finding a theme that most closely matches our "final figure", it's probably going to be `theme_classic()`\index{theme\_classic()}.
 There are additional themes available to you, and even more available online.
@@ -993,7 +954,6 @@ We'll call the theme, `theme_rbook`.
 Not all of the options will immediately make sense, but don't worry about this too much for now.
 Just know that the settings we're putting in place are:
 
-\  
 
 - Font size for axis titles = 13
 - Font size for x axis text = 10
@@ -1006,7 +966,6 @@ Just know that the settings we're putting in place are:
 - Strip text colour (for facets) = black
 - Legend box colours = No colour 
 
-\  
 
 This is by no means an exhaustive list of features you can specify in your own theme, but this will get you started.
 Of course, there's no need to use a personalised theme as the pre-built options are perfectly suitable.
@@ -1038,7 +997,6 @@ theme_rbook <- function(base_size = 13, base_family = "", base_line_size = base_
 }
 ```
 
-\  
 
 `theme_rbook()`\index{theme\_rbook()} is now available for us to use just like any other theme.
 Let's try remaking our figure using our new theme.
@@ -1067,7 +1025,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()   # use our new theme
 ```
 
-\  
 
 ### Prettification
 
@@ -1077,7 +1034,6 @@ We just have a few final adjustments to make, and we'll do so in order of diffic
 Let's remind ourselves of what that "final figure" looked like.
 Remember, since we've previously stored the figure as an object called `final_figure` we can just type that into the console and pull up the figure.
 
-\  
 
 ```{r}
 #| label: final-figure-reminder
@@ -1088,7 +1044,6 @@ final_figure +
 	labs(title = "Reminder of the final figure")
 ```
 
-\  
 
 Let's begin the final push by including that dashed horizontal line at the average shoot area, at about 80, on our y axis.
 This represents the overall mean area of a shoot, regardless of nitrogen concentration, treatment, or block.
@@ -1122,7 +1077,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Notice how we included the function `mean(shootarea)` within the `geom_hline()` function? We could also do that externally to the `ggplot2` code and get the same result.
 
@@ -1132,7 +1086,6 @@ Notice how we included the function `mean(shootarea)` within the `geom_hline()` 
 mean(flower$shootarea)
 ```
 
-\  
 
 ```{r}
 #| label: geom_hline-alternative
@@ -1153,7 +1106,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Exactly the same figure but produced in a slightly different way (the point being that there are always multiple ways to get what you want).
 
@@ -1191,7 +1143,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 That's great! But you should be asking yourself why that worked.
 Why when we specified the first `geom_smooth()` did it draw 3 lines, whereas the second time we used `geom_smooth()` it just drew a single line? The secret lies in a "conflict" (it isn't actually a conflict but that's what we'll call it) between the colour specified in the main call to `ggplot()`\index{ggplot()} and the colour specified in the second `geom_smooth()`.
@@ -1246,7 +1197,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 To make sense of that code (or any code for that matter) try running it piece by piece.
 For instance in the above code, if we run `c("#5C1AAE", "#AE5C1A", "#1AAE5C")` we'll get a list of those strings.
@@ -1275,7 +1225,6 @@ flower$nitrogen <- factor(flower$nitrogen, levels = c("high", "medium", "low"))
 
 With that done, we can re-run our above code to get a correct figure and assign it the name "rbook_figure".
 
-\  
 
 ```{r}
 #| label: corrected-factor-level
@@ -1301,7 +1250,6 @@ rbook_figure <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data =
 rbook_figure
 ```
 
-\  
 
 And we've done it! Our final figure matches the "final figure" exactly.
 We can then save the final figure to our computer so that we can include it in a poster etc.
@@ -1358,7 +1306,6 @@ The two are largely interchangeable, though the relative rareness of online help
 There is real value in at least understanding what the statistics layer is doing, even if you don't ever need to make direct use of it.
 It is perhaps most clear what the statistical layer is doing in the early `geom_smooth()`\index{geom\_smooth()} figure we made.
 
-\  
 
 ```{r}
 #| label: stat-layer
@@ -1367,7 +1314,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
   geom_smooth(method = "lm", se = FALSE)
 ```
 
-\  
 
 Nowhere in our dataset are there columns for either the y-intercept or the gradient needed to draw the straight line, yet we've managed to draw one.
 The statistics layer calculates these based on our data, without us necessarily knowing what we've done.
@@ -1395,7 +1341,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
   stat_smooth(geom = "smooth", method = "lm", se = FALSE)
 ```
 
-\  
 
 While in this example it doesn't make a difference which we use, in other cases we may want to use the calculated statistics in alternative ways.
 We won't get into it, but see `?after_stat` if you are interested.
@@ -1441,7 +1386,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	ylim(c(50, 150))
 ```
 
-\  
 
 If you run this yourself you'll see warning messages telling us that n rows contain either missing or non-finite values.
 That's because we've essentially chopped out a huge part of our data using this method (everything outside of the ranges that we specified is "removed" from the data).
@@ -1481,7 +1425,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	coord_cartesian(xlim = c(10, 15),	ylim = c(50, 150))
 ```
 
-\  
 
 Notice now that the trends are maintained (as the lines are being informed by data which are off-screen).
 We would generally advise using `coord_cartesian()` as it protects you against possible misinterpretations.
@@ -1505,7 +1448,6 @@ For multiple lines of code, simply highlight all those lines you want to move an
 
 We'll move both the points and the overall black dashed line down in the code so that they are superimposed over the nitrogen lines:
 
-\  
 
 ```{r}
 #| label: layering-layers
@@ -1529,7 +1471,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 It's not the clearest example, but give it a shot with your own data.
 
@@ -1571,7 +1512,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 And as easily as that we have a colour gradient to show number of flowers.
 Dark blue shows low flower numbers and light blue shows higher flower numbers.
@@ -1606,7 +1546,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Although arguably better, we still struggle to spot the difference when there are between 5 and 12 flowers.
 Maybe having an additional colour would help those mid values stand out a bit more.
@@ -1643,7 +1582,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Definitely not our favourite figure.
 Perhaps if we add **more** colours, that will help things a bit (probably not but let's do it anyway).
@@ -1682,7 +1620,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Slightly nauseating but it's doing what we wanted it to do, so we shouldn't really complain.
 
@@ -1723,7 +1660,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Now the sizes reflect the height of the plants, with bigger points representing taller plants and vice-versa.
 
@@ -1765,7 +1701,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 *Play around*: Try the code above but don't include `theme_rbook()` and see what happens? What about if you try `theme_rbook(legend.position = "bottom")`?
 
@@ -1804,7 +1739,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 ### Hiding part of the legend
 
@@ -1839,7 +1773,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 ### Writing on a figure
 
@@ -1881,7 +1814,6 @@ Artist", colour = "grey", family = "serif") +
 	theme_rbook()
 ```
 
-\  
 
 In reality there are more appropriate uses for `geom_text()` but whatever the reason, the mechanics remain the same.
 We specify what the x and y position are (on the scale of the axes), what we want written (using `label =`), the font (using `family =`).
@@ -1890,7 +1822,6 @@ If you want to do more complex tasks with text and labels, check out `ggrepel` w
 Similarly, if we want to include a tag for the figure, for instance we may want to refer to this figure as A we can do this using an additional argument in `labs()`\index{labs()}.
 Let's see how that works:
 
-\  
 
 ```{r}
 #| label: tag-A
@@ -1914,7 +1845,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Doing so we get an "A" at the top left of the figure.
 If we weren't happy with the position of the "A", we can always use `geom_text()`\index{geom\_text()} instead and position it ourselves.
@@ -1956,7 +1886,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Axis tick labels sometimes need to be rotated.
 If you've ever worked with data from multiple species (with those lovely long latin names) for example, you'll know that it can be a nightmare making figures.
@@ -1994,7 +1923,6 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 Phew.
 Now we can really read those numbers.
@@ -2008,7 +1936,6 @@ There are more advanced features which we'll quickly go through here.
 As a precursor, we'll generate four simple scatterplots each with one of the four different themes used earlier and assign the nested figure the name `nested_1`.
 We'll use the `patchwork` operator `+` to link them all together and see how that looks.
 
-\  
 
 ```{r}
 #| label: patchwork1
@@ -2036,12 +1963,10 @@ nested_1 <- a + b + c +d
 nested_1
 ```
 
-\  
 
 The problem with this figure is that we're using a lot of space to get legends squeezed into the middle.
 We can solve that by using the `plot_layout()`\index{plot\_layout()} function and collecting the guides together:
 
-\  
 
 ```{r}
 #| label: patchwork_collected
@@ -2052,14 +1977,12 @@ nested_1 +
 	plot_layout(guides = "collect")
 ```
 
-\  
 
 Looks a bit tidier, though in this case say we want to remove the legends entirely.
 Note that to do this we use a new operator, the ampersand (`&`).
 When we use the `&` operator in `patchwork`, we add `ggplot2` elements to all plots within patchwork.
 To show how you can use `patchwork` and `ggplot2` together, we'll also add in an additional `geom_path()`\index{geom\_path()} to all plots, while simultaneously removing the legends.
 
-\  
 
 ```{r}
 #| label: patchwork_removed
@@ -2072,14 +1995,12 @@ nested_1 &
 	geom_path()
 ```
 
-\  
 
 To change the layout of the figure we can use the `plot_layout()` function to specify a design.
 We'll start by creating a layout to use, which we call `grid_layout` using A, B, C, D to represent plots `a`, `b`, `c` and `d` (we could have called the plots anything we wanted to).
 We'll arrange it so that the four graphs surround an empty white space in the centre of the plotting space.
 Each plot will either be five units wide or five unites tall.
 
-\  
 
 ```{r}
 #| label: patchwork_plot_layout
@@ -2101,7 +2022,6 @@ nested_1 +
 	theme(legend.position = 'none')
 ```
 
-\  
 
 To round off this Chapter, we'll take you on a whistle-stop tour of some of the common types of plots you can make in the aptly named "ggplot bestiary section".
 
@@ -2120,7 +2040,6 @@ Try using colour instead to see what happens.
 Notice that we haven't used `data = flower` here and instead just used `flower`? When an object is not assigned with an argument, `ggplot2` will assume that it is the dataset.
 We're using that here, but we actually prefer to explicitly state the argument name in our own work.
 
-\  
 
 ```{r}
 #| label: density-plot
@@ -2147,7 +2066,6 @@ Try increasing and decreasing to see the effect.
 The last is using the `position =` argument and stating that we do not want the bars to be stacked (the default position), instead we want them side-by-side, a.k.a.
 dodged.
 
-\  
 
 ```{r}
 #| label: histogram
@@ -2168,7 +2086,6 @@ ggplot(flower) +
 A frequency polygon is yet another visualisation of the above two.
 The only difference here is that we are drawing a line to each value, instead of a density curve or bars.
 
-\  
 
 ```{r}
 #| label: freqpoly
@@ -2189,7 +2106,6 @@ Boxplots are a classic way to show to spread of data, and they're easy to make i
 The dark line in the middle of the box shows the median, the boxes show the 25th and 75th percentiles (which is different from the base R `boxplot()`\index{boxplot()}), and the whiskers show 1.5 times the inter-quartile range (i.e.
 the distance between between the lower and upper quartiles).
 
-\  
 
 ```{r}
 #| label: boxplot
@@ -2218,7 +2134,6 @@ Hopefully this is largely self-explanatory (it converts the y-axis to the log_10
 There are additional scaling options for axis (for instance `scale_y_sqrt()`\index{scale\_y\_sqrt()}).
 Please note that using a log scaled axis in this case is actually doing harm in terms of understanding the data, we'd actually be much better off not doing so in this particular case.
 
-\  
 
 ```{r}
 #| label: violin-plot
@@ -2244,7 +2159,6 @@ It is included here for completeness, but be aware that they are viewed with con
 Briefly, barcharts can hide information, or imply there is data where there is none; ultimately misleading the reader.
 There are almost always better alternatives to use that better demonstrate the data.\index{geom\_bar()}
 
-\  
 
 ```{r}
 #| label: barchart
@@ -2259,7 +2173,6 @@ ggplot(flower) +
 	theme_rbook()
 ```
 
-\  
 
 The barchart shows the numbers of observations in each block, with each bar split according to the number of observations in each nitrogen concentration.
 In this case they are equal because the dataset (and experimental design) was balanced.
@@ -2270,7 +2183,6 @@ While we can draw a straight line, perhaps we would also like to include the des
 We can use quantile lines in such cases.
 Note that for quantiles to be calculated `ggplot2` requires the installation of the package `quantreg`.\index{geom\_quantile()}
 
-\  
 
 ```{r}
 #| label: quantile-lines
@@ -2291,7 +2203,6 @@ ggplot(aes(x = weight, y = shootarea), data = flower) +
 Heatmaps are a great tool to visualise spatial patterns.
 `ggplot2` can easily handle such data using `geom_bin2d()`\index{geom\_bin2d()} to allow us to see if our data is more (or less) clustered.
 
-\  
 
 ```{r}
 #| label: heat
@@ -2305,7 +2216,6 @@ ggplot(aes(x = leafarea, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 In this example, lighter blue squares show combinations of leaf area and shoot area where we have more data, and dark blue shows the converse.
 
@@ -2315,7 +2225,6 @@ A similar version to `geom_density2d()`\index{geom\_density2d()} is `geom_hex()`
 The only difference between the two is that the squares are replaced with hexagons.
 Note that `geom_hex()` requires you to first install an additional package called `hexbin`\index{hexbin package}.
 
-\  
 
 ```{r}
 #| label: hex
@@ -2339,7 +2248,6 @@ The central polygon represents the space (amongst shoot and leaf area) where the
 As you "step" down this mountain to the next line, we step down in the number of counts.
 Think of this as showing where points are most clustered, as in `geom_bin2d()`.
 
-\  
 
 ```{r}
 #| label: contour
@@ -2353,13 +2261,11 @@ ggplot(aes(x = leafarea, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 We can then expand on this using the statistics layer, via `stat_nameOfStatistic`.
 For instance, we can use the calculated "level" (representing the height of contour) to fill in our figure.
 To do so, we'll swap out `geom_density_2d()` for `stat_density_2d()` which will allow us to colour in the contour map.
 
-\  
 
 ```{r}
 #| label: stat-contour
@@ -2373,7 +2279,6 @@ ggplot(aes(x = leafarea, y = shootarea), data = flower) +
 	theme_rbook()
 ```
 
-\  
 
 In this case it doesn't look too pretty given that we don't have a wide spread of data leading to partly formed polygons.
 
@@ -2393,7 +2298,6 @@ After doing this we have a vector of numbers from 1 to 96.
 Keep in mind that such techniques can be used for any sort of figure we want to make.
 We'll use the same technique to add horiztonal lines for each row of data to replicate the traditional look of a dotchart.
 
-\  
 
 ```{r}
 #| label: dotpot
@@ -2424,7 +2328,6 @@ They can of course be used to plot only part of the dataset, for instance using 
 We've included two additional arguments in the code below.
 `cardinality_threshold =` forces `GGally` to plot all of the variables in our dataset (where it normally wants fewer variables) as well as `progress =` to avoid a progress bar appearing when we run the code.
 
-\  
 
 ```{r}
 #| label: pairs-plot
