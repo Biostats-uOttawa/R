@@ -128,7 +128,7 @@ You can plot just the points (`type = "p"`, this is the default), just lines (`t
 For example, let's use our skills from [Chapter 2](#funcs) to generate two vectors of numbers (`my_x` and `my_y`) and then plot one against the other using different `type =` values to see what type of plots are produced.
 Don't worry about the `par(mfrow = c(2, 2))` line of code yet.
 We're just using this to split the plotting device so we can fit all four plots on the same device to save some space.
-See [later](#mult_graphs) in the Chapter for more details about this.
+See [later](#mult-graphs) in the Chapter for more details about this.
 The top left plot is `type = "l"`, the top right `type = "b"`, bottom left `type = "o"` and bottom right is `type = "c"`.
  
 
@@ -1427,7 +1427,7 @@ Phew.
 Now we can really read those numbers.
 Granted, rotating the axis text here isn't needed, but keep this trick in mind if you have lots of levels in a factor which leads to illegible blobs.
 
-## Multiple graphs {#sec-mult_graphs}
+## Multiple graphs {#sec-mult-graphs}
 
 ### Base R
 

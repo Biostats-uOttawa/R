@@ -56,10 +56,10 @@ This is, never-the-less, a common belief probably due to the fact that making a 
 With that in mind, let's get started making some figures.
 
 
-## Simple base R plots
+## Simple base R plots {#sec-baseplot}
 
 There are many functions in R to produce plots ranging from the very basic to the highly complex.
-It's impossible to cover every aspect of producing graphics in R in this book so we'll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in @sec-custom_plot.
+It's impossible to cover every aspect of producing graphics in R in this book so we'll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in @sec-custom-plot.
 
 The most common high level function used to produce plots in R is (rather unsurprisingly) the `plot()` function.
 For example, let's plot the `weight` of petunia plants from our `flowers` data frame which we imported in @sec-import_fnc.
@@ -130,7 +130,7 @@ You can plot just the points (`type = "p"`, this is the default), just lines (`t
 For example, let's use our skills from @sec-funcs to generate two vectors of numbers (`my_x` and `my_y`) and then plot one against the other using different `type =` values to see what type of plots are produced.
 Don't worry about the `par(mfrow = c(2, 2))` line of code yet.
 We're just using this to split the plotting device so we can fit all four plots on the same device to save some space.
-See @sec-mult_graphs in the Chapter for more details about this.
+See @sec-mult-graphs in the Chapter for more details about this.
 The top left plot is `type = "l"`, the top right `type = "b"`, bottom left `type = "o"` and bottom right is `type = "c"`.
  
 
@@ -151,7 +151,7 @@ plot(my_x, my_y, type = "c")
 
 Admittedly the plots we've produced so far don't look anything particularly special.
 However, the `plot()` function is incredibly versatile and can generate a large range of plots which you can customise to your own taste.
-We'll cover how to customise ggplots in @sec-custom_plot.
+We'll cover how to customise ggplots in @sec-custom-plot.
 As a quick aside, the `plot()` function is also what's known as a generic function which means it can change its default behaviour depending on the type of object used as an argument.
 You will see an example of this in @sec-simple_lm where we use the `plot()` function to generate diagnostic plots of residuals from a linear model object (bet you can't wait!).
 
@@ -692,6 +692,176 @@ Which one you use is entirely up to you (that's the beauty of using R, you get t
 In the next section we cover how to customise your base R plots to get them to look exactly how you want.
 
 
-## Customising plots {#sec-custom_plot}
+## Multiple graphs {#sec-mult-graphs}
+
+### Base R
+
+In base R, one of the most common methods to plot multiple graphs is to use the main graphical function `par()` to split the plotting device up into a number of defined sections using the `mfrow =` argument.
+With this method, you first need to specify the number of rows and columns of plots you would like and then run the code for each plot.
+For example, to plot two graphs side by side we would use `par(mfrow = c(1, 2))` to split the device into 1 row and two columns.
+
+```{r}
+#| label: plot55
+#| echo: true
+#| out-width: 75%
+#| fig-align: center
+par(mfrow = c(1, 2))
+plot(flowers$weight, flowers$shootarea,
+  xlab = "weight",
+  ylab = "shoot area"
+)
+boxplot(shootarea ~ nitrogen, data = flowers, cex.axis = 0.6)
+```
+
+Once you've finished making your plots don't forget to reset your plotting device back to normal with `par(mfrow = c(1,1))`.
+
+### ggplot
+Using ggplot in addition to the facet_grid() and facet_wrap functions allowing to easily repeat and organise multiple plots as a function of specific variables, there are multiple way of organising multiple ggplot together.
+The approach we recommend is using the package `patchwork`.
+
+First you will need to install and make the `patchwork` package available.
+
+```{r}
+#| label: loading-patchwork
+#| eval: false
+#| echo: true
+#| message: false
+install.packages("patchwork")
+library(patchwork)
+```
+
+```{r}
+#| label: loading-patchwork_true
+#| eval: true
+#| echo: false
+#| message: false
+library(patchwork)
+```
+
+An important note: For those who have used base R to produce their figures and are familiar with using `par(mfrow = c(2,2))` (which allows plotting of four figures in two rows and two columns) be aware that this does not work for `ggplot2` objects.
+Instead you will need to use either the `patchwork` package or alternative packages such as `gridArrange` or `cowplot` or covert the `ggplot2` objects to grobs.
+
+To plot both of the plots together we need to assign each figure to a separate object and then use these objects when we use `patchwork`.
+
+So we can generate 2 figures and assign them to objects. 
+As you can see, the figures do not appear in the plot window. 
+They will appear only when you call the object.
+
+```{r}
+#| label: calling-figure-name
+#| echo: true
+#| message: false
+#| out-width: 75%
+#| fig-align: center
+first_figure <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
+  geom_point() +
+  geom_smooth(method = "gam", se = FALSE) +
+  facet_grid(block ~ treat)
+second_figure <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flowers) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat)
+```
+
+
+We have two immediate and simple options with patchwork; arrange figures on top of each other (specified with a `/`) or arrange figures side-by-side (specified with either a `+` or a `|`).
+Let's try to plot both figures, one on top of the other.
+
+
+```{r}
+#| label: side-by-side-patchwork
+#| echo: true
+#| message: false
+#| out-width: 85%
+#| fig-align: center
+first_figure / second_figure
+```
+
+
+*Play around*: Try to create a side-by-side version of the above figure (hint: try the other operators).
+
+We can take this one step further and assign nested `patchwork` figures to an object and use this in turn to create labels for individuals figures.
+
+
+```{r}
+#| label: labelled-nested
+#| message: false
+#| out-width: 75%
+#| fig-align: center
+nested_compare <- first_figure / second_figure
+
+nested_compare +
+  plot_annotation(tag_levels = "A", tag_suffix = ")")
+```
+
+
+## Exporting plots {#sec-export-plots}
+
+Creating plots in R is all well and good but what if you want to use these plots in your thesis, report or publication? One option is to click on the 'Export' button in the 'Plots' tab in RStudio.
+You can also export your plots from R to an external file by writing some code in your R script.
+The advantage of this approach is that you have a little more control over the output format and it also allows you to generate (or update) plots automatically whenever you run your script.
+You can export your plots in many different formats but the most common are, pdf, png, jpeg and tiff.
+
+By default, R (and therefore RStudio) will direct any plot you create to the plot window.
+To save your plot to an external file you first need to redirect your plot to a different graphics device.
+You do this by using one of the many graphics device functions to start a new graphic device.
+For example, to save a plot in pdf format we will use the `pdf()` function.
+The first argument in the `pdf()` function is the filepath and filename of the file we want to save (don't forget to include the .pdf extension).
+Once we've used the `pdf()` function we can then write all of the code we used to create our plot including any graphical parameters such as setting the margins and splitting up the plotting device.
+Once the code has run we need to close the pdf plotting device using the `dev.off()` function.
+
+
+```{r}
+#| label: plot60
+#| echo: true
+#| eval: false
+pdf(file = "output/my_plot.pdf")
+par(mar = c(4.1, 4.4, 4.1, 1.9), xaxs = "i", yaxs = "i")
+plot(flowers$weight, flowers$shootarea,
+  xlab = "weight (g)",
+  ylab = expression(paste("shoot area (cm"^"2", ")")),
+  xlim = c(0, 30), ylim = c(0, 200), bty = "l",
+  las = 1, cex.axis = 0.8, tcl = -0.2,
+  pch = 16, col = "dodgerblue1", cex = 0.9
+)
+text(x = 28, y = 190, label = "A", cex = 2)
+dev.off()
+```
+
+If we want to save this plot in png format we simply use the `png()` function in more or less the same way we used the `pdf()` function.
+
+```{r}
+#| label: plot61
+#| echo: true
+#| eval: false
+png("output/my_plot.png")
+par(mar = c(4.1, 4.4, 4.1, 1.9), xaxs = "i", yaxs = "i")
+plot(flowers$weight, flowers$shootarea,
+  xlab = "weight (g)",
+  ylab = expression(paste("shoot area (cm"^"2", ")")),
+  xlim = c(0, 30), ylim = c(0, 200), bty = "l",
+  las = 1, cex.axis = 0.8, tcl = -0.2,
+  pch = 16, col = "dodgerblue1", cex = 0.9
+)
+text(x = 28, y = 190, label = "A", cex = 2)
+dev.off()
+```
+
+Other useful functions are; `jpeg()`, `tiff()` and `bmp()`.
+Additional arguments to these functions allow you to change the size, resolution and background colour of your saved images.
+See `?png` for more details.
+
+`ggplot2` :package: offer the really useful `ggsave()` function which simply saving plots a lot.
+
+After producing a plot and seeing it in your IDE, you can simply run ggsave() with the adequate argument to save the last ggplot produced.
+You can of course, also, specify which plot to save.
+
+```{r}
+#| label: ggsave
+#| eval: false
+ggsave("file.png")
+```
+
+## Customising ggplots {#sec-custom-plot}
 
 **Went for walk to be edited**
