@@ -126,7 +126,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
-</script><link rel="stylesheet" href="css/style.css">
+</script>
 </head>
 <body class="nav-sidebar floating nav-fixed">
 
@@ -377,7 +377,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#simple-base-r-plots" id="toc-simple-base-r-plots" class="nav-link active" data-scroll-target="#simple-base-r-plots"><span class="header-section-number">4.1</span> Simple base R plots</a></li>
+<li><a href="#sec-baseplot" id="toc-sec-baseplot" class="nav-link active" data-scroll-target="#sec-baseplot"><span class="header-section-number">4.1</span> Simple base R plots</a></li>
   <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2"><span class="header-section-number">4.2</span> ggplot2</a></li>
   <li>
 <a href="#simple-plots" id="toc-simple-plots" class="nav-link" data-scroll-target="#simple-plots"><span class="header-section-number">4.3</span> Simple plots</a>
@@ -386,18 +386,26 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
   <li><a href="#histograms" id="toc-histograms" class="nav-link" data-scroll-target="#histograms"><span class="header-section-number">4.3.2</span> Histograms</a></li>
   <li><a href="#box-plots" id="toc-box-plots" class="nav-link" data-scroll-target="#box-plots"><span class="header-section-number">4.3.3</span> Box plots</a></li>
   <li><a href="#violin-plots" id="toc-violin-plots" class="nav-link" data-scroll-target="#violin-plots"><span class="header-section-number">4.3.4</span> Violin plots</a></li>
-  <li><a href="#dotcharts" id="toc-dotcharts" class="nav-link" data-scroll-target="#dotcharts"><span class="header-section-number">4.3.5</span> Dot charts</a></li>
+  <li><a href="#sec-dotcharts" id="toc-sec-dotcharts" class="nav-link" data-scroll-target="#sec-dotcharts"><span class="header-section-number">4.3.5</span> Dot charts</a></li>
   <li><a href="#pairs-plots" id="toc-pairs-plots" class="nav-link" data-scroll-target="#pairs-plots"><span class="header-section-number">4.3.6</span> Pairs plots</a></li>
   <li><a href="#coplots" id="toc-coplots" class="nav-link" data-scroll-target="#coplots"><span class="header-section-number">4.3.7</span> Coplots</a></li>
   <li><a href="#summary-of-plot-function" id="toc-summary-of-plot-function" class="nav-link" data-scroll-target="#summary-of-plot-function"><span class="header-section-number">4.3.8</span> Summary of plot function</a></li>
   </ul>
 </li>
-  <li><a href="#custom_plot" id="toc-custom_plot" class="nav-link" data-scroll-target="#custom_plot"><span class="header-section-number">4.4</span> Customising plots</a></li>
+  <li>
+<a href="#sec-mult-graphs" id="toc-sec-mult-graphs" class="nav-link" data-scroll-target="#sec-mult-graphs"><span class="header-section-number">4.4</span> Multiple graphs</a>
+  <ul class="collapse">
+<li><a href="#base-r" id="toc-base-r" class="nav-link" data-scroll-target="#base-r"><span class="header-section-number">4.4.1</span> Base R</a></li>
+  <li><a href="#ggplot" id="toc-ggplot" class="nav-link" data-scroll-target="#ggplot"><span class="header-section-number">4.4.2</span> ggplot</a></li>
+  </ul>
+</li>
+  <li><a href="#sec-custom-plot" id="toc-sec-custom-plot" class="nav-link" data-scroll-target="#sec-custom-plot"><span class="header-section-number">4.5</span> Customising ggplots</a></li>
+  <li><a href="#sec-export-plots" id="toc-sec-export-plots" class="nav-link" data-scroll-target="#sec-export-plots"><span class="header-section-number">4.6</span> Exporting plots</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/12-graphics_short.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-data.html">Data and graphics</a></li><li class="breadcrumb-item"><a href="./12-graphics_short.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Graphics with R</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="graphics_r" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Graphics with R</span></span></h1>
+<h1 class="title"><span id="sec-graphics_r" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Graphics with R</span></span></h1>
 </div>
 
 
@@ -418,7 +426,7 @@ do a ggplot extensive description
 --><p>Summarising your data, either numerically or graphically, is an important (if often overlooked) component of any data analysis. Fortunately, R has excellent graphics capabilities and can be used whether you want to produce plots for initial data exploration, model validation or highly complex publication quality figures. There are three main systems for producing graphics in R; base R graphics, lattice graphics and ggplot2.</p>
 <p>The base R graphics system is the original plotting system that’s been around (and has evolved) since the first days of R. When creating plots with base R we tend to use high level functions (like the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function) to first create our plot and then use one or more low level functions (like <code><a href="https://rdrr.io/r/graphics/lines.html">lines()</a></code> and <code><a href="https://rdrr.io/r/graphics/text.html">text()</a></code> etc) to add additional information to these plots. This can seem a little weird (and time consuming) when you first start creating fancy plots in R, but it does allow you to customise almost every aspect of your plot and build complexity up in layers. The flip side to this flexibility is that you’ll often need to make many decisions about how you want your plot to look rather than rely on the software to make these decisions for you. Having said that, it’s generally very quick and easy to generate simple exploratory plots with base R graphics.</p>
 <p>The lattice system is implemented in the <code>lattice()</code> package that comes pre-installed with the standard installation of R. However, it won’t be loaded by default so you’ll first need to use <code><a href="https://lattice.r-forge.r-project.org/">library(lattice)</a></code> to access all the plotting functions. Unlike base R graphics, lattice plots are mostly generated all in one go using a single function so there’s no need to use high and low level plotting functions to customise the look of a plot. This can be a real advantage as things like margin sizes and plot spacing are adjusted automatically. Lattice plots also make a few more decisions for you about how the plots will look but this comes with a slight cost as customising lattice plots to get them to look exactly how you want can become quite involved. Where lattice plots really shine is plotting complex multi-dimensional data using panel plots (also called trellis plots). We’ll see a couple of examples of these types of plots later in the Chapter.</p>
-<p><code>ggplot2</code> was based on a book called <em>Grammar of Graphics</em> by <span class="citation" data-cites="wilkinson2005">Wilkinson (<a href="91-references.html#ref-wilkinson2005" role="doc-biblioref">2005</a>)</span>. For an interesting summary of Wilkinson’s book [here][leland-summary]. The <em>Grammar of Graphics</em> approach breaks figures down into their various components (e.g. the underlying statistics, the geometric arrangement, the theme, see <a href="#fig-ggplot-str" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>). Users are thus able to manipulate each of these components (i.e. layers) and produce a tailor-made figure fit for their specific needs.</p>
+<p><code>ggplot2</code> was based on a book called <em>Grammar of Graphics</em> by <span class="citation" data-cites="wilkinson2005">Wilkinson (<a href="#ref-wilkinson2005" role="doc-biblioref">2005</a>)</span>. For an interesting summary of Wilkinson’s book [here][leland-summary]. The <em>Grammar of Graphics</em> approach breaks figures down into their various components (e.g. the underlying statistics, the geometric arrangement, the theme, see <a href="#fig-ggplot-str" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>). Users are thus able to manipulate each of these components (i.e. layers) and produce a tailor-made figure fit for their specific needs.</p>
 <div id="fig-ggplot-str" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-ggplot-str-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/ch-04/graph-grammar.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
@@ -429,10 +437,10 @@ Figure&nbsp;4.1: The Grammar of Graphics. Visual by Thomas de Beus
 </div>
 <p>Each of these systems have their strengths and weaknesses and we often use them interchangeably. In this Chapter we’ll introduce you to the both base R plotting function and the<code>ggplot2</code> package. It’s important to note that <code>ggplot2</code> is not <strong>required</strong> to make “fancy” and informative figures in R. If you prefer using base R graphics then feel free to continue as almost all <code>ggplot2</code> type figures can be created using base R (we often use either approach depending on what we’re doing). The difference between<code>ggplot2</code> and base R is how you <em>get</em> to the end product rather than any substantial differences in the end product itself. This is, never-the-less, a common belief probably due to the fact that making a moderately attractive figure is (in our opinion at least), easier to do with <code>ggplot2</code> as many aesthetic decisions are made for the user, without you necessarily even knowing that a decision was ever made!</p>
 <p>With that in mind, let’s get started making some figures.</p>
-<section id="simple-base-r-plots" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="simple-base-r-plots">
+<section id="sec-baseplot" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="sec-baseplot">
 <span class="header-section-number">4.1</span> Simple base R plots</h2>
-<p>There are many functions in R to produce plots ranging from the very basic to the highly complex. It’s impossible to cover every aspect of producing graphics in R in this book so we’ll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in this <a href="#custom_plot">Chapter</a>.</p>
-<p>The most common high level function used to produce plots in R is (rather unsurprisingly) the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function. For example, let’s plot the <code>weight</code> of petunia plants from our <code>flowers</code> data frame which we imported in <a href="11-data.html#import_fnc">Chapter 3</a>.</p>
+<p>There are many functions in R to produce plots ranging from the very basic to the highly complex. It’s impossible to cover every aspect of producing graphics in R in this book so we’ll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in <a href="#sec-custom-plot" class="quarto-xref"><span>Section 4.5</span></a>.</p>
+<p>The most common high level function used to produce plots in R is (rather unsurprisingly) the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function. For example, let’s plot the <code>weight</code> of petunia plants from our <code>flowers</code> data frame which we imported in <a href="11-data.html#sec-import_fnc" class="quarto-xref"><span>Section 3.3.2</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flowers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"data/flower.csv"</span><span class="op">)</span></span>
 <span></span>
@@ -479,7 +487,7 @@ Figure&nbsp;4.2
 </div>
 </div>
 <p>Both of these two approaches are equivalent so we suggest that you just choose the one you prefer and go with it.</p>
-<p>You can also specify the type of graph you wish to plot using the argument <code>type =</code>. You can plot just the points (<code>type = "p"</code>, this is the default), just lines (<code>type = "l"</code>), both points and lines connected (<code>type = "b"</code>), both points and lines with the lines running through the points (<code>type = "o"</code>) and empty points joined by lines (<code>type = "c"</code>). For example, let’s use our skills from <a href="#funcs">Chapter 2</a> to generate two vectors of numbers (<code>my_x</code> and <code>my_y</code>) and then plot one against the other using different <code>type =</code> values to see what type of plots are produced. Don’t worry about the <code>par(mfrow = c(2, 2))</code> line of code yet. We’re just using this to split the plotting device so we can fit all four plots on the same device to save some space. See <a href="#mult_graphs">later</a> in the Chapter for more details about this. The top left plot is <code>type = "l"</code>, the top right <code>type = "b"</code>, bottom left <code>type = "o"</code> and bottom right is <code>type = "c"</code>.</p>
+<p>You can also specify the type of graph you wish to plot using the argument <code>type =</code>. You can plot just the points (<code>type = "p"</code>, this is the default), just lines (<code>type = "l"</code>), both points and lines connected (<code>type = "b"</code>), both points and lines with the lines running through the points (<code>type = "o"</code>) and empty points joined by lines (<code>type = "c"</code>). For example, let’s use our skills from <a href="02-basics.html#sec-funcs" class="quarto-xref"><span>Section 2.4</span></a> to generate two vectors of numbers (<code>my_x</code> and <code>my_y</code>) and then plot one against the other using different <code>type =</code> values to see what type of plots are produced. Don’t worry about the <code>par(mfrow = c(2, 2))</code> line of code yet. We’re just using this to split the plotting device so we can fit all four plots on the same device to save some space. See <a href="#sec-mult-graphs" class="quarto-xref"><span>Section 4.4</span></a> in the Chapter for more details about this. The top left plot is <code>type = "l"</code>, the top right <code>type = "b"</code>, bottom left <code>type = "o"</code> and bottom right is <code>type = "c"</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
 <span><span class="va">my_y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">1</span>, to <span class="op">=</span> <span class="fl">20</span>, by <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
@@ -496,7 +504,7 @@ Figure&nbsp;4.2
 </div>
 </div>
 </div>
-<p>Admittedly the plots we’ve produced so far don’t look anything particularly special. However, the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function is incredibly versatile and can generate a large range of plots which you can customise to your own taste. We’ll cover how to customise plots <a href="#custom_plot">later</a> in the Chapter. As a quick aside, the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function is also what’s known as a generic function which means it can change its default behaviour depending on the type of object used as an argument. You will see an example of this in <a href="21-stats.html#simple_lm">Chapter 5</a> where we use the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function to generate diagnostic plots of residuals from a linear model object (bet you can’t wait!).</p>
+<p>Admittedly the plots we’ve produced so far don’t look anything particularly special. However, the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function is incredibly versatile and can generate a large range of plots which you can customise to your own taste. We’ll cover how to customise ggplots in <a href="#sec-custom-plot" class="quarto-xref"><span>Section 4.5</span></a>. As a quick aside, the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function is also what’s known as a generic function which means it can change its default behaviour depending on the type of object used as an argument. You will see an example of this in <a href="21-stats.html#sec-simple_lm" class="quarto-xref"><span>Section 5.1</span></a> where we use the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function to generate diagnostic plots of residuals from a linear model object (bet you can’t wait!).</p>
 </section><section id="ggplot2" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="ggplot2">
 <span class="header-section-number">4.2</span> ggplot2</h2>
 <p>As mentionned earlier <code>ggplot</code> grammar requires several elements to produce a graphic (<a href="#fig-ggplot-str" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>) and a minimum of 3 are required:</p>
@@ -670,7 +678,7 @@ Figure&nbsp;4.3
 </div>
 </div>
 </div>
-<p>The thick horizontal line in the middle of the box is the median value of <code>weight</code> (around 11 g). The upper line of the box is the upper quartile (75<sup>th</sup> percentile) and the lower line is the lower quartile (25<sup>th</sup> percentile). The distance between the upper and lower quartiles is known as the inter quartile range and represents the values of <code>weight</code> for 50% of the data. The dotted vertical lines are called the whiskers and their length is determined as 1.5 x the inter quartile range. Data points that are plotted outside the the whiskers represent potential unusual observations. This doesn’t mean they are unusual, just that they warrant a closer look. We recommend using boxplots in combination with Cleveland dotplots to identify potential unusual observations (see the <a href="#dotcharts">next</a> section of this Chapter for more details). The neat thing about boxplots is that they not only provide a measure of central tendency (the median value) they also give you an idea about the distribution of the data. If the median line is more or less in the middle of the box (between the upper and lower quartiles) and the whiskers are more or less the same length then you can be reasonably sure the distribution of your data is symmetrical.</p>
+<p>The thick horizontal line in the middle of the box is the median value of <code>weight</code> (around 11 g). The upper line of the box is the upper quartile (75<sup>th</sup> percentile) and the lower line is the lower quartile (25<sup>th</sup> percentile). The distance between the upper and lower quartiles is known as the inter quartile range and represents the values of <code>weight</code> for 50% of the data. The dotted vertical lines are called the whiskers and their length is determined as 1.5 x the inter quartile range. Data points that are plotted outside the the whiskers represent potential unusual observations. This doesn’t mean they are unusual, just that they warrant a closer look. We recommend using boxplots in combination with Cleveland dotplots to identify potential unusual observations (see the <a href="#sec-dotcharts" class="quarto-xref"><span>Section 4.3.5</span></a> for more details). The neat thing about boxplots is that they not only provide a measure of central tendency (the median value) they also give you an idea about the distribution of the data. If the median line is more or less in the middle of the box (between the upper and lower quartiles) and the whiskers are more or less the same length then you can be reasonably sure the distribution of your data is symmetrical.</p>
 <p>If we want examine how the distribution of a variable changes between different levels of a factor we need to use the formula notation with the <code><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot()</a></code> function. For example, let’s plot our <code>weight</code> variable again, but this time see how this changes with each level of <code>nitrogen</code>. When we use the formula notation with <code><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot()</a></code> we can use the <code>data =</code> argument to save some typing. We’ll also introduce an x axis label using the <code>xlab =</code> argument.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot</a></span><span class="op">(</span><span class="va">weight</span> <span class="op">~</span> <span class="va">nitrogen</span>,</span>
@@ -767,7 +775,7 @@ Figure&nbsp;4.3
 </div>
 </div>
 </div>
-</section><section id="dotcharts" class="level3" data-number="4.3.5"><h3 data-number="4.3.5" class="anchored" data-anchor-id="dotcharts">
+</section><section id="sec-dotcharts" class="level3" data-number="4.3.5"><h3 data-number="4.3.5" class="anchored" data-anchor-id="sec-dotcharts">
 <span class="header-section-number">4.3.5</span> Dot charts</h3>
 <p>Identifying unusual observations (aka outliers) in numeric variables is extremely important as they may influence parameter estimates in your statistical model or indicate an error in your data. A really useful (if undervalued) plot to help identify outliers is the Cleveland dotplot. You can produce a dotplot in R very simply by using the <code><a href="https://rdrr.io/r/graphics/dotchart.html">dotchart()</a></code> function.</p>
 <div class="cell" data-layout-align="center">
@@ -946,14 +954,121 @@ Figure&nbsp;4.3
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 <p>Hopefully, you’re getting the idea that we can create really informative exploratory plots quite easily using either base R or ggplot graphics. Which one you use is entirely up to you (that’s the beauty of using R, you get to choose) and we happily mix and match to suit our needs. In the next section we cover how to customise your base R plots to get them to look exactly how you want.</p>
-</section></section><section id="custom_plot" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="custom_plot">
-<span class="header-section-number">4.4</span> Customising plots</h2>
-<p><strong>Went for walk to be edited</strong></p>
+</section></section><section id="sec-mult-graphs" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="sec-mult-graphs">
+<span class="header-section-number">4.4</span> Multiple graphs</h2>
+<section id="base-r" class="level3" data-number="4.4.1"><h3 data-number="4.4.1" class="anchored" data-anchor-id="base-r">
+<span class="header-section-number">4.4.1</span> Base R</h3>
+<p>In base R, one of the most common methods to plot multiple graphs is to use the main graphical function <code><a href="https://rdrr.io/r/graphics/par.html">par()</a></code> to split the plotting device up into a number of defined sections using the <code>mfrow =</code> argument. With this method, you first need to specify the number of rows and columns of plots you would like and then run the code for each plot. For example, to plot two graphs side by side we would use <code>par(mfrow = c(1, 2))</code> to split the device into 1 row and two columns.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">flowers</span><span class="op">$</span><span class="va">weight</span>, <span class="va">flowers</span><span class="op">$</span><span class="va">shootarea</span>,</span>
+<span>  xlab <span class="op">=</span> <span class="st">"weight"</span>,</span>
+<span>  ylab <span class="op">=</span> <span class="st">"shoot area"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot</a></span><span class="op">(</span><span class="va">shootarea</span> <span class="op">~</span> <span class="va">nitrogen</span>, data <span class="op">=</span> <span class="va">flowers</span>, cex.axis <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-graphics_short_files/figure-html/plot55-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Once you’ve finished making your plots don’t forget to reset your plotting device back to normal with <code>par(mfrow = c(1,1))</code>.</p>
+</section><section id="ggplot" class="level3" data-number="4.4.2"><h3 data-number="4.4.2" class="anchored" data-anchor-id="ggplot">
+<span class="header-section-number">4.4.2</span> ggplot</h3>
+<p>Using ggplot in addition to the facet_grid() and facet_wrap functions allowing to easily repeat and organise multiple plots as a function of specific variables, there are multiple way of organising multiple ggplot together. The approach we recommend is using the package <code>patchwork</code>.</p>
+<p>First you will need to install and make the <code>patchwork</code> package available.</p>
+<div class="cell">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"patchwork"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com">patchwork</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>An important note: For those who have used base R to produce their figures and are familiar with using <code>par(mfrow = c(2,2))</code> (which allows plotting of four figures in two rows and two columns) be aware that this does not work for <code>ggplot2</code> objects. Instead you will need to use either the <code>patchwork</code> package or alternative packages such as <code>gridArrange</code> or <code>cowplot</code> or covert the <code>ggplot2</code> objects to grobs.</p>
+<p>To plot both of the plots together we need to assign each figure to a separate object and then use these objects when we use <code>patchwork</code>.</p>
+<p>So we can generate 2 figures and assign them to objects. As you can see, the figures do not appear in the plot window. They will appear only when you call the object.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">first_figure</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>  <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">height</span>, y <span class="op">=</span> <span class="va">shootarea</span>, colour <span class="op">=</span> <span class="va">nitrogen</span><span class="op">)</span>,</span>
+<span>  data <span class="op">=</span> <span class="va">flowers</span></span>
+<span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_grid</span><span class="op">(</span><span class="va">block</span> <span class="op">~</span> <span class="va">treat</span><span class="op">)</span></span>
+<span><span class="va">second_figure</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>  <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">weight</span>, y <span class="op">=</span> <span class="va">shootarea</span>, colour <span class="op">=</span> <span class="va">nitrogen</span><span class="op">)</span>,</span>
+<span>  data <span class="op">=</span> <span class="va">flowers</span></span>
+<span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_grid</span><span class="op">(</span><span class="va">block</span> <span class="op">~</span> <span class="va">treat</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We have two immediate and simple options with patchwork; arrange figures on top of each other (specified with a <code>/</code>) or arrange figures side-by-side (specified with either a <code>+</code> or a <code>|</code>). Let’s try to plot both figures, one on top of the other.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">first_figure</span> <span class="op">/</span> <span class="va">second_figure</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-graphics_short_files/figure-html/side-by-side-patchwork-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Play around</em>: Try to create a side-by-side version of the above figure (hint: try the other operators).</p>
+<p>We can take this one step further and assign nested <code>patchwork</code> figures to an object and use this in turn to create labels for individuals figures.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nested_compare</span> <span class="op">&lt;-</span> <span class="va">first_figure</span> <span class="op">/</span> <span class="va">second_figure</span></span>
+<span></span>
+<span><span class="va">nested_compare</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_annotation.html">plot_annotation</a></span><span class="op">(</span>tag_levels <span class="op">=</span> <span class="st">"A"</span>, tag_suffix <span class="op">=</span> <span class="st">")"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-graphics_short_files/figure-html/labelled-nested-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="sec-custom-plot" class="level2" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="sec-custom-plot">
+<span class="header-section-number">4.5</span> Customising ggplots</h2>
+<p><strong>Went for a walk to be edited</strong> <span class="emoji" data-emoji="unicorn">🦄</span></p>
+</section><section id="sec-export-plots" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="sec-export-plots">
+<span class="header-section-number">4.6</span> Exporting plots</h2>
+<p>Creating plots in R is all well and good but what if you want to use these plots in your thesis, report or publication? One option is to click on the ‘Export’ button in the ‘Plots’ tab in RStudio. You can also export your plots from R to an external file by writing some code in your R script. The advantage of this approach is that you have a little more control over the output format and it also allows you to generate (or update) plots automatically whenever you run your script. You can export your plots in many different formats but the most common are, pdf, png, jpeg and tiff.</p>
+<p>By default, R (and therefore RStudio) will direct any plot you create to the plot window. To save your plot to an external file you first need to redirect your plot to a different graphics device. You do this by using one of the many graphics device functions to start a new graphic device. For example, to save a plot in pdf format we will use the <code><a href="https://rdrr.io/r/grDevices/pdf.html">pdf()</a></code> function. The first argument in the <code><a href="https://rdrr.io/r/grDevices/pdf.html">pdf()</a></code> function is the filepath and filename of the file we want to save (don’t forget to include the .pdf extension). Once we’ve used the <code><a href="https://rdrr.io/r/grDevices/pdf.html">pdf()</a></code> function we can then write all of the code we used to create our plot including any graphical parameters such as setting the margins and splitting up the plotting device. Once the code has run we need to close the pdf plotting device using the <code><a href="https://rdrr.io/r/grDevices/dev.html">dev.off()</a></code> function.</p>
+<div class="cell">
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/grDevices/pdf.html">pdf</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"output/my_plot.pdf"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4.1</span>, <span class="fl">4.4</span>, <span class="fl">4.1</span>, <span class="fl">1.9</span><span class="op">)</span>, xaxs <span class="op">=</span> <span class="st">"i"</span>, yaxs <span class="op">=</span> <span class="st">"i"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">flowers</span><span class="op">$</span><span class="va">weight</span>, <span class="va">flowers</span><span class="op">$</span><span class="va">shootarea</span>,</span>
+<span>  xlab <span class="op">=</span> <span class="st">"weight (g)"</span>,</span>
+<span>  ylab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"shoot area (cm"</span><span class="op">^</span><span class="st">"2"</span>, <span class="st">")"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">30</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">200</span><span class="op">)</span>, bty <span class="op">=</span> <span class="st">"l"</span>,</span>
+<span>  las <span class="op">=</span> <span class="fl">1</span>, cex.axis <span class="op">=</span> <span class="fl">0.8</span>, tcl <span class="op">=</span> <span class="op">-</span><span class="fl">0.2</span>,</span>
+<span>  pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="st">"dodgerblue1"</span>, cex <span class="op">=</span> <span class="fl">0.9</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/text.html">text</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">28</span>, y <span class="op">=</span> <span class="fl">190</span>, label <span class="op">=</span> <span class="st">"A"</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html">dev.off</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If we want to save this plot in png format we simply use the <code><a href="https://rdrr.io/r/grDevices/png.html">png()</a></code> function in more or less the same way we used the <code><a href="https://rdrr.io/r/grDevices/pdf.html">pdf()</a></code> function.</p>
+<div class="cell">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/grDevices/png.html">png</a></span><span class="op">(</span><span class="st">"output/my_plot.png"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4.1</span>, <span class="fl">4.4</span>, <span class="fl">4.1</span>, <span class="fl">1.9</span><span class="op">)</span>, xaxs <span class="op">=</span> <span class="st">"i"</span>, yaxs <span class="op">=</span> <span class="st">"i"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">flowers</span><span class="op">$</span><span class="va">weight</span>, <span class="va">flowers</span><span class="op">$</span><span class="va">shootarea</span>,</span>
+<span>  xlab <span class="op">=</span> <span class="st">"weight (g)"</span>,</span>
+<span>  ylab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"shoot area (cm"</span><span class="op">^</span><span class="st">"2"</span>, <span class="st">")"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">30</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">200</span><span class="op">)</span>, bty <span class="op">=</span> <span class="st">"l"</span>,</span>
+<span>  las <span class="op">=</span> <span class="fl">1</span>, cex.axis <span class="op">=</span> <span class="fl">0.8</span>, tcl <span class="op">=</span> <span class="op">-</span><span class="fl">0.2</span>,</span>
+<span>  pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="st">"dodgerblue1"</span>, cex <span class="op">=</span> <span class="fl">0.9</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/text.html">text</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">28</span>, y <span class="op">=</span> <span class="fl">190</span>, label <span class="op">=</span> <span class="st">"A"</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html">dev.off</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Other useful functions are; <code><a href="https://rdrr.io/r/grDevices/png.html">jpeg()</a></code>, <code><a href="https://rdrr.io/r/grDevices/png.html">tiff()</a></code> and <code><a href="https://rdrr.io/r/grDevices/png.html">bmp()</a></code>. Additional arguments to these functions allow you to change the size, resolution and background colour of your saved images. See <code><a href="https://rdrr.io/r/grDevices/png.html">?png</a></code> for more details.</p>
+<p><code>ggplot2</code> <span class="emoji" data-emoji="package">📦</span> provide a really useful function <code>ggsave()</code> function which simplify saving plots a lot but works only for ggplots.</p>
+<p>After producing a plot and seeing it in your IDE, you can simply run ggsave() with the adequate argument to save the last ggplot produced. You can of course, also, specify which plot to save.</p>
+<div class="cell">
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggsave</span><span class="op">(</span><span class="st">"file.png"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-wilkinson2005" class="csl-entry" role="listitem">
 Wilkinson, L. 2005. The <span>Grammar</span> of <span>Graphics</span>. <span>Springer Science &amp; Business Media</span>.
 </div>

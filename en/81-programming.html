@@ -131,7 +131,7 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script><link rel="stylesheet" href="css/style.css">
+</script>
 </head>
 <body class="nav-sidebar floating nav-fixed">
 
@@ -399,7 +399,7 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./81-programming.html">Programming and writing with R</a></li><li class="breadcrumb-item"><a href="./81-programming.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Programming in R</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="prog_r" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Programming in R</span></span></h1>
+<h1 class="title"><span id="sec-prog_r" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Programming in R</span></span></h1>
 </div>
 
 
@@ -416,7 +416,7 @@ window.Quarto = {
 </header><p>After learning the basics, programming in R is the next big step. There are already a vast number of R packages available, surely more than enough to cover everything you could possibly want to do? Why then, would you ever need to create you own R functions? Why not just stick to the functions from a package? Well, in some cases you’ll want to customise those existing functions to suit your specific needs. Or you may want to implement a new approach which means there won’t be any pre-existing packages that work for you. Both of these are not particularly common. Functions are mainly used to do one thing well in a simple manner without having to type of the code necessary to do that function each time. We can see functions as a short-cut to copy-pasting. If you have to do a similar task 4 times or more, build a function for it, and simply call that function 4 times or call it in a loop .</p>
 <section id="looking-behind-the-curtain" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="looking-behind-the-curtain">
 <span class="header-section-number">6.1</span> Looking behind the curtain</h2>
-<p>A good way to start learning to program in R is to see what others have done. We can start by briefly peeking behind the curtain. In <a href="12-graphics_short.html">Chapter 5</a> we made use of the <code>theme_classic()</code> function when customising our <code>ggplot</code> figures. With many functions in R, if you want to have a quick glance at the machinery behind the scenes, we can simply write the function name but without the <code>()</code>. This is the same trick we used in <a href="12-graphics_short.html">Chapter 5</a> to alter the <code>theme_classic()</code> style of <code>ggplot2</code> to make <code>theme_rbook()</code>.</p>
+<p>A good way to start learning to program in R is to see what others have done. We can start by briefly peeking behind the curtain. In <a href="12-graphics_short.html" class="quarto-xref"><span>Chapter 4</span></a> we made use of the <code>theme_classic()</code> function when customising our <code>ggplot</code> figures. With many functions in R, if you want to have a quick glance at the machinery behind the scenes, we can simply write the function name but without the <code>()</code>. This is the same trick we used in <a href="12-graphics_short.html" class="quarto-xref"><span>Chapter 4</span></a> to alter the <code>theme_classic()</code> style of <code>ggplot2</code> to make <code>theme_rbook()</code>.</p>
 <p>Note that to view the source code of base R packages (those that come with R) requires some additional steps which we won’t cover here (see this <a href="https://stackoverflow.com/questions/19226816/how-can-i-view-the-source-code-for-a-function">link</a> if you’re interested), but for most other packages that you install yourself, generally entering the function name without <code>()</code> will show the source code of the function.</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">theme_classic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -435,7 +435,7 @@ window.Quarto = {
 &lt;environment: namespace:ggplot2&gt;</code></pre>
 </div>
 </div>
-<p>What we see above is the underlying code for this particular function. As we did in <a href="12-graphics_short.html">Chapter 5</a>, we could copy and paste this into our own script and make any changes we deemed necessary. This approach isn’t limited to <code>ggplot2</code> functions and can be used for other functions as well, although tread carefully and test the changes you’ve made.</p>
+<p>What we see above is the underlying code for this particular function. As we did in <a href="12-graphics_short.html" class="quarto-xref"><span>Chapter 4</span></a>, we could copy and paste this into our own script and make any changes we deemed necessary. This approach isn’t limited to <code>ggplot2</code> functions and can be used for other functions as well, although tread carefully and test the changes you’ve made.</p>
 <p>Don’t worry overly if most of the code contained in functions doesn’t make sense immediately. This will be especially true if you are new to R, in which case it seems incredibly intimidating. To help with that, we’ll begin by making our own functions in R in the next section.</p>
 </section><section id="functions-in-r" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="functions-in-r">
 <span class="header-section-number">6.2</span> Functions in R</h2>
@@ -709,7 +709,6 @@ produced NAs</code></pre>
 </div>
 <p>Notice that we never specified what to do if the day was not a Friday? That’s because, for this function, the only thing that matters is whether or not it’s Friday.</p>
 <p>We’ve also been using logical operators whenever we’ve used <code>if</code> statements. Logical operators are the final piece of the logical conditions jigsaw. Below is a table which summarises operators. The first two are logical operators and the final six are relational operators. You can use any of these when you make your own functions (or loops).</p>
-<p>&nbsp;</p>
 <table class="table">
 <colgroup>
 <col style="width: 9%">
@@ -773,9 +772,7 @@ produced NAs</code></pre>
 <td style="text-align: left;"><code>if(X != Y)</code></td>
 </tr>
 </tbody>
-</table>
-<p>&nbsp;</p>
-</section><section id="loops" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="loops">
+</table></section><section id="loops" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="loops">
 <span class="header-section-number">6.5</span> Loops</h2>
 <p>R is very good at performing repetitive tasks. If we want a set of operations to be repeated several times we use what’s known as a loop. When you create a loop, R will execute the instructions in the loop a specified number of times or until a specified condition is met. There are three main types of loop in R: the <em>for</em> loop, the <em>while</em> loop and the <em>repeat</em> loop.</p>
 <p>Loops are one of the staples of all programming languages, not just R, and can be a powerful tool (although in our opinion, used far too frequently when writing R code).</p>
@@ -864,7 +861,7 @@ produced NAs</code></pre>
 <span>  <span class="op">}</span></span>
 <span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>To use a list to iterate over these columns we need to first create an empty list (remember <a href="11-data.html#lists">lists</a>?) which we call <code>temp</code> (short for temporary) which will be used to store the output of the <code>for</code> loop.</p>
+<p>To use a list to iterate over these columns we need to first create an empty list (remember <a href="11-data.html#sec-lists" class="quarto-xref"><span>Section 3.2.3</span></a>?) which we call <code>temp</code> (short for temporary) which will be used to store the output of the <code>for</code> loop.</p>
 <div class="cell">
 <div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">city</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>

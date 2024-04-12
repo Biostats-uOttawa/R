@@ -106,7 +106,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
-</script><link rel="stylesheet" href="css/style.css">
+</script>
 </head>
 <body class="nav-sidebar floating nav-fixed">
 
@@ -357,13 +357,13 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#simple_lm" id="toc-simple_lm" class="nav-link active" data-scroll-target="#simple_lm"><span class="header-section-number">5.1</span> Simple linear modelling</a></li>
+<li><a href="#sec-simple_lm" id="toc-sec-simple_lm" class="nav-link active" data-scroll-target="#sec-simple_lm"><span class="header-section-number">5.1</span> Simple linear modelling</a></li>
   <li><a href="#other-modelling-approaches" id="toc-other-modelling-approaches" class="nav-link" data-scroll-target="#other-modelling-approaches"><span class="header-section-number">5.2</span> Other modelling approaches</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/21-stats.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./21-stats.html">Linear models</a></li><li class="breadcrumb-item"><a href="./21-stats.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Statistics in R</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="stats_r" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Statistics in R</span></span></h1>
+<h1 class="title"><span id="sec-stats_r" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Statistics in R</span></span></h1>
 </div>
 
 
@@ -390,21 +390,17 @@ Warning
 <p>To be developed (need to decide what I want in that chapter) Potentially just list a few functions since it is not at all about stats but more about r</p>
 </div>
 </div>
-<section id="simple_lm" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="simple_lm">
+<section id="sec-simple_lm" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="sec-simple_lm">
 <span class="header-section-number">5.1</span> Simple linear modelling</h2>
 <p>Linear models are one of the most widely used models in statistics and data science. They are often thought of as simple models but they’re very flexible and able to model a wide variety of experimental and survey designs. Many of the statistical approaches you may have used previously (such as linear regression, <em>t</em>-test, ANOVA, ANCOVA etc) can be expressed as a linear model so the good news is that you’re probably already familiar with linear models (albeit indirectly). They also form the foundation of more complicated modelling approaches and are relatively easy to extended to incorporate additional complexity. During this section we’ll learn how to fit some simple linear models using R and cover some of the more common applications. We won’t go into any detail of the underlying linear modelling theory but rather focus on the practicalities of model fitting and R code.</p>
 <p>The main function for fitting linear models in R is the <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> function (short for linear model!). The <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> function has many arguments but the most important is the first argument which specifies the model you want to fit using a <em>model formula</em> which typically takes the general form:</p>
-<p>&nbsp;</p>
 <blockquote class="blockquote">
 <p><em>response variable ~ explanatory variable(s)</em></p>
 </blockquote>
-<p>&nbsp;</p>
 <p>This model formula is simply read as</p>
-<p>&nbsp;</p>
 <blockquote class="blockquote">
 <p><em>‘variation in the response variable modelled as a function (~) of the explanatory variable(s)’.</em></p>
 </blockquote>
-<p>&nbsp;</p>
 <p>The response variable is also commonly known as the ‘dependent variable’ and the explanatory variables are sometimes referred to as ‘independent variables’ (or less frequently as ‘predictor variables’). There is also an additional term in our model formula which represents the variation in our response variable <strong>not</strong> explained by our explanatory variables but you don’t need to specify this when using the <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> function.</p>
 <p>As mentioned above, many of the statistical ‘tests’ you might have previously used can be expressed as a linear model. For example, if we wanted to perform a bivariate linear regression between a response variable (<code>y</code>) and a single continuous explanatory variable (<code>x</code>) our model formula would simply be</p>
 <pre><code>y ~ x</code></pre>
@@ -418,7 +414,6 @@ Warning
 <p>or by using the equivalent shortcut notation</p>
 <pre><code>y ~ x * z </code></pre>
 <p>It’s important that you get comfortable with using model formula (and we’ve only given the briefest of explanations above) when using the <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> function (and other functions) as it’s remarkably easy to specifiy a model which is either nonsense or isn’t the model you really wanted to fit. A summary table of various linear model formula and equivalent R code given below.</p>
-<p>&nbsp;</p>
 <table class="table">
 <colgroup>
 <col style="width: 32%">
@@ -465,7 +460,6 @@ Warning
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 <p>OK, time for an example. The data file <code>smoking.txt</code> summarises the results of a study investigating the possible relationship between mortality rate and smoking across 25 occupational groups in the UK. The variable <code>occupational.group</code> specifies the different occupational groups studied, the <code>risk.group</code> variable indicates the relative risk to lung disease for the various occupational groups and <code>smoking</code> is an index of the average number of cigarettes smoked each day (relative to the number smoked across all occupations). The variable <code>mortality</code> is an index of the death rate from lung cancer in each group (relative to the death rate across all occupational groups). In this data set, the response variable is <code>mortality</code> and the potential explanatory variables are <code>smoking</code> which is numeric and <code>risk.group</code> which is a three level factor. The first thing to do is import our data file using the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function as usual and assign the data to an object called <code>smoke</code>. You can find a link to download these data <a href="https://biostats-uottawa.io/practical_data/data.html">here</a>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">smoke</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span><span class="st">'data/smoking.txt'</span>, header <span class="op">=</span> <span class="cn">TRUE</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, </span>
@@ -480,7 +474,6 @@ Warning
 </div>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># vec.len argument to limited number of ' first elements' to display</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>&nbsp;</p>
 <p>Next, let’s investigate the relationship between the <code>mortality</code> and <code>smoking</code> variables by plotting a scatter plot. We can use either the <code>ggplot2</code> package or base R graphics to do this. We’ll use <code>ggplot2</code> this time and our old friend the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> function.</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
@@ -774,8 +767,7 @@ F-statistic: 30.54 on 1 and 22 DF,  p-value: 1.488e-05</code></pre>
 </div>
 </section><section id="other-modelling-approaches" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="other-modelling-approaches">
 <span class="header-section-number">5.2</span> Other modelling approaches</h2>
-<p>As with most things R related, a complete description of the variety and flexibility of different statistical analyses you can perform is beyond the scope of this introductory text. Further information can be found in any of the excellent documents referred to in <a href="02-basics.html#rhelp">Chapter 2</a>. A table of some of the more common statistical functions is given below to get you started.</p>
-<p>&nbsp;</p>
+<p>As with most things R related, a complete description of the variety and flexibility of different statistical analyses you can perform is beyond the scope of this introductory text. Further information can be found in any of the excellent documents referred to in <a href="02-basics.html#sec-rhelp" class="quarto-xref"><span>Section 2.6.2</span></a>. A table of some of the more common statistical functions is given below to get you started.</p>
 <table class="table">
 <colgroup>
 <col style="width: 23%">
@@ -822,22 +814,7 @@ F-statistic: 30.54 on 1 and 22 DF,  p-value: 1.488e-05</code></pre>
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
-<!--course website Links-->
-<!--cran Links-->
-<!--RStudio-->
-<!--style guides-->
-<!--Package Links-->
-<!--Editors-->
-<!--Bioconductor Links-->
-<!--GitHub Links-->
-<!--R markdown Links-->
-<!--ggplot Links-->
-<!--Basics links-->
-<!--Data links-->
-<!--Resource Links-->
-<!--Misc Links-->
-
+<!--course website Links--><!--cran Links--><!--RStudio--><!--style guides--><!--Package Links--><!--Editors--><!--Bioconductor Links--><!--GitHub Links--><!--R markdown Links--><!--ggplot Links--><!--Basics links--><!--Data links--><!--Resource Links--><!--Misc Links-->
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

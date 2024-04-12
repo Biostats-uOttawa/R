@@ -132,7 +132,7 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script><link rel="stylesheet" href="css/style.css">
+</script>
 </head>
 <body class="nav-sidebar floating nav-fixed">
 
@@ -387,25 +387,25 @@ window.Quarto = {
   <li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link" data-scroll-target="#what-is-quarto"><span class="header-section-number">7.2</span> What is Quarto?</a></li>
   <li><a href="#why-use-quarto" id="toc-why-use-quarto" class="nav-link" data-scroll-target="#why-use-quarto"><span class="header-section-number">7.3</span> Why use Quarto?</a></li>
   <li><a href="#get-started-with-quarto" id="toc-get-started-with-quarto" class="nav-link" data-scroll-target="#get-started-with-quarto"><span class="header-section-number">7.4</span> Get started with Quarto</a></li>
-  <li><a href="#new_rm" id="toc-new_rm" class="nav-link" data-scroll-target="#new_rm"><span class="header-section-number">7.5</span> Create a Quarto document, <code>.qmd</code></a></li>
+  <li><a href="#sec-new_rm" id="toc-sec-new_rm" class="nav-link" data-scroll-target="#sec-new_rm"><span class="header-section-number">7.5</span> Create a Quarto document, <code>.qmd</code></a></li>
   <li>
 <a href="#quarto-anatomy" id="toc-quarto-anatomy" class="nav-link" data-scroll-target="#quarto-anatomy"><span class="header-section-number">7.6</span> Quarto anatomy</a>
   <ul class="collapse">
 <li><a href="#yaml-header" id="toc-yaml-header" class="nav-link" data-scroll-target="#yaml-header"><span class="header-section-number">7.6.1</span> YAML header</a></li>
   <li><a href="#formatted-text" id="toc-formatted-text" class="nav-link" data-scroll-target="#formatted-text"><span class="header-section-number">7.6.2</span> Formatted text</a></li>
-  <li><a href="#code_chunks" id="toc-code_chunks" class="nav-link" data-scroll-target="#code_chunks"><span class="header-section-number">7.6.3</span> Code chunks</a></li>
+  <li><a href="#sec-code_chunks" id="toc-sec-code_chunks" class="nav-link" data-scroll-target="#sec-code_chunks"><span class="header-section-number">7.6.3</span> Code chunks</a></li>
   <li><a href="#adding-figures" id="toc-adding-figures" class="nav-link" data-scroll-target="#adding-figures"><span class="header-section-number">7.6.4</span> Adding figures</a></li>
   <li><a href="#adding-tables" id="toc-adding-tables" class="nav-link" data-scroll-target="#adding-tables"><span class="header-section-number">7.6.5</span> Adding tables</a></li>
   <li><a href="#inline-r-code" id="toc-inline-r-code" class="nav-link" data-scroll-target="#inline-r-code"><span class="header-section-number">7.6.6</span> Inline R code</a></li>
   </ul>
 </li>
-  <li><a href="#tips_tricks" id="toc-tips_tricks" class="nav-link" data-scroll-target="#tips_tricks"><span class="header-section-number">7.7</span> Some tips and tricks</a></li>
+  <li><a href="#sec-tips_tricks" id="toc-sec-tips_tricks" class="nav-link" data-scroll-target="#sec-tips_tricks"><span class="header-section-number">7.7</span> Some tips and tricks</a></li>
   <li><a href="#further-information" id="toc-further-information" class="nav-link" data-scroll-target="#further-information"><span class="header-section-number">7.8</span> Further Information</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/82-rmarkdown.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./81-programming.html">Programming and writing with R</a></li><li class="breadcrumb-item"><a href="./82-rmarkdown.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown / Quarto</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="rmarkdown_r" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown / Quarto</span></span></h1>
+<h1 class="title"><span id="sec-rmarkdown_r" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown / Quarto</span></span></h1>
 </div>
 
 
@@ -480,12 +480,12 @@ Warning
 <ul>
 <li><p>Explicitly links your data with your R code and output creating a fully reproducible workflow. <strong>ALL</strong> of the R code used to explore, summarise and analyse your data can be included in a single easy to read document. You can decide what to include in your final document (as you will learn below) but all of your R code can be included in the Quarto document.</p></li>
 <li><p>You can create a wide variety of output formats (pdf, html web pages, MS Word and many others) from a single Quarto document which enhances both collaboration and communication.</p></li>
-<li><p>Enhances transparency of your research. Your data and Quarto file can be included with your publication or thesis chapter as supplementary material or hosted on a GitHub repository (see the GitHub <a href="83-github.html">Chapter</a>).</p></li>
+<li><p>Enhances transparency of your research. Your data and Quarto file can be included with your publication or thesis chapter as supplementary material or hosted on a GitHub repository (see <a href="83-github.html" class="quarto-xref"><span>Chapter 8</span></a>).</p></li>
 <li><p>Increases the efficiency of your workflow. If you need to modify or extend your current analysis you just need to update your Quarto document and these changes will automatically be included in your final document.</p></li>
 </ul></section><section id="get-started-with-quarto" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="get-started-with-quarto">
 <span class="header-section-number">7.4</span> Get started with Quarto</h2>
-<p>To use Quarto you will first need to install the <code>Quarto</code> software and the <code>quarto</code> R package (with its dependencies). You can find instructions on how to do this for both Windows and Mac OSX operating systems <a href="93-latex.html">here</a>. If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of <span class="math inline">\(\LaTeX\)</span> on your computer. If you’ve not installed <span class="math inline">\(\LaTeX\)</span> before, we recommend that you install <a href="https://yihui.name/tinytex/">TinyTeX</a>. Again, instructions on how to do this can be found <a href="93-latex.html">here</a>.</p>
-</section><section id="new_rm" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="new_rm">
+<p>To use Quarto you will first need to install the <code>Quarto</code> software and the <code>quarto</code> R package (with its dependencies). You can find instructions on how to do this for both Windows and Mac OSX operating systems in <a href="93-latex.html" class="quarto-xref"><span>Appendix B</span></a>. If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of <span class="math inline">\(\LaTeX\)</span> on your computer. If you’ve not installed <span class="math inline">\(\LaTeX\)</span> before, we recommend that you install <a href="https://yihui.name/tinytex/">TinyTeX</a>. Again, instructions on how to do this can be found at <a href="93-latex.html" class="quarto-xref"><span>Appendix B</span></a>.</p>
+</section><section id="sec-new_rm" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="sec-new_rm">
 <span class="header-section-number">7.5</span> Create a Quarto document, <code>.qmd</code>
 </h2>
 <p>Right, time to create your first Quarto document. Within RStudio, click on the menu <code>File</code> -&gt; <code>New File</code> -&gt; <code>Quarto...</code>. In the pop up window, give the document a ‘Title’ and enter the ‘Author’ information (your name) and select HTML as the default output. We can change all of this later so don’t worry about it for the moment.</p>
@@ -560,7 +560,7 @@ Warning
 </div>
 <section id="yaml-header" class="level3" data-number="7.6.1"><h3 data-number="7.6.1" class="anchored" data-anchor-id="yaml-header">
 <span class="header-section-number">7.6.1</span> YAML header</h3>
-<p>YAML stands for ‘<strong>Y</strong>AML <strong>A</strong>in’t <strong>M</strong>arkup <strong>L</strong>anguage’ (it’s an ‘in’ <a href="https://en.wikipedia.org/wiki/Recursive_acronym">joke</a>!) and this optional component contains the metadata and options for the entire document such as the author name, date, output format, etc. The YAML header is surrounded before and after by a <code>---</code> on its own line. In RStudio a minimal YAML header is automatically created for you when you create a new Quarto document as we did <a href="#new_rm">above</a> but you can change this any time. A simple YAML header may look something like this:</p>
+<p>YAML stands for ‘<strong>Y</strong>AML <strong>A</strong>in’t <strong>M</strong>arkup <strong>L</strong>anguage’ (it’s an ‘in’ <a href="https://en.wikipedia.org/wiki/Recursive_acronym">joke</a>!) and this optional component contains the metadata and options for the entire document such as the author name, date, output format, etc. The YAML header is surrounded before and after by a <code>---</code> on its own line. In RStudio a minimal YAML header is automatically created for you when you create a new Quarto document as we did above (<a href="#sec-new_rm" class="quarto-xref"><span>Section 7.5</span></a>) but you can change this any time. A simple YAML header may look something like this:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> My first Quarto document</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Jane Doe</span></span>
@@ -678,7 +678,7 @@ effect &nbsp; &nbsp; &nbsp; &nbsp; benthic polychaete (<em>Nereis diversicolor</
 </blockquote>
 </div>
 </section><section id="comments" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="comments">Comments</h4>
-<p>As you can see above the meaning of the <code>#</code> symbol is different when formatting text in an Quarto document compared to a standard R script (which is used to included a comment - remember?!). You can, however, use a <code>#</code> symbol to comment code inside a <a href="#code_chunks">code chunk</a> as usual (more about this in a bit). If you want to include a comment in your Quarto document outside a code chunk which won’t be included in the final rendered document then enclose your comment between <code>&lt;!--</code> and <code>--&gt;</code>.</p>
+<p>As you can see above the meaning of the <code>#</code> symbol is different when formatting text in an Quarto document compared to a standard R script (which is used to included a comment - remember?!). You can, however, use a <code>#</code> symbol to comment code inside a code chunk (<a href="#sec-code_chunks" class="quarto-xref"><span>Section 7.6.3</span></a>) as usual (more about this in a bit). If you want to include a comment in your Quarto document outside a code chunk which won’t be included in the final rendered document then enclose your comment between <code>&lt;!--</code> and <code>--&gt;</code>.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">this is an example of how to format a comment using Quarto.</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -737,7 +737,7 @@ effect &nbsp; &nbsp; &nbsp; &nbsp; benthic polychaete (<em>Nereis diversicolor</
 <figcaption>Cute grey kitten</figcaption></figure>
 </div>
 <p>The code above will only work if the image file (<code>Cute_grey_kitten.jpg</code>) is in the right place relative to where you saved your <code>.Rmd</code> file. In the example above the image file is in a sub directory (folder) called <code>images</code> in the directory where we saved our <code>my_first_rmarkdown.Rmd</code> file. You can embed images saved in many different file types but perhaps the most common are <code>.jpg</code> and <code>.png</code>.</p>
-<p>We think a more flexible way of including images in your document is to use the <code>include_graphics()</code> function from the <code>knitr</code> package as this gives finer control over the alignment and image size (it also works more or less the same with both HTML and pdf output formats). However, to do this you will need to include this R code in a <a href="#code_chunks">‘code chunk’</a> which we haven’t covered yet. Despite this we’ll leave the code here for later reference. This code center aligns the image and scales it to 50% of it’s original size. See <code>?include_graphics</code> for more options.</p>
+<p>We think a more flexible way of including images in your document is to use the <code>include_graphics()</code> function from the <code>knitr</code> package as this gives finer control over the alignment and image size (it also works more or less the same with both HTML and pdf output formats). However, to do this you will need to include this R code in a <code>code chunk</code> (<a href="#sec-code_chunks" class="quarto-xref"><span>Section 7.6.3</span></a>) which we haven’t covered yet. Despite this we’ll leave the code here for later reference. This code center aligns the image and scales it to 50% of it’s original size. See <code>?include_graphics</code> for more options.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, fig.align='center', out.width='50%'}</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="in">library(knitr)</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="in">include_graphics("images/Cute_grey_kitten.jpg")</span></span>
@@ -757,7 +757,7 @@ effect &nbsp; &nbsp; &nbsp; &nbsp; benthic polychaete (<em>Nereis diversicolor</
 <blockquote class="blockquote">
 <p>You can include a text for your clickable <a href="https://www.worldwildlife.org">link</a></p>
 </blockquote>
-</section></section><section id="code_chunks" class="level3" data-number="7.6.3"><h3 data-number="7.6.3" class="anchored" data-anchor-id="code_chunks">
+</section></section><section id="sec-code_chunks" class="level3" data-number="7.6.3"><h3 data-number="7.6.3" class="anchored" data-anchor-id="sec-code_chunks">
 <span class="header-section-number">7.6.3</span> Code chunks</h3>
 <p>Now to the heart of the matter. To include R code into your Quarto document you simply place your code into a ‘code chunk’. All code chunks start and end with three backticks <code>```</code>. Note, these are also known as ‘grave accents’ or ‘back quotes’ and are not the same as an apostrophe! On most keyboards you can <a href="https://superuser.com/questions/254076/how-do-i-type-the-tick-and-backtick-characters-on-windows">find the backtick</a> on the same key as tilde (~).</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -1317,7 +1317,7 @@ The mean Sepal length was
 <p>Morphological characteristics (variable names: Sepal.Length, Sepal.Width, Petal.Length, Petal.Width) were measured from 150 <em>iris</em> plants from 3 different species. The mean Sepal length was 5.84 mm.</p>
 </blockquote>
 <p>The great thing about including inline R code in your text is that these values will automatically be updated if your data changes.</p>
-</section></section><section id="tips_tricks" class="level2" data-number="7.7"><h2 data-number="7.7" class="anchored" data-anchor-id="tips_tricks">
+</section></section><section id="sec-tips_tricks" class="level2" data-number="7.7"><h2 data-number="7.7" class="anchored" data-anchor-id="sec-tips_tricks">
 <span class="header-section-number">7.7</span> Some tips and tricks</h2>
 <p><strong>Problem :</strong></p>
 <p>When rendering my Quarto document to pdf my code runs off the edge of the page.</p>
