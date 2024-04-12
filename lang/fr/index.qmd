@@ -90,7 +90,7 @@ points importants
 notes
 :::
 
-## Qui sommes-nous ? {#qui}
+## Qui sommes-nous ? {#sec-qui}
 
 ::: {layout="[25, -5, 70]"}
 

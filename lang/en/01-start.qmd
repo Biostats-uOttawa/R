@@ -1,9 +1,10 @@
-# Getting started {#chap1}
+# Getting started {#sec-chap1}
 
-Although R is not new, its popularity has increased rapidly over the last 10 years or so (see [here][r4stats] for some interesting data).
+Although R is not new, its popularity has increased rapidly over the last 10 years or so (see [here][r4stats]).
 It was originally created and developed by Ross Ihaka and Robert Gentleman during the 1990's with the first stable version released in 2000.
 Nowadays R is maintained by the [R Development Core Team][cran-core].
-So, why has R become so popular and why should you learn how to use it? Some reasons include:
+So, why has R become so popular and why should you learn how to use it?
+Some reasons include:
 
 - open source and freely available.
 - available for Windows, Mac and Linux operating systems.
@@ -15,10 +16,9 @@ So, why has R become so popular and why should you learn how to use it? Some rea
 All of the reasons above are great reasons to use R.
 However, in our opinion, the single biggest reason to use R is that it facilitates robust and reproducible research practices.
 In contrast to more traditional 'point and click' software, writing code ensures you have a permanent and accurate record of all the methods you used (and decisions you made) for your data analysis.
-You are then able to share this code (and your data) with other researchers / colleagues / journal reviewers who will be able to reproduce your analysis exactly.
+You are then able to share this code (and your data) with other researchers / colleagues / reviewers who will be able to reproduce your analysis exactly.
 This is one of the tenets of [open science][open-sci].
-We will cover other topics to facilitate open science throughout this book, including creating [reproducible reports](#rmarkdown_r) and [version control](#github_r).
- 
+We will cover other topics to facilitate open science throughout this book, including creating reproducible reports (@sec-rmarkdown_r) and version control (@sec-github_r).
 
 In this Chapter we'll cover:
 
@@ -48,13 +48,12 @@ Good luck and don’t forget to have fun.
 
 ## Installation
 
-### Installing R {#install_r}
+### Installing R {#sec-install_r}
 
 To get up and running the first thing you need to do is install R.
 R is freely available for Windows, Mac and Linux operating systems from the [Comprehensive R Archive Network (CRAN) website][cran].
 For Windows and Mac users we suggest you download and install the pre-compiled binary versions.
 There are reasonably comprehensive instruction to install R for each OS ([Windows][cran-windows],[Mac][cran-mac] or [linux][cran-linux] ).
-
 
 Whichever operating system you're using, once you have installed R you need to check its working properly.
 The easiest way to do this is to start R by double clicking on the R icon (Windows or Mac) or by typing `R` into the Console (Linux).
@@ -79,7 +78,7 @@ An alternative to RStudio is Visual Studio Code, or [VSCode][vscode].
 An IDE can be thought of as an add-on to R which provides a more user-friendly interface, incorporating the R Console, a script editor and other useful functionality (like R markdown and Git Hub integration).
 
 ::: {.callout-caution}
-You must install R before you install an IDE (see [previous section](#install_r) for details).
+You must install R before you install an IDE (see @sec-install_r for details).
 :::
 
 :::{.callout-note}
@@ -131,8 +130,8 @@ These environments are more powerful than simple text editors, and are similar t
 - [RKWard][rkward] (Linux)
 - [Tinn-R][tinn-r] (Windows)
 
-## IDE orientation {#orient}
-### RStudio{#rstudio_orient}
+## IDE orientation {#sec-orient}
+### RStudio{#sec-rstudio_orient}
 
 When you open R studio for the first time you should see the following layout (it might look slightly different on a Windows computer).
 
@@ -151,7 +150,7 @@ You can customise the location of each pane by clicking on the 'Tools' menu then
 You can resize the panes by clicking and dragging the middle of the window borders in the direction you want.
 There are a plethora of other ways to [customise][rstudio-cutomise] RStudio.
 
-#### Console {#cons}
+#### Console {#sec-cons}
 
 The Console is the workhorse of R.
 This is where R evaluates all the code you write.
@@ -221,7 +220,7 @@ These objects can be things like data you have imported or functions you have wr
 Objects can be displayed as a List or in Grid format by selecting your choice from the drop down button on the top right of the window.
 If you're in the Grid format you can remove objects from the environment by placing a tick in the empty box next to the object name and then click on the broom icon.
 There's also an 'Import Dataset' button which will import data saved in a variety of file formats.
-However, we would suggest that you don't use this approach to import your data as it's not reproducible and therefore not robust (see [Chapter 3](#data_r) for more details).
+However, we would suggest that you don't use this approach to import your data as it's not reproducible and therefore not robust (see @sec-data_r for more details).
       
 
 - The 'History' tab contains a list of all the commands you have entered into the R Console.
@@ -240,17 +239,17 @@ You can open, copy, rename, move and delete files listed in the window.
 - The 'Plots' tab is where all the plots you create in R are displayed (unless you tell R otherwise).
 You can 'zoom' into the plots to make them larger using the magnifying glass button, and scroll back through previously created plots using the arrow buttons.
 There is also the option of exporting plots to an external file using the 'Export' drop down menu.
-Plots can be exported in various file formats such as jpeg, png, pdf, tiff or copied to the clipboard (although you are probably better off using the appropriate R functions to do this - see [Chapter 4](#graphics_r) for more details).
+Plots can be exported in various file formats such as jpeg, png, pdf, tiff or copied to the clipboard (although you are probably better off using the appropriate R functions to do this - see [@sec-graphics_r for more details).
 
 - The 'Packages' tab lists all of the packages that you have installed on your computer.
 You can also install new packages and update existing packages by clicking on the 'Install' and 'Update' buttons respectively.
 
 - The 'Help' tab displays the R help documentation for any function.
-We will go over how to view the help files and how to search for help in [Chapter 2](#basics_r).
+We will go over how to view the help files and how to search for help in @sec-basics_r).
 
 - The 'Viewer' tab displays local web content such as web graphics generated by some packages.
 
-### VSCode{#vscode_orient}
+### VSCode{#sec-vscode_orient}
 
 ```{r}
 #| echo: false
@@ -309,7 +308,7 @@ It can be split and run multiple sessions at the same time
 knitr::include_graphics(path = "images/ch-01/vs_term_panel.png")
 ```
 
-## Working directories {#work-d}
+## Working directories {#sec-work-d}
 
 The working directory is the default location where R will look for files you want to load and where it will put any files you save.
 One of the great things about using RStudio Projects is that when you open a project it will automatically set your working directory to the appropriate location.
@@ -341,8 +340,8 @@ IDEs solves this problem by allowing you to use *relative* file paths  which are
 The Root project directory is just the directory that contains the `.Rproj` file in Rstudio (`first_project.Rproj` in our case) or the base folder of your workspace in VScode.
 If you want to share your analysis with someone else, all you need to do is copy the entire project directory and send to your to your collaborator.
 They would then just need to open the project file and any R scripts that contain references to relative file paths will just work.
-For example, let's say that you've created a subdirectory called `data` in your Root project directory that contains a csv delimited datile called `mydata.csv` (we will cover directory structures [below](#dir_struct)).
-To import this datile in an RStudio project using the `read.csv()` function (don't worry about this now, we will cover this in much more detail in [Chapter 3](#data_r)) all you need to include in your R script is
+For example, let's say that you've created a subdirectory called `data` in your Root project directory that contains a csv delimited datile called `mydata.csv` (we will cover directory structures below in @sec-dir_struct).
+To import this datile in an RStudio project using the `read.csv()` function (don't worry about this now, we will cover this in much more detail in @sec-data_r) all you need to include in your R script is
 
 ```{r}
 #| label: rel-fp1
@@ -386,7 +385,7 @@ dat <- read.csv(here("data", "mydata.csv"))
 
 ```
 
-## Directory structure {#dir_struct}
+## Directory structure {#sec-dir_struct}
 
 In addition to using RStudio Projects, it's also really good practice to structure your working directory in a consistent and logical way to help both you and your collaborators.
 We frequently use the following directory structure in our R based projects.
@@ -522,7 +521,7 @@ An alternative approach is to use the `dir.create()` functions in the R Console.
 dir.create("data")
 ```
 
-## Projects organisation {#rsprojs}
+## Projects organisation {#sec-rsprojs}
 
 As with most things in life, when it comes to dealing with data and data analysis things are so much simpler if you're organized.
 Clear project organisation makes it easier for both you (especially the future you) and your collaborators to make sense of what you've done.
@@ -542,7 +541,7 @@ This means that you can very easily switch between `projects` without fear of th
 
 ### RStudio
 To create a project, open RStudio and select `File` -> `New Project...` from the menu.
-You can create either an entirely new project, a project from an existing directory or a version controlled project (see the [GitHub Chapter](#github_r) for further details about this).
+You can create either an entirely new project, a project from an existing directory or a version controlled project (see the @sec-github_r for further details about this).
 In this Chapter we will create a project in a new directory.
 
 ```{r}
@@ -613,7 +612,7 @@ The downside to this is that you will need to rerun your R code every time you o
 knitr::include_graphics(path = "images/ch-01/new_proj5.png")
 ```
 
-Now that you have an RStudio project set up you can start creating R scripts (or [R markdown](#rmarkdown_r) documents)  or whatever you need to complete you project.
+Now that you have an RStudio project set up you can start creating R scripts (or R markdown /Quarto documents, see @sec-rmarkdown_r)  or whatever you need to complete you project.
 All of the R scripts will now be contained within the RStudio project and saved in the project folder.
 
 ### VSCode
@@ -622,7 +621,7 @@ workspace are similar to RStudio projects.
 You however need to create a new folder with a R file (or text file) and save as workspace.
 
 
-## File names {#file_names}
+## File names {#sec-file_names}
 
 What you name your files matters more than you might think.
 Naming files is also more difficult than you think.
@@ -662,14 +661,14 @@ If you plan to have more than 99 files then use 001, 002, 003, ...
 
 Whatever file naming convention you decide to use, try to adopt early, stick with it and be consistent.
 
-## Script documentation {#proj_doc}
+## Script documentation {#sec-proj_doc}
 
 A quick note or two about writing R code and creating R scripts.
 Unless you're doing something really quick and dirty we suggest that you always write your R code as an R script.
 R scripts are what make R so useful.
 Not only do you have a complete record of your analysis, from data manipulation, visualisation and statistical analysis, you can also share this code (and data) with friends, colleagues and importantly when you submit and publish your research to a journal.
 With this in mind, make sure you include in your R script all the information required to make your work reproducible (author names, dates, sampling design etc).
-This information could be included as a series of comments `#` or, even better, by mixing executable code with narrative into an [R markdown](#rmarkdown_r) document.
+This information could be included as a series of comments `#` or, even better, by mixing executable code with narrative into an R markdown document (@sec-rmarkdown_r).
 It's also good practice to include the output of the `sessionInfo()` function at the end of any script which prints the R version, details of the operating system and also loaded packages.
 A really good alternative is to use the `session_info()` function from the `xfun` :package: package for a more concise summary of our session environment.
 
@@ -784,13 +783,13 @@ Other options include cloud based services such as Google Drive and Dropbox (to 
 Whilst these services are pretty good at storing files, they don't really help with incremental backups.
 Finding previous versions of files often involves spending inordinate amounts of time trawling through multiple files named *'final.doc'*, *'final_v2.doc'* and *'final_usethisone.doc'* etc until you find the one you were looking for.
 The best way we know for both backing up files and managing different versions of files is to use Git and GitHub.
-To find out more about how you can use RStudio, Git and GitHub together see the Git and GitHub [Chapter](#github_r).
+To find out more about how you can use RStudio, Git and GitHub together see @sec-github_r.
        
 
 ## Citing R and R packages
 
 Many people have invested huge amounts of time and energy making R the great piece of software you're now using.
-If you use R in your work (and we hope you do) please remember to give appropriate credit by citing R.
+If you use R in your work (and we hope you do) please remember to give appropriate credit by citing not only R but also all the packages you used.
 To get the most up to date citation for R you can use the `citation()` function.
 
 ```{r }
@@ -799,7 +798,7 @@ To get the most up to date citation for R you can use the `citation()` function.
 citation()
 ```
 
-If you want to cite a particular package you've used for your data analysis.
+If you want to cite a particular package you've used for your data analysis, you can also use the `citation()` function to get the info.
 
 ```{r}
 #| label: pack-citation
@@ -808,7 +807,7 @@ If you want to cite a particular package you've used for your data analysis.
 citation(package = "here")
 ```
 
-To cite multiple packages, the package `grateful` :package: is extermely useful.
+In our view the most useful tool for citation is the package `grateful` :package: which allow you to generate the citing information in a file, as well as creating either a sentence or a table citing all packages used. This should become the standard in any manuscript honestly.
 See @tbl-r-lib for an example output produced with grateful.
 ```{r}
 #| label: links

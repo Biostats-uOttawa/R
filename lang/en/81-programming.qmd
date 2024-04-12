@@ -1,4 +1,4 @@
-# Programming in R {#prog_r}
+# Programming in R {#sec-prog_r}
 
 After learning the basics, programming in R is the next big step.
 There are already a vast number of R packages available, surely more than enough to cover everything you could possibly want to do? Why then, would you ever need to create you own R functions? Why not just stick to the functions from a package? Well, in some cases you'll want to customise those existing functions to suit your specific needs.
@@ -12,9 +12,9 @@ If you have to do a similar task 4 times or more, build a function for it, and s
 
 A good way to start learning to program in R is to see what others have done.
 We can start by briefly peeking behind the curtain.
-In [Chapter 5](#graphics_r) we made use of the `theme_classic()` function when customising our `ggplot` figures.
+In @sec-graphics_r we made use of the `theme_classic()` function when customising our `ggplot` figures.
 With many functions in R, if you want to have a quick glance at the machinery behind the scenes, we can simply write the function name but without the `()`.
-This is the same trick we used in [Chapter 5](#graphics_r) to alter the `theme_classic()` style of `ggplot2` to make `theme_rbook()`.
+This is the same trick we used in @sec-graphics_r to alter the `theme_classic()` style of `ggplot2` to make `theme_rbook()`.
 
 Note that to view the source code of base R packages (those that come with R) requires some additional steps which we won't cover here (see this [link][show-code] if you're interested), but for most other packages that you install yourself, generally entering the function name without `()` will show the source code of the function.
 
@@ -32,7 +32,7 @@ theme_classic
 ```
 
 What we see above is the underlying code for this particular function.
-As we did in [Chapter 5](#graphics_r), we could copy and paste this into our own script and make any changes we deemed necessary.
+As we did in @sec-graphics_r, we could copy and paste this into our own script and make any changes we deemed necessary.
 This approach isn't limited to `ggplot2` functions and can be used for other functions as well, although tread carefully and test the changes you've made.
 
 Don't worry overly if most of the code contained in functions doesn't make sense immediately.
@@ -558,7 +558,7 @@ multiply_columns <- function(x, y) {
 }
 ```
 
-To use a list to iterate over these columns we need to first create an empty list (remember [lists](#lists)?) which we call `temp` (short for temporary) which will be used to store the output of the `for` loop.
+To use a list to iterate over these columns we need to first create an empty list (remember @sec-lists?) which we call `temp` (short for temporary) which will be used to store the output of the `for` loop.
 
 ```{r }
 #| label: loop_function

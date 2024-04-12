@@ -97,7 +97,7 @@ notes
 :::
 
 
-## Who are we ?
+## Who are we ? {#sec-who}
 
 ::: {layout="[25, -5, 70]"}
 ![](images/author/julien.jpg){fig-align="center" width=90%}

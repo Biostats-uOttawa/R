@@ -1,4 +1,4 @@
-# Graphics with ggplot {#graphics_r}
+# Graphics with ggplot {#sec-graphics_r}
 
 ```{r}
 #| label: setup-gg
@@ -1293,7 +1293,7 @@ In the end we decided it was worth the risk as it served as a nice demonstration
 Fortunately, or unfortunately depending on your view, there are no hard and fast rules when it comes to making figures.
 Much of it will be at your discretion, so please ensure you give it some thought.
 
-## Tips and tricks {#tips}
+## Tips and tricks {#sec-tips}
 
 For this section we'll use various versions of the final figure without including the `facet_grid()`\index{facet\_grid()}.
 We do so only to allow the changes to be more apparent.
@@ -2025,7 +2025,7 @@ nested_1 +
 
 To round off this Chapter, we'll take you on a whistle-stop tour of some of the common types of plots you can make in the aptly named "ggplot bestiary section".
 
-## A ggplot bestiary {#bestiary}
+## A ggplot bestiary {#sec-bestiary}
 
 What follows is a quick run through of example `ggplots`.
 These will predominantly be created by changing the geoms used, but there will be additional tweaks which we'll highlight.

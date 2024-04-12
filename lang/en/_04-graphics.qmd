@@ -1,4 +1,4 @@
-# Graphics with R {#graphics_r}
+# Graphics with R {#sec-graphics_r}
 
 <!-- need to
 add info about ggplot
@@ -482,7 +482,7 @@ ggplot(flowers, aes(y = weight, x = nitrogen)) +
   labs(y = "Weight (g)", x = "Nitrogen Concentration")
 ```
 
-### Dot charts {#dotcharts}
+### Dot charts {#sec-dotcharts}
 
 Identifying unusual observations (aka outliers) in numeric variables is extremely important as they may influence parameter estimates in your statistical model or indicate an error in your data.
 A really useful (if undervalued) plot to help identify outliers is the Cleveland dotplot.
@@ -689,7 +689,7 @@ In the next section we cover how to customise your base R plots to get them to l
 
 
 
-## Customising plots {#custom_plot}
+## Customising plots {#sec-custom_plot}
 
 All of the plots we've created so far in this Chapter are more than suitable for exploring your data.
 If however, you'd like to make them a little prettier (for your thesis, publication or even your own amusement) you'll need to invest some time learning how to customise your plots.
@@ -1427,7 +1427,7 @@ Phew.
 Now we can really read those numbers.
 Granted, rotating the axis text here isn't needed, but keep this trick in mind if you have lots of levels in a factor which leads to illegible blobs.
 
-## Multiple graphs {#mult_graphs}
+## Multiple graphs {#sec-mult_graphs}
 
 ### Base R
 
@@ -1659,7 +1659,7 @@ nested_1 +
 ```
 
 
-## Exporting plots {#export_plots}
+## Exporting plots {#sec-export_plots}
 
 Creating plots in R is all well and good but what if you want to use these plots in your thesis, report or publication? One option is to click on the 'Export' button in the 'Plots' tab in RStudio as we described [previously](#baseplot_start).
 You can also export your plots from R to an external file by writing some code in your R script.

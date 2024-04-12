@@ -1,4 +1,4 @@
-# Reproducible reports with R markdown / Quarto {#rmarkdown_r}
+# Reproducible reports with R markdown / Quarto {#sec-rmarkdown_r}
 
 ```{r}
 #| include: false
@@ -102,7 +102,7 @@ You can decide what to include in your final document (as you will learn below) 
 - You can create a wide variety of output formats (pdf, html web pages, MS Word and many others) from a single Quarto document which enhances both collaboration and communication.
 
 - Enhances transparency of your research.
-Your data and Quarto file can be included with your publication or thesis chapter as supplementary material or hosted on a GitHub repository (see the GitHub [Chapter](#github_r)).
+Your data and Quarto file can be included with your publication or thesis chapter as supplementary material or hosted on a GitHub repository (see @sec-github_r).
 
 - Increases the efficiency of your workflow.
 If you need to modify or extend your current analysis you just need to update your Quarto document and these changes will automatically be included in your final document.
@@ -110,12 +110,12 @@ If you need to modify or extend your current analysis you just need to update yo
 ## Get started with Quarto
 
 To use Quarto you will first need to install the `Quarto` software and the `quarto` R package (with its dependencies).
-You can find instructions on how to do this for both Windows and Mac OSX operating systems [here](#install-rm).
+You can find instructions on how to do this for both Windows and Mac OSX operating systems in @sec-install-rm.
 If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of {{< latex >}} on your computer.
 If you've not installed {{< latex >}} before, we recommend that you install [TinyTeX][tinytex].
-Again, instructions on how to do this can be found [here](#install-rm).
+Again, instructions on how to do this can be found at @sec-install-rm.
 
-## Create a Quarto document, `.qmd` {#new_rm}
+## Create a Quarto document, `.qmd` {#sec-new_rm}
 
 Right, time to create your first Quarto document.
 Within RStudio, click on the menu `File` -> `New File` -> `Quarto...`.
@@ -242,7 +242,7 @@ include_graphics("images/rm_components.png")
 
 YAML stands for '**Y**AML **A**in’t **M**arkup **L**anguage' (it's an 'in' [joke][joke]!) and this optional component contains the metadata and options for the entire document such as the author name, date, output format, etc.
 The YAML header is surrounded before and after by a `---` on its own line.
-In RStudio a minimal YAML header is automatically created for you when you create a new Quarto document as we did [above](#new_rm) but you can change this any time.
+In RStudio a minimal YAML header is automatically created for you when you create a new Quarto document as we did above (@sec-new_rm) but you can change this any time.
 A simple YAML header may look something like this:
 
 ```yaml
@@ -396,7 +396,7 @@ results in headings in decreasing size order
 #### Comments {-}
 
 As you can see above the meaning of the `#` symbol is different when formatting text in an Quarto document compared to a standard R script (which is used to included a comment - remember?!).
-You can, however, use a `#` symbol to comment code inside a [code chunk](#code_chunks) as usual (more about this in a bit).
+You can, however, use a `#` symbol to comment code inside a code chunk (@sec-code_chunks) as usual (more about this in a bit).
 If you want to include a comment in your Quarto document outside a code chunk which won't be included in the final rendered document then enclose your comment between `<!--` and `-->`.
 
 ```md
@@ -479,7 +479,7 @@ In the example above the image file is in a sub directory (folder) called `image
 You can embed images saved in many different file types but perhaps the most common are `.jpg` and `.png`.
 
 We think a more flexible way of including images in your document is to use the `include_graphics()` function from the `knitr` package as this gives finer control over the alignment and image size (it also works more or less the same with both HTML and pdf output formats).
-However, to do this you will need to include this R code in a ['code chunk'](#code_chunks) which we haven't covered yet.
+However, to do this you will need to include this R code in a `code chunk` (@sec-code_chunks) which we haven't covered yet.
 Despite this we'll leave the code here for later reference.
 This code center aligns the image and scales it to 50% of it's original size.
 See `?include_graphics` for more options.
@@ -513,7 +513,7 @@ which gives you:
 
 >You can include a text for your clickable [link](https://www.worldwildlife.org)
 
-### Code chunks {#code_chunks}
+### Code chunks {#sec-code_chunks}
 
 Now to the heart of the matter.
 To include R code into your Quarto document you simply place your code into a 'code chunk'.
@@ -969,7 +969,7 @@ The mean Sepal length was
 
 The great thing about including inline R code in your text is that these values will automatically be updated if your data changes.
 
-## Some tips and tricks {#tips_tricks}
+## Some tips and tricks {#sec-tips_tricks}
 
 **Problem :** 
 

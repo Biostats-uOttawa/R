@@ -1,4 +1,4 @@
-# Some R basics {#basics_r}
+# Some R basics {#sec-basics_r}
 
 In this Chapter we'll cover how to:
 
@@ -38,19 +38,19 @@ This will terminate most current operations.
 
 ## First step in the console
 
-In [Chapter 1](#chap1) we learned about the [R Console](#cons) and creating scripts and [Projects](#rsprojs).
-We also saw how you write your R code in a script and then source this code into the console to get it to run (if you've forgotten how to do this, pop back to the [console](#cons) section to refresh your memory).
+In @sec-chap1, we learned about the [R Console](#sec-cons) and creating scripts and [Projects](#sec-rsprojs).
+We also saw how you write your R code in a script and then source this code into the console to get it to run (if you've forgotten how to do this, pop back to the console section (-@sec-cons) to refresh your memory).
 Writing your code in a script means that you'll always have a permanent record of everything you've done (provided you save your script) and also allows you to make loads of comments to remind your future self what you've done.
-So, while you're working through this Chapter we suggest that you create a new script (or RStudio [Project](#rsprojs)) to write your code as you follow along.
+So, while you're working through this Chapter we suggest that you create a new script (or RStudio [Project](#sec-rsprojs)) to write your code as you follow along.
 
-As we saw in the previous [Chapter](#chap1), at a basic level we can use R much as you would use a calculator.
+As we saw in @sec-chap1, at a basic level we can use R much as you would use a calculator.
 We can type an arithmetic expression into our script, then source it into the console and receive a result.
 For example, if we type the expression `2 + 2` and then source this line of code we get the answer `4` (reassuringly!)
 
 ```{r }
 #| echo: true
 #| eval: true
-2 + 2
+1 + 1
 ```
 
 The `[1]` in front of the result tells you that the observation number at the beginning of the line is the first observation.
@@ -71,7 +71,7 @@ sqrt(4) # square root
 pi # not a function but useful
 ```
 
-It's important to realise that when you run code as we've done above, the result of the code (or **value**) is only displayed in the console.
+It's important to realize that when you run code as we've done above, the result of the code (or **value**) is only displayed in the console.
 Whilst this can sometimes be useful it is usually much more practical to store the value(s) in a object.
 
 ## Objects in R
@@ -80,7 +80,7 @@ At the heart of almost everything you will do (or ever likely to do) in R is the
 These objects can be almost anything, from a single number or character string (like a word) to highly complex structures like the output of a plot, a summary of your statistical analysis or a set of R commands that perform a specific task.
 Understanding how you create objects and assign values to objects is key to understanding R.
 
-### Creating objects {#r_objs}
+### Creating objects {#sec-r_objs}
 
 To create an object we simply give the object a name.
 We can then assign a value to this object using the *assignment operator* `<-` (sometimes called the *gets operator*).
@@ -89,11 +89,11 @@ The assignment operator is a composite symbol comprised of a ‘less than’ sym
 ```{r}
 #| echo: true
 #| eval: true
-my_obj <- 48
+my_obj <- 32
 ```
 
-In the code above, we created an object called `my_obj` and assigned it a value of the number `48` using the assignment operator (in our head we always read this as '*my_obj gets 48*').
-You can also use `=` instead of `<-` to assign values but this is considered bad practice and we would discourage you from using this notation.
+In the code above, we created an object called `my_obj` and assigned it a value of the number `48` using the assignment operator (in our head we always read this as '*my_obj is 32*').
+You can also use `=` instead of `<-` to assign values but this is bad practice since it can lead to confusion later on when programming in `R` (see @sec-prog_r) and we would discourage you from using this notation.
 
 To view the value of the object you simply type the name of the object
 
@@ -241,18 +241,18 @@ data <- read.table("mydatafile", header = TRUE) # data is a
 # function!
 ```
 
-## Using functions in R
+## Using functions in R {#sec-funcs}
 
 Up until now we've been creating simple objects by directly assigning a single value to an object.
 It's very likely that you'll soon want to progress to creating more complicated objects as your R experience grows and the complexity of your tasks increase.
 Happily, R has a multitude of functions to help you do this.
 You can think of a function as an object which contains a series of instructions to perform a specific task.
-The base installation of R comes with many functions already defined or you can increase the power of R by installing one of the 10,000's of [packages](#packages) now available.
-Once you get a bit more experience with using R you may want to define your own functions to perform tasks that are specific to your goals (more about this in [Chapter 6](#prog_r)).
+The base installation of R comes with many functions already defined or you can increase the power of R by installing one of the 10,000's of [packages](#sec-packages) now available.
+Once you get a bit more experience with using R you may want to define your own functions to perform tasks that are specific to your goals (more about this in @sec-prog_r).
 
 
 The first function we will learn about is the `c()` function.
-The `c()` function is short for concatenate and we use it to join together a series of values and store them in a data structure called a [**vector**][vector] (more on vectors in [Chapter 3](#data_r)).
+The `c()` function is short for concatenate and we use it to join together a series of values and store them in a data structure called a [**vector**][vector] (more on vectors in @sec-data_r).
 
 ```{r}
 #| echo: true
@@ -267,7 +267,7 @@ Secondly, the argument(s) of a function are placed inside the round brackets and
 You can think of an argument as way of customising the use or behaviour of a function.
 In the example above, the arguments are the numbers we want to concatenate.
 Finally, one of the tricky things when you first start using R is to know which function to use for a particular task and how to use it.
-Thankfully each function will always have a help document associated with it which will explain how to use the function (more on this [later](#help)) and a quick Google search will also usually help you out.
+Thankfully each function will always have a help document associated with it which will explain how to use the function (more on this later @sec-help) and a quick web search will also usually help you out.
 
 To examine the value of our new object we can simply type out the name of the object as we did before
 
@@ -389,10 +389,10 @@ my_seq7
 ```
 
 
-## Working with vectors {#vectors}
+## Working with vectors {#sec-vectors}
 
 Manipulating, summarising and sorting data using R is an important skill to master but one which many people find a little confusing at first.
-We'll go through a few simple examples here using vectors to illustrate some important concepts but will build on this in much more detail in [Chapter 3](#data_r) where we will look at more complicated (and useful) data structures.
+We'll go through a few simple examples here using vectors to illustrate some important concepts but will build on this in much more detail in @sec-data_r where we will look at more complicated (and useful) data structures.
 
 ### Extracting elements
 
@@ -437,7 +437,7 @@ To extract the values from the 3^rd^ to the 8^th^ elements
 my_vec[3:8]
 ```
 
-#### Logical index {-}
+#### Logical index {#sec-logical-index}
 
 Another really useful way to extract data from a vector is to use a logical expression as an index.
 For example, to extract all elements with a value greater than 4 in the vector `my_vec`
@@ -528,7 +528,7 @@ my_vec[my_vec <= 4] <- 1000
 my_vec
 ```
 
-### Ordering elements {#vec_ord}
+### Ordering elements {#sec-vec_ord}
 
 In addition to extracting particular elements from a vector we can also order the values contained in a vector.
 To sort the values from lowest to highest value we can use the `sort()` function
@@ -643,7 +643,7 @@ my_vec4 <- c(1, 2)
 my_vec2 + my_vec4
 ```
 
-### Missing data {#na_vals}
+### Missing data {#sec-na_vals}
 
 In R, missing data is usually represented by an `NA` symbol meaning 'Not Available'.
 Data may be missing for a whole bunch of reasons, maybe your machine broke down, maybe you broke down, maybe the weather was too bad to collect data on a particular day etc etc.
@@ -669,7 +669,7 @@ mean_temp
 
 If a vector has a missing value then the only possible value to return when calculating a mean is `NA`.
 R doesn't know that you perhaps want to ignore the `NA` values (R can't read your mind - yet!).
-If we look at the help file (using `?mean` - see the [next section](#help) for more details) associated with the `mean()` function we can see there is an argument `na.rm = ` which is set to `FALSE` by default.
+If we look at the help file (using `?mean` - see the next section @sec-help for more details) associated with the `mean()` function we can see there is an argument `na.rm = ` which is set to `FALSE` by default.
 
 > na.rm - a logical value indicating whether NA values should be stripped before the computation proceeds.
 
@@ -687,7 +687,7 @@ The point of the above is to highlight how we can change the default behaviour o
 The problem is that not all functions will have an `na.rm =` argument, they might deal with `NA` values differently.
 However, the good news is that every help file associated with any function will **always** tell you how missing data are handled by default.
 
-## Getting help {#help}
+## Getting help {#sec-help}
 
 This book is intended as a relatively brief introduction to R and as such you will soon be using functions and packages that go beyond this scope of this introductory text.
 Fortunately, one of the strengths of R is its comprehensive and easily accessible help system and wealth of online resources where you can obtain further information.
@@ -803,7 +803,7 @@ This function allows you to access the search engine of the R website <https://w
 RSiteSearch("regression")
 ```
 
-### Other sources of help {#rhelp}
+### Other sources of help {#sec-rhelp}
 
 There really has never been a better time to start learning R.
 There are a plethora of freely available online resources ranging from whole courses to subject specific tutorials and mailing lists.
@@ -856,7 +856,7 @@ Your approach to saving work in R and RStudio depends on what you want to save.
 Most of the time the only thing you will need to save is the R code in your script(s).
 Remember your script is a reproducible record of everything you've done so all you need to do is open up your script in a new RStudio session and source it into the R Console and you're back to where you left off.
 
-Unless you've followed our [suggestion](#rsprojs) about changing the default settings for RStudio Projects you will be asked whether you want to save your workspace image every time you exit RStudio.
+Unless you've followed our suggestion about changing the default settings for RStudio Projects (see @sec-rsprojs) you will be asked whether you want to save your workspace image every time you exit RStudio.
 We suggest that 99.9% of the time that you don't want do this.
 By starting with a clean RStudio session each time we come back to our analysis we can be sure to avoid any potential conflicts with things we've done in previous sessions.
 
@@ -894,7 +894,7 @@ load(file = "name_of_file.RData")
 #| child: _links.md
 ```
 
-## R packages {#packages}
+## R packages {#sec-packages}
 
 The base installation of R comes with many useful packages as standard.
 These packages will contain many of the functions you will use on a daily basis.
@@ -948,7 +948,7 @@ This is how we were able to use the `install()` and `install_github()` functions
 Most of the time we recommend using the `library()` function.
 
 ### Installing R packages
-#### CRAN packages {#cran_packages}
+#### CRAN packages {#sec-cran_packages}
 
 To install a package from CRAN you can use the `install.packages()` function.
 For example if you want to install the `remotes` package enter the following code into the Console window of RStudio (note: you will need a working internet connection to do this)
@@ -1014,7 +1014,7 @@ Again, you can use the `ask = FALSE` argument to avoid having to confirm every p
 #### GitHub packages
 
 There are multiple options for installing packages hosted on GitHub.
-Perhaps the most efficient method is to use the `install_github()` function from the `remotes` :package: package (you installed this package [previously](#cran_packages)).
+Perhaps the most efficient method is to use the `install_github()` function from the `remotes` :package: package (you installed this package previously (@sec-cran_packages)).
 Before you use the function you will need to know the GitHub username of the repository owner and also the name of the repository.
 For example, the development version of `dplyr` :package: from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name 'dplyr' (just search for 'github dplyr').
 To install this version from GitHub use

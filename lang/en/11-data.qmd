@@ -1,6 +1,6 @@
-# Data in R {#data_r}
+# Data in R {#sec-data_r}
 
-Until now, you've created fairly simple data in R and stored it as a [vector](#funcs).
+Until now, you've created fairly simple data in R and stored it as a vector (@sec-funcs).
 However, most (if not all) of you will have much more complicated datasets from your various experiments and surveys that go well beyond what a vector can handle.
 Learning how R deals with different types of data and data structures, how to import your data into R and how to manipulate and summarize your data are some of the most important skills you will need to master.
 
@@ -11,7 +11,7 @@ We will also cover how to import data into R from an external file, how to manip
 
 Understanding the different types of data and how R deals with these data is important.
 The temptation is to glaze over and skip these technical details, but beware, this can come back to bite you somewhere unpleasant if you don't pay attention.
-We've already seen an [example](#r_objs) of this when we tried (and failed) to add two character objects together using the `+` operator.
+We've already seen an example (@sec-r_objs) of this when we tried (and failed) to add two character objects together using the `+` operator.
 
 R has six basic types of data; numeric, integer, logical, complex and character.
 The keen eyed among you will notice we've only listed five data types here, the final data type is raw which we won't cover as it's not useful 99.99% of the time.
@@ -93,10 +93,10 @@ Here's a summary table of some of the logical test and coercion functions availa
 
 Now that you've been introduced to some of the most important classes of data in R, let’s have a look at some of main structures that we have for storing these data.
 
-### Scalars and vectors {#scal_vecs}
+### Scalars and vectors {#sec-scal_vecs}
 
 Perhaps the simplest type of data structure is the vector.
-You've already been introduced to vectors in [Chapter 2](#funcs) although some of the vectors you created only contained a single value.
+You've already been introduced to vectors in @sec-funcs although some of the vectors you created only contained a single value.
 Vectors that have a single value (length 1) are called scalars.
 Vectors can contain numbers, characters, factors or logicals, but the key thing to remember is that all the elements inside a vector must be of the same class.
 In other words, vectors can contain either numbers, characters or logicals but not mixtures of these types of data.
@@ -111,7 +111,7 @@ There is one important exception to this, you can include `NA` (remember this is
 knitr::include_graphics(path = "images/scal_vec.png")
 ```
 
-### Matrices and arrays {#mat_array}
+### Matrices and arrays {#sec-mat_array}
 
 Another useful data structure used in many disciplines such as population ecology, theoretical and applied statistics is the matrix.
 A matrix is simply a vector that has additional attributes called dimensions.
@@ -191,12 +191,12 @@ mat.1 * mat.2			# element by element products
 mat.1 %*% mat.2			# matrix multiplication
 ```
 
-### Lists {#lists}
+### Lists {#sec-lists}
 
 The next data structure we will quickly take a look at is a list.
 Whilst vectors and matrices are constrained to contain data of the same type, lists are able to store mixtures of data types.
 In fact we can even store other data structures such as vectors and arrays within a list or even have a list of a list.
-This makes for a very flexible data structure which is ideal for storing irregular or non-rectangular data (see [Chapter 7](#prog_r) for an example).
+This makes for a very flexible data structure which is ideal for storing irregular or non-rectangular data (see @sec-prog_r for an example).
 
 To create a list we can use the `list()` function.
 Note how each of the three list elements are of different classes (character, logical, and numeric) and are of different lengths.
@@ -230,7 +230,7 @@ names(list_1) <- c("colours", "evaluation", "time")
 list_1
 ```
 
-### Data frames {#df}
+### Data frames {#sec-df}
 
 By far the most commonly used data structure to store data in is the data frame.
 A data frame is a powerful two-dimensional object made up of rows and columns which looks superficially very similar to a matrix.
@@ -311,7 +311,7 @@ str(dataf)
 The `str()` function gives us the data frame dimensions and also reminds us that `dataf` is a `data.frame` type object.
 It also lists all of the variables (columns) contained in the data frame, tells us what type of data the variables contain and prints out the first five values.
 We often copy this summary and place it in our R scripts with comments at the beginning of each line so we can easily refer back to it whilst writing our code.
-We showed you how to comment blocks in RStudio [here](#proj_doc).
+We showed you how to comment blocks in RStudio @sec-proj_doc.
 
 Also notice that R has automatically decided that our `p.names` variable should be a character (`chr`) class variable when we first created the data frame.
 Whether this is a good idea or not will depend on how you want to use this variable in later analysis.
@@ -390,7 +390,7 @@ The resulting file will annoyingly have a '.csv' extension even though we've sav
 Either live with it or rename the file with a '.txt' extension instead.
 
 In MS Excel, select `File` -> `Save as ...` from the main menu and navigate to the folder where you want to save the file.
-Enter the file name (keep it fairly short, [no spaces](#file_names)!) in the 'Save as:' dialogue box.
+Enter the file name (keep it fairly short without spaces (@sec-file_names)!) in the 'Save as:' dialogue box.
 In the 'File format:' dialogue box click on the down arrow to open the drop down menu and select 'Text (Tab delimited)' as your file type.
 Select OK to save the file.
 
@@ -412,13 +412,13 @@ replace `shoot height` with `shoot_height` or `shoot.height`) and avoid using sp
 Remember, if you have missing data in your data frame (empty cells) you should use an `NA` to represent these missing values.
 This will keep the data frame tidy.
 
-### Import functions {#import_fnc}
+### Import functions {#sec-import_fnc}
 
 Once you've saved your data file in a suitable format we can now read this file into R.
 The workhorse function for importing data into R is the `read.table()` function (we discuss some alternatives later in the chapter).
 The `read.table()` function is a very flexible function with a shed load of arguments (see `?read.table`) but it's quite simple to use.
-Let's import a tab delimited file called `flower.txt` which contains the data we saw previously in this [Chapter](#df) and assign it to an object called `flowers`.
-The file is located in a `data` directory which itself is located in our [root directory](#dir_struct).
+Let's import a tab delimited file called `flower.txt` which contains the data we saw previously in this Chapter (@sec-df) and assign it to an object called `flowers`.
+The file is located in a `data` directory which itself is located in our root directory (@sec-dir_struct).
 The first row of the data contains the variable (column) names.
 To use the `read.table()` function to import this file
 
@@ -538,7 +538,7 @@ The first is that you've made a mistake in the spelling of either the filename o
 Another common mistake is that you have forgotten to include the file extension in the filename (i.e.
 `.txt`).
 Lastly, the file is not where you say it is or you've used an incorrect file path.
-Using RStudio [Projects](#rsprojs) and having a logical [directory structure](#dir_struct) goes a long way to avoiding these types of errors.
+Using RStudio Projects (@sec-rsprojs) and having a logical directory structure (@sec-dir_struct) goes a long way to avoiding these types of errors.
 
 Another really common mistake is to forget to include the `header = TRUE` argument when the first row of the data contains variable names.
 For example, if we omit this argument when we import our `flowers.txt` file everything looks OK at first (no error message at least)
@@ -560,9 +560,9 @@ str(flowers_bad)
 We can see an obvious problem, all of our variables have been imported as factors and our variables are named `V1`, `V2`, `V3` ...
 `V8`.
 The problem happens because we haven't told the `read.table()` function that the first row contains the variable names and so it treats them as data.
-As soon as we have a single character string in any of our data vectors, R treats the vectors as character type data (remember all elements in a vector must contain the [same type of data](#scal_vecs)).
+As soon as we have a single character string in any of our data vectors, R treats the vectors as character type data (remember all elements in a vector must contain the same type of data (@sec-scal_vecs)).
 
-### Other import options {#import_other}
+### Other import options {#sec-import_other}
 
 There are numerous other functions to import data from a variety of sources and formats.
 Most of these functions are contained in packages that you will need to install before using them.
@@ -658,7 +658,7 @@ mean(flowers$height)
 summary(flowers$height)
 ```
 
-Just as we did with [vectors](#vectors), we also can access data in data frames using the square bracket `[ ]` notation.
+Just as we did with vectors (@sec-vectors), we also can access data in data frames using the square bracket `[ ]` notation.
 However, instead of just using a single index, we now need to use two indexes, one to specify the rows and one for the columns.
 To do this, we can use the notation `my_data[rows, columns]` where `rows` and `columns` are indexes and `my_data` is the name of the data frame.
 Again, just like with our vectors our indexes can be positional or the result of a logical test.
@@ -696,7 +696,7 @@ flowers[c(1, 5, 12, 30), c(1, 3, 6, 8)]
 ```
 
 All we are doing in the two examples above is creating vectors of positions for the rows and columns that we want to extract.
-We have done this by using the skills we developed in [Chapter 2](#funcs) when we generated vectors using the `c()` function or using the `:` notation.
+We have done this by using the skills we developed in @sec-funcs when we generated vectors using the `c()` function or using the `:` notation.
 
 But what if we want to extract either all of the rows or all of the columns? It would be extremely tedious to have to generate vectors for all rows or for all columns.
 Thankfully R has a shortcut.
@@ -763,7 +763,7 @@ We often use this method in preference to the positional index for selecting col
 ### Logical indexes
 
 Just as we did with vectors, we can also extract data from our data frame based on a logical test.
-We can use all of the logical operators that we used for our vector examples so if these have slipped your mind maybe [pop back](#Logical-index) and refresh your memory.
+We can use all of the logical operators that we used for our vector examples so if these have slipped your mind maybe have a look at @sec-logical-index and refresh your memory.
  Let's extract all rows where `height` is greater than 12 and extract all columns by default (remember, if you don't include a column index after the comma it means all columns).
 
 ```{r }
@@ -914,7 +914,7 @@ tipplants
 
 ### Ordering data frames
 
-Remember when we used the function `order()` to order one vector based on the order of another vector (way back in [Chapter 2](#vec_ord)).
+Remember when we used the function `order()` to order one vector based on the order of another vector (way back in @sec-vec_ord).
 This comes in very handy if you want to reorder rows in your data frame.
 For example, if we want all of the rows in the data frame `flowers` to be ordered in ascending value of `height` and output all columns by default.
 If you're reading this section of the book on the web you can scroll down in the output panels to see the entire ordered data frame.
@@ -1242,7 +1242,7 @@ taxa_zone <- merge(x = taxa, y = zone, by.x = c("species", "GENUS"),
 taxa_zone
 ```
 
-### Reshaping data frames {#reshape}
+### Reshaping data frames {#sec-reshape}
 
 Reshaping data into different formats is a common task.
 With rectangular type data (data frames have the same number of rows in each column) there are two main data frame shapes that you will come across: the 'long' format (sometimes called stacked) and the 'wide' format.
@@ -1422,7 +1422,7 @@ To do this we will use the `mean()` function and apply this to the `height` vari
 tapply(flowers$height, flowers$nitrogen, mean)
 ```
 
-The `tapply()` function is not just restricted to calculating mean values, you can use it to apply many of the functions that come with R or even functions you've written yourself (see [Chapter 7](#prog_r) for more details).
+The `tapply()` function is not just restricted to calculating mean values, you can use it to apply many of the functions that come with R or even functions you've written yourself (see @sec-prog_r for more details).
 For example, we can apply the `sd()` function to calculate the standard deviation for each level of `nitrogen` or even the `summary()` function.
 
 ```{r }
@@ -1433,7 +1433,7 @@ tapply(flowers$height, flowers$nitrogen, summary)
 ```
 
 Note, if the variable you want to summarise contains missing values (`NA`) you will also need to include an argument specifying how you want the function to deal with the `NA` values.
-We saw an example if this in [Chapter 2](#na_vals) where the `mean()` function returned an `NA` when we had missing data.
+We saw an example if this in @sec-na_vals where the `mean()` function returned an `NA` when we had missing data.
 To include the `na.rm = TRUE` argument we simply add this as another argument when using `tapply()`.
 
 ```{r }
@@ -1599,7 +1599,7 @@ write.csv(flowers_df2, file = 'data/flowers_04_12.csv', row.names = FALSE)
 ### Other export functions
 
 As with importing data files into R, there are also many alternative functions for exporting data to external files beyond the `write.table()` function.
-If you followed the ['Other import functions'](#import_other) section of this Chapter you will already have the required packages installed.
+If you followed the 'Other import functions' @sec-import_other of this Chapter you will already have the required packages installed.
 
 The `fwrite()` function from the `read.table` package is very efficient at exporting large data objects and is much faster than the `write.table()` function.
 It's also quite simple to use as it has most of the same arguments as `write.table()`.

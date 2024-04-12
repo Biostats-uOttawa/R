@@ -1,10 +1,10 @@
-# Installing R Markdown and LateX  {#install-rm}
+# Installing R Markdown and LateX  {#sec-install-rm}
 
 Installing R markdown on your computer is pretty straight forward and should be painless.
 If you're getting started with R markdown we suggest that you use RStudio but of course RStudio is not required and there are other options available.
 You will also need to install some additional software if you want to render your R markdown documents to PDF format.
 
-This guide assumes you have already installed [R][r-proj] and an IDE ([RStudio IDE][rstudio] or [VSCode][vscode].
+This guide assumes you have already installed [R][r-proj] and an IDE ([RStudio IDE][rstudio] or [VSCode][vscode]).
 An IDE is not required but recommended, because it makes it easier to work with R Markdown.
 If you don't have RStudio IDE installed, you will also have to install [Pandoc][pandoc].
 If you have RStudio installed there is no need to install Pandoc separately because it's bundled with RStudio.

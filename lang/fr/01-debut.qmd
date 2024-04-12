@@ -1,4 +1,4 @@
-# Pour commencer {#chap1}
+# Pour commencer {#sec-chap1}
 
 Bien que R ne soit pas nouveau, sa popularité a augmenté rapidement depuis une dizaine d'années (voir [ici][r4stats] pour des données intéressantes).
 Il a été créé et développé à l'origine par Ross Ihaka et Robert Gentleman au cours des années 1990 et la première version stable a été publiée en 2000.
@@ -17,7 +17,7 @@ Cependant, à notre avis, la plus grande raison d'utiliser R est qu'il facilite 
 Contrairement aux logiciels plus traditionnels de type "pointer et cliquer", écrire du code te permet d'avoir un enregistrement permanent et précis de toutes les méthodes que tu as utilisées (et des décisions que tu as prises) pour l'analyse de tes données.
 Tu peux ensuite partager ce code (et tes données) avec d'autres chercheurs / collègues / réviseurs de revues qui pourront reproduire ton analyse à l'identique.
 C'est l'un des principes de la [science ouverte][open-sci].
-Nous aborderons d'autres sujets pour faciliter la science ouverte tout au long de ce livre, notamment la création de [rapports reproductibles](#rmarkdown_r) et [contrôle des versions](#github_r).
+Nous aborderons d'autres sujets pour faciliter la science ouverte tout au long de ce livre, notamment la création de rapports reproductibles (@sec-rmarkdown_r) et contrôle des versions (@sec-github_r).
 
 Dans ce chapitre, nous aborderons :
 
@@ -48,7 +48,7 @@ Bonne chance et n'oublie pas de t'amuser.
 
 ## Installation
 
-### Installer R {#install_r}
+### Installer R {#sec-install_r}
 
 Pour être opérationnel, la première chose à faire est d'installer R.
 R est disponible gratuitement pour les systèmes d'exploitation Windows, Mac et Linux à partir du [site Web du Comprehensive R Archive Network (C]RAN)     [CRAN].
@@ -78,7 +78,7 @@ Une alternative à RStudio est Visual Studio Code, ou [VSCode][vscode].
 Un IDE peut être considéré comme un complément à R qui fournit une interface plus conviviale, incorporant la console R, un éditeur de scripts et d'autres fonctionnalités utiles (comme R markdown et l'intégration de Git Hub).
 
 ::: {.callout-caution}
-Tu dois installer R avant d'installer un IDE (voir [section précédente](#install_r) pour plus de détails).
+Tu dois installer R avant d'installer un IDE (voir @sec-install_r pour plus de détails).
 :::
 
 :::{.callout-note}
@@ -131,9 +131,9 @@ Ces environnements sont plus puissants que de simples éditeurs de texte, et son
 - [RKWard][rkward] (Linux)
 - [Tinn-R][tinn-r] (Windows)
 
-## Orientation de l'IDE {#orient}
+## Orientation de l'IDE {#sec-orient}
 
-### RStudio{#rstudio_orient}
+### RStudio{#sec-rstudio_orient}
 
 Lorsque tu ouvres R studio pour la première fois, tu devrais voir la présentation suivante (elle peut être légèrement différente sur un ordinateur Windows).
 
@@ -152,7 +152,7 @@ Tu peux personnaliser l'emplacement de chaque volet en cliquant sur le menu "Out
 Tu peux redimensionner les volets en cliquant sur le milieu des bords de la fenêtre et en le faisant glisser dans la direction souhaitée.
 Il existe une multitude d'autres façons de [personnaliser][rstudio-cutomise] RStudio.
 
-#### Console {#cons}
+#### Console {#sec-cons}
 
 La console est le cheval de bataille de R.
 C'est là que R évalue tout le code que tu écris.
@@ -220,7 +220,7 @@ Tu peux accéder à chaque composant en cliquant sur l'onglet approprié dans le
   Les objets peuvent être affichés sous forme de liste ou de grille en sélectionnant ton choix dans le bouton déroulant situé en haut à droite de la fenêtre.
   Si tu es dans le format Grille, tu peux supprimer des objets de l'environnement en cochant la case vide à côté du nom de l'objet, puis en cliquant sur l'icône du balai.
   Il existe également un bouton "Importer un ensemble de données" qui permet d'importer des données sauvegardées dans différents formats de fichiers.
-  Cependant, nous te conseillons de ne pas utiliser cette approche pour importer tes données car elle n'est pas reproductible et donc pas robuste (voir [Chapitre 3](#data_r) pour plus de détails).
+  Cependant, nous te conseillons de ne pas utiliser cette approche pour importer tes données car elle n'est pas reproductible et donc pas robuste (voir @sec-data_r pour plus de détails).
 
 - L'onglet 'Historique' contient une liste de toutes les commandes que tu as entrées dans la console R.
   Tu peux rechercher dans ton historique la ligne de code que tu as oubliée, renvoyer le code sélectionné dans la Console ou la fenêtre Source.
@@ -237,17 +237,17 @@ Tu peux accéder à chaque composant en cliquant sur l'onglet approprié dans le
 - L'onglet 'Tracés' est l'endroit où tous les tracés que tu as créés dans R sont affichés (à moins que tu ne dises le contraire à R).
   Tu peux "zoomer" sur les tracés pour les agrandir à l'aide du bouton de la loupe, et faire défiler les tracés créés précédemment à l'aide des boutons fléchés.
   Il est également possible d'exporter les tracés vers un fichier externe à l'aide du menu déroulant "Exporter".
-  Les tracés peuvent être exportés dans différents formats de fichiers tels que jpeg, png, pdf, tiff ou copiés dans le presse-papiers (bien qu'il soit probablement préférable d'utiliser les fonctions R appropriées pour ce faire - voir [Chapitre 4](#graphics_r) pour plus de détails).
+  Les tracés peuvent être exportés dans différents formats de fichiers tels que jpeg, png, pdf, tiff ou copiés dans le presse-papiers (bien qu'il soit probablement préférable d'utiliser les fonctions R appropriées pour ce faire - voir @sec-graphics_r pour plus de détails).
 
 - L'onglet 'Paquets' répertorie tous les paquets que tu as installés sur ton ordinateur.
   Tu peux également installer de nouveaux paquets et mettre à jour les paquets existants en cliquant respectivement sur les boutons 'Installer' et 'Mettre à jour'.
 
 - L'onglet 'Aide' affiche la documentation d'aide R pour n'importe quelle fonction.
-  Nous verrons comment afficher les fichiers d'aide et comment rechercher de l'aide dans la section [Chapitre 2](#basics_r).
+  Nous verrons comment afficher les fichiers d'aide et comment rechercher de l'aide dans le @sec-basics_r.
 
 - L'onglet 'Visionneuse' affiche le contenu web local tel que les graphiques web générés par certains paquets.
 
-### VSCode{#vscode_orient}
+### VSCode{#sec-vscode_orient}
 
 ```{r}
 #| echo: false
@@ -305,7 +305,7 @@ Il peut être divisé et exécuter plusieurs sessions en même temps.
 knitr::include_graphics(path = "images/ch-01/vs_term_panel.png")
 ```
 
-## Paquets R {#packages}
+## Paquets R {#sec-packages}
 
 L'installation de base de R est livrée en standard avec de nombreux paquets utiles.
 Ces paquets contiennent de nombreuses fonctions que tu utiliseras au quotidien.
@@ -319,7 +319,7 @@ GitHub est un site Web qui héberge des dépôts git pour toutes sortes de logic
 Souvent, les versions de développement de pointe des paquets R sont hébergées sur GitHub, donc si tu as besoin de toutes les nouvelles cloches et sifflets, cela peut être une option.
 Cependant, l'inconvénient potentiel de l'utilisation de la version de développement d'un paquetage R est qu'elle peut ne pas être aussi stable que la version hébergée sur CRAN (elle est en cours de développement !) et que la mise à jour des paquets n'est pas automatique.
 
-### Paquets CRAN {#cran_packages}
+### Paquets CRAN {#sec-cran_packages}
 
 Pour installer un paquet à partir du CRAN, tu peux utiliser la commande `install.packages()` fonction.
 Par exemple, si tu veux installer le paquet `remotes` entre le code suivant dans la fenêtre Console de RStudio (note : tu auras besoin d'une connexion internet pour faire cela)
@@ -385,7 +385,7 @@ Encore une fois, tu peux utiliser la fonction `ask = FALSE` pour éviter d'avoir
 ### Paquets GitHub
 
 Il existe de multiples options pour installer des paquets hébergés sur GitHub.
-La méthode la plus efficace est sans doute d'utiliser la fonction `install_github()` de la fonction `remotes` :package: (tu as installé ce paquet [précédemment](#cran_packages)).
+La méthode la plus efficace est sans doute d'utiliser la fonction `install_github()` de la fonction `remotes` :package: (tu as installé ce paquet précédemment, @sec-cran_packages).
 Avant d'utiliser la fonction, tu devras connaître le nom d'utilisateur GitHub du propriétaire du dépôt ainsi que le nom du dépôt.
 Par exemple, la version de développement de `dplyr` :package: de Hadley Wickham est hébergée sur le compte GitHub de tidyverse et porte le nom de dépôt " dplyr " (il suffit de taper " github dplyr " sur Google).
 Pour installer cette version depuis GitHub, utilise
@@ -437,7 +437,7 @@ remotes::install_github("tidyverse/dplyr")
 C'est ainsi que nous avons pu utiliser le `install()` et `install_github()`fonctions [ci-dessus][Paquets Bioconductor] sans charger les paquets au préalable`BiocManager` :package:  et `remotes` :package: .
 La plupart du temps, nous recommandons d'utiliser le `library()` fonction.
 
-## Répertoires de travail {#work-d}
+## Répertoires de travail {#sec-work-d}
 
 Le répertoire de travail est l'emplacement par défaut où R cherchera les fichiers que tu veux charger et où il mettra les fichiers que tu enregistres.
 L'un des avantages de l'utilisation des projets RStudio est que lorsque tu ouvres un projet, il définit automatiquement ton répertoire de travail à l'emplacement approprié.
@@ -467,8 +467,8 @@ Les IDE résolvent ce problème en te permettant d'utiliser *relatif* qui sont r
 Le répertoire du projet racine est simplement le répertoire qui contient le fichier `.Rproj` dans Rstudio (`first_project.Rproj` dans notre cas) ou le dossier de base de ton espace de travail dans VScode.
 Si tu veux partager ton analyse avec quelqu'un d'autre, il te suffit de copier l'ensemble du répertoire du projet et de l'envoyer à ton à ton collaborateur.
 Il lui suffira alors d'ouvrir le fichier du projet et tous les scripts R qui contiennent des références à des chemins de fichiers relatifs fonctionneront tout simplement.
-Par exemple, disons que tu as créé un sous-répertoire appelé `data` dans ton répertoire de projet racine qui contient un fichier délimité en csv appelé `mydata.csv` (nous aborderons les structures de répertoire [ci-dessous](#dir_struct)).
-Pour importer cette base de données dans un projet RStudio à l'aide de la fonction `read.csv()` (ne t'inquiète pas pour l'instant, nous aborderons ce sujet de façon beaucoup plus détaillée dans la section [chapitre 3](#data_r)), tout ce que tu dois inclure dans ton script R est
+Par exemple, disons que tu as créé un sous-répertoire appelé `data` dans ton répertoire de projet racine qui contient un fichier délimité en csv appelé `mydata.csv` (nous aborderons les structures de répertoire ci-dessous (@sec-dir_struct)).
+Pour importer cette base de données dans un projet RStudio à l'aide de la fonction `read.csv()` (ne t'inquiète pas pour l'instant, nous aborderons ce sujet de façon beaucoup plus détaillée dans le @sec-data_r), tout ce que tu dois inclure dans ton script R est
 
 ```{r}
 #| label: rel-fp1
@@ -512,7 +512,7 @@ dat <- read.csv(here("data", "mydata.csv"))
 
 ```
 
-## Structure du répertoire {#dir_struct}
+## Structure du répertoire {#sec-dir_struct}
 
 En plus d'utiliser RStudio Projects, c'est aussi une très bonne pratique de structurer ton répertoire de travail d'une manière cohérente et logique pour t'aider et aider tes collaborateurs.
 Nous utilisons fréquemment la structure de répertoire suivante dans nos projets basés sur R.
@@ -627,7 +627,7 @@ Une autre approche consiste à utiliser la fonction `dir.create()` de la console
 dir.create("data")
 ```
 
-## Organisation des projets {#rsprojs}
+## Organisation des projets {#sec-rsprojs}
 
 Comme pour la plupart des choses dans la vie, lorsqu'il s'agit de traiter des données et de les analyser, les choses sont tellement plus simples si tu es organisé.
 Une organisation claire du projet permet à la fois à toi (et surtout au futur toi) et à tes collaborateurs de donner un sens à ce que tu as fait.
@@ -648,7 +648,7 @@ Cela signifie que tu peux très facilement passer d'une analyse à l'autre.
 ### RStudio
 
 Pour créer un projet, ouvre RStudio et sélectionne `File` -> `New Project...` dans le menu.
-Tu peux créer soit un tout nouveau projet, soit un projet à partir d'un répertoire existant, soit un projet à version contrôlée (voir la rubrique [Chapitre GitHub](#github_r) pour plus de détails à ce sujet).
+Tu peux créer soit un tout nouveau projet, soit un projet à partir d'un répertoire existant, soit un projet à version contrôlée (voir @sec-github_r pour plus de détails à ce sujet).
 Dans ce chapitre, nous allons créer un projet dans un nouveau répertoire.
 
 ```{r}
@@ -718,7 +718,7 @@ L'inconvénient de cette méthode est que tu devras réexécuter ton code R à c
 knitr::include_graphics(path = "images/ch-01/new_proj5.png")
 ```
 
-Maintenant que tu as mis en place un projet RStudio, tu peux commencer à créer des scripts R (ou [R markdown](#rmarkdown_r) ) ou tout ce dont tu as besoin pour compléter ton projet.
+Maintenant que tu as mis en place un projet RStudio, tu peux commencer à créer des scripts R (ou R markdown/ Quarto, @sec-rmarkdown_r) ou tout ce dont tu as besoin pour compléter ton projet.
 Tous les scripts R seront maintenant contenus dans le projet RStudio et enregistrés dans le dossier du projet.
 
 ### VSCode
@@ -726,7 +726,7 @@ Tous les scripts R seront maintenant contenus dans le projet RStudio et enregist
 sont similaires aux projets RStudio.
 Tu dois cependant créer un nouveau dossier avec un fichier R (ou un fichier texte) et l'enregistrer en tant qu'espace de travail.
 
-## Noms des fichiers {#file_names}
+## Noms des fichiers {#sec-file_names}
 
 Le nom que tu donnes à tes fichiers a plus d'importance que tu ne le penses.
 Nommer les fichiers est également plus difficile que tu ne le penses.
@@ -767,15 +767,14 @@ Bien qu'il n'y ait pas vraiment d'approche standard reconnue pour nommer les fic
 Quelle que soit la convention de dénomination des fichiers que tu décides d'utiliser, essaie de l'adopter rapidement, de t'y tenir et d'être cohérent.
 Tu nous remercieras !
 
-## Documentation sur les scripts {#proj_doc}
+## Documentation sur les scripts {#sec-proj_doc}
 
 Un petit mot ou deux sur l'écriture du code R et la création de scripts R.
 À moins que tu ne fasses quelque chose de vraiment rapide et sale, nous te suggérons de toujours écrire ton code R sous la forme d'un script R.
 Les scripts R sont ce qui rend R si utile.
 Non seulement tu as un enregistrement complet de ton analyse, de la manipulation des données à la visualisation et à l'analyse statistique, mais tu peux aussi partager ce code (et ces données) avec tes amis, tes collègues et, surtout, lorsque tu soumets et publies tes recherches dans une revue.
 Dans cette optique, assure-toi d'inclure dans ton script R toutes les informations nécessaires pour rendre ton travail reproductible (noms des auteurs, dates, plan d'échantillonnage, etc).
-Ces informations peuvent être incluses sous la forme d'une série de commentaires `#` ou, mieux encore, en mélangeant le code exécutable et la narration dans un script R.
-[R markdown](#rmarkdown_r) R.
+Ces informations peuvent être incluses sous la forme d'une série de commentaires `#` ou, mieux encore, en mélangeant le code exécutable et la narration dans un script R  markdown (@sec-rmarkdown_r).
 C'est aussi une bonne pratique d'inclure la sortie de la fonction `sessionInfo()` à la fin de tout script qui imprime la version de R, les détails du système d'exploitation et les paquets chargés.
 Une très bonne alternative consiste à utiliser la fonction `session_info()` de la fonction `xfun` :package: pour obtenir un résumé plus concis de l'environnement de notre session.
 
@@ -891,8 +890,7 @@ Alors que ces services sont plutôt bons pour stocker des fichiers, ils ne sont 
 Pour trouver les versions précédentes des fichiers, il faut souvent passer un temps fou à parcourir plusieurs fichiers nommés *'final.doc'*, *'final_v2.doc'* et *'final_usethisone.doc'* etc.
 jusqu'à ce que tu trouves celui que tu cherches.
 Le meilleur moyen que nous connaissons pour à la fois sauvegarder les fichiers et gérer les différentes versions des fichiers est d'utiliser Git et GitHub.
-Pour en savoir plus sur la façon dont tu peux utiliser RStudio, Git et GitHub ensemble, consulte la page Git et GitHub.
-[Chapitre](#github_r).
+Pour en savoir plus sur la façon dont tu peux utiliser RStudio, Git et GitHub ensemble, consulte le @sec-github_r.
 
 ## Citation de R
 

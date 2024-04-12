@@ -1,4 +1,4 @@
-# Graphics with R {#graphics_r}
+# Graphics with R {#sec-graphics_r}
 
 <!-- need to
 add info about ggplot
@@ -59,10 +59,10 @@ With that in mind, let's get started making some figures.
 ## Simple base R plots
 
 There are many functions in R to produce plots ranging from the very basic to the highly complex.
-It's impossible to cover every aspect of producing graphics in R in this book so we'll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in this [Chapter](#custom_plot).
+It's impossible to cover every aspect of producing graphics in R in this book so we'll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in @sec-custom_plot.
 
 The most common high level function used to produce plots in R is (rather unsurprisingly) the `plot()` function.
-For example, let's plot the `weight` of petunia plants from our `flowers` data frame which we imported in [Chapter 3](#import_fnc).
+For example, let's plot the `weight` of petunia plants from our `flowers` data frame which we imported in @sec-import_fnc.
 
 ```{r}
 #| label: plot1
@@ -127,10 +127,10 @@ Both of these two approaches are equivalent so we suggest that you just choose t
 
 You can also specify the type of graph you wish to plot using the argument `type =`.
 You can plot just the points (`type = "p"`, this is the default), just lines (`type = "l"`), both points and lines connected (`type = "b"`), both points and lines with the lines running through the points (`type = "o"`) and empty points joined by lines (`type = "c"`).
-For example, let's use our skills from [Chapter 2](#funcs) to generate two vectors of numbers (`my_x` and `my_y`) and then plot one against the other using different `type =` values to see what type of plots are produced.
+For example, let's use our skills from @sec-funcs to generate two vectors of numbers (`my_x` and `my_y`) and then plot one against the other using different `type =` values to see what type of plots are produced.
 Don't worry about the `par(mfrow = c(2, 2))` line of code yet.
 We're just using this to split the plotting device so we can fit all four plots on the same device to save some space.
-See [later](#mult_graphs) in the Chapter for more details about this.
+See @sec-mult_graphs in the Chapter for more details about this.
 The top left plot is `type = "l"`, the top right `type = "b"`, bottom left `type = "o"` and bottom right is `type = "c"`.
  
 
@@ -151,9 +151,9 @@ plot(my_x, my_y, type = "c")
 
 Admittedly the plots we've produced so far don't look anything particularly special.
 However, the `plot()` function is incredibly versatile and can generate a large range of plots which you can customise to your own taste.
-We'll cover how to customise plots [later](#custom_plot) in the Chapter.
+We'll cover how to customise ggplots in @sec-custom_plot.
 As a quick aside, the `plot()` function is also what's known as a generic function which means it can change its default behaviour depending on the type of object used as an argument.
-You will see an example of this in [Chapter 5](#simple_lm) where we use the `plot()` function to generate diagnostic plots of residuals from a linear model object (bet you can't wait!).
+You will see an example of this in @sec-simple_lm where we use the `plot()` function to generate diagnostic plots of residuals from a linear model object (bet you can't wait!).
 
 
 ## ggplot2
@@ -367,7 +367,7 @@ The distance between the upper and lower quartiles is known as the inter quartil
 The dotted vertical lines are called the whiskers and their length is determined as 1.5 x the inter quartile range.
 Data points that are plotted outside the the whiskers represent potential unusual observations.
 This doesn't mean they are unusual, just that they warrant a closer look.
-We recommend using boxplots in combination with Cleveland dotplots to identify potential unusual observations (see the [next](#dotcharts) section of this Chapter for more details).
+We recommend using boxplots in combination with Cleveland dotplots to identify potential unusual observations (see the @sec-dotcharts for more details).
 The neat thing about boxplots is that they not only provide a measure of central tendency (the median value) they also give you an idea about the distribution of the data.
 If the median line is more or less in the middle of the box (between the upper and lower quartiles) and the whiskers are more or less the same length then you can be reasonably sure the distribution of your data is symmetrical.
   
@@ -486,7 +486,7 @@ ggplot(flowers, aes(y = weight, x = nitrogen)) +
   labs(y = "Weight (g)", x = "Nitrogen Concentration")
 ```
 
-### Dot charts {#dotcharts}
+### Dot charts {#sec-dotcharts}
 
 Identifying unusual observations (aka outliers) in numeric variables is extremely important as they may influence parameter estimates in your statistical model or indicate an error in your data.
 A really useful (if undervalued) plot to help identify outliers is the Cleveland dotplot.
@@ -692,6 +692,6 @@ Which one you use is entirely up to you (that's the beauty of using R, you get t
 In the next section we cover how to customise your base R plots to get them to look exactly how you want.
 
 
-## Customising plots {#custom_plot}
+## Customising plots {#sec-custom_plot}
 
 **Went for walk to be edited**

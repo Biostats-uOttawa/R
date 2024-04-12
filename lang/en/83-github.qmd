@@ -1,14 +1,14 @@
-# Version control with Git and GitHub {#github_r}
+# Version control with Git and GitHub {#sec-github_r}
 
 This Chapter will introduce you to the basics of using a version control system to keep track of all your important R code and facilitate collaboration with colleagues and the wider world.
 This Chapter will focus on using the software 'Git' in combination with the web-based hosting service 'GitHub'.
 By the end of the Chapter, you will be able to install and configure Git and GitHub on your computer and setup and work with a version controlled project in RStudio.
-We won't be covering more advanced topics such as branching, forking and pull requests in much detail but we do give an overview [later](#collab) on in the Chapter.
+We won't be covering more advanced topics such as branching, forking and pull requests in much detail but we do give an overview later in @sec-collab.
 
 Just a few notes of caution.
 In this Chapter we'll be using RStudio to interface with Git as it gives you a nice friendly graphical user interface which generally makes life a little bit easier (and who doesn't want that?).
 However, one downside to using RStudio with Git is that RStudio only provides pretty basic Git functionality through its menu system.
-That's fine for most of what we'll be doing during this Chapter (although we will introduce a few Git commands as we go along) but if you really want to benefit from using Git's power you will need to [learn](#resources) some Git commands and syntax and change for another IDE such as [VSCode][vscode] which is much much better when it comes to integration with github.
+That's fine for most of what we'll be doing during this Chapter (although we will introduce a few Git commands as we go along) but if you really want to benefit from using Git's power you will need to learn some Git commands (see @sec-resources) and syntax and change for another IDE such as [VSCode][vscode] which is much much better when it comes to integration with github.
 Git can become a little bewildering and frustrating when you first start using it.
 This is mostly due to the terminology and liberal use of jargon associated with Git, but there's no hiding the fact that it's quite easy to get yourself and your Git repository into a pickle.
 Therefore, we've tried hard to keep things as straight forward as we can during this Chapter and as a result we do occasionally show you a couple of very 'un-Git' ways of doing things (mostly about reverting to previous versions of documents).
@@ -84,10 +84,10 @@ knitr::include_graphics(path = "images/Github_cartoon2.png")
 ```
 
 
-## Getting started {#setup_git}
+## Getting started {#sec-setup_git}
 
 This Chapter assumes that you have already installed the latest versions of R and an IDE (RStudio or VSCode).
-If you haven't done this yet you can find instructions [here](#install_r).
+If you haven't done this yet you can find instructions in @sec-install_r.
 
 ### Install Git
 
@@ -134,7 +134,7 @@ For other versions of Linux see [here][git-linux] for further installation instr
  
 
 Whatever version of Git you're installing, once the installation has finished verify that the installation process has been successful by running the command `git --version` in the Terminal tab in RStudio (as described above).
-On some installations of Git (yes we're looking at you MS Windows) this may still produce an error as you will also need to setup RStudio so it can find the Git executable (described [below](#rs_config)).
+On some installations of Git (yes we're looking at you MS Windows) this may still produce an error as you will also need to setup RStudio so it can find the Git executable (described  in @sec-rs_config).
 
 ### Configure Git
 
@@ -160,7 +160,7 @@ git config --global --list
 
 You should see both your `user.name` and `user.email` configured.
 
-### Configure RStudio {#rs_config}
+### Configure RStudio {#sec-rs_config}
 
 As you can see above, Git can be used from the command line, but it also integrates well with RStudio, providing a friendly graphical user interface.
 If you want to use RStudio's Git integration (we recommend you do - at least at the start), you need to check that the path to the Git executable is specified correctly.
@@ -177,7 +177,7 @@ You will need to restart RStudio after doing this.
 knitr::include_graphics(path = "images/git_path.png")
 ```
 
-### Configure VSCode {#vsc_config}
+### Configure VSCode {#sec-vsc_config}
 
 >to develop
 
@@ -210,7 +210,7 @@ We suggest that if you're completely new to Git and GitHub then use Option 1 as 
 Option 2 requires a little more work and therefore there are more opportunities to go wrong.
 We will cover both of these options below.
 
-### Option 1 - GitHub first {#opt1}
+### Option 1 - GitHub first {#sec-opt1}
 
 To use the GitHub first approach you will first need to create a **repository (repo)** on GitHub.
 Go to your [GitHub page][github] and sign in if necessary.
@@ -239,7 +239,7 @@ knitr::include_graphics(path = "images/new_repo_opt.png")
 
 
 Your new GitHub repository will now be created.
-Notice the README has been rendered in GitHub and is in markdown (.md) format (see [Chapter 8](#rmarkdown_r) on R markdown if this doesn't mean anything to you).
+Notice the README has been rendered in GitHub and is in markdown (.md) format (see @sec-rmarkdown_r on R markdown if this doesn't mean anything to you).
 Next click on the green 'Clone or Download' button and copy the `https//...` URL that pops up for later (either highlight it all and copy or click on the copy to clipboard icon to the right).
 
 
@@ -298,7 +298,7 @@ Any changes you make to files in this directory will be version controlled by Gi
 knitr::include_graphics(path = "images/proj_setup3.png")
 ```
 
-### Option 2 - RStudio first {#opt2}
+### Option 2 - RStudio first {#sec-opt2}
 
 An alternative approach is to create a local RStudio project first and then link to a remote Github repository.
 As we mentioned before, this option is more involved than Option 1 so feel free to skip this now and come back later to it if you're interested.
@@ -359,7 +359,7 @@ knitr::include_graphics(path = "images/new_proj_RS3.png")
 
 
 OK, before we go on to create a repository on GitHub we need to do one more thing - we need to place our `second_repo.Rproj` and `.gitignore`files under version control.
-Unfortunately we haven't covered this in detail yet so just follow the next few instructions (blindly!) and we'll revisit them in the [Using Git](#use_git) section of this Chapter.
+Unfortunately we haven't covered this in detail yet so just follow the next few instructions (blindly!) and we'll revisit them in @sec-use_git of this Chapter.
  
 
 To get our two files under version control click on the 'Git' tab which is usually in the top tight pane in RStudio
@@ -470,7 +470,7 @@ knitr::include_graphics(path = "images/new_proj_RS10.png")
 
 
 The last thing we need to do is create and add a **README** file to your repository.
-A README file describes your project and is written using the same Markdown language you learned in the R markdown [Chapter](#rmarkdown_r).
+A README file describes your project and is written using the same Markdown language you learned in @sec-rmarkdown_r.
 A good README file makes it easy for others (or the future you!) to use your code and reproduce your project.
 You can create a README file in RStudio or in GitHub.
 Let's use the second option.
@@ -513,7 +513,7 @@ If the steps above seem like a bit of an ordeal, just remember, you only need to
 
 > to develop
 
-## Using Git with RStudio {#use_git}
+## Using Git with RStudio {#sec-use_git}
 
 Now that we have our project and repositories (both local and remote) set up, it's finally time to learn how to use Git in your IDE!  
 
@@ -560,7 +560,7 @@ knitr::include_graphics(path = "images/first_Rmd0.png")
 ```
 
 
-Create an R markdown document inside this project by clicking on the `File` -> `New File` -> `R markdown` menu (remember from the R markdown [Chapter](#rmarkdown_r)?).
+Create an R markdown document inside this project by clicking on the `File` -> `New File` -> `R markdown` menu (remember @sec-rmarkdown_r?).
  
 
 Once created, we can delete all the example R markdown code (except the YAML header) as usual and write some interesting R markdown text and include a plot.
@@ -812,7 +812,7 @@ The history window is split into two parts.
 The top pane lists every commit you have made in this repository (with associated commit messages) starting with the most recent one at the top and oldest at the bottom.
 You can click on each of these commits and the bottom pane shows you the changes you have made along with a summary of the **Date** the commit was made, **Author** of the commit and the commit message (**Subject**).
 There is also a unique identifier for the commit (**SHA** - Secure Hash Algorithm) and a **Parent** SHA which identifies the previous commit.
-These SHA identifiers are really important as you can use them to view and revert to previous versions of files (details [below](#undo)).
+These SHA identifiers are really important as you can use them to view and revert to previous versions of files (details below @sec-undo).
 You can also view the contents of each file by clicking on the 'View file @ SHA key` link (in our case 'View file @ 2b4693d1').
  
 
@@ -864,7 +864,7 @@ Which will display changes using the usual format of green for additions and red
 knitr::include_graphics(path = "images/c_history5.png")
 ```
 
-### Reverting changes {#undo}
+### Reverting changes {#sec-undo}
 
 One the great things about using Git is that you are able to revert to previous versions of files if you've made a mistake, broke something or just prefer and earlier approach.
 How you do this will depend on whether the changes you want to discard have been staged, committed or pushed to GitHub.
@@ -1050,7 +1050,7 @@ and our repo on GitHub also reflects these changes
 knitr::include_graphics(path = "images/revert10.png")
 ```
 
-## Using Git with VSCode {#use_git_vsc}
+## Using Git with VSCode {#sec-use_git_vsc}
 
 Now that we have our project and repositories (both local and remote) set up, it's finally time to learn how to use Git in VSCode!  
 
@@ -1089,7 +1089,7 @@ OK, let's go through an example to help clarify this workflow.
 ### Reverting changes {-}
 
 
-## Collaborate with Git {#collab}
+## Collaborate with Git {#sec-collab}
 
 GitHub is a great tool for collaboration, it can seem scary and complicated at first, but it is worth investing some time to learn how it works.
 What makes GitHub so good for collaboration is that it is a *distributed system*, which means that every collaborator works on their own copy of the project and changes are then merged together in the remote repository.
@@ -1097,7 +1097,7 @@ There are two main ways you can set up a collaborative project on GitHub.
 One is the workflow we went through above, where everybody connects their local repository to the same remote one; this system works well with small projects where different people mainly work on different aspects of the project but can quickly become unwieldy if many people are collaborating and are working on the same files (merge misery!).
 The second approach consists of every collaborator creating a copy (or **fork**) of the main repository, which becomes their remote repository.
 Every collaborator then needs to send a request (a **pull request**) to the owner of the main repository to incorporate any changes into the main repository and this includes a review process before the changes are integrated.
-More detail of these topics can be found in the [Further resources](#resources) section.
+More detail of these topics can be found in @sec-resources.
 
 ## Git tips
 
@@ -1126,10 +1126,10 @@ For example to ignore all `png` files you can include the expression `*.png` in 
 
 
 If it all goes pear shaped and you end up completely trashing your Git repository don't despair (we've all been there!).
-As long as your GitHub repository is good, all you need to do is delete the offending project directory on your computer, create a new RStudio project and link this with your remote GitHub repository using [Option 2](#opt2).
+As long as your GitHub repository is good, all you need to do is delete the offending project directory on your computer, create a new RStudio project and link this with your remote GitHub repository using Option 2 (-@sec-opt2).
 Once you have cloned the remote repository you should be good to go.
 
-## Further resources {#resources}
+## Further resources {#sec-resources}
 
 There are many good online guides to learn more about git and GitHub and as with any open source software there is a huge community that can be a great resource:
 
