@@ -8,6 +8,8 @@
 ::: {.callout-warning}
 Première version en cours de traduction. 
 Pas encore revue par un humain
+
+Certaine section non encore développée
 :::
 
 ## L'objectif de ce livre {.unnumbered}
@@ -31,7 +33,7 @@ Liste des langues :
 
 ## Comment utiliser ce livre {.unnumbered}
 
-Pour une meilleure expérience, nous te recommandons de lire la version web de ce livre que tu peux trouver à [https://biostats-uottawa.github.io/R](https://biostats-uottawa.github.io/R).
+Pour une meilleure expérience, nous te recommandons de lire la version web de ce livre que tu peux trouver à <https://biostats-uottawa.github.io/R/fr>.
 
 La version web inclut une barre de navigation incluant des options pour faciliter la lecture {{< fa align-left >}}, de recherche {{< fa  search >}}, pour changer la couleur {{< fa toggle-off >}} et pour suggérer des modifications ou reporter des problèmes {{< fa brands github >}}.
 Tu peux aussi télécharger le document {{< fa download >}} au format pdf ou epub.

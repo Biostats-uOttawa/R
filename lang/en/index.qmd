@@ -7,6 +7,10 @@
 #| child: _links.md
 ```
 
+::: {.callout-warning}
+Book in development. Several sections not developed yet
+:::
+
 ## The aim of this book {.unnumbered}
 
 The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research.
@@ -37,7 +41,7 @@ bi toggle-off
 bi github
 but useless for pdf
 -->
-For the best experience we recommend that you read the web version of this book which you can find <https://biostats-uottawa.github.io/R>.
+For the best experience we recommend that you read the web version of this book which you can find <https://biostats-uottawa.github.io/R/en>.
 
 The web version includes a navbar at the top of the page where you can toggle the sidebars on and off {{< fa  align-left >}}, search through the book {{< fa search >}}, change the page color {{< fa  toggle-off >}} and suggest revisions if you spot a typo or mistake {{< fa  brands github >}}.
 You can also download {{< fa  download >}} a pdf and epub versions of the book.

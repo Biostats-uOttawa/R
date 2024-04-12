@@ -5,12 +5,12 @@ It was originally created and developed by Ross Ihaka and Robert Gentleman durin
 Nowadays R is maintained by the [R Development Core Team][cran-core].
 So, why has R become so popular and why should you learn how to use it? Some reasons include:
 
-- R is open source and freely available.
-- R is available for Windows, Mac and Linux operating systems.
-- R has an extensive and coherent set of tools for statistical analysis.
-- R has an extensive and highly flexible graphical facility capable of producing publication quality figures.
-- R has an expanding set of freely available ‘packages’ :package: to extend R's capabilities.
-- R has an extensive support network with numerous online and freely available documents.
+- open source and freely available.
+- available for Windows, Mac and Linux operating systems.
+- extensive and coherent set of tools for statistical analysis.
+- extensive and highly flexible graphical facility capable of producing publication quality figures.
+- expanding set of freely available ‘packages’ :package: to extend R's capabilities.
+- extensive support network with numerous online and freely available documents.
 
 All of the reasons above are great reasons to use R.
 However, in our opinion, the single biggest reason to use R is that it facilitates robust and reproducible research practices.
@@ -24,7 +24,6 @@ In this Chapter we'll cover:
 
 * how to download and install R and and an IDE on your computer
 * give you a brief orientation of the 2 most common IDEs used with R
-* installing and working with R packages to extend R's capabilities
 * some good habits to get into when working on projects
 * and finally some advice on documenting your workflow and writing nice readable R code.
 

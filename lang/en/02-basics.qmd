@@ -1,33 +1,39 @@
 # Some R basics {#basics_r}
 
-In this Chapter we'll introduce you to using R to perform some basic R tasks such as creating objects and assigning values to objects, exploring different types of objects and how to perform some common operations on objects.
-We'll also learn how to get help in R and highlight some resources to help support your R learning.
-Finally, we'll cover how to save your work.
+In this Chapter we'll cover how to:
+
+- create objects and assigning values to objects
+- exploring different types of objects and how to perform some common operations on objects
+- get help in R and highlight some resources to help support your R learning.
+- save your work
+- use and install packages to extend base R capabilities.
+
+## Important considerations
 
 We provide screenshot of RStudio but everything is really similar when using VSCode.
 
 Before we continue, here are a few things to bear in mind as you work through this Chapter:
 
-  - R is case sensitive i.e.
+- R is case sensitive i.e.
 `A` is not the same as `a` and `anova` is not the same as `Anova`.
 
-  - Anything that follows a `#` symbol is interpreted as a comment and ignored by R.
+- Anything that follows a `#` symbol is interpreted as a comment and ignored by R.
 Comments should be used liberally throughout your code for both your own information and also to help your collaborators.
 Writing comments is a bit of an [art][comment] and something that you will become more adept at as your experience grows.
 
-  - In R, commands are generally separated by a new line.
+- In R, commands are generally separated by a new line.
 You can also use a semicolon `;` to separate your commands but this is rarely used.
 
-  - If a continuation prompt `+` appears in the console after you execute your code this means that you haven't completed your code correctly.
+- If a continuation prompt `+` appears in the console after you execute your code this means that you haven't completed your code correctly.
 This often happens if you forget to close a bracket and is especially common when nested brackets are used (`(((some command))`).
 Just finish the command on the new line and fix the typo or hit escape on your keyboard (see point below) and fix.
 
-  - In general, R is fairly tolerant of extra spaces inserted into your code, in fact using spaces is actively encouraged.
+- In general, R is fairly tolerant of extra spaces inserted into your code, in fact using spaces is actively encouraged.
 However, spaces should not be inserted into operators i.e.
 `<-` should not read `< -` (note the space).
 See Google's [style guide][style-google] for advice on where to place spaces to make your code more readable.
 
-  - If your console 'hangs' and becomes unresponsive after running a command you can often get yourself out of trouble by pressing the escape key (esc) on your keyboard or clicking on the stop icon in the top right of your console.
+- If your console 'hangs' and becomes unresponsive after running a command you can often get yourself out of trouble by pressing the escape key (esc) on your keyboard or clicking on the stop icon in the top right of your console.
 This will terminate most current operations.
 
 ## First step in the console
@@ -241,7 +247,7 @@ Up until now we've been creating simple objects by directly assigning a single v
 It's very likely that you'll soon want to progress to creating more complicated objects as your R experience grows and the complexity of your tasks increase.
 Happily, R has a multitude of functions to help you do this.
 You can think of a function as an object which contains a series of instructions to perform a specific task.
-The base installation of R comes with many functions already defined or you can increase the power of R by installing one of the 10000's of [packages](#packages) now available.
+The base installation of R comes with many functions already defined or you can increase the power of R by installing one of the 10,000's of [packages](#packages) now available.
 Once you get a bit more experience with using R you may want to define your own functions to perform tasks that are specific to your goals (more about this in [Chapter 6](#prog_r)).
 
 
@@ -724,21 +730,21 @@ This makes it easy to navigate through the file to find exactly what you need.
 The first line of the help document contains information such as the name of the function and the package where the function can be found.
 There are also other headings that provide more specific information such as
 
+| Headings | Description |
+|:----|:---------------|
+| **Description:** | gives a brief description of the function and what it does.|
+| **Usage:** | gives the name of the arguments associated with the function and possible default values.|
+| **Arguments:** | provides more detail regarding each argument and what they do.|
+| **Details:** | gives further details of the function if required.|
+| **Value:**	 | if applicable, gives the type and structure of the object returned by the function or the operator.|
+| **See Also:** | provides information on other help pages with similar or related content.|
+| **Examples:** | gives some examples of using the function.|
 
-  - **Description:**	gives a brief description of the function and what it does.
+<!--
+: Help file structure {#tbl-help}
+-->
 
-  - **Usage:** 	gives the name of the arguments associated with the function and possible default values.
-
-  - **Arguments:** provides more detail regarding each argument and what they do.
-
-  - **Details:** 	gives further details of the function if required.
-
-  - **Value:**	 if applicable, gives the type and structure of the object returned by the function or the operator.
-
-  - **See Also:** 	provides information on other help pages with similar or related content.
-
-  - **Examples:** 	gives some examples of using the function.
-These are really helpful, all you need to do is copy and paste them into the console to see what happens.
+The **Examples** are are really helpful, all you need to do is copy and paste them into the console to see what happens.
 You can also access examples at any time by using the `example()` function (i.e.
 `example("mean")`)
 
