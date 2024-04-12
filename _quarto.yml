@@ -42,7 +42,7 @@ format:
     theme:
       light: cosmo #, css/theme.scss]
       dark: [cosmo, css/theme-dark.scss]
-    css: css/style.css
+#    css: css/style.css
     code-link: true
     author-meta: "Julien Martin"
 
