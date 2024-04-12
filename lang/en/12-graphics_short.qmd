@@ -802,6 +802,9 @@ nested_compare +
   plot_annotation(tag_levels = "A", tag_suffix = ")")
 ```
 
+## Customising ggplots {#sec-custom-plot}
+
+**Went for a walk to be edited** :unicorn:
 
 ## Exporting plots {#sec-export-plots}
 
@@ -870,6 +873,4 @@ You can of course, also, specify which plot to save.
 ggsave("file.png")
 ```
 
-## Customising ggplots {#sec-custom-plot}
 
-**Went for a walk to be edited** :unicorn:
