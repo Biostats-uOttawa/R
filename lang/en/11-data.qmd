@@ -1638,6 +1638,6 @@ write_csv(flowers_df2, path = 'data/flowers_04_12.csv')
 
 ```{r}
 #| label: links
-#| child: _links.md
+#| child: images/_links.md
 ```
 

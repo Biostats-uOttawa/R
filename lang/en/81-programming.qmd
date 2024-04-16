@@ -705,6 +705,6 @@ As you can see, in both cases, we get exactly the same results as when we used t
 
 ```{r}
 #| label: links
-#| child: _links.md
+#| child: images/_links.md
 ```
 

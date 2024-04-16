@@ -1,5 +1,5 @@
 project:
-  output-dir: _book/en
+  output-dir: ../../_book/en
 
 lang: en-CA
 

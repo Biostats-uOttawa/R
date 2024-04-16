@@ -918,7 +918,7 @@ Voir @tbl-r-lib pour un exemple de résultat produit avec grateful.
 
 ```{r}
 #| label: links
-#| child: _links.md
+#| child: images/_links.md
 ```
 
 

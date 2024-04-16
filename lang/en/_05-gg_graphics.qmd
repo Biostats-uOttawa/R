@@ -2347,5 +2347,5 @@ ggpairs(flower, aes(colour = nitrogen), cardinality_threshold = NULL, progress =
 
 ```{r}
 #| label: links
-#| child: _links.md
+#| child: images/_links.md
 ```

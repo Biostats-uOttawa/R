@@ -1720,5 +1720,5 @@ See `?png` for more details.
 
 ```{r}
 #| label: links
-#| child: _links.md
+#| child: images/_links.md
 ```

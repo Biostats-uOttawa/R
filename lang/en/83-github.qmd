@@ -1152,7 +1152,7 @@ These are only a couple of examples, all you need to do is search for "version c
 
 ```{r}
 #| label: links
-#| child: _links.md
+#| child: images/_links.md
 ```
 
 

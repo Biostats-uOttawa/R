@@ -14,7 +14,7 @@ Some reasons include:
 - extensive support network with numerous online and freely available documents.
 
 All of the reasons above are great reasons to use R.
-However, in our opinion, the single biggest reason to use R is that it facilitates robust and reproducible research practices.
+However, in our opinion, the biggest reason to use R is that it facilitates robust and reproducible research practices.
 In contrast to more traditional 'point and click' software, writing code ensures you have a permanent and accurate record of all the methods you used (and decisions you made) for your data analysis.
 You are then able to share this code (and your data) with other researchers / colleagues / reviewers who will be able to reproduce your analysis exactly.
 This is one of the tenets of [open science][open-sci].
@@ -811,5 +811,5 @@ In our view the most useful tool for citation is the package `grateful` :package
 See @tbl-r-lib for an example output produced with grateful.
 ```{r}
 #| label: links
-#| child: _links.md
+#| child: images/_links.md
 ```

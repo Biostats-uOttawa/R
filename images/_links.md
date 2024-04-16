@@ -87,7 +87,7 @@
 [backtick]: https://superuser.com/questions/254076/how-do-i-type-the-tick-and-backtick-characters-on-windows
 [engines]: https://rmarkdown.rstudio.com/authoring_knitr_engines.html%23sql
 [chunk-opt]: https://yihui.name/knitr/options
-[rmd-ref]: https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf
+[rmd-ref]: https://quarto.org/docs/computations/r.html
 [rmd-cheat]: https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 [kableExtra]: https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
 [pander]: http://rapporter.github.io/pander/
@@ -178,3 +178,5 @@
 [dep]: https://www.uottawa.ca/faculty-science/biology/
 [vscode]: https://code.visualstudio.com/
 [whoarewe]: https://biostats-uottawa.github.io/people.html
+
+[quarto-guide]: https://quarto.org/docs/guide/

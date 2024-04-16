@@ -49,7 +49,7 @@ An alternative to TinyTex on linux would be to use a full fledge distribution of
 
 ```{r}
 #| label: links
-#| child: _links.md
+#| child: images/_links.md
 ```
 
 

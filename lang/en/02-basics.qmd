@@ -1019,12 +1019,13 @@ Before you use the function you will need to know the GitHub username of the rep
 For example, the development version of `dplyr` :package: from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name 'dplyr' (just search for 'github dplyr').
 To install this version from GitHub use
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 remotes::install_github("tidyverse/dplyr")
 ```
 
 The safest way (that we know of) to update a package installed from GitHub is to just reinstall it using the above command.
  
-
+```{r}
+#| label: links
+#| child: images/_links.md
+```
