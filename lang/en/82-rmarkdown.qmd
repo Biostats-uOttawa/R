@@ -17,30 +17,35 @@ need to describe YAML code chunk notation
 
 This chapter will introduce you to creating reproducible reports using R markdown / Quarto to encourage best (or better) practice to facilitate open science.
 It will first describe what R markdown and Quarto are and why you might want to consider using it, describe how to create an R markdown document using RStudio and then how to convert this document to a html or pdf formatted report.
-During this Chapter you will learn about the different components of an R markdown document, how to format text, graphics and tables within the document and finally how to avoid some of the common difficulties using R markdown.
+During this Chapter you will learn:
 
-## What is R markdown?
+* the different components of an R markdown document
+* how to format text, graphics and tables within the document
+* how to avoid some of the common difficulties using R markdown.
+
+## What is R markdown / Quarto?
+
+### R Markdown
 
 R markdown is a simple and easy to use plain text language used to combine your R code, results from your data analysis (including plots and tables) and written commentary into a single nicely formatted and reproducible document (like a report, publication, thesis chapter or a web page like this one).
  
 
-Technically, R markdown is a combination of three languages, R, Mardown and YAML (yet another markup language).
- Both Markdown and YAML are a type of 'markup' language.
+Technically, R markdown is a combination of three languages, R, Markdown and YAML (yet another markup language).
+Both Markdown and YAML are a type of 'markup' language.
 A markup language simply provides a way of creating an easy to read plain text file which can incorporate formatted text, images, headers and links to other documents.
 If you're interested you can find more information about markup languages [here][markup].
 Actually, you are exposed to a markup language on a daily basis, as most of the internet content you digest every day is underpinned by a markup language called HTML (**H**yper**t**ext **M**arkup **L**anguage).
 Anyway, the main point is that R markdown is very easy to learn (much, much easier than HTML) and when used with a good IDE (RStudio or VS Code) it's ridiculously easy to integrate into your workflow to produce feature rich content (so why wouldn't you?!).
 
-## What is Quarto?
+### Quarto?
 
-Quarto is a multi-language, next generation version of R Markdown from Posit, with many new new features and capabilities and is compatible not only with R but also with other language like Python and Julia.
-Like R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification.
+Quarto is a multi-language, next generation version of R Markdown from Posit, with many new features and capabilities and is compatible not only with R but also with other language like Python and Julia.
+Like R Markdown, Quarto uses `knitr` :package: package to execute R code, and is therefore able to render most existing **.Rmd** files without modification.
 However, it also comes with a plethora of new functionalities.
 More importantly, it makes it much easier to create different type of output since the coding is homogenize for specific format without having to rely on different r packages each with there own specificity (*e.g* bookdown, hugodown, blogdown, thesisdown, rticles, xaringan, ...).
 
 In the rest of this chapter, we will talk about Quarto but nearly everything can be done with R markdown.
-Quarto uses `.qmd` files while R markdown works with `.Rmd`.
-Notes that Quarto is also able to knit and render `.Rmd` files.
+Quarto uses `.qmd` files while R markdown works with `.qmd` but Quarto can render `.qmd` files too.
 
 ## Why use Quarto?
 
@@ -64,7 +69,7 @@ However, perhaps your current workflow looks something like this:
 include_graphics("images/workflow1.png")
 ```
 
-Your data is imported from your favourite spreadsheet software into R, you write your R code to explore and analyse your data, you save plots as external files, copy tables of analysis output and then manually combine all of this and your written prose into a single MS Word document (maybe a paper or thesis chapter).
+Your data is imported from your favourite spreadsheet software into R, you write your R code to explore and analyse your data, you save plots as external files, copy tables of analysis output and then manually combine all of this and your written prose into a single MS Word document (maybe for a paper or thesis chapter).
 Whilst there is nothing particularly wrong with this approach (and it's certainly better than using point and click software to analyse your data) there are some limitations:
 
 - It's not particularly reproducible.
@@ -109,13 +114,15 @@ If you need to modify or extend your current analysis you just need to update yo
 
 ## Get started with Quarto
 
-To use Quarto you will first need to install the `Quarto` software and the `quarto` R package (with its dependencies).
-You can find instructions on how to do this for both Windows and Mac OSX operating systems in @sec-install-rm.
+### Installation
+
+To use Quarto you will first need to install the `Quarto` software and the `quarto` :package: package (with its dependencies).
+You can find instructions on how to do this in @sec-install-rm and on the [Quarto website](https://quarto.org/docs/get-started/).
 If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of {{< latex >}} on your computer.
 If you've not installed {{< latex >}} before, we recommend that you install [TinyTeX][tinytex].
 Again, instructions on how to do this can be found at @sec-install-rm.
 
-## Create a Quarto document, `.qmd` {#sec-new_rm}
+### Create a Quarto document, `.qmd` {#sec-new_rm}
 
 Right, time to create your first Quarto document.
 Within RStudio, click on the menu `File` -> `New File` -> `Quarto...`.
@@ -149,7 +156,7 @@ include_graphics("images/new_file_rm.png")
 
  
 
-Once you've created your Quarto document it's good practice to save this file somewhere convenient.
+Once you've created your Quarto document it's good practice to save this file somewhere convenient (@sec-dir-struc and @fig-dir-struc).
 You can do this by selecting `File` -> `Save` from RStudio menu (or use the keyboard shortcut ctrl + s on Windows or cmd + s on a Mac) and enter an appropriate file name (maybe call it `my_first_rmarkdown`).
 Notice the file extension of your new Quarto file is `.qmd`.
  
@@ -181,7 +188,7 @@ include_graphics("images/Rmarkdown_console.png")
 
  
 
-If everything went smoothly a new HTML file will have been created and saved in the same directory as your `.Rmd` file (ours will be called `my_first_rmarkdown.html`).
+If everything went smoothly a new HTML file will have been created and saved in the same directory as your `.qmd` file (ours will be called `my_first_rmarkdown.html`).
 To view this document simply double click on the file to open in a browser (like Chrome or Firefox) to display the rendered content.
 RStudio will also display a preview of the rendered file in a new window for you to check out (your window might look slightly different if you're using a Windows computer).
 
@@ -197,36 +204,34 @@ include_graphics("images/html_rendered.png")
  
 
 Great, you've just rendered your first Quarto document.
-If you want to knit your `.Rmd` file to a pdf document then all you need to do is choose `knit to PDF` instead of `knit to HTML` when you click on the `knit` icon.
+If you want to knit your `.qmd` file to a pdf document then all you need to do is choose `knit to PDF` instead of `knit to HTML` when you click on the `knit` icon.
 This will create a file called `my_first_rmarkdown.pdf` which you can double click to open.
 Give it a go!
 
-You can also knit an `.Rmd` file using the command line in the console rather than by clicking on the knit icon.
-To do this, just use the `render()` function from the  `rmarkdown` package as shown below.
-Again, you can change the output format using the `output_format=` argument as well as many other options.
+You can also knit an `.qmd` file using the command line in the console rather than by clicking on the knit icon.
+To do this, just use the `quarto_render()` function from the  `quarto` :package: package as shown below.
+Again, you can change the output format using the `output_format =` argument as well as many other options.
 
  
 
-```{r}
-#| echo: true
-#| eval: false
-#| class-source: fold-show
-library(rmarkdown)
+```r
+library(quarto)
 
-render('my_first_rmarkdown.Rmd', output_format = 'html_document')
+quarto_render('my_first_rmarkdown.qmd', output_format = 'html_document')
 
-# alternatively if you don't want to load the rmarkdown package
+# alternatively if you don't want to load the quarto package
 
-rmarkdown::render('my_first_rmarkdown.Rmd', output_format = 'html_document')
-
-# see ?render for more options
+quarto::quarto_render('my_first_rmarkdown.Rmd', output_format = 'html_document')
 ```
 
-## Quarto anatomy
+## Quarto document (.qmd) anatomy
 
 OK, now that you can render a Quarto file in RStudio into both HTML and pdf formats let's take a closer look at the different components of a typical Quarto document.
-Normally each Quarto document is composed of 3 main components, 1) a YAML header, 2) formatted text and 3) code chunks.
+Normally each Quarto document is composed of 3 main components:
 
+1. a YAML header
+2. formatted text
+3. code chunks.
  
 
 ```{r}
@@ -250,14 +255,14 @@ A simple YAML header may look something like this:
 title: My first Quarto document
 author: Jane Doe
 date: March 01, 2020
-output: html_document
+format: html
 ---
 ```
 
 In the YAML header above the output format is set to HTML.
-If you would like to change the output to pdf format then you can change it from `output: html_document` to  `output: pdf_document` (you can also set more than one output format if you like).
+If you would like to change the output to pdf format then you can change it from `format: html` to  `format: pdf` (you can also set more than one output format if you like).
 You can also change the default font and font size for the whole document and even include fancy options such as a table of contents and inline references and a bibliography.
-If you want to explore the plethora of other options see [here][bookdownr].
+If you want to explore the plethora of other options see [here][quarto-guide].
 Just a note of caution, many of the options you can specify in the YAML header will work with both HTML and pdf formatted documents, but not all.
 If you need multiple output formats for your Quarto document check whether your YAML options are compatible between these formats.
 Also, indentation in the YAML header has a meaning, so be careful when aligning text.
@@ -266,11 +271,11 @@ For example, if you want to include a table of contents you would modify the `ou
 ```yaml
 ---
 title: My first Quarto document
-author: Jane Doe
+author: Bob Hette
 date: March 01, 2020
-output:
-  html_document:
-    toc: yes
+format:
+  html:
+    toc: true
 ---
 ```
 
@@ -285,25 +290,30 @@ At first, this might seem like a right pain in the proverbial but it's actually 
 Here is an example of marking up text formatting in an Quarto document 
 
 ```md
-#### Benthic Biodiversity experiment
-These data were obtained from a mesocosm experiment which aimed to examine the effect 
-of benthic polychaete (*Nereis diversicolor*) biomass on sediment nutrient 
-(NH~4~, NO~3~ and PO~3~) release.
-At the start of the experiment 15 replicate mesocosms 
-were filled with 20 cm^2^ of **homogenised** marine sediment and assigned to one of five 
-polychaete biomass treatments (0, 0.5, 1, 1.5, 2 g per mesocosm).
+#### Tadpole sediment experiment
+
+These data were obtained from a mesocosm experiment which aimed to examine the
+effect of bullfrog tadpoles (*Lithobates catesbeianus*) biomass on sediment
+nutrient (NH~4~, NO~3~ and PO~3~) release.
+At the start of the experiment 15 replicate mesocosms were filled with
+20 cm^2^ of **homogenised** marine sediment and assigned to one of five 
+tadpole biomass treatments.
 ```
 
 which would look like this in the final rendered document (can you spot the markups?)
 
->#### Benthic Biodiversity experiment {.unlisted .unnumbered}
+>#### Tadpole sediment experiment {.unlisted .unnumbered}
 
->These data were obtained from a mesocosm experiment which aimed to examine the effect of benthic polychaete (*Nereis diversicolor*) biomass on sediment nutrient (NH~4~, NO~3~ and PO~3~) release.
-At the start of the experiment replicate mesocosms were filled with 20 cm^2^ of **homogenised** marine sediment and assigned to one of five polychaete biomass treatments (0, 0.5, 1, 1.5, 2 g per mesocosm).
+> These data were obtained from a mesocosm experiment which aimed to examine the
+effect of bullfrog tadpoles (*Lithobates catesbeianus*) biomass on sediment
+nutrient (NH~4~, NO~3~ and PO~3~) release.
+At the start of the experiment 15 replicate mesocosms were filled with
+20 cm^2^ of **homogenised** marine sediment and assigned to one of five 
+tadpole biomass treatments.
 
 #### Emphasis {-}
 
-Some of the most common Quarto syntax for providing emphasis and formatting text is given below.
+Some of the most common markdown syntax for providing emphasis and formatting text is given below.
 
  
 
@@ -317,21 +327,20 @@ Some of the most common Quarto syntax for providing emphasis and formatting text
 
  
 
-Interestingly there is no underline in R markdown syntax by default, for multiple more or less esoteric reasons, but Quarto fixed that problem.
-An underline is considered a stylistic element (there may well be other [reasons][underline]).
-If you are using Quarto you can simply do`[text to underline]{.underline}` to [underline your text]{.underline}.
+Interestingly there is no underline in R markdown syntax by default, for multiple more or less esoteric reasons (*e.g.* an underline is considered a stylistic element (there may well be other [reasons][underline])).
+Quarto fixed that problem, you can simply do `[text to underline]{.underline}` to [underline your text]{.underline}.
 
 #### White space and line breaks {-}
 
-One of the things that can be confusing for new users of Quarto is the use of spaces and carriage returns (the enter key on your keyboard).
-In Quarto multiple spaces within the text are generally ignored as are carriage returns.
-For example this Quarto text
+One of the things that can be confusing for new users of markdown is the use of spaces and carriage returns (the enter key on your keyboard).
+In markdown, multiple spaces within the text are generally ignored as are carriage returns.
+For example this markdown text
 
 ```md
 These      data were      obtained from a
 mesocosm experiment which    aimed to examine the
 effect
-of          benthic polychaete (*Nereis diversicolor*) biomass.
+of          bullfrog tadpoles (*Lithobates catesbeianus*) biomass.
 ```
 
 will be rendered as 
@@ -339,7 +348,7 @@ will be rendered as
 >These      data were      obtained from a
 >mesocosm experiment which    aimed to examine the
 >effect
->of          benthic polychaete (*Nereis diversicolor*) biomass.
+>of         bullfrog tadpoles (*Lithobates catesbeianus*) biomass.
 
 
 This is generally a good thing (no more random multiple spaces in your text).
@@ -348,22 +357,22 @@ If you want your text to start on a new line then you can simply add two blank s
 
 >These      data were      obtained from a  
 >mesocosm experiment which    aimed to examine the    
->effect          benthic polychaete (*Nereis diversicolor*) biomass.
+>effect          bullfrog tadpoles (*Lithobates catesbeianus*) biomass.
     
 
 
 If you really want multiple spaces within your text then you can use the **N**on **b**reaking **sp**ace tag `&nbsp;`
 
-```
+```md
 These &nbsp; &nbsp; &nbsp; data were &nbsp; &nbsp; &nbsp; &nbsp; obtained from a  
 mesocosm experiment which &nbsp; &nbsp; aimed to examine the    
-effect &nbsp; &nbsp; &nbsp; &nbsp; benthic polychaete (*Nereis diversicolor*) biomass.
+effect &nbsp; &nbsp; &nbsp; &nbsp; bullfrog tadpoles (*Lithobates catesbeianus*) biomass.
 ```
  
 
 >These &nbsp; &nbsp; &nbsp; data were &nbsp; &nbsp; &nbsp; &nbsp; obtained from a  
 >mesocosm experiment which &nbsp; &nbsp; aimed to examine the    
->effect &nbsp; &nbsp; &nbsp; &nbsp; benthic polychaete (*Nereis diversicolor*) biomass.
+>effect &nbsp; &nbsp; &nbsp; &nbsp; bullfrog tadpoles (*Lithobates catesbeianus*) biomass.
 
 #### Headings {-}
 
@@ -372,26 +381,22 @@ You can decrease the size of the headings by simply adding more `#` symbols.
 For example 
 
 ```md
-# Benthic Biodiversity experiment
-## Benthic Biodiversity experiment
-### Benthic Biodiversity experiment
-#### Benthic Biodiversity experiment
-##### Benthic Biodiversity experiment
-###### Benthic Biodiversity experiment
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
 ```
 
 results in headings in decreasing size order
 
-```{asis}
-#| echo: true
-#| eval: !expr knitr::is_html_output()
-># Benthic Biodiversity experiment {.unlisted .unnumbered}
->## Benthic Biodiversity experiment {.unlisted .unnumbered}
->### Benthic Biodiversity experiment {.unlisted .unnumbered}
->#### Benthic Biodiversity experiment {.unlisted .unnumbered}
->##### Benthic Biodiversity experiment {.unlisted .unnumbered}
->###### Benthic Biodiversity experiment {.unlisted .unnumbered}
-```
+># Header 1 {.unlisted .unnumbered}
+>## Header 2 {.unlisted .unnumbered}
+>### Header 3 {.unlisted .unnumbered}
+>#### Header 4 {.unlisted .unnumbered}
+>##### Header 5 {.unlisted .unnumbered}
+>###### Header 6 {.unlisted .unnumbered}
 
 #### Comments {-}
 
@@ -411,7 +416,7 @@ If you want to create a bullet point list of text you can format an unordered li
 Notice that the sub-items need to be indented.
  
 
-```markdown
+```md
 - item 1
 - item 2
    + sub-item 2
@@ -434,31 +439,22 @@ Notice that the sub-items need to be indented.
 If you need an ordered list 
 
 ```md
-
-1.
-item 1
-2.
-item 2
-     + sub-item 2
-     + sub-item 3
-3.
-item 3
-4.
-item 4
+1. item 1
+1. item 2
+    + sub-item 2
+    + sub-item 3
+1. item 3
+1. item 4
 ```
 
  
 
->1.
-item 1
->2.
-item 2
->     + sub-item 2
->     + sub-item 3
->3.
-item 3
->4.
-item 4
+>1. item 1
+>1. item 2
+>    + sub-item 2
+>    + sub-item 3
+>1. item 3
+>1. item 4
 
 #### Images {-}
 
@@ -466,7 +462,7 @@ Another useful feature is the ability to embed images and links to web pages (or
 You can include images into your Quarto document in a number of different ways.
 Perhaps the simplest method is to use
 
-```markdown
+```md
 ![Cute grey kitten](images/Cute_grey_kitten.jpg)
 ```
 
@@ -474,8 +470,8 @@ resulting in:
 
 ![Cute grey kitten](images/Cute_grey_kitten.jpg)
 
-The code above will only work if the image file (`Cute_grey_kitten.jpg`) is in the right place relative to where you saved your `.Rmd` file.
-In the example above the image file is in a sub directory (folder) called `images` in the directory where we saved our `my_first_rmarkdown.Rmd` file.
+The code above will only work if the image file (`Cute_grey_kitten.jpg`) is in the right place relative to where you saved your `.qmd` file.
+In the example above the image file is in a sub directory (folder) called `images` in the directory where we saved our `my_first_rmarkdown.qmd` file.
 You can embed images saved in many different file types but perhaps the most common are `.jpg` and `.png`.
 
 We think a more flexible way of including images in your document is to use the `include_graphics()` function from the `knitr` package as this gives finer control over the alignment and image size (it also works more or less the same with both HTML and pdf output formats).
@@ -484,18 +480,11 @@ Despite this we'll leave the code here for later reference.
 This code center aligns the image and scales it to 50% of it's original size.
 See `?include_graphics` for more options.
 
-````md
-`r ''````{r, echo=FALSE, fig.align='center', out.width='50%'}
-library(knitr)
-include_graphics("images/Cute_grey_kitten.jpg")
-```
-````
-
 ```{r}
-#| echo: false
+#| echo: fenced
 #| fig-align: center
 #| out-width: 50%
-include_graphics("images/Cute_grey_kitten.jpg")
+knitr::include_graphics("images/Cute_grey_kitten.jpg")
 ```
 
 #### Links {-}
@@ -520,14 +509,13 @@ To include R code into your Quarto document you simply place your code into a 'c
 All code chunks start and end with three backticks ```` ``` ````.
 Note, these are also known as 'grave accents' or 'back quotes' and are not the same as an apostrophe! On most keyboards you can [find the backtick][backtick] on the same key as tilde (~).
 
-````md
-`r ''````{r}
+```{{r}}
 Any valid R code goes here
 ```
-````
+
 
 You can insert a code chunk by either typing the chunk delimiters ```` ```{r} ```` and ```` ``` ```` manually or use your IDE option (RStudio toolbar (the Insert button) or by clicking on the menu `Code` -> `Insert Chunk`.
-IN VS Code you can use code snippets) Perhaps an even better way is to get familiar with the keyboard shortcuts for you IDE.
+In VS Code you can use code snippets) Perhaps an even better way is to get familiar with the keyboard shortcuts for you IDE or code snippets.
 
 There are a many things you can do with code chunks: you can produce text output from your analysis, create tables and figures and insert images amongst other things.
 Within the code chunk you can place rules and arguments between the curly brackets `{}` that give you control over how your code is interpreted and output is rendered.
@@ -537,7 +525,7 @@ Note, chunk options can be written in two ways:
 
 1.
 either all of your chunk options must be written between the curly brackets on one line with no line breaks
-2.
+1.
 or they can be written using a YAML notation within the code chunk using #| notation at the beginning of the line.
  
 
@@ -554,8 +542,8 @@ dataf <- data.frame(x = x, y = y)
 summary(dataf)
 ```
 ````
-````md
-`r ''````{r}
+
+```{{r}}
 #| label: summary-stats
 #| echo: true
 x <- 1:10    # create an x variable
@@ -564,9 +552,10 @@ dataf <- data.frame(x = x, y = y)
 
 summary(dataf)
 ```
-````
 
-```{r }
+Both will output
+
+```{r}
 #| label: summary-stats
 #| class-source: fold-show
 x <- 1:10    # create an x variable
@@ -580,14 +569,15 @@ When using chunk names make sure that you don't have duplicate chunk names in yo
 
 If we wanted to only display the output of our R code (just the summary statistics for example) and not the code itself in our final document we can use the chunk option `echo=FALSE`
 
-````md
-`r ''````{r, summary-stats, echo=FALSE}
+
+```{{r}}
+#| label: summary-stats2
+#| echo: false
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
 summary(dataf)
 ```
-````
 
 ```{r}
 #| label: summary-stats2
@@ -600,8 +590,7 @@ summary(dataf)
 
 To display the R code but not the output use the `results='hide'` chunk option.
 
-````md
-`r ''````{r}
+```{{r}}
 #| label: summary-stats
 #| results: 'hide'
 x <- 1:10    # create an x variable
@@ -609,7 +598,6 @@ y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
 summary(dataf)
 ```
-````
 
 ```{r}
 #| label: summary-stats3
@@ -649,18 +637,18 @@ Perhaps the most commonly used are summarised below with the default values show
 
 |     Chunk option       |    default value       |     Function        |
 |:-----------------|:-----------------------|:--------------------|
-|  echo     |   `echo=TRUE`   |   If FALSE, will not display the code in the final document   |
-|  results   |   `results='markup'`   |   If 'hide', will not display the code’s results in the final document.
+|  echo     |   `echo: true`   |   If `false`, will not display the code in the final document   |
+|  results   |   `results: 'markup'`   |   If 'hide', will not display the code’s results in the final document.
 If 'hold', will delay displaying all output pieces until the end of the chunk.
 If 'asis', will pass through results without reformatting them.
   |
-|  include | `include=TRUE` | If FALSE, will run the chunk but not include the chunk in the final document.
+|  include | `include: true` | If `false`, will run the chunk but not include the chunk in the final document.
 |
-|  eval   |   `eval=TRUE`  |   If FALSE, will not run the code in the code chunk.
+|  eval   |   `eval: true`  |   If `false`, will not run the code in the code chunk.
  |
-|  message     |   `message=TRUE`    |   If FALSE, will not display any messages generated by the code.
+|  message     |   `message: true`    |   If `false`, will not display any messages generated by the code.
    |
-|  warning     |   `warning=TRUE`    |   If FALSE, will not display any warning messages generated by the code.
+|  warning     |   `warning: true`    |   If `false`, will not display any warning messages generated by the code.
    |
 
 ### Adding figures
@@ -668,35 +656,19 @@ If 'asis', will pass through results without reformatting them.
 By default, figures produced by R code will be placed immediately after the code chunk they were generated from.
 For example:
 
-````md
-`r ''````{r, simple-plot}
-x <- 1:10    # create an x variable
-y <- 10:1    # create a y variable
-dataf <- data.frame(x = x, y = y)
-plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
-```
-````
-
 ```{r}
 #| label: simple-plot
-#| class-source: fold-show
+#| echo: fenced
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
 plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 
-If you want to change the plot dimensions in the final document you can use the `fig.width=` and `fig.height=` chunk options (in inches!).
-You can also change the alignment of the figure using the `fig.align=` chunk option.
 
-````md
-`r ''````{r, simple-plot, fig.width=4, fig.height=3, fig.align='center'}
-x <- 1:10    # create an x variable
-y <- 10:1    # create a y variable
-dataf <- data.frame(x = x, y = y)
-plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
-```
-````
+
+If you want to change the plot dimensions in the final document you can use the `fig-width:` and `fig-height:` chunk options (in inches!).
+You can also change the alignment of the figure using the `fig-align:` chunk option.
 
 ```{r}
 #| label: simple-plot2
@@ -704,30 +676,23 @@ plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 #| fig-width: 4
 #| fig-height: 3
 #| fig-align: center
+#| echo: fenced
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
 plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 
- 
 
-You can add a figure caption using the `fig.cap=` option.
 
-````md
-`r ''````{r, simple-plot-cap, fig.cap="A simple plot", fig.align='center'}
-x <- 1:10    # create an x variable
-y <- 10:1    # create a y variable
-dataf <- data.frame(x = x, y = y)
-plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
-```
-````
+You can add a figure caption using the `fig-cap: ` option.
 
 ```{r}
 #| label: simple-plot-cap
 #| class-source: fold-show
 #| fig-cap: A simple plot
 #| fig-align: center
+#| echo: fenced
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -736,21 +701,14 @@ plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 
  
 
-If you want to suppress the figure in the final document use the `fig.show='hide'` option.
+If you want to suppress the figure in the final document use the `fig-show: 'hide'` option.
 
-````md
-`r ''````{r, simple-plot, fig.show='hide'}
-x <- 1:10    # create an x variable
-y <- 10:1    # create a y variable
-dataf <- data.frame(x = x, y = y)
-plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
-```
-````
 
 ```{r}
-#| label: simple-plot3
+#| label: simple-plot5
 #| class-source: fold-show
 #| fig-show: hide
+#| echo: fenced
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -759,24 +717,12 @@ plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 
  
 
-If you're using a package like [`ggplot2`][ggplot] to create your plots then don't forget you will need to make the package available with the `library()` function in the code chunk (or in a preceding code chunk).
+If you're using a package like `ggplot2` :package: to create your plots then don't forget you will need to make the package available with the `library()` function in the code chunk (or in a preceding code chunk).
 
-````md
-`r ''````{r}
-#| label: simple-ggplot
-x <- 1:10    # create an x variable
-y <- 10:1    # create a y variable
-dataf <- data.frame(x = x, y = y)
-
-library(ggplot2)
-ggplot(dataf, aes(x = x, y = y)) +
-  geom_point()
-```
-````
 
 ```{r}
 #| label: simple-ggplot
-#| class-source: fold-show
+#| echo: fenced
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
@@ -793,18 +739,13 @@ See [here][rmd-ref] for more details.
 
 ### Adding tables
 
-Quarto can print the contents of a dataframe as a table (or any other tabular object such as a summary of model output) by including the name of the dataframe in a code chunk.
+Quarto can print the contents of a data frame as a table (or any other tabular object such as a summary of model output) by including the name of the data frame in a code chunk.
 For example, to create a table of the first 10 rows of the inbuilt dataset `iris`
 
-````md
-`r ''````{r, ugly-table}
-iris[1:10,]
-```
-````
 
 ```{r}
 #| label: ugly-table
-#| echo: false
+#| echo: fenced
 #| warning: false
 
 iris[1:10,]
@@ -815,48 +756,41 @@ But how ugly is that! You can create slightly nicer looking tables using native 
 
  
 ```markdown
-    |     x      |    y       |
-    |:----------:|:----------:|
-    |  1         |   5        |   
-    |  2         |   4        |
-    |  3         |   3        |
-    |  4         |   2        |
-    |  5         |   1        |
+|  x  |  y  |
+|:---:|:---:|
+|  1  |  5  | 
+|  2  |  4  |
+|  3  |  3  |
+|  4  |  2  |
+|  5  |  1  |
 ```
 
  
 
-|     x      |    y       |
-|:----------:|:----------:|
-|  1         |   5        |   
-|  2         |   4        |
-|  3         |   3        |
-|  4         |   2        |
-|  5         |   1        |
+|  x  |  y  |
+|:---:|:---:|
+|  1  |  5  | 
+|  2  |  4  |
+|  3  |  3  |
+|  4  |  2  |
+|  5  |  1  |
 
  
 
-The `:-------:` lets Quarto know that the line above should be treated as a header and the lines below as the body of the table.
+The `:-------:` lets markdown know that the line above should be treated as a header and the lines below as the body of the table.
 Alignment within the table is set by the position of the `:`.
 To center align use `:------:`, to left align `:------` and right align `------:`.
 Whilst it can be fun(!) to create tables with raw markup it's only  practical for very small and simple tables.
  
 
-The easiest way we know to include tables in an Quarto document is by using the `kable()` function from the `knitr` package (this should have already been installed when you installed the `rmarkdown` package).
+The easiest way we know to include tables in an Quarto document is by using the `kable()` function from the `knitr` :package: package.
 The `kable()` function can create tables for HTML, PDF and Word outputs.
 
-To create a table of the first 10 rows of the `iris` dataframe using the `kable()` function simply write your code block as
-
-````md
-`r ''````{r, kable-table}
-library(knitr)
-kable(iris[1:10,])
-```
-````
+To create a table of the first 10 rows of the `iris` data frame using the `kable()` function simply write your code block as
 
 ```{r}
 #| label: kable-table-html
-#| echo: false
+#| echo: fenced
 #| eval: !expr knitr::is_html_output()
 #| warning: false
 library(knitr)
@@ -869,7 +803,7 @@ kable(iris[1:10,])
 #| eval: !expr knitr::is_latex_output()
 #| warning: false
 library(knitr)
-kable(iris[1:10,], "latex", booktabs = T)
+kable(iris[1:10,], "latex", booktabs = TRUE)
 ```
 
 The `kable()` function offers plenty of options to change the formatting of the table.
@@ -877,18 +811,11 @@ For example, if we want to round numeric values to one decimal place use the `di
 To center justify the table contents use `align = 'c'` and to provide custom column headings use the `col.names =` argument.
 See `?knitr::kable` for more information.
 
-````md
-`r ''````{r, kable-table2}
-kable(iris[1:10,], digits = 0, align = 'c', 
-       col.names = c('sepal length', 'sepal width', 
-       'petal length', 'petal width', 'species'))
-```
-````
 
 ```{r}
 #| label: kable-table2-html
 #| eval: !expr knitr::is_html_output()
-#| echo: false
+#| echo: fenced
 #| warning: false
 library(knitr)
 kable(iris[1:10,], digits=0, align = 'c', col.names = c('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
@@ -896,24 +823,16 @@ kable(iris[1:10,], digits=0, align = 'c', col.names = c('sepal length', 'sepal w
 
 ```{r}
 #| label: kable-table2-latex
-#| echo: false
+#| echo: fenced
 #| eval: !expr knitr::is_latex_output()
 #| warning: false
 library(knitr)
-kable(iris[1:10,], "latex", booktabs = T, digits=0, align = 'c', col.names = c('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
+kable(iris[1:10,], "latex", booktabs = TRUE, digits=0, align = 'c', col.names = c('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
 ```
  
 
 You can further enhance the look of your `kable` tables using the `kableExtra` package (don't forget to install the package first!).
 See [here][kableExtra] :package: for more details and a helpful tutorial.
-
-````md
-`r ''````{r, kableExtra-table}
-library(kableExtra)
-kable(iris[1:10,]) %>%
-    kable_styling(bootstrap_options = "striped", font_size = 10)
-```
-````
 
 ```{r}
 #| label: kableExtra-table-html
@@ -938,7 +857,7 @@ kable(iris[1:10,],"latex", booktabs = T) %>%
  
 
 If you want even more control and customisation options for your tables take a look at the [`gt`][gt] package.
-`gt`stands for grammar of tables and is based on similar principle for tables that are used for plots in ggplot.
+`gt` is an acronym for **g**rammar of **t**ables and is based on similar principle for tables that are used for plots in ggplot.
 
 ### Inline R code
 
@@ -977,20 +896,33 @@ When rendering my Quarto document to pdf my code runs off the edge of the page.
 
 **Solution:**
 
-Add a global_options argument at the start of your .Rmd file in a code chunk:
+Add a global_options argument at the start of your `.qmd` file in a code chunk:
 
-````md
-`r ''````{r, global_options, include=FALSE}
+```{{r}}
+#| label: global_options
+#| include: false 
 knitr::opts_chunk$set(message=FALSE, tidy.opts=list(width.cutoff=60), tidy=TRUE) 
 ```
-````
 
-This code chunk won’t be displayed in the final document due to the `include = FALSE` argument and you should place the code chunk immediately after the YAML header to affect everything below that.
+
+This code chunk won’t be displayed in the final document due to the `include: false` argument and you should place the code chunk immediately after the YAML header to affect everything below that.
 
 `tidy.opts = list(width.cutoff = 60), tidy=TRUE` defines the margin cutoff point and wraps text to the next line.
 Play around with this value to get it right (60-80 should be OK for most documents).
 
- 
+With quarto you can also put the global `knitr` options in a `knitr`block in the YAML header (see [Quarto website](https://quarto.org/docs/computations/r.html#knitr-options) for details).
+
+```yaml
+---
+title: "My Document"
+format: html
+knitr:
+  opts_chunk: 
+    message: false
+    tidy.opts: !expr 'list(width.cutoff=60)'
+    tidy: true 
+---
+```
 
 **Problem:** 
 
@@ -1000,15 +932,19 @@ When I load a package in my Quarto document my rendered output contains all of t
 
 You can load all of your packages at the start of your Quarto document in a code chunk along with setting your global options.
 
-````md
-```{r, global_options, include=FALSE}`r ''`
-knitr::opts_chunk$set(message=FALSE, warning=FALSE, tidy.opts=list(width.cutoff=60)) 
+```{{r}}
+#| label: global_options
+#| include: false
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning=FALSE,
+  tidy.opts=list(width.cutoff=60)
+) 
 suppressPackageStartupMessages(library(ggplot2))
 ```
-````
 
-The `message=FALSE` and `warning=FALSE` arguments suppress messages and warnings.
-The `suppressPackageStartupMessages(library(ggplot2))` will load the `ggplot2` package but suppress startup messages.
+The `message = FALSE` and `warning = FALSE` arguments suppress messages and warnings.
+The `suppressPackageStartupMessages(library(ggplot2))` will load the `ggplot2` :package: package but suppress startup messages.
 
  
 
@@ -1028,14 +964,9 @@ The code in my rendered document looks ugly!
 
 **Solution:**
 
-Add the argument `tidy=TRUE` to your global arguments.
+Add the argument `tidy: true` to your global arguments.
 Sometimes, however, this can cause problems especially with correct code indentation.
-
-````md
-`r ''````{r, global_options, include=FALSE}
-knitr::opts_chunk$set(message=FALSE, tidy.opts=list(width.cutoff=60), tidy=TRUE) 
-```
-````
+The best solution is to write code that looks nice (insert space and use multiple lines)
 
 ## Further Information
 

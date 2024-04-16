@@ -63,10 +63,12 @@ Try typing the following R code and then press enter:
 ```{r}
 #| out-width: 75%
 #| fig-align: center
-plot(1:10)
+#| label: fig-most-amazing
+#| fig-cap: Most amazing plot, just useful to test R
+plot(1)
 ```
 
-A plot of the numbers 1 to 10 on both the x and y axes should appear.
+A plot with a single point in the center should appear.
 If you see this, you're good to go.
 If not then we suggest you make a note of any errors produced and then use your preferred search engine to troubleshoot.
 
@@ -343,10 +345,7 @@ They would then just need to open the project file and any R scripts that contai
 For example, let's say that you've created a subdirectory called `data` in your Root project directory that contains a csv delimited datile called `mydata.csv` (we will cover directory structures below in @sec-dir_struct).
 To import this datile in an RStudio project using the `read.csv()` function (don't worry about this now, we will cover this in much more detail in @sec-data_r) all you need to include in your R script is
 
-```{r}
-#| label: rel-fp1
-#| echo: true
-#| eval: false
+```r
 dat <- read.csv("data/mydata.csv")
 ```
 
@@ -355,10 +354,7 @@ Because the file path `data/mydata.csv` is relative to the project directory it 
 If you weren't using an RStudio project or VScode workspace then you would need to either set the working directory providing the full path to your directory or specify the full path of the data file.
 Neither option would be reproducible on other computers.
 
-```{r}
-#| label: rel-fp2
-#| echo: true
-#| eval: false
+```r
 setwd("/home/julien/Documents/courses/biostats/R_way")
 
 dat <- read.csv("data/mydata.csv")
@@ -366,9 +362,7 @@ dat <- read.csv("data/mydata.csv")
 
 or
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 dat <- read.csv("/home/julien/Documents/courses/biostats/R_way/data/mydata.csv")
 ```
 
@@ -376,10 +370,7 @@ For those of you who want to take the notion of relative file paths a step furth
 The `here()` function allows you to build file paths for any file relative to the project root directory that are also operating system agnostic (works on a Mac, Windows or Linux machine).
 For example, to import our `mydata.csv` file from the `data` directory just use: 
 
-```{r}
-#| label: rel-fp23
-#| echo: true
-#| eval: false
+```r
 library(here) # you may need to install the here package first
 dat <- read.csv(here("data", "mydata.csv"))
 
@@ -408,7 +399,10 @@ root
 -->
 
 ```{dot}
-#| eval: true
+//| label: fig-dir-struc
+//| fig-cap: "Recommended directory structure for analysis with R"
+//| fig-align: center
+
 digraph {
   rankdir=LR
   ranksep=0.5
@@ -513,10 +507,7 @@ You can create your directory structure using Windows Explorer (or Finder on a M
 
 An alternative approach is to use the `dir.create()` functions in the R Console.
 
-```{r}
-#| label: dir
-#| echo: true
-#| eval: false
+```r
 # create directory called 'data'
 dir.create("data")
 ```
@@ -674,9 +665,7 @@ A really good alternative is to use the `session_info()` function from the `xfun
 
 Here's an example of including meta-information at the start of an R script
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 # Title: Time series analysis of lasagna consumption
 
 # Purpose : This script performs a time series analyses on
@@ -792,7 +781,7 @@ Many people have invested huge amounts of time and energy making R the great pie
 If you use R in your work (and we hope you do) please remember to give appropriate credit by citing not only R but also all the packages you used.
 To get the most up to date citation for R you can use the `citation()` function.
 
-```{r }
+```{r}
 #| label: citation
 #| echo: true
 citation()

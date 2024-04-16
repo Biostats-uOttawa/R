@@ -22,7 +22,7 @@ Comments should be used liberally throughout your code for both your own informa
 Writing comments is a bit of an [art][comment] and something that you will become more adept at as your experience grows.
 
 - In R, commands are generally separated by a new line.
-You can also use a semicolon `;` to separate your commands but this is rarely used.
+You can also use a semicolon `;` to separate your commands but we strongly recommend to avoid using it.
 
 - If a continuation prompt `+` appears in the console after you execute your code this means that you haven't completed your code correctly.
 This often happens if you forget to close a bracket and is especially common when nested brackets are used (`(((some command))`).
@@ -31,7 +31,7 @@ Just finish the command on the new line and fix the typo or hit escape on your k
 - In general, R is fairly tolerant of extra spaces inserted into your code, in fact using spaces is actively encouraged.
 However, spaces should not be inserted into operators i.e.
 `<-` should not read `< -` (note the space).
-See Google's [style guide][style-google] for advice on where to place spaces to make your code more readable.
+See the [style guide][style-google] for advice on where to place spaces to make your code more readable.
 
 - If your console 'hangs' and becomes unresponsive after running a command you can often get yourself out of trouble by pressing the escape key (esc) on your keyboard or clicking on the stop icon in the top right of your console.
 This will terminate most current operations.
@@ -45,7 +45,7 @@ So, while you're working through this Chapter we suggest that you create a new s
 
 As we saw in @sec-chap1, at a basic level we can use R much as you would use a calculator.
 We can type an arithmetic expression into our script, then source it into the console and receive a result.
-For example, if we type the expression `2 + 2` and then source this line of code we get the answer `4` (reassuringly!)
+For example, if we type the expression `1 + 1` and then source this line of code we get the answer `2` (:smiley:!)
 
 ```{r }
 #| echo: true
@@ -55,7 +55,7 @@ For example, if we type the expression `2 + 2` and then source this line of code
 
 The `[1]` in front of the result tells you that the observation number at the beginning of the line is the first observation.
 This is not much help in this example, but can be quite useful when printing results with multiple lines (we'll see an example below).
-The other obvious arithmetic operators are `-`, `*`, `/` for subtraction, multiplication and division respectively.
+The other obvious arithmetic operators are `-`, `*`, `/` for subtraction, multiplication and division respectively. Matrix multiplication operator is `%*%`.
 R follows the usual mathematical convention of [order of operations][op-prec].
 For example, the expression `2 + 3 * 4` is interpreted to have the value `2 + (3 * 4) = 14`, not `(2 + 3) * 4 = 20`.
 There are a huge range of mathematical functions in R, some of the most useful include; `log()`, `log10()`, `exp()`, `sqrt()`.
@@ -72,7 +72,7 @@ pi # not a function but useful
 ```
 
 It's important to realize that when you run code as we've done above, the result of the code (or **value**) is only displayed in the console.
-Whilst this can sometimes be useful it is usually much more practical to store the value(s) in a object.
+Whilst this can sometimes be useful it is usually much more practical to store the value(s) in aN object.
 
 ## Objects in R
 
@@ -92,7 +92,7 @@ The assignment operator is a composite symbol comprised of a ‘less than’ sym
 my_obj <- 32
 ```
 
-In the code above, we created an object called `my_obj` and assigned it a value of the number `48` using the assignment operator (in our head we always read this as '*my_obj is 32*').
+In the code above, we created an object called `my_obj` and assigned it a value of the number `32` using the assignment operator (in our head we always read this as '*my_obj is 32*').
 You can also use `=` instead of `<-` to assign values but this is bad practice since it can lead to confusion later on when programming in `R` (see @sec-prog_r) and we would discourage you from using this notation.
 
 To view the value of the object you simply type the name of the object
@@ -114,7 +114,7 @@ All of the objects you create will be stored in the current workspace and you ca
 knitr::include_graphics(path = "images/rs_env.png")
 ```
 
-If you click on the down arrow on the 'List' icon in the same pane and change to 'Grid' view RStudio will show you a summary of the objects including the type (numeric - it's a number), the length (only one value in this object), its 'physical' size and its value (48 in this case).
+If you click on the down arrow on the 'List' icon in the same pane and change to 'Grid' view RStudio will show you a summary of the objects including the type (numeric - it's a number), the length (only one value in this object), its 'physical' size and its value (48 in this case). In VSCode, go on the R extension pane, and you can obtain the same information.
 
 ```{r}
 #| label: rstudio_env2
@@ -194,14 +194,12 @@ The error message is essentially telling you that either one or both of the obje
 
 When you first start learning R, dealing with errors and warnings can be frustrating as they're often difficult to understand (what's an [*argument*][r_arg]? what's a [*binary operator*][bin_op]?).
 One way to find out more information about a particular error is to search for a generalised version of the error message.
-For the above error try Googling [*'non-numeric argument to binary operator error + r'*][non_num_err] or even [*'common r error messages'*][com_err].
+For the above error try searching [*'non-numeric argument to binary operator error + r'*][non_num_err] or even [*'common r error messages'*][com_err].
 
 Another error message that you'll get quite a lot when you first start using R is `Error: object 'XXX' not found`.
 As an example, take a look at the code below
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 my_obj <- 48
 my_obj4 <- my_obj + no_obj
 # Error: object 'no_obj' not found
@@ -215,11 +213,9 @@ Another clue that there's a problem with this code is that, if you check your en
 Naming your objects is one of the most difficult things you will do in R.
 Ideally your object names should be kept both short and informative which is not always easy.
 If you need to create objects with multiple words in their name then use either an underscore or a dot between words or capitalise the different words.
-We prefer the underscore format and never include uppercases in names (called [*snake case*][snake])
+We prefer the underscore format and never include uppercase in names (called [*snake_case*][snake])
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 output_summary <- "my analysis" # recommended#
 output.summary <- "my analysis"
 outputSummary <- "my analysis"
@@ -234,12 +230,12 @@ In addition, make sure you don’t name your objects with reserved words (i.e.
 `TRUE`, `NA`) and it's never a good idea to give your object the same name as a built-in function.
 One that crops up more times than we can remember is
 
-```{r}
-#| echo: true
-#| eval: false
-data <- read.table("mydatafile", header = TRUE) # data is a
-# function!
+```r
+data <- read.table("mydatafile", header = TRUE)
 ```
+
+Yes, `data()` is a function in R to load or list available data sets from packages.
+
 
 ## Using functions in R {#sec-funcs}
 
@@ -599,6 +595,7 @@ names_ord
 You're probably thinking ‘what’s the use of this?’ Well, imagine you have a dataset which contains two columns of data and you want to sort each column.
 If you just use `sort()` to sort each column separately, the values of each column will become uncoupled from each other.
 By using the 'order()' on one column, a vector of positional indices is created of the values of the column in ascending order  This vector can be used on the second column, as the index of elements which will return a vector of values based on the first column.
+In all honestly, when you have multiple related vectors you need to use a data.frame type of object (see @sec-data-r) instead of multiple independent vectors.
 
 ### Vectorisation
 
@@ -697,17 +694,13 @@ Fortunately, one of the strengths of R is its comprehensive and easily accessibl
 To access R’s built-in help facility to get information on any function simply use the `help()` function.
 For example, to open the help page for our friend the `mean()` function.
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 help("mean")
 ```
 
 or you can use the equivalent shortcut
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 ?mean
 ```
 
@@ -751,17 +744,13 @@ You can also access examples at any time by using the `example()` function (i.e.
 The `help()` function is useful if you know the name of the function.
 If you're not sure of the name, but can remember a key word then you can search R's help system using the `help.search()` function.
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 help.search("mean")
 ```
 
 or you can use the equivalent shortcut
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 ??mean
 ```
 
@@ -788,18 +777,14 @@ apropos("mean")
 
 You can then bring up the help file for the relevant function.
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 help("kmeans")
 ```
 
 Another function is `RSiteSearch()` which enables you to search for keywords and phrases in function help pages and vignettes for all CRAN packages.
 This function allows you to access the search engine of the R website <https://www.r-project.org/search.html> directly from the Console with the results displayed in your web browser.
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 RSiteSearch("regression")
 ```
 
@@ -866,32 +851,20 @@ It would be extremely inconvenient to have to wait all this time each time you c
 In this case we can save this object as an external `.RData` file which we can load back into RStudio the next time we want to use it.
 To save an object to an `.RData` file you can use the `save()` function (notice we don't need to use the assignment operator here)
 
-```{r }
-#| echo: true
-#| eval: false
+```r
 save(nameOfObject, file = "name_of_file.RData")
 ```
 
 or if you want to save all of the objects in your workspace into a single `.RData` file use the `save.image()` function
 
-```{r }
-#| echo: true
-#| eval: false
+```r
 save.image(file = "name_of_file.RData")
 ```
 
 To load your `.RData` file back into RStudio use the `load()` function
 
-```{r }
-#| echo: true
-#| eval: false
+```r
 load(file = "name_of_file.RData")
-```
-
-
-```{r}
-#| label: links
-#| child: _links.md
 ```
 
 ## R packages {#sec-packages}
@@ -914,9 +887,7 @@ Once you have installed a package onto your computer it is not immediately avail
 To use a package you first need to load the package by using the `library()` function.
 For example, to load the `remotes` :package:  package you previously installed
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 library(remotes)
 ```
 
@@ -926,9 +897,7 @@ We tend to put all our `library()` statements required for our analysis near the
 If you try to use a function without first loading the relevant R package you will receive an error message that R could not find the function.
 For example, if you try to use the `install_github()` function without loading the `remotes` :package: package first you will receive the following error
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 install_github("tidyverse/dplyr")
 
 # Error in install_github("tidyverse/dplyr") :
@@ -938,9 +907,7 @@ install_github("tidyverse/dplyr")
 Sometimes it can be useful to use a function without first using the `library()` function.
 If, for example, you will only be using one or two functions in your script and don't want to load all of the other functions in a package then you can access the function directly by specifying the package name followed by two colons and then the function name
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 remotes::install_github("tidyverse/dplyr")
 ```
 
@@ -953,9 +920,7 @@ Most of the time we recommend using the `library()` function.
 To install a package from CRAN you can use the `install.packages()` function.
 For example if you want to install the `remotes` package enter the following code into the Console window of RStudio (note: you will need a working internet connection to do this)
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 install.packages("remotes", dependencies = TRUE)
 ```
 
@@ -965,9 +930,7 @@ The `dependencies = TRUE` argument ensures that additional packages that are req
 It's good practice to regularly update your previously installed packages to get access to new functionality and bug fixes.
 To update CRAN packages you can use the `update.packages()` function (you will need a working internet connection for this)
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 update.packages(ask = FALSE)
 ```
 
@@ -979,33 +942,25 @@ To install packages from Bioconductor the process is a [little different][bioc-i
 You first need to install the `BiocManager` :package: package.
 You only need to do this once unless you subsequently reinstall or upgrade R
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 install.packages("BiocManager", dependencies = TRUE)
 ```
 
 Once the `BiocManager`:package: package has been installed you can either install all of the 'core' Bioconductor packages with
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 BiocManager::install()
 ```
 
 or install specific packages such as the `GenomicRanges` :package:  and `edgeR` :package: packages
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 BiocManager::install(c("GenomicRanges", "edgeR"))
 ```
 
 To update Bioconductor packages just use the `BiocManager::install()` function again
 
-```{r}
-#| echo: true
-#| eval: false
+```r
 BiocManager::install(ask = FALSE)
 ```
 
