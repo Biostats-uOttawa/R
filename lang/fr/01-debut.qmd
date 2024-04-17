@@ -220,7 +220,7 @@ Tu peux accéder à chaque composant en cliquant sur l'onglet approprié dans le
   Les objets peuvent être affichés sous forme de liste ou de grille en sélectionnant ton choix dans le bouton déroulant situé en haut à droite de la fenêtre.
   Si tu es dans le format Grille, tu peux supprimer des objets de l'environnement en cochant la case vide à côté du nom de l'objet, puis en cliquant sur l'icône du balai.
   Il existe également un bouton "Importer un ensemble de données" qui permet d'importer des données sauvegardées dans différents formats de fichiers.
-  Cependant, nous te conseillons de ne pas utiliser cette approche pour importer tes données car elle n'est pas reproductible et donc pas robuste (voir @sec-data_r pour plus de détails).
+  Cependant, nous te conseillons de ne pas utiliser cette approche pour importer tes données car elle n'est pas reproductible et donc pas robuste (voir @sec-data-r pour plus de détails).
 
 - L'onglet 'Historique' contient une liste de toutes les commandes que tu as entrées dans la console R.
   Tu peux rechercher dans ton historique la ligne de code que tu as oubliée, renvoyer le code sélectionné dans la Console ou la fenêtre Source.
@@ -467,8 +467,8 @@ Les IDE résolvent ce problème en te permettant d'utiliser *relatif* qui sont r
 Le répertoire du projet racine est simplement le répertoire qui contient le fichier `.Rproj` dans Rstudio (`first_project.Rproj` dans notre cas) ou le dossier de base de ton espace de travail dans VScode.
 Si tu veux partager ton analyse avec quelqu'un d'autre, il te suffit de copier l'ensemble du répertoire du projet et de l'envoyer à ton à ton collaborateur.
 Il lui suffira alors d'ouvrir le fichier du projet et tous les scripts R qui contiennent des références à des chemins de fichiers relatifs fonctionneront tout simplement.
-Par exemple, disons que tu as créé un sous-répertoire appelé `data` dans ton répertoire de projet racine qui contient un fichier délimité en csv appelé `mydata.csv` (nous aborderons les structures de répertoire ci-dessous (@sec-dir_struct)).
-Pour importer cette base de données dans un projet RStudio à l'aide de la fonction `read.csv()` (ne t'inquiète pas pour l'instant, nous aborderons ce sujet de façon beaucoup plus détaillée dans le @sec-data_r), tout ce que tu dois inclure dans ton script R est
+Par exemple, disons que tu as créé un sous-répertoire appelé `data` dans ton répertoire de projet racine qui contient un fichier délimité en csv appelé `mydata.csv` (nous aborderons les structures de répertoire ci-dessous (@sec-dir-struc)).
+Pour importer cette base de données dans un projet RStudio à l'aide de la fonction `read.csv()` (ne t'inquiète pas pour l'instant, nous aborderons ce sujet de façon beaucoup plus détaillée dans le @sec-data-r), tout ce que tu dois inclure dans ton script R est
 
 ```{r}
 #| label: rel-fp1
@@ -512,7 +512,7 @@ dat <- read.csv(here("data", "mydata.csv"))
 
 ```
 
-## Structure du répertoire {#sec-dir_struct}
+## Structure du répertoire {#sec-dir-struc}
 
 En plus d'utiliser RStudio Projects, c'est aussi une très bonne pratique de structurer ton répertoire de travail d'une manière cohérente et logique pour t'aider et aider tes collaborateurs.
 Nous utilisons fréquemment la structure de répertoire suivante dans nos projets basés sur R.

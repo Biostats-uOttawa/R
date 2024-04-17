@@ -1089,7 +1089,7 @@ mean(flower$shootarea)
 
 ```{r}
 #| label: geom_hline-alternative
-#| message: !expr F
+#| message: false
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +

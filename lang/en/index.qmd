@@ -129,6 +129,10 @@ It was forked on April 23rd, 2023 from [Alexd106 github repository](https://gith
 This also a part of a multilingual R book project to improve equity and diversity.
 It started with a french translation and was/will be extended to many more languages.
 
+<!--
+Image credits: Images and screenshots are from Julien Martin except when indicated in caption.
+-->
+
 ## License {.unnumbered}
 
 I share this modified version of the [original book][https://intro2r.com/] under the license [License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).

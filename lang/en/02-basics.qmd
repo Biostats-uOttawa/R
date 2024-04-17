@@ -248,7 +248,7 @@ Once you get a bit more experience with using R you may want to define your own 
 
 
 The first function we will learn about is the `c()` function.
-The `c()` function is short for concatenate and we use it to join together a series of values and store them in a data structure called a [**vector**][vector] (more on vectors in @sec-data_r).
+The `c()` function is short for concatenate and we use it to join together a series of values and store them in a data structure called a [**vector**][vector] (more on vectors in @sec-data-r).
 
 ```{r}
 #| echo: true
@@ -388,7 +388,7 @@ my_seq7
 ## Working with vectors {#sec-vectors}
 
 Manipulating, summarising and sorting data using R is an important skill to master but one which many people find a little confusing at first.
-We'll go through a few simple examples here using vectors to illustrate some important concepts but will build on this in much more detail in @sec-data_r where we will look at more complicated (and useful) data structures.
+We'll go through a few simple examples here using vectors to illustrate some important concepts but will build on this in much more detail in @sec-data-r where we will look at more complicated (and useful) data structures.
 
 ### Extracting elements
 
@@ -869,7 +869,7 @@ load(file = "name_of_file.RData")
 
 ## R packages {#sec-packages}
 
-The base installation of R comes with many useful packages as standard.
+The base installation of R comes with many useful packages as standard. 
 These packages will contain many of the functions you will use on a daily basis.
 However, as you start using R for more diverse projects (and as your own use of R evolves) you will find that there comes a time when you will need to extend R's capabilities.
 Happily, many thousands of R users have developed useful code and shared this code as installable packages.

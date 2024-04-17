@@ -222,7 +222,7 @@ These objects can be things like data you have imported or functions you have wr
 Objects can be displayed as a List or in Grid format by selecting your choice from the drop down button on the top right of the window.
 If you're in the Grid format you can remove objects from the environment by placing a tick in the empty box next to the object name and then click on the broom icon.
 There's also an 'Import Dataset' button which will import data saved in a variety of file formats.
-However, we would suggest that you don't use this approach to import your data as it's not reproducible and therefore not robust (see @sec-data_r for more details).
+However, we would suggest that you don't use this approach to import your data as it's not reproducible and therefore not robust (see @sec-data-r for more details).
       
 
 - The 'History' tab contains a list of all the commands you have entered into the R Console.
@@ -342,8 +342,8 @@ IDEs solves this problem by allowing you to use *relative* file paths  which are
 The Root project directory is just the directory that contains the `.Rproj` file in Rstudio (`first_project.Rproj` in our case) or the base folder of your workspace in VScode.
 If you want to share your analysis with someone else, all you need to do is copy the entire project directory and send to your to your collaborator.
 They would then just need to open the project file and any R scripts that contain references to relative file paths will just work.
-For example, let's say that you've created a subdirectory called `data` in your Root project directory that contains a csv delimited datile called `mydata.csv` (we will cover directory structures below in @sec-dir_struct).
-To import this datile in an RStudio project using the `read.csv()` function (don't worry about this now, we will cover this in much more detail in @sec-data_r) all you need to include in your R script is
+For example, let's say that you've created a subdirectory called `data` in your Root project directory that contains a csv delimited datile called `mydata.csv` (we will cover directory structures below in @sec-dir-struc).
+To import this datile in an RStudio project using the `read.csv()` function (don't worry about this now, we will cover this in much more detail in @sec-data-r) all you need to include in your R script is
 
 ```r
 dat <- read.csv("data/mydata.csv")
@@ -376,7 +376,7 @@ dat <- read.csv(here("data", "mydata.csv"))
 
 ```
 
-## Directory structure {#sec-dir_struct}
+## Directory structure {#sec-dir-struc}
 
 In addition to using RStudio Projects, it's also really good practice to structure your working directory in a consistent and logical way to help both you and your collaborators.
 We frequently use the following directory structure in our R based projects.

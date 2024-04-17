@@ -1,4 +1,4 @@
-# Data in R {#sec-data_r}
+# Data in R {#sec-data-r}
 
 Until now, you've created fairly simple data in R and stored it as a vector (@sec-funcs).
 However, most (if not all) of you will have much more complicated datasets from your various experiments and surveys that go well beyond what a vector can handle.
@@ -15,7 +15,7 @@ We've already seen an example (@sec-r_objs) of this when we tried (and failed) t
 
 R has six basic types of data; numeric, integer, logical, complex and character.
 The keen eyed among you will notice we've only listed five data types here, the final data type is raw which we won't cover as it's not useful 99.99% of the time.
-We also won't cover complex numbers as we don't have the [imagination][complex_num]!
+We also won't cover complex numbers, but will let you [imagine][complex_num] that part!
 
 
   - **Numeric** data are numbers that contain a decimal.
@@ -99,7 +99,7 @@ Perhaps the simplest type of data structure is the vector.
 You've already been introduced to vectors in @sec-funcs although some of the vectors you created only contained a single value.
 Vectors that have a single value (length 1) are called scalars.
 Vectors can contain numbers, characters, factors or logicals, but the key thing to remember is that all the elements inside a vector must be of the same class.
-In other words, vectors can contain either numbers, characters or logicals but not mixtures of these types of data.
+In other words, vectors can contain either numbers, characters or logical but not mixtures of these types of data.
 There is one important exception to this, you can include `NA` (remember this is special type of logical) to denote missing data in vectors with other data types.
 
 
@@ -259,10 +259,10 @@ knitr::kable(rbind(head(flowers), tail(flowers)), row.names = FALSE)
 ```{r}
 #| label: import-data-latex
 #| eval: !expr knitr::is_latex_output()
-#| echo: !expr F
-#| collapse: !expr T
-#| warning: !expr F
-#| message: !expr F
+#| echo: false
+#| collapse: true
+#| warning: false
+#| message: false
 library(kableExtra)
 flowers <- read.table('data/flower.txt', header = TRUE)
 knitr::kable(rbind(head(flowers), tail(flowers)), row.names = FALSE, "latex", booktabs = T) %>% 
@@ -418,7 +418,7 @@ Once you've saved your data file in a suitable format we can now read this file 
 The workhorse function for importing data into R is the `read.table()` function (we discuss some alternatives later in the chapter).
 The `read.table()` function is a very flexible function with a shed load of arguments (see `?read.table`) but it's quite simple to use.
 Let's import a tab delimited file called `flower.txt` which contains the data we saw previously in this Chapter (@sec-df) and assign it to an object called `flowers`.
-The file is located in a `data` directory which itself is located in our root directory (@sec-dir_struct).
+The file is located in a `data` directory which itself is located in our root directory (@sec-dir-struc).
 The first row of the data contains the variable (column) names.
 To use the `read.table()` function to import this file
 
@@ -538,7 +538,7 @@ The first is that you've made a mistake in the spelling of either the filename o
 Another common mistake is that you have forgotten to include the file extension in the filename (i.e.
 `.txt`).
 Lastly, the file is not where you say it is or you've used an incorrect file path.
-Using RStudio Projects (@sec-rsprojs) and having a logical directory structure (@sec-dir_struct) goes a long way to avoiding these types of errors.
+Using RStudio Projects (@sec-rsprojs) and having a logical directory structure (@sec-dir-struc) goes a long way to avoiding these types of errors.
 
 Another really common mistake is to forget to include the `header = TRUE` argument when the first row of the data contains variable names.
 For example, if we omit this argument when we import our `flowers.txt` file everything looks OK at first (no error message at least)

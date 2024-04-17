@@ -218,7 +218,7 @@ Notice now that argument `x` is given the value `city$aberdeen`and `y` the value
 
 ```{r }
 #| label: calc_w_na
-#| eval: !expr T
+#| eval: true
 aberdeen_nairobi_func <- multiply_columns(x = city$aberdeen, y = city$nairobi)
 aberdeen_nairobi_func
 ```
