@@ -1,4 +1,4 @@
-# Reproducible reports with R markdown / Quarto {#sec-rmarkdown_r}
+# Reproducible reports with Quarto {#sec-rmarkdown_r}
 
 ```{r}
 #| include: false

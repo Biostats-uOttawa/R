@@ -1,4 +1,4 @@
-# Data in R {#sec-data-r}
+# Data {#sec-data-r}
 
 Until now, you've created fairly simple data in R and stored it as a vector (@sec-funcs).
 However, most (if not all) of you will have much more complicated datasets from your various experiments and surveys that go well beyond what a vector can handle.

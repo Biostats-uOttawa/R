@@ -11,7 +11,7 @@ cit-author: Brian W. Kernighan
 
 book:
   title: "On the R-way to hell"
-  subtitle: "An introduction to the marvelous world of R"
+  subtitle: "Statistical analysis in the marvelous world of R"
   description: "Early version needed to be severely updated/modified"
   author: Julien Martin
 
@@ -50,20 +50,31 @@ book:
   cover-image: images/cover/cover_en.png
   chapters:
     - index.qmd
-    - part: Starting with R
+    - part: Using R
       chapters:
         - 01-start.qmd
         - 02-basics.qmd
-    - part: Data and graphics
-      chapters:
-        - 11-data.qmd
-        - 12-graphics_short.qmd
+        - 03-data.qmd
+        - 04-graphics_short.qmd
+        - 05-programming.qmd
+        - 06-quarto.qmd
+        - 07-github.qmd
+    - part: Fundamentals of stats
+#      chapters:
+#        - 21-distributions, p CI.qmd
+
     - part: Linear models
       chapters:
-        - 21-stats.qmd
+        - 11-stats.qmd
 #        - 22-glm.qmd
+    - part: Generalized linear models
+#      chapters:
+#        - 31-principles.qmd
+#        - 31-poisson.qmd
+#        - 31-binomial.qmd
     - part: Mixed models
 #      chapters:
+#        - 31-principles.qmd
 #        - 31-lme.qmd
 #        - 32-glme.qmd
 #        - 33-multi_lme.qmd
@@ -77,12 +88,7 @@ book:
 #        - 62-lm-brms.qmd
 #        - 63-lme-brms.qmd
 #        - 64-gam-brms.qmd
-    - part: Programming and writing with R
-      chapters:
-        - 81-programming.qmd
-        - 82-rmarkdown.qmd
-        - 83-github.qmd
-    - 91-references.qmd
+    - 901-references.qmd
   appendices:
-    - 92-data-files.qmd
-    - 93-latex.qmd
+    - 902-data-files.qmd
+    - 903-latex.qmd

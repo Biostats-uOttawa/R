@@ -13,9 +13,13 @@ Book in development. Several sections not developed yet
 
 ## The aim of this book {.unnumbered}
 
-The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research.
+The aim of this book is two-fold:
+
+1. introduce you to R, a powerful and flexible interactive environment for statistical computing and research.
+1. introduce you to (or reacquaint you with) statistical analysis done in R.
+
 R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting.
-It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.
+It is not intended to cover everything (neither with R not with statistics) but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R and with specific analysis.
 
 ## Multilingual book
 

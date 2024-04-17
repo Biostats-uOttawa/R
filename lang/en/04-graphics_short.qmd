@@ -1,4 +1,4 @@
-# Graphics with R {#sec-graphics_r}
+# Figures {#sec-graphics_r}
 
 <!-- need to
 add info about ggplot

@@ -1,4 +1,4 @@
-# Programming in R {#sec-prog_r}
+# Programming {#sec-prog_r}
 
 After learning the basics, programming in R is the next big step.
 There are already a vast number of R packages available, surely more than enough to cover everything you could possibly want to do? Why then, would you ever need to create you own R functions? Why not just stick to the functions from a package? Well, in some cases you'll want to customise those existing functions to suit your specific needs.
