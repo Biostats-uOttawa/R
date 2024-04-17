@@ -142,7 +142,7 @@ When you open R studio for the first time you should see the following layout (i
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/rstudio.png")
+knitr::include_graphics(path = "images/start/rstudio.png")
 ```
 
 The large window (aka pane) on the left is the **Console** window.
@@ -165,7 +165,7 @@ Don't worry about the `[1]` at the start of the line for now.
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/rconsole_eval.png")
+knitr::include_graphics(path = "images/start/rconsole_eval.png")
 ```
 
 However, once you start writing more R code this becomes rather cumbersome.
@@ -180,7 +180,7 @@ To create a new R script click on the 'File' menu then select New File --> R Scr
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_script.png")
+knitr::include_graphics(path = "images/start/new_script.png")
 ```
 
 Notice that you have a new window (called the Source pane) in the top left of RStudio and the Console is now in the bottom left position.
@@ -192,7 +192,7 @@ The new window is a script editor and where you will write your code.
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/rstudio_new.png")
+knitr::include_graphics(path = "images/start/rstudio_new.png")
 ```
 
 To source your code from your script editor to the Console simply place your cursor on the line of code and then click on the 'Run' button in the top right of the script editor pane.
@@ -202,7 +202,7 @@ To source your code from your script editor to the Console simply place your cur
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/rstudio_run.png")
+knitr::include_graphics(path = "images/start/rstudio_run.png")
 ```
 
 You should see the result in the Console window.
@@ -257,7 +257,7 @@ We will go over how to view the help files and how to search for help in @sec-ba
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/vs_orient.png")
+knitr::include_graphics(path = "images/start/vs_orient.png")
 ```
 
 #### Left panel
@@ -270,11 +270,11 @@ Contains :
 
 ::: {#fig-vs-left-panel layout-ncol=3}
 
-![file](images/ch-01/vs_file_panel.png){#fig-vsfile}
+![file](images/start/vs_file_panel.png){#fig-vsfile}
 
-![git](images/ch-01/vs_git_panel.png){#fig-vsgit}
+![git](images/start/vs_git_panel.png){#fig-vsgit}
 
-![r-ext](images/ch-01/vs_r_ext_panel.png){#fig-vsr}
+![r-ext](images/start/vs_r_ext_panel.png){#fig-vsr}
 
 VS Code left panel
 :::
@@ -292,7 +292,7 @@ Includes:
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/vs_editor_tabs.png")
+knitr::include_graphics(path = "images/start/vs_editor_tabs.png")
 ```
 
 #### Terminal window
@@ -307,7 +307,7 @@ It can be split and run multiple sessions at the same time
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/vs_term_panel.png")
+knitr::include_graphics(path = "images/start/vs_term_panel.png")
 ```
 
 ## Working directories {#sec-work-d}
@@ -540,7 +540,7 @@ In this Chapter we will create a project in a new directory.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj.png")
+knitr::include_graphics(path = "images/start/new_proj.png")
 ```
 
 You can also create a new project by clicking on the 'Project' button in the top right of RStudio and selecting 'New Project...'
@@ -550,7 +550,7 @@ You can also create a new project by clicking on the 'Project' button in the top
 #| echo: false
 #| out-width: 30%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj1.png")
+knitr::include_graphics(path = "images/start/new_proj1.png")
 ```
 
 In the next window select 'New Project'.
@@ -561,7 +561,7 @@ In the next window select 'New Project'.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj2.png")
+knitr::include_graphics(path = "images/start/new_proj2.png")
 ```
 
 Now enter the name of the directory you want to create in the 'Directory name:' field (we'll call it `first_project` for this Chapter).
@@ -574,7 +574,7 @@ Finally, hit the 'Create Project' to create the new project.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj3.png")
+knitr::include_graphics(path = "images/start/new_proj3.png")
 ```
 
 Once your new project has been created you will now have a new folder on your computer that contains an RStudio project file called `first_project.Rproj`.
@@ -586,7 +586,7 @@ You can check this out in the 'Files' tab in RStudio (or in Finder if you're on 
 #| echo: false
 #| out-width: 80%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj4.png")
+knitr::include_graphics(path = "images/start/new_proj4.png")
 ```
 
 The last thing we suggest you do is select `Tools` -> `Project Options...` from the menu.
@@ -600,7 +600,7 @@ The downside to this is that you will need to rerun your R code every time you o
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj5.png")
+knitr::include_graphics(path = "images/start/new_proj5.png")
 ```
 
 Now that you have an RStudio project set up you can start creating R scripts (or R markdown /Quarto documents, see @sec-rmarkdown_r)  or whatever you need to complete you project.
@@ -626,7 +626,7 @@ Ideally you should try to avoid the following!
 #| out-width: 30%
 #| fig-align: center
 #| fig-cap: source:https://xkcd.com/1459/
-knitr::include_graphics(path = "images/ch-01/xkcd_files.png")
+knitr::include_graphics(path = "images/start/xkcd_files.png")
 ```
 
 Although there's not really a recognized standard approach to naming files (actually [there is][file_wiki], just not everyone uses it), there are a couple of things to bear in mind.
@@ -730,7 +730,7 @@ Here is an example of poorly formatted R code
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/before_rcode.png")
+knitr::include_graphics(path = "images/start/before_rcode.png")
 ```
 
 Now highlight the code and use the `styler` :package: package to reformat
@@ -740,7 +740,7 @@ Now highlight the code and use the `styler` :package: package to reformat
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/styler.png")
+knitr::include_graphics(path = "images/start/styler.png")
 ```
 
 To produce some nicely formatted code
@@ -750,7 +750,7 @@ To produce some nicely formatted code
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/after_rcode.png")
+knitr::include_graphics(path = "images/start/after_rcode.png")
 ```
 
 ## Backing up projects

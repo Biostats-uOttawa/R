@@ -180,3 +180,4 @@
 [whoarewe]: https://biostats-uottawa.github.io/people.html
 
 [quarto-guide]: https://quarto.org/docs/guide/
+[quarto-install]: https://quarto.org/docs/get-started/

@@ -37,7 +37,7 @@ So why should you worry about version control? Well, first of all it helps avoid
 #| out-width: 75%
 #| fig-align: center
 #| fig-cap: You need version control
-knitr::include_graphics(path = "images/Messy_folder.PNG")
+knitr::include_graphics(path = "images/github/Messy_folder.PNG")
 ```
 
 
@@ -49,7 +49,7 @@ usually arising from this (familiar?) scenario
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/final_doc.png")
+knitr::include_graphics(path = "images/github/final_doc.png")
 ```
 
 
@@ -80,7 +80,7 @@ If other people are working on the same project (**repository**), or maybe you'r
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/Github_cartoon2.png")
+knitr::include_graphics(path = "images/github/Github_cartoon2.png")
 ```
 
 
@@ -104,7 +104,7 @@ If you get an error (something like `git: command not found`) this means you don
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/git_version.png")
+knitr::include_graphics(path = "images/github/git_version.png")
 ```
 
 
@@ -174,7 +174,7 @@ You will need to restart RStudio after doing this.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/git_path.png")
+knitr::include_graphics(path = "images/github/git_path.png")
 ```
 
 ### Configure VSCode {#sec-vsc_config}
@@ -222,7 +222,7 @@ Click on the 'Repositories' tab at the top and then on the green 'New' button on
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_repo.png")
+knitr::include_graphics(path = "images/github/new_repo.png")
 ```
 
 
@@ -234,7 +234,7 @@ Give your new repo a name (let's call it `first_repo` for this Chapter), select 
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_repo_opt.png")
+knitr::include_graphics(path = "images/github/new_repo_opt.png")
 ```
 
 
@@ -248,7 +248,7 @@ Next click on the green 'Clone or Download' button and copy the `https//...` URL
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_repo_clone.png")
+knitr::include_graphics(path = "images/github/new_repo_clone.png")
 ```
 
 
@@ -262,7 +262,7 @@ In the pop up window select `Version Control`.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/proj_setup1.png")
+knitr::include_graphics(path = "images/github/proj_setup1.png")
 ```
 
 
@@ -278,7 +278,7 @@ We also tick the `Open in new session` option.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/proj_setup2.png")
+knitr::include_graphics(path = "images/github/proj_setup2.png")
 ```
 
 
@@ -295,7 +295,7 @@ Any changes you make to files in this directory will be version controlled by Gi
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/proj_setup3.png")
+knitr::include_graphics(path = "images/github/proj_setup3.png")
 ```
 
 ### Option 2 - RStudio first {#sec-opt2}
@@ -315,7 +315,7 @@ In RStudio click on the `File` -> `New Project` menu and select the `New Directo
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS1.png")
+knitr::include_graphics(path = "images/github/new_proj_RS1.png")
 ```
 
 
@@ -327,7 +327,7 @@ In the pop up window select the `New Project` option
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/proj_setup_RS.png")
+knitr::include_graphics(path = "images/github/proj_setup_RS.png")
 ```
 
 
@@ -340,7 +340,7 @@ Make sure the `Create a git repository` option is ticked
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS2.png")
+knitr::include_graphics(path = "images/github/new_proj_RS2.png")
 ```
 
 
@@ -354,7 +354,7 @@ You can check this by looking in the `Files` tab in RStudio (usually in the bott
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS3.png")
+knitr::include_graphics(path = "images/github/new_proj_RS3.png")
 ```
 
 
@@ -370,7 +370,7 @@ To get our two files under version control click on the 'Git' tab which is usual
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS4.png")
+knitr::include_graphics(path = "images/github/new_proj_RS4.png")
 ```
 
 
@@ -383,7 +383,7 @@ Next, tick the boxes under the 'Staged' column for both files and then click on 
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS5.png")
+knitr::include_graphics(path = "images/github/new_proj_RS5.png")
 ```
 
 
@@ -399,7 +399,7 @@ The two files should now have disappeared from the Git pane in RStudio indicatin
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS6.png")
+knitr::include_graphics(path = "images/github/new_proj_RS6.png")
 ```
 
 
@@ -417,7 +417,7 @@ This time **do not** tick the 'Initialize this repository with a README' (this i
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS7.png")
+knitr::include_graphics(path = "images/github/new_proj_RS7.png")
 ```
 
 
@@ -431,7 +431,7 @@ The code we are interested in is the code under `...or push an existing reposito
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS8.png")
+knitr::include_graphics(path = "images/github/new_proj_RS8.png")
 ```
 
 
@@ -453,7 +453,7 @@ You should see something like this
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_prog_RS9.png")
+knitr::include_graphics(path = "images/github/new_prog_RS9.png")
 ```
 
 
@@ -465,7 +465,7 @@ If you take a look at your repo back on GitHub (click on the `/second_repo` link
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS10.png")
+knitr::include_graphics(path = "images/github/new_proj_RS10.png")
 ```
 
 
@@ -484,7 +484,7 @@ In your repository on GitHub click on the green `Add a README` button.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS11.png")
+knitr::include_graphics(path = "images/github/new_proj_RS11.png")
 ```
 
 
@@ -496,7 +496,7 @@ Now write a short description of your project in the `<> Edit new file` section 
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/new_proj_RS12.png")
+knitr::include_graphics(path = "images/github/new_proj_RS12.png")
 ```
 
 
@@ -540,7 +540,7 @@ If you're working with other people on the same project you may also need to **p
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/workflow_3.png")
+knitr::include_graphics(path = "images/github/workflow_3.png")
 ```
 
 
@@ -556,7 +556,7 @@ Either use the `File` -> `Open Project` menu or click on the top right project i
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd0.png")
+knitr::include_graphics(path = "images/github/first_Rmd0.png")
 ```
 
 
@@ -574,7 +574,7 @@ Your R markdown document should look something like the following (it doesn't ma
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd.png")
+knitr::include_graphics(path = "images/github/first_Rmd.png")
 ```
 
 
@@ -586,7 +586,7 @@ Take a look at the 'Git' tab which should list your new R markdown document (`fi
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd2.png")
+knitr::include_graphics(path = "images/github/first_Rmd2.png")
 ```
 
 
@@ -601,7 +601,7 @@ In our case all of the files are to be added (capital A) as we have just created
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/rstudio_git_cols.png")
+knitr::include_graphics(path = "images/github/rstudio_git_cols.png")
 ```
 
 
@@ -614,7 +614,7 @@ This is done by clicking on the 'Commit' button.
 #| echo: false
 #| out-width: 50%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd3.png")
+knitr::include_graphics(path = "images/github/first_Rmd3.png")
 ```
 
 
@@ -635,7 +635,7 @@ Now click on the 'Commit' button to commit these changes.
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd4.png")
+knitr::include_graphics(path = "images/github/first_Rmd4.png")
 ```
 
 
@@ -649,7 +649,7 @@ Note that the staged files have now been removed.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd5.png")
+knitr::include_graphics(path = "images/github/first_Rmd5.png")
 ```
 
 
@@ -667,7 +667,7 @@ Hit the 'Close' button and then close the 'Review Changes' window.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd6.png")
+knitr::include_graphics(path = "images/github/first_Rmd6.png")
 ```
 
 
@@ -681,7 +681,7 @@ Along side the file name you will see your last commit message ('First commit' i
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd7.png")
+knitr::include_graphics(path = "images/github/first_Rmd7.png")
 ```
 
 
@@ -693,7 +693,7 @@ To see the contents of the file click on the `first_doc.Rmd` file name.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/first_Rmd8.png")
+knitr::include_graphics(path = "images/github/first_Rmd8.png")
 ```
 
 ### Tracking changes 
@@ -716,7 +716,7 @@ Lastly, let's add a summary table of the dataframe using the `kable()` and `summ
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/mod1.png")
+knitr::include_graphics(path = "images/github/mod1.png")
 ```
 
 
@@ -733,7 +733,7 @@ The status icons indicate that the `first_doc.Rmd` file has been modified (capit
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/mod2.png")
+knitr::include_graphics(path = "images/github/mod2.png")
 ```
 
 
@@ -745,7 +745,7 @@ To stage these files tick the 'Staged' box for each file and click on the 'Commi
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/mod3.png")
+knitr::include_graphics(path = "images/github/mod3.png")
 ```
 
 
@@ -760,7 +760,7 @@ Once you're happy, commit these changes by writing a suitable commit message and
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/mod4.png")
+knitr::include_graphics(path = "images/github/mod4.png")
 ```
 
 
@@ -773,7 +773,7 @@ Go to your online GitHub repository and you will see your new commits, including
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/mod5.png")
+knitr::include_graphics(path = "images/github/mod5.png")
 ```
 
 
@@ -785,7 +785,7 @@ To view the changes in `first_doc.Rmd` click on the file name for this file.
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/mod6.png")
+knitr::include_graphics(path = "images/github/mod6.png")
 ```
 
 ### Commit history 
@@ -804,7 +804,7 @@ You can also click on the 'Commit' or 'Diff' buttons which takes you to the same
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/c_history.png")
+knitr::include_graphics(path = "images/github/c_history.png")
 ```
 
 
@@ -822,7 +822,7 @@ You can also view the contents of each file by clicking on the 'View file @ SHA 
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/c_history2.png")
+knitr::include_graphics(path = "images/github/c_history2.png")
 ```
 
 
@@ -835,7 +835,7 @@ To view the commit history navigate to the repository and click on the 'commits'
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/c_history3.png")
+knitr::include_graphics(path = "images/github/c_history3.png")
 ```
 
 
@@ -849,7 +849,7 @@ To view the changes in files associated with the commit simply click on the rele
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/c_history4.png")
+knitr::include_graphics(path = "images/github/c_history4.png")
 ```
 
 
@@ -861,7 +861,7 @@ Which will display changes using the usual format of green for additions and red
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/c_history5.png")
+knitr::include_graphics(path = "images/github/c_history5.png")
 ```
 
 ### Reverting changes {#sec-undo}
@@ -883,7 +883,7 @@ Just be aware that you cannot undo this operation so use with caution.
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert1.png")
+knitr::include_graphics(path = "images/github/revert1.png")
 ```
 
 
@@ -898,7 +898,7 @@ In a similar fashion you can discard chunks of code by clicking on the 'Discard 
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert2.png")
+knitr::include_graphics(path = "images/github/revert2.png")
 ```
 
 #### Staged but not committed and not pushed {-}
@@ -918,7 +918,7 @@ You can do this by staging your file and then tick the 'Amend previous commit` b
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert3.png")
+knitr::include_graphics(path = "images/github/revert3.png")
 ```
 
 
@@ -931,7 +931,7 @@ We use the amend commit approach alot but it's important to understand that you 
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert4.png")
+knitr::include_graphics(path = "images/github/revert4.png")
 ```
 
 
@@ -946,7 +946,7 @@ If you spot a mistake that has happened multiple commits back or you just want t
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert5.png")
+knitr::include_graphics(path = "images/github/revert5.png")
 ```
 
 
@@ -961,7 +961,7 @@ Don't forget to stage and commit this new file.
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert6.png")
+knitr::include_graphics(path = "images/github/revert6.png")
 ```
 
 
@@ -973,7 +973,7 @@ knitr::include_graphics(path = "images/revert6.png")
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert7.png")
+knitr::include_graphics(path = "images/github/revert7.png")
 ```
 
 
@@ -1013,7 +1013,7 @@ Let's say we want to revert back to our 'First commit' which has a SHA identifie
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert8.png")
+knitr::include_graphics(path = "images/github/revert8.png")
 ```
 
 
@@ -1035,7 +1035,7 @@ Notice that if we look at our commit history all of the commits we have made are
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert9.png")
+knitr::include_graphics(path = "images/github/revert9.png")
 ```
 
 
@@ -1047,7 +1047,7 @@ and our repo on GitHub also reflects these changes
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/revert10.png")
+knitr::include_graphics(path = "images/github/revert10.png")
 ```
 
 ## Using Git with VSCode {#sec-use_git_vsc}
@@ -1116,7 +1116,7 @@ On RStudio, in the git pane,  you can right clicking on the filename to exclude 
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
-knitr::include_graphics(path = "images/tip1.png")
+knitr::include_graphics(path = "images/github/tip1.png")
 ```
 
 

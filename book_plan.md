@@ -2,16 +2,21 @@
 
 - [X] index
 
-- [X] Starting with R
+- [X] Using R
   - [X] 01-start
   - [X] 02-basics
-
-- Data and graphics
   - [ ] 11-data
   - [ ] 12-graphics_short
-- [ ] Linear models
+  - [ ] 81-programming
+  - [X] 82-rmarkdown
+  - [ ] 83-github
+- [ ] Fundamentals of statistics
+  - [ ]
+
+- Linear models
   - [ ] 21-stats
 <!--
+- Generalized linear models
   - [ ] 22-glm
 
 - [ ] Mixed models
@@ -32,10 +37,6 @@
   - [ ] 63-lme-brms
   - [ ] 64-gam-brms
   -->
-- [ ] Programming and writing with R
-  - [ ] 81-programming
-  - [ ] 82-rmarkdown
-  - [ ] 83-github
 
 - [X] 98-references
 - [ ] appendices:

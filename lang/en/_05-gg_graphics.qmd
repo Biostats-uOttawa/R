@@ -38,7 +38,7 @@ Think of how easily you can spot an Excel scatterplot because other than a coupl
 #| fig-align: center
 #| fig-cap: framework behind ggplot2
 library(knitr)
-knitr::include_graphics(path = "images/full_connected.png")
+knitr::include_graphics(path = "images/plot/full_connected.png")
 ```
 
 
@@ -207,7 +207,7 @@ Let's update our code to include the 'data' and 'mapping' layers (indicated by t
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/data_mapping.png")
+knitr::include_graphics(path = "images/plot/data_mapping.png")
 ```
 
 
@@ -243,7 +243,7 @@ Let's add (`+`) a new geometry layer now:
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/geoms.png")
+knitr::include_graphics(path = "images/plot/geoms.png")
 ```
 
 ```{r}
@@ -266,7 +266,7 @@ The three crucial layers are:
 #| out-width: 7.5%
 #| fig-align: center
 #| fig-cap: Data - the information we want to plot
-knitr::include_graphics(path = "images/data.png")
+knitr::include_graphics(path = "images/plot/data.png")
 ```
 
 ```{r}
@@ -274,7 +274,7 @@ knitr::include_graphics(path = "images/data.png")
 #| out-width: 7.5%
 #| fig-align: center
 #| fig-cap: Mapping - which variables we want displayed and where
-knitr::include_graphics(path = "images/mapping.png")
+knitr::include_graphics(path = "images/plot/mapping.png")
 ```
 
 ```{r}
@@ -282,7 +282,7 @@ knitr::include_graphics(path = "images/mapping.png")
 #| out-width: 7.5%
 #| fig-align: center
 #| fig-cap: Geometry - how we want that data displayed
-knitr::include_graphics(path = "images/geoms.png")
+knitr::include_graphics(path = "images/plot/geoms.png")
 ```
 
 
@@ -305,7 +305,7 @@ Let's try it.
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/geoms.png")
+knitr::include_graphics(path = "images/plot/geoms.png")
 ```
 
 ```{r}
@@ -328,7 +328,7 @@ We can fix that very easily just by changing "line" to "smooth".
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/geoms_statistics.png")
+knitr::include_graphics(path = "images/plot/geoms_statistics.png")
 ```
 
 ```{r}
@@ -359,7 +359,7 @@ Let's update the code to use a linear model without confidence intervals.
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/statistics.png")
+knitr::include_graphics(path = "images/plot/statistics.png")
 ```
 
 ```{r}
@@ -385,7 +385,7 @@ An aside: `ggplot2` was written with both UK English and American English in min
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/mapping_scales.png")
+knitr::include_graphics(path = "images/plot/mapping_scales.png")
 ```
 
 ```{r}
@@ -410,7 +410,7 @@ In this case, we can easily move the information around and get exactly the same
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/data_mapping.png")
+knitr::include_graphics(path = "images/plot/data_mapping.png")
 ```
 
 ```{r}
@@ -436,7 +436,7 @@ For this worked example, we'll move the same information back to the universal `
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/data_mapping.png")
+knitr::include_graphics(path = "images/plot/data_mapping.png")
 ```
 
 ```{r}
@@ -477,7 +477,7 @@ Let's see how it works:
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/facets.png")
+knitr::include_graphics(path = "images/plot/facets.png")
 ```
 
 ```{r}
@@ -504,7 +504,7 @@ Let's try it and see what happens.
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/facets.png")
+knitr::include_graphics(path = "images/plot/facets.png")
 ```
 
 ```{r}
@@ -539,7 +539,7 @@ Let's try using `facet_grid` instead of `facet_wrap` to produce the following pl
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/facets.png")
+knitr::include_graphics(path = "images/plot/facets.png")
 ```
 
 ```{r}
@@ -563,7 +563,7 @@ To fix this we need to do to rearrange our formula so that we say that it is blo
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/facets.png")
+knitr::include_graphics(path = "images/plot/facets.png")
 ```
 
 ```{r}
@@ -736,7 +736,7 @@ If we wanted to change the shape of the plotting symbols to reflect the differen
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales_mapping.png")
+knitr::include_graphics(path = "images/plot/scales_mapping.png")
 ```
 
 ```{r}
@@ -877,7 +877,7 @@ For example, to use the `theme_classic`\index{theme\_classic()}, `theme_bw`\inde
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -974,7 +974,7 @@ Of course, there's no need to use a personalised theme as the pre-built options 
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1005,7 +1005,7 @@ Let's try remaking our figure using our new theme.
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1055,7 +1055,7 @@ Let's see how it works.
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/geoms_mapping.png")
+knitr::include_graphics(path = "images/plot/geoms_mapping.png")
 ```
 
 ```{r}
@@ -1121,7 +1121,7 @@ Anyway, here's the code...
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/geoms_statistics.png")
+knitr::include_graphics(path = "images/plot/geoms_statistics.png")
 ```
 
 ```{r}
@@ -1169,7 +1169,7 @@ Having chosen our colours using whichever means, let's see how we can do it:
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1327,7 +1327,7 @@ If we wanted to recreate the above figure using the statistics layer we would do
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/statistics.png")
+knitr::include_graphics(path = "images/plot/statistics.png")
 ```
 
 ```{r}
@@ -1358,7 +1358,7 @@ We'll start with limiting the axes:
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/coords.png")
+knitr::include_graphics(path = "images/plot/coords.png")
 ```
 
 ```{r}
@@ -1399,7 +1399,7 @@ Doing so means that the entire dataset is maintained (and any trends are maintai
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/coords.png")
+knitr::include_graphics(path = "images/plot/coords.png")
 ```
 
 ```{r}
@@ -1489,7 +1489,7 @@ Here we only need to change nitrogen (which is a factor) to flowers (which is co
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1523,7 +1523,7 @@ This works much as `scale_colour_manual()` except that this time we specify the 
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1559,7 +1559,7 @@ We'll set the midpoint using `mean()`\index{mean()}.
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1597,7 +1597,7 @@ In the code below, we use 0, 0.25, 0.5, 0.75 and 1 as our proportions, correspon
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1633,7 +1633,7 @@ What if instead we wanted size to change according to a variable in our dataset?
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales_mapping.png")
+knitr::include_graphics(path = "images/plot/scales_mapping.png")
 ```
 
 ```{r}
@@ -1675,7 +1675,7 @@ To do so, we can use a `theme()`\index{theme()} layer and the argument `legend.p
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1713,7 +1713,7 @@ How would we go about hiding it?
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1748,7 +1748,7 @@ What if we really don't want points included in the legend? Instead of stating t
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1787,7 +1787,7 @@ Not happy with your font options? Check out the `extrafont` \index{extrafont pac
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/geoms.png")
+knitr::include_graphics(path = "images/plot/geoms.png")
 ```
 
 ```{r}
@@ -1860,7 +1860,7 @@ We'll alter the x axis ticks in this example, with a tick label every 2.5 units.
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1897,7 +1897,7 @@ Doing so isn't too much of a pain and we'll be using `theme()`\index{theme()} ag
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -2347,5 +2347,5 @@ ggpairs(flower, aes(colour = nitrogen), cardinality_threshold = NULL, progress =
 
 ```{r}
 #| label: links
-#| child: images/_links.md
+#| child: images/plot/_links.md
 ```

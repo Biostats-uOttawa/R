@@ -108,7 +108,7 @@ There is one important exception to this, you can include `NA` (remember this is
 #| echo: false
 #| out-width: 40%
 #| fig-align: center
-knitr::include_graphics(path = "images/scal_vec.png")
+knitr::include_graphics(path = "images/data/scal_vec.png")
 ```
 
 ### Matrices and arrays {#sec-mat_array}
@@ -124,7 +124,7 @@ Again, matrices and arrays must contain elements all of the same data class.
 #| echo: false
 #| out-width: 50%
 #| fig-align: center
-knitr::include_graphics(path = "images/mat_array.png")
+knitr::include_graphics(path = "images/data/mat_array.png")
 ```
 
 
@@ -352,7 +352,7 @@ If you want to follow along you can download the data file (*'flower.xls'*) from
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/libre_off.png")
+knitr::include_graphics(path = "images/data/libre_off.png")
 ```
 
 
@@ -368,7 +368,7 @@ In the drop down menu located above the 'Save' button change the default 'All fo
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/libre_off1.png")
+knitr::include_graphics(path = "images/data/libre_off1.png")
 ```
 
 
@@ -382,7 +382,7 @@ Click on OK to save the file.
 #| echo: false
 #| out-width: 40%
 #| fig-align: center
-knitr::include_graphics(path = "images/libre_off2.png")
+knitr::include_graphics(path = "images/data/libre_off2.png")
 ```
 
 
@@ -400,7 +400,7 @@ Select OK to save the file.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ms_excel1.png")
+knitr::include_graphics(path = "images/data/ms_excel1.png")
 ```
 
 
@@ -1570,7 +1570,7 @@ choose the 'Tab' option to set the delimiter and then click on the 'Finish' butt
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/excel_export.png")
+knitr::include_graphics(path = "images/data/excel_export.png")
 ```
 
 

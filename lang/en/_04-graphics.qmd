@@ -164,7 +164,7 @@ You will see an example of this in [Chapter 5](#simple_lm) where we use the `plo
 #| fig-align: center
 #| fig-cap: Structure of graphics with ggplot2
 
-knitr::include_graphics(path = "images/full_connected.png")
+knitr::include_graphics(path = "images/plot/full_connected.png")
 ```
 
 As mentionned earlier `ggplot` grammar requires several elements to produce a graphic and a minimum of 3 need to be specified:
@@ -741,7 +741,7 @@ If we wanted to recreate the above figure using the statistics layer we would do
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/statistics.png")
+knitr::include_graphics(path = "images/plot/statistics.png")
 ```
 
 ```{r}
@@ -772,7 +772,7 @@ We'll start with limiting the axes:
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/coords.png")
+knitr::include_graphics(path = "images/plot/coords.png")
 ```
 
 ```{r}
@@ -819,7 +819,7 @@ Doing so means that the entire dataset is maintained (and any trends are maintai
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/coords.png")
+knitr::include_graphics(path = "images/plot/coords.png")
 ```
 
 ```{r}
@@ -921,7 +921,7 @@ Here we only need to change nitrogen (which is a factor) to flowers (which is co
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -959,7 +959,7 @@ This works much as `scale_colour_manual()` except that this time we specify the 
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -999,7 +999,7 @@ We'll set the midpoint using `mean()`.
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1043,7 +1043,7 @@ In the code below, we use 0, 0.25, 0.5, 0.75 and 1 as our proportions, correspon
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1085,7 +1085,7 @@ What if instead we wanted size to change according to a variable in our dataset?
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales_mapping.png")
+knitr::include_graphics(path = "images/plot/scales_mapping.png")
 ```
 
 ```{r}
@@ -1133,7 +1133,7 @@ To do so, we can use a `theme()` layer and the argument `legend.position =`, fol
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1177,7 +1177,7 @@ How would we go about hiding it?
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1218,7 +1218,7 @@ What if we really don't want points included in the legend? Instead of stating t
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1263,7 +1263,7 @@ Not happy with your font options? Check out the `extrafont`  package which expan
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/geoms.png")
+knitr::include_graphics(path = "images/plot/geoms.png")
 ```
 
 ```{r}
@@ -1347,7 +1347,7 @@ We'll alter the x axis ticks in this example, with a tick label every 2.5 units.
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/scales.png")
+knitr::include_graphics(path = "images/plot/scales.png")
 ```
 
 ```{r}
@@ -1390,7 +1390,7 @@ Doing so isn't too much of a pain and we'll be using `theme()` again to set the 
 #| echo: false
 #| out-width: 7.5%
 #| fig-align: center
-knitr::include_graphics(path = "images/theme.png")
+knitr::include_graphics(path = "images/plot/theme.png")
 ```
 
 ```{r}
@@ -1720,5 +1720,5 @@ See `?png` for more details.
 
 ```{r}
 #| label: links
-#| child: images/_links.md
+#| child: images/plot/_links.md
 ```

@@ -44,7 +44,7 @@ the underlying statistics, the geometric arrangement, the theme, see @fig-ggplot
 Users are thus able to manipulate each of these components (i.e.
 layers) and produce a tailor-made figure fit for their specific needs.
 
-![The Grammar of Graphics. Visual by Thomas de Beus](images/ch-04/graph-grammar.png){fig-align="center" #fig-ggplot-str}
+![The Grammar of Graphics. Visual by Thomas de Beus](images/plot/graph-grammar.png){fig-align="center" #fig-ggplot-str}
 
 Each of these systems have their strengths and weaknesses and we often use them interchangeably.
 In this Chapter we'll introduce you to the both base R plotting function and the`ggplot2` package.
@@ -166,7 +166,7 @@ You will see an example of this in @sec-simple_lm where we use the `plot()` func
 #| fig-align: center
 #| fig-cap: Structure of graphics with ggplot2
 
-knitr::include_graphics(path = "images/full_connected.png")
+knitr::include_graphics(path = "images/plot/full_connected.png")
 ```
 
 As mentionned earlier `ggplot` grammar requires several elements to produce a graphic (@fig-ggplot-str) and a minimum of 3 are required:

@@ -111,7 +111,7 @@ All of the objects you create will be stored in the current workspace and you ca
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/rs_env.png")
+knitr::include_graphics(path = "images/basic/rs_env.png")
 ```
 
 If you click on the down arrow on the 'List' icon in the same pane and change to 'Grid' view RStudio will show you a summary of the objects including the type (numeric - it's a number), the length (only one value in this object), its 'physical' size and its value (48 in this case). In VSCode, go on the R extension pane, and you can obtain the same information.
@@ -121,7 +121,7 @@ If you click on the down arrow on the 'List' icon in the same pane and change to
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/rs_env2.png")
+knitr::include_graphics(path = "images/basic/rs_env2.png")
 ```
 
 There are many different types of values that you can assign to an object.
@@ -144,7 +144,7 @@ Our workspace now contains both objects we've created so far with `my_obj2` list
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/rs_env3.png")
+knitr::include_graphics(path = "images/basic/rs_env3.png")
 ```
 
 To change the value of an existing object we simply reassign a new value to it.
@@ -163,7 +163,7 @@ Notice that the Type has changed to numeric and the value has changed to 1024 in
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/rs_env4.png")
+knitr::include_graphics(path = "images/basic/rs_env4.png")
 ```
 
 Once we have created a few objects, we can do stuff with our objects.
@@ -711,7 +711,7 @@ the help page is displayed in the 'Help' tab in the Files pane (usually in the b
 #| echo: false
 #| out-width: 50%
 #| fig-align: center
-knitr::include_graphics(path = "images/rs_help.png")
+knitr::include_graphics(path = "images/basic/rs_help.png")
 ```
 
 Admittedly the help files can seem anything but helpful when you first start using R.
@@ -762,7 +762,7 @@ The `help.search()` function searches through the help documentation, code demon
 #| echo: false
 #| out-width: 50%
 #| fig-align: center
-knitr::include_graphics(path = "images/rs_help2.png")
+knitr::include_graphics(path = "images/basic/rs_help2.png")
 ```
 
 Another useful function is `apropos()`.
