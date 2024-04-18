@@ -8,6 +8,8 @@
 *_cache/
 *_files/
 *_freeze/
+*.docx
+book_plan.html
 
 !en/*_files/
 !fr/*_files/
