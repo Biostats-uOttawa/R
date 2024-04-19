@@ -47,7 +47,7 @@ As we saw in @sec-chap1, at a basic level we can use R much as you would use a c
 We can type an arithmetic expression into our script, then source it into the console and receive a result.
 For example, if we type the expression `1 + 1` and then source this line of code we get the answer `2` (:smiley:!)
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 1 + 1
@@ -60,7 +60,7 @@ R follows the usual mathematical convention of [order of operations][op-prec].
 For example, the expression `2 + 3 * 4` is interpreted to have the value `2 + (3 * 4) = 14`, not `(2 + 3) * 4 = 20`.
 There are a huge range of mathematical functions in R, some of the most useful include; `log()`, `log10()`, `exp()`, `sqrt()`.
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 log(1) # logarithm to base e
@@ -97,7 +97,7 @@ You can also use `=` instead of `<-` to assign values but this is bad practice s
 
 To view the value of the object you simply type the name of the object
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_obj
@@ -276,7 +276,7 @@ my_vec
 Now that we've created a vector we can use other functions to do useful stuff with this object.
 For example, we can calculate the mean, variance, standard deviation and number of elements in our vector by using the `mean()`, `var()`, `sd()` and `length()` functions
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 mean(my_vec) # returns the mean of my_vec
@@ -287,7 +287,7 @@ length(my_vec) # returns the number of elements in my_vec
 
 If we wanted to use any of these values later on in our analysis we can just assign the resulting value to another object
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 vec_mean <- mean(my_vec) # returns the mean of my_vec
@@ -297,7 +297,7 @@ vec_mean
 Sometimes it can be useful to create a vector that contains a regular sequence of values in steps of one.
 Here we can make use of a shortcut using the `:` symbol.
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_seq <- 1:10 # create regular sequence
@@ -309,7 +309,7 @@ my_seq2
 Other useful functions for generating vectors of sequences include the `seq()` and `rep()` functions.
 For example, to generate a sequence from 1 to 5 in steps of 0.5
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_seq2 <- seq(from = 1, to = 5, by = 0.5)
@@ -322,7 +322,7 @@ Play around with other values for these arguments to see their effect.
 The `rep()` function allows you to replicate (repeat) values a specified number of times.
 To repeat the value 2, 10 times
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_seq3 <- rep(2, times = 10) # repeats 2, 10 times
@@ -331,7 +331,7 @@ my_seq3
 
 You can also repeat non-numeric values
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_seq4 <- rep("abc", times = 3) # repeats ‘abc’ 3 times
@@ -340,7 +340,7 @@ my_seq4
 
 or each element of a series
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_seq5 <- rep(1:5, times = 3) # repeats the series 1 to
@@ -350,7 +350,7 @@ my_seq5
 
 or elements of a series
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_seq6 <- rep(1:5, each = 3) # repeats each element of the
@@ -360,7 +360,7 @@ my_seq6
 
 We can also repeat a non-sequential series
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_seq7 <- rep(c(3, 1, 10, 7), each = 3) # repeats each
@@ -375,7 +375,7 @@ However, care needs to be taken as too many nested functions can make your code 
 We could rewrite the code above to explicitly separate the two different steps to generate our vector.
 Either approach will give the same result, you just need to use your own judgement as to which is more readable.
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 in_vec <- c(3, 1, 10, 7)
@@ -401,7 +401,7 @@ This index can be a position or the result of a logical test.
 To extract elements based on their position we simply write the position inside the `[ ]`.
 For example, to extract the 3rd value of `my_vec`
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_vec # remind ourselves what my_vec looks like
@@ -418,7 +418,7 @@ Python).
 We can also extract more than one value by using the `c()` function inside the square brackets.
 Here we extract the 1^st^, 5^th^, 6^th^ and 8^th^ element from the `my_vec` object
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_vec[c(1, 5, 6, 8)]
@@ -427,7 +427,7 @@ my_vec[c(1, 5, 6, 8)]
 Or we can extract a range of values using the `:` notation.
 To extract the values from the 3^rd^ to the 8^th^ elements
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_vec[3:8]
@@ -438,7 +438,7 @@ my_vec[3:8]
 Another really useful way to extract data from a vector is to use a logical expression as an index.
 For example, to extract all elements with a value greater than 4 in the vector `my_vec`
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_vec[my_vec > 4]
@@ -448,7 +448,7 @@ Here, the logical expression is `my_vec > 4` and R will only extract those eleme
 So how does this actually work? If we look at the output of just the logical expression without the square brackets you can see that R returns a vector containing either `TRUE` or `FALSE` which correspond to whether the logical condition is satisfied for each element.
 In this case only the 4^th^ and 8^th^ elements return a `TRUE` as their value is greater than 4.
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_vec > 4
@@ -456,7 +456,7 @@ my_vec > 4
 
 So what R is actually doing under the hood is equivalent to
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_vec[c(FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE)]
@@ -468,7 +468,7 @@ In addition to the `<` and `>` operators you can also use composite operators to
 For example the expression for 'greater or equal to' is `>=`.
 To test whether a value is equal to a value we need to use a double equals symbol `==` and for 'not equal to' we use `!=` (the `!` symbol means 'not').
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_vec[my_vec >= 4] # values greater or equal to 4
@@ -482,7 +482,7 @@ We can also combine multiple logical expressions using [Boolean expressions][boo
 In R the `&` symbol means AND and the `|` symbol means OR.
 For example, to extract values in `my_vec` which are less than 6 AND greater than 2
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 val26 <- my_vec[my_vec < 6 & my_vec > 2]
@@ -491,7 +491,7 @@ val26
 
 or extract values in `my_vec` that are greater than 6 OR less than 3
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 val63 <- my_vec[my_vec > 6 | my_vec < 3]
@@ -503,7 +503,7 @@ val63
 We can change the values of some elements in a vector using our `[ ]` notation in combination with the assignment operator `<-`.
 For example, to replace the 4^th^ value of our `my_vec` object from `6` to `500`
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 my_vec[4] <- 500
@@ -512,7 +512,7 @@ my_vec
 
 We can also replace more than one value or even replace values based on a logical expression
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 # replace the 6th and 7th element with 100
@@ -529,7 +529,7 @@ my_vec
 In addition to extracting particular elements from a vector we can also order the values contained in a vector.
 To sort the values from lowest to highest value we can use the `sort()` function
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 vec_sort <- sort(my_vec)
@@ -538,7 +538,7 @@ vec_sort
 
 To reverse the sort, from highest to lowest, we can either include the `decreasing = TRUE` argument when using the `sort()` function
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 vec_sort2 <- sort(my_vec, decreasing = TRUE)
@@ -548,7 +548,7 @@ vec_sort2
 or first sort the vector using the `sort()` function and then reverse the sorted vector using the `rev()` function.
 This is another example of nesting one function inside another function.
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 vec_sort3 <- rev(sort(my_vec))
@@ -559,7 +559,7 @@ Whilst sorting a single vector is fun, perhaps a more useful task would be to so
 To do this we should use the `order()` function in combination with `[ ]`.
 To demonstrate this let's create a vector called `height` containing the height of 5 different people and another vector called `p.names` containing the names of these people (so Joanna is 180 cm, Charlotte is 155 cm etc)
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 height <- c(180, 155, 160, 167, 181)
@@ -572,7 +572,7 @@ p.names
 Our goal is to order the people in `p.names` in ascending order of their `height`.
 The first thing we'll do is use the `order()` function with the `height` variable to create a vector called `height_ord`
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 height_ord <- order(height)
@@ -585,7 +585,7 @@ The second smallest value in `height` is the 3^rd^ element of `height`, which wh
 The largest value of `height` is element `5` which is 181.
 Now that we have a vector of the positional indices of heights in ascending order (`height_ord`), we can extract these values from our `p.names` vector in this order
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 names_ord <- p.names[height_ord]
@@ -603,7 +603,7 @@ One of the great things about R functions is that most of them are vectorised.
 This means that the function will operate on all elements of a vector without needing to apply the function on each element separately.
 For example, to multiple each element of a vector by 5 we can simply use
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 # create a vector
@@ -615,7 +615,7 @@ my_vec2 * 5
 
 Or we can add the elements of two or more vectors
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 # create a second vector
@@ -630,7 +630,7 @@ my_vec2 * my_vec3
 
 However, you must be careful when using vectorisation with vectors of different lengths as R will quietly recycle the elements in the shorter vector rather than throw a wobbly (error).
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 # create a third vector
@@ -648,7 +648,7 @@ Missing data can be a pain in the proverbial both from an R perspective and also
 From an R perspective missing data can be problematic as different functions deal with missing data in different ways.
 For example, let's say we collected air temperature readings over 10 days, but our thermometer broke on day 2 and again on day 9 so we have no data for those days
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 temp <- c(7.2, NA, 7.1, 6.9, 6.5, 5.8, 5.8, 5.5, NA, 5.5)
@@ -657,7 +657,7 @@ temp
 
 We now want to calculate the mean temperature over these days using the `mean()` function
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 mean_temp <- mean(temp)
@@ -672,7 +672,7 @@ If we look at the help file (using `?mean` - see the next section @sec-help for 
 
 If we change this argument to `na.rm = TRUE` when we use the `mean()` function this will allow us to ignore the `NA` values when calculating the mean
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 mean_temp <- mean(temp, na.rm = TRUE)
@@ -769,7 +769,7 @@ Another useful function is `apropos()`.
 This function can be used to list all functions containing a specified character string.
 For example, to find all functions with `mean` in their name
 
-```{r }
+```{r}
 #| echo: true
 #| eval: true
 apropos("mean")

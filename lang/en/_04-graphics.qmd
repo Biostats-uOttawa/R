@@ -542,7 +542,7 @@ Let's create a multi-panel scatterplot of all of the numeric variables in our `f
 Note, you may need to click on the 'Zoom' button in RStudio to display the plot clearly.
 
 
-```{r }
+```{r}
 #| label: plot20
 #| echo: true
 #| out-width: 75%

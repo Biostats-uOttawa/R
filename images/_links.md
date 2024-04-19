@@ -167,7 +167,7 @@
 [colours]: http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 [lowess]: https://en.wikipedia.org/wiki/Local_regression
 [show-code]: https://stackoverflow.com/questions/19226816/how-can-i-view-the-source-code-for-a-function
-[francesinha]: https://en.wikipedia.org/wiki/Francesinha
+[balmoral-ck]: https://thescottishbutcher.com/recipes/chicken-balmoral-and-peppercorn-sauce/
 [scoping]: https://www.r-bloggers.com/dont-run-afoul-of-scoping-rules-in-r/
 [code-conduct]: https://www.contributor-covenant.org/version/2/0/code_of_conduct/
 

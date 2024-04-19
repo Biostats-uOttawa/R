@@ -27,7 +27,7 @@ book:
     title: R Way
     left:
       - text: Data
-        href: 92-data-files.qmd
+        href: 902-data-files.qmd
       - text: Other resources
         menu:
           - text: Biostats uOttawa

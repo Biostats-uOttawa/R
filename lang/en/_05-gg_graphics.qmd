@@ -182,7 +182,7 @@ We really should include some information, but to do so, we need data.
 We'll keep using the `flower` dataset that you've used in [Chapter 3](#data_r).
 Let's have a quick reminder of what the structure of the data looks like.
 
-```{r }
+```{r}
 #| label: str-of-flower
 flower <- read.table("data/flower.csv", stringsAsFactors = TRUE, 
 										 header = TRUE, sep = ",")
@@ -942,7 +942,7 @@ Indeed, you can even make your own theme which is what we'll work on next.
 To begin with, we'll have a look to see how `theme_classic()` was coded.
 We can do that easily enough by just writing the function name without the parentheses (see [Chapter 7](#prog_r) for a bit more on this).
 
-```{r }
+```{r}
 #| label: theme_classic
 #| message: false
 #| comment: ''
@@ -1080,7 +1080,7 @@ ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
 
 Notice how we included the function `mean(shootarea)` within the `geom_hline()` function? We could also do that externally to the `ggplot2` code and get the same result.
 
-```{r }
+```{r}
 #| label: shootarea-mean
 #| message: false
 mean(flower$shootarea)

@@ -9,30 +9,34 @@ format:
 
 
 ## Preface
+[done]{.aside}
 
-- book explanation and credits
+- [x] book explanation
+- [X] author info
+- [X] credits 
 
 ## Part I: Using R
 [*nearly done*]{.aside}
 
-1. start (done)
-    - intro to working with R
-1. basics (done)
-    - R basic use
-1. data (last read)
-    - loading and wrangling data
-1. graphics (need ggplot custom)
-    - making basic plot
-    - ggplot basic
-    - ggplot advanced (not done)
-1. programming (need rewrite)
-    - loop and conditions
-    - making function
-    - making package ?? (not done)
-1. Writing report and reproducible science with R (done, need new screenshoot)
-    - intro to Rmarkdown from install to use
-1. Using git and github with R (need last read)
-    - intro to using git and github with R
+1. [X] start ([done]{.underline})
+    - [X] intro to working with R
+1. [X] basics ([done]{.underline})
+    - [X] R basic use
+1. data ([need tidyverse section]{.underline})
+    - [X] basic R loading and wrangling data
+    - tidyverse intro
+1. graphics ([need advanced ggplot use]{.underline})
+    - [X] making basic plot
+    - [X] ggplot basic
+    - ggplot advanced
+1. [x] programming ([maybe talk about writing a package]{.underline})
+    - loop and conditions (exist)
+    - making function (exist)
+    - making package - maybe just add a reference to that (not done)
+1. Writing report and reproducible science with R ([need new screenshoot]{.underline})
+    - [X] intro to Rmarkdown from install to use
+1. Using git and github with R ([need last read]{.underline})
+    - [X] intro to using git and github with R
 
 ## Part II: Fundamentals of statistics
 
@@ -111,8 +115,8 @@ format:
 
 Code to automatically:
 
-1. cite all R packages
-1. create bibliography
+1. [X] cite all R packages
+1. [X] create bibliography
 
 ## Appendices
 

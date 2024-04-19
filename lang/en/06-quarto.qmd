@@ -13,19 +13,18 @@ screenshot are still with R markdown will be update soon
 :::
 
 This chapter will introduce you to creating reproducible reports using R markdown / Quarto to encourage best (or better) practice to facilitate open science.
-It will first describe what R markdown and Quarto are and why you might want to consider using it, describe how to create an R markdown document using RStudio and then how to convert this document to a html or pdf formatted report.
+It will first describe what R markdown and Quarto are and why you might want to consider using it, describe how to create a Quarto document using RStudio and then how to convert this document to a html or pdf formatted report.
 During this Chapter you will learn:
 
-* the different components of an R markdown document
+* the different components of a Quarto document
 * how to format text, graphics and tables within the document
-* how to avoid some of the common difficulties using R markdown.
+* how to avoid some of the common difficulties using Quarto.
 
 ## What is R markdown / Quarto?
 
 ### R Markdown
 
 R markdown is a simple and easy to use plain text language used to combine your R code, results from your data analysis (including plots and tables) and written commentary into a single nicely formatted and reproducible document (like a report, publication, thesis chapter or a web page like this one).
- 
 
 Technically, R markdown is a combination of three languages, R, Markdown and YAML (yet another markup language).
 Both Markdown and YAML are a type of 'markup' language.
@@ -41,8 +40,8 @@ Like R Markdown, Quarto uses `knitr` :package: package to execute R code, and is
 However, it also comes with a plethora of new functionalities.
 More importantly, it makes it much easier to create different type of output since the coding is homogenize for specific format without having to rely on different r packages each with there own specificity (*e.g* bookdown, hugodown, blogdown, thesisdown, rticles, xaringan, ...).
 
-In the rest of this chapter, we will talk about Quarto but nearly everything can be done with R markdown.
-Quarto uses `.qmd` files while R markdown works with `.qmd` but Quarto can render `.qmd` files too.
+In the rest of this chapter, we will talk about Quarto but a lot can be done with R markdown.
+Quarto uses `.qmd` files while R markdown works with `.Rmd` but Quarto can render `.Rmd` files too.
 
 ## Why use Quarto?
 
@@ -326,7 +325,7 @@ Some of the most common markdown syntax for providing emphasis and formatting te
 
  
 
-Interestingly there is no underline in R markdown syntax by default, for multiple more or less esoteric reasons (*e.g.* an underline is considered a stylistic element (there may well be other [reasons][underline])).
+Interestingly there is no underline in R markdown syntax by default, for more or less esoteric reasons (*e.g.* an underline is considered a stylistic element (there may well be other [reasons][underline])).
 Quarto fixed that problem, you can simply do `[text to underline]{.underline}` to [underline your text]{.underline}.
 
 #### White space and line breaks {-}

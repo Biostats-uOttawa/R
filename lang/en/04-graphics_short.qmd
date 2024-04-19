@@ -62,23 +62,23 @@ There are many functions in R to produce plots ranging from the very basic to th
 It's impossible to cover every aspect of producing graphics in R in this book so we'll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in @sec-custom-plot.
 
 The most common high level function used to produce plots in R is (rather unsurprisingly) the `plot()` function.
-For example, let's plot the `weight` of petunia plants from our `flowers` data frame which we imported in @sec-import_fnc.
+For example, let's plot the `weight` of unicorns from our `unicorns` data frame which we imported in @sec-import_fnc.
 
 ```{r}
 #| label: plot1
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-flowers <- read.csv(file = "data/flower.csv")
+unicorns <- read.csv(file = "data/unicorns.csv")
 
-plot(flowers$weight)
+plot(unicorns$weight)
 ```
 
 R has plotted the values of `weight` (on the y axis) against an index since we are only plotting one variable to plot.
 The index is just the order of the `weight` values in the data frame (1 first in the data frame and 97 last).
 The `weight` variable name has been automatically included as a y axis label and the axes scales have been automatically set.
 
-If we'd only included the variable `weight` rather than `flowers$weight`, the `plot()` function will display an error as the variable `weight` only exists in the `flowers` data frame object.
+If we'd only included the variable `weight` rather than `unicorns$weight`, the `plot()` function will display an error as the variable `weight` only exists in the `unicorns` data frame object.
 
 ```{r}
 #| label: plot2
@@ -94,11 +94,11 @@ As many of the base R plotting functions don't have a `data =` argument to speci
 #| label: plot3
 #| echo: true
 #| eval: false
-with(flowers, plot(weight))
+with(unicorns, plot(weight))
 ```
 
 To plot a scatterplot of one numeric variable against another numeric variable we just need to include both variables as arguments when using the `plot()` function.
-For example to plot `shootarea` on the y axis and `weight` of the x axis.
+For example to plot `fluffyness` on the y axis and `weight` of the x axis.
 
 
 ```{r}
@@ -106,7 +106,7 @@ For example to plot `shootarea` on the y axis and `weight` of the x axis.
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-plot(x = flowers$weight, y = flowers$shootarea)
+plot(x = unicorns$weight, y = unicorns$fluffyness)
 ```
 
 There is an equivalent approach for these types of plots which often causes some confusion at first.
@@ -119,7 +119,7 @@ However, in contrast to the previous method the formula method requires you to s
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-plot(shootarea ~ weight, data = flowers)
+plot(fluffyness ~ weight, data = unicorns)
 ```
 
 Both of these two approaches are equivalent so we suggest that you just choose the one you prefer and go with it.
@@ -169,7 +169,7 @@ You will see an example of this in @sec-simple_lm where we use the `plot()` func
 knitr::include_graphics(path = "images/plot/full_connected.png")
 ```
 
-As mentionned earlier `ggplot` grammar requires several elements to produce a graphic (@fig-ggplot-str) and a minimum of 3 are required:
+As mentioned earlier `ggplot` grammar requires several elements to produce a graphic (@fig-ggplot-str) and a minimum of 3 are required:
 
 - a data frame
 - a mapping system defining x and y
@@ -188,8 +188,8 @@ To redo the @fig-plot5, that contain only a scatterplot of point we can use the 
 #| out-width: 75%
 #| fig-align: center
 ggplot(
-  data = flowers,
-  mapping = aes(x = weight, y = shootarea)
+  data = unicorns,
+  mapping = aes(x = weight, y = fluffyness)
 ) +
   geom_point()
 ```
@@ -221,8 +221,8 @@ One gig advantage of `ggplot` for simple scatterplot is the ease with which we c
 #| out-width: 75%
 #| fig-align: center
 ggplot(
-  data = flowers,
-  mapping = aes(x = weight, y = shootarea)
+  data = unicorns,
+  mapping = aes(x = weight, y = fluffyness)
 ) +
   geom_point() +
   stat_smooth()
@@ -241,7 +241,7 @@ With base R
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-hist(flowers$height)
+hist(unicorns$height)
 ```
 
 with ggplot2
@@ -250,12 +250,12 @@ with ggplot2
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-ggplot(flowers, aes(x = height)) +
+ggplot(unicorns, aes(x = height)) +
   geom_histogram()
 ```
 
 The `hist()` and `geom_histogram()` function  automatically creates the breakpoints (or bins) in the histogram unless you specify otherwise by using the `breaks =` argument.
-For example, let's say we want to plot our histogram with breakpoints every 1 cm flower height.
+For example, let's say we want to plot our histogram with breakpoints every 1 cm unicorns height.
 We first generate a sequence from zero to the maximum value of `height` (18 rounded up) in steps of 1 using the `seq()` function.
 We can then use this sequence with the `breaks =` argument.
 While we're at it, let's also replace the ugly title for something a little better using the `main =` argument
@@ -266,7 +266,7 @@ While we're at it, let's also replace the ugly title for something a little bett
 #| out-width: 75%
 #| fig-align: center
 brk <- seq(from = 0, to = 18, by = 1)
-hist(flowers$height, breaks = brk, main = "petunia height")
+hist(unicorns$height, breaks = brk, main = "Unicorn height")
 ```
 
 ```{r}
@@ -275,9 +275,9 @@ hist(flowers$height, breaks = brk, main = "petunia height")
 #| out-width: 75%
 #| fig-align: center
 brk <- seq(from = 0, to = 18, by = 1)
-ggplot(flowers, aes(x = height)) +
+ggplot(unicorns, aes(x = height)) +
   geom_histogram(breaks = brk) +
-  ggtitle("petunia height")
+  ggtitle("Unicorn height")
 ```
 
 You can also display the histogram as a proportion rather than a frequency by using the `freq = FALSE` argument to `hist()` or indicating `aes(y = after_stat(density))` in `geom_histogram()`.
@@ -289,13 +289,13 @@ You can also display the histogram as a proportion rather than a frequency by us
 #| out-width: 75%
 #| fig-align: center
 brk <- seq(from = 0, to = 18, by = 1)
-hist(flowers$height,
-  breaks = brk, main = "petunia height",
+hist(unicorns$height,
+  breaks = brk, main = "Unicorn height",
   freq = FALSE
 )
-ggplot(flowers, aes(x = height)) +
+ggplot(unicorns, aes(x = height)) +
   geom_histogram(aes(y = after_stat(density)), breaks = brk) +
-  ggtitle("petunia height")
+  ggtitle("Unicorn height")
 ```
 
 An alternative to plotting just a straight up histogram is to add a [kernel density][kernel-dens] curve to the plot.
@@ -307,9 +307,9 @@ In base R, you first need to compute the kernel density estimates using the `den
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-dens <- density(flowers$height)
-hist(flowers$height,
-  breaks = brk, main = "petunia height",
+dens <- density(unicorns$height)
+hist(unicorns$height,
+  breaks = brk, main = "Unicorn height",
   freq = FALSE
 )
 lines(dens)
@@ -322,10 +322,10 @@ With ggplot, you can simply add the `geom_density()` layer to the plot
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-ggplot(flowers, aes(x = height)) +
+ggplot(unicorns, aes(x = height)) +
   geom_histogram(aes(y = after_stat(density)), breaks = brk) +
   geom_density() +
-  ggtitle("petunia height")
+  ggtitle("Unicorn height")
 ```
 
 ### Box plots
@@ -339,7 +339,7 @@ The problem with bar plots (aka dynamite plots) is that they hide important info
 Of course, it's up to you what you do but if you're tempted to use bar plots just search for 'dynamite plots are evil' or see [here][dynamite-plot1] or [here][dynamite-plot2] for a fuller discussion.
 
 To create a boxplot in R we use the `boxplot()` function.
-For example, let's create a boxplot of the variable `weight` from our `flowers` data frame.
+For example, let's create a boxplot of the variable `weight` from our `unicorns` data frame.
 We can also include a y axis label using the `ylab =` argument.
  
 
@@ -348,7 +348,7 @@ We can also include a y axis label using the `ylab =` argument.
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-boxplot(flowers$weight, ylab = "weight (g)")
+boxplot(unicorns$weight, ylab = "weight (g)")
 ```
 
 ```{r}
@@ -356,7 +356,7 @@ boxplot(flowers$weight, ylab = "weight (g)")
 #| message: false
 #| out-width: 75%
 #| fig-align: center
-ggplot(flowers, aes(y = weight)) +
+ggplot(unicorns, aes(y = weight)) +
   geom_boxplot() +
   labs(y = "weight (g)")
 ```
@@ -373,7 +373,7 @@ If the median line is more or less in the middle of the box (between the upper a
   
 
 If we want examine how the distribution of a variable changes between different levels of a factor we need to use the formula notation with the `boxplot()` function.
-For example, let's plot our `weight` variable again, but this time see how this changes with each level of `nitrogen`.
+For example, let's plot our `weight` variable again, but this time see how this changes with each level of `food`.
 When we use the formula notation with `boxplot()` we can use the `data =` argument to save some typing.
 We'll also introduce an x axis label using the `xlab =` argument.
 
@@ -382,9 +382,9 @@ We'll also introduce an x axis label using the `xlab =` argument.
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-boxplot(weight ~ nitrogen,
-  data = flowers,
-  ylab = "Weight (g)", xlab = "nitrogen level"
+boxplot(weight ~ food,
+  data = unicorns,
+  ylab = "Weight (g)", xlab = "food level"
 )
 ```
 
@@ -394,13 +394,13 @@ boxplot(weight ~ nitrogen,
 #| message: false
 #| out-width: 75%
 #| fig-align: center
-ggplot(flowers, aes(y = weight, x = nitrogen)) +
+ggplot(unicorns, aes(y = weight, x = food)) +
   geom_boxplot() +
-  labs(y = "Weight (g)", x = "Nitrogen Concentration")
+  labs(y = "Weight (g)", x = "food Concentration")
 ```
 
-The factor levels are plotted in the same order defined by our factor variable `nitrogen` (often alphabetically).
-To change the order we need to change the order of our levels of the `nitrogen` factor in our data frame using the `factor()` function and then re-plot the graph.
+The factor levels are plotted in the same order defined by our factor variable `food` (often alphabetically).
+To change the order we need to change the order of our levels of the `food` factor in our data frame using the `factor()` function and then re-plot the graph.
 Let's plot our boxplot with our factor levels going from `low` to `high`.
 
 
@@ -409,16 +409,16 @@ Let's plot our boxplot with our factor levels going from `low` to `high`.
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-flowers$nitrogen <- factor(flowers$nitrogen,
+unicorns$food <- factor(unicorns$food,
   levels = c("low", "medium", "high")
 )
-ggplot(flowers, aes(y = weight, x = nitrogen)) +
+ggplot(unicorns, aes(y = weight, x = food)) +
   geom_boxplot() +
-  labs(y = "Weight (g)", x = "Nitrogen Concentration")
+  labs(y = "Weight (g)", x = "food Concentration")
 ```
 
 We can also group our variables by two factors in the same plot.
-Let's plot our `weight` variable but this time plot a separate box for each `nitrogen` and treatment (`treat`) combination.
+Let's plot our `weight` variable but this time plot a separate box for each `food` and parental care treatment (`p_care`) combination.
  
 
 ```{r}
@@ -426,9 +426,9 @@ Let's plot our `weight` variable but this time plot a separate box for each `nit
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-boxplot(weight ~ nitrogen * treat,
-  data = flowers,
-  ylab = "weight (g)", xlab = "nitrogen level"
+boxplot(weight ~ food * p_care,
+  data = unicorns,
+  ylab = "weight (g)", xlab = "food level"
 )
 ```
 
@@ -437,11 +437,11 @@ boxplot(weight ~ nitrogen * treat,
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-ggplot(flowers, aes(y = weight, x = nitrogen)) +
+ggplot(unicorns, aes(y = weight, x = food)) +
   geom_boxplot() +
-  labs(y = "Weight (g)", x = "Nitrogen Concentration") +
+  labs(y = "Weight (g)", x = "food Concentration") +
   facet_grid(.
-~ treat)
+~ p_care)
 ```
 
 This plot looks much better in ggplot with the use of facet_grid allowing to make similar plots as a function of a third (or even fourth) variable.
@@ -463,15 +463,15 @@ We'll also use the argument `col = "lightblue"` to change the fill colour to lig
 #| out-width: 75%
 #| fig-align: center
 library(vioplot)
-vioplot(weight ~ nitrogen,
-  data = flowers,
-  ylab = "weight (g)", xlab = "Nitrogen Concentration",
+vioplot(weight ~ food,
+  data = unicorns,
+  ylab = "weight (g)", xlab = "food Concentration",
   col = "lightblue"
 )
 ```
  
-In the violin plot above we have our familiar boxplot for each `nitrogen` level but this time the median value is represented by a white circle.
-Plotted around each boxplot is the kernel density plot which represents the distribution of the data for each nitrogen level.
+In the violin plot above we have our familiar boxplot for each `food` level but this time the median value is represented by a white circle.
+Plotted around each boxplot is the kernel density plot which represents the distribution of the data for each food level.
 
 ```{r}
 #| label: plot16-gg
@@ -480,10 +480,10 @@ Plotted around each boxplot is the kernel density plot which represents the dist
 #| message: false
 #| out-width: 75%
 #| fig-align: center
-ggplot(flowers, aes(y = weight, x = nitrogen)) +
+ggplot(unicorns, aes(y = weight, x = food)) +
   geom_violin() +
   geom_boxplot(width = 0.1) +
-  labs(y = "Weight (g)", x = "Nitrogen Concentration")
+  labs(y = "Weight (g)", x = "food Concentration")
 ```
 
 ### Dot charts {#sec-dotcharts}
@@ -498,10 +498,10 @@ You can produce a dotplot in R very simply by using the `dotchart()` function.
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-dotchart(flowers$height)
+dotchart(unicorns$height)
 ```
 
-In the dotplot above the data from the `height` variable is plotted along the x axis and the data is plotted in the order it occurs in the `flowers` data frame on the y axis (values near the top of the y axis occur later in the data frame with those lower down occurring at the beginning of the data frame).
+In the dotplot above the data from the `height` variable is plotted along the x axis and the data is plotted in the order it occurs in the `unicorns` data frame on the y axis (values near the top of the y axis occur later in the data frame with those lower down occurring at the beginning of the data frame).
 In this plot we have a single value extending to the right at about 17 cm but it doesn't appear particularly large compared to the rest.
 An example of a dotplot with an unusual observation is given below.
 
@@ -510,12 +510,12 @@ An example of a dotplot with an unusual observation is given below.
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-out_height <- flowers$height
+out_height <- unicorns$height
 out_height[30] <- 53
 dotchart(out_height)
 ```
 
-We can also group the values in our `height` variable by a factor variable such as `nitrogen` using the `groups =` argument.
+We can also group the values in our `height` variable by a factor variable such as `food` using the `groups =` argument.
 This is useful for identifying unusual observations within a factor level that might be obscured when looking at all the data together.
 
 ```{r}
@@ -523,7 +523,7 @@ This is useful for identifying unusual observations within a factor level that m
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-dotchart(flowers$height, groups = flowers$nitrogen)
+dotchart(unicorns$height, groups = unicorns$food)
 ```
 
 <!-- TO DO -->
@@ -532,7 +532,7 @@ dotchart(flowers$height, groups = flowers$nitrogen)
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-ggdotchart(data=flowers, x="height", y= "nitrogen")
+ggdotchart(data=unicorns, x="height", y= "food")
 ```
 
 
@@ -542,28 +542,28 @@ Previously in this Chapter we used the `plot()` function to create a scatterplot
 With datasets that contain many numeric variables, it's often handy to create multiple scatterplots to visualise relationships between all these variables.
 We could use the `plot()` function to create each of these plot individually, but a much easier way is to use the `pairs()` function.
 The `pairs()` function creates a multi-panel scatterplot (sometimes called a scatterplot matrix) which plots all combinations of variables.
-Let's create a multi-panel scatterplot of all of the numeric variables in our `flowers` data frame.
+Let's create a multi-panel scatterplot of all of the numeric variables in our `unicorns` data frame.
 Note, you may need to click on the 'Zoom' button in RStudio to display the plot clearly.
 
 
-```{r }
+```{r}
 #| label: plot20
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-pairs(flowers[, c(
-  "height", "weight", "leafarea",
-  "shootarea", "flowers"
+pairs(unicorns[, c(
+  "height", "weight", "mane_size",
+  "fluffyness", "horn_rings"
 )])
 # or we could use the equivalent
-# pairs(flowers[, 4:8])
+# pairs(unicorns[, 4:8])
 ```
 
 Interpretation of the pairs plot takes a bit of getting used to.
 The panels on the diagonal give the variable names.
-The first row of plots displays the `height` variable on the y axis and the variables `weight`, `leafarea`, `shootarea` and `flowers` on the x axis for each of the four plots respectively.
-The next row of plots have `weight` on the y axis and `height`, `leafarea`, `shootarea` and `flowers` on the x axis.
-We interpret the rest of the rows in the same way with the last row displaying the `flowers` variable on the y axis and the other variables on the x axis.
+The first row of plots displays the `height` variable on the y axis and the variables `weight`, `mane_size`, `fluffyness` and `unicorns` on the x axis for each of the four plots respectively.
+The next row of plots have `weight` on the y axis and `height`, `mane_size`, `fluffyness` and `unicorns` on the x axis.
+We interpret the rest of the rows in the same way with the last row displaying the `unicorns` variable on the y axis and the other variables on the x axis.
 Hopefully you'll notice that the plots below the diagonal are the same plots as those above the diagonal just with the axis reversed.
 
 
@@ -572,9 +572,9 @@ The output is quite similar but you have only the lower part of the matrix of pl
 
 
 ```{r}
-ggpairs(flowers[, c(
-  "height", "weight", "leafarea",
-  "shootarea", "flowers"
+ggpairs(unicorns[, c(
+  "height", "weight", "mane_size",
+  "fluffyness", "horn_rings"
 )])
 ```
 
@@ -605,9 +605,9 @@ panel.hist <- function(x, ...) {
 }
 
 pairs(
-  flowers[, c(
-    "height", "weight", "leafarea",
-    "shootarea", "flowers"
+  unicorns[, c(
+    "height", "weight", "mane_size",
+    "fluffyness", "horn_rings"
   )],
   lower.panel = panel.cor,
   diag.panel = panel.hist,
@@ -622,7 +622,7 @@ When examining the relationship between two numeric variables, it is often usefu
 A really handy plot to use in these situations is a conditioning plot (also known as conditional scatterplot plot) which we can create in R by using the `coplot()` function.
 The `coplot()` function plots two variables but each plot is conditioned (`|`) by a third variable.
 This third variable can be either numeric or a factor.
-As an example, let's look at how the relationship between the number of flowers (`flowers` variable) and the `weight` of petunia plants changes dependent on `leafarea`.
+As an example, let's look at how the relationship between the number of unicorns (`unicorns` variable) and the `weight` of unicorns changes dependent on `mane_size`.
 Note the `coplot()` function has a `data =` argument so no need to use the `$` notation.
 
 ```{r}
@@ -630,22 +630,23 @@ Note the `coplot()` function has a `data =` argument so no need to use the `$` n
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-coplot(flowers ~ weight | leafarea, data = flowers)
+coplot(horn_rings ~ weight | mane_size, data = unicorns)
 ```
 
 ```{r}
-gg_coplot(flowers,
-  x = weight, y = flowers,
-  faceting =leafarea)
+gg_coplot(unicorns,
+  x = weight, y = horn_rings,
+  faceting = mane_size
+)
 ```
 
 It takes a little practice to interpret coplots.
-The number of flowers is plotted on the y axis and the weight of plants on the x axis.
+The number of unicorns is plotted on the y axis and the weight of unicorns on the x axis.
 The six plots show the relationship between these two variables for different ranges of leaf area.
 The bar plot at the top indicates the range of leaf area values for each of the plots.
 The panels are read from bottom left to top right along each row.
-For example, the bottom left panel shows the relationship between number of flowers and weight for plants with the lowest range of leaf area values (approximately 5 - 11 cm^2^).
-The top right plot shows the relationship between flowers and weight for plants with a leaf area ranging from approximately 16 - 50 cm^2^.
+For example, the bottom left panel shows the relationship between number of unicorns and weight for unicorns with the lowest range of leaf area values (approximately 5 - 11 cm^2^).
+The top right plot shows the relationship between unicorns and weight for unicorns with a leaf area ranging from approximately 16 - 50 cm^2^.
 Notice that the range of values for leaf area differs between panels and that the ranges overlap from panel to panel.
 The `coplot()` function does it's best to split the data up to ensure there are an adequate number of data points in each panel.
 If you don't want to produce plots with overlapping data in the panel you can set the `overlap =` argument to `overlap = 0` 
@@ -653,23 +654,24 @@ If you don't want to produce plots with overlapping data in the panel you can se
 
 You can also use the `coplot()` function with factor conditioning variables.
 With `gg_coplot()` you need to first set the factor as numeric before plotting and specify `overlap=0`.
-For example, we can examine the relationship between `flowers` and `weight` variables conditioned on the factor `nitrogen`.
-The bottom left plot is the relationship between `flowers` and `weight` for those plants in the `low` nitrogen treatment.
-The top left plot shows the same relationship but for plants in the `high` nitrogen treatment.
+For example, we can examine the relationship between `unicorns` and `weight` variables conditioned on the factor `food`.
+The bottom left plot is the relationship between `unicorns` and `weight` for those unicorns in the `low` food treatment.
+The top left plot shows the same relationship but for unicorns in the `high` food treatment.
 
 ```{r}
 #| label: plot28
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-coplot(flowers ~ weight | nitrogen, data = flowers)
+coplot(horn_rings ~ weight | food, data = unicorns)
 ```
 
 ```{r}
-flowers <- mutate(flowers, nitrogen_num = as.numeric(nitrogen))
-gg_coplot(flowers,
-  x = weight, y = flowers,
-  faceting =nitrogen_num, overlap = 0)
+unicorns <- mutate(unicorns, food_num = as.numeric(food))
+gg_coplot(unicorns,
+  x = weight, y = horn_rings,
+  faceting = food_num, overlap = 0
+)
 ```
 
 
@@ -706,11 +708,11 @@ For example, to plot two graphs side by side we would use `par(mfrow = c(1, 2))`
 #| out-width: 75%
 #| fig-align: center
 par(mfrow = c(1, 2))
-plot(flowers$weight, flowers$shootarea,
+plot(unicorns$weight, unicorns$fluffyness,
   xlab = "weight",
-  ylab = "shoot area"
+  ylab = "Fluffyness"
 )
-boxplot(shootarea ~ nitrogen, data = flowers, cex.axis = 0.6)
+boxplot(fluffyness ~ food, data = unicorns, cex.axis = 0.6)
 ```
 
 Once you've finished making your plots don't forget to reset your plotting device back to normal with `par(mfrow = c(1,1))`.
@@ -719,7 +721,7 @@ Once you've finished making your plots don't forget to reset your plotting devic
 Using ggplot in addition to the facet_grid() and facet_wrap functions allowing to easily repeat and organise multiple plots as a function of specific variables, there are multiple way of organising multiple ggplot together.
 The approach we recommend is using the package `patchwork`.
 
-First you will need to install and make the `patchwork` package available.
+First you will need to install (if you don't have it yet) and make the `patchwork` :package: package available.
 
 ```{r}
 #| label: loading-patchwork
@@ -754,19 +756,19 @@ They will appear only when you call the object.
 #| out-width: 75%
 #| fig-align: center
 first_figure <- ggplot(
-  aes(x = height, y = shootarea, colour = nitrogen),
-  data = flowers
+  aes(x = height, y = fluffyness, color = food),
+  data = unicorns
 ) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
-  facet_grid(block ~ treat)
+  facet_grid(block ~ p_care)
 second_figure <- ggplot(
-  aes(x = weight, y = shootarea, colour = nitrogen),
-  data = flowers
+  aes(x = weight, y = fluffyness, color = food),
+  data = unicorns
 ) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
-  facet_grid(block ~ treat)
+  facet_grid(block ~ p_care)
 ```
 
 
@@ -781,7 +783,7 @@ Let's try to plot both figures, one on top of the other.
 #| warning: false
 #| out-width: 85%
 #| fig-align: center
-first_figure / second_figure
+first_figure / second_figure 
 ```
 
 
@@ -798,7 +800,7 @@ We can take this one step further and assign nested `patchwork` figures to an ob
 #| fig-align: center
 nested_compare <- first_figure / second_figure
 
-nested_compare +
+nested_compare + 
   plot_annotation(tag_levels = "A", tag_suffix = ")")
 ```
 
@@ -828,7 +830,7 @@ Once the code has run we need to close the pdf plotting device using the `dev.of
 #| eval: false
 pdf(file = "output/my_plot.pdf")
 par(mar = c(4.1, 4.4, 4.1, 1.9), xaxs = "i", yaxs = "i")
-plot(flowers$weight, flowers$shootarea,
+plot(unicorns$weight, unicorns$fluffyness,
   xlab = "weight (g)",
   ylab = expression(paste("shoot area (cm"^"2", ")")),
   xlim = c(0, 30), ylim = c(0, 200), bty = "l",
@@ -847,7 +849,7 @@ If we want to save this plot in png format we simply use the `png()` function in
 #| eval: false
 png("output/my_plot.png")
 par(mar = c(4.1, 4.4, 4.1, 1.9), xaxs = "i", yaxs = "i")
-plot(flowers$weight, flowers$shootarea,
+plot(unicorns$weight, unicorns$fluffyness,
   xlab = "weight (g)",
   ylab = expression(paste("shoot area (cm"^"2", ")")),
   xlim = c(0, 30), ylim = c(0, 200), bty = "l",
