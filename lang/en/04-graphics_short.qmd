@@ -441,7 +441,7 @@ ggplot(unicorns, aes(y = weight, x = food)) +
   geom_boxplot() +
   labs(y = "Weight (g)", x = "food Concentration") +
   facet_grid(.
-~ p_care)
+  ~ p_care)
 ```
 
 This plot looks much better in ggplot with the use of facet_grid allowing to make similar plots as a function of a third (or even fourth) variable.
@@ -532,7 +532,7 @@ dotchart(unicorns$height, groups = unicorns$food)
 #| echo: true
 #| out-width: 75%
 #| fig-align: center
-ggdotchart(data=unicorns, x="height", y= "food")
+ggdotchart(data = unicorns, x = "height", y = "food")
 ```
 
 
@@ -783,7 +783,7 @@ Let's try to plot both figures, one on top of the other.
 #| warning: false
 #| out-width: 85%
 #| fig-align: center
-first_figure / second_figure 
+first_figure / second_figure
 ```
 
 
@@ -800,7 +800,7 @@ We can take this one step further and assign nested `patchwork` figures to an ob
 #| fig-align: center
 nested_compare <- first_figure / second_figure
 
-nested_compare + 
+nested_compare +
   plot_annotation(tag_levels = "A", tag_suffix = ")")
 ```
 

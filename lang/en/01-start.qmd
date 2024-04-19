@@ -410,7 +410,7 @@ digraph {
   node [
     style = filled
     shape=oval
-	]
+  ]
   root [fillcolor="red"]
   data [fillcolor="lightblue"]
   functions [fillcolor="lightgreen"]

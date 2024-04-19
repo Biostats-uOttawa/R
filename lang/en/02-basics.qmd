@@ -729,7 +729,7 @@ There are also other headings that provide more specific information such as
 | **Usage:** | gives the name of the arguments associated with the function and possible default values.|
 | **Arguments:** | provides more detail regarding each argument and what they do.|
 | **Details:** | gives further details of the function if required.|
-| **Value:**	 | if applicable, gives the type and structure of the object returned by the function or the operator.|
+| **Value:** | if applicable, gives the type and structure of the object returned by the function or the operator.|
 | **See Also:** | provides information on other help pages with similar or related content.|
 | **Examples:** | gives some examples of using the function.|
 

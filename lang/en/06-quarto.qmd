@@ -4,6 +4,8 @@
 #| include: false
 #| message: false
 library(knitr)
+library(gt)
+library(tidyverse)
 suppressPackageStartupMessages(library(knitr))
 ```
 
@@ -59,6 +61,8 @@ As such, you're already well along the road to making your analysis more reprodu
 However, perhaps your current workflow looks something like this:
 
 ```{r}
+#| label: fig-workflow
+#| fig-cap: Non-reproducible workflow
 #| echo: false
 #| fig-align: center
 #| out-width: 90%
@@ -84,6 +88,8 @@ This can be both time consuming and confusing and should be avoided.
 Perhaps a more efficient and robust workflow would look something like this: 
 
 ```{r}
+#| label: fig-workflow-rep
+#| fig-cap: A-reproducible (and more fficient) workflow
 #| echo: false
 #| fig-align: center
 #| out-width: 90%
@@ -130,6 +136,8 @@ We can change all of this later so don’t worry about it for the moment.
  
 
 ```{r}
+#| label: fig-new-rm2
+#| fig-cap: Creating a Quarto document
 #| echo: false
 #| fig-align: center
 #| out-width: 85%
@@ -146,13 +154,13 @@ However, just for now we will use this document to practice converting Quarto to
  
 
 ```{r}
+#| label: fig-new-file-rm
+#| fig-cap: A new Quarto document
 #| echo: false
 #| fig-align: center
 #| out-width: 85%
 include_graphics("images/markdown/new_file_rm.png")
 ```
-
- 
 
 Once you've created your Quarto document it's good practice to save this file somewhere convenient (@sec-dir-struc and @fig-dir-struc).
 You can do this by selecting `File` -> `Save` from RStudio menu (or use the keyboard shortcut ctrl + s on Windows or cmd + s on a Mac) and enter an appropriate file name (maybe call it `my_first_rmarkdown`).
@@ -666,11 +674,12 @@ Here is an example with an image taking 75% of the width and centered.
 
 resulting in:
 
-![Waiting for the eclipse](images/markdown/eclipse_ready.jpg){fig-align="center" width="75%"}
+![Waiting for the eclipse](images/markdown/eclipse_ready.jpg){fig-align="center" width="75%" #fig-waiting}
 
 An alternative way of including images in your document is to use the `include_graphics()` function from the `knitr` package. The following code will produce similar output. 
 
 ```{{r}}
+#| label: fig-knitr
 #| fig-align: center
 #| out-width: 75%
 #| fig-cap: Waiting for the eclipse
@@ -687,7 +696,8 @@ By default, figures produced by R code will be placed immediately after the code
 For example:
 
 ```{r}
-#| label: simple-plot
+#| label: fig-simple-plot
+#| fig-cap: A simple plot
 #| echo: fenced
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
@@ -695,14 +705,14 @@ dataf <- data.frame(x = x, y = y)
 plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 
-
+The `fig-cap: ` chunk option allow to provide a figure caption recognized by Quarto and using in figure numbering and cross referencing (@sec-crossrefs).
 
 If you want to change the plot dimensions in the final document you can use the `fig-width:` and `fig-height:` chunk options (in inches!).
 You can also change the alignment of the figure using the `fig-align:` chunk option.
 
 ```{r}
-#| label: simple-plot2
-#| class-source: fold-show
+#| label: fig-simple-plot2
+#| fig-cap: A shrinked figure
 #| fig-width: 4
 #| fig-height: 3
 #| fig-align: center
@@ -718,7 +728,7 @@ plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 You can add a figure caption using the `fig-cap: ` option.
 
 ```{r}
-#| label: simple-plot-cap
+#| label: fig-simple-plot-cap
 #| class-source: fold-show
 #| fig-cap: A simple plot
 #| fig-align: center
@@ -735,8 +745,7 @@ If you want to suppress the figure in the final document use the `fig-show: 'hid
 
 
 ```{r}
-#| label: simple-plot5
-#| class-source: fold-show
+#| label: fig-simple-plot5
 #| fig-show: hide
 #| echo: fenced
 x <- 1:10    # create an x variable
@@ -751,7 +760,8 @@ If you're using a package like `ggplot2` :package: to create your plots then don
 
 
 ```{r}
-#| label: simple-ggplot
+#| label: fig-simple-ggplot
+#| fig-cap: A simple ggplot
 #| echo: fenced
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
@@ -769,20 +779,7 @@ See [here][rmd-ref] for more details.
 
 ### Tables
 
-Quarto can print the contents of a data frame as a table (or any other tabular object such as a summary of model output) by including the name of the data frame in a code chunk.
-For example, to create a table of the first 10 rows of the inbuilt dataset `iris`
-
-
-```{r}
-#| label: ugly-table
-#| echo: fenced
-#| warning: false
-
-iris[1:5,]
-
-```
-
-But how ugly is that! You can create slightly nicer looking tables using native markdown syntax (this doesn't need to be in a code chunk).
+In Quarto, you can create tables using native markdown syntax (this doesn't need to be in a code chunk).
 
  
 ```md
@@ -793,9 +790,9 @@ But how ugly is that! You can create slightly nicer looking tables using native 
 |  3  |  3  |
 |  4  |  2  |
 |  5  |  1  |
-```
 
- 
+: Caption for a simple markdown table
+```
 
 |  x  |  y  |
 |:---:|:---:|
@@ -805,7 +802,7 @@ But how ugly is that! You can create slightly nicer looking tables using native 
 |  4  |  2  |
 |  5  |  1  |
 
- 
+: Caption for a simple markdown table {#tbl-simp-md}
 
 The `:-------:` lets markdown know that the line above should be treated as a header and the lines below as the body of the table.
 Alignment within the table is set by the position of the `:`.
@@ -816,24 +813,34 @@ Whilst it can be fun(!) to create tables with raw markup it's only  practical fo
 The easiest way we know to include tables in an Quarto document is by using the `kable()` function from the `knitr` :package: package.
 The `kable()` function can create tables for HTML, PDF and Word outputs.
 
-To create a table of the first 10 rows of the `iris` data frame using the `kable()` function simply write your code block as
+To create a table of the first 2 rows per species of the `iris` data frame using the `kable()` function simply write
 
-```{r}
-#| label: kable-table-html
-#| echo: fenced
-#| eval: !expr 'knitr::is_html_output()'
-#| warning: false
+```r
 library(knitr)
-kable(iris[1:5,])
+iris %>%
+  group_by(Species) %>%
+  slice_head(n = 2) %>%
+kable()
+```
+
+or without loading `knitr` :package: but indicating where to find the `kable()` function.
+
+```r
+iris %>%
+  group_by(Species) %>%
+  slice_head(n = 2) %>%
+  knitr::kable()
 ```
 
 ```{r}
-#| label: kable-table-latex
+#| label: tbl-kable-table
+#| tbl-cap: A simple kable table
 #| echo: false
-#| eval: !expr 'knitr::is_latex_output()'
 #| warning: false
-library(knitr)
-kable(iris[1:5,], "latex", booktabs = TRUE)
+iris %>%
+  group_by(Species) %>%
+  slice_head(n = 2) %>%
+  knitr::kable(booktabs = TRUE)
 ```
 
 The `kable()` function offers plenty of options to change the formatting of the table.
@@ -841,56 +848,71 @@ For example, if we want to round numeric values to one decimal place use the `di
 To center justify the table contents use `align = 'c'` and to provide custom column headings use the `col.names =` argument.
 See `?knitr::kable` for more information.
 
-
-```{r}
-#| label: kable-table2-html
-#| eval: !expr 'knitr::is_html_output()'
-#| echo: fenced
-#| warning: false
-library(knitr)
-kable(iris[1:5,], digits=0, align = 'c', col.names = c('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
+```r
+iris %>%
+  group_by(Species) %>%
+  slice_head(n = 2) %>%
+  knitr::kable(
+    digits=0,
+    align = 'c',
+    col.names = c(
+      'Sepal length', 'Sepal width',
+      'Petal length', 'Petal width', 'Species'
+    )
+)
 ```
 
 ```{r}
-#| label: kable-table2-latex
-#| echo: fenced
-#| eval: !expr 'knitr::is_latex_output()'
+#| label: tbl-kable-table2-latex
+#| tbl-cap: A nicer kable table
+#| echo: false
 #| warning: false
-library(knitr)
-kable(iris[1:5,], "latex", booktabs = TRUE, digits=0, align = 'c', col.names = c('sepal length', 'sepal width', 'petal length', 'petal width', 'species'))
+iris %>%
+  group_by(Species) %>%
+  slice_head(n = 2) %>%
+  knitr::kable(
+    booktabs = TRUE,
+    digits = 0,
+    align = "c",
+    col.names = c(
+      "Sepal length", "Sepal width",
+      "Petal length", "Petal width", "Species"
+    )
+  )
 ```
- 
 
 You can further enhance the look of your `kable` tables using the `kableExtra` :package: package (don't forget to install the package first!).
 See [here][kableExtra] for more details and a helpful tutorial.
 
-```{r}
-#| label: kableExtra-table-html
-#| echo: false
-#| eval: !expr 'knitr::is_html_output()'
-#| warning: false
-library(kableExtra)
-kable(iris[1:5,]) %>%
-  kable_styling(bootstrap_options = "striped", font_size = 10)
-```
-
-```{r}
-#| label: kableExtra-table-latex
-#| echo: false
-#| eval: !expr 'knitr::is_latex_output()'
-#| warning: false
-library(kableExtra)
-kable(iris[1:5,],"latex", booktabs = T) %>%
-  kable_styling(bootstrap_options = "striped", font_size = 10, position = "center")
-```
-
- 
-
 If you want even more control and customisation options for your tables take a look at the [`gt`][gt] package.
 `gt` is an acronym for **g**rammar of **t**ables and is based on similar principle for tables that are used for plots in ggplot.
 
+```{r}
+#| label: tbl-gt-table
+#| tbl-cap: A nice gt table
+#| echo: true
+iris %>%
+  group_by(Species) %>%
+  slice_head(n = 2) %>%
+  rename_with(~ gsub("([._])", " ", .x)) %>%
+  gt()
+```
 
-### Cross-referencing
+Within most R packages developped to produce tables, there are options to include table captions. 
+However, if you want to add a table caption we recommend to do using the code chunk option in Quarto `tbl-cap:` since it will allow for cross-referencing (@sec-crossrefs) and better integration in the document.
+
+```{{r}}
+#| label: tbl-gt-table
+#| tbl-cap: A nice gt table
+#| echo: true
+iris %>%
+  group_by(Species) %>%
+  slice_head(n=2) %>%
+  rename_with(~gsub("([._])", " ", .x)) %>%
+  gt()
+```
+
+### Cross-referencing {#sec-crossrefs}
 
 Cross-references make it easier for readers to navigate your document by providing numbered references and hyperlinks to various entities like figures and tables. Once set up, tables and figures numbering happens automatically, so you don’t need to re-number all the figures when you add or delete one.
 

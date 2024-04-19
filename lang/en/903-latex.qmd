@@ -35,8 +35,8 @@ You can install TinyTex from within R using the `tinytex` :package: package with
 
 ```{r}
 #| eval: false
-install.packages('tinytex')
-tinytex::install_tinytex()  # install TinyTeX
+install.packages("tinytex")
+tinytex::install_tinytex() # install TinyTeX
 ```
 
 TinyTeX is a lightweight, portable, cross-platform, and easy-to-maintain {{< latex >}} distribution.

@@ -107,8 +107,8 @@ final_figure <- ggplot(aes(x = weight, y = shootarea), data = df) +
   ylab(bquote("Area of shoot" ~ (cm^2))) +
   geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
   labs(shape = "Nitrogen\nConcentration", 
-  		 colour = "Nitrogen\nConcentration", 
-  		 caption = "Note: Regression assumptions are unvalidated") +
+       colour = "Nitrogen\nConcentration", 
+       caption = "Note: Regression assumptions are unvalidated") +
   scale_colour_manual(
     values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
     labels = c("High", "Medium", "Low")
@@ -185,7 +185,7 @@ Let's have a quick reminder of what the structure of the data looks like.
 ```{r}
 #| label: str-of-flower
 flower <- read.table("data/flower.csv", stringsAsFactors = TRUE, 
-										 header = TRUE, sep = ",")
+                     header = TRUE, sep = ",")
 str(flower)
 ```
 
@@ -252,7 +252,7 @@ knitr::include_graphics(path = "images/plot/geoms.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-		geom_point()     # Adding a geom to display data as point data
+    geom_point()     # Adding a geom to display data as point data
 ```
 
 
@@ -315,7 +315,7 @@ knitr::include_graphics(path = "images/plot/geoms.png")
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
   geom_point() +
-	geom_line()     # Adding geom_line
+  geom_line()     # Adding geom_line
 ```
 
 
@@ -338,7 +338,7 @@ knitr::include_graphics(path = "images/plot/geoms_statistics.png")
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
   geom_point() +
-	geom_smooth()    # Changing to geom_smooth
+  geom_smooth()    # Changing to geom_smooth
 ```
 
 
@@ -369,7 +369,7 @@ knitr::include_graphics(path = "images/plot/statistics.png")
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
   geom_point() +
-	geom_smooth(method = "lm", se = FALSE)    # method and se 
+  geom_smooth(method = "lm", se = FALSE)    # method and se 
 ```
 
 
@@ -419,10 +419,10 @@ knitr::include_graphics(path = "images/plot/data_mapping.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot() +
-	# Moved aes() and data into geoms
+  # Moved aes() and data into geoms
   geom_point(aes(x = weight, y = shootarea), data = flower) +
   geom_smooth(aes(x = weight, y = shootarea, colour = nitrogen), 
-  						data = flower, method = "lm", se = FALSE)
+              data = flower, method = "lm", se = FALSE)
 ```
 
 
@@ -488,7 +488,7 @@ knitr::include_graphics(path = "images/plot/facets.png")
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
-	# Splitting the single figure into multiple depending on treatment
+  # Splitting the single figure into multiple depending on treatment
   facet_wrap(~ treat)
 ```
 
@@ -515,7 +515,7 @@ knitr::include_graphics(path = "images/plot/facets.png")
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
-	# Adding "block" to formula
+  # Adding "block" to formula
   facet_wrap(~ treat + block)
 ```
 
@@ -550,7 +550,7 @@ knitr::include_graphics(path = "images/plot/facets.png")
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
-	# Changing to facet_grid
+  # Changing to facet_grid
   facet_grid(~ treat + block)
 ```
 
@@ -574,7 +574,7 @@ knitr::include_graphics(path = "images/plot/facets.png")
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
-	# Rearranging formula, block in relation to treatment
+  # Rearranging formula, block in relation to treatment
   facet_grid(block ~ treat)
 ```
 
@@ -720,10 +720,10 @@ Let's include it in the `geom_point` geom
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	# Including size argument to change the size of the points
-	geom_point(size = 2) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat)
+  # Including size argument to change the size of the points
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat)
 ```
 
 
@@ -745,10 +745,10 @@ knitr::include_graphics(path = "images/plot/scales_mapping.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	# Including shape argument to change the shape of the points
-	geom_point(aes(shape = nitrogen), size = 2) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat)
+  # Including shape argument to change the shape of the points
+  geom_point(aes(shape = nitrogen), size = 2) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat)
 ```
 
 
@@ -767,10 +767,10 @@ Again, ask yourself where you think the `alpha =` argument should be included (h
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	# Including alpha argument to change the transparency of the points
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat)
+  # Including alpha argument to change the transparency of the points
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat)
 ```
 
 
@@ -785,12 +785,12 @@ We'll specify that these belong to the `ggplot` by using the `+` symbol.
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	# Adding layers for x and y labels
-	xlab("Weight of flower (g)") +
-	ylab("Area of shoot (cm^2)")
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  # Adding layers for x and y labels
+  xlab("Weight of flower (g)") +
+  ylab("Area of shoot (cm^2)")
 ```
 
 
@@ -805,12 +805,12 @@ Here, we're going to accomplish that using a function which is part of base R ca
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	# Using bquote to get mathematically correct formatting
-	ylab(bquote("Area of shoot"~(cm^2)))
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  # Using bquote to get mathematically correct formatting
+  ylab(bquote("Area of shoot"~(cm^2)))
 ```
 
 
@@ -829,14 +829,14 @@ Here's how we do it:
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	# Adding labels for shape, colour and a caption	
-	labs(shape = "Nitrogen Concentration", colour = "Nitrogen Concentration", 
-			 caption = "Regression assumptions are unvalidated")
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  # Adding labels for shape, colour and a caption  
+  labs(shape = "Nitrogen Concentration", colour = "Nitrogen Concentration", 
+       caption = "Regression assumptions are unvalidated")
 ```
 
 *Play around*: Try removing `colour =` or `shape = ` from `labs()` to see what happens.
@@ -853,14 +853,14 @@ We can use that with "Nitrogen Concentration" so that the legend title becomes m
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	# Including \n to split legend title over two lines	
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated")
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  # Including \n to split legend title over two lines  
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated")
 ```
 
 
@@ -886,51 +886,51 @@ knitr::include_graphics(path = "images/plot/theme.png")
 #| out-width: 85%
 #| fig-align: center
 classic <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	# Classic theme
-	theme_classic()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  # Classic theme
+  theme_classic()
 
 bw <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	# Black and white theme
-	theme_bw()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  # Black and white theme
+  theme_bw()
 
 minimal <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	# Minimal theme
-	theme_minimal()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  # Minimal theme
+  theme_minimal()
 
 light <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
        caption = "Regression assumptions are unvalidated") +
-	# Light theme
-	theme_light()
+  # Light theme
+  theme_light()
 
 (classic | bw) /
-	(minimal | light)
+  (minimal | light)
 ```
 
 
@@ -991,8 +991,8 @@ theme_rbook <- function(base_size = 13, base_family = "", base_line_size = base_
     axis.line = element_line(size = 1, colour = "black"),
     strip.background =element_rect(fill = "#cddcdd"),
     panel.border = element_rect(colour = "black", fill=NA, size=0.5),
-		strip.text = element_text(colour = "black"),
-		legend.key=element_blank()
+    strip.text = element_text(colour = "black"),
+    legend.key=element_blank()
   )
 }
 ```
@@ -1014,15 +1014,15 @@ knitr::include_graphics(path = "images/plot/theme.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	# Updated theme to our theme_rbook
-	theme_rbook()   # use our new theme
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  # Updated theme to our theme_rbook
+  theme_rbook()   # use our new theme
 ```
 
 
@@ -1041,7 +1041,7 @@ Remember, since we've previously stored the figure as an object called `final_fi
 #| out-width: 75%
 #| fig-align: center
 final_figure + 
-	labs(title = "Reminder of the final figure")
+  labs(title = "Reminder of the final figure")
 ```
 
 
@@ -1064,17 +1064,17 @@ knitr::include_graphics(path = "images/plot/geoms_mapping.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	# Added a horizontal line using geom_hline
-	geom_hline(aes(yintercept = mean(shootarea)), size = 0.5, colour = "black", linetype = 3) +
-	
-	theme_rbook()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  # Added a horizontal line using geom_hline
+  geom_hline(aes(yintercept = mean(shootarea)), size = 0.5, colour = "black", linetype = 3) +
+  
+  theme_rbook()
 ```
 
 
@@ -1093,17 +1093,17 @@ mean(flower$shootarea)
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	# Manually entering mean value
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	
-	theme_rbook()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  # Manually entering mean value
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  
+  theme_rbook()
 ```
 
 
@@ -1130,17 +1130,17 @@ knitr::include_graphics(path = "images/plot/geoms_statistics.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	# Adding a SECOND geom_smooth :O
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	theme_rbook()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  # Adding a SECOND geom_smooth :O
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  theme_rbook()
 ```
 
 
@@ -1178,23 +1178,23 @@ knitr::include_graphics(path = "images/plot/scales.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	# Setting colour and associated labels
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  # Setting colour and associated labels
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	# Setting shape and associated labels
-	scale_shape_manual(values = c(15,17,19),
+  # Setting shape and associated labels
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	
-	theme_rbook()
+  
+  theme_rbook()
 ```
 
 
@@ -1232,20 +1232,20 @@ With that done, we can re-run our above code to get a correct figure and assign 
 #| out-width: 75%
 #| fig-align: center
 rbook_figure <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	facet_grid(block ~ treat) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  facet_grid(block ~ treat) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19),
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	theme_rbook()
+  theme_rbook()
 
 rbook_figure
 ```
@@ -1268,8 +1268,8 @@ Other important arguments to take note of are: `device =` which tells `ggplot2` 
 #| eval: false
 #| message: false
 ggsave(filename = "areashoot_weight_facet.pdf", plot = rbook_figure, device = "pdf", 
-			 path = "output", width = 250, height = 150, units = "mm", 
-			 dpi = 500, limitsize = TRUE)
+       path = "output", width = 250, height = 150, units = "mm", 
+       dpi = 500, limitsize = TRUE)
 ```
 
 This concludes the worked example to reproduce our final figure.
@@ -1337,7 +1337,7 @@ knitr::include_graphics(path = "images/plot/statistics.png")
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
   geom_point() +
-	# using stat_smooth instead of geom_smooth
+  # using stat_smooth instead of geom_smooth
   stat_smooth(geom = "smooth", method = "lm", se = FALSE)
 ```
 
@@ -1368,22 +1368,22 @@ knitr::include_graphics(path = "images/plot/coords.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	geom_point(aes(colour = nitrogen, shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
-	geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
-	     labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19,21),
-	     labels = c("High", "Medium", "Low")) +
-	theme_rbook() +
-	# New x and y limits
-	xlim(c(10, 15)) +
-	ylim(c(50, 150))
+  geom_point(aes(colour = nitrogen, shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
+  geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+       labels = c("High", "Medium", "Low")) +
+  scale_shape_manual(values = c(15,17,19,21),
+       labels = c("High", "Medium", "Low")) +
+  theme_rbook() +
+  # New x and y limits
+  xlim(c(10, 15)) +
+  ylim(c(50, 150))
 ```
 
 
@@ -1408,21 +1408,21 @@ knitr::include_graphics(path = "images/plot/coords.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	geom_point(aes(colour = nitrogen, shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
-	geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(colour = nitrogen, shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
+  geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19,21),
+  scale_shape_manual(values = c(15,17,19,21),
        labels = c("High", "Medium", "Low")) +
-	theme_rbook() +
-	# Zooming in rather than chopping out
-	coord_cartesian(xlim = c(10, 15),	ylim = c(50, 150))
+  theme_rbook() +
+  # Zooming in rather than chopping out
+  coord_cartesian(xlim = c(10, 15),  ylim = c(50, 150))
 ```
 
 
@@ -1455,20 +1455,20 @@ We'll move both the points and the overall black dashed line down in the code so
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
-	# Move one line down
-	geom_point(aes(colour = nitrogen, shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
+  # Move one line down
+  geom_point(aes(colour = nitrogen, shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19,21),
+  scale_shape_manual(values = c(15,17,19,21),
        labels = c("High", "Medium", "Low")) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 
@@ -1498,18 +1498,18 @@ knitr::include_graphics(path = "images/plot/scales.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	# Deleted geom_smooths for illustrative purposes only 
+  # Deleted geom_smooths for illustrative purposes only 
   # (and also removed alpha argument from geom_point)
-	geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
-	# Changed colour argument label
-	labs(shape = "Nitrogen\nConcentration", colour = "Number of\nFlowers", 
-			 caption = "Regression assumptions are unvalidated") +
-	scale_shape_manual(values = c(15,17,19,21),
+  geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
+  # Changed colour argument label
+  labs(shape = "Nitrogen\nConcentration", colour = "Number of\nFlowers", 
+       caption = "Regression assumptions are unvalidated") +
+  scale_shape_manual(values = c(15,17,19,21),
        labels = c("High", "Medium", "Low")) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 
@@ -1532,18 +1532,18 @@ knitr::include_graphics(path = "images/plot/scales.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
-	# Updated legend name for colour
-	labs(shape = "Nitrogen\nConcentration", colour = "Number of\nFlowers", 
-			 caption = "Regression assumptions are unvalidated") +
-	scale_shape_manual(values = c(15,17,19,21),
+  geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
+  # Updated legend name for colour
+  labs(shape = "Nitrogen\nConcentration", colour = "Number of\nFlowers", 
+       caption = "Regression assumptions are unvalidated") +
+  scale_shape_manual(values = c(15,17,19,21),
        labels = c("High", "Medium", "Low")) +
-	# Adding scale_colour_gradient
-	scale_colour_gradient(low = "#9F00FF", high = "#FF9F00") +
-	theme_rbook()
+  # Adding scale_colour_gradient
+  scale_colour_gradient(low = "#9F00FF", high = "#FF9F00") +
+  theme_rbook()
 ```
 
 
@@ -1568,18 +1568,18 @@ knitr::include_graphics(path = "images/plot/scales.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Number of\nFlowers", 
-			 caption = "Regression assumptions are unvalidated") +
-	scale_shape_manual(values = c(15,17,19,21),
+  geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Number of\nFlowers", 
+       caption = "Regression assumptions are unvalidated") +
+  scale_shape_manual(values = c(15,17,19,21),
        labels = c("High", "Medium", "Low")) +
-	# Adding scale_colour_gradient2
-	scale_colour_gradient2(midpoint = mean(flower$flowers), 
+  # Adding scale_colour_gradient2
+  scale_colour_gradient2(midpoint = mean(flower$flowers), 
        low = "#9F00FF", mid = "#00FF9F", high = "#FF9F00") +
-	theme_rbook()
+  theme_rbook()
 ```
 
 
@@ -1606,18 +1606,18 @@ knitr::include_graphics(path = "images/plot/scales.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Number of\nFlowers", 
-			 caption = "Regression assumptions are unvalidated") +
-	scale_shape_manual(values = c(15,17,19,21),
+  geom_point(aes(colour = flowers, shape = nitrogen), size = 2) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Number of\nFlowers", 
+       caption = "Regression assumptions are unvalidated") +
+  scale_shape_manual(values = c(15,17,19,21),
        labels = c("High", "Medium", "Low")) +
-	# Adding scale_colour_gradientn
-	scale_colour_gradientn(colours = c("#1252ED", "#12ED3F", "#EDAD12", "#ED12C0"),
+  # Adding scale_colour_gradientn
+  scale_colour_gradientn(colours = c("#1252ED", "#12ED3F", "#EDAD12", "#ED12C0"),
        values = c(0, 0.25, 0.5, 0.75, 1)) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 
@@ -1642,22 +1642,22 @@ knitr::include_graphics(path = "images/plot/scales_mapping.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	# Moving size into aes and changing to a continuous variable
-	geom_point(aes(colour = nitrogen, shape = nitrogen, size = height), alpha = 0.6) +
-	geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
-	geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
-	# Including size label
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated",
-			 size = "Plant\nHeight (cm)") +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  # Moving size into aes and changing to a continuous variable
+  geom_point(aes(colour = nitrogen, shape = nitrogen, size = height), alpha = 0.6) +
+  geom_smooth(colour = "black", method = "lm", se = FALSE, linetype = 2, alpha = 0.6) +
+  geom_smooth(aes(colour = nitrogen), method = "lm", se = FALSE, size = 1.2) +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  geom_hline(aes(yintercept = 79.7833), size = 0.5, colour = "black", linetype = 3) +
+  # Including size label
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated",
+       size = "Plant\nHeight (cm)") +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19,21),
+  scale_shape_manual(values = c(15,17,19,21),
        labels = c("High", "Medium", "Low")) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 
@@ -1684,21 +1684,21 @@ knitr::include_graphics(path = "images/plot/theme.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19),
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	# Moving the legend
-	theme(legend.position = "bottom") +
-	theme_rbook()
+  # Moving the legend
+  theme(legend.position = "bottom") +
+  theme_rbook()
 ```
 
 
@@ -1722,21 +1722,21 @@ knitr::include_graphics(path = "images/plot/theme.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19),
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	# Hiding the legend
-	theme(legend.position = "none") +
-	theme_rbook()
+  # Hiding the legend
+  theme(legend.position = "none") +
+  theme_rbook()
 ```
 
 
@@ -1757,20 +1757,20 @@ knitr::include_graphics(path = "images/plot/theme.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	# Including show.legend = FALSE to prevent inclusion in legend
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6, show.legend = FALSE) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  # Including show.legend = FALSE to prevent inclusion in legend
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19),
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 
@@ -1796,22 +1796,22 @@ knitr::include_graphics(path = "images/plot/geoms.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19),
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	# Including layer to display text
-	geom_text(x = 22, y = 5, label = "A.
+  # Including layer to display text
+  geom_text(x = 22, y = 5, label = "A.
 Artist", colour = "grey", family = "serif") +
-	theme_rbook()
+  theme_rbook()
 ```
 
 
@@ -1829,20 +1829,20 @@ Let's see how that works:
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	# Including tag argument
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated", tag = "A") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  # Including tag argument
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated", tag = "A") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19),
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 
@@ -1869,21 +1869,21 @@ knitr::include_graphics(path = "images/plot/scales.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19),
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	# Adjusting breaks on x axis
-	scale_x_continuous(breaks = seq(from = 5, to = 25, by = 2.5)) +
-	theme_rbook()
+  # Adjusting breaks on x axis
+  scale_x_continuous(breaks = seq(from = 5, to = 25, by = 2.5)) +
+  theme_rbook()
 ```
 
 
@@ -1906,21 +1906,21 @@ knitr::include_graphics(path = "images/plot/theme.png")
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	geom_smooth(method = "lm", se = FALSE) +
-	geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
-	xlab("Weight of flower (g)") +
-	ylab(bquote("Area of shoot"~(cm^2))) +
-	labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
-			 caption = "Regression assumptions are unvalidated") +
-	geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
-	scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linetype = 2, alpha = 0.6, colour = "black") +
+  xlab("Weight of flower (g)") +
+  ylab(bquote("Area of shoot"~(cm^2))) +
+  labs(shape = "Nitrogen\nConcentration", colour = "Nitrogen\nConcentration", 
+       caption = "Regression assumptions are unvalidated") +
+  geom_hline(aes(yintercept = 79.8), size = 0.5, colour = "black", linetype = 3) +
+  scale_colour_manual(values = c("#5C1AAE", "#AE5C1A", "#1AAE5C"),
        labels = c("High", "Medium", "Low")) +
-	scale_shape_manual(values = c(15,17,19),
+  scale_shape_manual(values = c(15,17,19),
        labels = c("High", "Medium", "Low")) +
-	# Changing the angle of the axis text
-	theme(axis.text.x=element_text(angle = 45, vjust = 0.5)) +
-	theme_rbook()
+  # Changing the angle of the axis text
+  theme(axis.text.x=element_text(angle = 45, vjust = 0.5)) +
+  theme_rbook()
 ```
 
 
@@ -1943,20 +1943,20 @@ We'll use the `patchwork` operator `+` to link them all together and see how tha
 #| out-width: 75%
 #| fig-align: center
 a <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	theme_classic()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  theme_classic()
 
 b <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	theme_bw()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  theme_bw()
 
 c <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	theme_minimal()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  theme_minimal()
 
 d <- ggplot(aes(x = weight, y = shootarea, colour = nitrogen), data = flower) +
-	geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
-	theme_light()
+  geom_point(aes(shape = nitrogen), size = 2, alpha = 0.6) +
+  theme_light()
 
 nested_1 <- a + b + c +d
 
@@ -1974,7 +1974,7 @@ We can solve that by using the `plot_layout()`\index{plot\_layout()} function an
 #| out-width: 75%
 #| fig-align: center
 nested_1 +
-	plot_layout(guides = "collect")
+  plot_layout(guides = "collect")
 ```
 
 
@@ -1991,8 +1991,8 @@ To show how you can use `patchwork` and `ggplot2` together, we'll also add in an
 #| fig-align: center
 # note the use of '&' instead of '+'
 nested_1 &
-	theme(legend.position = 'none') &
-	geom_path()
+  theme(legend.position = 'none') &
+  geom_path()
 ```
 
 
@@ -2018,8 +2018,8 @@ DDDDD
 "
 
 nested_1 +
-	plot_layout(design = grid_layout) &
-	theme(legend.position = 'none')
+  plot_layout(design = grid_layout) &
+  theme(legend.position = 'none')
 ```
 
 
@@ -2047,11 +2047,11 @@ We're using that here, but we actually prefer to explicitly state the argument n
 #| out-width: 75%
 #| fig-align: center
 ggplot(flower) +
-	geom_density(aes(x = flowers, fill = nitrogen), alpha = 0.5) +
-	labs(y = "Density", x = "Number of Flowers", fill = "Nitrogen\nConcentration") +
-	scale_fill_manual(labels = c("High", "Medium", "Low"),
+  geom_density(aes(x = flowers, fill = nitrogen), alpha = 0.5) +
+  labs(y = "Density", x = "Number of Flowers", fill = "Nitrogen\nConcentration") +
+  scale_fill_manual(labels = c("High", "Medium", "Low"),
         values = c("#DB24BC", "#BCDB24", "#24BCDB")) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 ### Histogram
@@ -2073,12 +2073,12 @@ dodged.
 #| out-width: 75%
 #| fig-align: center
 ggplot(flower) +
-	geom_histogram(aes(x = flowers, fill = factor(block)), colour = "black", bins = 20,
+  geom_histogram(aes(x = flowers, fill = factor(block)), colour = "black", bins = 20,
                  position = "dodge") +
-	labs(y = "Count", x = "Number of Flowers", fill = "Greenhouse\nBlock") +
-	scale_fill_manual(labels = c("1", "2"),
+  labs(y = "Count", x = "Number of Flowers", fill = "Greenhouse\nBlock") +
+  scale_fill_manual(labels = c("1", "2"),
           values = c("#8CD926", "#7326D9")) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 ### Frequency polygons
@@ -2093,11 +2093,11 @@ The only difference here is that we are drawing a line to each value, instead of
 #| out-width: 75%
 #| fig-align: center
 ggplot(flower) +
-	geom_freqpoly(aes(x = flowers, colour = factor(block)), size = 1, bins = 20) +
-	labs(y = "Count", x = "Number of Flowers", colour = "Greenhouse\nBlock") +
-	scale_colour_manual(labels = c("1", "2"),
+  geom_freqpoly(aes(x = flowers, colour = factor(block)), size = 1, bins = 20) +
+  labs(y = "Count", x = "Number of Flowers", colour = "Greenhouse\nBlock") +
+  scale_colour_manual(labels = c("1", "2"),
          values = c("#8CD926", "#7326D9")) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 ### Boxplot
@@ -2113,9 +2113,9 @@ the distance between between the lower and upper quartiles).
 #| out-width: 75%
 #| fig-align: center
 ggplot(flower) +
-	geom_boxplot(aes(y = flowers, x = nitrogen)) +
-	labs(y = "Number of Flowers", x = "Nitrogen Concentration") +
-	theme_rbook()
+  geom_boxplot(aes(y = flowers, x = nitrogen)) +
+  labs(y = "Number of Flowers", x = "Nitrogen Concentration") +
+  theme_rbook()
 ```
 
 ### Violin plots
@@ -2145,11 +2145,11 @@ ggplot(flower) +
               draw_quantiles = c(0.25, 0.5, 0.75)) +
   geom_jitter(aes(y = flowers, x = nitrogen), colour = "black", height = 0, 
               width = 0.1, alpha = 0.5) +
-	scale_fill_manual(labels = c("High", "Medium", "Low"),
+  scale_fill_manual(labels = c("High", "Medium", "Low"),
          values = c("#5f7f5c", "#749770", "#9eb69b")) +
-	labs(y = "Number of Flowers", x = "Nitrogen Concentration") +
-	scale_y_log10() +
-	theme_rbook()
+  labs(y = "Number of Flowers", x = "Nitrogen Concentration") +
+  scale_y_log10() +
+  theme_rbook()
 ```
 
 ### Barchart
@@ -2167,10 +2167,10 @@ There are almost always better alternatives to use that better demonstrate the d
 #| fig-align: center
 ggplot(flower) +
   geom_bar(aes(x = factor(block), fill = nitrogen)) +
-	scale_fill_manual(labels = c("High", "Medium", "Low"),
+  scale_fill_manual(labels = c("High", "Medium", "Low"),
          values = c("#2613EC", "#9313EC", "#EC13D9")) +
-	labs(y = "Count", x = "Block") +
-	theme_rbook()
+  labs(y = "Count", x = "Block") +
+  theme_rbook()
 ```
 
 
@@ -2192,10 +2192,10 @@ Note that for quantiles to be calculated `ggplot2` requires the installation of 
 library(quantreg)
 
 ggplot(aes(x = weight, y = shootarea), data = flower) +
-	geom_point(size = 0.5, alpha = 0.6) +
-	geom_quantile(colour = "darkgrey", size = 1) +
-	labs(y = "Shoot Area", x = "Weight") +
-	theme_rbook()
+  geom_point(size = 0.5, alpha = 0.6) +
+  geom_quantile(colour = "darkgrey", size = 1) +
+  labs(y = "Shoot Area", x = "Weight") +
+  theme_rbook()
 ```
 
 ### Heatmap
@@ -2210,10 +2210,10 @@ Heatmaps are a great tool to visualise spatial patterns.
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = leafarea, y = shootarea), data = flower) +
-	geom_bin2d() +
-	labs(y = "Shoot Area", x = "Leaf Area") +
-	coord_cartesian(xlim = c(5,25)) +
-	theme_rbook()
+  geom_bin2d() +
+  labs(y = "Shoot Area", x = "Leaf Area") +
+  coord_cartesian(xlim = c(5,25)) +
+  theme_rbook()
 ```
 
 
@@ -2234,10 +2234,10 @@ Note that `geom_hex()` requires you to first install an additional package calle
 library(hexbin)
 
 ggplot(aes(x = leafarea, y = shootarea), data = flower) +
-	geom_hex() +
-	labs(y = "Shoot Area", x = "Leaf Area") +
-	coord_cartesian(xlim = c(5,25)) +
-	theme_rbook()
+  geom_hex() +
+  labs(y = "Shoot Area", x = "Leaf Area") +
+  coord_cartesian(xlim = c(5,25)) +
+  theme_rbook()
 ```
 
 ### Contour map
@@ -2255,10 +2255,10 @@ Think of this as showing where points are most clustered, as in `geom_bin2d()`.
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = leafarea, y = shootarea), data = flower) +
-	geom_density2d() +
-	labs(y = "Shoot Area", x = "Leaf Area") +
-	coord_cartesian(xlim = c(5,25)) +
-	theme_rbook()
+  geom_density2d() +
+  labs(y = "Shoot Area", x = "Leaf Area") +
+  coord_cartesian(xlim = c(5,25)) +
+  theme_rbook()
 ```
 
 
@@ -2273,10 +2273,10 @@ To do so, we'll swap out `geom_density_2d()` for `stat_density_2d()` which will 
 #| out-width: 75%
 #| fig-align: center
 ggplot(aes(x = leafarea, y = shootarea), data = flower) +
-	stat_density_2d(aes(fill = stat(level)), geom = "polygon") +
-	labs(y = "Shoot Area", x = "Leaf Area") +
-	coord_cartesian(xlim = c(5,25)) +
-	theme_rbook()
+  stat_density_2d(aes(fill = stat(level)), geom = "polygon") +
+  labs(y = "Shoot Area", x = "Leaf Area") +
+  coord_cartesian(xlim = c(5,25)) +
+  theme_rbook()
 ```
 
 
@@ -2305,11 +2305,11 @@ We'll use the same technique to add horiztonal lines for each row of data to rep
 #| out-width: 75%
 #| fig-align: center
 ggplot(flower) + 
-	geom_hline(aes(yintercept = as.numeric(rownames(flower))), linetype = 2,
+  geom_hline(aes(yintercept = as.numeric(rownames(flower))), linetype = 2,
              colour = "lightgrey") +
   geom_point(aes(x = leafarea, y = as.numeric(rownames(flower)))) +
   labs(y = "Order in Dataset", x = bquote("Area of leaf"~(cm^2))) +
-	theme_rbook()
+  theme_rbook()
 ```
 
 ### Pairs plot
@@ -2339,7 +2339,7 @@ library(GGally)
 flower$block <- factor(flower$block)
 
 ggpairs(flower, aes(colour = nitrogen), cardinality_threshold = NULL, progress = FALSE) +
-	theme_rbook()
+  theme_rbook()
 ```
 
  

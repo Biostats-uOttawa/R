@@ -253,24 +253,13 @@ they could also have been called A and B).
 
 
 ```{r}
-#| label: import-data-html
-#| eval: !expr knitr::is_html_output()
+#| label: tbl-import-data
 #| echo: false
-unicorns <- read.table("data/unicorns.txt", header = TRUE, stringsAsFactors = TRUE)
-knitr::kable(rbind(head(unicorns), tail(unicorns)), row.names = FALSE)
-```
-
-```{r}
-#| label: import-data-latex
-#| eval: !expr knitr::is_latex_output()
-#| echo: false
-#| collapse: true
-#| warning: false
 #| message: false
+#| tbl-cap: Imported unicorn data
 library(kableExtra)
-unicorns <- read.table("data/unicorns.txt", header = TRUE)
-knitr::kable(rbind(head(unicorns), tail(unicorns)), row.names = FALSE, "latex", booktabs = T) %>%
-  kable_styling(latex_options = "striped")
+unicorns <- read.csv("data/unicorns.csv")
+knitr::kable(rbind(head(unicorns), tail(unicorns)), row.names = FALSE, booktabs = TRUE)
 ```
 
 
@@ -340,16 +329,16 @@ str(dataf)
 ## Importing data
 
 Although creating data frames from existing data structures is extremely useful, by far the most common approach is to create a data frame by importing data from an external file.
-To do this, you'll need to have your data correctly formatted and saved in a file format that R is able to recognise.
-Fortunately for us, R is able to recognise a wide variety of file formats, although in reality you'll probably end up only using two or three regularly.
+To do this, you'll need to have your data correctly formatted and saved in a file format that R is able to recognize.
+Fortunately for us, R is able to recognize a wide variety of file formats, although in reality you'll probably end up only using two or three regularly.
 
 
 ### Saving files to import
 
-The easiest method of creating a data file to import into R is to enter your data into a spreadsheet using either Microsoft Excel or LibreOffice Calc and save the spreadsheet as a tab delimited file.
+The easiest method of creating a data file to import into R is to enter your data into a spreadsheet using either Microsoft Excel or LibreOffice Calc and save the spreadsheet as a comma delimited file.
 We prefer LibreOffice Calc as it's open source, platform independent and free but MS Excel is OK too (but see [here][excel_gotcha] for some gotchas).
-Here's the data from the petunia experiment we dicussed previously displayed in LibreOffice.
-If you want to follow along you can download the data file (*'unicorn.xls'*) from @sec-data-files.
+Here's the data from the petunia experiment we discussed previously displayed in LibreOffice.
+If you want to follow along you can download the data file (*'unicorn.xlsx'*) from @sec-data-files.
   
 
 
@@ -362,9 +351,9 @@ knitr::include_graphics(path = "images/data/libre_off.png")
 ```
 
 
-For those of you unfamiliar with the tab delimited file format it simply means that data in different columns are separated with a 'tab' character (yes, the same one as on your keyboard) and is usually saved as a file with a '.txt' extension (you might also see `.tsv` which is short for tab separated values).
+For those of you unfamiliar with the tab delimited file format it simply means that data in different columns are separated with a ',' character and is usually saved as a file with a '.csv' extension.
 
-To save a spreadsheet as a tab delimited file in LibreOffice Calc select `File` -> `Save as ...` from the main menu.
+To save a spreadsheet as a comma delimited file in LibreOffice Calc select `File` -> `Save as ...` from the main menu.
 You will need to specify the location you want to save your file in the 'Save in folder' option and the name of the file in the 'Name' option.
 In the drop down menu located above the 'Save' button change the default 'All formats' to 'Text CSV (.csv)'.
 
@@ -379,7 +368,6 @@ knitr::include_graphics(path = "images/data/libre_off1.png")
 
 
 Click the Save button and then select the 'Use Text CSV Format' option.
-In the next pop-up window select `{Tab}` from the drop down menu in the 'Field delimiter' option.
 Click on OK to save the file.
 
 
@@ -392,30 +380,13 @@ knitr::include_graphics(path = "images/data/libre_off2.png")
 ```
 
 
-The resulting file will annoyingly have a '.csv' extension even though we've saved it as a tab delimited file.
-Either live with it or rename the file with a '.txt' extension instead.
-
-In MS Excel, select `File` -> `Save as ...` from the main menu and navigate to the folder where you want to save the file.
-Enter the file name (keep it fairly short without spaces (@sec-file_names)!) in the 'Save as:' dialogue box.
-In the 'File format:' dialogue box click on the down arrow to open the drop down menu and select 'Text (Tab delimited)' as your file type.
-Select OK to save the file.
-
-
-```{r}
-#| label: ms-excel
-#| echo: false
-#| out-width: 60%
-#| fig-align: center
-knitr::include_graphics(path = "images/data/ms_excel1.png")
-```
-
 
 There are a couple of things to bear in mind when saving files to import into R which will make your life easier in the long run.
 Keep your column headings (if you have them) short and informative.
 Also avoid spaces in your column headings by replacing them with an underscore or a dot (i.e.
-replace `shoot height` with `shoot_height` or `shoot.height`) and avoid using special characters (i.e.
-`leaf area (mm^2)`).
-Remember, if you have missing data in your data frame (empty cells) you should use an `NA` to represent these missing values.
+replace `mane size` with `mane size` or `mane.size`) and avoid using special characters (i.e.
+`leaf area (mm^2)` or uppercase to simpy your life).
+Remember, if you have missing data in your data frame (empty cells) you should use an `NA` to represent these missing values or have an empty cell.
 This will keep the data frame tidy.
 
 ### Import functions {#sec-import_fnc}
@@ -423,7 +394,7 @@ This will keep the data frame tidy.
 Once you've saved your data file in a suitable format we can now read this file into R.
 The workhorse function for importing data into R is the `read.table()` function (we discuss some alternatives later in the chapter).
 The `read.table()` function is a very flexible function with a shed load of arguments (see `?read.table`) but it's quite simple to use.
-Let's import a tab delimited file called `unicorns.txt` which contains the data we saw previously in this Chapter (@sec-df) and assign it to an object called `unicorns`.
+Let's import a comma delimited file called `unicorns.csv` which contains the data we saw previously in this Chapter (@sec-df) and assign it to an object called `unicorns`.
 The file is located in a `data` directory which itself is located in our root directory (@sec-dir-struc).
 The first row of the data contains the variable (column) names.
 To use the `read.table()` function to import this file
@@ -432,7 +403,7 @@ To use the `read.table()` function to import this file
 #| label: df1
 #| echo: true
 unicorns <- read.table(
-  file = "data/unicorns.txt", header = TRUE, sep = "\t",
+  file = "data/unicorns.csv", header = TRUE, sep = ",", dec = ".",
   stringsAsFactors = TRUE
 )
 ```
@@ -444,25 +415,34 @@ If your working directory is already set to the directory which contains the fil
 In the example above, the file path is separated with a single forward slash `/`.
 This will work regardless of the operating system you are using and we recommend you stick with this.
 However, Windows users may be more familiar with the single backslash notation and if you want to keep using this you will need to include them as double backslashes.
-Note though that the double backslash notation will **not** work on computers using Mac OSX or Linux operating systems.
 
-```{r}
-#| label: df2
-#| echo: true
-#| eval: false
-unicorns <- read.table(
-  file = "C:\\Documents\\Prog1\\data\\unicorns.txt",
-  header = TRUE, sep = "\t", stringsAsFactors = TRUE
-)
-```
+::: {.callout-warning}
+Note though that the double backslash notation will **not** work on computers using Mac OSX or Linux operating systems.
+We thus strongly discourage it since it is not reproducible
+:::
 
 The `header = TRUE` argument specifies that the first row of your data contains the variable names (i.e.
 `food`, `block` etc).
 If this is not the case you can specify `header = FALSE` (actually, this is the default value so you can omit this argument entirely).
-The `sep = "\t"` argument tells R that the file delimiter is a tab (`\t`).
+The `sep = ","` argument tells R what is file delimiter.
+
+Other useful arguments include `dec =` and `na.strings =`.
+The `dec =` argument allows you to change the default character (`.`) used for a decimal point.
+This is useful if you're in a country where decimal places are usually represented by a comma (i.e.
+`dec = ","`).
+The `na.strings =` argument allows you to import data where missing values are represented with a symbol other than `NA`.
+This can be quite common if you are importing data from other statistical software such as Minitab which represents missing values as a `*` (`na.strings = "*"`).
+
+Honestly, from the `read.table()` a series of predefined functions are available.
+They are all using `read.table()` but define format specific options.
+We can simply `read.csv()`to read a csv file, with "," separation and "." for decimals.
+In countries were "," is used for decimals, csv files use ";" as a separator. 
+In this case using `read.csv2()` would be needed.
+When working with tab delimited files, the functions `read.delim()` and `read.delim2()`
+can be used with "." and "," as decimal respectively.
  
 
-After importing our data into R it doesn't appear that R has done much, at least nothing appears in the R Console! To see the contents of the data frame we could just type the name of the object as we have done previously.
+After importing our data into R , to see the contents of the data frame we could just type the name of the object as we have done previously.
 **BUT** before you do that, think about why you're doing this.
 If your data frame is anything other than tiny, all you're going to do is fill up your Console with data.
 It's not like you can easily check whether there are any errors or that your data has been imported correctly.
@@ -484,19 +464,9 @@ If this is not what you want you can prevent this by using the `stringsAsFactors
 ```{r}
 #| label: df4
 #| echo: true
-unicorns <- read.table(
-  file = "data/unicorns.txt", header = TRUE,
-  sep = "\t", stringsAsFactors = FALSE
-)
+unicorns <- read.delim(file = "data/unicorns.txt")
 str(unicorns)
 ```
-
-Other useful arguments include `dec =` and `na.strings =`.
-The `dec =` argument allows you to change the default character (`.`) used for a decimal point.
-This is useful if you're in a country where decimal places are usually represented by a comma (i.e.
-`dec = ","`).
-The `na.strings =` argument allows you to import data where missing values are represented with a symbol other than `NA`.
-This can be quite common if you are importing data from other statistical software such as Minitab which represents missing values as a `*` (`na.strings = "*"`).
 
 If we just wanted to see the names of our variables (columns) in the data frame we can use the `names()` function which will return a character vector of the variable names.
 
@@ -506,31 +476,9 @@ If we just wanted to see the names of our variables (columns) in the data frame 
 names(unicorns)
 ```
 
-R has a number of variants of the `read.table()` function that you can use to import a variety of file formats.
-Actually, these variants just use the `read.table()` function but include different combinations of arguments by default to help import different file types.
-The most useful of these are the `read.csv()`, `read.csv2()` and `read.delim()` functions.
-The `read.csv()` function is used to import comma separated value (.csv) files and assumes that the data in columns are separated by a comma (it sets `sep = ","` by default).
-It also assumes that the first row of the data contains the variable names by default (it sets `header = TRUE` by default).
-The `read.csv2()` function assumes data are separated by semicolons and that a comma is used instead of a decimal point (as in many European countries).
-The `read.delim()` function is used to import tab delimited data and also assumes that the first row of the data contains the variable names by default.
-
-```{r}
-#| label: df5
-#| echo: true
-#| eval: false
-# import .csv file
-unicorns <- read.csv(file = "data/unicorns.csv")
-
-# import .csv file with dec = "," and sep = ";"
-unicorns <- read.csv2(file = "data/unicorns.csv")
-
-# import tab delim file with sep = "\t"
-unicorns <- read.delim(file = "data/unicorns.txt")
-```
-
 You can even import spreadsheet files from MS Excel or other statistics software directly into R but our advice is that this should generally be avoided if possible as it just adds a layer of uncertainty between you and your data.
-In our opinion it's almost always better to export your spreadsheets as tab or comma delimited files and then import them into R using the `read.table()` function.
-If you're hell bent on directly importing data from other software you will need to install the `foreign` package which has functions for importing Minitab, SPSS, Stata and SAS files or the `xlsx` package to import Excel spreadsheets.
+In our opinion it's almost always better to export your spreadsheets as tab or comma delimited files and then import them into R using one of the `read.table()` derivative function.
+If you're hell bent on directly importing data from other software you will need to install the `foreign` package which has functions for importing Minitab, SPSS, Stata and SAS files. For MS Excel and LO Calc spreadsheets, there are a few packages that can be used.
 
 ### Common import frustrations
 
@@ -573,6 +521,8 @@ We can see an obvious problem, all of our variables have been imported as factor
 `V8`.
 The problem happens because we haven't told the `read.table()` function that the first row contains the variable names and so it treats them as data.
 As soon as we have a single character string in any of our data vectors, R treats the vectors as character type data (remember all elements in a vector must contain the same type of data (@sec-scal_vecs)).
+
+This is just one more argument to use `read.csv()` or `read.delim()` function with appropriate default values for arguments.
 
 ### Other import options {#sec-import_other}
 
@@ -713,40 +663,24 @@ We have done this by using the skills we developed in @sec-funcs when we generat
 But what if we want to extract either all of the rows or all of the columns? It would be extremely tedious to have to generate vectors for all rows or for all columns.
 Thankfully R has a shortcut.
 If you don't specify either a row or column index in the `[ ]` then R interprets it to mean you want all rows or all columns.
-For example, to extract the first 8 rows and all of the columns in the `unicorns` data frame
+For example, to extract the first 4 rows and all of the columns in the `unicorns` data frame
 
 ```{r}
-#| label: dw7
-#| echo: true
-unicorns[1:8, ]
+unicorns[1:4, ]
 ```
 
-or all of the rows and the first 3 columns.
-If you're reading the web version of this book scroll down in output panel to see all of the data.
-Note, if you're reading the pdf version of the book some of the output has been truncated to save some space.
+or all of the rows and the first 3 columns[^1].
+
+[^1]: For space and simplicity we are just showing the first and last five rows
+
+```r
+unicorns[, 1:3]
+```
 
 ```{r}
 #| label: dw8
-#| echo: true
-#| eval: false
-unicorns[, 1:3]
-```
-
-```{r}
-#| label: dw8-html
 #| echo: false
-#| eval: !expr knitr::is_html_output()
-#| warning: false
-#| attr-output: 'style="max-height: 500px;"'
-unicorns[, 1:3]
-```
-
-```{r}
-#| label: dw8-latex
-#| echo: false
-#| eval: !expr knitr::is_latex_output()
-#| warning: false
-rbind(head(unicorns[, 1:3], n = 10), tail(unicorns[, 1:3], n = 10))
+rbind(head(unicorns[, 1:3], n = 5), tail(unicorns[, 1:3], n = 5))
 ```
 
 We can even use negative positional indexes to exclude certain rows and columns.
@@ -1440,7 +1374,7 @@ Finally, the `sep = "\t"` argument indicates that a Tab should be used as the de
 #| label: export2
 #| echo: true
 #| eval: false
-write.table(unicorns_df2,
+write.csv(unicorns_df2,
   file = "data/unicorns_04_12.txt", col.names = TRUE,
   row.names = FALSE, sep = "\t"
 )

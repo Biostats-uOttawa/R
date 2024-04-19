@@ -66,7 +66,9 @@ When we make a function we can:
 ```{r}
 #| label: generic_function
 #| eval: false
-my_function <- function(arg1, arg2, ...) {expression}
+my_function <- function(arg1, arg2, ...) {
+  expression
+}
 ```
 
 The first thing to note is that we've used the function `function()` to create a new function called `my_function`.
@@ -140,8 +142,8 @@ But what if we increased the complexity?
 ```{r}
 #| label: complex
 #| eval: false
-dishes$lasagna * dishes$stovies / dishes$lasagna + (dishes$lasagna * 10^(dishes$stovies)) 
-                  - dishes$stovies - (dishes$lasagna * sqrt(dishes$stovies + 10))
+dishes$lasagna * dishes$stovies / dishes$lasagna + (dishes$lasagna * 10^(dishes$stovies))
+-dishes$stovies - (dishes$lasagna * sqrt(dishes$stovies + 10))
 ```
 
 Now imagine having to copy and paste this three times, and in each case having to change the `lasagna` and `stovies` variables (especially if we had to do it more than three times).
@@ -264,7 +266,9 @@ How can we get the function to let us know when `NA` values are produced? Here's
 multiply_cols <- function(data, x, y) {
   temp_var <- data %>%
     select({{ x }}, {{ y }}) %>%
-    mutate(xy = {.[1] * .[2]}) %>%
+    mutate(xy = {
+      .[1] * .[2]
+    }) %>%
     pull(xy)
   if (any(is.na(temp_var))) {
     warning("The function has produced NAs")
@@ -325,11 +329,11 @@ In R this is coded as:
 #| label: joke_logic
 eggs <- TRUE # Whether there were eggs in the store
 
-  if (eggs == TRUE) { # If there are eggs
+if (eggs == TRUE) { # If there are eggs
   n.milk <- 6 # Get 6 cartons of milk
-	} else { # If there are not eggs
+} else { # If there are not eggs
   n.milk <- 1 # Get 1 carton of milk
-  }
+}
 ```
 
 We can then check `n.milk` to see how many milk cartons they returned with.
@@ -559,7 +563,6 @@ Let's remind ourselves what our data look like and the code for the `multiple_co
 
 ```{r}
 #| label: dishes-data
-
 ```
 
 ```{r}
@@ -598,13 +601,15 @@ lasagna_stovies_func <- multiply_cols(dishes, lasagna, stovies)
 i <- 1
 identical(
   multiply_cols(dishes, colnames(dishes)[i], colnames(dishes)[i + 1]),
-  lasagna_stovies_func)
+  lasagna_stovies_func
+)
 
 stovies_poutine_func <- multiply_cols(dishes, stovies, poutine)
 i <- 2
 identical(
   multiply_cols(dishes, colnames(dishes)[i], colnames(dishes)[i + 1]),
-  stovies_poutine_func)
+  stovies_poutine_func
+)
 ```
 
 If you can follow the examples above, you'll be in a good spot to begin writing some of your own for loops.
@@ -619,7 +624,9 @@ The basic structure of the while loop is:
 
 ```{r}
 #| eval: false
-while(logical_condition){ expression }
+while (logical_condition) {
+  expression
+}
 ```
 
 A simple example of a while loop is:
@@ -690,7 +697,9 @@ Let's start with a simple demonstration first.
 Let's use the `lapply()` function create a sequence from 1 to 5 and add 1 to each observation (just like we did when we used a for loop):
 
 ```{r}
-lapply(0:4, function(a) {a + 1})
+lapply(0:4, function(a) {
+  a + 1
+})
 ```
 
 Notice that we need to specify our sequence as `0:4` to get the output `1 ,2 ,3 ,4 , 5` as we are adding `1` to each element of the sequence.
@@ -699,14 +708,18 @@ See what happens if you use `1:5` instead.
 Equivalently, we could have defined the function first and then used the function in `lapply()`
 
 ```{r}
-add_fun <- function(a) {a + 1}
+add_fun <- function(a) {
+  a + 1
+}
 lapply(0:4, add_fun)
 ```
 
 The `sapply()` function does the same thing as  `lapply()` but instead of storing the results as a list, it stores them as a vector.
 
 ```{r}
-sapply(0:4, function(a) {a + 1})
+sapply(0:4, function(a) {
+  a + 1
+})
 ```
 
 As you can see, in both cases, we get exactly the same results as when we used the for loop.

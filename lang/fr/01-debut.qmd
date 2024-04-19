@@ -528,7 +528,7 @@ digraph {
   node [
     style = filled
     shape=oval
-	]
+  ]
   root [label="racine" fillcolor="red"]
   data [label="Données" fillcolor="lightblue"]
   functions [label="Fonctions" fillcolor="lightgreen"]
