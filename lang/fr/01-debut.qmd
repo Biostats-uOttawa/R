@@ -142,7 +142,7 @@ Lorsque tu ouvres R studio pour la première fois, tu devrais voir la présentat
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/rstudio.png")
+knitr::include_graphics(path = "images/start/rstudio.png")
 ```
 
 La grande fenêtre (ou volet) sur la gauche est le **Console** de la console.
@@ -165,7 +165,7 @@ Ne t'inquiète pas pour le `[1]` au début de la ligne pour l'instant.
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/rconsole_eval.png")
+knitr::include_graphics(path = "images/start/rconsole_eval.png")
 ```
 
 Cependant, dès que tu commences à écrire plus de code R, cela devient plutôt encombrant.
@@ -179,7 +179,7 @@ Pour créer un nouveau script R, clique sur le menu "Fichier" puis sélectionne 
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_script.png")
+knitr::include_graphics(path = "images/start/new_script.png")
 ```
 
 Tu remarqueras qu'une nouvelle fenêtre (appelée volet Source) apparaît en haut à gauche de RStudio et que la console se trouve maintenant en bas à gauche.
@@ -190,7 +190,7 @@ La nouvelle fenêtre est un éditeur de script et c'est là que tu écriras ton 
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/rstudio_new.png")
+knitr::include_graphics(path = "images/start/rstudio_new.png")
 ```
 
 Pour faire passer ton code de ton éditeur de script à la console, place ton curseur sur la ligne de code, puis clique sur le bouton "Exécuter" en haut à droite de la fenêtre de l'éditeur de script.
@@ -200,7 +200,7 @@ Pour faire passer ton code de ton éditeur de script à la console, place ton cu
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/rstudio_run.png")
+knitr::include_graphics(path = "images/start/rstudio_run.png")
 ```
 
 Tu devrais voir le résultat dans la fenêtre de la console.
@@ -253,7 +253,7 @@ Tu peux accéder à chaque composant en cliquant sur l'onglet approprié dans le
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/vs_orient.png")
+knitr::include_graphics(path = "images/start/vs_orient.png")
 ```
 
 #### Panneau gauche
@@ -266,11 +266,11 @@ Contient :
 
 ::: {#fig-vs-left-panel layout-ncol=3}
 
-![fichier](images/ch-01/vs_file_panel.png){#fig-vsfile}
+![fichier](images/start/vs_file_panel.png){#fig-vsfile}
 
-![git](images/ch-01/vs_git_panel.png){#fig-vsgit}
+![git](images/start/vs_git_panel.png){#fig-vsgit}
 
-![r-ext](images/ch-01/vs_r_ext_panel.png){#fig-vsr}
+![r-ext](images/start/vs_r_ext_panel.png){#fig-vsr}
 
 VS Code panneau de gauche
 :::
@@ -287,7 +287,7 @@ Comprend :
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/vs_editor_tabs.png")
+knitr::include_graphics(path = "images/start/vs_editor_tabs.png")
 ```
 
 #### Fenêtre du terminal
@@ -302,7 +302,7 @@ Il peut être divisé et exécuter plusieurs sessions en même temps.
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/vs_term_panel.png")
+knitr::include_graphics(path = "images/start/vs_term_panel.png")
 ```
 
 ## Paquets R {#sec-packages}
@@ -656,7 +656,7 @@ Dans ce chapitre, nous allons créer un projet dans un nouveau répertoire.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj.png")
+knitr::include_graphics(path = "images/start/new_proj.png")
 ```
 
 Tu peux également créer un nouveau projet en cliquant sur le bouton "Projet" en haut à droite de RStudio et en sélectionnant "Nouveau projet...
@@ -666,7 +666,7 @@ Tu peux également créer un nouveau projet en cliquant sur le bouton "Projet" e
 #| echo: false
 #| out-width: 30%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj1.png")
+knitr::include_graphics(path = "images/start/new_proj1.png")
 ```
 
 Dans la fenêtre suivante, sélectionne 'Nouveau projet'.
@@ -676,7 +676,7 @@ Dans la fenêtre suivante, sélectionne 'Nouveau projet'.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj2.png")
+knitr::include_graphics(path = "images/start/new_proj2.png")
 ```
 
 Saisis maintenant le nom du répertoire que tu veux créer dans le champ "Nom du répertoire :" (nous l'appellerons `first_project` pour ce chapitre).
@@ -689,7 +689,7 @@ Enfin, clique sur 'Créer un projet' pour créer le nouveau projet.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj3.png")
+knitr::include_graphics(path = "images/start/new_proj3.png")
 ```
 
 Une fois ton nouveau projet créé, tu auras un nouveau dossier sur ton ordinateur qui contiendra un fichier de projet RStudio appelé `first_project.Rproj`.
@@ -701,7 +701,7 @@ Tu peux le vérifier dans l'onglet 'Fichiers' de RStudio (ou dans Finder si tu e
 #| echo: false
 #| out-width: 80%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj4.png")
+knitr::include_graphics(path = "images/start/new_proj4.png")
 ```
 
 La dernière chose que nous te suggérons de faire est de sélectionner `Tools` -> `Project Options...` dans le menu.
@@ -715,7 +715,7 @@ L'inconvénient de cette méthode est que tu devras réexécuter ton code R à c
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/new_proj5.png")
+knitr::include_graphics(path = "images/start/new_proj5.png")
 ```
 
 Maintenant que tu as mis en place un projet RStudio, tu peux commencer à créer des scripts R (ou R markdown/ Quarto, @sec-rmarkdown_r) ou tout ce dont tu as besoin pour compléter ton projet.
@@ -740,7 +740,7 @@ Dans l'idéal, tu devrais essayer d'éviter les éléments suivants !
 #| out-width: 30%
 #| fig-align: center
 #| fig-cap: source:https://xkcd.com/1459/
-knitr::include_graphics(path = "images/ch-01/xkcd_files.png")
+knitr::include_graphics(path = "images/start/xkcd_files.png")
 ```
 
 Bien qu'il n'y ait pas vraiment d'approche standard reconnue pour nommer les fichiers (en fait [il y a][file_wiki] mais tout le monde ne l'utilise pas), il y a quelques points à garder à l'esprit.
@@ -848,7 +848,7 @@ Pour t'aider à formater ton code :
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/before_rcode.png")
+knitr::include_graphics(path = "images/start/before_rcode.png")
 ```
 
 Mets maintenant le code en surbrillance et utilise l'option `styler` :package: pour reformater
@@ -858,7 +858,7 @@ Mets maintenant le code en surbrillance et utilise l'option `styler` :package: p
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/styler.png")
+knitr::include_graphics(path = "images/start/styler.png")
 ```
 
 Pour produire un code joliment formaté
@@ -868,7 +868,7 @@ Pour produire un code joliment formaté
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
-knitr::include_graphics(path = "images/ch-01/after_rcode.png")
+knitr::include_graphics(path = "images/start/after_rcode.png")
 ```
 
 ## Sauvegarde des projets

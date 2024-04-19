@@ -29,7 +29,7 @@ book:
     title: "Chemin enf-R"
     left:
       - text: Données
-        href: 92-fichiers-donnees.qmd
+        href: 902-fichiers-donnees.qmd
       - text: Autres ressources
         menu:
           - text: Biostats uOttawa
@@ -85,7 +85,7 @@ book:
 #        - 81-programming.qmd
 #        - 82-rmarkdown.qmd
 #        - 83-github.qmd
-    - 91-bibliographie.qmd
+    - 901-bibliographie.qmd
   appendices:
-    - 92-fichiers-donnees.qmd
+    - 902-fichiers-donnees.qmd
 #    - 93-latex.qmd
