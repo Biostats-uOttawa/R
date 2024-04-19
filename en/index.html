@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.29">
+<meta name="generator" content="quarto-1.5.30">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
-<meta name="dcterms.date" content="2024-04-12">
+<meta name="dcterms.date" content="2024-04-19">
 <meta name="description" content="Early version needed to be severely updated/modified">
 <title>On the R-way to hell</title>
 <style>
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -146,7 +146,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item">
-    <a class="nav-link active" href="./92-data-files.html" aria-current="page"> 
+    <a class="nav-link active" href="./902-data-files.html" aria-current="page"> 
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -237,7 +237,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Starting with R</span></a>
+ <span class="menu-text">Using R</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -255,31 +255,42 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some R basics</span></span></a>
   </div>
 </li>
-      </ul>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Data and graphics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data in R</span></span></a>
+  <a href="./03-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./12-graphics_short.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Graphics with R</span></span></a>
+  <a href="./04-graphics_short.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programming</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Reproducible reports with Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Version control with Git and GitHub</span></span></a>
   </div>
 </li>
       </ul>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Fundamentals of stats</span></span>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
@@ -291,12 +302,16 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./21-stats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Statistics in R</span></span></a>
+  <a href="./11-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Simple Statistics in R</span></span></a>
   </div>
 </li>
       </ul>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Generalized linear models</span></span>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Mixed models</span></span>
@@ -313,38 +328,9 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Bayesian approach</span></span>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
- <span class="menu-text">Programming and writing with R</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./81-programming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Programming in R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./82-rmarkdown.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reproducible reports with R markdown / Quarto</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./83-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Version control with Git and GitHub</span></span></a>
-  </div>
-</li>
-      </ul>
-</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./91-references.html" class="sidebar-item-text sidebar-link">
+  <a href="./901-references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -359,14 +345,14 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./92-data-files.html" class="sidebar-item-text sidebar-link">
+  <a href="./902-data-files.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Data used in this book</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./93-latex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing R Markdown and LateX</span></span></a>
+  <a href="./903-latex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Installing Quarto and LateX</span></span></a>
   </div>
 </li>
       </ul>
@@ -396,7 +382,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">On the R-way to hell</h1>
-<p class="subtitle lead">An introduction to the marvelous world of R</p>
+<p class="subtitle lead">Statistical analysis in the marvelous world of R</p>
 </div>
 
 <div>
@@ -418,7 +404,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024-04-12</p>
+      <p class="date">2024-04-19</p>
     </div>
   </div>
   
@@ -465,7 +451,12 @@ Warning
 </div>
 </div>
 <section id="the-aim-of-this-book" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="the-aim-of-this-book">The aim of this book</h2>
-<p>The aim of this book is to introduce you to R, a powerful and flexible interactive environment for statistical computing and research. R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting. It is not intended to cover everything but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R.</p>
+<p>The aim of this book is two-fold:</p>
+<ol type="1">
+<li>introduce you to R, a powerful and flexible interactive environment for statistical computing and research.</li>
+<li>introduce you to (or reacquaint you with) statistical analysis done in R.</li>
+</ol>
+<p>R in itself is not difficult to learn, but as with learning any new language (spoken or computer) the initial learning curve can be steep and somewhat daunting. It is not intended to cover everything (neither with R not with statistics) but simply to help you climb the initial learning curve (potentially faster) and provide you with the basic skills (and confidence!) needed to start your own journey with R and with specific analysis.</p>
 </section><section id="multilingual-book" class="level2"><h2 class="anchored" data-anchor-id="multilingual-book">Multilingual book</h2>
 <p>The book is provided as a multilingual book breaking that language barrier and potentially allow to facilitate the learn of R and its mainly english-speaking environment. We are always looking for volunteers to help developed the book further and add more languages to the growing list. Please <a href="https://biostats-uottawa.github.io/people.html">contact us</a> if you want to help</p>
 <p>On the web version of the book, use <i class="fa-regular fa-flag" aria-label="flag"></i> in the navigation bar to switch from one language to another. After switching to your preferred language, you can of course also download the pdf and epub versions in this language if you want to using <i class="fa-solid fa-download" aria-label="download"></i>.</p>
@@ -596,7 +587,10 @@ Note
 </div>
 </div>
 </section><section id="thanks" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="thanks">Thanks</h2>
-<p>This book started as a fork on github from the excellent <a href="https://intro2r.com/">An introduction to R</a> book by Douglas, Roos, Mancini, Couto and Lusseau <span class="citation" data-cites="douglas2023">(<a href="#ref-douglas2023" role="doc-biblioref">Douglas 2023</a>)</span>. It was forked on April 23rd, 2023 from <a href="https://github.com/alexd106/Rbook">Alexd106 github repository</a> then modified and updated following my own needs and teaching perspective of R. This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.</p>
+<p>This book started as a fork on github from the excellent <a href="https://intro2r.com/">An introduction to R</a> book by Douglas, Roos, Mancini, Couto and Lusseau <span class="citation" data-cites="douglas2023">(<a href="06-quarto.html#ref-douglas2023" role="doc-biblioref">Douglas 2023</a>)</span>. It was forked on April 23rd, 2023 from <a href="https://github.com/alexd106/Rbook">Alexd106 github repository</a> then modified and updated following my own needs and teaching perspective of R. This also a part of a multilingual R book project to improve equity and diversity. It started with a french translation and was/will be extended to many more languages.</p>
+<!--
+Image credits: Images and screenshots are from Julien Martin except when indicated in caption.
+-->
 </section><section id="license" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
 <p>I share this modified version of the [original book][https://intro2r.com/] under the license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -605,12 +599,12 @@ Note
 </div>
 <p>If you teach R, feel free to use some or all of the content in this book to help support your own students. The only thing I ask is that you acknowledge the original source and authors. If you find this book useful or have any comments or suggestions I would love to hear from you (<a href="https://biostats-uottawa.github.io/people.html">contact info</a>).</p>
 </section><section id="citing-the-book" class="level2"><h2 class="anchored" data-anchor-id="citing-the-book">Citing the book</h2>
-<p>Julien Martin. (2024). On the R-way to hell. A multilingual introduction to R book. Version: 0.6.0 (2024-04-12).DOI: <a href="https://zenodo.org/doi/10.5281/zenodo.10929585">10.5281/zenodo.10929585</a></p>
+<p>Julien Martin. (2024). On the R-way to hell. A multilingual introduction to R book. Version: 0.6.0 (2024-04-19).DOI: <a href="https://zenodo.org/doi/10.5281/zenodo.10929585">10.5281/zenodo.10929585</a></p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-douglas2023" class="csl-entry" role="listitem">
-Douglas, A. 2023. <a href="https://intro2r.com/">The <span>Grammar</span> of <span>Graphics</span></a>.
+Douglas, A. 2023. <a href="https://intro2r.com/">An introduction to r</a>.
 </div>
 </div>
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

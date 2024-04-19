@@ -2,58 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/index.html</loc>
-    <lastmod>2024-04-12T20:57:08.957Z</lastmod>
+    <lastmod>2024-04-17T21:03:12.944Z</lastmod>
   </url>
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/01-start.html</loc>
-    <lastmod>2024-04-12T21:06:09.866Z</lastmod>
+    <lastmod>2024-04-19T04:44:12.903Z</lastmod>
   </url>
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/02-basics.html</loc>
-    <lastmod>2024-04-12T21:05:36.845Z</lastmod>
+    <lastmod>2024-04-19T19:32:12.461Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/11-data.html</loc>
-    <lastmod>2024-04-12T21:05:36.845Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/03-data.html</loc>
+    <lastmod>2024-04-19T19:34:53.990Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/12-graphics_short.html</loc>
-    <lastmod>2024-04-12T21:03:41.412Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/04-graphics_short.html</loc>
+    <lastmod>2024-04-19T04:42:52.714Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/21-stats.html</loc>
-    <lastmod>2024-04-12T20:57:08.757Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/05-programming.html</loc>
+    <lastmod>2024-04-19T04:42:18.278Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/81-programming.html</loc>
-    <lastmod>2024-04-12T20:57:08.785Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/06-quarto.html</loc>
+    <lastmod>2024-04-19T20:06:43.513Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/82-rmarkdown.html</loc>
-    <lastmod>2024-04-12T20:57:08.809Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/07-github.html</loc>
+    <lastmod>2024-04-19T04:45:22.387Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/83-github.html</loc>
-    <lastmod>2024-04-12T20:57:08.837Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/11-stats.html</loc>
+    <lastmod>2024-04-19T04:45:30.407Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/91-references.html</loc>
-    <lastmod>2024-04-12T20:57:08.861Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/901-references.html</loc>
+    <lastmod>2024-04-19T04:45:37.007Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/92-data-files.html</loc>
-    <lastmod>2024-04-12T20:57:19.865Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/902-data-files.html</loc>
+    <lastmod>2024-04-19T03:38:12.498Z</lastmod>
   </url>
   <url>
-    <loc>https://biostats-uottawa.github.io/R_way/93-latex.html</loc>
-    <lastmod>2024-04-12T20:57:08.913Z</lastmod>
+    <loc>https://biostats-uottawa.github.io/R_way/903-latex.html</loc>
+    <lastmod>2024-04-19T04:45:55.168Z</lastmod>
   </url>
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/On-the-R-way-to-hell.pdf</loc>
-    <lastmod>2024-04-12T20:56:35.096Z</lastmod>
+    <lastmod>2024-04-19T20:10:22.803Z</lastmod>
   </url>
   <url>
     <loc>https://biostats-uottawa.github.io/R_way/On-the-R-way-to-hell.epub</loc>
-    <lastmod>2024-04-12T20:56:47.549Z</lastmod>
+    <lastmod>2024-04-19T20:10:34.987Z</lastmod>
   </url>
 </urlset>
