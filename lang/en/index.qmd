@@ -156,9 +156,19 @@ It was forked on April 23rd, 2023 from [Alexd106 github repository](https://gith
 This also a part of a multilingual R book project to improve equity and diversity.
 It started with a french translation and was/will be extended to many more languages.
 
-<!--
-Image credits: Images and screenshots are from Julien Martin except when indicated in caption.
--->
+
+## Image credits
+
+Photos, images and screenshots are from Julien Martin except when indicated in caption.
+
+Cover image was generated via [Nightcafe Ai Art generator](https://creator.nightcafe.studio). Favicon and hex sticker were created from the cover image.
+
+Cover image can be seen [here](https://creator.nightcafe.studio/creation/P0VHCquzSe5LedOzfxwY?ru=1LIicoDlCUOaydR20fvyG3kYCUp1)
+
+:::{.callout-note}
+several screenshot are currently by Alex Douglas and are being redone to abide by the previous statement
+:::
+
 
 ## License {.unnumbered}
 
@@ -174,6 +184,45 @@ If you find this book useful or have any comments or suggestions I would love to
 
 Julien Martin. ({{< meta year >}}). On the R-way to hell. A multilingual introduction to R book. Version: {{< meta version >}} ({{< meta date >}}).DOI: [{{< meta doi >}}](https://zenodo.org/doi/10.5281/zenodo.10929585)
 
+
+
+## Hex Sticker
+
+```{r}
+#| label: create-hexsticker
+#| echo: false
+
+lang <- "en"
+title <- "R Way to hell"
+
+library(showtext)
+## Loading Google fonts (http://www.google.com/fonts)
+font_add_google("Jim Nightshade", "jim")
+## Automatically use showtext to render text for future devices
+showtext_auto()
+
+hexSticker::sticker("images/cover/cover_hex.jpg",
+  package = title,
+  angle = 0,
+  p_size = 25,
+  s_x = 1,
+  s_y = 1,
+  p_x = 1,
+  p_y = 0.8,
+  p_color = "white",
+  s_width = 0.85,
+  s_height = 0.85,
+  p_family = "jim",
+  h_color = "black",
+  url = paste0("biostats-uottawa.github.io/R/", lang),
+  u_color = "grey80",
+  u_size = 5,
+  filename = paste0("images/cover/book_hex_", lang, ".png")
+)
+
+```
+
+![](images/cover/book_hex_en.png){fig-align="center" width=50%}
 
 
 ::: {.content-visible when-format="pdf"}

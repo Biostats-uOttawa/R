@@ -22,7 +22,7 @@ book:
   reader-mode: true
   search: true
 
-#  favicon: cover.jpg
+  favicon: images/cover/book_fav.png
   site-url: https://biostats-uottawa.github.io/R_way/
   repo-url: https://github.com/biostats-uottawa/R_way/
   repo-actions: [edit, issue]
