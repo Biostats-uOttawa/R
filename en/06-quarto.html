@@ -84,6 +84,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./07-github.html" rel="next">
 <link href="./05-programming.html" rel="prev">
+<link href="./images/cover/book_fav.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -550,43 +551,43 @@ Figure&nbsp;6.4: A new Quarto document
 </div>
 </div>
 </div>
-<p>Once you’ve created your Quarto document it’s good practice to save this file somewhere convenient (<a href="01-start.html#sec-dir-struc" class="quarto-xref"><span>Section 1.4</span></a> and <a href="01-start.html#fig-dir-struc" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>). You can do this by selecting <code>File</code> -&gt; <code>Save</code> from RStudio menu (or use the keyboard shortcut ctrl + s on Windows or cmd + s on a Mac) and enter an appropriate file name (maybe call it <code>my_first_rmarkdown</code>). Notice the file extension of your new Quarto file is <code>.qmd</code>.</p>
+<p>Once you’ve created your Quarto document it’s good practice to save this file somewhere convenient (<a href="01-start.html#sec-dir-struc" class="quarto-xref"><span>Section 1.4</span></a> and <a href="01-start.html#fig-dir-struc" class="quarto-xref">Figure&nbsp;<span>1.11</span></a>). You can do this by selecting <code>File</code> -&gt; <code>Save</code> from RStudio menu (or use the keyboard shortcut ctrl + s on Windows or cmd + s on a Mac) and enter an appropriate file name (maybe call it <code>my_first_quarto</code>). Notice the file extension of your new Quarto file is <code>.qmd</code>.</p>
 <p>Now, to convert your <code>.qmd</code> file to a HTML document click on the little black triangle next to the <code>Knit</code> icon at the top of the source window and select <code>knit to HTML</code></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/markdown/knit_rm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
-</figure>
+<div id="fig-knit-qmd" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-knit-qmd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/markdown/knit_rm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-knit-qmd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.5: Knitting a Qmd file
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>RStudio will now ‘knit’ (or render) your <code>.qmd</code> file into a HTML file. Notice that there is a new <code>Quarto</code> tab in your console window which provides you with information on the rendering process and will also display any errors if something goes wrong.</p>
+<p>If everything went smoothly a new HTML file will have been created and saved in the same directory as your <code>.qmd</code> file (ours will be called <code>my_first_quarto.html</code>). To view this document simply double click on the file to open in a browser (like Chrome or Firefox) to display the rendered content. RStudio will also display a preview of the rendered file in a new window for you to check out (your window might look slightly different if you’re using a Windows computer).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/markdown/Rmarkdown_console.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
-</figure>
+<div id="fig-html-out" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-html-out-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/markdown/html_rendered.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-html-out-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.6: A my first rendered html
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>If everything went smoothly a new HTML file will have been created and saved in the same directory as your <code>.qmd</code> file (ours will be called <code>my_first_rmarkdown.html</code>). To view this document simply double click on the file to open in a browser (like Chrome or Firefox) to display the rendered content. RStudio will also display a preview of the rendered file in a new window for you to check out (your window might look slightly different if you’re using a Windows computer).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/markdown/html_rendered.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Great, you’ve just rendered your first Quarto document. If you want to knit your <code>.qmd</code> file to a pdf document then all you need to do is choose <code>knit to PDF</code> instead of <code>knit to HTML</code> when you click on the <code>knit</code> icon. This will create a file called <code>my_first_rmarkdown.pdf</code> which you can double click to open. Give it a go!</p>
+<p>Great, you’ve just rendered your first Quarto document. If you want to knit your <code>.qmd</code> file to a pdf document then all you need to do is choose <code>knit to PDF</code> instead of <code>knit to HTML</code> when you click on the <code>knit</code> icon. This will create a file called <code>my_first_quarto.pdf</code> which you can double click to open. Give it a go!</p>
 <p>You can also knit an <code>.qmd</code> file using the command line in the console rather than by clicking on the knit icon. To do this, just use the <code><a href="https://quarto-dev.github.io/quarto-r/reference/quarto_render.html">quarto_render()</a></code> function from the <code>quarto</code> <span class="emoji" data-emoji="package">📦</span> package as shown below. Again, you can change the output format using the <code>output_format =</code> argument as well as many other options.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/quarto-dev/quarto-r">quarto</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://quarto-dev.github.io/quarto-r/reference/quarto_render.html">quarto_render</a></span><span class="op">(</span><span class="st">'my_first_rmarkdown.qmd'</span>, output_format <span class="op">=</span> <span class="st">'html_document'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://quarto-dev.github.io/quarto-r/reference/quarto_render.html">quarto_render</a></span><span class="op">(</span><span class="st">'my_first_quarto.qmd'</span>, output_format <span class="op">=</span> <span class="st">'html_document'</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># alternatively if you don't want to load the quarto package</span></span>
 <span></span>
-<span><span class="fu">quarto</span><span class="fu">::</span><span class="fu"><a href="https://quarto-dev.github.io/quarto-r/reference/quarto_render.html">quarto_render</a></span><span class="op">(</span><span class="st">'my_first_rmarkdown.Rmd'</span>, output_format <span class="op">=</span> <span class="st">'html_document'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu">quarto</span><span class="fu">::</span><span class="fu"><a href="https://quarto-dev.github.io/quarto-r/reference/quarto_render.html">quarto_render</a></span><span class="op">(</span><span class="st">'my_first_quarto.Rmd'</span>, output_format <span class="op">=</span> <span class="st">'html_document'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section><section id="quarto-document-.qmd-anatomy" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="quarto-document-.qmd-anatomy">
 <span class="header-section-number">6.4</span> Quarto document (.qmd) anatomy</h2>
 <p>OK, now that you can render a Quarto file in RStudio into both HTML and pdf formats let’s take a closer look at the different components of a typical Quarto document. Normally each Quarto document is composed of 3 main components:</p>
@@ -597,9 +598,13 @@ Figure&nbsp;6.4: A new Quarto document
 </ol>
 <div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure"><p><img src="images/markdown/rm_components.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:85.0%"></p>
-</figure>
+<div id="fig-qmd-struc" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-qmd-struc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/markdown/rm_components.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-qmd-struc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.7: Structure of a qmd file
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -916,7 +921,7 @@ The mean Sepal length was
 <img src="images/markdown/eclipse_ready.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-waiting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.5: Waiting for the eclipse
+Figure&nbsp;6.8: Waiting for the eclipse
 </figcaption></figure>
 </div>
 <p>An alternative way of including images in your document is to use the <code><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics()</a></code> function from the <code>knitr</code> package. The following code will produce similar output.</p>
@@ -927,7 +932,7 @@ Figure&nbsp;6.5: Waiting for the eclipse
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: Waiting for the eclipse</span></span>
 <span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::include_graphics("images/markdown/eclipse_ready.jpg")</span></span>
 <span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The code above will only work if the image file (<code>eclipse_ready.jpg</code>) is in the right place relative to where you saved your <code>.qmd</code> file. In the example the image file is in a sub directory (folder) called <code>images/markdown</code> in the directory where we saved our <code>my_first_rmarkdown.qmd</code> file. You can embed images saved in many different file types but perhaps the most common are <code>.jpg</code> and <code>.png</code>.</p>
+<p>The code above will only work if the image file (<code>eclipse_ready.jpg</code>) is in the right place relative to where you saved your <code>.qmd</code> file. In the example the image file is in a sub directory (folder) called <code>images/markdown</code> in the directory where we saved our <code>my_first_quarto.qmd</code> file. You can embed images saved in many different file types but perhaps the most common are <code>.jpg</code> and <code>.png</code>.</p>
 </section><section id="figures" class="level3" data-number="6.4.6"><h3 data-number="6.4.6" class="anchored" data-anchor-id="figures">
 <span class="header-section-number">6.4.6</span> Figures</h3>
 <p>By default, figures produced by R code will be placed immediately after the code chunk they were generated from. For example:</p>
@@ -946,7 +951,7 @@ Figure&nbsp;6.5: Waiting for the eclipse
 <img src="06-quarto_files/figure-html/fig-simple-plot-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simple-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.6: A simple plot
+Figure&nbsp;6.9: A simple plot
 </figcaption></figure>
 </div>
 </div>
@@ -971,7 +976,7 @@ Figure&nbsp;6.6: A simple plot
 <img src="06-quarto_files/figure-html/fig-simple-plot2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simple-plot2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.7: A shrinked figure
+Figure&nbsp;6.10: A shrinked figure
 </figcaption></figure>
 </div>
 </div>
@@ -994,7 +999,7 @@ Figure&nbsp;6.7: A shrinked figure
 <img src="06-quarto_files/figure-html/fig-simple-plot-cap-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simple-plot-cap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.8: A simple plot
+Figure&nbsp;6.11: A simple plot
 </figcaption></figure>
 </div>
 </div>
@@ -1029,7 +1034,7 @@ Figure&nbsp;6.8: A simple plot
 <img src="06-quarto_files/figure-html/fig-simple-ggplot-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simple-ggplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.9: A simple ggplot
+Figure&nbsp;6.12: A simple ggplot
 </figcaption></figure>
 </div>
 </div>
@@ -1799,10 +1804,10 @@ Table&nbsp;6.4: A nice gt table
 <img src="images/markdown/eclipse_ready.jpg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cute-dog-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.10: Rocking the eclipse
+Figure&nbsp;6.13: Rocking the eclipse
 </figcaption></figure>
 </div>
-<p>See <a href="#fig-cute-dog" class="quarto-xref">Figure&nbsp;<span>6.10</span></a> for an illustration.</p>
+<p>See <a href="#fig-cute-dog" class="quarto-xref">Figure&nbsp;<span>6.13</span></a> for an illustration.</p>
 <p>For figures and tables produced with R code chunks, simply provide the identifier in the <code>label</code> chunk option and the caption also as a chunk option.</p>
 <p>Here is the code for a figure and a table.</p>
 <div class="cell">
@@ -1823,7 +1828,7 @@ Figure&nbsp;6.10: Rocking the eclipse
 <img src="06-quarto_files/figure-html/fig-cr-plot-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cr-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.11: A nice figure
+Figure&nbsp;6.14: A nice figure
 </figcaption></figure>
 </div>
 </div>
@@ -1895,7 +1900,7 @@ Table&nbsp;6.5: A nice table
 <p>Using cross-references, we can write:</p>
 <p>As seen on <code>@fig-cr-plot</code> and <code>@tbl-cr-table</code> …</p>
 <p>To get:</p>
-<p>As seen on <a href="#fig-cr-plot" class="quarto-xref">Figure&nbsp;<span>6.11</span></a> and <a href="#tbl-cr-table" class="quarto-xref">Table&nbsp;<span>6.5</span></a> …</p>
+<p>As seen on <a href="#fig-cr-plot" class="quarto-xref">Figure&nbsp;<span>6.14</span></a> and <a href="#tbl-cr-table" class="quarto-xref">Table&nbsp;<span>6.5</span></a> …</p>
 </section></section><section id="citations-and-bibliography" class="level3" data-number="6.4.9"><h3 data-number="6.4.9" class="anchored" data-anchor-id="citations-and-bibliography">
 <span class="header-section-number">6.4.9</span> Citations and bibliography</h3>
 <p>To generate citations and a bibliography, Quarto requires:</p>

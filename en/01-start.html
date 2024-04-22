@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./02-basics.html" rel="next">
 <link href="./index.html" rel="prev">
+<link href="./images/cover/book_fav.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -547,9 +548,13 @@ Note
 <p>When you open R studio for the first time you should see the following layout (it might look slightly different on a Windows computer).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_start" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_start-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_start-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: R studio main window
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -559,36 +564,52 @@ Note
 <p>The Console is the workhorse of R. This is where R evaluates all the code you write. You can type R code directly into the Console at the command line prompt, <code>&gt;</code>. For example, if you type <code>2 + 2</code> into the Console you should obtain the answer <code>4</code> (reassuringly). Don’t worry about the <code>[1]</code> at the start of the line for now.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/rconsole_eval.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_console" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_console-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/rconsole_eval.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_console-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3: R studio console view
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>However, once you start writing more R code this becomes rather cumbersome. Instead of typing R code directly into the Console a better approach is to create an R script. An R script is just a plain text file with a <code>.R</code> file extension which contains your lines of R code. These lines of code are then sourced into the R Console line by line. To create a new R script click on the ‘File’ menu then select New File –&gt; R Script.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_script.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_newscript" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_script.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4: R studio creating a new script file
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Notice that you have a new window (called the Source pane) in the top left of RStudio and the Console is now in the bottom left position. The new window is a script editor and where you will write your code.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/rstudio_new.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_new" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_new-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/rstudio_new.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_new-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.5: R studio main view with a new script
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>To source your code from your script editor to the Console simply place your cursor on the line of code and then click on the ‘Run’ button in the top right of the script editor pane.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/rstudio_run.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_run" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_run-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/rstudio_run.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_run-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.6: R studio run button
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -612,9 +633,13 @@ Note
 <span class="header-section-number">1.2.2</span> VSCode</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/vs_orient.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-vscode" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-vscode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/vs_orient.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vscode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.7: VSCode window overview
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -635,7 +660,7 @@ Note
 <img src="images/start/vs_file_panel.png" class="img-fluid figure-img" data-ref-parent="fig-vs-left-panel">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-vsfile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) file
+(a) file pane
 </figcaption></figure>
 </div>
 </div>
@@ -645,7 +670,7 @@ Note
 <img src="images/start/vs_git_panel.png" class="img-fluid figure-img" data-ref-parent="fig-vs-left-panel">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-vsgit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) git
+(b) git pane
 </figcaption></figure>
 </div>
 </div>
@@ -655,14 +680,14 @@ Note
 <img src="images/start/vs_r_ext_panel.png" class="img-fluid figure-img" data-ref-parent="fig-vs-left-panel">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-vsr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(c) r-ext
+(c) R pane
 </figcaption></figure>
 </div>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vs-left-panel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.2: VS Code left panel
+Figure&nbsp;1.8: VS Code left panel
 </figcaption></figure>
 </div>
 </section><section id="editor-tabs" class="level4" data-number="1.2.2.2"><h4 data-number="1.2.2.2" class="anchored" data-anchor-id="editor-tabs">
@@ -675,9 +700,13 @@ Figure&nbsp;1.2: VS Code left panel
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/vs_editor_tabs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-vscode-tabs" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-vscode-tabs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/vs_editor_tabs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vscode-tabs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.9: VSCode editor tabs and preview panels
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -690,9 +719,13 @@ Figure&nbsp;1.2: VS Code left panel
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/vs_term_panel.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-vscode-term" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-vscode-term-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/vs_term_panel.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vscode-term-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.10: VSCode terminal window
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -787,7 +820,7 @@ root
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dir-struc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.3: Recommended directory structure for analysis with R
+Figure&nbsp;1.11: Recommended directory structure for analysis with R
 </figcaption></figure>
 </div>
 </div>
@@ -815,54 +848,78 @@ Figure&nbsp;1.3: Recommended directory structure for analysis with R
 <p>To create a project, open RStudio and select <code>File</code> -&gt; <code>New Project...</code> from the menu. You can create either an entirely new project, a project from an existing directory or a version controlled project (see the <a href="07-github.html" class="quarto-xref"><span>Chapter 7</span></a> for further details about this). In this Chapter we will create a project in a new directory.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new_proj" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.12: R Studio creating a Project step 1
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>You can also create a new project by clicking on the ‘Project’ button in the top right of RStudio and selecting ‘New Project…’</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
-</figure>
+<div id="fig-new_proj1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.13: R Studio creating a Project step 2
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>In the next window select ‘New Project’.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new_proj2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.14: R Studio creating a Project step 3
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Now enter the name of the directory you want to create in the ‘Directory name:’ field (we’ll call it <code>first_project</code> for this Chapter). If you want to change the location of the directory on your computer click the ‘Browse…’ button and navigate to where you would like to create the directory. We always tick the ‘Open in new session’ box as well. Finally, hit the ‘Create Project’ to create the new project.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new_proj3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.15: R Studio creating a Project step 4
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Once your new project has been created you will now have a new folder on your computer that contains an RStudio project file called <code>first_project.Rproj</code>. This <code>.Rproj</code> file contains various project options (but you shouldn’t really interact with it) and can also be used as a shortcut for opening the project directly from the file system (just double click on it). You can check this out in the ‘Files’ tab in RStudio (or in Finder if you’re on a Mac or File Explorer in Windows).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
+<div id="fig-new_proj4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.16: R Studio creating a Project final step
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>The last thing we suggest you do is select <code>Tools</code> -&gt; <code>Project Options...</code> from the menu. Click on the ‘General’ tab on the left hand side and then change the values for ‘Restore .RData into workspace at startup’ and ‘Save workspace to .RData on exit’ from ‘Default’ to ‘No’. This ensures that every time you open your project you start with a clean R session. You don’t have to do this (many people don’t) but we prefer to start with a completely clean workspace whenever we open our projects to avoid any potential conflicts with things we have done in previous sessions (sometimes leading to surprising results and headaches figuring out the problem). The downside to this is that you will need to rerun your R code every time you open your project.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new_proj5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.17: R Studio creating a Project changing options
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -875,9 +932,13 @@ Figure&nbsp;1.3: Recommended directory structure for analysis with R
 <p>What you name your files matters more than you might think. Naming files is also more difficult than you think. The key requirement for a ‘good’ file name is that it’s informative whilst also being relatively short. This is not always an easy compromise and often requires some thought. Ideally you should try to avoid the following!</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/xkcd_files.png" class="img-fluid figure-img" style="width:30.0%"></p>
-<figcaption>source:https://xkcd.com/1459/</figcaption></figure>
+<div id="fig-fn" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-fn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/xkcd_files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.18: File renaming song (source:<a href="https://xkcd.com/1459/" class="uri">https://xkcd.com/1459/</a>)
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -931,27 +992,39 @@ Figure&nbsp;1.3: Recommended directory structure for analysis with R
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/before_rcode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-fig-poor_code" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-fig-poor_code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/before_rcode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig-poor_code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.19: Poorly styled code
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Now highlight the code and use the <code>styler</code> <span class="emoji" data-emoji="package">📦</span> package to reformat</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/styler.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-styler" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-styler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/styler.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-styler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.20: Styling code with styler
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>To produce some nicely formatted code</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/after_rcode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-better_code" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-better_code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/after_rcode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-better_code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.21: Nicely styled code
+</figcaption></figure>
 </div>
 </div>
 </div>
