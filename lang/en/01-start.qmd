@@ -138,10 +138,11 @@ These environments are more powerful than simple text editors, and are similar t
 When you open R studio for the first time you should see the following layout (it might look slightly different on a Windows computer).
 
 ```{r}
-#| label: rstudio_start
+#| label: fig-rstudio_start
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: R studio main window
 knitr::include_graphics(path = "images/start/rstudio.png")
 ```
 
@@ -161,10 +162,11 @@ For example, if you type `2 + 2` into the Console you should obtain the answer `
 Don't worry about the `[1]` at the start of the line for now.
 
 ```{r}
-#| label: rstudio_console
+#| label: fig-rstudio_console
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: R studio console view
 knitr::include_graphics(path = "images/start/rconsole_eval.png")
 ```
 
@@ -176,10 +178,11 @@ To create a new R script click on the 'File' menu then select New File --> R Scr
  
 
 ```{r}
-#| label: rstudio_newscript
+#| label: fig-rstudio_newscript
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: R studio creating a new script file
 knitr::include_graphics(path = "images/start/new_script.png")
 ```
 
@@ -188,20 +191,22 @@ The new window is a script editor and where you will write your code.
 
 
 ```{r}
-#| label: rstudio_new
+#| label: fig-rstudio_new
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: R studio main view with a new script
 knitr::include_graphics(path = "images/start/rstudio_new.png")
 ```
 
 To source your code from your script editor to the Console simply place your cursor on the line of code and then click on the 'Run' button in the top right of the script editor pane.
 
 ```{r}
-#| label: rstudio_run
+#| label: fig-rstudio_run
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: R studio run button
 knitr::include_graphics(path = "images/start/rstudio_run.png")
 ```
 
@@ -257,6 +262,8 @@ We will go over how to view the help files and how to search for help in @sec-ba
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| label: fig-vscode
+#| fig-cap: VSCode window overview
 knitr::include_graphics(path = "images/start/vs_orient.png")
 ```
 
@@ -270,11 +277,11 @@ Contains :
 
 ::: {#fig-vs-left-panel layout-ncol=3}
 
-![file](images/start/vs_file_panel.png){#fig-vsfile}
+![file pane](images/start/vs_file_panel.png){#fig-vsfile}
 
-![git](images/start/vs_git_panel.png){#fig-vsgit}
+![git pane](images/start/vs_git_panel.png){#fig-vsgit}
 
-![r-ext](images/start/vs_r_ext_panel.png){#fig-vsr}
+![R pane](images/start/vs_r_ext_panel.png){#fig-vsr}
 
 VS Code left panel
 :::
@@ -289,9 +296,11 @@ Includes:
 - preview panels
 
 ```{r}
+#| label: fig-vscode-tabs
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: VSCode editor tabs and preview panels
 knitr::include_graphics(path = "images/start/vs_editor_tabs.png")
 ```
 
@@ -304,9 +313,11 @@ It can be split and run multiple sessions at the same time
 - a problems pane highlighting both grammar and coding problems
 
 ```{r}
+#| label: fig-vscode-term
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: VSCode terminal window
 knitr::include_graphics(path = "images/start/vs_term_panel.png")
 ```
 
@@ -536,20 +547,22 @@ You can create either an entirely new project, a project from an existing direct
 In this Chapter we will create a project in a new directory.
 
 ```{r}
-#| label: new_proj
+#| label: fig-new_proj
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
+#| fig-cap: R Studio creating a Project step 1
 knitr::include_graphics(path = "images/start/new_proj.png")
 ```
 
 You can also create a new project by clicking on the 'Project' button in the top right of RStudio and selecting 'New Project...'
 
 ```{r}
-#| label: new_proj1
+#| label: fig-new_proj1
 #| echo: false
 #| out-width: 30%
 #| fig-align: center
+#| fig-cap: R Studio creating a Project step 2
 knitr::include_graphics(path = "images/start/new_proj1.png")
 ```
 
@@ -557,10 +570,11 @@ In the next window select 'New Project'.
 
 
 ```{r}
-#| label: new_proj2
+#| label: fig-new_proj2
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
+#| fig-cap: R Studio creating a Project step 3
 knitr::include_graphics(path = "images/start/new_proj2.png")
 ```
 
@@ -570,10 +584,11 @@ We always tick the 'Open in new session' box as well.
 Finally, hit the 'Create Project' to create the new project.
 
 ```{r}
-#| label: new_proj3
+#| label: fig-new_proj3
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
+#| fig-cap: R Studio creating a Project step 4
 knitr::include_graphics(path = "images/start/new_proj3.png")
 ```
 
@@ -582,10 +597,11 @@ This `.Rproj` file contains various project options (but you shouldn't really in
 You can check this out in the 'Files' tab in RStudio (or in Finder if you're on a Mac or File Explorer in Windows).
 
 ```{r}
-#| label: new_proj4
+#| label: fig-new_proj4
 #| echo: false
 #| out-width: 80%
 #| fig-align: center
+#| fig-cap: R Studio creating a Project final step
 knitr::include_graphics(path = "images/start/new_proj4.png")
 ```
 
@@ -596,10 +612,11 @@ You don't have to do this (many people don't) but we prefer to start with a comp
 The downside to this is that you will need to rerun your R code every time you open your project.
 
 ```{r}
-#| label: new_proj5
+#| label: fig-new_proj5
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
+#| fig-cap: R Studio creating a Project changing options
 knitr::include_graphics(path = "images/start/new_proj5.png")
 ```
 
@@ -621,11 +638,11 @@ This is not always an easy compromise and often requires some thought.
 Ideally you should try to avoid the following!
 
 ```{r}
-#| label: fn
+#| label: fig-fn
 #| echo: false
 #| out-width: 30%
 #| fig-align: center
-#| fig-cap: source:https://xkcd.com/1459/
+#| fig-cap: File renaming song (source:<https://xkcd.com/1459/>)
 knitr::include_graphics(path = "images/start/xkcd_files.png")
 ```
 
@@ -726,30 +743,33 @@ Once installed, you can highlight the code you want to restyle, click on the 'Ad
 Here is an example of poorly formatted R code
 
 ```{r}
-#| label: poor_code
+#| label: fig-fig-poor_code
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: Poorly styled code
 knitr::include_graphics(path = "images/start/before_rcode.png")
 ```
 
 Now highlight the code and use the `styler` :package: package to reformat
 
 ```{r}
-#| label: styler
+#| label: fig-styler
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
+#| fig-cap: Styling code with styler
 knitr::include_graphics(path = "images/start/styler.png")
 ```
 
 To produce some nicely formatted code
 
 ```{r}
-#| label: better_code
+#| label: fig-better_code
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
+#| fig-cap: Nicely styled code
 knitr::include_graphics(path = "images/start/after_rcode.png")
 ```
 

@@ -163,7 +163,7 @@ include_graphics("images/markdown/new_file_rm.png")
 ```
 
 Once you've created your Quarto document it's good practice to save this file somewhere convenient (@sec-dir-struc and @fig-dir-struc).
-You can do this by selecting `File` -> `Save` from RStudio menu (or use the keyboard shortcut ctrl + s on Windows or cmd + s on a Mac) and enter an appropriate file name (maybe call it `my_first_rmarkdown`).
+You can do this by selecting `File` -> `Save` from RStudio menu (or use the keyboard shortcut ctrl + s on Windows or cmd + s on a Mac) and enter an appropriate file name (maybe call it `my_first_quarto`).
 Notice the file extension of your new Quarto file is `.qmd`.
  
 
@@ -172,6 +172,8 @@ Now, to convert your `.qmd` file to a HTML document click on the little black tr
  
 
 ```{r}
+#| label: fig-knit-qmd
+#| fig-cap: Knitting a Qmd file
 #| echo: false
 #| fig-align: center
 #| out-width: 85%
@@ -183,24 +185,15 @@ include_graphics("images/markdown/knit_rm.png")
 RStudio will now 'knit' (or render) your `.qmd` file into a HTML file.
 Notice that there is a new `Quarto` tab in your console window which provides you with information on the rendering process and will also display any errors if something goes wrong.
 
- 
-
-```{r}
-#| echo: false
-#| fig-align: center
-#| out-width: 85%
-include_graphics("images/markdown/Rmarkdown_console.png")
-```
-
- 
-
-If everything went smoothly a new HTML file will have been created and saved in the same directory as your `.qmd` file (ours will be called `my_first_rmarkdown.html`).
+If everything went smoothly a new HTML file will have been created and saved in the same directory as your `.qmd` file (ours will be called `my_first_quarto.html`).
 To view this document simply double click on the file to open in a browser (like Chrome or Firefox) to display the rendered content.
 RStudio will also display a preview of the rendered file in a new window for you to check out (your window might look slightly different if you're using a Windows computer).
 
  
 
 ```{r}
+#| label: fig-html-out
+#| fig-cap: A my first rendered html
 #| echo: false
 #| fig-align: center
 #| out-width: 85%
@@ -211,7 +204,7 @@ include_graphics("images/markdown/html_rendered.png")
 
 Great, you've just rendered your first Quarto document.
 If you want to knit your `.qmd` file to a pdf document then all you need to do is choose `knit to PDF` instead of `knit to HTML` when you click on the `knit` icon.
-This will create a file called `my_first_rmarkdown.pdf` which you can double click to open.
+This will create a file called `my_first_quarto.pdf` which you can double click to open.
 Give it a go!
 
 You can also knit an `.qmd` file using the command line in the console rather than by clicking on the knit icon.
@@ -223,11 +216,11 @@ Again, you can change the output format using the `output_format =` argument as 
 ```r
 library(quarto)
 
-quarto_render('my_first_rmarkdown.qmd', output_format = 'html_document')
+quarto_render('my_first_quarto.qmd', output_format = 'html_document')
 
 # alternatively if you don't want to load the quarto package
 
-quarto::quarto_render('my_first_rmarkdown.Rmd', output_format = 'html_document')
+quarto::quarto_render('my_first_quarto.Rmd', output_format = 'html_document')
 ```
 
 ## Quarto document (.qmd) anatomy
@@ -241,6 +234,8 @@ Normally each Quarto document is composed of 3 main components:
  
 
 ```{r}
+#| label: fig-qmd-struc
+#| fig-cap: Structure of a qmd file
 #| echo: false
 #| fig-align: left
 #| out-width: 85%
@@ -687,7 +682,7 @@ knitr::include_graphics("images/markdown/eclipse_ready.jpg")
 ```
 
 The code above will only work if the image file (`eclipse_ready.jpg`) is in the right place relative to where you saved your `.qmd` file.
-In the example the image file is in a sub directory (folder) called `images/markdown` in the directory where we saved our `my_first_rmarkdown.qmd` file.
+In the example the image file is in a sub directory (folder) called `images/markdown` in the directory where we saved our `my_first_quarto.qmd` file.
 You can embed images saved in many different file types but perhaps the most common are `.jpg` and `.png`.
 
 ### Figures
