@@ -434,25 +434,31 @@ To accomplish this, we'll be using `if` and `else` statements.
 The complexity will come from `if` statements immediately following the relevant `else` statement.
 We'll use such conditional statements four times to achieve all combinations of it being a Friday or not, and if your code is working or not.
 
+We also used the `cat()` function to output text formatted correctly.
+
 ```{r}
-#| out-width: 75%
-#| fig-align: center
 good.day <- function(code.working, day) {
   if (code.working == TRUE && day == "Friday") {
-    "BEST.
-DAY.
-EVER.
-Stop while you are ahead and go to the pub!"
+    cat(
+  "BEST.
+  DAY.
+    EVER.
+      Stop while you are ahead and go to the pub!"
+    )
   } else if (code.working == FALSE && day == "Friday") {
-    "Oh well, but at least it's Friday! Pub time!"
+    cat("Oh well, but at least it's Friday! Pub time!")
   } else if (code.working == TRUE && day != "Friday") {
-    "So close to a good day...
-shame it's not a Friday"
+    cat("
+  So close to a good day...
+  shame it's not a Friday"
+    )
   } else if (code.working == FALSE && day != "Friday") {
-    "Hello darkness."
+    cat("Hello darkness.")
   }
 }
+```
 
+```{r}
 good.day(code.working = TRUE, day = "Friday")
 
 good.day(FALSE, "Tuesday")
