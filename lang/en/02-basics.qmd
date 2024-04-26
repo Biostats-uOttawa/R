@@ -107,7 +107,8 @@ Now that we've created this object, R knows all about it and will keep track of 
 All of the objects you create will be stored in the current workspace and you can view all the objects in your workspace in RStudio by clicking on the 'Environment' tab in the top right hand pane.
 
 ```{r}
-#| label: rstudio_env
+#| label: fig-rstudio_env
+#| fig-cap: RStudio Environment tab
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
@@ -117,7 +118,8 @@ knitr::include_graphics(path = "images/basic/rs_env.png")
 If you click on the down arrow on the 'List' icon in the same pane and change to 'Grid' view RStudio will show you a summary of the objects including the type (numeric - it's a number), the length (only one value in this object), its 'physical' size and its value (48 in this case). In VSCode, go on the R extension pane, and you can obtain the same information.
 
 ```{r}
-#| label: rstudio_env2
+#| label: fig-rstudio_env2
+#| fig-cap: RStudio Environment tab in grid format
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
@@ -140,7 +142,8 @@ If you forget to use the quotes you will receive an error message.
 Our workspace now contains both objects we've created so far with `my_obj2` listed as type character.
 
 ```{r}
-#| label: rstudio_env3
+#| label: fig-rstudio_env3
+#| fig-cap: RStudio environment tab with my_obj2 as a character
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
@@ -159,7 +162,8 @@ my_obj2 <- 1024
 Notice that the Type has changed to numeric and the value has changed to 1024 in the environment
 
 ```{r}
-#| label: rstudio_env4
+#| label: fig-rstudio_env4
+#| fig-cap: RStudio environment tab with updated my_obj2 as numeric
 #| echo: false
 #| out-width: 75%
 #| fig-align: center
@@ -707,7 +711,8 @@ or you can use the equivalent shortcut
 the help page is displayed in the 'Help' tab in the Files pane (usually in the bottom right of RStudio)
 
 ```{r}
-#| label: rstudio_help
+#| label: fig-rstudio_help
+#| fig-cap: Help page for the `mean()` function in RStudio Help pane
 #| echo: false
 #| out-width: 50%
 #| fig-align: center
@@ -758,7 +763,8 @@ The results of the search will be displayed in RStudio under the 'Help' tab as b
 The `help.search()` function searches through the help documentation, code demonstrations and package vignettes and displays the results as clickable links for further exploration.
 
 ```{r}
-#| label: rstudio_help2
+#| label: fig-rstudio_help2
+#| fig-cap: Output of the `help.search()` function in RStudio
 #| echo: false
 #| out-width: 50%
 #| fig-align: center

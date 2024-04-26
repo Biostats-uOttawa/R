@@ -181,3 +181,6 @@
 
 [quarto-guide]: https://quarto.org/docs/guide/
 [quarto-install]: https://quarto.org/docs/get-started/
+
+[bio4158]: https://biostats-uottawa.github.io/bio4158_course
+[bio8940]: https://biostats-uottawa.github.io/bio8940_course

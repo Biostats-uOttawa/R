@@ -104,7 +104,8 @@ There is one important exception to this, you can include `NA` (remember this is
 
 
 ```{r}
-#| label: data_struc
+#| label: fig-data_struc
+#| fig-cap: Scalar and vector data structure
 #| echo: false
 #| out-width: 40%
 #| fig-align: center
@@ -120,7 +121,8 @@ Again, matrices and arrays must contain elements all of the same data class.
 
 
 ```{r}
-#| label: data_struc2
+#| label: fig-data_struc2
+#| fig-cap: Matrix and array data structure
 #| echo: false
 #| out-width: 50%
 #| fig-align: center
@@ -343,7 +345,8 @@ If you want to follow along you can download the data file (*'unicorn.xlsx'*) fr
 
 
 ```{r}
-#| label: LO-calc0
+#| label: fig-LO-calc0
+#| fig-cap: Unicorn data in LibreOffice Calc
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -359,7 +362,8 @@ In the drop down menu located above the 'Save' button change the default 'All fo
 
 
 ```{r}
-#| label: LO-calc
+#| label: fig-LO-calc
+#| fig-cap: Choosing `csv` format when saving with LibreOffice Calc
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -369,16 +373,6 @@ knitr::include_graphics(path = "images/data/libre_off1.png")
 
 Click the Save button and then select the 'Use Text CSV Format' option.
 Click on OK to save the file.
-
-
-```{r}
-#| label: LO-calc2
-#| echo: false
-#| out-width: 40%
-#| fig-align: center
-knitr::include_graphics(path = "images/data/libre_off2.png")
-```
-
 
 
 There are a couple of things to bear in mind when saving files to import into R which will make your life easier in the long run.
@@ -1349,7 +1343,8 @@ Happily it's straightforward to export data frames to external files in a wide v
 The main workhorse function for exporting data frames is the `write.table()` function.
 As with the `read.table()` function, the `write.table()` function is very flexible with lots of arguments to help customise it's behaviour.
 As an example, let's take our original `unicorns` data frame, do some useful stuff to it and then export these changes to an external file.
- 
+
+Similarly to `read.table()`, `write.table()` has a series of function with format specific default values such as `write.csv()` and `write.delim()` which use "," and tabs as delimiters, respectively,and include column names by default. 
 
 Let's order the rows in the data frame in ascending order of `height` within each level `food`.
 We will also apply a square root transformation on the number of horn rings variable (`horn_rings`) and a log~10~ transformation on the `height` variable and save these as additional columns in our data frame (hopefully this will be somewhat familiar to you!).
@@ -1366,59 +1361,23 @@ str(unicorns_df2)
 Now we can export our new data frame `unicorns_df2` using the `write.table()` function.
 The first argument is the data frame you want to export (`unicorns_df2` in our example).
 We then give the filename (with file extension) and the file path in either single or double quotes using the `file =` argument.
-In this example we're exporting the data frame to a file called `unicorns_04_12.txt` in the `data` directory.
-The `col.names = TRUE` argument indicates that the variable names should be written in the first row of the file and the `row.names = FALSE` argument stops R from including the row names in the first column of the file.
-Finally, the `sep = "\t"` argument indicates that a Tab should be used as the delimiter in the exported file.
+In this example we're exporting the data frame to a file called `unicorns_transformed.csv` in the `data` directory.
+The `row.names = FALSE` argument stops R from including the row names in the first column of the file.
+
 
 ```{r}
 #| label: export2
 #| echo: true
 #| eval: false
 write.csv(unicorns_df2,
-  file = "data/unicorns_04_12.txt", col.names = TRUE,
-  row.names = FALSE, sep = "\t"
+  file = "data/unicorns_transformed.csv", 
+  row.names = FALSE
 )
 ```
 
-As we saved the file as a tab delimited text file we could open this file in any text editor.
-Perhaps a more familiar option would be to open the file in Excel.
-First start Excel and then select `File` -> `Open ..` in the main menu and then select our `unicorns_04_12.txt` file to open.
-Next.
-choose the 'Tab' option to set the delimiter and then click on the 'Finish' button.
-
-
-```{r}
-#| label: imp1
-#| echo: false
-#| out-width: 60%
-#| fig-align: center
-knitr::include_graphics(path = "images/data/excel_export.png")
-```
-
+As we saved the file as a comma delimited text file we could open this file in any text editor.
 
 We can of course export our files in a variety of other formats.
-Another popular option is to export files in csv (comma separated values) format.
-We can do this using the `write.table()` function by setting the separator argument to `sep = ","`.
-
-```{r}
-#| label: export3
-#| echo: true
-#| eval: false
-write.table(unicorns_df2,
-  file = "data/unicorns_04_12.csv", col.names = TRUE,
-  row.names = FALSE, sep = ","
-)
-```
-
-Or alternatively by using the convenience function `write.csv()`.
-Notice that we don't need to set the `sep = ","` or `col.names = TRUE` arguments as these are the defaults when using the `read.csv()` function.
-
-```{r}
-#| label: export4
-#| echo: true
-#| eval: false
-write.csv(unicorns_df2, file = "data/unicorns_04_12.csv", row.names = FALSE)
-```
 
 ### Other export functions
 
