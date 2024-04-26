@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.30">
+<meta name="generator" content="quarto-1.5.31">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -18,6 +18,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -81,7 +115,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">R Way</span>
+    <span class="navbar-title"><img src="images/cover/book_hex_en.png" class="img-fluid" width="50"> R Way</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -376,21 +410,16 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>A <a href="https://en.wikipedia.org/wiki/Version_control">Version Control System</a> (VCS) keeps a record of all the changes you make to your files that make up a particular project and allows you to revert to previous versions of files if you need to. To put it another way, if you muck things up or accidentally lose important files you can easily roll back to a previous stage in your project to sort things out. Version control was originally designed for collaborative software development, but it’s equally useful for scientific research and collaborations (although admittedly a lot of the terms, jargon and functionality are focused on the software development side). There are many different version control systems currently available, but we’ we’ll focus on using <em>Git</em>, because it’s free and open source and it integrates nicely with RStudio. This means that its can easily become part of your usual workflow with minimal additional overhead.</p>
 </section><section id="why-use-version-control" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="why-use-version-control">
 <span class="header-section-number">7.2</span> Why use version control?</h2>
-<p>So why should you worry about version control? Well, first of all it helps avoid this (familiar?) situation when you’re working on a project</p>
+<p>So why should you worry about version control? Well, first of all it helps avoid this (familiar?) situation when you’re working on a project usually arising from this (familiar?) scenario.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/Messy_folder.PNG" class="img-fluid figure-img" style="width:75.0%"></p>
-<figcaption>You need version control</figcaption></figure>
+<div id="fig-youNeedVC2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-youNeedVC2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/final_doc.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
 </div>
-</div>
-</div>
-<p>usually arising from this (familiar?) scenario</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/final_doc.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-youNeedVC2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: Why you need version control (source: <a href="https://phdcomics.com/comics/archive.php?comicid=1531">PhDComics</a>)
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -402,9 +431,13 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>At the start of a project we typically (but not always) create a <strong>remote</strong> repository on GitHub, then <strong>clone</strong> (think of this as copying) this repository to our <strong>local</strong> computer (the one in front of you). This cloning is usually a one time event and you shouldn’t need to clone this repository again unless you really muck things up. Once you have cloned your repository you can then work locally on your project as usual, creating and saving files for your data analysis (scripts, R markdown documents, figures etc). Along the way you can take snapshots (called <strong>commits</strong>) of these files after you’ve made important changes. We can then <strong>push</strong> these changes to the remote GitHub repository to make a backup or make available to our collaborators. If other people are working on the same project (<strong>repository</strong>), or maybe you’re working on a different computer, you can <strong>pull</strong> any changes back to your local repository so everything is synchronised.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/Github_cartoon2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-git-cart" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-git-cart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/Github_cartoon2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-git-cart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.2: How git works
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -413,41 +446,37 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>This Chapter assumes that you have already installed the latest versions of R and an IDE (RStudio or VSCode). If you haven’t done this yet you can find instructions in <a href="01-start.html#sec-install_r" class="quarto-xref"><span>Section 1.1.1</span></a>.</p>
 <section id="install-git" class="level3" data-number="7.4.1"><h3 data-number="7.4.1" class="anchored" data-anchor-id="install-git">
 <span class="header-section-number">7.4.1</span> Install Git</h3>
-<p>To get started, you first need to install Git. If you’re lucky you may already have Git installed (especially if you have a Mac or Linux computer). You can check if you already have Git installed by clicking on the Terminal tab in the Console window in RStudio and typing <code>git --version</code> (the space after the <code>git</code> command is important). If you see something that looks like <code>git version 2.25.0</code> (the version number may be different on your computer) then you already have Git installed (happy days). If you get an error (something like <code>git: command not found</code>) this means you don’t have Git installed (yet!).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/git_version.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
-</div>
-</div>
-</div>
+<p>To get started, you first need to install Git. If you’re lucky you may already have Git installed (especially if you have a Mac or Linux computer). You can check if you already have Git installed by clicking on the <code>Terminal tab</code> in RStudio and typing <code>git --version</code>. If you see something that looks like <code>git version 2.25.0</code> (the version number may be different on your computer) then you already have Git installed (happy days). If you get an error (something like <code>git: command not found</code>) this means you don’t have Git installed (yet!).</p>
 <p>You can also do this check outside RStudio by opening up a separate Terminal if you want. On Windows go to the ‘Start menu’ and in the search bar (or run box) type <code>cmd</code> and press enter. On a Mac go to ‘Applications’ in Finder, click on the ‘Utilities’ folder and then on the ‘Terminal’ program. On a Linux machine simply open the Terminal (Ctrl+Alt+T often does it).</p>
 <p>To install Git on a <strong>Windows</strong> computer we recommend you download and install Git for Windows (also known as ‘Git Bash’). You can find the download file and installation instructions <a href="https://git-scm.com/downloads">here</a>.</p>
 <p>For those of you using a <strong>Mac</strong> computer we recommend you download Git from <a href="https://git-scm.com/downloads">here</a> and install in the usual way (double click on the installer package once downloaded). If you’ve previously installed Xcode on your Mac and want to use a more up to date version of Git then you will need to follow a few more steps documented <a href="https://github.com/timcharper/git_osx_installer">here</a>. If you’ve never heard of Xcode then don’t worry about it!</p>
 <p>For those of you lucky enough to be working on a <strong>Linux</strong> machine you can simply use your OS package manager to install Git from the official repository. For Ubuntu Linux (or variants of) open your Terminal and type</p>
-<pre class="markup"><code>sudo apt update
-sudo apt install git</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You will need administrative privileges to do this. For other versions of Linux see <a href="https://git-scm.com/download/linux">here</a> for further installation instructions.</p>
 <p>Whatever version of Git you’re installing, once the installation has finished verify that the installation process has been successful by running the command <code>git --version</code> in the Terminal tab in RStudio (as described above). On some installations of Git (yes we’re looking at you MS Windows) this may still produce an error as you will also need to setup RStudio so it can find the Git executable (described in <a href="#sec-rs_config" class="quarto-xref"><span>Section 7.4.3</span></a>).</p>
 </section><section id="configure-git" class="level3" data-number="7.4.2"><h3 data-number="7.4.2" class="anchored" data-anchor-id="configure-git">
 <span class="header-section-number">7.4.2</span> Configure Git</h3>
 <p>After installing Git, you need to configure it so you can use it. Click on the Terminal tab in the Console window again and type the following:</p>
-<pre><code>git config --global user.email 'you@youremail.com'
-
-git config --global user.name 'Your Name'</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">'you@youremail.com'</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">'Your Name'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>substituting <code>'Your Name'</code> for your actual name and <code>'you@youremail.com'</code> with your email address. We recommend you use your University email address (if you have one) as you will also use this address when you register for your GitHub account (coming up in a bit).</p>
 <p>If this was successful, you should see no error messages from these commands. To verify that you have successfully configured Git type the following into the Terminal</p>
-<pre><code>git config --global --list</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You should see both your <code>user.name</code> and <code>user.email</code> configured.</p>
 </section><section id="sec-rs_config" class="level3" data-number="7.4.3"><h3 data-number="7.4.3" class="anchored" data-anchor-id="sec-rs_config">
 <span class="header-section-number">7.4.3</span> Configure RStudio</h3>
 <p>As you can see above, Git can be used from the command line, but it also integrates well with RStudio, providing a friendly graphical user interface. If you want to use RStudio’s Git integration (we recommend you do - at least at the start), you need to check that the path to the Git executable is specified correctly. In RStudio, go to the menu <code>Tools</code> -&gt; <code>Global Options</code> -&gt; <code>Git/SVN</code> and make sure that ‘Enable version control interface for RStudio projects’ is ticked and that the ‘Git executable:’ path is correct for your installation. If it’s not correct hit the <code>Browse...</code> button and navigate to where you installed git and click on the executable file. You will need to restart RStudio after doing this.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/git_path.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-git-rs" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-git-rs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/git_path.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-git-rs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.3: Providing path to git software in RStudio
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -471,54 +500,75 @@ git config --global user.name 'Your Name'</code></pre>
 <p>To use the GitHub first approach you will first need to create a <strong>repository (repo)</strong> on GitHub. Go to your <a href="https://github.com/">GitHub page</a> and sign in if necessary. Click on the ‘Repositories’ tab at the top and then on the green ‘New’ button on the right</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_repo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-repo1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-repo1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_repo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-repo1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.4: Creating a new repository on Github
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Give your new repo a name (let’s call it <code>first_repo</code> for this Chapter), select ‘Public’, tick on the ‘Initialize this repository with a README’ (this is important) and then click on ‘Create repository’ (ignore the other options for now).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_repo_opt.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-repo2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-repo2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_repo_opt.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-repo2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.5: Configuring a new repository on Github
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Your new GitHub repository will now be created. Notice the README has been rendered in GitHub and is in markdown (.md) format (see <a href="06-quarto.html" class="quarto-xref"><span>Chapter 6</span></a> on R markdown if this doesn’t mean anything to you). Next click on the green ‘Clone or Download’ button and copy the <code>https//...</code> URL that pops up for later (either highlight it all and copy or click on the copy to clipboard icon to the right).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_repo_clone.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-repo3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-repo3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_repo_clone.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-repo3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.6: Getting the cloning path for a directory on github
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Ok, we now switch our attention to RStudio. In RStudio click on the <code>File</code> -&gt; <code>New Project</code> menu. In the pop up window select <code>Version Control</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/proj_setup1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/proj_setup1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-proj1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.7: Setting a new Github project in RStudio
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Now paste the the URL you previously copied from GitHub into the <code>Repository URL:</code> box. This should then automatically fill out the <code>Project Directory Name:</code> section with the correct repository name (it’s important that the name of this directory has the same name as the repository you created in GitHub). You can then select where you want to create this directory by clicking on the <code>Browse</code> button opposite the <code>Create project as a subdirectory of:</code> option. Navigate to where you want the directory created and click OK. We also tick the <code>Open in new session</code> option.</p>
+<!-- no more labels below that line -->
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/proj_setup2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj2" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/proj_setup2.png" id="fig-new-proj2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>RStudio will now create a new directory with the same name as your repository on your local computer and will then <strong>clone</strong> your remote repository to this directory. The directory will contain three new files; <code>first_repo.Rproj</code> (or whatever you called your repository), <code>README.md</code> and <code>.gitignore</code>. You can check this out in the <code>Files</code> tab usually in the bottom right pane in RStudio. You will also have a <code>Git</code> tab in the top right pane with two files listed (we will come to this later on in the Chapter). That’s it for Option 1, you now have a remote GitHub repository set up and this is linked to your local repository managed by RStudio. Any changes you make to files in this directory will be version controlled by Git.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/proj_setup3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj2a" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj2a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/proj_setup3.png" id="fig-new-proj2a" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj2a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -528,36 +578,44 @@ git config --global user.name 'Your Name'</code></pre>
 <p>In RStudio click on the <code>File</code> -&gt; <code>New Project</code> menu and select the <code>New Directory</code> option.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj3" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS1.png" id="fig-new-proj3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>In the pop up window select the <code>New Project</code> option</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/proj_setup_RS.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj4" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/proj_setup_RS.png" id="fig-new-proj4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>In the New Project window specify a <code>Directory name</code> (choose <code>second_repo</code> for this Chapter) and select where you would like to create this directory on you computer (click the <code>Browse</code> button). Make sure the <code>Create a git repository</code> option is ticked</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj5" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS2.png" id="fig-new-proj5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>This will create a version controlled directory called <code>second_repo</code> on your computer that contains two files, <code>second_repo.Rproj</code> and <code>.gitignore</code> (there might also be a <code>.Rhistory</code> file but ignore this). You can check this by looking in the <code>Files</code> tab in RStudio (usually in the bottom right pane).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj6" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS3.png" id="fig-new-proj6" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -565,45 +623,55 @@ git config --global user.name 'Your Name'</code></pre>
 <p>To get our two files under version control click on the ‘Git’ tab which is usually in the top tight pane in RStudio</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj7" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS4.png" id="fig-new-proj7" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>You can see that both files are listed. Next, tick the boxes under the ‘Staged’ column for both files and then click on the ‘Commit’ button.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj8" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS5.png" id="fig-new-proj8" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>This will take you to the ‘Review Changes’ window. Type in the commit message ‘First commit’ in the ‘Commit message’ window and click on the ‘Commit’ button. A new window will appear with some messages which you can ignore for now. Click ‘Close’ to close this window and also close the ‘Review Changes’ window. The two files should now have disappeared from the Git pane in RStudio indicating a successful commit.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj9" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS6.png" id="fig-new-proj9" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>OK, that’s those two files now under version control. Now we need to create a new repository on GitHub. In your browser go to your <a href="https://github.com/">GitHub page</a> and sign in if necessary. Click on the ‘Repositories’ tab and then click on the green ‘New’ button on the right. Give your new repo the name <code>second_repo</code> (the same as your version controlled directory name) and select ‘Public’. This time <strong>do not</strong> tick the ‘Initialize this repository with a README’ (this is important) and then click on ‘Create repository’.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj10" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS7.png" id="fig-new-proj10" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>This will take you to a Quick setup page which provides you with some code for various situations. The code we are interested in is the code under <code>...or push an existing repository from the command line</code> heading.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj11" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS8.png" id="fig-new-proj11" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -614,18 +682,22 @@ git config --global user.name 'Your Name'</code></pre>
 <p>and paste this into the Terminal in RStudio. You should see something like this</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_prog_RS9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj12" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_prog_RS9.png" id="fig-new-proj12" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>If you take a look at your repo back on GitHub (click on the <code>/second_repo</code> link at the top) you will see the <code>second_repo.Rproj</code> and <code>.gitignore</code> files have now been <strong>pushed</strong> to GitHub from your local repository.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj13" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS10.png" id="fig-new-proj13" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -633,18 +705,22 @@ git config --global user.name 'Your Name'</code></pre>
 <p>In your repository on GitHub click on the green <code>Add a README</code> button.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj14" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS11.png" id="fig-new-proj14" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>Now write a short description of your project in the <code>&lt;&gt; Edit new file</code> section and then click on the green <code>Commit new file</code> button.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/new_proj_RS12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new-proj15" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new-proj15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/new_proj_RS12.png" id="fig-new-proj15" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-new-proj15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -668,9 +744,11 @@ git config --global user.name 'Your Name'</code></pre>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/workflow_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-workflow" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/workflow_3.png" id="fig-workflow" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -678,9 +756,11 @@ git config --global user.name 'Your Name'</code></pre>
 <p>Open up the <code>first_repo.Rproj</code> you created previously during Option 1. Either use the <code>File</code> -&gt; <code>Open Project</code> menu or click on the top right project icon and select the appropriate project.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rm0" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd0.png" id="fig-rm0" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -688,81 +768,99 @@ git config --global user.name 'Your Name'</code></pre>
 <p>Once created, we can delete all the example R markdown code (except the YAML header) as usual and write some interesting R markdown text and include a plot. We’ll use the inbuilt <code>cars</code> dataset to do this. Save this file (cmd + s for Mac or ctrl + s in Windows). Your R markdown document should look something like the following (it doesn’t matter if it’s not exactly the same).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-rm1" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd.png" id="fig-rm1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>Take a look at the ‘Git’ tab which should list your new R markdown document (<code>first_doc.Rmd</code> in this example) along with <code>first_repo.Rproj</code>, and <code>.gitignore</code> (you created these files previously when following Option 1).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rm2" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd2.png" id="fig-rm2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>Following our workflow, we now need to <strong>stage</strong> these files. To do this tick the boxes under the ‘Staged’ column for all files. Notice that there is a status icon next to the box which gives you an indication of how the files were changed. In our case all of the files are to be added (capital A) as we have just created them.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/rstudio_git_cols.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15.0%"></p>
-</figure>
+<div id="fig-rm3" class="quarto-figure quarto-figure-center quarto-float anchored" width="15%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/rstudio_git_cols.png" id="fig-rm3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:15.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>After you have staged the files the next step is to <strong>commit</strong> the files. This is done by clicking on the ‘Commit’ button.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
+<div id="fig-rm4" class="quarto-figure quarto-figure-center quarto-float anchored" width="50%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd3.png" id="fig-rm4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>After clicking on the ‘Commit’ button you will be taken to the ‘Review Changes’ window. You should see the three files you staged from the previous step in the left pane. If you click on the file name <code>first_doc.Rmd</code> you will see the changes you have made to this file highlighted in the bottom pane. Any content that you have added is highlighted in green and deleted content is highlighted in red. As you have only just created this file, all the content is highlighted in green. To commit these files (take a snapshot) first enter a mandatory commit message in the ‘Commit message’ box. This message should be relatively short and informative (to you and your collaborators) and indicate why you made the changes, not what you changed. This makes sense as Git keeps track of <em>what</em> has changed and so it is best not to use commit messages for this purpose. It’s traditional to enter the message ‘First commit’ (or ‘Initial commit’) when you commit files for the first time. Now click on the ‘Commit’ button to commit these changes.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rm5" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd4.png" id="fig-rm5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>A summary of the commit you just performed will be shown. Now click on the ‘Close’ button to return to the ‘Review Changes’ window. Note that the staged files have now been removed.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-rm6" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd5.png" id="fig-rm6" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>Now that you have committed your changes the next step is to <strong>push</strong> these changes to GitHub. Before you push your changes it’s good practice to first <strong>pull</strong> any changes from GitHub. This is especially important if both you and your collaborators are working on the same files as it keeps you local copy up to date and avoids any potential conflicts. In this case your repository will already be up to date but it’s a good habit to get into. To do this, click on the ‘Pull’ button on the top right of the ‘Review Changes’ window. Once you have pulled any changes click on the green ‘Push’ button to push your changes. You will see a summary of the push you just performed. Hit the ‘Close’ button and then close the ‘Review Changes’ window.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-rm7" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd6.png" id="fig-rm7" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>To confirm the changes you made to the project have been pushed to GitHub, open your GitHub page, click on the Repositories link and then click on the <code>first_repo</code> repository. You should see four files listed including the <code>first_doc.Rmd</code> you just pushed. Along side the file name you will see your last commit message (‘First commit’ in this case) and when you made the last commit.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-rm8" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd7.png" id="fig-rm8" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>To see the contents of the file click on the <code>first_doc.Rmd</code> file name.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/first_Rmd8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-rm9" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rm9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/first_Rmd8.png" id="fig-rm9" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rm9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -773,9 +871,11 @@ git config --global user.name 'Your Name'</code></pre>
 <p>Let’s make some changes to this document. Delete the line beginning with ‘My first version controlled …’ and replace it with something more informative (see figure below). We will also change the plotted symbols to red and give the plot axes labels. Lastly, let’s add a summary table of the dataframe using the <code>kable()</code> and <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> functions (you may need to install the <code>knitr</code> package if you haven’t done so previously to use the <code>kable()</code> function) and finally render this document to pdf by changing the YAML option to <code>output: pdf_document</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/mod1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-mod1" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mod1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/mod1.png" id="fig-mod1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-mod1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -783,45 +883,55 @@ git config --global user.name 'Your Name'</code></pre>
 <p>Notice that these two files have been added to the <code>Git</code> tab in RStudio. The status icons indicate that the <code>first_doc.Rmd</code> file has been modified (capital M) and the <code>first_doc.pdf</code> file is currently untracked (question mark).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/mod2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-mod2" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mod2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/mod2.png" id="fig-mod2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-mod2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>To stage these files tick the ‘Staged’ box for each file and click on the ‘Commit’ button to take you to the ‘Review Changes’ window</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/mod3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-mod3" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mod3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/mod3.png" id="fig-mod3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-mod3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>Before you commit your changes notice the status of <code>first_doc.pdf</code> has changed from untracked to added (A). You can view the changes you have made to the <code>first_doc.Rmd</code> by clicking on the file name in the top left pane which will provide you with a useful summary of the changes in the bottom pane (technically called diffs). Lines that have been deleted are highlighted in red and lines that have been added are highlighted in green (note that from Git’s point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of a new line). Once you’re happy, commit these changes by writing a suitable commit message and click on the ‘Commit’ button.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/mod4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-mod4" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mod4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/mod4.png" id="fig-mod4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-mod4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>To push the changes to GitHub, click on the ‘Pull’ button first (remember this is good practice even though you are only collaborating with yourself at the moment) and then click on the ‘Push’ button. Go to your online GitHub repository and you will see your new commits, including the <code>first_doc.pdf</code> file you created when you rendered your R markdown document.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/mod5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-mod5" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mod5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/mod5.png" id="fig-mod5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-mod5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>To view the changes in <code>first_doc.Rmd</code> click on the file name for this file.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/mod6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-mod6" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mod6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/mod6.png" id="fig-mod6" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-mod6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -831,45 +941,55 @@ git config --global user.name 'Your Name'</code></pre>
 <p>To view your commit history in RStudio click on the ‘History’ button (the one that looks like a clock) in the Git pane to bring up the history view in the ‘Review Changes’ window. You can also click on the ‘Commit’ or ‘Diff’ buttons which takes you to the same window (you just need to additionally click on the ‘History’ button in the ‘Review Changes’ window).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/c_history.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-his1" class="quarto-figure quarto-figure-center quarto-float anchored" width="60%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-his1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/c_history.png" id="fig-his1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-his1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>The history window is split into two parts. The top pane lists every commit you have made in this repository (with associated commit messages) starting with the most recent one at the top and oldest at the bottom. You can click on each of these commits and the bottom pane shows you the changes you have made along with a summary of the <strong>Date</strong> the commit was made, <strong>Author</strong> of the commit and the commit message (<strong>Subject</strong>). There is also a unique identifier for the commit (<strong>SHA</strong> - Secure Hash Algorithm) and a <strong>Parent</strong> SHA which identifies the previous commit. These SHA identifiers are really important as you can use them to view and revert to previous versions of files (details below <a href="#sec-undo" class="quarto-xref"><span>Section 7.6.3</span></a>). You can also view the contents of each file by clicking on the ‘View file @ SHA key` link (in our case ’View file @ 2b4693d1’).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/c_history2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-his2" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-his2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/c_history2.png" id="fig-his2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-his2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>You can also view your commit history on GitHub website but this will be limited to only those commits you have already pushed to GitHub. To view the commit history navigate to the repository and click on the ‘commits’ link (in our case the link will be labelled ‘3 commits’ as we have made 3 commits).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/c_history3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-his3" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-his3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/c_history3.png" id="fig-his3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-his3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>You will see a list of all the commits you have made, along with commit messages, date of commit and the SHA identifier (these are the same SHA identifiers you saw in the RStudio history). You can even browse the repository at a particular point in time by clicking on the <code>&lt;&gt;</code> link. To view the changes in files associated with the commit simply click on the relevant commit link in the list.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/c_history4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-his4" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-his4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/c_history4.png" id="fig-his4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-his4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>Which will display changes using the usual format of green for additions and red for deletions.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/c_history5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-his5" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-his5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/c_history5.png" id="fig-his5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-his5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -880,18 +1000,22 @@ git config --global user.name 'Your Name'</code></pre>
 <p>If you have saved changes to your file(s) but not staged, committed or pushed these files to GitHub you can right click on the offending file in the Git pane and select ‘Revert …’. This will roll back all of the changes you have made to the same state as your last commit. Just be aware that you cannot undo this operation so use with caution.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev1" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert1.png" id="fig-rev1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>You can also undo changes to just part of a file by opening up the ‘Diff’ window (click on the ‘Diff’ button in the Git pane). Select the line you wish to discard by double clicking on the line and then click on the ‘Discard line’ button. In a similar fashion you can discard chunks of code by clicking on the ‘Discard chunk’ button.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev2" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert2.png" id="fig-rev2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -901,18 +1025,22 @@ git config --global user.name 'Your Name'</code></pre>
 <p>If you have made a mistake or have forgotten to include a file in your last commit which you have not yet pushed to GitHub, you can just fix your mistake, save your changes, and then amend your previous commit. You can do this by staging your file and then tick the ‘Amend previous commit` box in the ’Review Changes’ window before committing.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev3" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert3.png" id="fig-rev3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>If we check out our commit history you can see that our latest commit contains both changes to the file rather than having two separate commits. We use the amend commit approach alot but it’s important to understand that you should <strong>not</strong> do this if you have already pushed your last commit to GitHub as you are effectively rewriting history and all sorts bad things may happen!</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev4" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert4.png" id="fig-rev4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -920,27 +1048,33 @@ git config --global user.name 'Your Name'</code></pre>
 <p><strong>Option 1</strong> - (probably the easiest but very unGit - but like, whatever!) is to look in your commit history in RStudio, find the commit that you would like to go back to and click on the ‘View file @’ button to show the file contents.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev5" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert5.png" id="fig-rev5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>You can then copy the contents of the file to the clipboard and paste it into your current file to replace your duff code or text. Alternatively, you can click on the ‘Save As’ button and save the file with a different file name. Once you have saved your new file you can delete your current unwanted file and then carry on working on your new file. Don’t forget to stage and commit this new file.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev6" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert6.png" id="fig-rev6" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p><strong>Option 2</strong> - (Git like) Go to your Git history, find the commit you would like to roll back to and write down (or copy) its SHA identifier.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev7" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert7.png" id="fig-rev7" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -956,9 +1090,11 @@ git checkout 2b4693d1 .
 <p>If you have already pushed your commits to GitHub you can use the <code>git checkout</code> strategy described above and then commit and push to update GitHub (although this is not really considered ‘best’ practice). Another approach would be to use <code>git revert</code> (Note: as far as we can tell <code>git revert</code> is not the same as the ‘Revert’ option in RStudio). The <code>revert</code> command in Git essentially creates a new commit based on a previous commit and therefore preserves all of your commit history. To rollback to a previous state (commit) you first need to identify the SHA for the commit you wish to go back to (as we did above) and then use the <code>revert</code> command in the Terminal. Let’s say we want to revert back to our ‘First commit’ which has a SHA identifier <code>d27e79f1</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev8" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert8.png" id="fig-rev8" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -967,18 +1103,22 @@ git checkout 2b4693d1 .
 <p>Your <code>first_doc.Rmd</code> file will now revert back to the same state as it was when you did your ‘First commit’. Notice also that the <code>first_doc.pdf</code> file has been deleted as this wasn’t present when we made our first commit. You can now stage and commit these files with a new commit message and finally push them to GitHub. Notice that if we look at our commit history all of the commits we have made are still present.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev9" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert9.png" id="fig-rev9" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
 <p>and our repo on GitHub also reflects these changes</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/revert10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-rev10" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rev10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/revert10.png" id="fig-rev10" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rev10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -995,9 +1135,11 @@ git checkout 2b4693d1 .
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/workflow_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-workflow" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/workflow_3.png" id="fig-workflow" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>
@@ -1014,9 +1156,11 @@ git checkout 2b4693d1 .
 <p>If you don’t want to track a file in your repository (maybe they are too large or transient files) you can get Git to ignore the file by adding it to the <code>.gitignore</code> file. On RStudio, in the git pane, you can right clicking on the filename to exclude and selecting ‘Ignore…’</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/github/tip1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div id="fig-tip1" class="quarto-figure quarto-figure-center quarto-float anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-tip1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/github/tip1.png" id="fig-tip1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tip1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
 </div>
 </div>
 </div>

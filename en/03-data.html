@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.30">
+<meta name="generator" content="quarto-1.5.31">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -115,7 +115,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">R Way</span>
+    <span class="navbar-title"><img src="images/cover/book_hex_en.png" class="img-fluid" width="50"> R Way</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -518,9 +518,13 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>Perhaps the simplest type of data structure is the vector. You’ve already been introduced to vectors in <a href="02-basics.html#sec-funcs" class="quarto-xref"><span>Section 2.4</span></a> although some of the vectors you created only contained a single value. Vectors that have a single value (length 1) are called scalars. Vectors can contain numbers, characters, factors or logicals, but the key thing to remember is that all the elements inside a vector must be of the same class. In other words, vectors can contain either numbers, characters or logical but not mixtures of these types of data. There is one important exception to this, you can include <code>NA</code> (remember this is special type of logical) to denote missing data in vectors with other data types.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/data/scal_vec.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
-</figure>
+<div id="fig-data_struc" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-data_struc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/data/scal_vec.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-data_struc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Scalar and vector data structure
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -529,9 +533,13 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>Another useful data structure used in many disciplines such as population ecology, theoretical and applied statistics is the matrix. A matrix is simply a vector that has additional attributes called dimensions. Arrays are just multidimensional matrices. Again, matrices and arrays must contain elements all of the same data class.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/data/mat_array.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
+<div id="fig-data_struc2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-data_struc2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/data/mat_array.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-data_struc2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Matrix and array data structure
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -916,9 +924,13 @@ Table&nbsp;3.1: Imported unicorn data
 <p>The easiest method of creating a data file to import into R is to enter your data into a spreadsheet using either Microsoft Excel or LibreOffice Calc and save the spreadsheet as a comma delimited file. We prefer LibreOffice Calc as it’s open source, platform independent and free but MS Excel is OK too (but see <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7">here</a> for some gotchas). Here’s the data from the petunia experiment we discussed previously displayed in LibreOffice. If you want to follow along you can download the data file (<em>‘unicorn.xlsx’</em>) from <a href="902-data-files.html" class="quarto-xref"><span>Appendix A</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/data/libre_off.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-LO-calc0" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-LO-calc0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/data/libre_off.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-LO-calc0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: Unicorn data in LibreOffice Calc
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -926,21 +938,17 @@ Table&nbsp;3.1: Imported unicorn data
 <p>To save a spreadsheet as a comma delimited file in LibreOffice Calc select <code>File</code> -&gt; <code>Save as ...</code> from the main menu. You will need to specify the location you want to save your file in the ‘Save in folder’ option and the name of the file in the ‘Name’ option. In the drop down menu located above the ‘Save’ button change the default ‘All formats’ to ‘Text CSV (.csv)’.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/data/libre_off1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-LO-calc" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-LO-calc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/data/libre_off1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-LO-calc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: Choosing <code>csv</code> format when saving with LibreOffice Calc
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Click the Save button and then select the ‘Use Text CSV Format’ option. Click on OK to save the file.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/data/libre_off2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
-</figure>
-</div>
-</div>
-</div>
 <p>There are a couple of things to bear in mind when saving files to import into R which will make your life easier in the long run. Keep your column headings (if you have them) short and informative. Also avoid spaces in your column headings by replacing them with an underscore or a dot (i.e. replace <code>mane size</code> with <code>mane size</code> or <code>mane.size</code>) and avoid using special characters (i.e. <code>leaf area (mm^2)</code> or uppercase to simpy your life). Remember, if you have missing data in your data frame (empty cells) you should use an <code>NA</code> to represent these missing values or have an empty cell. This will keep the data frame tidy.</p>
 </section><section id="sec-import_fnc" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="sec-import_fnc">
 <span class="header-section-number">3.3.2</span> Import functions</h3>
@@ -2106,6 +2114,7 @@ high   9.6000 5.70625</code></pre>
 <section id="export-functions" class="level3" data-number="3.7.1"><h3 data-number="3.7.1" class="anchored" data-anchor-id="export-functions">
 <span class="header-section-number">3.7.1</span> Export functions</h3>
 <p>The main workhorse function for exporting data frames is the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. As with the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function, the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function is very flexible with lots of arguments to help customise it’s behaviour. As an example, let’s take our original <code>unicorns</code> data frame, do some useful stuff to it and then export these changes to an external file.</p>
+<p>Similarly to <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code>, <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> has a series of function with format specific default values such as <code><a href="https://rdrr.io/r/utils/write.table.html">write.csv()</a></code> and <code>write.delim()</code> which use “,” and tabs as delimiters, respectively,and include column names by default.</p>
 <p>Let’s order the rows in the data frame in ascending order of <code>height</code> within each level <code>food</code>. We will also apply a square root transformation on the number of horn rings variable (<code>horn_rings</code>) and a log<sub>10</sub> transformation on the <code>height</code> variable and save these as additional columns in our data frame (hopefully this will be somewhat familiar to you!).</p>
 <div class="cell">
 <div class="sourceCode" id="cb212"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">unicorns_df2</span> <span class="op">&lt;-</span> <span class="va">unicorns</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span><span class="op">(</span><span class="va">unicorns</span><span class="op">$</span><span class="va">food</span>, <span class="va">unicorns</span><span class="op">$</span><span class="va">height</span><span class="op">)</span>, <span class="op">]</span></span>
@@ -2126,49 +2135,31 @@ high   9.6000 5.70625</code></pre>
  $ log10_height   : num  0.255 0.342 0.362 0.38 0.477 ...</code></pre>
 </div>
 </div>
-<p>Now we can export our new data frame <code>unicorns_df2</code> using the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. The first argument is the data frame you want to export (<code>unicorns_df2</code> in our example). We then give the filename (with file extension) and the file path in either single or double quotes using the <code>file =</code> argument. In this example we’re exporting the data frame to a file called <code>unicorns_04_12.txt</code> in the <code>data</code> directory. The <code>col.names = TRUE</code> argument indicates that the variable names should be written in the first row of the file and the <code>row.names = FALSE</code> argument stops R from including the row names in the first column of the file. Finally, the <code>sep = "\t"</code> argument indicates that a Tab should be used as the delimiter in the exported file.</p>
+<p>Now we can export our new data frame <code>unicorns_df2</code> using the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. The first argument is the data frame you want to export (<code>unicorns_df2</code> in our example). We then give the filename (with file extension) and the file path in either single or double quotes using the <code>file =</code> argument. In this example we’re exporting the data frame to a file called <code>unicorns_transformed.csv</code> in the <code>data</code> directory. The <code>row.names = FALSE</code> argument stops R from including the row names in the first column of the file.</p>
 <div class="cell">
 <div class="sourceCode" id="cb214"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span><span class="op">(</span><span class="va">unicorns_df2</span>,</span>
-<span>  file <span class="op">=</span> <span class="st">"data/unicorns_04_12.txt"</span>, col.names <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  row.names <span class="op">=</span> <span class="cn">FALSE</span>, sep <span class="op">=</span> <span class="st">"\t"</span></span>
+<span>  file <span class="op">=</span> <span class="st">"data/unicorns_transformed.csv"</span>, </span>
+<span>  row.names <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>As we saved the file as a tab delimited text file we could open this file in any text editor. Perhaps a more familiar option would be to open the file in Excel. First start Excel and then select <code>File</code> -&gt; <code>Open ..</code> in the main menu and then select our <code>unicorns_04_12.txt</code> file to open. Next. choose the ‘Tab’ option to set the delimiter and then click on the ‘Finish’ button.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/data/excel_export.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>We can of course export our files in a variety of other formats. Another popular option is to export files in csv (comma separated values) format. We can do this using the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function by setting the separator argument to <code>sep = ","</code>.</p>
-<div class="cell">
-<div class="sourceCode" id="cb215"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.table</a></span><span class="op">(</span><span class="va">unicorns_df2</span>,</span>
-<span>  file <span class="op">=</span> <span class="st">"data/unicorns_04_12.csv"</span>, col.names <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  row.names <span class="op">=</span> <span class="cn">FALSE</span>, sep <span class="op">=</span> <span class="st">","</span></span>
-<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Or alternatively by using the convenience function <code><a href="https://rdrr.io/r/utils/write.table.html">write.csv()</a></code>. Notice that we don’t need to set the <code>sep = ","</code> or <code>col.names = TRUE</code> arguments as these are the defaults when using the <code><a href="https://rdrr.io/r/utils/read.table.html">read.csv()</a></code> function.</p>
-<div class="cell">
-<div class="sourceCode" id="cb216"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span><span class="op">(</span><span class="va">unicorns_df2</span>, file <span class="op">=</span> <span class="st">"data/unicorns_04_12.csv"</span>, row.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>As we saved the file as a comma delimited text file we could open this file in any text editor.</p>
+<p>We can of course export our files in a variety of other formats.</p>
 </section><section id="other-export-functions" class="level3" data-number="3.7.2"><h3 data-number="3.7.2" class="anchored" data-anchor-id="other-export-functions">
 <span class="header-section-number">3.7.2</span> Other export functions</h3>
 <p>As with importing data files into R, there are also many alternative functions for exporting data to external files beyond the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. If you followed the ‘Other import functions’ <a href="#sec-import_other" class="quarto-xref"><span>Section 3.3.4</span></a> of this Chapter you will already have the required packages installed.</p>
 <p>The <code>fwrite()</code> function from the <code>read.table</code> package is very efficient at exporting large data objects and is much faster than the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. It’s also quite simple to use as it has most of the same arguments as <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code>. To export a tab delimited text file we just need to specify the data frame name, the output file name and file path and the separator between columns.</p>
 <div class="cell">
-<div class="sourceCode" id="cb217"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">read.table</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb215"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">read.table</span><span class="op">)</span></span>
 <span><span class="fu">fwrite</span><span class="op">(</span><span class="va">unicorns_df2</span>, file <span class="op">=</span> <span class="st">"data/unicorns_04_12.txt"</span>, sep <span class="op">=</span> <span class="st">"\t"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To export a csv delimited file it’s even easier as we don’t even need to include the <code>sep =</code> argument.</p>
 <div class="cell">
-<div class="sourceCode" id="cb218"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">read.table</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb216"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">read.table</span><span class="op">)</span></span>
 <span><span class="fu">fwrite</span><span class="op">(</span><span class="va">unicorns_df2</span>, file <span class="op">=</span> <span class="st">"data/unicorns_04_12.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>readr</code> package also comes with two useful functions for quickly writing data to external files: the <code><a href="https://readr.tidyverse.org/reference/write_delim.html">write_tsv()</a></code> function for writing tab delimited files and the <code><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv()</a></code> function for saving comma separated values (csv) files.</p>
 <div class="cell">
-<div class="sourceCode" id="cb219"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb217"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_tsv</a></span><span class="op">(</span><span class="va">unicorns_df2</span>, path <span class="op">=</span> <span class="st">"data/unicorns_04_12.txt"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="va">unicorns_df2</span>, path <span class="op">=</span> <span class="st">"data/unicorns_04_12.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

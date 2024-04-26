@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.30">
+<meta name="generator" content="quarto-1.5.31">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -115,7 +115,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">R Way</span>
+    <span class="navbar-title"><img src="images/cover/book_hex_en.png" class="img-fluid" width="50"> R Way</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -474,18 +474,26 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>Now that we’ve created this object, R knows all about it and will keep track of it during this current R session. All of the objects you create will be stored in the current workspace and you can view all the objects in your workspace in RStudio by clicking on the ‘Environment’ tab in the top right hand pane.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/basic/rs_env.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_env" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_env-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/basic/rs_env.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_env-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: RStudio Environment tab
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>If you click on the down arrow on the ‘List’ icon in the same pane and change to ‘Grid’ view RStudio will show you a summary of the objects including the type (numeric - it’s a number), the length (only one value in this object), its ‘physical’ size and its value (48 in this case). In VSCode, go on the R extension pane, and you can obtain the same information.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/basic/rs_env2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_env2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_env2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/basic/rs_env2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_env2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: RStudio Environment tab in grid format
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -497,9 +505,13 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>Our workspace now contains both objects we’ve created so far with <code>my_obj2</code> listed as type character.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/basic/rs_env3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_env3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_env3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/basic/rs_env3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_env3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: RStudio environment tab with my_obj2 as a character
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -510,9 +522,13 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>Notice that the Type has changed to numeric and the value has changed to 1024 in the environment</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/basic/rs_env4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_env4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_env4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/basic/rs_env4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_env4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: RStudio environment tab with updated my_obj2 as numeric
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -931,9 +947,13 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>the help page is displayed in the ‘Help’ tab in the Files pane (usually in the bottom right of RStudio)</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/basic/rs_help.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
+<div id="fig-rstudio_help" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_help-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/basic/rs_help.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_help-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Help page for the <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> function in RStudio Help pane
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -989,9 +1009,13 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>The results of the search will be displayed in RStudio under the ‘Help’ tab as before. The <code><a href="https://rdrr.io/r/utils/help.search.html">help.search()</a></code> function searches through the help documentation, code demonstrations and package vignettes and displays the results as clickable links for further exploration.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/basic/rs_help2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
+<div id="fig-rstudio_help2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_help2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/basic/rs_help2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_help2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: Output of the <code><a href="https://rdrr.io/r/utils/help.search.html">help.search()</a></code> function in RStudio
+</figcaption></figure>
 </div>
 </div>
 </div>
