@@ -29,23 +29,12 @@ This means that its can easily become part of your usual workflow with minimal a
 ## Why use version control?
 
 So why should you worry about version control? Well, first of all it helps avoid this (familiar?) situation when you're working on a project
+usually arising from this (familiar?) scenario.
 
 
 ```{r}
-#| label: youNeedVC1
-#| echo: false
-#| out-width: 75%
-#| fig-align: center
-#| fig-cap: You need version control
-knitr::include_graphics(path = "images/github/Messy_folder.PNG")
-```
-
-
-usually arising from this (familiar?) scenario
-
-
-```{r}
-#| label: youNeedVC2
+#| label: fig-youNeedVC2
+#| fig-cap: "Why you need version control (source: [PhDComics](https://phdcomics.com/comics/archive.php?comicid=1531))"
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -76,7 +65,8 @@ If other people are working on the same project (**repository**), or maybe you'r
 
 
 ```{r}
-#| label: git-cart
+#| label: fig-git-cart
+#| fig-cap: How git works
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -93,20 +83,9 @@ If you haven't done this yet you can find instructions in @sec-install_r.
 
 To get started, you first need to install Git.
 If you're lucky you may already have Git installed (especially if you have a Mac or Linux computer).
-You can check if you already have Git installed by clicking on the Terminal tab in the Console window in RStudio and typing `git --version` (the space after the `git` command is important).
+You can check if you already have Git installed by clicking on the `Terminal tab` in RStudio and typing `git --version`.
 If you see something that looks like `git version 2.25.0` (the version number may be different on your computer) then you already have Git installed (happy days).
 If you get an error (something like `git: command not found`) this means you don't have Git installed (yet!).
-
-
-
-```{r}
-#| label: git-version
-#| echo: false
-#| out-width: 60%
-#| fig-align: center
-knitr::include_graphics(path = "images/github/git_version.png")
-```
-
 
 You can also do this check outside RStudio by opening up a separate Terminal if you want.
 On Windows go to the 'Start menu' and in the search bar (or run box) type `cmd` and press enter.
@@ -124,7 +103,7 @@ If you've never heard of Xcode then don't worry about it!
 For those of you lucky enough to be working on a **Linux** machine you can simply use your OS package manager to install Git from the official repository.
 For Ubuntu Linux (or variants of) open your Terminal and type
 
-```markup
+```bash
 sudo apt update
 sudo apt install git
 ```
@@ -141,7 +120,7 @@ On some installations of Git (yes we're looking at you MS Windows) this may stil
 After installing Git, you need to configure it so you can use it.
 Click on the Terminal tab in the Console window again and type the following:
 
-```
+```bash
 git config --global user.email 'you@youremail.com'
 
 git config --global user.name 'Your Name'
@@ -154,7 +133,7 @@ We recommend you use your University email address (if you have one) as you will
 If this was successful, you should see no error messages from these commands.
 To verify that you have successfully configured Git type the following into the Terminal
 
-```
+```bash
 git config --global --list
 ```
 
@@ -170,7 +149,8 @@ You will need to restart RStudio after doing this.
 
 
 ```{r}
-#| label: git-rs
+#| label: fig-git-rs
+#| fig-cap: Providing path to git software in RStudio
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -218,7 +198,8 @@ Click on the 'Repositories' tab at the top and then on the green 'New' button on
 
 
 ```{r}
-#| label: new-repo1
+#| label: fig-new-repo1
+#| fig-cap: Creating a new repository on Github
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -230,7 +211,8 @@ Give your new repo a name (let's call it `first_repo` for this Chapter), select 
 
 
 ```{r}
-#| label: new-repo2
+#| label: fig-new-repo2
+#| fig-cap: Configuring a new repository on Github
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -244,7 +226,8 @@ Next click on the green 'Clone or Download' button and copy the `https//...` URL
 
 
 ```{r}
-#| label: new-repo3
+#| label: fig-new-repo3
+#| fig-cap: Getting the cloning path for a directory on github
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -258,7 +241,8 @@ In the pop up window select `Version Control`.
 
 
 ```{r}
-#| label: new-proj1
+#| label: fig-new-proj1
+#| fig-cap: Setting a new Github project in RStudio
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -272,9 +256,11 @@ You can then select where you want to create this directory by clicking on the `
 Navigate to where you want the directory created and click OK.
 We also tick the `Open in new session` option.
 
+<!-- no more labels below that line -->
+
 
 ```{r}
-#| label: new-proj2
+#| label: fig-new-proj2
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -291,7 +277,7 @@ Any changes you make to files in this directory will be version controlled by Gi
 
 
 ```{r}
-#| label: new-proj2a
+#| label: fig-new-proj2a
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -311,7 +297,7 @@ In RStudio click on the `File` -> `New Project` menu and select the `New Directo
 
 
 ```{r}
-#| label: new-proj3
+#| label: fig-new-proj3
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -323,7 +309,7 @@ In the pop up window select the `New Project` option
 
 
 ```{r}
-#| label: new-proj4
+#| label: fig-new-proj4
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -336,7 +322,7 @@ Make sure the `Create a git repository` option is ticked
 
 
 ```{r}
-#| label: new-proj5
+#| label: fig-new-proj5
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -350,7 +336,7 @@ You can check this by looking in the `Files` tab in RStudio (usually in the bott
 
 
 ```{r}
-#| label: new-proj6
+#| label: fig-new-proj6
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -366,7 +352,7 @@ To get our two files under version control click on the 'Git' tab which is usual
 
 
 ```{r}
-#| label: new-proj7
+#| label: fig-new-proj7
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -379,7 +365,7 @@ Next, tick the boxes under the 'Staged' column for both files and then click on 
 
 
 ```{r}
-#| label: new-proj8
+#| label: fig-new-proj8
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -395,7 +381,7 @@ The two files should now have disappeared from the Git pane in RStudio indicatin
 
 
 ```{r}
-#| label: new-proj9
+#| label: fig-new-proj9
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -413,7 +399,7 @@ This time **do not** tick the 'Initialize this repository with a README' (this i
 
 
 ```{r}
-#| label: new-proj10
+#| label: fig-new-proj10
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -427,7 +413,7 @@ The code we are interested in is the code under `...or push an existing reposito
 
 
 ```{r}
-#| label: new-proj11
+#| label: fig-new-proj11
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -449,7 +435,7 @@ You should see something like this
 
 
 ```{r}
-#| label: new-proj12
+#| label: fig-new-proj12
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -461,7 +447,7 @@ If you take a look at your repo back on GitHub (click on the `/second_repo` link
 
 
 ```{r}
-#| label: new-proj13
+#| label: fig-new-proj13
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -480,7 +466,7 @@ In your repository on GitHub click on the green `Add a README` button.
 
 
 ```{r}
-#| label: new-proj14
+#| label: fig-new-proj14
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -492,7 +478,7 @@ Now write a short description of your project in the `<> Edit new file` section 
 
 
 ```{r}
-#| label: new-proj15
+#| label: fig-new-proj15
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -536,7 +522,7 @@ You keep on with this cycle until you get to a point when you would like to **pu
 If you're working with other people on the same project you may also need to **pull** their changes to your local computer  
 
 ```{r}
-#| label: workflow
+#| label: fig-workflow
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -552,7 +538,7 @@ Either use the `File` -> `Open Project` menu or click on the top right project i
 
 
 ```{r}
-#| label: rm0
+#| label: fig-rm0
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -570,7 +556,7 @@ Your R markdown document should look something like the following (it doesn't ma
 
 
 ```{r}
-#| label: rm1
+#| label: fig-rm1
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -582,7 +568,7 @@ Take a look at the 'Git' tab which should list your new R markdown document (`fi
 
 
 ```{r}
-#| label: rm2
+#| label: fig-rm2
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -597,7 +583,7 @@ In our case all of the files are to be added (capital A) as we have just created
 
 
 ```{r}
-#| label: rm3
+#| label: fig-rm3
 #| echo: false
 #| out-width: 15%
 #| fig-align: center
@@ -610,7 +596,7 @@ This is done by clicking on the 'Commit' button.
 
 
 ```{r}
-#| label: rm4
+#| label: fig-rm4
 #| echo: false
 #| out-width: 50%
 #| fig-align: center
@@ -631,7 +617,7 @@ Now click on the 'Commit' button to commit these changes.
 
 
 ```{r}
-#| label: rm5
+#| label: fig-rm5
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -645,7 +631,7 @@ Note that the staged files have now been removed.
 
 
 ```{r}
-#| label: rm6
+#| label: fig-rm6
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -663,7 +649,7 @@ You will see a summary of the push you just performed.
 Hit the 'Close' button and then close the 'Review Changes' window.
 
 ```{r}
-#| label: rm7
+#| label: fig-rm7
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -677,7 +663,7 @@ Along side the file name you will see your last commit message ('First commit' i
 
 
 ```{r}
-#| label: rm8
+#| label: fig-rm8
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -689,7 +675,7 @@ To see the contents of the file click on the `first_doc.Rmd` file name.
 
 
 ```{r}
-#| label: rm9
+#| label: fig-rm9
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -712,7 +698,7 @@ Lastly, let's add a summary table of the dataframe using the `kable()` and `summ
 
 
 ```{r}
-#| label: mod1
+#| label: fig-mod1
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -729,7 +715,7 @@ The status icons indicate that the `first_doc.Rmd` file has been modified (capit
 
 
 ```{r}
-#| label: mod2
+#| label: fig-mod2
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -741,7 +727,7 @@ To stage these files tick the 'Staged' box for each file and click on the 'Commi
 
 
 ```{r}
-#| label: mod3
+#| label: fig-mod3
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -756,7 +742,7 @@ Once you're happy, commit these changes by writing a suitable commit message and
 
 
 ```{r}
-#| label: mod4
+#| label: fig-mod4
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -769,7 +755,7 @@ Go to your online GitHub repository and you will see your new commits, including
  
 
 ```{r}
-#| label: mod5
+#| label: fig-mod5
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -781,7 +767,7 @@ To view the changes in `first_doc.Rmd` click on the file name for this file.
 
 
 ```{r}
-#| label: mod6
+#| label: fig-mod6
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -800,7 +786,7 @@ You can also click on the 'Commit' or 'Diff' buttons which takes you to the same
 
 
 ```{r}
-#| label: his1
+#| label: fig-his1
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
@@ -818,7 +804,7 @@ You can also view the contents of each file by clicking on the 'View file @ SHA 
 
 
 ```{r}
-#| label: his2
+#| label: fig-his2
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -831,7 +817,7 @@ To view the commit history navigate to the repository and click on the 'commits'
 
 
 ```{r}
-#| label: his3
+#| label: fig-his3
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -845,7 +831,7 @@ To view the changes in files associated with the commit simply click on the rele
 
 
 ```{r}
-#| label: his4
+#| label: fig-his4
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -857,7 +843,7 @@ Which will display changes using the usual format of green for additions and red
 
 
 ```{r}
-#| label: his5
+#| label: fig-his5
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -879,7 +865,7 @@ Just be aware that you cannot undo this operation so use with caution.
 
 
 ```{r}
-#| label: rev1
+#| label: fig-rev1
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -894,7 +880,7 @@ In a similar fashion you can discard chunks of code by clicking on the 'Discard 
 
 
 ```{r}
-#| label: rev2
+#| label: fig-rev2
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -914,7 +900,7 @@ You can do this by staging your file and then tick the 'Amend previous commit` b
 
 
 ```{r}
-#| label: rev3
+#| label: fig-rev3
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -927,7 +913,7 @@ We use the amend commit approach alot but it's important to understand that you 
 
 
 ```{r}
-#| label: rev4
+#| label: fig-rev4
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -942,7 +928,7 @@ If you spot a mistake that has happened multiple commits back or you just want t
 
 
 ```{r}
-#| label: rev5
+#| label: fig-rev5
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -957,7 +943,7 @@ Don't forget to stage and commit this new file.
 
 
 ```{r}
-#| label: rev6
+#| label: fig-rev6
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -969,7 +955,7 @@ knitr::include_graphics(path = "images/github/revert6.png")
 
 
 ```{r}
-#| label: rev7
+#| label: fig-rev7
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -1009,7 +995,7 @@ Let's say we want to revert back to our 'First commit' which has a SHA identifie
 
 
 ```{r}
-#| label: rev8
+#| label: fig-rev8
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -1031,7 +1017,7 @@ Notice that if we look at our commit history all of the commits we have made are
 
 
 ```{r}
-#| label: rev9
+#| label: fig-rev9
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -1043,7 +1029,7 @@ and our repo on GitHub also reflects these changes
 
 
 ```{r}
-#| label: rev10
+#| label: fig-rev10
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -1073,7 +1059,7 @@ You keep on with this cycle until you get to a point when you would like to **pu
 If you're working with other people on the same project you may also need to **pull** their changes to your local computer  
 
 ```{r}
-#| label: workflow
+#| label: fig-workflow
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
@@ -1112,7 +1098,7 @@ On RStudio, in the git pane,  you can right clicking on the filename to exclude 
 
 
 ```{r}
-#| label: tip1
+#| label: fig-tip1
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
