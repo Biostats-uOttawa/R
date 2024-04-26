@@ -267,13 +267,13 @@ library(emoji)
 library(dplyr)
 tribble(
   ~Part, ~Chapter, ~Bio4x58, ~Bio8940,
-  "Using R", "  1-4", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
+  "Using R", "1.-4.", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
 #  "Using R", "  2. R basics", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
 #  "Using R", "  3. Data", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
 #  "Using R", "  4. Figures", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
-  "Using R", "  5. Programming", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
-  "Using R", "  6. Reproducible reports", emoji("check_mark"), paste(rep(emoji("white_check_mark"), 2), collapse = ""),
-  "Using R", "  7. Version control", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
+  "Using R", "5. Programming", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
+  "Using R", "6. Reproducible reports", emoji("check_mark"), paste(rep(emoji("white_check_mark"), 2), collapse = ""),
+  "Using R", "7. Version control", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
   "Stats fundamentals", "all chapters", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
   "Linear models", "all chapters", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
   "Generalized linear models", "all chapters", paste(rep(emoji("check_mark"), 1), collapse = ""), paste(rep(emoji("white_check_mark"), 2), collapse = ""),
