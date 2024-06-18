@@ -414,7 +414,7 @@ If the condition is `FALSE` the code below the `else` statement is executed whic
 
 So if we run our modified `multiple_columns()` function on the columns `dishes$stovies` and `dishes$poutine` (which contains `NA`s) we will receive an warning message.
 
-```{r  }
+```{r}
 stovies_poutine_func <- multiply_cols(dishes, stovies, poutine)
 ```
 

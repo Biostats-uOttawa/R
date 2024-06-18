@@ -41,9 +41,10 @@ epub versions in this language if you want to using {{< fa download >}}.
 
 List of languages:
 
--   english (publish but need polishing)
--   french (in development, waiting for english to be polished)
--   spanish (in development, waiting for english to be polished)
+- english (work in progresspublish but need polishing)
+- french (in development, waiting for english to be polished)
+- spanish (one day maybe)
+- ... volunteers for more ??
 
 ## How to use this book {.unnumbered}
 
@@ -182,7 +183,7 @@ R since v2.4.0.
 
 ## Thanks {.unnumbered}
 
-This book started as a fork on github from the excellent [An
+The first part of the book on using R started as a fork on github from the excellent [An
 introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini,
 Couto and Lusseau [@douglas2023]. It was forked on April 23rd, 2023 from
 [Alexd106 github repository](https://github.com/alexd106/Rbook) then
@@ -190,9 +191,8 @@ modified and updated following my own needs and teaching perspective of
 R. The content was neither reviewed nor endorsed by any the previous
 developers.
 
-The book also borrowed and modified section of previous lab manuals
-written by [Julien Martin](#sec-julien) developed for biostatistics
-classes at uOttawa.
+Several parts in the book were based on previous lab manuals for biostatistics classes at uOttawa written by
+Martin, Findlay, Morin and Rundle.
 
 Site that provided a lot of information for the book:
 
@@ -213,6 +213,7 @@ for gams see https://gavinsimpson.github.io/gratia/
 https://m-clark.github.io/mixed-models-with-R/
 -->
 ```
+
 ## Image credits
 
 Photos, images and screenshots are from Julien Martin except when
@@ -231,8 +232,7 @@ abide by the previous statement
 
 ## License {.unnumbered}
 
-I share this modified version of the [original
-book](https://intro2r.com/) under the license [License Creative Commons
+I share this work under the license [License Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0
 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 

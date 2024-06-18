@@ -27,5 +27,5 @@ knitr::kable(
 
 ## Bibliography  {.unnumbered}
 
-::: {#sec-refs}
+::: {#refs}
 :::

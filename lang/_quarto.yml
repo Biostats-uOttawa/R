@@ -80,7 +80,13 @@ format:
 
 
   epub:
+    from: markdown+emoji
     dev: svglite
     stylesheet: css/epub.css
     toc: true
 #    epub-cover-image: images/cover_introR.jpg
+
+params:
+   echo_sol: true
+   longrun: false
+   html_pdf: true

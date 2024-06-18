@@ -16,7 +16,7 @@ book:
   subtitle: "Une introduction au monde merveilleux de R"
   description: "En cours de traduction"
   author: Julien Martin
-
+#  margin-header: '![](images/book_hex_en.png){width="100px"}'
   page-footer:
     left: |
       <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
@@ -26,7 +26,7 @@ book:
   navbar:
     background: light
     collapse-below: lg
-    title: "Chemin enf-R"
+    title: '![](images/cover/book_hex_en.png){width="50px"} Chemin enf-R'
     left:
       - text: Données
         href: 902-fichiers-donnees.qmd
@@ -53,38 +53,57 @@ book:
   
   chapters:
     - index.qmd
-    - part: Débuter avec R
+    - part: Utiliser R
       chapters:
         - 01-debut.qmd
+        - 02-introR.qmd
 #        - 02-basics.qmd
-    - part: Données et graphiques
-#      chapters:
-#        - 11-data.qmd
-#        - 12-graphics_short.qmd
+#        - 03-data.qmd
+#        - 04-graphics_short.qmd
+#        - 05-programming.qmd
+#        - 06-quarto.qmd
+#        - 07-github.qmd
+    - part: Fundamentals of stats
+      chapters:
+#        - 21-distributions, p CI.qmd
+        - 25-power.qmd
     - part: Modèles linéaires
+      chapters:
+        #- 11-stats.qmd
+        - 31-reg_lin.qmd
+        - 32-t_test.qmd
+        - 33-anova.qmd
+        - 34-anova_mult.qmd
+        - 35-reg_mult.qmd
+        - 36-ancova_glm.qmd
+        - 37-model_freq.qmd
+    - part:  Modèles linéaires généralisés
 #      chapters:
-#        - 21-stats.qmd
-#        - 22-glm.qmd
+#        - 41-glm.qmd
+#        - 31-principles.qmd
+#        - 31-poisson.qmd
+#        - 31-binomial.qmd
     - part: Modèles mixtes
 #      chapters:
+#        - 51-lmm.qmd
+#        - 52-intro_glmm.qmd
+#        - 53-randreg.qmd
+#        - 54-multivar.qmd
+#        - 31-principles.qmd
 #        - 31-lme.qmd
 #        - 32-glme.qmd
 #        - 33-multi_lme.qmd
-    - part: Modèles additifs (gam)
+    - part: Modèles additifs généralisés
 #        - 41-gam.qmd
-    - part: Analyse multivariées
+    - part: Analyses multivariées
+#      chapters:
+#        - 71-pca_try.qmd
 #        - 51-acp.qmd
 #        - 52-overview others.qmd
     - part: Approche Bayesienne
-#        - 61-intro to Bayesian.qmd
-#        - 62-lm-brms.qmd
-#        - 63-lme-brms.qmd
-#        - 64-gam-brms.qmd
-    - part: Programmation et écriture avec R
 #      chapters:
-#        - 81-programming.qmd
-#        - 82-rmarkdown.qmd
-#        - 83-github.qmd
+#        - 81-beyond_p.qmd
+#        - 82-intro_bayesian.qmd
     - 901-bibliographie.qmd
   appendices:
     - 902-fichiers-donnees.qmd

@@ -1,0 +1,23 @@
+---
+title: "On the R-Way to hell </br> Sur le chemin de l'enf-R"
+
+#include-in-header:
+#  text: |
+#    <meta http-equiv="refresh" content="0; URL=./en/index.html">
+#    <link rel="canonical" href="./en/index.html">
+---
+<style>
+.quarto-title-block .quarto-title{
+  text-align: center;
+}
+</style>
+
+![](images/hex/Rway_logo_hex_en.png){fig-align="center"}
+
+::: {style="text-align: center;"}
+{{< bi flag >}}
+
+[Sur le chemin de l'enf-R](fr/index.qmd)
+
+[On the R way to hell](en/index.qmd)
+:::

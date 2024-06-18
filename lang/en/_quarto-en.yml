@@ -14,7 +14,7 @@ book:
   subtitle: "Statistical analysis in the marvelous world of R"
   description: "Early version needed to be severely updated/modified"
   author: Julien Martin
-
+#  margin-header: '![](images/book_hex_en.png){width="100px"}'
   page-footer:
     left: |
       <a href="https://biostats-uottawa.github.io/people.html">Julien Martin</a>
@@ -52,6 +52,7 @@ book:
     - index.qmd
     - part: Using R
       chapters:
+#        - test.qmd
         - 01-start.qmd
         - 02-basics.qmd
         - 03-data.qmd
@@ -60,20 +61,31 @@ book:
         - 06-quarto.qmd
         - 07-github.qmd
     - part: Fundamentals of stats
-#      chapters:
+      chapters:
 #        - 21-distributions, p CI.qmd
-
+        - 25-power.qmd
     - part: Linear models
       chapters:
-        - 11-stats.qmd
-#        - 22-glm.qmd
+        #- 11-stats.qmd
+        - 31-reg_lin.qmd
+        - 32-t_test.qmd
+        - 33-anova.qmd
+        - 34-anova_mult.qmd
+        - 35-reg_mult.qmd
+        - 36-ancova_glm.qmd
     - part: Generalized linear models
-#      chapters:
+      chapters:
+        - 41-glm.qmd
+        - 42-model_freq.qmd
 #        - 31-principles.qmd
 #        - 31-poisson.qmd
 #        - 31-binomial.qmd
     - part: Mixed models
-#      chapters:
+      chapters:
+        - 51-lmm.qmd
+        - 52-intro_glmm.qmd
+        - 53-randreg.qmd
+        - 54-multivar.qmd
 #        - 31-principles.qmd
 #        - 31-lme.qmd
 #        - 32-glme.qmd
@@ -81,9 +93,14 @@ book:
     - part: Generalized additive models
 #        - 41-gam.qmd
     - part: Multivariate analysis
+#      chapters:
+#        - 71-pca_try.qmd
 #        - 51-acp.qmd
 #        - 52-overview others.qmd
     - part: Bayesian approach
+      chapters:
+        - 81-beyond_p.qmd
+        - 82-intro_bayesian.qmd
 #        - 61-intro to Bayesian.qmd
 #        - 62-lm-brms.qmd
 #        - 63-lme-brms.qmd

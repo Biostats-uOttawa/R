@@ -494,45 +494,53 @@ The only mandatory chunk option is the first argument which specifies which lang
 Note, chunk options can be written in two ways:
 
 1.
-either all of your chunk options must be written between the curly brackets on one line with no line breaks
+either all of your chunk options must be written between the curly brackets on one line with no line breaks 
 1.
-or they can be written using a YAML notation within the code chunk using #| notation at the beginning of the line.
- 
+or they can be written using a YAML notation within the code chunk using `#|` notation at the beginning of the line.
+
+We are using the YAML notation for code chunk options since we find it much easier to read when you have multiple options of long captions.
 
 You can also specify an optional code chunk name (or label)  which can be useful when trying to debug problems and when performing advanced document rendering.
-In the following block we name the code chunk `summary-stats`, create a dataframe (`dataf`) with two variables `x` and `y` and then use the `summary()` function to display some summary statistics .
+In the following block, we name the code chunk `summary-stats`, load the package `ggplot2` `r emoji::emoji("package")`, create a dataframe (`dataf`) with two variables `x` and `y`, use the `summary()` function to display some summary statistics and plot a scatterplot of the data with `ggplot()`.
 When we run the code chunk both the R code and the resulting output are displayed in the final document.
 
 ````md
-`r ''````{r, summary-stats, echo = TRUE}
+`r ''````{r, summary-stats, echo = TRUE, fig.cap = "Caption for a simple figure but making the chunk options long and hard to read"}
+library(ggplot)
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
 
 summary(dataf)
+ggplot(dataf, aes(x = x, y = y)) + geom_point()
 ```
 ````
 
 ```{{r}}
 #| label: summary-stats
 #| echo: true
+#| fig-cap = "Caption for a simple figure but making the chunk options long and hard to read"
+
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
 
 summary(dataf)
+ggplot(dataf, aes(x = x, y = y)) + geom_point()
 ```
 
 Both will output
 
 ```{r}
-#| label: summary-stats
-#| class-source: fold-show
+#| label: fig-summary-stats
+#| echo: true
+#| fig-cap: "Caption for a simple figure but making the chunk options long and hard to read"
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
 
 summary(dataf)
+ggplot(dataf, aes(x = x, y = y)) + geom_point()
 ```
 
 When using chunk names make sure that you don't have duplicate chunk names in your Quarto document and avoid spaces and full stops as this will cause problems when you come to knit your document (We use a `-` to separate words in our chunk names).
@@ -580,16 +588,16 @@ summary(dataf)
 ```
 
 Sometimes you may want to execute a code chunk without showing any output at all.
-You can suppress the entire output using the chunk option `include=FALSE`.
+You can suppress the entire output using the chunk option `include: false`.
 
-````md
-`r ''````{r, summary-stats, include=FALSE}
+```{{r}}
+#| label: summary-stats4
+#| include: false
 x <- 1:10    # create an x variable
 y <- 10:1    # create a y variable
 dataf <- data.frame(x = x, y = y)
 summary(dataf)
 ```
-````
 
 ```{r}
 #| label: summary-stats4
@@ -1131,3 +1139,181 @@ A quick and easy R Markdown [cheatsheet][rmd-cheat]
 ```
   
 
+## Practical
+
+We will create a new Rmarkdown document and edit it using basic `R` and `Rmarkdown` functions.
+
+### Context
+
+We will use the awesome `palmerpenguins` dataset `r emoji::emoji("penguin")` to explore and visualize data.
+
+These data have been collected and shared by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and [Palmer Station, Antarctica LTER](https://pal.lternet.edu/).
+
+The package was built by Drs Allison Horst and Alison Hill, check out the [official website](https://allisonhorst.github.io/palmerpenguins/).
+
+The package `palmerpenguins` has two datasets: 
+
+- `penguins_raw` has the raw data of penguins observations (see `?penguins_raw` for more info)
+- `penguins` is a simplified version of the raw data (see `?penguins` for more info)
+
+For this exercise, we're gonna use the `penguins` dataset.
+
+```{r}
+#| label: showdata-md
+library(palmerpenguins)
+head(penguins)
+```
+
+
+### Questions
+
+**1)** Install the package `palmerpenguins`.
+
+::: {.callout-tip collapse='true'}
+
+# Solution
+```{r}
+#| eval: false
+install.packages("palmerpenguins")
+```
+
+:::
+
+**2)** 
+
+- Create a new Quarto document, name it and save it.
+- Delete everything after line 12.
+- Add a new section title, simple text and text in bold font.
+- Compile ("Knit").
+
+**3)**
+
+- Add a chunk in which you load the `palmerpenguins`. The corresponding line of code should be hidden in the output.
+- Load also the `tidyverse` suite of packages. Modify the defaults to suppress all messages.
+
+::: {.callout-tip collapse='true'}
+
+### Solution
+```{{r}}
+#| echo: false
+#| message:false
+library(palmerpenguins)
+library(tidyverse)
+```
+:::
+
+**4)** Add another chunk in which you build a table with the 10 first rows of the dataset.
+
+::: {.callout-tip collapse='true'}
+
+# Solution
+```{{r}}
+penguins %>%
+  slice(1:10) %>%
+  knitr::kable()
+```
+:::
+
+**5)** In a new section, display how many individuals, penguins species and islands we have in the dataset. This info should appear directly in the text, you need to use inline code `r emoji::emoji("smile")`. Calculate the mean of the (numeric) traits measured on the penguins.
+
+::: {.callout-tip collapse='true'}
+
+### Solution
+
+````markdown
+## Numerical exploration
+
+There are `r '\x60r nrow(penguins)\x60'` penguins in the dataset,
+and `r '\x60r length(unique(penguins$species))\x60'` different species.
+The data were collected in `r '\x60r length(unique(penguins$island))\x60'`
+islands of the Palmer archipelago in Antarctica.
+
+The mean of all traits that were measured on the penguins are:
+````
+
+```{{r}}
+#| echo: false
+penguins %>%
+  group_by(species) %>%
+  summarize(across(where(is.numeric), mean, na.rm = TRUE))
+```
+:::
+
+**6)** In another section, entitled 'Graphical exploration', build a figure with 3 superimposed histograms, each one corresponding to the body mass of a species.
+
+::: {.callout-tip collapse='true'}
+
+### Solution
+
+````markdown
+## Graphical exploration
+
+A histogram of body mass per species:
+````
+
+```{{r}}
+#| fig-cap: Distribution of body mass by species of penguins
+  ggplot(data = penguins) +
+  aes(x = body_mass_g) +
+  geom_histogram(aes(fill = species),
+                 alpha = 0.5,
+                 position = "identity") +
+  scale_fill_manual(values = c("darkorange","purple","cyan4")) +
+  theme_minimal() +
+  labs(x = "Body mass (g)",
+       y = "Frequency",
+       title = "Penguin body mass")
+```
+:::
+
+
+**7)** In another section, entitled *Linear regression*, fit a model of bill length as a function of body size (flipper length), body mass and sex. Obtain the output and graphically evaluate the assumptions of the model. As reminder here is how you fit a linear regression.
+
+```{{r}}
+model <- lm(Y ~  X1 + X2, data = data)
+summary(model)
+plot(model)
+```
+
+::: {.callout-tip collapse='true'}
+
+### Solution
+
+````markdown
+## Linear regression
+
+And here is a nice model with graphical output
+````
+
+```{{r}}
+#| fig-cap: "Checking assumptions of the model"
+m1 <- lm(bill_length_mm ~  flipper_length_mm + body_mass_g + sex, data = penguins)
+summary(m1)
+par(mfrow= c(2,2))
+plot(m1)
+```
+
+:::
+
+**8)** Add references manually or using `citr` in `RStudio`.
+
+  1. Pick a recent publication from the researcher who shared the data, Dr Kristen Gorman. Import this publication in your favorite references manager (we use Zotero, no hard feeling), and create a bibtex reference that you will add to to the file `mabiblio.bib`.
+  2. Add `bibliography: mabiblio.bib` at the beginning of your R Markdown document (YAML).
+  3. Cite the reference iin the text using either typing the reference manually or using `citr`. To use `citr`, instal  it first; if everything goes well, you should see it in the pulldown menu `Addins` `r emoji::emoji("muscle")`. Then simply use `Insert citations` in the pull-down menu `Addins`.
+  4. Compile.
+
+**9)** Change the default citation format (Chicago style) into the The American Naturalist format. It can be found here  <https://www.zotero.org/styles>. To do soo, add `csl: the-american-naturalist.csl` in the YAML.
+
+**10)** Build your report in html, pdf and docx format. `r emoji::emoji("tada")`
+
+### Example of output {-}
+
+You can see an example of the [Rmarkdown source file](data/examples/rmarkdown_practical.Rmd) and [pdf output](data/examples/rmarkdown_practical.pdf) 
+
+```{r}
+#| echo: false
+#| out-width: 50%
+#| fig-align: center
+#| fig-cap: Happy coding
+knitr::include_graphics("images/lter_penguins.png")
+```
