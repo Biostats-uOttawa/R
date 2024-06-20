@@ -253,7 +253,7 @@ introduction to R book. Version: {{< meta version >}}
 
 {{< pagebreak >}}
 
-## Course associated reading
+## Course associated reading {#chapters-to-read}
 
 ```{r}
 #| label: tbl-reading
@@ -266,7 +266,7 @@ library(gt)
 library(emoji)
 library(dplyr)
 tribble(
-  ~Part, ~Chapter, ~Bio4x58, ~Bio8940,
+  ~Part, ~Chapter, ~BioXx58, ~Bio8940,
   "Using R", "1.-4.", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
 #  "Using R", "  2. R basics", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
 #  "Using R", "  3. Data", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
@@ -292,8 +292,8 @@ tribble(
     footnote = paste("Suggested", emoji::emoji("check_mark"), "; mandatory", paste(rep(emoji::emoji("white_check_mark"), 2), collapse = ""), "; expected knowledge (might need a refresher)", emoji::emoji("smiley"))
   ) |>
   cols_label(
-    Bio4x58 = md('[Bio4x58 ![](images/hex/bio4x58_logo_hex.png){width="60px"}](https://biostats-uottawa.github.io/bio4158_course)'),
-    Bio8940 = md('[Bio8940 ![](images/hex/bio8940_logo_hex.png){width="60px"}](https://biostats-uottawa.github.io/bio8940_course)')
+    BioXx58 = md('[BioXx58 ![](images/hex/bio4x58_logo_hex.png){width="60px"}](https://biostats-uottawa.github.io/bioXx58/en/)'),
+    Bio8940 = md('[Bio8940 ![](images/hex/bio8940_logo_hex.png){width="60px"}](https://biostats-uottawa.github.io/bio8940)')
   ) |>
   tab_options(
     row_group.font.weight ="bold"

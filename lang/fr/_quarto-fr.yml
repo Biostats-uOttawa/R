@@ -35,11 +35,11 @@ book:
           - text: Biostats uOttawa
             href: https://biostats-uottawa.github.io/
           - text: Biostats with R (Bio4158)
-            href: https://biostats-uottawa.github.io/bio4158_course/
+            href: https://biostats-uottawa.github.io/bioXx58/
           - text: Biostats avec R (Bio4558)
             href: https://biostats-uottawa.github.io/bio4558_cours/
           - text: Biostats avancées et science ouverte (Bio8940)
-            href: https://biostats-uottawa.github.io/bio8940_course/
+            href: https://biostats-uottawa.github.io/bio8940/
 
     right:
       - icon: flag
