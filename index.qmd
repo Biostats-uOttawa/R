@@ -17,7 +17,7 @@ title: "On the R-Way to hell </br> Sur le chemin de l'enf-R"
 ::: {style="text-align: center;"}
 {{< bi flag >}}
 
-[Sur le chemin de l'enf-R](fr/index.qmd)
+[Sur le chemin de l'enf-R](fr/index.html)
 
-[On the R way to hell](en/index.qmd)
+[On the R way to hell](en/index.html)
 :::
