@@ -1,10 +1,15 @@
 ---
-title: "On the R-Way to hell </br> Sur le chemin de l'enf-R"
+title: |
+  On the R-Way to hell </br>
+  Sur le chemin de l'enf-R
 
 #include-in-header:
 #  text: |
 #    <meta http-equiv="refresh" content="0; URL=./en/index.html">
 #    <link rel="canonical" href="./en/index.html">
+format:
+  html:
+    toc: false
 ---
 <style>
 .quarto-title-block .quarto-title{
