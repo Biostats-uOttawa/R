@@ -27,7 +27,7 @@ book:
     title: '![](images/cover/book_hex_en.png){width="50px"} R Way'
     left:
       - text: Data & Code
-        href: 902-data-files.qmd
+        href: 902-data.qmd
       - text: Biostats uOttawa
         href: https://biostats-uottawa.github.io/
       - text: Intro Biostats & R (BioXx58)
@@ -110,5 +110,5 @@ book:
 #        - 64-gam-brms.qmd
     - 901-references.qmd
   appendices:
-    - 902-data-files.qmd
+    - 902-data.qmd
     - 903-latex.qmd

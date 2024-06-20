@@ -29,7 +29,7 @@ book:
     title: '![](images/cover/book_hex_en.png){width="50px"} Chemin enf-R'
     left:
       - text: Données
-        href: 902-fichiers-donnees.qmd
+        href: 902-donnees.qmd
       - text: Autres ressources
         menu:
           - text: Biostats uOttawa
@@ -106,5 +106,5 @@ book:
 #        - 82-intro_bayesian.qmd
     - 901-bibliographie.qmd
   appendices:
-    - 902-fichiers-donnees.qmd
+    - 902-donnees.qmd
 #    - 93-latex.qmd
