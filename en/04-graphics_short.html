@@ -144,7 +144,20 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-flag" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-flag" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-flag">
+<li>
+    <a class="dropdown-item" href="./../fr">
+ <span class="dropdown-text">Français</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
     <a class="nav-link active" href="./902-data.html" aria-current="page"> 
 <span class="menu-text">Data &amp; Code</span></a>
   </li>  
@@ -160,21 +173,11 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     <a class="nav-link" href="https://biostats-uottawa.github.io/bio8940/"> 
 <span class="menu-text">Biostats adv. / av.(Bio8940)</span></a>
   </li>  
-</ul>
-<ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-flag" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-flag" role="img">
-</i> 
- <span class="menu-text"></span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-flag">
-<li>
-    <a class="dropdown-item" href="./../fr">
- <span class="dropdown-text">Français</span></a>
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">auto</span>
+    </span>
   </li>  
-    </ul>
-</li>
 </ul>
 </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
@@ -564,7 +567,7 @@ Figure&nbsp;4.1: The Grammar of Graphics. Visual by Thomas de Beus
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">fluffyness</span> <span class="op">~</span> <span class="va">weight</span>, data <span class="op">=</span> <span class="va">unicorns</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-plot5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="75%">
+<div id="fig-plot5" class="quarto-float quarto-figure quarto-figure-center anchored" width="75%" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-graphics_short_files/figure-html/fig-plot5-1.png" id="fig-plot5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
 </div>
@@ -609,7 +612,7 @@ Figure&nbsp;4.1: The Grammar of Graphics. Visual by Thomas de Beus
 <span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-plot5-gg" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="75%">
+<div id="fig-plot5-gg" class="quarto-float quarto-figure quarto-figure-center anchored" width="75%" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-gg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-graphics_short_files/figure-html/fig-plot5-gg-1.png" id="fig-plot5-gg" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
 </div>

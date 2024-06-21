@@ -110,7 +110,20 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-flag" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-flag" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-flag">
+<li>
+    <a class="dropdown-item" href="./../fr/901-bibliographie.html">
+ <span class="dropdown-text">Français</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
     <a class="nav-link active" href="./902-data.html" aria-current="page"> 
 <span class="menu-text">Data &amp; Code</span></a>
   </li>  
@@ -126,21 +139,11 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     <a class="nav-link" href="https://biostats-uottawa.github.io/bio8940/"> 
 <span class="menu-text">Biostats adv. / av.(Bio8940)</span></a>
   </li>  
-</ul>
-<ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-flag" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-flag" role="img">
-</i> 
- <span class="menu-text"></span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-flag">
-<li>
-    <a class="dropdown-item" href="./../fr/901-bibliographie.html">
- <span class="dropdown-text">Français</span></a>
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">auto</span>
+    </span>
   </li>  
-    </ul>
-</li>
 </ul>
 </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
@@ -676,12 +679,12 @@ Table&nbsp;1: R packages used in this book
 <tr class="odd">
 <td style="text-align: left;">reshape</td>
 <td style="text-align: left;">0.8.9</td>
-<td style="text-align: left;"><span class="citation" data-cites="reshape">Wickham (<a href="06-quarto.html#ref-reshape" role="doc-biblioref">2007a</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="reshape">(<a href="06-quarto.html#ref-reshape" role="doc-biblioref"><strong>reshape?</strong></a>)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">reshape2</td>
 <td style="text-align: left;">1.4.4</td>
-<td style="text-align: left;"><span class="citation" data-cites="reshape2">Wickham (<a href="06-quarto.html#ref-reshape2" role="doc-biblioref">2007b</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="reshape2">Wickham (<a href="06-quarto.html#ref-reshape2" role="doc-biblioref">2007</a>)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">rmarkdown</td>
@@ -886,11 +889,8 @@ Venables, W. N., and B. D. Ripley. 2002. <a href="https://www.stats.ox.ac.uk/pub
 <div id="ref-lmPerm" class="csl-entry" role="listitem">
 Wheeler, B., and M. Torchiano. 2016. <a href="https://CRAN.R-project.org/package=lmPerm"><span class="nocase">lmPerm</span>: Permutation tests for linear models</a>.
 </div>
-<div id="ref-reshape" class="csl-entry" role="listitem">
-Wickham, H. 2007a. <a href="https://www.jstatsoft.org/v21/i12/">Reshaping data with the reshape package</a>. Journal of Statistical Software 21.
-</div>
 <div id="ref-reshape2" class="csl-entry" role="listitem">
-Wickham, H. 2007b. <a href="http://www.jstatsoft.org/v21/i12/">Reshaping data with the <span class="nocase">reshape</span> package</a>. Journal of Statistical Software 21:1–20.
+Wickham, H. 2007. <a href="http://www.jstatsoft.org/v21/i12/">Reshaping data with the <span class="nocase">reshape</span> package</a>. Journal of Statistical Software 21:1–20.
 </div>
 <div id="ref-tidyverse" class="csl-entry" role="listitem">
 Wickham, H., M. Averick, J. Bryan, W. Chang, L. D. McGowan, R. François, G. Grolemund, A. Hayes, L. Henry, J. Hester, M. Kuhn, T. L. Pedersen, E. Miller, S. M. Bache, K. Müller, J. Ooms, D. Robinson, D. P. Seidel, V. Spinu, K. Takahashi, D. Vaughan, C. Wilke, K. Woo, and H. Yutani. 2019. <a href="https://doi.org/10.21105/joss.01686">Welcome to the <span class="nocase">tidyverse</span></a>. Journal of Open Source Software 4:1686.
