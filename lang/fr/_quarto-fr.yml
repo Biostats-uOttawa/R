@@ -28,6 +28,12 @@ book:
     collapse-below: lg
     title: '![](images/cover/book_hex_en.png){width="50px"} Chemin enf-R'
     left:
+      - icon: flag
+        menu:
+        - href: ../en
+          text: English
+#        - href: ../es
+#          text: Español
       - text: Données
         href: 902-donnees.qmd
       - text: Autres ressources
@@ -40,14 +46,6 @@ book:
             href: https://biostats-uottawa.github.io/bio4558_cours/
           - text: Biostats avancées et science ouverte (Bio8940)
             href: https://biostats-uottawa.github.io/bio8940/
-
-    right:
-      - icon: flag
-        menu:
-        - href: ../en
-          text: English
-#        - href: ../es
-#          text: Español
 
   cover-image: images/cover/cover_fr.png
   

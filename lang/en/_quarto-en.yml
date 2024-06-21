@@ -26,6 +26,12 @@ book:
     collapse-below: lg
     title: '![](images/cover/book_hex_en.png){width="50px"} R Way'
     left:
+      - icon: flag
+        menu:
+        - href: ../fr
+          text: Français
+#        - href: ../es
+#          text: Español
       - text: Data & Code
         href: 902-data.qmd
       - text: Biostats uOttawa
@@ -41,15 +47,7 @@ book:
 #          - text: Chemin de l'enf-R
 #            href: https://biostats-uottawa.github.io/R/fr/
 
-
-    right:
-      - icon: flag
-        menu:
-        - href: ../fr
-          text: Français
-#        - href: ../es
-#          text: Español
-
+      - auto
   cover-image: images/cover/cover_en.png
   chapters:
     - index.qmd
