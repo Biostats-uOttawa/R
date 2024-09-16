@@ -260,7 +260,7 @@ Rappelez-vous que l’analyse de corrélation présume aussi que chaque variable
 Dans le cas de nos esturgeons, ce n’est pas le cas: les hameçons appâtés et les filets ne capturent pas de petits esturgeons (et c’est pourquoi il n’y en a pas dans l’échantillon).
 Il faut donc réaliser que les coefficients de corrélation obtenus dans cette analyse ne reflètent pas nécessairement ceux de la population totale des esturgeons.
 
-## Régression linéaire simple
+## Régression linéaire simple {#sec-simple-lm}
 
 L'analyse de corrélation vise à décrire comment deux variables covarient.
 L'analyse de régression vise plutôt à produire un modèle permettant de prédire une variable (la variable dépendante) par l'autre (la variable indépendante).

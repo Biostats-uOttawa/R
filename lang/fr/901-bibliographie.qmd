@@ -16,8 +16,8 @@ library(tidyverse)
 library(grateful)
 pkgs <- cite_packages(
   output = "table",
-  out.dir = ".",
-  omit = "",
+  out.dir = "biblio/",
+  omit = ""
 )
 knitr::kable(
   pkgs,

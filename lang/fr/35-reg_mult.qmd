@@ -212,7 +212,7 @@ Bref, les VIF indiquent de combien l’incertitude de chaque coefficient de rég
 
 **Attrappe.** Il y a plusieurs fonctions vif() (j’en connais au moins trois dans les extensions `car`, `HH` et `DAAG`), et je ne sais pas en quoi elles diffèrent.
 
-On peut calculer les VIF avec la fonction `vif()` de l'extension `car`: :
+On peut calculer les VIF avec la fonction `vif()` de l'extension `car`: 
 
 ```{r}
 library(car)

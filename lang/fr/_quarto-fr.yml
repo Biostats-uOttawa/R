@@ -54,14 +54,13 @@ book:
     - part: Utiliser R
       chapters:
         - 01-debut.qmd
-        - 02-introR.qmd
-#        - 02-basics.qmd
-#        - 03-data.qmd
-#        - 04-graphics_short.qmd
-#        - 05-programming.qmd
-#        - 06-quarto.qmd
-#        - 07-github.qmd
-    - part: Fundamentals of stats
+        - 02-base.qmd
+        - 03-donnees.qmd
+        - 04-graphique.qmd
+        - 05-programmation.qmd
+        - 06-quarto.qmd
+        - 07-github.qmd
+    - part: Principes de statistique
       chapters:
 #        - 21-distributions, p CI.qmd
         - 25-power.qmd

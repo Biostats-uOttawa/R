@@ -1,4 +1,4 @@
-# Reproducible reports with Quarto {#sec-rmarkdown_r}
+# Reproducible reports with Quarto {#sec-rmarkdown-r}
 
 ```{r}
 #| include: false
@@ -109,7 +109,7 @@ You can decide what to include in your final document (as you will learn below) 
 - You can create a wide variety of output formats (pdf, html web pages, MS Word and many others) from a single Quarto document which enhances both collaboration and communication.
 
 - Enhances transparency of your research.
-Your data and Quarto file can be included with your publication or thesis chapter as supplementary material or hosted on a GitHub repository (see @sec-github_r).
+Your data and Quarto file can be included with your publication or thesis chapter as supplementary material or hosted on a GitHub repository (see @sec-github-r).
 
 - Increases the efficiency of your workflow.
 If you need to modify or extend your current analysis you just need to update your Quarto document and these changes will automatically be included in your final document.
@@ -121,12 +121,12 @@ Quarto integrates really well with [R Studio](https://quarto.org/docs/tools/rstu
 ### Installation
 
 To use Quarto you will first need to install the `Quarto` software and the `quarto` :package: package (with its dependencies).
-You can find instructions on how to do this in @sec-install-rm and on the [Quarto website](https://quarto.org/docs/get-started/).
+You can find instructions on how to do this in @sec-install-r and on the [Quarto website](https://quarto.org/docs/get-started/).
 If you would like to create pdf documents (or MS Word documents) from your Quarto file you will also need to install a version of {{< latex >}} on your computer.
 If you've not installed {{< latex >}} before, we recommend that you install [TinyTeX][tinytex].
-Again, instructions on how to do this can be found at @sec-install-rm.
+Again, instructions on how to do this can be found at @sec-install-r.
 
-### Create a Quarto document, `.qmd` {#sec-new_rm}
+### Create a Quarto document, `.qmd` {#sec-new-rm}
 
 Right, time to create your first Quarto document.
 Within RStudio, click on the menu `File` -> `New File` -> `Quarto...`.
@@ -248,7 +248,7 @@ include_graphics("images/markdown/rm_components.png")
 
 YAML stands for '**Y**AML **A**in’t **M**arkup **L**anguage' (it's an 'in' [joke][joke]!) and this optional component contains the metadata and options for the entire document such as the author name, date, output format, etc.
 The YAML header is surrounded before and after by a `---` on its own line.
-In RStudio a minimal YAML header is automatically created for you when you create a new Quarto document as we did above (@sec-new_rm) but you can change this any time.
+In RStudio a minimal YAML header is automatically created for you when you create a new Quarto document as we did above (@sec-new-rm) but you can change this any time.
 A simple YAML header may look something like this:
 
 ```yaml
@@ -402,7 +402,7 @@ results in headings in decreasing size order
 #### Comments {-}
 
 As you can see above the meaning of the `#` symbol is different when formatting text in an Quarto document compared to a standard R script (which is used to included a comment - remember?!).
-You can, however, use a `#` symbol to comment code inside a code chunk (@sec-code_chunks) as usual (more about this in a bit).
+You can, however, use a `#` symbol to comment code inside a code chunk (@sec-code-chunks) as usual (more about this in a bit).
 If you want to include a comment in your Quarto document outside a code chunk which won't be included in the final rendered document then enclose your comment between `<!--` and `-->`.
 
 ```md
@@ -472,7 +472,7 @@ which gives you:
 
 >You can include a text for your clickable [link](https://www.worldwildlife.org)
 
-### Code chunks {#sec-code_chunks}
+### Code chunks {#sec-code-chunks}
 
 Now to the heart of the matter.
 To include R code into your Quarto document you simply place your code into a 'code chunk'.
@@ -887,7 +887,7 @@ iris %>%
 You can further enhance the look of your `kable` tables using the `kableExtra` :package: package (don't forget to install the package first!).
 See [here][kableExtra] for more details and a helpful tutorial.
 
-If you want even more control and customisation options for your tables take a look at the [`gt`][gt] package.
+If you want even more control and customisation options for your tables take a look at the `gt` `r emoji::emoji("package")` [package][gt].
 `gt` is an acronym for **g**rammar of **t**ables and is based on similar principle for tables that are used for plots in ggplot.
 
 ```{r}
@@ -1015,7 +1015,7 @@ csl: ecology.csl
 
 #### Citations
 
-Quarto uses the standard Pandoc markdown representation for citations (e.g. `[@citation]`) — citations go inside square brackets and are separated by semicolons. Each citation must have a key, composed of ‘@’ + the citation identifier from the database, and may optionally have a prefix, a locator, and a suffix. The citation key must begin with a letter, digit, or _, and may contain alphanumerics, _, and internal punctuation characters (:.#$%&-+?<>~/). 
+Quarto uses the standard Pandoc markdown representation for citations (e.g. `[@citation]`) — citations go inside square brackets and are separated by semicolons. Each citation must have a key, composed of ‘@’ + the citation identifier from the database, and may optionally have a prefix, a locator, and a suffix. The citation key must begin with a letter, digit, or _, and may contain alphanumerics, _, and internal punctuation characters. 
 
 | Markdown Format | Output (default) |
 |-----------------|------------------|
@@ -1043,7 +1043,7 @@ For more details see the [Citation page on Quarto website](https://quarto.org/do
 
 Quarto integrates really well with [Zotero](zotero) if you are using the visual editor in either [RStudio](https://quarto.org/docs/visual-editor/technical.html#citations) or [VS Code](https://quarto.org/docs/visual-editor/vscode/).
 
-## Some tips and tricks {#sec-tips_tricks}
+## Some tips and tricks {#sec-tips-tricks}
 
 **Problem :** 
 
@@ -1066,6 +1066,7 @@ This code chunk won’t be displayed in the final document due to the `include: 
 Play around with this value to get it right (60-80 should be OK for most documents).
 
 With quarto you can also put the global `knitr` options in a `knitr`block in the YAML header (see [Quarto website](https://quarto.org/docs/computations/r.html#knitr-options) for details).
+
 
 ```yaml
 ---

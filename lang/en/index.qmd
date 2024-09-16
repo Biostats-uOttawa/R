@@ -32,7 +32,7 @@ The book is provided as a multilingual book breaking that language
 barrier and potentially allow to facilitate the learn of R and its
 mainly english-speaking environment. We are always looking for
 volunteers to help developed the book further and add more languages to
-the growing list. Please \[contact us\]\[whoarewe\] if you want to help
+the growing list. Please [contact us][whoarewe] if you want to help
 
 On the web version of the book, use {{< fa regular flag >}} in the
 navigation bar to switch from one language to another. After switching
@@ -179,12 +179,13 @@ R since v2.4.0.
 :::
 
 </div>
+
 ::::::
 
 ## Thanks {.unnumbered}
 
-The first part of the book on using R started as a fork on github from the excellent [An
-introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini,
+The first part of the book on using R started as a fork on github from the excellent
+[An introduction to R](https://intro2r.com/) book by Douglas, Roos, Mancini,
 Couto and Lusseau [@douglas2023]. It was forked on April 23rd, 2023 from
 [Alexd106 github repository](https://github.com/alexd106/Rbook) then
 modified and updated following my own needs and teaching perspective of
@@ -196,12 +197,9 @@ Martin, Findlay, Morin and Rundle.
 
 Site that provided a lot of information for the book:
 
--   [dplyr
-    introduction](https://dplyr.tidyverse.org/articles/dplyr.html)
--   [Introduction to
-    gam](https://m-clark.github.io/generalized-additive-models/)
--   [Intoduction to gams by Noam
-    Ross](https://noamross.github.io/gams-in-r-course/)
+- [dplyr introduction](https://dplyr.tidyverse.org/articles/dplyr.html)
+- [Introduction to gam](https://m-clark.github.io/generalized-additive-models/)
+- [Intoduction to gams by Noam Ross](https://noamross.github.io/gams-in-r-course/)
 
 
 ```{=html}
@@ -219,10 +217,8 @@ https://m-clark.github.io/mixed-models-with-R/
 Photos, images and screenshots are from Julien Martin except when
 indicated in caption.
 
-[Cover
-image](https://creator.nightcafe.studio/creation/P0VHCquzSe5LedOzfxwY?ru=1LIicoDlCUOaydR20fvyG3kYCUp1)
-was generated via [Nightcafe Ai Art
-generator](https://creator.nightcafe.studio). Favicon and hex sticker
+[Cover image](https://creator.nightcafe.studio/creation/P0VHCquzSe5LedOzfxwY?ru=1LIicoDlCUOaydR20fvyG3kYCUp1)
+was generated via [Nightcafe Ai Art generator](https://creator.nightcafe.studio). Favicon and hex sticker
 were created from the cover image.
 
 ::: callout-note
@@ -232,9 +228,7 @@ abide by the previous statement
 
 ## License {.unnumbered}
 
-I share this work under the license [License Creative Commons
-Attribution-NonCommercial-ShareAlike 4.0
-International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+I share this work under the license [License Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ![License Creative Commons](images/license_cc.png)
 

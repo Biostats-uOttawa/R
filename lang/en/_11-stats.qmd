@@ -1,11 +1,11 @@
-# Simple Statistics in R {#sec-stats_r}
+# Simple Statistics in R {#sec-stats-r}
 
 :::{.callout-warning}
 To be developed (need to decide what I want in that chapter)
 Potentially just list a few functions since it is not at all about stats but more about r
 :::
 
-## Simple linear modelling {#sec-simple_lm}
+## Simple linear modelling {#sec-simple-lm}
 
 Linear models are one of the most widely used models in statistics and data science.
 They are often thought of as simple models but they're very flexible and able to model a wide variety of experimental and survey designs.

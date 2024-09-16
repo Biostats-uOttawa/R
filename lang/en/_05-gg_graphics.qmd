@@ -1,4 +1,4 @@
-# Graphics with ggplot {#sec-graphics_r}
+# Graphics with ggplot {#sec-graphics-r}
 
 ```{r}
 #| label: setup-gg

@@ -1,4 +1,4 @@
-# Programming {#sec-prog_r}
+# Programming {#sec-prog-r}
 
 After learning the basics, programming in R is the next big step.
 There are already a vast number of R packages available, surely more than enough to cover everything you could possibly want to do? Why then, would you ever need to create you own R functions? Why not just stick to the functions from a package? Well, in some cases you'll want to customise those existing functions to suit your specific needs.
@@ -41,7 +41,7 @@ This means that functions can also be very stupid.
 If we asked you to go to the supermarket to get us some ingredients to make *Balmoral chicken*, even if you don't know what the heck that is, you'd be able to guess and bring at least *something* back.
 Or you could decide to make something else.
 Or you could ask a chef for help.
-Or you could pull out your phone and search online for what [*Balmoral chicken*][balmoral-ck] is.
+Or you could pull out your phone and search online for what *[Balmoral chicken][balmoral-ck]* is.
 The point is, even if we didn't give you enough information to do the task, you're intelligent enough to, at the very least, try to find a work around.
 
 If instead, we asked a function to do the same, it would listen intently to our request, and then will simply return an error.

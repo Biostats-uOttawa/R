@@ -1,4 +1,4 @@
-# Version control with Git and GitHub {#sec-github_r}
+# Version control with Git and GitHub {#sec-github-r}
 
 This Chapter will introduce you to the basics of using a version control system to keep track of all your important R code and facilitate collaboration with colleagues and the wider world.
 This Chapter will focus on using the software 'Git' in combination with the web-based hosting service 'GitHub'.
@@ -74,10 +74,10 @@ knitr::include_graphics(path = "images/github/Github_cartoon2.png")
 ```
 
 
-## Getting started {#sec-setup_git}
+## Getting started {#sec-setup-git}
 
 This Chapter assumes that you have already installed the latest versions of R and an IDE (RStudio or VSCode).
-If you haven't done this yet you can find instructions in @sec-install_r.
+If you haven't done this yet you can find instructions in @sec-install-r.
 
 ### Install Git
 
@@ -113,7 +113,7 @@ For other versions of Linux see [here][git-linux] for further installation instr
  
 
 Whatever version of Git you're installing, once the installation has finished verify that the installation process has been successful by running the command `git --version` in the Terminal tab in RStudio (as described above).
-On some installations of Git (yes we're looking at you MS Windows) this may still produce an error as you will also need to setup RStudio so it can find the Git executable (described  in @sec-rs_config).
+On some installations of Git (yes we're looking at you MS Windows) this may still produce an error as you will also need to setup RStudio so it can find the Git executable (described  in @sec-rs-config).
 
 ### Configure Git
 
@@ -139,7 +139,7 @@ git config --global --list
 
 You should see both your `user.name` and `user.email` configured.
 
-### Configure RStudio {#sec-rs_config}
+### Configure RStudio {#sec-rs-config}
 
 As you can see above, Git can be used from the command line, but it also integrates well with RStudio, providing a friendly graphical user interface.
 If you want to use RStudio's Git integration (we recommend you do - at least at the start), you need to check that the path to the Git executable is specified correctly.
@@ -157,7 +157,7 @@ You will need to restart RStudio after doing this.
 knitr::include_graphics(path = "images/github/git_path.png")
 ```
 
-### Configure VSCode {#sec-vsc_config}
+### Configure VSCode {#sec-vsc-config}
 
 >to develop
 
@@ -221,7 +221,7 @@ knitr::include_graphics(path = "images/github/new_repo_opt.png")
 
 
 Your new GitHub repository will now be created.
-Notice the README has been rendered in GitHub and is in markdown (.md) format (see @sec-rmarkdown_r on R markdown if this doesn't mean anything to you).
+Notice the README has been rendered in GitHub and is in markdown (.md) format (see @sec-rmarkdown-r on R markdown if this doesn't mean anything to you).
 Next click on the green 'Clone or Download' button and copy the `https//...` URL that pops up for later (either highlight it all and copy or click on the copy to clipboard icon to the right).
 
 
@@ -345,7 +345,7 @@ knitr::include_graphics(path = "images/github/new_proj_RS3.png")
 
 
 OK, before we go on to create a repository on GitHub we need to do one more thing - we need to place our `second_repo.Rproj` and `.gitignore`files under version control.
-Unfortunately we haven't covered this in detail yet so just follow the next few instructions (blindly!) and we'll revisit them in @sec-use_git of this Chapter.
+Unfortunately we haven't covered this in detail yet so just follow the next few instructions (blindly!) and we'll revisit them in @sec-use-git of this Chapter.
  
 
 To get our two files under version control click on the 'Git' tab which is usually in the top tight pane in RStudio
@@ -456,7 +456,7 @@ knitr::include_graphics(path = "images/github/new_proj_RS10.png")
 
 
 The last thing we need to do is create and add a **README** file to your repository.
-A README file describes your project and is written using the same Markdown language you learned in @sec-rmarkdown_r.
+A README file describes your project and is written using the same Markdown language you learned in @sec-rmarkdown-r.
 A good README file makes it easy for others (or the future you!) to use your code and reproduce your project.
 You can create a README file in RStudio or in GitHub.
 Let's use the second option.
@@ -499,7 +499,7 @@ If the steps above seem like a bit of an ordeal, just remember, you only need to
 
 > to develop
 
-## Using Git with RStudio {#sec-use_git}
+## Using Git with RStudio {#sec-use-git}
 
 Now that we have our project and repositories (both local and remote) set up, it's finally time to learn how to use Git in your IDE!  
 
@@ -546,7 +546,7 @@ knitr::include_graphics(path = "images/github/first_Rmd0.png")
 ```
 
 
-Create an R markdown document inside this project by clicking on the `File` -> `New File` -> `R markdown` menu (remember @sec-rmarkdown_r?).
+Create an R markdown document inside this project by clicking on the `File` -> `New File` -> `R markdown` menu (remember @sec-rmarkdown-r?).
  
 
 Once created, we can delete all the example R markdown code (except the YAML header) as usual and write some interesting R markdown text and include a plot.
@@ -1036,7 +1036,7 @@ and our repo on GitHub also reflects these changes
 knitr::include_graphics(path = "images/github/revert10.png")
 ```
 
-## Using Git with VSCode {#sec-use_git_vsc}
+## Using Git with VSCode {#sec-use-git_vsc}
 
 Now that we have our project and repositories (both local and remote) set up, it's finally time to learn how to use Git in VSCode!  
 
@@ -1183,8 +1183,8 @@ For this exercise, we're gonna use the `penguins` dataset.
 
 **2)** Configure Rstudio with your github account using the `usethis` package.
 
-:::: {.content-hidden when-format="pdf"}
-::: {.callout-tip collapse='true'}
+::: {.content-hidden when-format="pdf"}
+:::: {.callout-tip collapse='true'}
 
 # Solution
 ```{r}
@@ -1195,13 +1195,13 @@ usethis::use_git_config(
   user.email = "your_email@address.com"
 )
 ```
-:::
 ::::
+:::
 
 **3)** Create and Store your GITHUB Personal Authorisation Token
 
-:::: {.content-hidden when-format="pdf"}
-::: {.callout-tip collapse='true'}
+::: {.content-hidden when-format="pdf"}
+:::: {.callout-tip collapse='true'}
 
 # Solution
 ```{r}
@@ -1209,8 +1209,8 @@ usethis::use_git_config(
 usethis::create_github_token()
 gitcreds::gitcreds_set()
 ```
-:::
 ::::
+:::
 
 **4)** Create a new R Markdown project, initialize it for git, and create a new git repository
 

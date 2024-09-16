@@ -1,4 +1,4 @@
-# Figures {#sec-graphics_r}
+# Figures {#sec-graphics-r}
 
 <!-- need to
 add info about ggplot
@@ -62,7 +62,7 @@ There are many functions in R to produce plots ranging from the very basic to th
 It's impossible to cover every aspect of producing graphics in R in this book so we'll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in @sec-custom-plot.
 
 The most common high level function used to produce plots in R is (rather unsurprisingly) the `plot()` function.
-For example, let's plot the `weight` of unicorns from our `unicorns` data frame which we imported in @sec-import_fnc.
+For example, let's plot the `weight` of unicorns from our `unicorns` data frame which we imported in @sec-import-fnc.
 
 ```{r}
 #| label: plot1
@@ -153,7 +153,7 @@ Admittedly the plots we've produced so far don't look anything particularly spec
 However, the `plot()` function is incredibly versatile and can generate a large range of plots which you can customise to your own taste.
 We'll cover how to customise ggplots in @sec-custom-plot.
 As a quick aside, the `plot()` function is also what's known as a generic function which means it can change its default behaviour depending on the type of object used as an argument.
-You will see an example of this in @sec-simple_lm where we use the `plot()` function to generate diagnostic plots of residuals from a linear model object (bet you can't wait!).
+You will see an example of this in @sec-simple-lm where we use the `plot()` function to generate diagnostic plots of residuals from a linear model object (bet you can't wait!).
 
 
 ## ggplot2

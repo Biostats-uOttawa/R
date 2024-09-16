@@ -11,7 +11,7 @@ We will also cover how to import data into R from an external file, how to manip
 
 Understanding the different types of data and how R deals with these data is important.
 The temptation is to glaze over and skip these technical details, but beware, this can come back to bite you somewhere unpleasant if you don't pay attention.
-We've already seen an example (@sec-r_objs) of this when we tried (and failed) to add two character objects together using the `+` operator.
+We've already seen an example (@sec-r-objs) of this when we tried (and failed) to add two character objects together using the `+` operator.
 
 R has six basic types of data; numeric, integer, logical, complex and character.
 The keen eyed among you will notice we've only listed five data types here, the final data type is raw which we won't cover as it's not useful 99.99% of the time.
@@ -93,7 +93,7 @@ Here's a summary table of some of the logical test and coercion functions availa
 
 Now that you've been introduced to some of the most important classes of data in R, let’s have a look at some of main structures that we have for storing these data.
 
-### Scalars and vectors {#sec-scal_vecs}
+### Scalars and vectors {#sec-scal-vecs}
 
 Perhaps the simplest type of data structure is the vector.
 You've already been introduced to vectors in @sec-funcs although some of the vectors you created only contained a single value.
@@ -112,7 +112,7 @@ There is one important exception to this, you can include `NA` (remember this is
 knitr::include_graphics(path = "images/data/scal_vec.png")
 ```
 
-### Matrices and arrays {#sec-mat_array}
+### Matrices and arrays {#sec-mat-array}
 
 Another useful data structure used in many disciplines such as population ecology, theoretical and applied statistics is the matrix.
 A matrix is simply a vector that has additional attributes called dimensions.
@@ -198,7 +198,7 @@ mat.1 %*% mat.2 # matrix multiplication
 The next data structure we will quickly take a look at is a list.
 Whilst vectors and matrices are constrained to contain data of the same type, lists are able to store mixtures of data types.
 In fact we can even store other data structures such as vectors and arrays within a list or even have a list of a list.
-This makes for a very flexible data structure which is ideal for storing irregular or non-rectangular data (see @sec-prog_r for an example).
+This makes for a very flexible data structure which is ideal for storing irregular or non-rectangular data (see @sec-prog-r for an example).
 
 To create a list we can use the `list()` function.
 Note how each of the three list elements are of different classes (character, logical, and numeric) and are of different lengths.
@@ -306,7 +306,7 @@ str(dataf)
 The `str()` function gives us the data frame dimensions and also reminds us that `dataf` is a `data.frame` type object.
 It also lists all of the variables (columns) contained in the data frame, tells us what type of data the variables contain and prints out the first five values.
 We often copy this summary and place it in our R scripts with comments at the beginning of each line so we can easily refer back to it whilst writing our code.
-We showed you how to comment blocks in RStudio @sec-proj_doc.
+We showed you how to comment blocks in RStudio @sec-proj-doc.
 
 Also notice that R has automatically decided that our `p.names` variable should be a character (`chr`) class variable when we first created the data frame.
 Whether this is a good idea or not will depend on how you want to use this variable in later analysis.
@@ -383,7 +383,7 @@ replace `mane size` with `mane size` or `mane.size`) and avoid using special cha
 Remember, if you have missing data in your data frame (empty cells) you should use an `NA` to represent these missing values or have an empty cell.
 This will keep the data frame tidy.
 
-### Import functions {#sec-import_fnc}
+### Import functions {#sec-import-fnc}
 
 Once you've saved your data file in a suitable format we can now read this file into R.
 The workhorse function for importing data into R is the `read.table()` function (we discuss some alternatives later in the chapter).
@@ -514,11 +514,11 @@ str(unicorns_bad)
 We can see an obvious problem, all of our variables have been imported as factors and our variables are named `V1`, `V2`, `V3` ...
 `V8`.
 The problem happens because we haven't told the `read.table()` function that the first row contains the variable names and so it treats them as data.
-As soon as we have a single character string in any of our data vectors, R treats the vectors as character type data (remember all elements in a vector must contain the same type of data (@sec-scal_vecs)).
+As soon as we have a single character string in any of our data vectors, R treats the vectors as character type data (remember all elements in a vector must contain the same type of data (@sec-scal-vecs)).
 
 This is just one more argument to use `read.csv()` or `read.delim()` function with appropriate default values for arguments.
 
-### Other import options {#sec-import_other}
+### Other import options {#sec-import-other}
 
 There are numerous other functions to import data from a variety of sources and formats.
 Most of these functions are contained in packages that you will need to install before using them.
@@ -818,7 +818,7 @@ uni_p_care
 
 ### Ordering data frames
 
-Remember when we used the function `order()` to order one vector based on the order of another vector (way back in @sec-vec_ord).
+Remember when we used the function `order()` to order one vector based on the order of another vector (way back in @sec-vec-ord).
 This comes in very handy if you want to reorder rows in your data frame.
 For example, if we want all of the rows in the data frame `unicorns` to be ordered in ascending value of `height` and output all columns by default.
 
@@ -1234,7 +1234,7 @@ To do this we will use the `mean()` function and apply this to the `height` vari
 tapply(unicorns$height, unicorns$food, mean)
 ```
 
-The `tapply()` function is not just restricted to calculating mean values, you can use it to apply many of the functions that come with R or even functions you've written yourself (see @sec-prog_r for more details).
+The `tapply()` function is not just restricted to calculating mean values, you can use it to apply many of the functions that come with R or even functions you've written yourself (see @sec-prog-r for more details).
 For example, we can apply the `sd()` function to calculate the standard deviation for each level of `food` or even the `summary()` function.
 
 ```{r}
@@ -1245,7 +1245,7 @@ tapply(unicorns$height, unicorns$food, summary)
 ```
 
 Note, if the variable you want to summarise contains missing values (`NA`) you will also need to include an argument specifying how you want the function to deal with the `NA` values.
-We saw an example if this in @sec-na_vals where the `mean()` function returned an `NA` when we had missing data.
+We saw an example if this in @sec-na-vals where the `mean()` function returned an `NA` when we had missing data.
 To include the `na.rm = TRUE` argument we simply add this as another argument when using `tapply()`.
 
 ```{r}
@@ -1382,7 +1382,7 @@ We can of course export our files in a variety of other formats.
 ### Other export functions
 
 As with importing data files into R, there are also many alternative functions for exporting data to external files beyond the `write.table()` function.
-If you followed the 'Other import functions' @sec-import_other of this Chapter you will already have the required packages installed.
+If you followed the 'Other import functions' @sec-import-other of this Chapter you will already have the required packages installed.
 
 The `fwrite()` function from the `read.table` package is very efficient at exporting large data objects and is much faster than the `write.table()` function.
 It's also quite simple to use as it has most of the same arguments as `write.table()`.

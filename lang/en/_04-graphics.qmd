@@ -1,4 +1,4 @@
-# Graphics with R {#sec-graphics_r}
+# Graphics with R {#sec-graphics-r}
 
 <!-- need to
 add info about ggplot
@@ -689,7 +689,7 @@ In the next section we cover how to customise your base R plots to get them to l
 
 
 
-## Customising plots {#sec-custom_plot}
+## Customising plots {#sec-custom-plot}
 
 All of the plots we've created so far in this Chapter are more than suitable for exploring your data.
 If however, you'd like to make them a little prettier (for your thesis, publication or even your own amusement) you'll need to invest some time learning how to customise your plots.
@@ -1659,7 +1659,7 @@ nested_1 +
 ```
 
 
-## Exporting plots {#sec-export_plots}
+## Exporting plots {#sec-export-plots}
 
 Creating plots in R is all well and good but what if you want to use these plots in your thesis, report or publication? One option is to click on the 'Export' button in the 'Plots' tab in RStudio as we described [previously](#baseplot_start).
 You can also export your plots from R to an external file by writing some code in your R script.

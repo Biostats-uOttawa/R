@@ -243,7 +243,7 @@ The sturgeons in this sample were collected using nets and baited hooks of a cer
 
 Note that correlation analysis assumes that each variable is _randomly sampled_. In the case of sturgeon, this is not the case: baited hooks and nets will only catch sturgeon above a certain minimum size. Note that in the sample, there are no small sturgeons, since the fishing gear targets only larger fish. Thus, we should be very wary of the correlation coefficients associated with our analysis, as the inclusion of smaller fish may well change our estimate of these correlations.
 
-## Simple linear regression {#sec-simple_lm}
+## Simple linear regression {#sec-simple-lm}
 
 In correlation analysis we are interested in how pairs of variables covary: However, in regression analysis, we are attempting to estimate a model that predicts a variable (the dependent variable) from another variable (the independent variable).
 
