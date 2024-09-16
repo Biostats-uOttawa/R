@@ -1,4 +1,4 @@
-# Installing Quarto and LateX  {#sec-install-r}
+# Installing Quarto and LateX  {#sec-install-lat}
 
 Installing Quarto on your computer is pretty straight forward and should be painless.
 If you're getting started with Quarto we suggest that you use RStudio but of course RStudio is not required and there are other options available.
