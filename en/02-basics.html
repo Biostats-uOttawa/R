@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -132,7 +132,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-flag">
 <li>
-    <a class="dropdown-item" href="./../fr/02-introR.html">
+    <a class="dropdown-item" href="./../fr/02-base.html">
  <span class="dropdown-text">Français</span></a>
   </li>  
     </ul>
@@ -453,7 +453,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
   <li>
 <a href="#objects-in-r" id="toc-objects-in-r" class="nav-link" data-scroll-target="#objects-in-r"><span class="header-section-number">2.3</span> Objects in R</a>
   <ul class="collapse">
-<li><a href="#sec-r_objs" id="toc-sec-r_objs" class="nav-link" data-scroll-target="#sec-r_objs"><span class="header-section-number">2.3.1</span> Creating objects</a></li>
+<li><a href="#sec-r-objs" id="toc-sec-r-objs" class="nav-link" data-scroll-target="#sec-r-objs"><span class="header-section-number">2.3.1</span> Creating objects</a></li>
   <li><a href="#naming-objects" id="toc-naming-objects" class="nav-link" data-scroll-target="#naming-objects"><span class="header-section-number">2.3.2</span> Naming objects</a></li>
   </ul>
 </li>
@@ -463,9 +463,9 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
   <ul class="collapse">
 <li><a href="#extracting-elements" id="toc-extracting-elements" class="nav-link" data-scroll-target="#extracting-elements"><span class="header-section-number">2.5.1</span> Extracting elements</a></li>
   <li><a href="#replacing-elements" id="toc-replacing-elements" class="nav-link" data-scroll-target="#replacing-elements"><span class="header-section-number">2.5.2</span> Replacing elements</a></li>
-  <li><a href="#sec-vec_ord" id="toc-sec-vec_ord" class="nav-link" data-scroll-target="#sec-vec_ord"><span class="header-section-number">2.5.3</span> Ordering elements</a></li>
+  <li><a href="#sec-vec-ord" id="toc-sec-vec-ord" class="nav-link" data-scroll-target="#sec-vec-ord"><span class="header-section-number">2.5.3</span> Ordering elements</a></li>
   <li><a href="#vectorisation" id="toc-vectorisation" class="nav-link" data-scroll-target="#vectorisation"><span class="header-section-number">2.5.4</span> Vectorisation</a></li>
-  <li><a href="#sec-na_vals" id="toc-sec-na_vals" class="nav-link" data-scroll-target="#sec-na_vals"><span class="header-section-number">2.5.5</span> Missing data</a></li>
+  <li><a href="#sec-na-vals" id="toc-sec-na-vals" class="nav-link" data-scroll-target="#sec-na-vals"><span class="header-section-number">2.5.5</span> Missing data</a></li>
   </ul>
 </li>
   <li>
@@ -487,7 +487,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-start.html">Using R</a></li><li class="breadcrumb-item"><a href="./02-basics.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some R basics</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="sec-basics_r" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some R basics</span></span></h1>
+<h1 class="title"><span id="sec-basics-r" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some R basics</span></span></h1>
 </div>
 
 
@@ -561,7 +561,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </section><section id="objects-in-r" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="objects-in-r">
 <span class="header-section-number">2.3</span> Objects in R</h2>
 <p>At the heart of almost everything you will do (or ever likely to do) in R is the concept that everything in R is an <a href="https://journal.r-project.org/archive/2009-1/RJournal_2009-1_Chambers.pdf">object</a>. These objects can be almost anything, from a single number or character string (like a word) to highly complex structures like the output of a plot, a summary of your statistical analysis or a set of R commands that perform a specific task. Understanding how you create objects and assign values to objects is key to understanding R.</p>
-<section id="sec-r_objs" class="level3" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="sec-r_objs">
+<section id="sec-r-objs" class="level3" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="sec-r-objs">
 <span class="header-section-number">2.3.1</span> Creating objects</h3>
 <p>To create an object we simply give the object a name. We can then assign a value to this object using the <em>assignment operator</em> <code>&lt;-</code> (sometimes called the <em>gets operator</em>). The assignment operator is a composite symbol comprised of a ‘less than’ symbol <code>&lt;</code> and a hyphen <code>-</code> .</p>
 <div class="cell">
@@ -669,7 +669,7 @@ Figure&nbsp;2.4: RStudio environment tab with updated my_obj2 as numeric
 <p>Yes, <code><a href="https://rdrr.io/r/utils/data.html">data()</a></code> is a function in R to load or list available data sets from packages.</p>
 </section></section><section id="sec-funcs" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="sec-funcs">
 <span class="header-section-number">2.4</span> Using functions in R</h2>
-<p>Up until now we’ve been creating simple objects by directly assigning a single value to an object. It’s very likely that you’ll soon want to progress to creating more complicated objects as your R experience grows and the complexity of your tasks increase. Happily, R has a multitude of functions to help you do this. You can think of a function as an object which contains a series of instructions to perform a specific task. The base installation of R comes with many functions already defined or you can increase the power of R by installing one of the 10,000’s of <a href="#sec-packages">packages</a> now available. Once you get a bit more experience with using R you may want to define your own functions to perform tasks that are specific to your goals (more about this in <a href="05-programming.html" class="quarto-xref"><span>Chapter 5</span></a>).</p>
+<p>Up until now we’ve been creating simple objects by directly assigning a single value to an object. It’s very likely that you’ll soon want to progress to creating more complicated objects as your R experience grows and the complexity of your tasks increase. Happily, R has a multitude of functions to help you do this. You can think of a function as an object which contains a series of instructions to perform a specific task. The base installation of R comes with many functions already defined or you can increase the power of R by installing one of the 10,000’s of <a href="@sec-packages">packages</a> now available. Once you get a bit more experience with using R you may want to define your own functions to perform tasks that are specific to your goals (more about this in <a href="05-programming.html" class="quarto-xref"><span>Chapter 5</span></a>).</p>
 <p>The first function we will learn about is the <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> function. The <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> function is short for concatenate and we use it to join together a series of values and store them in a data structure called a <a href="https://www.datamentor.io/r-programming/vector/"><strong>vector</strong></a> (more on vectors in <a href="03-data.html" class="quarto-xref"><span>Chapter 3</span></a>).</p>
 <div class="cell">
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">6</span>, <span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">7</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -912,7 +912,7 @@ Figure&nbsp;2.4: RStudio environment tab with updated my_obj2 as numeric
 <pre><code>[1] 1000 1000 1000  500 1000  100  100    7</code></pre>
 </div>
 </div>
-</section><section id="sec-vec_ord" class="level3" data-number="2.5.3"><h3 data-number="2.5.3" class="anchored" data-anchor-id="sec-vec_ord">
+</section><section id="sec-vec-ord" class="level3" data-number="2.5.3"><h3 data-number="2.5.3" class="anchored" data-anchor-id="sec-vec-ord">
 <span class="header-section-number">2.5.3</span> Ordering elements</h3>
 <p>In addition to extracting particular elements from a vector we can also order the values contained in a vector. To sort the values from lowest to highest value we can use the <code><a href="https://rdrr.io/r/base/sort.html">sort()</a></code> function</p>
 <div class="cell">
@@ -1008,7 +1008,7 @@ Figure&nbsp;2.4: RStudio environment tab with updated my_obj2 as numeric
 <pre><code>[1]  4  7  8  3 10 22</code></pre>
 </div>
 </div>
-</section><section id="sec-na_vals" class="level3" data-number="2.5.5"><h3 data-number="2.5.5" class="anchored" data-anchor-id="sec-na_vals">
+</section><section id="sec-na-vals" class="level3" data-number="2.5.5"><h3 data-number="2.5.5" class="anchored" data-anchor-id="sec-na-vals">
 <span class="header-section-number">2.5.5</span> Missing data</h3>
 <p>In R, missing data is usually represented by an <code>NA</code> symbol meaning ‘Not Available’. Data may be missing for a whole bunch of reasons, maybe your machine broke down, maybe you broke down, maybe the weather was too bad to collect data on a particular day etc etc. Missing data can be a pain in the proverbial both from an R perspective and also a statistical perspective. From an R perspective missing data can be problematic as different functions deal with missing data in different ways. For example, let’s say we collected air temperature readings over 10 days, but our thermometer broke on day 2 and again on day 9 so we have no data for those days</p>
 <div class="cell">
@@ -1214,7 +1214,7 @@ Figure&nbsp;2.6: Output of the <code><a href="https://rdrr.io/r/utils/help.searc
 <p>This is how we were able to use the <code>install()</code> and <code><a href="https://remotes.r-lib.org/reference/install_github.html">install_github()</a></code> functions <a href="#bioconductor-packages">above</a> without first loading the packages <code>BiocManager</code> <span class="emoji" data-emoji="package">📦</span> and <code>remotes</code> <span class="emoji" data-emoji="package">📦</span> . Most of the time we recommend using the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function.</p>
 </section><section id="installing-r-packages" class="level3" data-number="2.8.2"><h3 data-number="2.8.2" class="anchored" data-anchor-id="installing-r-packages">
 <span class="header-section-number">2.8.2</span> Installing R packages</h3>
-<section id="sec-cran_packages" class="level4" data-number="2.8.2.1"><h4 data-number="2.8.2.1" class="anchored" data-anchor-id="sec-cran_packages">
+<section id="sec-cran-packages" class="level4" data-number="2.8.2.1"><h4 data-number="2.8.2.1" class="anchored" data-anchor-id="sec-cran-packages">
 <span class="header-section-number">2.8.2.1</span> CRAN packages</h4>
 <p>To install a package from CRAN you can use the <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> function. For example if you want to install the <code>remotes</code> package enter the following code into the Console window of RStudio (note: you will need a working internet connection to do this)</p>
 <div class="sourceCode" id="cb135"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1235,7 +1235,7 @@ Figure&nbsp;2.6: Output of the <code><a href="https://rdrr.io/r/utils/help.searc
 <p>Again, you can use the <code>ask = FALSE</code> argument to avoid having to confirm every package download.</p>
 </section><section id="github-packages" class="level4" data-number="2.8.2.3"><h4 data-number="2.8.2.3" class="anchored" data-anchor-id="github-packages">
 <span class="header-section-number">2.8.2.3</span> GitHub packages</h4>
-<p>There are multiple options for installing packages hosted on GitHub. Perhaps the most efficient method is to use the <code><a href="https://remotes.r-lib.org/reference/install_github.html">install_github()</a></code> function from the <code>remotes</code> <span class="emoji" data-emoji="package">📦</span> package (you installed this package previously (<a href="#sec-cran_packages" class="quarto-xref"><span>Section 2.8.2.1</span></a>)). Before you use the function you will need to know the GitHub username of the repository owner and also the name of the repository. For example, the development version of <code>dplyr</code> <span class="emoji" data-emoji="package">📦</span> from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name ‘dplyr’ (just search for ‘github dplyr’). To install this version from GitHub use</p>
+<p>There are multiple options for installing packages hosted on GitHub. Perhaps the most efficient method is to use the <code><a href="https://remotes.r-lib.org/reference/install_github.html">install_github()</a></code> function from the <code>remotes</code> <span class="emoji" data-emoji="package">📦</span> package (you installed this package previously (<a href="#sec-cran-packages" class="quarto-xref"><span>Section 2.8.2.1</span></a>)). Before you use the function you will need to know the GitHub username of the repository owner and also the name of the repository. For example, the development version of <code>dplyr</code> <span class="emoji" data-emoji="package">📦</span> from Hadley Wickham is hosted on the tidyverse GitHub account and has the repository name ‘dplyr’ (just search for ‘github dplyr’). To install this version from GitHub use</p>
 <div class="sourceCode" id="cb141"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"tidyverse/dplyr"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The safest way (that we know of) to update a package installed from GitHub is to just reinstall it using the above command.</p>
 <!--course website Links-->

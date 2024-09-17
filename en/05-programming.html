@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -157,7 +157,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-flag">
 <li>
-    <a class="dropdown-item" href="./../fr">
+    <a class="dropdown-item" href="./../fr/05-programmation.html">
  <span class="dropdown-text">Français</span></a>
   </li>  
     </ul>
@@ -490,7 +490,7 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-start.html">Using R</a></li><li class="breadcrumb-item"><a href="./05-programming.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programming</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="sec-prog_r" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programming</span></span></h1>
+<h1 class="title"><span id="sec-prog-r" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programming</span></span></h1>
 </div>
 
 
@@ -585,7 +585,7 @@ window.Quarto = {
         z$qr &lt;- NULL
     z
 }
-&lt;bytecode: 0x5a0d47fc4c00&gt;
+&lt;bytecode: 0x5b6ff26fa9d0&gt;
 &lt;environment: namespace:stats&gt;</code></pre>
 </div>
 </div>
@@ -595,7 +595,7 @@ window.Quarto = {
 <span class="header-section-number">5.2</span> Functions in R</h2>
 <p>Functions are the bread and butter of R, the essential sustaining elements allowing you to work with R. They’re made (most of the time) with the utmost care and attention but may end up being something of a Frankenstein’s monster - with weirdly attached limbs. But no matter how convoluted they may be they will always faithfully do the same thing.</p>
 <p>This means that functions can also be very stupid.</p>
-<p>If we asked you to go to the supermarket to get us some ingredients to make <em>Balmoral chicken</em>, even if you don’t know what the heck that is, you’d be able to guess and bring at least <em>something</em> back. Or you could decide to make something else. Or you could ask a chef for help. Or you could pull out your phone and search online for what <a href="https://thescottishbutcher.com/recipes/chicken-balmoral-and-peppercorn-sauce/"><em>Balmoral chicken</em></a> is. The point is, even if we didn’t give you enough information to do the task, you’re intelligent enough to, at the very least, try to find a work around.</p>
+<p>If we asked you to go to the supermarket to get us some ingredients to make <em>Balmoral chicken</em>, even if you don’t know what the heck that is, you’d be able to guess and bring at least <em>something</em> back. Or you could decide to make something else. Or you could ask a chef for help. Or you could pull out your phone and search online for what <em><a href="https://thescottishbutcher.com/recipes/chicken-balmoral-and-peppercorn-sauce/">Balmoral chicken</a></em> is. The point is, even if we didn’t give you enough information to do the task, you’re intelligent enough to, at the very least, try to find a work around.</p>
 <p>If instead, we asked a function to do the same, it would listen intently to our request, and then will simply return an error. It would then repeat this every single time we asked it to do the job when the task is not clear. The point here, is that code and functions cannot find workarounds to poorly provided information, which is great. It’s totally reliant on you, to tell it very explicitly what it needs to do step by step.</p>
 <p>Remember two things: the intelligence of code comes from the coder, not the computer and functions need exact instructions to work.</p>
 <p>To prevent functions from being <em>too</em> stupid you must provide the information the function needs in order for it to work. As with the <em>Balmoral chicken</em> example, if we’d supplied a recipe list to the function, it would have managed just fine. We call this “fulfilling an argument”. The vast majority of functions require the user to fulfill at least one argument.</p>
@@ -682,8 +682,8 @@ Tip
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lasagna_stovies_func</span> <span class="op">&lt;-</span> <span class="fu">multiply_cols</span><span class="op">(</span>x <span class="op">=</span> <span class="va">dishes</span><span class="op">$</span><span class="va">lasagna</span>, y <span class="op">=</span> <span class="va">dishes</span><span class="op">$</span><span class="va">stovies</span><span class="op">)</span></span>
 <span><span class="va">lasagna_stovies_func</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.7968352 -1.9446277  0.0268945 -0.6363581 -0.1456572 -0.3442890
- [7]  0.9205511 -0.3507773  3.4747556 -1.4338144</code></pre>
+<pre><code> [1] -0.01628616 -0.09888894  0.26775233 -0.58362347  3.59032438 -0.02885436
+ [7]  0.36293371 -0.33152005 -1.01689848  0.30990534</code></pre>
 </div>
 </div>
 <p>If we’re only interested in multiplying <code>dishes$lasagna</code> and <code>dishes$stovies</code>, it would be overkill to create a function to do something once. However, the benefit of creating a function is that we now have that function added to our environment which we can use as often as we like. We also have the code to create the function, meaning we can use it in completely new projects, reducing the amount of code that has to be written (and retested) from scratch each time.</p>
@@ -700,8 +700,8 @@ Tip
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">stovies_poutine_func</span> <span class="op">&lt;-</span> <span class="fu">multiply_cols</span><span class="op">(</span>x <span class="op">=</span> <span class="va">dishes</span><span class="op">$</span><span class="va">stovies</span>, y <span class="op">=</span> <span class="va">dishes</span><span class="op">$</span><span class="va">poutine</span><span class="op">)</span></span>
 <span><span class="va">stovies_poutine_func</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]         NA         NA         NA -0.7126215  0.0817742 -0.6024295
- [7]  0.4688613  0.2572253  0.1432143  1.2305772</code></pre>
+<pre><code> [1]          NA          NA          NA -0.52013674  2.43930175 -0.06850493
+ [7]  0.62091607 -0.77537467  0.03197850 -0.24885073</code></pre>
 </div>
 </div>
 <p>So far so good. All we’ve really done is wrapped the code <code>x * y</code> into a function, where we ask the user to specify what their <code>x</code> and <code>y</code> variables are.</p>

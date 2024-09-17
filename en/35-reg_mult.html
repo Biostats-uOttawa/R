@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1768,15 +1768,15 @@ logarea:swamp  -0.0030067733  0.0038991294</code></pre>
 <span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.005</span>, <span class="fl">0.01</span>, <span class="fl">0.025</span>, <span class="fl">0.05</span>, <span class="fl">0.95</span>, <span class="fl">0.975</span>, <span class="fl">0.99</span>, <span class="fl">0.995</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">tmyresults</span>, <span class="fl">2</span>, <span class="va">quantile</span>, <span class="va">p</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       (Intercept)   logarea       thtden      swamp    I(swamp^2)
-0.5%  -0.766105087 0.1288512 -0.047207971 0.01699091 -0.0003633838
-1%    -0.698738609 0.1375325 -0.045364681 0.01836340 -0.0003472969
-2.5%  -0.651729004 0.1546353 -0.042993597 0.01947865 -0.0003326608
-5%    -0.606164022 0.1665921 -0.040297142 0.02124156 -0.0003140112
-95%   -0.070541281 0.2813797 -0.011254154 0.03774187 -0.0001808429
-97.5% -0.008436794 0.2921790 -0.008590054 0.03918115 -0.0001706516
-99%    0.025632101 0.3040070 -0.006335877 0.04157720 -0.0001599552
-99.5%  0.074240864 0.3167888 -0.004384450 0.04343518 -0.0001518432</code></pre>
+<pre><code>      (Intercept)   logarea       thtden      swamp    I(swamp^2)
+0.5%  -0.73982659 0.1416350 -0.047040199 0.01685191 -0.0003374528
+1%    -0.69299913 0.1469678 -0.045571218 0.01768838 -0.0003314841
+2.5%  -0.64187798 0.1568364 -0.043352660 0.01996750 -0.0003236212
+5%    -0.59789487 0.1676665 -0.039817243 0.02149395 -0.0003132238
+95%   -0.07722269 0.2844389 -0.012483644 0.03774786 -0.0001858934
+97.5% -0.01051998 0.2926236 -0.009371494 0.03900709 -0.0001726750
+99%    0.04559146 0.3001980 -0.007140953 0.03991675 -0.0001609101
+99.5%  0.07673860 0.3044089 -0.005900943 0.04055037 -0.0001449643</code></pre>
 </div>
 </div>
 <p>These confidence limits are not reliable when the distribution of the bootstrap estimates deviate from Gaussian. If they do,, then it is preferable to compute so-called bias-corrected accelerated (BCa) confidence limits. The following code does just that:</p>
@@ -1826,7 +1826,7 @@ boot.ci(boot.out = results, type = "bca", index = 2)
 
 Intervals : 
 Level       BCa          
-95%   ( 0.1143,  0.3198 )  
+95%   ( 0.1092,  0.3212 )  
 Calculations and Intervals on Original Scale</code></pre>
 </div>
 <div class="cell-output-display">

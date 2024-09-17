@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr" xml:lang="fr-fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="En cours de traduction">
-<title>6&nbsp; ANOVA à un critère de classification – Sur le chemin de l'enf-R</title>
+<title>11&nbsp; ANOVA à un critère de classification – Sur le chemin de l'enf-R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -222,7 +222,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./33-anova.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./33-anova.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,8 +253,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span></a>
+  <a href="./02-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rapports reproductibles avec Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Contrôle de version avec Git et GitHub</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of stats</span></a>
+ <span class="menu-text">Principes de statistique</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -271,7 +301,7 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-power.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,43 +318,43 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31-reg_lin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./32-t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./33-anova.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./34-anova_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./35-reg_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./36-ancova_glm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./37-model_freq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
   </div>
 </li>
       </ul>
@@ -380,25 +410,25 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table des matières</h2>
    
   <ul>
-<li><a href="#set-ano" id="toc-set-ano" class="nav-link active" data-scroll-target="#set-ano"><span class="header-section-number">6.1</span> Paquets et données requises pour le labo</a></li>
+<li><a href="#set-ano" id="toc-set-ano" class="nav-link active" data-scroll-target="#set-ano"><span class="header-section-number">11.1</span> Paquets et données requises pour le labo</a></li>
   <li>
-<a href="#anova-%C3%A0-un-crit%C3%A8re-de-classification-et-comparaisons-multiples" id="toc-anova-à-un-critère-de-classification-et-comparaisons-multiples" class="nav-link" data-scroll-target="#anova-%C3%A0-un-crit%C3%A8re-de-classification-et-comparaisons-multiples"><span class="header-section-number">6.2</span> ANOVA à un critère de classification et comparaisons multiples</a>
+<a href="#anova-%C3%A0-un-crit%C3%A8re-de-classification-et-comparaisons-multiples" id="toc-anova-à-un-critère-de-classification-et-comparaisons-multiples" class="nav-link" data-scroll-target="#anova-%C3%A0-un-crit%C3%A8re-de-classification-et-comparaisons-multiples"><span class="header-section-number">11.2</span> ANOVA à un critère de classification et comparaisons multiples</a>
   <ul class="collapse">
-<li><a href="#visualiser-les-donn%C3%A9es" id="toc-visualiser-les-données" class="nav-link" data-scroll-target="#visualiser-les-donn%C3%A9es"><span class="header-section-number">6.2.1</span> Visualiser les données</a></li>
-  <li><a href="#v%C3%A9rifier-les-conditions-dapplication-de-lanova-param%C3%A9trique" id="toc-vérifier-les-conditions-dapplication-de-lanova-paramétrique" class="nav-link" data-scroll-target="#v%C3%A9rifier-les-conditions-dapplication-de-lanova-param%C3%A9trique"><span class="header-section-number">6.2.2</span> Vérifier les conditions d’application de l’ANOVA paramétrique</a></li>
-  <li><a href="#faire-lanova" id="toc-faire-lanova" class="nav-link" data-scroll-target="#faire-lanova"><span class="header-section-number">6.2.3</span> Faire l’ANOVA</a></li>
-  <li><a href="#les-comparaisons-multiples" id="toc-les-comparaisons-multiples" class="nav-link" data-scroll-target="#les-comparaisons-multiples"><span class="header-section-number">6.2.4</span> Les comparaisons multiples</a></li>
+<li><a href="#visualiser-les-donn%C3%A9es" id="toc-visualiser-les-données" class="nav-link" data-scroll-target="#visualiser-les-donn%C3%A9es"><span class="header-section-number">11.2.1</span> Visualiser les données</a></li>
+  <li><a href="#v%C3%A9rifier-les-conditions-dapplication-de-lanova-param%C3%A9trique" id="toc-vérifier-les-conditions-dapplication-de-lanova-paramétrique" class="nav-link" data-scroll-target="#v%C3%A9rifier-les-conditions-dapplication-de-lanova-param%C3%A9trique"><span class="header-section-number">11.2.2</span> Vérifier les conditions d’application de l’ANOVA paramétrique</a></li>
+  <li><a href="#faire-lanova" id="toc-faire-lanova" class="nav-link" data-scroll-target="#faire-lanova"><span class="header-section-number">11.2.3</span> Faire l’ANOVA</a></li>
+  <li><a href="#les-comparaisons-multiples" id="toc-les-comparaisons-multiples" class="nav-link" data-scroll-target="#les-comparaisons-multiples"><span class="header-section-number">11.2.4</span> Les comparaisons multiples</a></li>
   </ul>
 </li>
-  <li><a href="#transformations-de-donn%C3%A9es-et-anova-non-param%C3%A9trique" id="toc-transformations-de-données-et-anova-non-paramétrique" class="nav-link" data-scroll-target="#transformations-de-donn%C3%A9es-et-anova-non-param%C3%A9trique"><span class="header-section-number">6.3</span> Transformations de données et ANOVA non-paramétrique</a></li>
-  <li><a href="#examen-des-valeurs-extr%C3%AAmes" id="toc-examen-des-valeurs-extrêmes" class="nav-link" data-scroll-target="#examen-des-valeurs-extr%C3%AAmes"><span class="header-section-number">6.4</span> Examen des valeurs extrêmes</a></li>
-  <li><a href="#test-de-permutation" id="toc-test-de-permutation" class="nav-link" data-scroll-target="#test-de-permutation"><span class="header-section-number">6.5</span> Test de permutation</a></li>
+  <li><a href="#transformations-de-donn%C3%A9es-et-anova-non-param%C3%A9trique" id="toc-transformations-de-données-et-anova-non-paramétrique" class="nav-link" data-scroll-target="#transformations-de-donn%C3%A9es-et-anova-non-param%C3%A9trique"><span class="header-section-number">11.3</span> Transformations de données et ANOVA non-paramétrique</a></li>
+  <li><a href="#examen-des-valeurs-extr%C3%AAmes" id="toc-examen-des-valeurs-extrêmes" class="nav-link" data-scroll-target="#examen-des-valeurs-extr%C3%AAmes"><span class="header-section-number">11.4</span> Examen des valeurs extrêmes</a></li>
+  <li><a href="#test-de-permutation" id="toc-test-de-permutation" class="nav-link" data-scroll-target="#test-de-permutation"><span class="header-section-number">11.5</span> Test de permutation</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/33-anova.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./33-anova.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./33-anova.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span>
+<span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span>
 </h1>
 </div>
 
@@ -420,8 +450,8 @@ window.Quarto = {
 <li>Utiliser R pour faire une ANOVA à un critère de classification non-paramétrique</li>
 <li>Utiliser R pour transformer des données de manière à mieux remplir les conditions d’application de l’ANOVA paramétrique.</li>
 </ul>
-<section id="set-ano" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="set-ano">
-<span class="header-section-number">6.1</span> Paquets et données requises pour le labo</h2>
+<section id="set-ano" class="level2" data-number="11.1"><h2 data-number="11.1" class="anchored" data-anchor-id="set-ano">
+<span class="header-section-number">11.1</span> Paquets et données requises pour le labo</h2>
 <p>Ce laboratoire nécessite:</p>
 <ul>
 <li>les paquets R:
@@ -442,12 +472,12 @@ window.Quarto = {
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://multcomp.R-forge.R-project.org">multcomp</a></span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="anova-à-un-critère-de-classification-et-comparaisons-multiples" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="anova-à-un-critère-de-classification-et-comparaisons-multiples">
-<span class="header-section-number">6.2</span> ANOVA à un critère de classification et comparaisons multiples</h2>
+</section><section id="anova-à-un-critère-de-classification-et-comparaisons-multiples" class="level2" data-number="11.2"><h2 data-number="11.2" class="anchored" data-anchor-id="anova-à-un-critère-de-classification-et-comparaisons-multiples">
+<span class="header-section-number">11.2</span> ANOVA à un critère de classification et comparaisons multiples</h2>
 <p>L’ANOVA à un critère de classification est l’analogue du test de t pour des comparaisons de moyennes de plus de deux échantillons. Les conditions d’application du test sont essentiellement les mêmes, et lorsque appliqué à deux échantillons ce test est mathématiquement équivalent au test de t.</p>
 <p>En 1961-1962, le barrage Grand Rapids était construit sur la rivière Saskatchewan en amont de Cumberland House. On croit que durant la construction plusieurs gros esturgeons restèrent prisonniers dans des sections peu profondes et moururent. Des inventaires de la population d’esturgeons furent faits en 1954, 1958, 1965 et 1966. Au cours de ces inventaires, la longueur à la fourche (frklngth) furent mesurées (pas nécessairement sur chaque poisson cependant). Ces données sont dans le fichier <code>Dam10dat.csv</code>.</p>
-<section id="visualiser-les-données" class="level3" data-number="6.2.1"><h3 data-number="6.2.1" class="anchored" data-anchor-id="visualiser-les-données">
-<span class="header-section-number">6.2.1</span> Visualiser les données</h3>
+<section id="visualiser-les-données" class="level3" data-number="11.2.1"><h3 data-number="11.2.1" class="anchored" data-anchor-id="visualiser-les-données">
+<span class="header-section-number">11.2.1</span> Visualiser les données</h3>
 <ul>
 <li>À partir des données, vous devez d’abord changer le type de donnée de la variable <code>year</code>, pour que R traite <code>year</code> comme une variable discontinue (factor) plutôt que continue.</li>
 </ul>
@@ -520,8 +550,8 @@ window.Quarto = {
 </div>
 </div>
 <p>Il semble que la taille des esturgeons est un peu plus petite après la construction du barrage, mais les données sont très variables et les effets ne sont pas parfaitement clairs. Il y a peut-être des problèmes de normalité avec les échantillons de 1954 et 1966, et il y a probablement des valeurs extrêmes dans les échantillons de 1958 et 1966. On va continuer en testant les conditions d’application de l’ANOVA. Il faut d’abord faire l’analyse et examiner les résidus.</p>
-</section><section id="vérifier-les-conditions-dapplication-de-lanova-paramétrique" class="level3" data-number="6.2.2"><h3 data-number="6.2.2" class="anchored" data-anchor-id="vérifier-les-conditions-dapplication-de-lanova-paramétrique">
-<span class="header-section-number">6.2.2</span> Vérifier les conditions d’application de l’ANOVA paramétrique</h3>
+</section><section id="vérifier-les-conditions-dapplication-de-lanova-paramétrique" class="level3" data-number="11.2.2"><h3 data-number="11.2.2" class="anchored" data-anchor-id="vérifier-les-conditions-dapplication-de-lanova-paramétrique">
+<span class="header-section-number">11.2.2</span> Vérifier les conditions d’application de l’ANOVA paramétrique</h3>
 <p>L’ANOVA paramétrique a trois conditions principales d’application :</p>
 <ol type="1">
 <li>les résidus sont normalement distribués,</li>
@@ -590,8 +620,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <p>La valeur de p vous dit que vous pouvez rejeter l’hypothèse nulle qu’il n’y a aucune différence dans les variances entre les années. Alors, nous concluons que les variances ne sont pas homogènes.</p>
-</section><section id="faire-lanova" class="level3" data-number="6.2.3"><h3 data-number="6.2.3" class="anchored" data-anchor-id="faire-lanova">
-<span class="header-section-number">6.2.3</span> Faire l’ANOVA</h3>
+</section><section id="faire-lanova" class="level3" data-number="11.2.3"><h3 data-number="11.2.3" class="anchored" data-anchor-id="faire-lanova">
+<span class="header-section-number">11.2.3</span> Faire l’ANOVA</h3>
 <ul>
 <li>Faites une ANOVA de fklnght en choisissant / en présumant pour l’instant que les conditions d’application sont suffisamment remplies. Que concluez-vous?</li>
 </ul>
@@ -647,8 +677,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <p>La variabilité totale de <code>fklngth</code>, mesurée par la somme des carrés des écarts (Sum sq) est partitionnée en ce qui peut être expliqué par l’année (485.26) et la variabilité résiduelle inexpliquée (3095.30). L’année explique bien (485.26/(3095.30+485.26)=.1355 or 13.55% de la variabilité). Le carré moyen des résidus (Residual Mean Sq) est leur variance.</p>
-</section><section id="les-comparaisons-multiples" class="level3" data-number="6.2.4"><h3 data-number="6.2.4" class="anchored" data-anchor-id="les-comparaisons-multiples">
-<span class="header-section-number">6.2.4</span> Les comparaisons multiples</h3>
+</section><section id="les-comparaisons-multiples" class="level3" data-number="11.2.4"><h3 data-number="11.2.4" class="anchored" data-anchor-id="les-comparaisons-multiples">
+<span class="header-section-number">11.2.4</span> Les comparaisons multiples</h3>
 <ul>
 <li>La fonction <code><a href="https://rdrr.io/r/stats/pairwise.t.test.html">pairwise.t.test()</a></code> peut être utilisée pour comparer des moyennes et ajuster (ou non, si désiré) les probabilités pour le nombre de comparaisons en utilisant l’une des options pour p.adj:</li>
 </ul>
@@ -781,18 +811,18 @@ Multiple Comparisons of Means: Tukey Contrasts
 
 Fit: aov(formula = aov(fklngth ~ myyear, data = Dam10dat))
 
-Quantile = 2.5934
+Quantile = 2.594
 95% family-wise confidence level
  
 
 Linear Hypotheses:
                    Estimate lwr      upr     
-m1958 - m1954 == 0   0.1872  -3.2710   3.6455
-m1965 - m1954 == 0  -5.5077  -9.9970  -1.0184
-m1966 - m1954 == 0  -3.3127  -6.3430  -0.2824
-m1965 - m1958 == 0  -5.6949 -10.4110  -0.9787
-m1966 - m1958 == 0  -3.4999  -6.8571  -0.1427
-m1966 - m1965 == 0   2.1950  -2.2170   6.6069</code></pre>
+m1958 - m1954 == 0   0.1872  -3.2718   3.6462
+m1965 - m1954 == 0  -5.5077  -9.9980  -1.0174
+m1966 - m1954 == 0  -3.3127  -6.3436  -0.2817
+m1965 - m1958 == 0  -5.6949 -10.4121  -0.9777
+m1966 - m1958 == 0  -3.4999  -6.8578  -0.1420
+m1966 - m1965 == 0   2.1950  -2.2179   6.6079</code></pre>
 </div>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">meandiff</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -822,8 +852,8 @@ m1966 - m1965 == 0   2.1950  -2.2170   6.6069</code></pre>
 </div>
 </div>
 <p>Notez les lettres au dessus du graphique: les années étiquetées avec la même lettre ne diffèrent pas significativement l’une de l’autre.</p>
-</section></section><section id="transformations-de-données-et-anova-non-paramétrique" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="transformations-de-données-et-anova-non-paramétrique">
-<span class="header-section-number">6.3</span> Transformations de données et ANOVA non-paramétrique</h2>
+</section></section><section id="transformations-de-données-et-anova-non-paramétrique" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="transformations-de-données-et-anova-non-paramétrique">
+<span class="header-section-number">11.3</span> Transformations de données et ANOVA non-paramétrique</h2>
 <p>Dans l’exemple précédent sur les différences annuelles de la variable fklgnth, on a noté que les conditions d’application de l’ANOVA n’étaient pas remplies. Si les données ne remplissent pas les conditions de l’ANOVA paramétrique, il y a 3 options :</p>
 <ol type="1">
 <li>Ne rien faire. Si les effectifs dans chaque groupe sont grands, on peut relaxer les conditions d’application car l’ANOVA est alors assez robuste aux violations de normalité (mais moins aux violations d’homoscedasticité),</li>
@@ -877,8 +907,8 @@ Kruskal-Wallis chi-squared = 15.731, df = 3, p-value = 0.001288</code></pre>
 </div>
 </div>
 <p>La conclusion est donc la même qu’avec l’ANOVA paramétrique: on rejette l’hypothèse nulle que le rang moyen est le même pour chaque année. Donc, même si les conditions d’application de l’analyse paramétrique n’étaient pas parfaitement rencontrées, les conclusions sont les mêmes, ce qui illustre la robustesse de l’ANOVA paramétrique.</p>
-</section><section id="examen-des-valeurs-extrêmes" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="examen-des-valeurs-extrêmes">
-<span class="header-section-number">6.4</span> Examen des valeurs extrêmes</h2>
+</section><section id="examen-des-valeurs-extrêmes" class="level2" data-number="11.4"><h2 data-number="11.4" class="anchored" data-anchor-id="examen-des-valeurs-extrêmes">
+<span class="header-section-number">11.4</span> Examen des valeurs extrêmes</h2>
 <p>Vous devriez avoir remarqué au cours des analyses précédentes qu’il y avait peut-être des valeurs extrêmes dans les données. Ces points étaient évidents dans le Box Plot de fklngth by year et ont été notés comme les points 59, 23, et 87 dans les diagrammes de probabilité des résidus et dans le diagramme de dispersion des résidus et des valeurs estimées. En général, vous devez avoir de très bonnes raisons pour enlever des valeurs extrêmes de la base de données (i.e.&nbsp;vous savez qu’il y a eu une erreur avec un cas). Cependant, il est quand même toujours valable de voir comment l’analyse change en enlevant des valeurs extrêmes de la base de données.</p>
 <ul>
 <li>Répétez l’ANOVA originale sur fklngth et year mais faites le avec un sous-ensemble de données sans les valeurs extrêmes. Est-ce que les conclusions ont changé?</li>
@@ -917,8 +947,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <p>L’élimination de trois valeurs extrêmes améliore un peu les choses, mais ce n’est pas parfait. On a toujours une problème avec les variances, mais les résidus sont maintenant normaux. Cependant, le fait que la conclusion qu’on tire de l’ANOVA originale ne change pas en enlevant les points renforce le fait qu’on n’a pas une bonne raison pour enlever les points.</p>
-</section><section id="test-de-permutation" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="test-de-permutation">
-<span class="header-section-number">6.5</span> Test de permutation</h2>
+</section><section id="test-de-permutation" class="level2" data-number="11.5"><h2 data-number="11.5" class="anchored" data-anchor-id="test-de-permutation">
+<span class="header-section-number">11.5</span> Test de permutation</h2>
 <p>Commande R pour un test de permutation d’une ANOVA à un critère de classification.</p>
 <div class="cell">
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#############################################################</span></span>
@@ -1551,12 +1581,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./32-t_test.html" class="pagination-link" aria-label="Comparaison de deux échantillons">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./34-anova_mult.html" class="pagination-link" aria-label="ANOVA à critères multiples : plans factoriels et hiérarchiques">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

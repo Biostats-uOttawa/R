@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr" xml:lang="fr-fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="En cours de traduction">
@@ -56,11 +56,11 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -214,8 +214,38 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span></a>
+  <a href="./02-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rapports reproductibles avec Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Contrôle de version avec Git et GitHub</span></span></a>
   </div>
 </li>
       </ul>
@@ -223,7 +253,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of stats</span></a>
+ <span class="menu-text">Principes de statistique</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -232,7 +262,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-power.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
   </div>
 </li>
       </ul>
@@ -249,43 +279,43 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31-reg_lin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./32-t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./33-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./34-anova_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./35-reg_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./36-ancova_glm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./37-model_freq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
   </div>
 </li>
       </ul>
@@ -371,9 +401,9 @@ Table&nbsp;1: Paquets utilisés dans le livre
 <div class="cell-output-display">
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 15%">
+<col style="width: 18%">
 <col style="width: 11%">
-<col style="width: 72%">
+<col style="width: 69%">
 </colgroup>
 <thead><tr class="header">
 <th style="text-align: left;">Paquets</th>
@@ -384,117 +414,152 @@ Table&nbsp;1: Paquets utilisés dans le livre
 <tr class="odd">
 <td style="text-align: left;">base</td>
 <td style="text-align: left;">4.4.1</td>
-<td style="text-align: left;"><span class="citation" data-cites="base">R Core Team (<a href="901-bibliographie.html#ref-base" role="doc-biblioref">2024</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="base">R Core Team (<a href="06-quarto.html#ref-base" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">boot</td>
-<td style="text-align: left;">1.3.30</td>
+<td style="text-align: left;">1.3.31</td>
 <td style="text-align: left;">
-<span class="citation" data-cites="boot1997">A. C. Davison et D. V. Hinkley (<a href="901-bibliographie.html#ref-boot1997" role="doc-biblioref">1997</a>)</span>; <span class="citation" data-cites="boot2024">Angelo Canty et B. D. Ripley (<a href="901-bibliographie.html#ref-boot2024" role="doc-biblioref">2024</a>)</span>
+<span class="citation" data-cites="boot1997">A. C. Davison et D. V. Hinkley (<a href="06-quarto.html#ref-boot1997" role="doc-biblioref">1997</a>)</span>; <span class="citation" data-cites="boot2024">Angelo Canty et B. D. Ripley (<a href="06-quarto.html#ref-boot2024" role="doc-biblioref">2024</a>)</span>
 </td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">car</td>
 <td style="text-align: left;">3.1.2</td>
-<td style="text-align: left;"><span class="citation" data-cites="car">Fox et Weisberg (<a href="901-bibliographie.html#ref-car" role="doc-biblioref">2019a</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="car">Fox et Weisberg (<a href="06-quarto.html#ref-car" role="doc-biblioref">2019a</a>)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">effects</td>
 <td style="text-align: left;">4.2.2</td>
 <td style="text-align: left;">
-<span class="citation" data-cites="effects2003">Fox (<a href="901-bibliographie.html#ref-effects2003" role="doc-biblioref">2003</a>)</span>; <span class="citation" data-cites="effects2009">Fox et Hong (<a href="901-bibliographie.html#ref-effects2009" role="doc-biblioref">2009</a>)</span>; <span class="citation" data-cites="effects2018">Fox et Weisberg (<a href="901-bibliographie.html#ref-effects2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="effects2019">Fox et Weisberg (<a href="901-bibliographie.html#ref-effects2019" role="doc-biblioref">2019b</a>)</span>
+<span class="citation" data-cites="effects2003">Fox (<a href="06-quarto.html#ref-effects2003" role="doc-biblioref">2003</a>)</span>; <span class="citation" data-cites="effects2009">Fox et Hong (<a href="06-quarto.html#ref-effects2009" role="doc-biblioref">2009</a>)</span>; <span class="citation" data-cites="effects2018">Fox et Weisberg (<a href="06-quarto.html#ref-effects2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="effects2019">Fox et Weisberg (<a href="06-quarto.html#ref-effects2019" role="doc-biblioref">2019b</a>)</span>
 </td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">emoji</td>
 <td style="text-align: left;">15.0</td>
-<td style="text-align: left;"><span class="citation" data-cites="emoji">Hvitfeldt (<a href="901-bibliographie.html#ref-emoji" role="doc-biblioref">2022</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="emoji">Hvitfeldt (<a href="06-quarto.html#ref-emoji" role="doc-biblioref">2022</a>)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">grateful</td>
-<td style="text-align: left;">0.2.4</td>
-<td style="text-align: left;"><span class="citation" data-cites="grateful">Francisco Rodriguez-Sanchez et Connor P. Jackson (<a href="901-bibliographie.html#ref-grateful" role="doc-biblioref">2023</a>)</span></td>
+<td style="text-align: left;">GGally</td>
+<td style="text-align: left;">2.2.1</td>
+<td style="text-align: left;"><span class="citation" data-cites="GGally">Schloerke et al. (<a href="06-quarto.html#ref-GGally" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">ggcleveland</td>
+<td style="text-align: left;">0.1.0</td>
+<td style="text-align: left;"><span class="citation" data-cites="ggcleveland">Prunello et Mari (<a href="06-quarto.html#ref-ggcleveland" role="doc-biblioref">2021</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ggpubr</td>
+<td style="text-align: left;">0.6.0</td>
+<td style="text-align: left;"><span class="citation" data-cites="ggpubr">Kassambara (<a href="06-quarto.html#ref-ggpubr" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">grateful</td>
+<td style="text-align: left;">0.2.10</td>
+<td style="text-align: left;"><span class="citation" data-cites="grateful">Rodriguez-Sanchez et Jackson (<a href="06-quarto.html#ref-grateful" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gt</td>
+<td style="text-align: left;">0.11.0</td>
+<td style="text-align: left;"><span class="citation" data-cites="gt">Iannone et al. (<a href="06-quarto.html#ref-gt" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kableExtra</td>
+<td style="text-align: left;">1.4.0</td>
+<td style="text-align: left;"><span class="citation" data-cites="kableExtra">Zhu (<a href="06-quarto.html#ref-kableExtra" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">knitr</td>
-<td style="text-align: left;">1.47</td>
+<td style="text-align: left;">1.48</td>
 <td style="text-align: left;">
-<span class="citation" data-cites="knitr2014">Xie (<a href="901-bibliographie.html#ref-knitr2014" role="doc-biblioref">2014</a>)</span>; <span class="citation" data-cites="knitr2015">Xie (<a href="901-bibliographie.html#ref-knitr2015" role="doc-biblioref">2015</a>)</span>; <span class="citation" data-cites="knitr2024">Xie (<a href="901-bibliographie.html#ref-knitr2024" role="doc-biblioref">2024</a>)</span>
+<span class="citation" data-cites="knitr2014">Xie (<a href="06-quarto.html#ref-knitr2014" role="doc-biblioref">2014</a>)</span>; <span class="citation" data-cites="knitr2015">Xie (<a href="06-quarto.html#ref-knitr2015" role="doc-biblioref">2015</a>)</span>; <span class="citation" data-cites="knitr2024">Xie (<a href="06-quarto.html#ref-knitr2024" role="doc-biblioref">2024</a>)</span>
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">lme4</td>
-<td style="text-align: left;">1.1.35.3</td>
-<td style="text-align: left;"><span class="citation" data-cites="lme4">Bates et al. (<a href="901-bibliographie.html#ref-lme4" role="doc-biblioref">2015</a>)</span></td>
-</tr>
 <tr class="odd">
+<td style="text-align: left;">lme4</td>
+<td style="text-align: left;">1.1.35.5</td>
+<td style="text-align: left;"><span class="citation" data-cites="lme4">Bates et al. (<a href="06-quarto.html#ref-lme4" role="doc-biblioref">2015</a>)</span></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">lmPerm</td>
 <td style="text-align: left;">2.1.0</td>
-<td style="text-align: left;"><span class="citation" data-cites="lmPerm">Wheeler et Torchiano (<a href="901-bibliographie.html#ref-lmPerm" role="doc-biblioref">2016</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="lmPerm">Wheeler et Torchiano (<a href="06-quarto.html#ref-lmPerm" role="doc-biblioref">2016</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">lmtest</td>
 <td style="text-align: left;">0.9.40</td>
-<td style="text-align: left;"><span class="citation" data-cites="lmtest">Zeileis et Hothorn (<a href="901-bibliographie.html#ref-lmtest" role="doc-biblioref">2002</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="lmtest">Zeileis et Hothorn (<a href="06-quarto.html#ref-lmtest" role="doc-biblioref">2002</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">multcomp</td>
-<td style="text-align: left;">1.4.25</td>
-<td style="text-align: left;"><span class="citation" data-cites="multcomp">Hothorn et al. (<a href="901-bibliographie.html#ref-multcomp" role="doc-biblioref">2008</a>)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">MuMIn</td>
-<td style="text-align: left;">1.47.5</td>
-<td style="text-align: left;"><span class="citation" data-cites="MuMIn">Bartoń (<a href="901-bibliographie.html#ref-MuMIn" role="doc-biblioref">2023</a>)</span></td>
+<td style="text-align: left;">1.4.26</td>
+<td style="text-align: left;"><span class="citation" data-cites="multcomp">Hothorn et al. (<a href="06-quarto.html#ref-multcomp" role="doc-biblioref">2008</a>)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">performance</td>
-<td style="text-align: left;">0.12.0</td>
-<td style="text-align: left;"><span class="citation" data-cites="performance">Lüdecke et al. (<a href="901-bibliographie.html#ref-performance" role="doc-biblioref">2021</a>)</span></td>
+<td style="text-align: left;">MuMIn</td>
+<td style="text-align: left;">1.48.4</td>
+<td style="text-align: left;"><span class="citation" data-cites="MuMIn">Bartoń (<a href="06-quarto.html#ref-MuMIn" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">palmerpenguins</td>
+<td style="text-align: left;">0.1.1</td>
+<td style="text-align: left;"><span class="citation" data-cites="palmerpenguins">Horst et al. (<a href="06-quarto.html#ref-palmerpenguins" role="doc-biblioref">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">patchwork</td>
+<td style="text-align: left;">1.2.0</td>
+<td style="text-align: left;"><span class="citation" data-cites="patchwork">Pedersen (<a href="06-quarto.html#ref-patchwork" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">performance</td>
+<td style="text-align: left;">0.12.3</td>
+<td style="text-align: left;"><span class="citation" data-cites="performance">Lüdecke et al. (<a href="06-quarto.html#ref-performance" role="doc-biblioref">2021</a>)</span></td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">pwr</td>
 <td style="text-align: left;">1.3.0</td>
-<td style="text-align: left;"><span class="citation" data-cites="pwr">Champely (<a href="901-bibliographie.html#ref-pwr" role="doc-biblioref">2020</a>)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">questionr</td>
-<td style="text-align: left;">0.7.8</td>
-<td style="text-align: left;"><span class="citation" data-cites="questionr">Barnier et al. (<a href="901-bibliographie.html#ref-questionr" role="doc-biblioref">2023</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="pwr">Champely (<a href="06-quarto.html#ref-pwr" role="doc-biblioref">2020</a>)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">reshape</td>
-<td style="text-align: left;">0.8.9</td>
-<td style="text-align: left;"><span class="citation" data-cites="reshape">(<a href="901-bibliographie.html#ref-reshape" role="doc-biblioref"><strong>reshape?</strong></a>)</span></td>
+<td style="text-align: left;">reshape2</td>
+<td style="text-align: left;">1.4.4</td>
+<td style="text-align: left;"><span class="citation" data-cites="reshape2">Wickham (<a href="06-quarto.html#ref-reshape2" role="doc-biblioref">2007</a>)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">rmarkdown</td>
-<td style="text-align: left;">2.27</td>
+<td style="text-align: left;">2.28</td>
 <td style="text-align: left;">
-<span class="citation" data-cites="rmarkdown2018">Xie et al. (<a href="901-bibliographie.html#ref-rmarkdown2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="rmarkdown2020">Xie et al. (<a href="901-bibliographie.html#ref-rmarkdown2020" role="doc-biblioref">2020</a>)</span>; <span class="citation" data-cites="rmarkdown2024">Allaire et al. (<a href="901-bibliographie.html#ref-rmarkdown2024" role="doc-biblioref">2024</a>)</span>
+<span class="citation" data-cites="rmarkdown2018">Xie et al. (<a href="06-quarto.html#ref-rmarkdown2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="rmarkdown2020">Xie et al. (<a href="06-quarto.html#ref-rmarkdown2020" role="doc-biblioref">2020</a>)</span>; <span class="citation" data-cites="rmarkdown2024">Allaire et al. (<a href="06-quarto.html#ref-rmarkdown2024" role="doc-biblioref">2024</a>)</span>
 </td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">simpleboot</td>
-<td style="text-align: left;">1.1.7</td>
-<td style="text-align: left;"><span class="citation" data-cites="simpleboot">Peng (<a href="901-bibliographie.html#ref-simpleboot" role="doc-biblioref">2019</a>)</span></td>
+<td style="text-align: left;">1.1.8</td>
+<td style="text-align: left;"><span class="citation" data-cites="simpleboot">Peng (<a href="06-quarto.html#ref-simpleboot" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">tidyverse</td>
 <td style="text-align: left;">2.0.0</td>
-<td style="text-align: left;"><span class="citation" data-cites="tidyverse">Wickham et al. (<a href="901-bibliographie.html#ref-tidyverse" role="doc-biblioref">2019</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="tidyverse">Wickham et al. (<a href="06-quarto.html#ref-tidyverse" role="doc-biblioref">2019</a>)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">vcd</td>
 <td style="text-align: left;">1.4.12</td>
 <td style="text-align: left;">
-<span class="citation" data-cites="vcd2006">Meyer et al. (<a href="901-bibliographie.html#ref-vcd2006" role="doc-biblioref">2006</a>)</span>; <span class="citation" data-cites="vcd2007">Zeileis et al. (<a href="901-bibliographie.html#ref-vcd2007" role="doc-biblioref">2007</a>)</span>; <span class="citation" data-cites="vcd2023">Meyer et al. (<a href="901-bibliographie.html#ref-vcd2023" role="doc-biblioref">2023</a>)</span>
+<span class="citation" data-cites="vcd2006">Meyer et al. (<a href="06-quarto.html#ref-vcd2006" role="doc-biblioref">2006</a>)</span>; <span class="citation" data-cites="vcd2007">Zeileis et al. (<a href="06-quarto.html#ref-vcd2007" role="doc-biblioref">2007</a>)</span>; <span class="citation" data-cites="vcd2023">Meyer et al. (<a href="06-quarto.html#ref-vcd2023" role="doc-biblioref">2023</a>)</span>
 </td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">vcdExtra</td>
 <td style="text-align: left;">0.8.5</td>
-<td style="text-align: left;"><span class="citation" data-cites="vcdExtra">Friendly (<a href="901-bibliographie.html#ref-vcdExtra" role="doc-biblioref">2023</a>)</span></td>
+<td style="text-align: left;"><span class="citation" data-cites="vcdExtra">Friendly (<a href="06-quarto.html#ref-vcdExtra" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">vioplot</td>
+<td style="text-align: left;">0.5.0</td>
+<td style="text-align: left;"><span class="citation" data-cites="vioplot">Adler et al. (<a href="06-quarto.html#ref-vioplot" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 </tbody>
 </table>
@@ -504,142 +569,120 @@ Table&nbsp;1: Paquets utilisés dans le livre
 </div>
 </div>
 </section><section id="bibliographie" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="bibliographie">Bibliographie</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-boot1997" class="csl-entry" role="listitem">
-A. C. Davison, and D. V. Hinkley. 1997. <a href="https://doi:10.1017/CBO9780511802843">Bootstrap methods and their
-applications</a>. Cambridge University Press, Cambridge.
+A. C. Davison, et D. V. Hinkley. 1997. <a href="https://doi:10.1017/CBO9780511802843">Bootstrap Methods and Their Applications</a>. Cambridge University Press, Cambridge.
+</div>
+<div id="ref-vioplot" class="csl-entry" role="listitem">
+Adler, D., S. T. Kelly, T. Elliott, et J. Adamson. 2024. <a href="https://github.com/TomKellyGenetics/vioplot"><span>vioplot</span>: violin plot</a>.
 </div>
 <div id="ref-rmarkdown2024" class="csl-entry" role="listitem">
-Allaire, J., Y. Xie, C. Dervieux, J. McPherson, J. Luraschi, K. Ushey,
-A. Atkins, H. Wickham, J. Cheng, W. Chang, and R. Iannone. 2024. <a href="https://github.com/rstudio/rmarkdown"><span class="nocase">rmarkdown</span>: Dynamic documents for r</a>.
+Allaire, J., Y. Xie, C. Dervieux, J. McPherson, J. Luraschi, K. Ushey, A. Atkins, H. Wickham, J. Cheng, W. Chang, et R. Iannone. 2024. <a href="https://github.com/rstudio/rmarkdown"><span>rmarkdown</span>: Dynamic Documents for R</a>.
 </div>
 <div id="ref-boot2024" class="csl-entry" role="listitem">
-Angelo Canty, and B. D. Ripley. 2024. <span class="nocase">boot</span>:
-Bootstrap r (s-plus) functions.
-</div>
-<div id="ref-questionr" class="csl-entry" role="listitem">
-Barnier, J., F. Briatte, and J. Larmarange. 2023. <a href="https://CRAN.R-project.org/package=questionr"><span class="nocase">questionr</span>: Functions to make surveys processing
-easier</a>.
+Angelo Canty, et B. D. Ripley. 2024. <span>boot</span>: Bootstrap R (S-Plus) Functions.
 </div>
 <div id="ref-MuMIn" class="csl-entry" role="listitem">
-Bartoń, K. 2023. <a href="https://CRAN.R-project.org/package=MuMIn"><span>MuMIn</span>:
-Multi-model inference</a>.
+Bartoń, K. 2024. <a href="https://CRAN.R-project.org/package=MuMIn"><span>MuMIn</span>: Multi-Model Inference</a>.
 </div>
 <div id="ref-lme4" class="csl-entry" role="listitem">
-Bates, D., M. Mächler, B. Bolker, and S. Walker. 2015. <a href="https://doi.org/10.18637/jss.v067.i01">Fitting linear
-mixed-effects models using <span class="nocase">lme4</span></a>. Journal
-of Statistical Software 67:1–48.
+Bates, D., M. Mächler, B. Bolker, et S. Walker. 2015. <a href="https://doi.org/10.18637/jss.v067.i01">Fitting Linear Mixed-Effects Models Using <span>lme4</span></a>. Journal of Statistical Software 67:1‑48.
 </div>
 <div id="ref-pwr" class="csl-entry" role="listitem">
-Champely, S. 2020. <a href="https://CRAN.R-project.org/package=pwr"><span class="nocase">pwr</span>: Basic functions for power analysis</a>.
-</div>
-<div id="ref-douglas2023" class="csl-entry" role="listitem">
-Douglas, A. 2023. <a href="https://intro2r.com/">An introduction to
-r</a>.
+Champely, S. 2020. <a href="https://CRAN.R-project.org/package=pwr"><span>pwr</span>: Basic Functions for Power Analysis</a>.
 </div>
 <div id="ref-effects2003" class="csl-entry" role="listitem">
-Fox, J. 2003. <a href="https://doi.org/10.18637/jss.v008.i15">Effect
-displays in <span>R</span> for generalised linear models</a>. Journal of
-Statistical Software 8:1–27.
+Fox, J. 2003. <a href="https://doi.org/10.18637/jss.v008.i15">Effect Displays in <span>R</span> for Generalised Linear Models</a>. Journal of Statistical Software 8:1‑27.
 </div>
 <div id="ref-effects2009" class="csl-entry" role="listitem">
-Fox, J., and J. Hong. 2009. <a href="https://doi.org/10.18637/jss.v032.i01">Effect displays in
-<span>R</span> for multinomial and proportional-odds logit models:
-Extensions to the <span class="nocase">effects</span> package</a>.
-Journal of Statistical Software 32:1–24.
+Fox, J., et J. Hong. 2009. <a href="https://doi.org/10.18637/jss.v032.i01">Effect Displays in <span>R</span> for Multinomial and Proportional-Odds Logit Models: Extensions to the <span>effects</span> Package</a>. Journal of Statistical Software 32:1‑24.
 </div>
 <div id="ref-effects2018" class="csl-entry" role="listitem">
-Fox, J., and S. Weisberg. 2018. <a href="https://doi.org/10.18637/jss.v087.i09">Visualizing fit and lack of
-fit in complex regression models with predictor effect plots and partial
-residuals</a>. Journal of Statistical Software 87:1–27.
+Fox, J., et S. Weisberg. 2018. <a href="https://doi.org/10.18637/jss.v087.i09">Visualizing Fit and Lack of Fit in Complex Regression Models with Predictor Effect Plots and Partial Residuals</a>. Journal of Statistical Software 87:1‑27.
 </div>
 <div id="ref-car" class="csl-entry" role="listitem">
-Fox, J., and S. Weisberg. 2019a. <a href="https://socialsciences.mcmaster.ca/jfox/Books/Companion/">An
-<span>R</span> companion to applied regression</a>. Third. Sage,
-Thousand Oaks <span>CA</span>.
+Fox, J., et S. Weisberg. 2019a. <a href="https://socialsciences.mcmaster.ca/jfox/Books/Companion/">An <span>R</span> Companion to Applied Regression</a>. Third. Sage, Thousand Oaks <span>CA</span>.
 </div>
 <div id="ref-effects2019" class="csl-entry" role="listitem">
-Fox, J., and S. Weisberg. 2019b. <a href="https://socialsciences.mcmaster.ca/jfox/Books/Companion/index.html">An
-r companion to applied regression</a>. 3rd edition. Sage, Thousand Oaks
-CA.
-</div>
-<div id="ref-grateful" class="csl-entry" role="listitem">
-Francisco Rodriguez-Sanchez, and Connor P. Jackson. 2023. <a href="https://pakillo.github.io/grateful/"><span class="nocase">grateful</span>: Facilitate citation of r packages</a>.
+Fox, J., et S. Weisberg. 2019b. <a href="https://socialsciences.mcmaster.ca/jfox/Books/Companion/index.html">An R Companion to Applied Regression</a>. 3rd édition. Sage, Thousand Oaks CA.
 </div>
 <div id="ref-vcdExtra" class="csl-entry" role="listitem">
-Friendly, M. 2023. <a href="https://CRAN.R-project.org/package=vcdExtra"><span class="nocase">vcdExtra</span>: <span>“<span class="nocase">vcd</span>”</span> extensions and additions</a>.
+Friendly, M. 2023. <a href="https://CRAN.R-project.org/package=vcdExtra"><span>vcdExtra</span>: <span>«&nbsp;<span>vcd</span>&nbsp;»</span> Extensions and Additions</a>.
+</div>
+<div id="ref-palmerpenguins" class="csl-entry" role="listitem">
+Horst, A. M., A. P. Hill, et K. B. Gorman. 2020. <a href="https://doi.org/10.5281/zenodo.3960218"><span>palmerpenguins</span>: Palmer Archipelago (Antarctica) penguin data</a>.
 </div>
 <div id="ref-multcomp" class="csl-entry" role="listitem">
-Hothorn, T., F. Bretz, and P. Westfall. 2008. Simultaneous inference in
-general parametric models. Biometrical Journal 50:346–363.
+Hothorn, T., F. Bretz, et P. Westfall. 2008. Simultaneous Inference in General Parametric Models. Biometrical Journal 50:346‑363.
 </div>
 <div id="ref-emoji" class="csl-entry" role="listitem">
-Hvitfeldt, E. 2022. <a href="https://CRAN.R-project.org/package=emoji"><span class="nocase">emoji</span>: Data and function to work with emojis</a>.
+Hvitfeldt, E. 2022. <a href="https://CRAN.R-project.org/package=emoji"><span>emoji</span>: Data and Function to Work with Emojis</a>.
+</div>
+<div id="ref-gt" class="csl-entry" role="listitem">
+Iannone, R., J. Cheng, B. Schloerke, E. Hughes, A. Lauer, J. Seo, K. Brevoort, et O. Roy. 2024. <a href="https://CRAN.R-project.org/package=gt"><span>gt</span>: Easily Create Presentation-Ready Display Tables</a>.
+</div>
+<div id="ref-ggpubr" class="csl-entry" role="listitem">
+Kassambara, A. 2023. <a href="https://CRAN.R-project.org/package=ggpubr"><span>ggpubr</span>: <span>«&nbsp;<span>ggplot2</span>&nbsp;»</span> Based Publication Ready Plots</a>.
 </div>
 <div id="ref-performance" class="csl-entry" role="listitem">
-Lüdecke, D., M. S. Ben-Shachar, I. Patil, P. Waggoner, and D. Makowski.
-2021. <a href="https://doi.org/10.21105/joss.03139"><span class="nocase">performance</span>: An <span>R</span> package for
-assessment, comparison and testing of statistical models</a>. Journal of
-Open Source Software 6:3139.
+Lüdecke, D., M. S. Ben-Shachar, I. Patil, P. Waggoner, et D. Makowski. 2021. <a href="https://doi.org/10.21105/joss.03139"><span>performance</span>: An <span>R</span> Package for Assessment, Comparison and Testing of Statistical Models</a>. Journal of Open Source Software 6:3139.
 </div>
 <div id="ref-vcd2006" class="csl-entry" role="listitem">
-Meyer, D., A. Zeileis, and K. Hornik. 2006. <a href="https://doi.org/10.18637/jss.v017.i03">The strucplot framework:
-Visualizing multi-way contingency tables with vcd</a>. Journal of
-Statistical Software 17:1–48.
+Meyer, D., A. Zeileis, et K. Hornik. 2006. <a href="https://doi.org/10.18637/jss.v017.i03">The Strucplot Framework: Visualizing Multi-Way Contingency Tables with vcd</a>. Journal of Statistical Software 17:1‑48.
 </div>
 <div id="ref-vcd2023" class="csl-entry" role="listitem">
-Meyer, D., A. Zeileis, K. Hornik, and M. Friendly. 2023. <a href="https://CRAN.R-project.org/package=vcd"><span class="nocase">vcd</span>: Visualizing categorical data</a>.
+Meyer, D., A. Zeileis, K. Hornik, et M. Friendly. 2023. <a href="https://CRAN.R-project.org/package=vcd"><span>vcd</span>: Visualizing Categorical Data</a>.
+</div>
+<div id="ref-patchwork" class="csl-entry" role="listitem">
+Pedersen, T. L. 2024. <a href="https://CRAN.R-project.org/package=patchwork"><span>patchwork</span>: The Composer of Plots</a>.
 </div>
 <div id="ref-simpleboot" class="csl-entry" role="listitem">
-Peng, R. D. 2019. <a href="https://CRAN.R-project.org/package=simpleboot"><span class="nocase">simpleboot</span>: Simple bootstrap routines</a>.
+Peng, R. D. 2024. <a href="https://CRAN.R-project.org/package=simpleboot"><span>simpleboot</span>: Simple Bootstrap Routines</a>.
+</div>
+<div id="ref-ggcleveland" class="csl-entry" role="listitem">
+Prunello, M., et G. Mari. 2021. <a href="https://CRAN.R-project.org/package=ggcleveland"><span>ggcleveland</span>: Implementation of Plots from Cleveland’s Visualizing Data Book</a>.
 </div>
 <div id="ref-base" class="csl-entry" role="listitem">
-R Core Team. 2024. <a href="https://www.R-project.org/"><span>R</span>:
-A language and environment for statistical computing</a>. R Foundation
-for Statistical Computing, Vienna, Austria.
+R Core Team. 2024. <a href="https://www.R-project.org/"><span>R</span>: A Language and Environment for Statistical Computing</a>. R Foundation for Statistical Computing, Vienna, Austria.
+</div>
+<div id="ref-grateful" class="csl-entry" role="listitem">
+Rodriguez-Sanchez, F., et C. P. Jackson. 2023. <a href="https://pakillo.github.io/grateful/"><span>grateful</span>: Facilitate citation of R packages</a>.
+</div>
+<div id="ref-GGally" class="csl-entry" role="listitem">
+Schloerke, B., D. Cook, J. Larmarange, F. Briatte, M. Marbach, E. Thoen, A. Elberg, et J. Crowley. 2024. <a href="https://CRAN.R-project.org/package=GGally"><span>GGally</span>: Extension to <span>«&nbsp;<span>ggplot2</span>&nbsp;»</span></a>.
 </div>
 <div id="ref-lmPerm" class="csl-entry" role="listitem">
-Wheeler, B., and M. Torchiano. 2016. <a href="https://CRAN.R-project.org/package=lmPerm"><span class="nocase">lmPerm</span>: Permutation tests for linear models</a>.
+Wheeler, B., et M. Torchiano. 2016. <a href="https://CRAN.R-project.org/package=lmPerm"><span>lmPerm</span>: Permutation Tests for Linear Models</a>.
+</div>
+<div id="ref-reshape2" class="csl-entry" role="listitem">
+Wickham, H. 2007. <a href="http://www.jstatsoft.org/v21/i12/">Reshaping Data with the <span>reshape</span> Package</a>. Journal of Statistical Software 21:1‑20.
 </div>
 <div id="ref-tidyverse" class="csl-entry" role="listitem">
-Wickham, H., M. Averick, J. Bryan, W. Chang, L. D. McGowan, R. François,
-G. Grolemund, A. Hayes, L. Henry, J. Hester, M. Kuhn, T. L. Pedersen, E.
-Miller, S. M. Bache, K. Müller, J. Ooms, D. Robinson, D. P. Seidel, V.
-Spinu, K. Takahashi, D. Vaughan, C. Wilke, K. Woo, and H. Yutani. 2019.
-<a href="https://doi.org/10.21105/joss.01686">Welcome to the <span class="nocase">tidyverse</span></a>. Journal of Open Source Software
-4:1686.
+Wickham, H., M. Averick, J. Bryan, W. Chang, L. D. McGowan, R. François, G. Grolemund, A. Hayes, L. Henry, J. Hester, M. Kuhn, T. L. Pedersen, E. Miller, S. M. Bache, K. Müller, J. Ooms, D. Robinson, D. P. Seidel, V. Spinu, K. Takahashi, D. Vaughan, C. Wilke, K. Woo, et H. Yutani. 2019. <a href="https://doi.org/10.21105/joss.01686">Welcome to the <span>tidyverse</span></a>. Journal of Open Source Software 4:1686.
 </div>
 <div id="ref-knitr2014" class="csl-entry" role="listitem">
-Xie, Y. 2014. <span class="nocase">knitr</span>: A comprehensive tool
-for reproducible research in <span>R</span>. <em>in</em> V. Stodden, F.
-Leisch, and R. D. Peng, editors. Implementing reproducible computational
-research. Chapman; Hall/CRC.
+Xie, Y. 2014. <span>knitr</span>: A Comprehensive Tool for Reproducible Research in <span>R</span>. <em>in</em> V. Stodden, F. Leisch, et R. D. Peng, éditeurs. Implementing Reproducible Computational Research. Chapman; Hall/CRC.
 </div>
 <div id="ref-knitr2015" class="csl-entry" role="listitem">
-Xie, Y. 2015. <a href="https://yihui.org/knitr/">Dynamic documents with
-<span>R</span> and knitr</a>. 2nd edition. Chapman; Hall/CRC, Boca
-Raton, Florida.
+Xie, Y. 2015. <a href="https://yihui.org/knitr/">Dynamic Documents with <span>R</span> and knitr</a>. 2nd édition. Chapman; Hall/CRC, Boca Raton, Florida.
 </div>
 <div id="ref-knitr2024" class="csl-entry" role="listitem">
-Xie, Y. 2024. <a href="https://yihui.org/knitr/"><span class="nocase">knitr</span>: A general-purpose package for dynamic
-report generation in r</a>.
+Xie, Y. 2024. <a href="https://yihui.org/knitr/"><span>knitr</span>: A General-Purpose Package for Dynamic Report Generation in R</a>.
 </div>
 <div id="ref-rmarkdown2018" class="csl-entry" role="listitem">
-Xie, Y., J. J. Allaire, and G. Grolemund. 2018. <a href="https://bookdown.org/yihui/rmarkdown">R markdown: The definitive
-guide</a>. Chapman; Hall/CRC, Boca Raton, Florida.
+Xie, Y., J. J. Allaire, et G. Grolemund. 2018. <a href="https://bookdown.org/yihui/rmarkdown">R Markdown: The Definitive Guide</a>. Chapman; Hall/CRC, Boca Raton, Florida.
 </div>
 <div id="ref-rmarkdown2020" class="csl-entry" role="listitem">
-Xie, Y., C. Dervieux, and E. Riederer. 2020. <a href="https://bookdown.org/yihui/rmarkdown-cookbook">R markdown
-cookbook</a>. Chapman; Hall/CRC, Boca Raton, Florida.
+Xie, Y., C. Dervieux, et E. Riederer. 2020. <a href="https://bookdown.org/yihui/rmarkdown-cookbook">R Markdown Cookbook</a>. Chapman; Hall/CRC, Boca Raton, Florida.
 </div>
 <div id="ref-lmtest" class="csl-entry" role="listitem">
-Zeileis, A., and T. Hothorn. 2002. <a href="https://CRAN.R-project.org/doc/Rnews/">Diagnostic checking in
-regression relationships</a>. R News 2:7–10.
+Zeileis, A., et T. Hothorn. 2002. <a href="https://CRAN.R-project.org/doc/Rnews/">Diagnostic Checking in Regression Relationships</a>. R News 2:7‑10.
 </div>
 <div id="ref-vcd2007" class="csl-entry" role="listitem">
-Zeileis, A., D. Meyer, and K. Hornik. 2007. <a href="https://doi.org/10.1198/106186007X237856">Residual-based shadings
-for visualizing (conditional) independence</a>. Journal of Computational
-and Graphical Statistics 16:507–525.
+Zeileis, A., D. Meyer, et K. Hornik. 2007. <a href="https://doi.org/10.1198/106186007X237856">Residual-based Shadings for Visualizing (Conditional) Independence</a>. Journal of Computational and Graphical Statistics 16:507‑525.
+</div>
+<div id="ref-kableExtra" class="csl-entry" role="listitem">
+Zhu, H. 2024. <a href="https://CRAN.R-project.org/package=kableExtra"><span>kableExtra</span>: Construct Complex Table with <span>«&nbsp;<span>kable</span>&nbsp;»</span> and Pipe Syntax</a>.
 </div>
 </div>
 
@@ -1209,7 +1252,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./37-model_freq.html" class="pagination-link" aria-label="Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

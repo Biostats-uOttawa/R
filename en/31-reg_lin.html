@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -479,7 +479,7 @@ window.Quarto = {
   <li><a href="#testing-the-significance-of-correlations-and-bonferroni-probabilities" id="toc-testing-the-significance-of-correlations-and-bonferroni-probabilities" class="nav-link" data-scroll-target="#testing-the-significance-of-correlations-and-bonferroni-probabilities"><span class="header-section-number">9.4</span> Testing the significance of correlations and Bonferroni probabilities</a></li>
   <li><a href="#non-parametric-correlations-spearmans-rank-and-kendalls-tau" id="toc-non-parametric-correlations-spearmans-rank-and-kendalls-tau" class="nav-link" data-scroll-target="#non-parametric-correlations-spearmans-rank-and-kendalls-tau"><span class="header-section-number">9.5</span> Non-parametric correlations: Spearman’s rank and Kendall’s <span class="math inline">\(\tau\)</span></a></li>
   <li>
-<a href="#sec-simple_lm" id="toc-sec-simple_lm" class="nav-link" data-scroll-target="#sec-simple_lm"><span class="header-section-number">9.6</span> Simple linear regression</a>
+<a href="#sec-simple-lm" id="toc-sec-simple-lm" class="nav-link" data-scroll-target="#sec-simple-lm"><span class="header-section-number">9.6</span> Simple linear regression</a>
   <ul class="collapse">
 <li><a href="#testing-regression-assumptions" id="toc-testing-regression-assumptions" class="nav-link" data-scroll-target="#testing-regression-assumptions"><span class="header-section-number">9.6.1</span> Testing regression assumptions</a></li>
   <li><a href="#formal-tests-of-regression-assumptions" id="toc-formal-tests-of-regression-assumptions" class="nav-link" data-scroll-target="#formal-tests-of-regression-assumptions"><span class="header-section-number">9.6.2</span> Formal tests of regression assumptions</a></li>
@@ -806,7 +806,7 @@ sample estimates:
 <p>Note that the correlations for Kendall’s tau (0.820) are lower than for the Spearman rank (0.952) correlation. This is because Kendall’s gives more weight to ranks that are far apart, whereas Spearman’s weights each rank equally. Generally, Kendalls’s is more appropriate when there is more uncertainty about the reliability of close ranks.</p>
 <p>The sturgeons in this sample were collected using nets and baited hooks of a certain size. What impact do you think this method of collection had on the shapes of the distributions of <code>fklngth</code> and <code>rdwght</code> ? Under these circumstances, do you think correlation analysis is appropriate at all?</p>
 <p>Note that correlation analysis assumes that each variable is <em>randomly sampled</em>. In the case of sturgeon, this is not the case: baited hooks and nets will only catch sturgeon above a certain minimum size. Note that in the sample, there are no small sturgeons, since the fishing gear targets only larger fish. Thus, we should be very wary of the correlation coefficients associated with our analysis, as the inclusion of smaller fish may well change our estimate of these correlations.</p>
-</section><section id="sec-simple_lm" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="sec-simple_lm">
+</section><section id="sec-simple-lm" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="sec-simple-lm">
 <span class="header-section-number">9.6</span> Simple linear regression</h2>
 <p>In correlation analysis we are interested in how pairs of variables covary: However, in regression analysis, we are attempting to estimate a model that predicts a variable (the dependent variable) from another variable (the independent variable).</p>
 <p>As with any statistical analysis, the best way to begin is by looking at your data. If you are interested in the relationship between two variables, say, Y and X, produce a plot of Y versus X just to get a “feel” for the relationship.</p>
@@ -1343,8 +1343,8 @@ boot(data = sturgeon.male, statistic = bs, R = 1000, formula = log10(fklngth) ~
 
 Bootstrap Statistics :
      original       bias    std. error
-t1* 1.1919926  0.003132918  0.03364288
-t2* 0.3408557 -0.002376411  0.02693154</code></pre>
+t1* 1.1919926  0.004112245  0.03467409
+t2* 0.3408557 -0.003010275  0.02758019</code></pre>
 </div>
 </div>
 <p>For each parameter in the model (here the intercept is labeled <code>t1\*</code> and the slope of the regression line is labeled <code>t2\*</code>) , you obtain:</p>
@@ -1391,11 +1391,12 @@ boot.ci(boot.out = results, type = "all", index = 1)
 
 Intervals : 
 Level      Normal              Basic         
-95%   ( 1.123,  1.255 )   ( 1.124,  1.252 )  
+95%   ( 1.120,  1.256 )   ( 1.118,  1.254 )  
 
 Level     Percentile            BCa          
-95%   ( 1.132,  1.260 )   ( 1.115,  1.252 )  
-Calculations and Intervals on Original Scale</code></pre>
+95%   ( 1.130,  1.266 )   ( 1.116,  1.252 )  
+Calculations and Intervals on Original Scale
+Some BCa intervals may be unstable</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1414,11 +1415,12 @@ boot.ci(boot.out = results, type = "all", index = 2)
 
 Intervals : 
 Level      Normal              Basic         
-95%   ( 0.2904,  0.3960 )   ( 0.2919,  0.3955 )  
+95%   ( 0.2898,  0.3979 )   ( 0.2906,  0.4007 )  
 
 Level     Percentile            BCa          
-95%   ( 0.2862,  0.3898 )   ( 0.2931,  0.4002 )  
-Calculations and Intervals on Original Scale</code></pre>
+95%   ( 0.2810,  0.3911 )   ( 0.2945,  0.4020 )  
+Calculations and Intervals on Original Scale
+Some BCa intervals may be unstable</code></pre>
 </div>
 </div>
 <p>Here the 4 types of CI that R managed to calculate are essentially the same. Had data been violating more strongly the standard assumptions (normality, homoscedasticity), then the different methods (Normal, Basic, Percentile, and BCa) would have diverged more. In that case, which one is best? BCa has the favor of most, currently.</p>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -132,7 +132,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-flag">
 <li>
-    <a class="dropdown-item" href="./../fr">
+    <a class="dropdown-item" href="./../fr/03-donnees.html">
  <span class="dropdown-text">Français</span></a>
   </li>  
     </ul>
@@ -452,8 +452,8 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
   <li>
 <a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures"><span class="header-section-number">3.2</span> Data structures</a>
   <ul class="collapse">
-<li><a href="#sec-scal_vecs" id="toc-sec-scal_vecs" class="nav-link" data-scroll-target="#sec-scal_vecs"><span class="header-section-number">3.2.1</span> Scalars and vectors</a></li>
-  <li><a href="#sec-mat_array" id="toc-sec-mat_array" class="nav-link" data-scroll-target="#sec-mat_array"><span class="header-section-number">3.2.2</span> Matrices and arrays</a></li>
+<li><a href="#sec-scal-vecs" id="toc-sec-scal-vecs" class="nav-link" data-scroll-target="#sec-scal-vecs"><span class="header-section-number">3.2.1</span> Scalars and vectors</a></li>
+  <li><a href="#sec-mat-array" id="toc-sec-mat-array" class="nav-link" data-scroll-target="#sec-mat-array"><span class="header-section-number">3.2.2</span> Matrices and arrays</a></li>
   <li><a href="#sec-lists" id="toc-sec-lists" class="nav-link" data-scroll-target="#sec-lists"><span class="header-section-number">3.2.3</span> Lists</a></li>
   <li><a href="#sec-df" id="toc-sec-df" class="nav-link" data-scroll-target="#sec-df"><span class="header-section-number">3.2.4</span> Data frames</a></li>
   </ul>
@@ -462,9 +462,9 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data"><span class="header-section-number">3.3</span> Importing data</a>
   <ul class="collapse">
 <li><a href="#saving-files-to-import" id="toc-saving-files-to-import" class="nav-link" data-scroll-target="#saving-files-to-import"><span class="header-section-number">3.3.1</span> Saving files to import</a></li>
-  <li><a href="#sec-import_fnc" id="toc-sec-import_fnc" class="nav-link" data-scroll-target="#sec-import_fnc"><span class="header-section-number">3.3.2</span> Import functions</a></li>
+  <li><a href="#sec-import-fnc" id="toc-sec-import-fnc" class="nav-link" data-scroll-target="#sec-import-fnc"><span class="header-section-number">3.3.2</span> Import functions</a></li>
   <li><a href="#common-import-frustrations" id="toc-common-import-frustrations" class="nav-link" data-scroll-target="#common-import-frustrations"><span class="header-section-number">3.3.3</span> Common import frustrations</a></li>
-  <li><a href="#sec-import_other" id="toc-sec-import_other" class="nav-link" data-scroll-target="#sec-import_other"><span class="header-section-number">3.3.4</span> Other import options</a></li>
+  <li><a href="#sec-import-other" id="toc-sec-import-other" class="nav-link" data-scroll-target="#sec-import-other"><span class="header-section-number">3.3.4</span> Other import options</a></li>
   </ul>
 </li>
   <li>
@@ -509,7 +509,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 <p>In this Chapter we’ll go over the main data types in R and focus on some of the most common data structures. We will also cover how to import data into R from an external file, how to manipulate (wrangle) and summarize data and finally how to export data from R to an external file.</p>
 <section id="data-types" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="data-types">
 <span class="header-section-number">3.1</span> Data types</h2>
-<p>Understanding the different types of data and how R deals with these data is important. The temptation is to glaze over and skip these technical details, but beware, this can come back to bite you somewhere unpleasant if you don’t pay attention. We’ve already seen an example (<a href="02-basics.html#sec-r_objs" class="quarto-xref"><span>Section 2.3.1</span></a>) of this when we tried (and failed) to add two character objects together using the <code>+</code> operator.</p>
+<p>Understanding the different types of data and how R deals with these data is important. The temptation is to glaze over and skip these technical details, but beware, this can come back to bite you somewhere unpleasant if you don’t pay attention. We’ve already seen an example (<a href="02-basics.html#sec-r-objs" class="quarto-xref"><span>Section 2.3.1</span></a>) of this when we tried (and failed) to add two character objects together using the <code>+</code> operator.</p>
 <p>R has six basic types of data; numeric, integer, logical, complex and character. The keen eyed among you will notice we’ve only listed five data types here, the final data type is raw which we won’t cover as it’s not useful 99.99% of the time. We also won’t cover complex numbers, but will let you <a href="https://www.mathsisfun.com/numbers/complex-numbers.html">imagine</a> that part!</p>
 <ul>
 <li><p><strong>Numeric</strong> data are numbers that contain a decimal. Actually they can also be whole numbers but we’ll gloss over that.</p></li>
@@ -617,7 +617,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
 </table></section><section id="data-structures" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="data-structures">
 <span class="header-section-number">3.2</span> Data structures</h2>
 <p>Now that you’ve been introduced to some of the most important classes of data in R, let’s have a look at some of main structures that we have for storing these data.</p>
-<section id="sec-scal_vecs" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-scal_vecs">
+<section id="sec-scal-vecs" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-scal-vecs">
 <span class="header-section-number">3.2.1</span> Scalars and vectors</h3>
 <p>Perhaps the simplest type of data structure is the vector. You’ve already been introduced to vectors in <a href="02-basics.html#sec-funcs" class="quarto-xref"><span>Section 2.4</span></a> although some of the vectors you created only contained a single value. Vectors that have a single value (length 1) are called scalars. Vectors can contain numbers, characters, factors or logicals, but the key thing to remember is that all the elements inside a vector must be of the same class. In other words, vectors can contain either numbers, characters or logical but not mixtures of these types of data. There is one important exception to this, you can include <code>NA</code> (remember this is special type of logical) to denote missing data in vectors with other data types.</p>
 <div class="cell" data-layout-align="center">
@@ -632,7 +632,7 @@ Figure&nbsp;3.1: Scalar and vector data structure
 </div>
 </div>
 </div>
-</section><section id="sec-mat_array" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-mat_array">
+</section><section id="sec-mat-array" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-mat-array">
 <span class="header-section-number">3.2.2</span> Matrices and arrays</h3>
 <p>Another useful data structure used in many disciplines such as population ecology, theoretical and applied statistics is the matrix. A matrix is simply a vector that has additional attributes called dimensions. Arrays are just multidimensional matrices. Again, matrices and arrays must contain elements all of the same data class.</p>
 <div class="cell" data-layout-align="center">
@@ -1001,7 +1001,7 @@ Table&nbsp;3.1: Imported unicorn data
  $ names : chr  "Joanna" "Charlotte" "Helen" "Karen" ...</code></pre>
 </div>
 </div>
-<p>The <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> function gives us the data frame dimensions and also reminds us that <code>dataf</code> is a <code>data.frame</code> type object. It also lists all of the variables (columns) contained in the data frame, tells us what type of data the variables contain and prints out the first five values. We often copy this summary and place it in our R scripts with comments at the beginning of each line so we can easily refer back to it whilst writing our code. We showed you how to comment blocks in RStudio <a href="01-start.html#sec-proj_doc" class="quarto-xref"><span>Section 1.7</span></a>.</p>
+<p>The <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> function gives us the data frame dimensions and also reminds us that <code>dataf</code> is a <code>data.frame</code> type object. It also lists all of the variables (columns) contained in the data frame, tells us what type of data the variables contain and prints out the first five values. We often copy this summary and place it in our R scripts with comments at the beginning of each line so we can easily refer back to it whilst writing our code. We showed you how to comment blocks in RStudio <a href="01-start.html#sec-proj-doc" class="quarto-xref"><span>Section 1.7</span></a>.</p>
 <p>Also notice that R has automatically decided that our <code>p.names</code> variable should be a character (<code>chr</code>) class variable when we first created the data frame. Whether this is a good idea or not will depend on how you want to use this variable in later analysis. If we decide that this wasn’t such a good idea we can change the default behaviour of the <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function by including the argument <code>stringsAsFactors = TRUE</code>. Now our strings are automatically converted to factors.</p>
 <div class="cell">
 <div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p.height</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">180</span>, <span class="fl">155</span>, <span class="fl">160</span>, <span class="fl">167</span>, <span class="fl">181</span><span class="op">)</span></span>
@@ -1054,7 +1054,7 @@ Figure&nbsp;3.4: Choosing <code>csv</code> format when saving with LibreOffice C
 </div>
 <p>Click the Save button and then select the ‘Use Text CSV Format’ option. Click on OK to save the file.</p>
 <p>There are a couple of things to bear in mind when saving files to import into R which will make your life easier in the long run. Keep your column headings (if you have them) short and informative. Also avoid spaces in your column headings by replacing them with an underscore or a dot (i.e. replace <code>mane size</code> with <code>mane size</code> or <code>mane.size</code>) and avoid using special characters (i.e. <code>leaf area (mm^2)</code> or uppercase to simpy your life). Remember, if you have missing data in your data frame (empty cells) you should use an <code>NA</code> to represent these missing values or have an empty cell. This will keep the data frame tidy.</p>
-</section><section id="sec-import_fnc" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="sec-import_fnc">
+</section><section id="sec-import-fnc" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="sec-import-fnc">
 <span class="header-section-number">3.3.2</span> Import functions</h3>
 <p>Once you’ve saved your data file in a suitable format we can now read this file into R. The workhorse function for importing data into R is the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function (we discuss some alternatives later in the chapter). The <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function is a very flexible function with a shed load of arguments (see <code><a href="https://rdrr.io/r/utils/read.table.html">?read.table</a></code>) but it’s quite simple to use. Let’s import a comma delimited file called <code>unicorns.csv</code> which contains the data we saw previously in this Chapter (<a href="#sec-df" class="quarto-xref"><span>Section 3.2.4</span></a>) and assign it to an object called <code>unicorns</code>. The file is located in a <code>data</code> directory which itself is located in our root directory (<a href="01-start.html#sec-dir-struc" class="quarto-xref"><span>Section 1.4</span></a>). The first row of the data contains the variable (column) names. To use the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function to import this file</p>
 <div class="cell">
@@ -1148,9 +1148,9 @@ Warning
  $ V8: chr  "horn_rings" "1" "10" "10" ...</code></pre>
 </div>
 </div>
-<p>We can see an obvious problem, all of our variables have been imported as factors and our variables are named <code>V1</code>, <code>V2</code>, <code>V3</code> … <code>V8</code>. The problem happens because we haven’t told the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function that the first row contains the variable names and so it treats them as data. As soon as we have a single character string in any of our data vectors, R treats the vectors as character type data (remember all elements in a vector must contain the same type of data (<a href="#sec-scal_vecs" class="quarto-xref"><span>Section 3.2.1</span></a>)).</p>
+<p>We can see an obvious problem, all of our variables have been imported as factors and our variables are named <code>V1</code>, <code>V2</code>, <code>V3</code> … <code>V8</code>. The problem happens because we haven’t told the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function that the first row contains the variable names and so it treats them as data. As soon as we have a single character string in any of our data vectors, R treats the vectors as character type data (remember all elements in a vector must contain the same type of data (<a href="#sec-scal-vecs" class="quarto-xref"><span>Section 3.2.1</span></a>)).</p>
 <p>This is just one more argument to use <code><a href="https://rdrr.io/r/utils/read.table.html">read.csv()</a></code> or <code><a href="https://rdrr.io/r/utils/read.table.html">read.delim()</a></code> function with appropriate default values for arguments.</p>
-</section><section id="sec-import_other" class="level3" data-number="3.3.4"><h3 data-number="3.3.4" class="anchored" data-anchor-id="sec-import_other">
+</section><section id="sec-import-other" class="level3" data-number="3.3.4"><h3 data-number="3.3.4" class="anchored" data-anchor-id="sec-import-other">
 <span class="header-section-number">3.3.4</span> Other import options</h3>
 <p>There are numerous other functions to import data from a variety of sources and formats. Most of these functions are contained in packages that you will need to install before using them. We list a couple of the more useful packages and functions below.</p>
 <p>The <code>fread()</code> function from the <code>read.table</code> package is great for importing large data files quickly and efficiently (much faster than the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function). One of the great things about the <code>fread()</code> function is that it will automatically detect many of the arguments you would normally need to specify (like <code>sep =</code> etc). One of the things you will need to consider though is that the <code>fread()</code> function will return a <code>data.table</code> object not a <code>data.frame</code> as would be the case with the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> function. This is usually not a problem as you can pass a <code>data.table</code> object to any function that only accepts <code>data.frame</code> objects. To learn more about the differences between <code>data.table</code> and <code>data.frame</code> objects see <a href="http://datatable.r-forge.r-project.org/datatable-intro.pdf">here</a>.</p>
@@ -1497,7 +1497,7 @@ Warning
 </div>
 </section><section id="ordering-data-frames" class="level3" data-number="3.4.3"><h3 data-number="3.4.3" class="anchored" data-anchor-id="ordering-data-frames">
 <span class="header-section-number">3.4.3</span> Ordering data frames</h3>
-<p>Remember when we used the function <code><a href="https://rdrr.io/r/base/order.html">order()</a></code> to order one vector based on the order of another vector (way back in <a href="02-basics.html#sec-vec_ord" class="quarto-xref"><span>Section 2.5.3</span></a>). This comes in very handy if you want to reorder rows in your data frame. For example, if we want all of the rows in the data frame <code>unicorns</code> to be ordered in ascending value of <code>height</code> and output all columns by default.</p>
+<p>Remember when we used the function <code><a href="https://rdrr.io/r/base/order.html">order()</a></code> to order one vector based on the order of another vector (way back in <a href="02-basics.html#sec-vec-ord" class="quarto-xref"><span>Section 2.5.3</span></a>). This comes in very handy if you want to reorder rows in your data frame. For example, if we want all of the rows in the data frame <code>unicorns</code> to be ordered in ascending value of <code>height</code> and output all columns by default.</p>
 <div class="cell">
 <div class="sourceCode" id="cb118"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">height_ord</span> <span class="op">&lt;-</span> <span class="va">unicorns</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span><span class="op">(</span><span class="va">unicorns</span><span class="op">$</span><span class="va">height</span><span class="op">)</span>, <span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">height_ord</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2116,7 +2116,7 @@ $high
   1.200   5.800   7.450   7.653   9.475  17.200 </code></pre>
 </div>
 </div>
-<p>Note, if the variable you want to summarise contains missing values (<code>NA</code>) you will also need to include an argument specifying how you want the function to deal with the <code>NA</code> values. We saw an example if this in <a href="02-basics.html#sec-na_vals" class="quarto-xref"><span>Section 2.5.5</span></a> where the <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> function returned an <code>NA</code> when we had missing data. To include the <code>na.rm = TRUE</code> argument we simply add this as another argument when using <code><a href="https://rdrr.io/r/base/tapply.html">tapply()</a></code>.</p>
+<p>Note, if the variable you want to summarise contains missing values (<code>NA</code>) you will also need to include an argument specifying how you want the function to deal with the <code>NA</code> values. We saw an example if this in <a href="02-basics.html#sec-na-vals" class="quarto-xref"><span>Section 2.5.5</span></a> where the <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> function returned an <code>NA</code> when we had missing data. To include the <code>na.rm = TRUE</code> argument we simply add this as another argument when using <code><a href="https://rdrr.io/r/base/tapply.html">tapply()</a></code>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb196"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/tapply.html">tapply</a></span><span class="op">(</span><span class="va">unicorns</span><span class="op">$</span><span class="va">height</span>, <span class="va">unicorns</span><span class="op">$</span><span class="va">food</span>, <span class="va">mean</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2250,7 +2250,7 @@ high   9.6000 5.70625</code></pre>
 <p>We can of course export our files in a variety of other formats.</p>
 </section><section id="other-export-functions" class="level3" data-number="3.7.2"><h3 data-number="3.7.2" class="anchored" data-anchor-id="other-export-functions">
 <span class="header-section-number">3.7.2</span> Other export functions</h3>
-<p>As with importing data files into R, there are also many alternative functions for exporting data to external files beyond the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. If you followed the ‘Other import functions’ <a href="#sec-import_other" class="quarto-xref"><span>Section 3.3.4</span></a> of this Chapter you will already have the required packages installed.</p>
+<p>As with importing data files into R, there are also many alternative functions for exporting data to external files beyond the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. If you followed the ‘Other import functions’ <a href="#sec-import-other" class="quarto-xref"><span>Section 3.3.4</span></a> of this Chapter you will already have the required packages installed.</p>
 <p>The <code>fwrite()</code> function from the <code>read.table</code> package is very efficient at exporting large data objects and is much faster than the <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code> function. It’s also quite simple to use as it has most of the same arguments as <code><a href="https://rdrr.io/r/utils/write.table.html">write.table()</a></code>. To export a tab delimited text file we just need to specify the data frame name, the output file name and file path and the separator between columns.</p>
 <div class="cell">
 <div class="sourceCode" id="cb215"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">read.table</span><span class="op">)</span></span>

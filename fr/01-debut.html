@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr" xml:lang="fr-fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="En cours de traduction">
@@ -62,7 +62,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02-introR.html" rel="next">
+<link href="./02-base.html" rel="next">
 <link href="./index.html" rel="prev">
 <link href="./images/cover/book_fav.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -253,8 +253,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span></a>
+  <a href="./02-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rapports reproductibles avec Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Contrôle de version avec Git et GitHub</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of stats</span></a>
+ <span class="menu-text">Principes de statistique</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -271,7 +301,7 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-power.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,43 +318,43 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31-reg_lin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./32-t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./33-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./34-anova_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./35-reg_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./36-ancova_glm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./37-model_freq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
   </div>
 </li>
       </ul>
@@ -382,42 +412,33 @@ window.Quarto = {
   <ul>
 <li><a href="#quelques-conseils-sur-r" id="toc-quelques-conseils-sur-r" class="nav-link active" data-scroll-target="#quelques-conseils-sur-r">Quelques conseils sur R</a></li>
   <li>
-<a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">1.1</span> Installation</a>
+<a href="#installation-de-la-machine" id="toc-installation-de-la-machine" class="nav-link" data-scroll-target="#installation-de-la-machine"><span class="header-section-number">1.1</span> Installation de la machine</a>
   <ul class="collapse">
-<li><a href="#sec-install_r" id="toc-sec-install_r" class="nav-link" data-scroll-target="#sec-install_r"><span class="header-section-number">1.1.1</span> Installer R</a></li>
+<li><a href="#sec-install-r" id="toc-sec-install-r" class="nav-link" data-scroll-target="#sec-install-r"><span class="header-section-number">1.1.1</span> Installation de R</a></li>
   <li><a href="#installation-dun-ide" id="toc-installation-dun-ide" class="nav-link" data-scroll-target="#installation-dun-ide"><span class="header-section-number">1.1.2</span> Installation d’un IDE</a></li>
   </ul>
 </li>
   <li>
 <a href="#sec-orient" id="toc-sec-orient" class="nav-link" data-scroll-target="#sec-orient"><span class="header-section-number">1.2</span> Orientation de l’IDE</a>
   <ul class="collapse">
-<li><a href="#sec-rstudio_orient" id="toc-sec-rstudio_orient" class="nav-link" data-scroll-target="#sec-rstudio_orient"><span class="header-section-number">1.2.1</span> RStudio</a></li>
-  <li><a href="#sec-vscode_orient" id="toc-sec-vscode_orient" class="nav-link" data-scroll-target="#sec-vscode_orient"><span class="header-section-number">1.2.2</span> VSCode</a></li>
+<li><a href="#sec-rstudio-orient" id="toc-sec-rstudio-orient" class="nav-link" data-scroll-target="#sec-rstudio-orient"><span class="header-section-number">1.2.1</span> RStudio</a></li>
+  <li><a href="#sec-vscode-orient" id="toc-sec-vscode-orient" class="nav-link" data-scroll-target="#sec-vscode-orient"><span class="header-section-number">1.2.2</span> VSCode</a></li>
   </ul>
 </li>
+  <li><a href="#sec-work-d" id="toc-sec-work-d" class="nav-link" data-scroll-target="#sec-work-d"><span class="header-section-number">1.3</span> Répertoires de travail</a></li>
+  <li><a href="#sec-dir-struc" id="toc-sec-dir-struc" class="nav-link" data-scroll-target="#sec-dir-struc"><span class="header-section-number">1.4</span> Structure du répertoire</a></li>
   <li>
-<a href="#sec-packages" id="toc-sec-packages" class="nav-link" data-scroll-target="#sec-packages"><span class="header-section-number">1.3</span> Paquets R</a>
+<a href="#sec-rsprojs" id="toc-sec-rsprojs" class="nav-link" data-scroll-target="#sec-rsprojs"><span class="header-section-number">1.5</span> Organisation des projets</a>
   <ul class="collapse">
-<li><a href="#sec-cran_packages" id="toc-sec-cran_packages" class="nav-link" data-scroll-target="#sec-cran_packages"><span class="header-section-number">1.3.1</span> Paquets CRAN</a></li>
-  <li><a href="#paquets-bioconductor" id="toc-paquets-bioconductor" class="nav-link" data-scroll-target="#paquets-bioconductor"><span class="header-section-number">1.3.2</span> Paquets Bioconductor</a></li>
-  <li><a href="#paquets-github" id="toc-paquets-github" class="nav-link" data-scroll-target="#paquets-github"><span class="header-section-number">1.3.3</span> Paquets GitHub</a></li>
-  <li><a href="#utilisation-des-paquets" id="toc-utilisation-des-paquets" class="nav-link" data-scroll-target="#utilisation-des-paquets"><span class="header-section-number">1.3.4</span> Utilisation des paquets</a></li>
+<li><a href="#rstudio-1" id="toc-rstudio-1" class="nav-link" data-scroll-target="#rstudio-1"><span class="header-section-number">1.5.1</span> RStudio</a></li>
+  <li><a href="#vscode-1" id="toc-vscode-1" class="nav-link" data-scroll-target="#vscode-1"><span class="header-section-number">1.5.2</span> VSCode</a></li>
   </ul>
 </li>
-  <li><a href="#sec-work-d" id="toc-sec-work-d" class="nav-link" data-scroll-target="#sec-work-d"><span class="header-section-number">1.4</span> Répertoires de travail</a></li>
-  <li><a href="#sec-dir-struc" id="toc-sec-dir-struc" class="nav-link" data-scroll-target="#sec-dir-struc"><span class="header-section-number">1.5</span> Structure du répertoire</a></li>
-  <li>
-<a href="#sec-rsprojs" id="toc-sec-rsprojs" class="nav-link" data-scroll-target="#sec-rsprojs"><span class="header-section-number">1.6</span> Organisation des projets</a>
-  <ul class="collapse">
-<li><a href="#rstudio-1" id="toc-rstudio-1" class="nav-link" data-scroll-target="#rstudio-1"><span class="header-section-number">1.6.1</span> RStudio</a></li>
-  <li><a href="#vscode-1" id="toc-vscode-1" class="nav-link" data-scroll-target="#vscode-1"><span class="header-section-number">1.6.2</span> VSCode</a></li>
-  </ul>
-</li>
-  <li><a href="#sec-file_names" id="toc-sec-file_names" class="nav-link" data-scroll-target="#sec-file_names"><span class="header-section-number">1.7</span> Noms des fichiers</a></li>
-  <li><a href="#sec-proj_doc" id="toc-sec-proj_doc" class="nav-link" data-scroll-target="#sec-proj_doc"><span class="header-section-number">1.8</span> Documentation sur les scripts</a></li>
-  <li><a href="#guide-de-style-r" id="toc-guide-de-style-r" class="nav-link" data-scroll-target="#guide-de-style-r"><span class="header-section-number">1.9</span> Guide de style R</a></li>
-  <li><a href="#sauvegarde-des-projets" id="toc-sauvegarde-des-projets" class="nav-link" data-scroll-target="#sauvegarde-des-projets"><span class="header-section-number">1.10</span> Sauvegarde des projets</a></li>
-  <li><a href="#citation-de-r" id="toc-citation-de-r" class="nav-link" data-scroll-target="#citation-de-r"><span class="header-section-number">1.11</span> Citation de R</a></li>
+  <li><a href="#sec-file-names" id="toc-sec-file-names" class="nav-link" data-scroll-target="#sec-file-names"><span class="header-section-number">1.6</span> Nom des fichiers</a></li>
+  <li><a href="#sec-proj-doc" id="toc-sec-proj-doc" class="nav-link" data-scroll-target="#sec-proj-doc"><span class="header-section-number">1.7</span> Documentation du script</a></li>
+  <li><a href="#guide-de-style-r" id="toc-guide-de-style-r" class="nav-link" data-scroll-target="#guide-de-style-r"><span class="header-section-number">1.8</span> Guide de style R</a></li>
+  <li><a href="#sauvegarde-des-projets" id="toc-sauvegarde-des-projets" class="nav-link" data-scroll-target="#sauvegarde-des-projets"><span class="header-section-number">1.9</span> Sauvegarde des projets</a></li>
+  <li><a href="#citer-r-et-les-paquets-r" id="toc-citer-r-et-les-paquets-r" class="nav-link" data-scroll-target="#citer-r-et-les-paquets-r"><span class="header-section-number">1.10</span> Citer R et les paquets R</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/01-debut.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -436,55 +457,58 @@ window.Quarto = {
   
 
 
-</header><p>Bien que R ne soit pas nouveau, sa popularité a augmenté rapidement depuis une dizaine d’années (voir <a href="http://r4stats.com/articles/popularity/">ici</a> pour des données intéressantes). Il a été créé et développé à l’origine par Ross Ihaka et Robert Gentleman au cours des années 1990 et la première version stable a été publiée en 2000. Aujourd’hui, R est maintenu par la <a href="https://www.r-project.org/contributors.html">R Development Core Team</a>. Alors, pourquoi R est-il devenu si populaire et pourquoi devrais-tu apprendre à l’utiliser ? Voici quelques raisons :</p>
+</header><p>Bien que R ne soit pas nouveau, sa popularité s’est rapidement accrue au cours des dix dernières années environ (voir <a href="http://r4stats.com/articles/popularity/">ici</a> ). Il a été créé et développé à l’origine par Ross Ihaka et Robert Gentleman dans les années 1990 et la première version stable a été publiée en 2000. Aujourd’hui, R est maintenu par la <a href="https://www.r-project.org/contributors.html">R Development Core Team</a> . Pourquoi R est-il devenu si populaire et pourquoi devriez-vous apprendre à l’utiliser ? Voici quelques raisons :</p>
 <ul>
-<li>R est un logiciel libre et disponible gratuitement.</li>
-<li>R est disponible pour les systèmes d’exploitation Windows, Mac et Linux.</li>
-<li>R dispose d’un ensemble complet et cohérent d’outils d’analyse statistique.</li>
-<li>R dispose d’une facilité graphique étendue et très flexible capable de produire des figures de qualité pour la publication.</li>
-<li>R dispose d’un ensemble croissant de “paquets” disponibles gratuitement <span class="emoji" data-emoji="package">📦</span> qui permettent d’étendre les capacités de R.</li>
-<li>R dispose d’un vaste réseau d’assistance avec de nombreux documents en ligne et disponibles gratuitement.</li>
+<li>le logiciel est open source et disponible gratuitement.</li>
+<li>Disponible pour les systèmes d’exploitation Windows, Mac et Linux.</li>
+<li>un ensemble complet et cohérent d’outils d’analyse statistique.</li>
+<li>un outil graphique étendu et très flexible, capable de produire des figures de qualité professionnelle.</li>
+<li>un ensemble de “paquets” :package : disponibles gratuitement pour étendre les capacités de R.</li>
+<li>un vaste réseau d’assistance avec de nombreux documents en ligne et disponibles gratuitement.</li>
 </ul>
-<p>Toutes les raisons ci-dessus sont d’excellentes raisons d’utiliser R. Cependant, à notre avis, la plus grande raison d’utiliser R est qu’il facilite les pratiques de recherche robustes et reproductibles. Contrairement aux logiciels plus traditionnels de type “pointer et cliquer”, écrire du code te permet d’avoir un enregistrement permanent et précis de toutes les méthodes que tu as utilisées (et des décisions que tu as prises) pour l’analyse de tes données. Tu peux ensuite partager ce code (et tes données) avec d’autres chercheurs / collègues / réviseurs de revues qui pourront reproduire ton analyse à l’identique. C’est l’un des principes de la <a href="https://en.wikipedia.org/wiki/Open_science">science ouverte</a>. Nous aborderons d’autres sujets pour faciliter la science ouverte tout au long de ce livre, notamment la création de rapports reproductibles (<span class="quarto-unresolved-ref">?sec-rmarkdown_r</span>) et contrôle des versions (<span class="quarto-unresolved-ref">?sec-github_r</span>).</p>
-<p>Dans ce chapitre, nous aborderons :</p>
+<p>Toutes les raisons ci-dessus sont d’excellentes raisons d’utiliser R. Cependant, à notre avis, la plus grande raison d’utiliser R est qu’il facilite des pratiques de recherche robustes et reproductibles. Contrairement aux logiciels plus traditionnels de type “pointer et cliquer”, l’écriture de code garantit un enregistrement permanent et précis de toutes les méthodes que vous avez utilisées (et des décisions que vous avez prises) pour l’analyse de vos données. Vous pouvez ensuite partager ce code (et vos données) avec d’autres chercheurs, collègues ou évaluateurs qui pourront reproduire votre analyse à l’identique. C’est l’un des principes de la <a href="https://en.wikipedia.org/wiki/Open_science">science ouverte</a> . Nous aborderons d’autres sujets pour faciliter la science ouverte tout au long de ce livre, notamment la création de rapports reproductibles (<a href="06-quarto.html" class="quarto-xref"><span>Chapitre 6</span></a>) et le contrôle des versions (<a href="07-github.html" class="quarto-xref"><span>Chapitre 7</span></a>).</p>
+<p>Dans ce chapitre, nous aborderons les points suivants :</p>
 <ul>
-<li>comment télécharger et installer R et un IDE sur ton ordinateur</li>
-<li>te donner une brève orientation des 2 IDE les plus courants utilisés avec R</li>
-<li>installer et travailler avec les paquets R pour étendre les capacités de R</li>
-<li>quelques bonnes habitudes à prendre pour travailler sur des projets</li>
-<li>et enfin quelques conseils pour documenter ton flux de travail et écrire un code R agréable à lire.</li>
+<li>comment télécharger et installer R et un IDE sur votre ordinateur</li>
+<li>vous donner une brève orientation sur les 2 IDE les plus courants utilisés avec R</li>
+<li>quelques bonnes habitudes à prendre lorsque vous travaillez sur des projets</li>
+<li>et enfin quelques conseils sur la documentation de votre flux de travail et l’écriture d’un code R lisible.</li>
 </ul>
 <section id="quelques-conseils-sur-r" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="quelques-conseils-sur-r">Quelques conseils sur R</h2>
 <ul>
-<li>Utilise R souvent et régulièrement. Cela t’aidera à créer et à maintenir une dynamique très importante.</li>
-<li>Apprendre R n’est pas un test de mémoire. L’un des avantages d’un langage de script est que tu auras toujours ton code (bien annoté) auquel te référer lorsque tu auras oublié comment faire quelque chose.</li>
-<li>Tu n’as pas besoin de tout savoir sur R pour être productif.</li>
-<li>Si tu es bloqué, fais des recherches en ligne, ce n’est pas de la triche et écrire une bonne requête de recherche est une compétence en soi.</li>
-<li>Si tu te retrouves à fixer du code pendant des heures en essayant de comprendre pourquoi il ne fonctionne pas, alors va t’éloigner pendant quelques minutes.</li>
-<li>En R, il existe de nombreuses façons d’aborder un problème particulier. Si ton code fait ce que tu veux qu’il fasse dans un temps raisonnable et de manière robuste, alors ne t’inquiète pas.</li>
-<li>R n’est qu’un outil pour t’aider à répondre à tes questions intéressantes. Ne perds pas de vue ce qui est important : ta ou tes questions de recherche et tes données. Aucune compétence en matière d’utilisation de R ne te sera utile si ta collecte de données est fondamentalement défectueuse ou si ta question est vague.</li>
-<li>Reconnais qu’il y aura des moments où les choses deviendront un peu difficiles ou frustrantes. Essaie d’accepter ces périodes comme faisant partie du processus naturel d’apprentissage d’une nouvelle compétence (nous sommes tous passés par là) et souviens-toi que le temps et l’énergie que tu investis maintenant seront largement remboursés dans un avenir pas trop lointain.</li>
+<li>Utilisez R souvent et régulièrement. Cela permettra de créer et de maintenir une dynamique importante.</li>
+<li>Apprendre R n’est pas un test de mémoire. L’un des avantages d’un langage de script est que vous aurez toujours votre code (bien annoté) auquel vous pourrez vous référer lorsque vous oublierez comment faire quelque chose.</li>
+<li>Il n’est pas nécessaire de tout savoir sur R pour être productif.</li>
+<li>Si vous êtes bloqué, faites des recherches en ligne, ce n’est pas de la triche et écrire une bonne requête de recherche est une compétence en soi.</li>
+<li>Si vous vous retrouvez à fixer un code pendant des heures en essayant de comprendre pourquoi il ne fonctionne pas, éloignez-vous quelques minutes.</li>
+<li>En R, il existe de nombreuses façons d’aborder un problème particulier. Si votre code fait ce que vous voulez qu’il fasse dans un temps raisonnable et de manière robuste, ne vous inquiétez pas.</li>
+<li>R n’est qu’un outil pour vous aider à répondre à vos questions intéressantes. Ne perdez pas de vue ce qui est important : vos questions de recherche et vos données. Aucune compétence en matière d’utilisation de R ne sera utile si votre collecte de données est fondamentalement défectueuse ou si votre question est vague.</li>
+<li>Reconnaissez qu’il y aura des moments où les choses deviendront un peu difficiles ou frustrantes. Essayez d’accepter ces périodes comme faisant partie du processus naturel d’apprentissage d’une nouvelle compétence (nous sommes tous passés par là) et rappelez-vous que le temps et l’énergie que vous investissez maintenant seront largement remboursés dans un avenir pas trop lointain.</li>
 </ul>
-<p>Bonne chance et n’oublie pas de t’amuser.</p>
-</section><section id="installation" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="installation">
-<span class="header-section-number">1.1</span> Installation</h2>
-<section id="sec-install_r" class="level3" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="sec-install_r">
-<span class="header-section-number">1.1.1</span> Installer R</h3>
-<p>Pour être opérationnel, la première chose à faire est d’installer R. R est disponible gratuitement pour les systèmes d’exploitation Windows, Mac et Linux à partir du [site Web du Comprehensive R Archive Network (C]RAN) <a href="https://cloud.r-project.org">CRAN</a>. Pour les utilisateurs de Windows et de Mac, nous te suggérons de télécharger et d’installer les versions binaires précompilées. Il existe des instructions assez complètes pour installer R pour chaque système d’exploitation (<a href="https://cran.r-project.org/bin/windows/">Windows</a>,<a href="https://cran.r-project.org/bin/macosx/">Mac</a> ou <a href="https://cran.r-project.org/bin/linux/">linux</a> ).</p>
-<p>Quel que soit le système d’exploitation que tu utilises, une fois que tu as installé R, tu dois vérifier qu’il fonctionne correctement. Le plus simple est de lancer R en double-cliquant sur l’icône R (Windows ou Mac) ou en tapant <code>R</code> dans la console (Linux). Tu devrais voir apparaître la Console R et tu devrais pouvoir taper des commandes R dans la Console après l’invite de commande <code>&gt;</code>. Essaie de taper le code R suivant et appuie sur Entrée :</p>
+<p>Bonne chance et n’oubliez pas de vous amuser.</p>
+</section><section id="installation-de-la-machine" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="installation-de-la-machine">
+<span class="header-section-number">1.1</span> Installation de la machine</h2>
+<section id="sec-install-r" class="level3" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="sec-install-r">
+<span class="header-section-number">1.1.1</span> Installation de R</h3>
+<p>Pour démarrer, la première chose à faire est d’installer R. R est disponible gratuitement pour les systèmes d’exploitation Windows, Mac et Linux à partir du <a href="https://cloud.r-project.org">site web du Comprehensive R Archive Network (CRAN)</a> . Pour les utilisateurs de Windows et de Mac, nous vous suggérons de télécharger et d’installer les versions binaires précompilées. Il existe des instructions assez complètes pour installer R pour chaque système d’exploitation ( <a href="https://cran.r-project.org/bin/windows/">Windows</a> , <a href="https://cran.r-project.org/bin/macosx/">Mac</a> ou <a href="https://cran.r-project.org/bin/linux/">linux</a> ).</p>
+<p>Quel que soit le système d’exploitation que vous utilisez, une fois que vous avez installé R, vous devez vérifier qu’il fonctionne correctement. La manière la plus simple de le faire est de lancer R en double-cliquant sur l’icône R (Windows ou Mac) ou en tapant <code>R</code> dans la console (Linux). La console R devrait s’afficher et vous devriez pouvoir taper des commandes R dans la console après l’invite de commande. <code>&gt;</code>. Essayez de taper le code R suivant et appuyez sur la touche Entrée :</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="01-debut_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-most-amazing" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-most-amazing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="01-debut_files/figure-html/fig-most-amazing-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-most-amazing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Most amazing plot, just useful to test R
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Un graphique des nombres 1 à 10 sur les axes x et y devrait apparaître. Si c’est le cas, tu peux commencer. Si ce n’est pas le cas, nous te suggérons de noter toutes les erreurs produites et d’utiliser Google pour résoudre le problème.</p>
+<p>Un graphique avec un seul point au centre devrait apparaître. Si c’est le cas, vous pouvez commencer. Si ce n’est pas le cas, nous vous suggérons de noter toutes les erreurs produites et d’utiliser ensuite votre moteur de recherche préféré pour résoudre le problème.</p>
 </section><section id="installation-dun-ide" class="level3" data-number="1.1.2"><h3 data-number="1.1.2" class="anchored" data-anchor-id="installation-dun-ide">
 <span class="header-section-number">1.1.2</span> Installation d’un IDE</h3>
-<p>Nous recommandons fortement d’utiliser un <strong>I</strong>ntégrée <strong>D</strong>développement <strong>E</strong>nvironnement de développement (IDE) pour travailler avec R. Un IDE simple et extrêmement populaire est <a href="https://rstudio.com/">RStudio</a>. Une alternative à RStudio est Visual Studio Code, ou <a href="https://code.visualstudio.com/">VSCode</a>. Un IDE peut être considéré comme un complément à R qui fournit une interface plus conviviale, incorporant la console R, un éditeur de scripts et d’autres fonctionnalités utiles (comme R markdown et l’intégration de Git Hub).</p>
+<p>Il est fortement recommandé d’utiliser un <strong>I</strong>ntégrée <strong>D</strong>éveloppement <strong>E</strong>nvironnement de développement (IDE) pour travailler avec R. Un IDE simple et extrêmement populaire est <a href="https://rstudio.com/">RStudio</a> . Une alternative à RStudio est Visual Studio Code, ou <a href="https://code.visualstudio.com/">VSCode</a> . Un IDE peut être considéré comme un complément à R qui fournit une interface plus conviviale, intégrant la console R, un éditeur de scripts et d’autres fonctionnalités utiles (comme R markdown et l’intégration de Git Hub).</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -495,7 +519,7 @@ Mise en garde
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Tu dois installer R avant d’installer un IDE (voir <a href="#sec-install_r" class="quarto-xref"><span>Section 1.1.1</span></a> pour plus de détails).</p>
+<p>Vous devez installer R avant d’installer un IDE (voir <a href="#sec-install-r" class="quarto-xref"><span>Section 1.1.1</span></a> pour plus de détails).</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -508,32 +532,31 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Lorsque nous nous référons à <strong>L’IDE</strong> dans la suite du texte, il s’agit de RStudio ou de VScode.</p>
+<p>Lorsque l’on se réfère à <strong>L’IDE</strong> dans la suite du texte, il s’agit de RStudio ou de VScode.</p>
 </div>
 </div>
 <section id="rstudio" class="level4" data-number="1.1.2.1"><h4 data-number="1.1.2.1" class="anchored" data-anchor-id="rstudio">
 <span class="header-section-number">1.1.2.1</span> RStudio</h4>
-<p>RStudio est disponible gratuitement pour les systèmes d’exploitation Windows, Mac et Linux et peut être téléchargé à partir du <a href="https://rstudio.com/products/rstudio/download">site de RStudio</a>. Tu dois sélectionner la version ‘RStudio Desktop’.</p>
+<p>RStudio est disponible gratuitement pour les systèmes d’exploitation Windows, Mac et Linux et peut être téléchargé à partir du <a href="https://rstudio.com/products/rstudio/download">site RStudio</a> . Vous devez sélectionner la version ‘RStudio Desktop’.</p>
 </section><section id="vscode" class="level4" data-number="1.1.2.2"><h4 data-number="1.1.2.2" class="anchored" data-anchor-id="vscode">
 <span class="header-section-number">1.1.2.2</span> VSCode</h4>
-<p>VSCode est disponible gratuitement pour les systèmes d’exploitation Windows, Mac et Linux et peut être téléchargé à partir du <a href="https://code.visualstudio.com/">site de VS Code</a>.</p>
-<p>En outre, tu dois installer le <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">l’extension R de VSCode</a>. Pour faire de VSCode une véritable centrale pour travailler avec R, nous te recommandons fortement d’installer également :</p>
+<p>VSCode est disponible gratuitement pour les systèmes d’exploitation Windows, Mac et Linux et peut être téléchargé à partir du <a href="https://code.visualstudio.com/">VS Code</a> .</p>
+<p>En outre, vous devez installer le logiciel <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">R pour VSCode</a>. Pour faire de VSCode une véritable centrale pour travailler avec R, nous vous recommandons fortement d’installer également :</p>
 <ul>
 <li>
 <a href="https://github.com/randy3k/radian">radian</a> radian : Une console R moderne qui corrige de nombreuses limitations du terminal R officiel et prend en charge de nombreuses fonctionnalités telles que la coloration syntaxique et l’autocomplétion.</li>
 <li>
-<a href="https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger">VSCode-R-Debugger</a> VSCode-R-Debugger : Une extension de VS Code pour prendre en charge les capacités de débogage de R.</li>
+<a href="https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger">VSCode-R-Debugger</a> VSCode-R-Debugger : Une extension de VS Code pour supporter les capacités de débogage de R.</li>
 <li>
-<a href="https://cran.r-project.org/web/packages/httpgd/index.html">httpgd</a>: Un paquetage R <span class="emoji" data-emoji="package">📦</span> pour fournir un dispositif graphique qui sert de façon asynchrone des graphiques SVG via HTTP et WebSockets.</li>
+<a href="https://cran.r-project.org/web/packages/httpgd/index.html">httpgd</a> httpgd : Un paquetage R :paquetage : pour fournir un dispositif graphique qui sert de manière asynchrone des graphiques SVG via HTTP et WebSockets.</li>
 </ul></section><section id="alternatives-à-rstudio-et-vscode" class="level4" data-number="1.1.2.3"><h4 data-number="1.1.2.3" class="anchored" data-anchor-id="alternatives-à-rstudio-et-vscode">
 <span class="header-section-number">1.1.2.3</span> Alternatives à RStudio et VSCode</h4>
-<p>Plutôt que d’utiliser un IDE “tout en un”, de nombreuses personnes choisissent d’utiliser R et un éditeur de script séparé pour écrire et exécuter le code R. Si tu ne sais pas ce qu’est un éditeur de script, tu peux l’assimiler à un traitement de texte, mais spécialement conçu pour écrire du code. Heureusement, de nombreux éditeurs de scripts sont disponibles gratuitement, alors n’hésite pas à les télécharger et à expérimenter jusqu’à ce que tu en trouves un qui te plaise. Certains éditeurs de scripts ne sont disponibles que pour certains systèmes d’exploitation et tous ne sont pas spécifiques à R. Tu trouveras ci-dessous des suggestions d’éditeurs de scripts. C’est à toi de choisir celui que tu veux : l’une des grandes qualités de R est que <em>TU</em> c’est que tu peux choisir comment tu veux utiliser R.</p>
+<p>Plutôt que d’utiliser un IDE “tout-en-un”, de nombreuses personnes choisissent d’utiliser R et un éditeur de script séparé pour écrire et exécuter du code R. Si vous ne savez pas ce qu’est un éditeur de script, vous pouvez l’assimiler à un traitement de texte, mais spécialement conçu pour écrire du code. Heureusement, de nombreux éditeurs de scripts sont disponibles gratuitement. N’hésitez donc pas à les télécharger et à les tester jusqu’à ce que vous en trouviez un qui vous convienne. Certains éditeurs de scripts ne sont disponibles que pour certains systèmes d’exploitation et tous ne sont pas spécifiques à R. Vous trouverez ci-dessous des suggestions d’éditeurs de scripts. C’est à vous de choisir celui qui vous convient le mieux : l’une des grandes qualités de R est que <em>VOUS</em> c’est que VOUS pouvez choisir comment vous voulez utiliser R.</p>
 <section id="éditeurs-de-texte-avancés" class="level5" data-number="1.1.2.3.1"><h5 data-number="1.1.2.3.1" class="anchored" data-anchor-id="éditeurs-de-texte-avancés">
 <span class="header-section-number">1.1.2.3.1</span> Éditeurs de texte avancés</h5>
 <p>Un moyen léger mais efficace de travailler avec R est d’utiliser des éditeurs de texte avancés tels que :</p>
 <ul>
-<li>
-<a href="https://atom.io/">Atom</a> (tous les systèmes d’exploitation)</li>
+<li>[Atom][atome] (tous les systèmes d’exploitation)</li>
 <li>
 <a href="https://www.barebones.com/products/bbedit/">BBedit</a> (Mac OS)</li>
 <li>
@@ -542,97 +565,120 @@ Note
 <a href="https://github.com/macvim-dev/macvim">MacVim</a> (Mac OS)</li>
 <li>
 <a href="https://www.nano-editor.org/">Nano</a> (Linux)</li>
-<li>
-<a href="en anglais">Notepad++</a> [bloc-notes] (Windows)</li>
+<li>[Notepad++ (en anglais)][bloc-notes] (Windows)</li>
 <li>
 <a href="https://www.sublimetext.com/">Sublime Text</a> (tous les systèmes d’exploitation)</li>
 <li>
 <a href="https://www.vim.org/">vim</a> et son extension <a href="https://github.com/jalvesaq/Nvim-R">NVim-R</a> (Linux)</li>
 </ul></section><section id="environnements-de-développement-intégrés" class="level5" data-number="1.1.2.3.2"><h5 data-number="1.1.2.3.2" class="anchored" data-anchor-id="environnements-de-développement-intégrés">
 <span class="header-section-number">1.1.2.3.2</span> Environnements de développement intégrés</h5>
-<p>Ces environnements sont plus puissants que de simples éditeurs de texte, et sont similaires à RStudio :</p>
+<p>Ces environnements sont plus puissants que de simples éditeurs de texte et sont similaires à RStudio :</p>
 <ul>
 <li>
-<a href="https://www.gnu.org/software/emacs/">Emacs</a> et son extension <a href="https://ess.r-project.org/">Emacs parle statistiques</a> (tous les systèmes d’exploitation)</li>
+<a href="https://www.gnu.org/software/emacs/">Emacs</a> et son extension <a href="https://ess.r-project.org/">Statistiques de Emacs Speaks</a> (tous les systèmes d’exploitation)</li>
 <li>
 <a href="https://rkward.kde.org/">RKWard</a> (Linux)</li>
 <li>
 <a href="https://sourceforge.net/projects/tinn-r/">Tinn-R</a> (Windows)</li>
 </ul></section></section></section></section><section id="sec-orient" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="sec-orient">
 <span class="header-section-number">1.2</span> Orientation de l’IDE</h2>
-<section id="sec-rstudio_orient" class="level3" data-number="1.2.1"><h3 data-number="1.2.1" class="anchored" data-anchor-id="sec-rstudio_orient">
+<section id="sec-rstudio-orient" class="level3" data-number="1.2.1"><h3 data-number="1.2.1" class="anchored" data-anchor-id="sec-rstudio-orient">
 <span class="header-section-number">1.2.1</span> RStudio</h3>
-<p>Lorsque tu ouvres R studio pour la première fois, tu devrais voir la présentation suivante (elle peut être légèrement différente sur un ordinateur Windows).</p>
+<p>Lorsque vous ouvrez RStudio pour la première fois, vous devriez voir la présentation suivante (elle peut être légèrement différente sur un ordinateur Windows).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_start" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_start-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_start-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: R studio main window
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>La grande fenêtre (ou volet) sur la gauche est le <strong>Console</strong> de la console. La fenêtre en haut à droite est la fenêtre <strong>Environnement / Histoire / Connexions</strong> et la fenêtre en bas à droite est la fenêtre <strong>Fichiers / Tracés / Paquets / Aide / Visionneuse</strong> de la fenêtre. Nous aborderons chacun de ces volets ci-dessous. Tu peux personnaliser l’emplacement de chaque volet en cliquant sur le menu “Outils” puis en sélectionnant Options globales –&gt; Disposition des volets. Tu peux redimensionner les volets en cliquant sur le milieu des bords de la fenêtre et en le faisant glisser dans la direction souhaitée. Il existe une multitude d’autres façons de <a href="https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio">personnaliser</a> RStudio.</p>
+<p>La grande fenêtre (ou volet) de gauche est le module <strong>la console</strong> de la console. La fenêtre en haut à droite est la fenêtre <strong>Environnement / Histoire / Connexions</strong> et la fenêtre en bas à droite est le volet <strong>Fichiers / Tracés / Paquets / Aide / Visionneuse</strong> . Nous aborderons chacun de ces volets dans les paragraphes qui suivent. Vous pouvez personnaliser l’emplacement de chaque volet en cliquant sur le menu “Outils”, puis en sélectionnant Options globales –&gt; Disposition des volets. Vous pouvez redimensionner les volets en cliquant sur le milieu des bords de la fenêtre et en le faisant glisser dans la direction souhaitée. Il existe une multitude d’autres façons de <a href="https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio">personnaliser</a> RStudio.</p>
 <section id="sec-cons" class="level4" data-number="1.2.1.1"><h4 data-number="1.2.1.1" class="anchored" data-anchor-id="sec-cons">
 <span class="header-section-number">1.2.1.1</span> Console</h4>
-<p>La console est le cheval de bataille de R. C’est là que R évalue tout le code que tu écris. Tu peux taper du code R directement dans la console à l’invite de la ligne de commande, <code>&gt;</code>. Par exemple, si tu tapes <code>2 + 2</code> dans la console, tu devrais obtenir la réponse <code>4</code> (rassurante). Ne t’inquiète pas pour le <code>[1]</code> au début de la ligne pour l’instant.</p>
+<p>La console est le cheval de bataille de R. C’est là que R évalue tout le code que vous écrivez. Vous pouvez taper du code R directement dans la console à l’invite de la ligne de commande, <code>&gt;</code>. Par exemple, si vous tapez <code>2 + 2</code> dans la console, vous devriez obtenir la réponse <code>4</code> (rassurante). Ne vous préoccupez pas du <code>[1]</code> au début de la ligne pour l’instant.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/rconsole_eval.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_console" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_console-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/rconsole_eval.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_console-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3: R studio console view
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Cependant, dès que tu commences à écrire plus de code R, cela devient plutôt encombrant. Au lieu de taper le code R directement dans la console, une meilleure approche consiste à créer un script R. Un script R est un simple fichier texte avec une balise <code>.R</code> qui contient tes lignes de code R. Ces lignes de code sont ensuite introduites dans la console R, ligne par ligne. Pour créer un nouveau script R, clique sur le menu “Fichier” puis sélectionne Nouveau fichier –&gt; Script R.</p>
+<p>Cependant, dès que vous commencez à écrire plus de code R, cela devient plutôt encombrant. Au lieu de taper le code R directement dans la console, il est préférable de créer un script R. Un script R est un simple fichier texte avec une balise <code>.R</code> qui contient vos lignes de code R. Ces lignes de code sont ensuite introduites dans la console R, ligne par ligne. Pour créer un nouveau script R, cliquez sur le menu “Fichier”, puis sélectionnez Nouveau fichier –&gt; Script R.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_script.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_newscript" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_script.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4: R studio creating a new script file
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Tu remarqueras qu’une nouvelle fenêtre (appelée volet Source) apparaît en haut à gauche de RStudio et que la console se trouve maintenant en bas à gauche. La nouvelle fenêtre est un éditeur de script et c’est là que tu écriras ton code.</p>
+<p>Vous remarquerez qu’une nouvelle fenêtre (appelée volet Source) apparaît en haut à gauche de RStudio et que la console se trouve désormais en bas à gauche. La nouvelle fenêtre est un éditeur de script et c’est là que vous écrirez votre code.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/rstudio_new.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_new" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_new-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/rstudio_new.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_new-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.5: R studio main view with a new script
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Pour faire passer ton code de ton éditeur de script à la console, place ton curseur sur la ligne de code, puis clique sur le bouton “Exécuter” en haut à droite de la fenêtre de l’éditeur de script.</p>
+<p>Pour transférer votre code de votre éditeur de script à la console, placez simplement votre curseur sur la ligne de code, puis cliquez sur le bouton “Exécuter” en haut à droite de la fenêtre de l’éditeur de script.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/rstudio_run.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-rstudio_run" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rstudio_run-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/rstudio_run.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio_run-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.6: R studio run button
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Tu devrais voir le résultat dans la fenêtre de la console. Si le fait de cliquer sur le bouton “Exécuter” devient fastidieux, tu peux utiliser le raccourci clavier “ctrl + entrée” (sous Windows et Linux) ou “cmd + entrée” (sous Mac). Tu peux enregistrer tes scripts R sous la forme d’un fichier <code>.R</code> en sélectionnant le menu ‘Fichier’ et en cliquant sur enregistrer. Remarque que le nom du fichier dans l’onglet devient rouge pour te rappeler que tu as des modifications non enregistrées. Pour ouvrir ton script R dans RStudio, sélectionne le menu ‘Fichier’ puis ‘Ouvrir le fichier…’. Enfin, il est bon de noter que, bien que les scripts R soient enregistrés avec un nom de fichier <code>.R</code> il s’agit en fait de simples fichiers texte qui peuvent être ouverts avec n’importe quel éditeur de texte.</p>
+<p>Vous devriez voir le résultat dans la fenêtre de la console. Si cliquer sur le bouton “Exécuter” devient fastidieux, vous pouvez utiliser le raccourci clavier “ctrl + entrée” (sous Windows et Linux) ou “cmd + entrée” (sous Mac). Vous pouvez enregistrer vos scripts R sous la forme d’un fichier <code>.R</code> en sélectionnant le menu “Fichier” et en cliquant sur “Enregistrer”. Notez que le nom du fichier dans l’onglet devient rouge pour vous rappeler que des modifications n’ont pas été enregistrées. Pour ouvrir votre script R dans RStudio, sélectionnez le menu “Fichier”, puis “Ouvrir le fichier…”. Enfin, il convient de noter que, bien que les scripts R soient enregistrés avec un nom de fichier <code>.R</code> il s’agit en fait de fichiers texte simples qui peuvent être ouverts avec n’importe quel éditeur de texte.</p>
 </section><section id="environnementhistoireconnexions" class="level4" data-number="1.2.1.2"><h4 data-number="1.2.1.2" class="anchored" data-anchor-id="environnementhistoireconnexions">
 <span class="header-section-number">1.2.1.2</span> Environnement/Histoire/Connexions</h4>
-<p>La fenêtre Environnement / Historique / Connexions te montre de nombreuses informations utiles. Tu peux accéder à chaque composant en cliquant sur l’onglet approprié dans le volet.</p>
+<p>La fenêtre Environnement / Historique / Connexions contient de nombreuses informations utiles. Vous pouvez accéder à chaque composant en cliquant sur l’onglet approprié dans le volet.</p>
 <ul>
-<li><p>L’onglet ‘Environnement’ affiche tous les objets que tu as créés dans l’environnement actuel (global). Ces objets peuvent être des données que tu as importées ou des fonctions que tu as écrites. Les objets peuvent être affichés sous forme de liste ou de grille en sélectionnant ton choix dans le bouton déroulant situé en haut à droite de la fenêtre. Si tu es dans le format Grille, tu peux supprimer des objets de l’environnement en cochant la case vide à côté du nom de l’objet, puis en cliquant sur l’icône du balai. Il existe également un bouton “Importer un ensemble de données” qui permet d’importer des données sauvegardées dans différents formats de fichiers. Cependant, nous te conseillons de ne pas utiliser cette approche pour importer tes données car elle n’est pas reproductible et donc pas robuste (voir <span class="quarto-unresolved-ref">?sec-data-r</span> pour plus de détails).</p></li>
-<li><p>L’onglet ‘Historique’ contient une liste de toutes les commandes que tu as entrées dans la console R. Tu peux rechercher dans ton historique la ligne de code que tu as oubliée, renvoyer le code sélectionné dans la Console ou la fenêtre Source. En général, nous n’utilisons jamais cette fonction car nous nous référons toujours à notre script R.</p></li>
-<li><p>L’onglet “Connexions” te permet de te connecter à diverses sources de données telles que des bases de données externes.</p></li>
+<li><p>L’onglet “Environnement” affiche tous les objets que vous avez créés dans l’environnement actuel (global). Ces objets peuvent être des données que vous avez importées ou des fonctions que vous avez écrites. Les objets peuvent être affichés sous forme de liste ou de grille en sélectionnant votre choix dans le bouton déroulant situé en haut à droite de la fenêtre. Si vous utilisez le format Grille, vous pouvez supprimer des objets de l’environnement en cochant la case vide située à côté du nom de l’objet, puis en cliquant sur l’icône représentant un balai. Il existe également un bouton “Importer un ensemble de données” qui permet d’importer des données sauvegardées dans différents formats de fichiers. Cependant, nous vous conseillons de ne pas utiliser cette approche pour importer vos données car elle n’est pas reproductible et donc pas robuste (voir <a href="03-donnees.html" class="quarto-xref"><span>Chapitre 3</span></a> pour plus de détails).</p></li>
+<li><p>L’onglet “Historique” contient une liste de toutes les commandes que vous avez saisies dans la console R. Vous pouvez rechercher dans votre historique la ligne de code que vous avez oubliée, renvoyer le code sélectionné dans la Console ou dans la fenêtre Source. En général, nous n’utilisons jamais cette fonction car nous nous référons toujours à notre script R.</p></li>
+<li><p>L’onglet “Connexions” vous permet de vous connecter à diverses sources de données telles que des bases de données externes.</p></li>
 </ul></section><section id="fichiersplotspackagesaideviewer" class="level4" data-number="1.2.1.3"><h4 data-number="1.2.1.3" class="anchored" data-anchor-id="fichiersplotspackagesaideviewer">
 <span class="header-section-number">1.2.1.3</span> Fichiers/Plots/Packages/Aide/Viewer</h4>
 <ul>
-<li><p>L’onglet ‘Fichiers’ répertorie tous les fichiers et répertoires externes dans le répertoire de travail actuel de ton ordinateur. Il fonctionne comme l’explorateur de fichiers (Windows) ou le Finder (Mac). Tu peux ouvrir, copier, renommer, déplacer et supprimer les fichiers listés dans la fenêtre.</p></li>
-<li><p>L’onglet ‘Tracés’ est l’endroit où tous les tracés que tu as créés dans R sont affichés (à moins que tu ne dises le contraire à R). Tu peux “zoomer” sur les tracés pour les agrandir à l’aide du bouton de la loupe, et faire défiler les tracés créés précédemment à l’aide des boutons fléchés. Il est également possible d’exporter les tracés vers un fichier externe à l’aide du menu déroulant “Exporter”. Les tracés peuvent être exportés dans différents formats de fichiers tels que jpeg, png, pdf, tiff ou copiés dans le presse-papiers (bien qu’il soit probablement préférable d’utiliser les fonctions R appropriées pour ce faire - voir <span class="quarto-unresolved-ref">?sec-graphics_r</span> pour plus de détails).</p></li>
-<li><p>L’onglet ‘Paquets’ répertorie tous les paquets que tu as installés sur ton ordinateur. Tu peux également installer de nouveaux paquets et mettre à jour les paquets existants en cliquant respectivement sur les boutons ‘Installer’ et ‘Mettre à jour’.</p></li>
-<li><p>L’onglet ‘Aide’ affiche la documentation d’aide R pour n’importe quelle fonction. Nous verrons comment afficher les fichiers d’aide et comment rechercher de l’aide dans le <span class="quarto-unresolved-ref">?sec-basics_r</span>.</p></li>
-<li><p>L’onglet ‘Visionneuse’ affiche le contenu web local tel que les graphiques web générés par certains paquets.</p></li>
-</ul></section></section><section id="sec-vscode_orient" class="level3" data-number="1.2.2"><h3 data-number="1.2.2" class="anchored" data-anchor-id="sec-vscode_orient">
+<li><p>L’onglet “Fichiers” répertorie tous les fichiers et répertoires externes dans le répertoire de travail actuel de votre ordinateur. Il fonctionne comme l’explorateur de fichiers (Windows) ou le Finder (Mac). Vous pouvez ouvrir, copier, renommer, déplacer et supprimer les fichiers répertoriés dans la fenêtre.</p></li>
+<li><p>L’onglet “Tracés” est l’endroit où tous les tracés que vous créez dans R sont affichés (sauf indication contraire de votre part). Vous pouvez “zoomer” sur les tracés pour les agrandir à l’aide du bouton de la loupe et faire défiler les tracés créés précédemment à l’aide des boutons fléchés. Il est également possible d’exporter les tracés vers un fichier externe à l’aide du menu déroulant “Export”. Les tracés peuvent être exportés dans différents formats de fichiers tels que jpeg, png, pdf, tiff ou copiés dans le presse-papiers (bien qu’il soit probablement préférable d’utiliser les fonctions R appropriées pour ce faire - voir [<a href="04-graphique.html" class="quarto-xref"><span>Chapitre 4</span></a> pour plus de détails).</p></li>
+<li><p>L’onglet “Packages” répertorie tous les packages que vous avez installés sur votre ordinateur. Vous pouvez également installer de nouveaux paquets et mettre à jour les paquets existants en cliquant respectivement sur les boutons “Installer” et “Mettre à jour”.</p></li>
+<li><p>L’onglet “Aide” affiche la documentation d’aide R pour chaque fonction. Nous verrons comment consulter les fichiers d’aide et comment rechercher de l’aide dans <a href="02-base.html" class="quarto-xref"><span>Chapitre 2</span></a>).</p></li>
+<li><p>L’onglet “Viewer” affiche le contenu web local tel que les graphiques web générés par certains packages.</p></li>
+</ul></section></section><section id="sec-vscode-orient" class="level3" data-number="1.2.2"><h3 data-number="1.2.2" class="anchored" data-anchor-id="sec-vscode-orient">
 <span class="header-section-number">1.2.2</span> VSCode</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/vs_orient.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-vscode" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-vscode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/vs_orient.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vscode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.7: VSCode window overview
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -640,7 +686,7 @@ Note
 <span class="header-section-number">1.2.2.1</span> Panneau gauche</h4>
 <p>Contient :</p>
 <ul>
-<li>Gestionnaire de fichiers et aperçu des fichiers.</li>
+<li>Gestionnaire de fichiers et aperçu des fichiers</li>
 <li>Support R incluant l’environnement R / la recherche R / l’aide R / l’installation de paquets</li>
 <li>Interaction avec Github</li>
 </ul>
@@ -653,7 +699,7 @@ Note
 <img src="images/start/vs_file_panel.png" class="img-fluid figure-img" data-ref-parent="fig-vs-left-panel">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-vsfile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) fichier
+(a) volet des fichiers
 </figcaption></figure>
 </div>
 </div>
@@ -663,7 +709,7 @@ Note
 <img src="images/start/vs_git_panel.png" class="img-fluid figure-img" data-ref-parent="fig-vs-left-panel">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-vsgit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) git
+(b) volet git
 </figcaption></figure>
 </div>
 </div>
@@ -673,29 +719,33 @@ Note
 <img src="images/start/vs_r_ext_panel.png" class="img-fluid figure-img" data-ref-parent="fig-vs-left-panel">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-vsr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(c) r-ext
+(c) Volet R
 </figcaption></figure>
 </div>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vs-left-panel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: VS Code panneau de gauche
+Figure&nbsp;1.8: VS Code panneau de gauche
 </figcaption></figure>
 </div>
 </section><section id="onglets-de-léditeur" class="level4" data-number="1.2.2.2"><h4 data-number="1.2.2.2" class="anchored" data-anchor-id="onglets-de-léditeur">
 <span class="header-section-number">1.2.2.2</span> Onglets de l’éditeur</h4>
 <p>Comprend :</p>
 <ul>
-<li>panneau de tracé (avec historique et navigation)</li>
+<li>un tableau de bord (avec historique et navigation)</li>
 <li>édition de scripts</li>
 <li>panneaux de prévisualisation</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/vs_editor_tabs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-vscode-tabs" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-vscode-tabs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/vs_editor_tabs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vscode-tabs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.9: VSCode editor tabs and preview panels
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -703,267 +753,232 @@ Figure&nbsp;1.1: VS Code panneau de gauche
 <span class="header-section-number">1.2.2.3</span> Fenêtre du terminal</h4>
 <p>Contient :</p>
 <ul>
-<li>le terminal permettant d’avoir une session R ou tout autre type de terminaux nécessaires (bash/tmux/). Il peut être divisé et exécuter plusieurs sessions en même temps.</li>
+<li>le terminal permettant d’avoir une session R ou tout autre type de terminal nécessaire (bash/tmux/). Il peut être divisé et exécuter plusieurs sessions en même temps.</li>
 <li>un panneau de problèmes mettant en évidence les problèmes de grammaire et de codage</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/vs_term_panel.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-vscode-term" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-vscode-term-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/vs_term_panel.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vscode-term-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.10: VSCode terminal window
+</figcaption></figure>
 </div>
 </div>
 </div>
-</section></section></section><section id="sec-packages" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="sec-packages">
-<span class="header-section-number">1.3</span> Paquets R</h2>
-<p>L’installation de base de R est livrée en standard avec de nombreux paquets utiles. Ces paquets contiennent de nombreuses fonctions que tu utiliseras au quotidien. Cependant, lorsque tu commenceras à utiliser R pour des projets plus variés (et que ton utilisation de R évoluera), tu verras qu’il arrivera un moment où tu auras besoin d’étendre les capacités de R. Heureusement, plusieurs milliers d’utilisateurs de R ont développé un code utile et l’ont partagé sous forme de paquets installables. Tu peux considérer un paquet comme une collection de fonctions, de données et de fichiers d’aide rassemblés dans une structure standard bien définie que tu peux télécharger et installer dans R. Ces paquets peuvent être téléchargés à partir de diverses sources, mais les plus populaires sont les suivantes <a href="https://cran.r-project.org/web/packages/index.html">CRAN</a>, <a href="https://www.bioconductor.org/">Bioconductor</a> et <a href="https://github.com/">GitHub</a>. Actuellement, le CRAN héberge plus de 15 000 paquets et est le dépôt officiel des paquets R fournis par les utilisateurs. Bioconductor fournit des logiciels open source orientés vers la bio-informatique et héberge plus de 1800 paquets R. GitHub est un site Web qui héberge des dépôts git pour toutes sortes de logiciels et de projets (pas seulement R). Souvent, les versions de développement de pointe des paquets R sont hébergées sur GitHub, donc si tu as besoin de toutes les nouvelles cloches et sifflets, cela peut être une option. Cependant, l’inconvénient potentiel de l’utilisation de la version de développement d’un paquetage R est qu’elle peut ne pas être aussi stable que la version hébergée sur CRAN (elle est en cours de développement !) et que la mise à jour des paquets n’est pas automatique.</p>
-<section id="sec-cran_packages" class="level3" data-number="1.3.1"><h3 data-number="1.3.1" class="anchored" data-anchor-id="sec-cran_packages">
-<span class="header-section-number">1.3.1</span> Paquets CRAN</h3>
-<p>Pour installer un paquet à partir du CRAN, tu peux utiliser la commande <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> fonction. Par exemple, si tu veux installer le paquet <code>remotes</code> entre le code suivant dans la fenêtre Console de RStudio (note : tu auras besoin d’une connexion internet pour faire cela)</p>
+</section></section></section><section id="sec-work-d" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="sec-work-d">
+<span class="header-section-number">1.3</span> Répertoires de travail</h2>
+<p>Le répertoire de travail est l’emplacement par défaut où R cherchera les fichiers que vous souhaitez charger et où il placera tous les fichiers que vous enregistrez. L’un des avantages de l’utilisation des projets RStudio est que lorsque vous ouvrez un projet, il définit automatiquement votre répertoire de travail à l’emplacement approprié. Vous pouvez vérifier le chemin d’accès de votre répertoire de travail en utilisant l’une des méthodes suivantes <code><a href="https://rdrr.io/r/base/getwd.html">getwd()</a></code> ou <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> fonctions.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Il te sera peut-être demandé de choisir un miroir CRAN, sélectionne simplement ‘0-cloud’ ou un miroir proche de ton emplacement. Le <code>dependencies = TRUE</code> permet de s’assurer que les paquets supplémentaires nécessaires seront également installés.</p>
-<p>C’est une bonne pratique de mettre régulièrement à jour tes paquets précédemment installés pour avoir accès aux nouvelles fonctionnalités et aux corrections de bogues. Pour mettre à jour les paquets CRAN, tu peux utiliser la commande <code><a href="https://rdrr.io/r/utils/update.packages.html">update.packages()</a></code> (tu auras besoin d’une connexion Internet fonctionnelle pour cela)</p>
-<div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/update.packages.html">update.packages</a></span><span class="op">(</span>ask <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>La fonction <code>ask = FALSE</code> évite d’avoir à confirmer chaque téléchargement de paquet, ce qui peut être pénible si tu as beaucoup de paquets installés.</p>
-</section><section id="paquets-bioconductor" class="level3" data-number="1.3.2"><h3 data-number="1.3.2" class="anchored" data-anchor-id="paquets-bioconductor">
-<span class="header-section-number">1.3.2</span> Paquets Bioconductor</h3>
-<p>Pour installer les paquets de Bioconductor, le processus est <a href="https://cran.r-project.org/web/packages/BiocManager/vignettes/BiocManager.html">un peu différent</a>. Tu dois d’abord installer le <code>BiocManager</code> <span class="emoji" data-emoji="package">📦</span> paquet. Tu ne dois le faire qu’une seule fois, à moins que tu ne réinstalles ou mettes à jour R.</p>
-<div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Une fois que le <code>BiocManager</code> <span class="emoji" data-emoji="package">📦</span> a été installé, tu peux soit installer tous les paquets “de base” de Bioconductor à l’aide de la commande</p>
-<div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>ou installer des paquets spécifiques tels que le <code>GenomicRanges</code> <span class="emoji" data-emoji="package">📦</span> et <code>edgeR</code> <span class="emoji" data-emoji="package">📦</span> paquets</p>
-<div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"GenomicRanges"</span>, <span class="st">"edgeR"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Pour mettre à jour les paquets de Bioconductor, il suffit d’utiliser la commande <code>BiocManager::install()</code> à nouveau</p>
-<div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span>ask <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Encore une fois, tu peux utiliser la fonction <code>ask = FALSE</code> pour éviter d’avoir à confirmer chaque téléchargement de paquet.</p>
-</section><section id="paquets-github" class="level3" data-number="1.3.3"><h3 data-number="1.3.3" class="anchored" data-anchor-id="paquets-github">
-<span class="header-section-number">1.3.3</span> Paquets GitHub</h3>
-<p>Il existe de multiples options pour installer des paquets hébergés sur GitHub. La méthode la plus efficace est sans doute d’utiliser la fonction <code><a href="https://remotes.r-lib.org/reference/install_github.html">install_github()</a></code> de la fonction <code>remotes</code> <span class="emoji" data-emoji="package">📦</span> (tu as installé ce paquet précédemment, <a href="#sec-cran_packages" class="quarto-xref"><span>Section 1.3.1</span></a>). Avant d’utiliser la fonction, tu devras connaître le nom d’utilisateur GitHub du propriétaire du dépôt ainsi que le nom du dépôt. Par exemple, la version de développement de <code>dplyr</code> <span class="emoji" data-emoji="package">📦</span> de Hadley Wickham est hébergée sur le compte GitHub de tidyverse et porte le nom de dépôt ” dplyr ” (il suffit de taper ” github dplyr ” sur Google). Pour installer cette version depuis GitHub, utilise</p>
-<div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"tidyverse/dplyr"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Le moyen le plus sûr (à notre connaissance) de mettre à jour un paquetage installé depuis GitHub est de le réinstaller en utilisant la commande ci-dessus.</p>
-</section><section id="utilisation-des-paquets" class="level3" data-number="1.3.4"><h3 data-number="1.3.4" class="anchored" data-anchor-id="utilisation-des-paquets">
-<span class="header-section-number">1.3.4</span> Utilisation des paquets</h3>
-<p>Une fois que tu as installé un paquet sur ton ordinateur, il n’est pas immédiatement disponible pour que tu puisses l’utiliser. Pour utiliser un paquet, tu dois d’abord le charger à l’aide de la commande <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> en utilisant la fonction Par exemple, pour charger le paquet <code>remotes</code> <span class="emoji" data-emoji="package">📦</span> que tu as précédemment installé</p>
-<div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org">remotes</a></span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Le <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> chargera également tous les paquets supplémentaires nécessaires et pourra imprimer des informations supplémentaires sur les paquets. Il est important de savoir qu’à chaque fois que tu démarres une nouvelle session R (ou que tu restaures une session précédemment sauvegardée), tu dois charger les paquets que tu vas utiliser. Nous avons tendance à mettre tous nos <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> nécessaires à notre analyse en haut de nos scripts R pour les rendre facilement accessibles et faciles à compléter au fur et à mesure que notre code se développe. Si tu essaies d’utiliser une fonction sans avoir au préalable chargé le package R correspondant, tu recevras un message d’erreur indiquant que R n’a pas pu trouver la fonction. Par exemple, si tu essaies d’utiliser la fonction <code><a href="https://remotes.r-lib.org/reference/install_github.html">install_github()</a></code> sans charger le paquetage <code>remotes</code> <span class="emoji" data-emoji="package">📦</span> tu recevras l’erreur suivante</p>
-<div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"tidyverse/dplyr"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Error in install_github("tidyverse/dplyr") :</span></span>
-<span><span class="co">#  could not find function "install_github"</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Parfois, il peut être utile d’utiliser une fonction sans utiliser d’abord le package <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> fonction. Si, par exemple, tu n’utilises qu’une ou deux fonctions dans ton script et que tu ne veux pas charger toutes les autres fonctions d’un paquet, tu peux accéder directement à la fonction en spécifiant le nom du paquet suivi de deux points, puis du nom de la fonction.</p>
-<div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"tidyverse/dplyr"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>C’est ainsi que nous avons pu utiliser le <code>install()</code> et <code><a href="https://remotes.r-lib.org/reference/install_github.html">install_github()</a></code>fonctions <a href="#paquets-bioconductor">ci-dessus</a> sans charger les paquets au préalable<code>BiocManager</code> <span class="emoji" data-emoji="package">📦</span> et <code>remotes</code> <span class="emoji" data-emoji="package">📦</span> . La plupart du temps, nous recommandons d’utiliser le <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> fonction.</p>
-</section></section><section id="sec-work-d" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="sec-work-d">
-<span class="header-section-number">1.4</span> Répertoires de travail</h2>
-<p>Le répertoire de travail est l’emplacement par défaut où R cherchera les fichiers que tu veux charger et où il mettra les fichiers que tu enregistres. L’un des avantages de l’utilisation des projets RStudio est que lorsque tu ouvres un projet, il définit automatiquement ton répertoire de travail à l’emplacement approprié. Tu peux vérifier le chemin d’accès de ton répertoire de travail en utilisant l’une des deux méthodes suivantes <code><a href="https://rdrr.io/r/base/getwd.html">getwd()</a></code> ou <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> fonctions.</p>
-<div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "/home/julien/Documents/courses/biostats/R_way/lang/fr"</code></pre>
 </div>
 </div>
-<p>Dans l’exemple ci-dessus, le répertoire de travail est un dossier appelé ‘R_way’ qui est un sous-dossier de ‘biostats’ dans le dossier ‘courses’ qui lui-même se trouve dans un dossier ‘Documents’ situé dans le dossier ‘julien’ qui lui-même se trouve dans le dossier ‘home’. Sur un ordinateur fonctionnant sous Windows, notre répertoire de travail comprendrait également une lettre de lecteur (par ex. <code>C:\home\julien\Documents\courses\biostats\R_way</code>).</p>
-<p>Si tu n’utilises pas d’IDE, tu dois définir ton répertoire de travail à l’aide de la commande <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> au début de chaque script R (ce que nous avons fait pendant de nombreuses années).</p>
+<p>Dans l’exemple ci-dessus, le répertoire de travail est un dossier appelé “R_way” qui est un sous-dossier de “biostats” dans le dossier “courses” qui lui-même se trouve dans un dossier “Documents” situé dans le dossier “julien” qui lui-même se trouve dans le dossier “home”. Sur un ordinateur fonctionnant sous Windows, notre répertoire de travail comprendrait également une lettre de lecteur (c.-à-d. <code>C:\home\julien\Documents\courses\biostats\R_way</code>).</p>
+<p>Si vous n’utilisez pas d’IDE, vous devez définir votre répertoire de travail à l’aide de la commande <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> au début de chaque script R (ce que nous avons fait pendant de nombreuses années).</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"/home/julien/Documents/courses/biostats/R_way/"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"/home/julien/Documents/courses/biostats/R_way/"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Cependant, le problème avec <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> est qu’il utilise un <em>absolu</em> qui est spécifique à l’ordinateur sur lequel tu travailles. Si tu veux envoyer ton script à quelqu’un d’autre (ou si tu travailles sur un autre ordinateur), ce chemin d’accès absolu ne fonctionnera pas sur l’ordinateur de ton ami/collègue car la configuration de son répertoire sera différente (il est peu probable que tu aies une structure de répertoire <code>/home/julien/Documents/courses/biostats/</code> sur ton ordinateur). Il en résulte un projet qui n’est pas autonome et qui n’est pas facilement transportable. Les IDE résolvent ce problème en te permettant d’utiliser <em>relatif</em> qui sont relatifs au fichier <em>racine</em> du projet. Le répertoire du projet racine est simplement le répertoire qui contient le fichier <code>.Rproj</code> dans Rstudio (<code>first_project.Rproj</code> dans notre cas) ou le dossier de base de ton espace de travail dans VScode. Si tu veux partager ton analyse avec quelqu’un d’autre, il te suffit de copier l’ensemble du répertoire du projet et de l’envoyer à ton à ton collaborateur. Il lui suffira alors d’ouvrir le fichier du projet et tous les scripts R qui contiennent des références à des chemins de fichiers relatifs fonctionneront tout simplement. Par exemple, disons que tu as créé un sous-répertoire appelé <code>data</code> dans ton répertoire de projet racine qui contient un fichier délimité en csv appelé <code>mydata.csv</code> (nous aborderons les structures de répertoire ci-dessous (<a href="#sec-dir-struc" class="quarto-xref"><span>Section 1.5</span></a>)). Pour importer cette base de données dans un projet RStudio à l’aide de la fonction <code><a href="https://rdrr.io/r/utils/read.table.html">read.csv()</a></code> (ne t’inquiète pas pour l’instant, nous aborderons ce sujet de façon beaucoup plus détaillée dans le <span class="quarto-unresolved-ref">?sec-data-r</span>), tout ce que tu dois inclure dans ton script R est</p>
-<div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/mydata.csv"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Parce que le chemin d’accès au fichier <code>data/mydata.csv</code> est relatif au répertoire du projet, peu importe l’endroit où ton collaborateur enregistre le répertoire du projet sur son ordinateur, il fonctionnera toujours.</p>
-<p>Si tu n’utilises pas un projet RStudio ou un espace de travail VScode, tu devras soit définir le répertoire de travail en fournissant le chemin complet de ton répertoire, soit spécifier le chemin complet du fichier de données. Aucune de ces deux options n’est reproductible sur d’autres ordinateurs.</p>
-<div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"/home/julien/Documents/courses/biostats/R_way"</span><span class="op">)</span></span>
+<p>Cependant, le problème avec <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> est qu’il utilise un <em>absolue</em> spécifique à l’ordinateur sur lequel vous travaillez. Si vous souhaitez envoyer votre script à quelqu’un d’autre (ou si vous travaillez sur un autre ordinateur), ce chemin d’accès absolu ne fonctionnera pas sur l’ordinateur de votre ami/collègue, car la configuration de ses répertoires sera différente (il est peu probable que vous ayez une structure de répertoires <code>/home/julien/Documents/courses/biostats/</code> sur votre ordinateur). Il en résulte un projet qui n’est pas autonome et qui n’est pas facilement transportable. Les IDE résolvent ce problème en vous permettant d’utiliser des fichiers <em>relatif</em> qui sont relatifs au chemin d’accès au fichier <em>racine</em> du projet. Le répertoire du projet racine est simplement le répertoire qui contient le fichier <code>.Rproj</code> dans Rstudio (<code>first_project.Rproj</code> dans notre cas) ou le dossier de base de votre espace de travail dans VScode. Si vous souhaitez partager votre analyse avec quelqu’un d’autre, il vous suffit de copier le répertoire complet du projet et de l’envoyer à votre collaborateur. Il lui suffira alors d’ouvrir le fichier du projet et tous les scripts R qui contiennent des références à des chemins d’accès relatifs fonctionneront. Par exemple, disons que vous avez créé un sous-répertoire appelé <code>data</code> dans votre répertoire de projet racine, qui contient un fichier délimité au format csv appelé <code>mydata.csv</code> (nous aborderons les structures de répertoire plus loin dans <a href="#sec-dir-struc" class="quarto-xref"><span>Section 1.4</span></a>). Pour importer ce fichier dans un projet RStudio à l’aide de la commande <code><a href="https://rdrr.io/r/utils/read.table.html">read.csv()</a></code> (ne vous en préoccupez pas pour l’instant, nous aborderons cette question plus en détail dans <a href="03-donnees.html" class="quarto-xref"><span>Chapitre 3</span></a>), tout ce que vous devez inclure dans votre script R est</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/mydata.csv"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Parce que le chemin du fichier <code>data/mydata.csv</code> est relatif au répertoire du projet, peu importe où votre collaborateur enregistre le répertoire du projet sur son ordinateur, cela fonctionnera toujours.</p>
+<p>Si vous n’utilisez pas un projet RStudio ou un espace de travail VScode, vous devrez soit définir le répertoire de travail en fournissant le chemin complet de votre répertoire, soit spécifier le chemin complet du fichier de données. Aucune de ces deux options n’est reproductible sur d’autres ordinateurs.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"/home/julien/Documents/courses/biostats/R_way"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/mydata.csv"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>ou</p>
-<div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"/home/julien/Documents/courses/biostats/R_way/data/mydata.csv"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Pour ceux qui veulent pousser plus loin la notion de chemins d’accès relatifs, jette un coup d’œil à l’option <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> de la fonction <code>here</code>[paquet][ici]. Les <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> te permet de construire des chemins d’accès pour n’importe quel fichier par rapport au répertoire racine du projet qui sont également indépendants du système d’exploitation (fonctionne sur une machine Mac, Windows ou Linux). Par exemple, pour importer notre <code>mydata.csv</code> à partir du répertoire <code>data</code> il suffit d’utiliser :</p>
-<div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span> <span class="co"># you may need to install the here package first</span></span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"/home/julien/Documents/courses/biostats/R_way/data/mydata.csv"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pour ceux d’entre vous qui souhaitent pousser plus loin la notion de chemins d’accès relatifs aux fichiers, jetez un coup d’œil à l’option <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> de la fonction <code>here</code> [paquet][ici] . Les <code><a href="https://here.r-lib.org//reference/here.html">here()</a></code> vous permet de créer des chemins d’accès à n’importe quel fichier par rapport au répertoire racine du projet, qui ne dépendent pas du système d’exploitation (fonctionne sur une machine Mac, Windows ou Linux). Par exemple, pour importer notre <code>mydata.csv</code> à partir du répertoire <code>data</code> il suffit d’utiliser :</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span> <span class="co"># you may need to install the here package first</span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"mydata.csv"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="sec-dir-struc" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="sec-dir-struc">
-<span class="header-section-number">1.5</span> Structure du répertoire</h2>
-<p>En plus d’utiliser RStudio Projects, c’est aussi une très bonne pratique de structurer ton répertoire de travail d’une manière cohérente et logique pour t’aider et aider tes collaborateurs. Nous utilisons fréquemment la structure de répertoire suivante dans nos projets basés sur R.</p>
-<div class="cell" data-layout-align="default">
+</section><section id="sec-dir-struc" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="sec-dir-struc">
+<span class="header-section-number">1.4</span> Structure du répertoire</h2>
+<p>Outre l’utilisation de RStudio Projects, il est également conseillé de structurer votre répertoire de travail de manière cohérente et logique afin de vous aider, vous et vos collaborateurs. Nous utilisons fréquemment la structure de répertoire suivante dans nos projets basés sur R.</p>
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
+<div id="fig-dir-struc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-dir-struc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<p></p><figure class="figure"></figure><p></p>
-<div>
-<svg width="672" height="480" viewbox="0.00 0.00 403.88 478.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 474.8)"><polygon fill="white" stroke="transparent" points="-4,4 -4,-474.8 399.88,-474.8 399.88,4 -4,4"></polygon><!-- root --><g id="node1" class="node"><title>root</title>
-<ellipse fill="red" stroke="black" cx="34.62" cy="-452.8" rx="34.75" ry="18"></ellipse><text text-anchor="middle" x="34.62" y="-448.6" font-family="Times,serif" font-size="14.00">racine</text></g><!-- dot01 --><g id="node11" class="node"><title>dot01</title>
-<ellipse fill="black" stroke="black" cx="154.38" cy="-452.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot01 --><g id="edge1" class="edge"><title>root-&gt;dot01</title>
-<path fill="none" stroke="black" d="M69.37,-452.8C103.07,-452.8 150.31,-452.8 153.23,-452.8"></path></g><!-- dot1 --><g id="node12" class="node"><title>dot1</title>
-<ellipse fill="black" stroke="black" cx="34.62" cy="-398.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot1 --><g id="edge3" class="edge"><title>root-&gt;dot1</title>
-<path fill="none" stroke="black" d="M34.62,-434.38C34.62,-422.66 34.62,-410.94 34.62,-399.22"></path></g><!-- data --><g id="node2" class="node"><title>data</title>
-<ellipse fill="lightblue" stroke="black" cx="154.38" cy="-398.8" rx="45.24" ry="18"></ellipse><text text-anchor="middle" x="154.38" y="-394.6" font-family="Times,serif" font-size="14.00">Données</text></g><!-- dot21 --><g id="node16" class="node"><title>dot21</title>
-<ellipse fill="black" stroke="black" cx="154.38" cy="-344.8" rx="0" ry="0"></ellipse></g><!-- data&#45;&gt;dot21 --><g id="edge8" class="edge"><title>data-&gt;dot21</title>
-<path fill="none" stroke="black" d="M154.38,-380.38C154.38,-368.66 154.38,-356.94 154.38,-345.22"></path></g><!-- functions --><g id="node3" class="node"><title>functions</title>
-<ellipse fill="lightgreen" stroke="black" cx="154.38" cy="-290.8" rx="49.26" ry="18"></ellipse><text text-anchor="middle" x="154.38" y="-286.6" font-family="Times,serif" font-size="14.00">Fonctions</text></g><!-- dot22 --><g id="node17" class="node"><title>dot22</title>
-<ellipse fill="black" stroke="black" cx="154.38" cy="-236.8" rx="0" ry="0"></ellipse></g><!-- functions&#45;&gt;dot22 --><g id="edge11" class="edge"><title>functions-&gt;dot22</title>
-<path fill="none" stroke="black" d="M154.38,-272.38C154.38,-260.66 154.38,-248.94 154.38,-237.22"></path></g><!-- outputs --><g id="node4" class="node"><title>outputs</title>
-<ellipse fill="orange" stroke="black" cx="154.38" cy="-182.8" rx="37.72" ry="18"></ellipse><text text-anchor="middle" x="154.38" y="-178.6" font-family="Times,serif" font-size="14.00">Sorties</text></g><!-- dot23 --><g id="node18" class="node"><title>dot23</title>
-<ellipse fill="black" stroke="black" cx="154.38" cy="-128.8" rx="0" ry="0"></ellipse></g><!-- outputs&#45;&gt;dot23 --><g id="edge14" class="edge"><title>outputs-&gt;dot23</title>
-<path fill="none" stroke="black" d="M154.38,-164.38C154.38,-152.66 154.38,-140.94 154.38,-129.22"></path></g><!-- scripts --><g id="node5" class="node"><title>scripts</title>
-<ellipse fill="white" stroke="black" cx="154.38" cy="-74.8" rx="37.72" ry="18"></ellipse><text text-anchor="middle" x="154.38" y="-70.6" font-family="Times,serif" font-size="14.00">Scripts</text></g><!-- dot24 --><g id="node19" class="node"><title>dot24</title>
-<ellipse fill="black" stroke="black" cx="154.38" cy="-20.8" rx="0" ry="0"></ellipse></g><!-- scripts&#45;&gt;dot24 --><g id="edge17" class="edge"><title>scripts-&gt;dot24</title>
-<path fill="none" stroke="black" d="M154.38,-56.38C154.38,-44.66 154.38,-32.94 154.38,-21.22"></path></g><!-- wd --><g id="node6" class="node"><title>wd</title>
-<polygon fill="lightgrey" stroke="black" points="381.36,-470.8 254.03,-470.8 254.03,-434.8 381.36,-434.8 381.36,-470.8"></polygon><text text-anchor="middle" x="317.69" y="-448.6" font-family="Times,serif" font-size="14.00">répertoire de travail</text></g><!-- LOT1 --><g id="node7" class="node"><title>LOT1</title>
-<polygon fill="lightgrey" stroke="black" points="364.56,-374.2 270.82,-374.2 270.82,-315.4 364.56,-315.4 364.56,-374.2"></polygon><text text-anchor="middle" x="317.69" y="-357.4" font-family="Times,serif" font-size="14.00">brutes</text><text text-anchor="middle" x="317.69" y="-340.6" font-family="Times,serif" font-size="14.00"> traitées</text><text text-anchor="middle" x="317.69" y="-323.8" font-family="Times,serif" font-size="14.00"> metadonnées</text></g><!-- LOT2 --><g id="node8" class="node"><title>LOT2</title>
-<polygon fill="lightgrey" stroke="black" points="358.13,-254.8 277.25,-254.8 277.25,-218.8 358.13,-218.8 358.13,-254.8"></polygon><text text-anchor="middle" x="317.69" y="-232.6" font-family="Times,serif" font-size="14.00">fonctions R</text></g><!-- LOT4 --><g id="node9" class="node"><title>LOT4</title>
-<polygon fill="lightgrey" stroke="black" points="396.06,-41.4 239.32,-41.4 239.32,-0.2 396.06,-0.2 396.06,-41.4"></polygon><text text-anchor="middle" x="317.69" y="-25" font-family="Times,serif" font-size="14.00">scripts analyse</text><text text-anchor="middle" x="317.69" y="-8.2" font-family="Times,serif" font-size="14.00"> documents R markdown</text></g><!-- LOT3 --><g id="node10" class="node"><title>LOT3</title>
-<polygon fill="lightgrey" stroke="black" points="347.07,-158.2 288.32,-158.2 288.32,-99.4 347.07,-99.4 347.07,-158.2"></polygon><text text-anchor="middle" x="317.69" y="-141.4" font-family="Times,serif" font-size="14.00">pdf</text><text text-anchor="middle" x="317.69" y="-124.6" font-family="Times,serif" font-size="14.00"> html</text><text text-anchor="middle" x="317.69" y="-107.8" font-family="Times,serif" font-size="14.00"> figures</text></g><!-- dot01&#45;&gt;wd --><g id="edge2" class="edge"><title>dot01-&gt;wd</title>
-<path fill="none" stroke="black" d="M155.49,-452.8C158.06,-452.8 202.37,-452.8 243.88,-452.8"></path><polygon fill="black" stroke="black" points="244.07,-456.3 254.07,-452.8 244.07,-449.3 244.07,-456.3"></polygon></g><!-- dot1&#45;&gt;data --><g id="edge7" class="edge"><title>dot1-&gt;data</title>
-<path fill="none" stroke="black" d="M35.71,-398.8C37.55,-398.8 69.02,-398.8 98.95,-398.8"></path><polygon fill="black" stroke="black" points="98.99,-402.3 108.99,-398.8 98.99,-395.3 98.99,-402.3"></polygon></g><!-- dot2 --><g id="node13" class="node"><title>dot2</title>
-<ellipse fill="black" stroke="black" cx="34.62" cy="-290.8" rx="0" ry="0"></ellipse></g><!-- dot1&#45;&gt;dot2 --><g id="edge4" class="edge"><title>dot1-&gt;dot2</title>
-<path fill="none" stroke="black" d="M34.62,-398.38C34.62,-362.66 34.62,-326.94 34.62,-291.22"></path></g><!-- dot2&#45;&gt;functions --><g id="edge10" class="edge"><title>dot2-&gt;functions</title>
-<path fill="none" stroke="black" d="M35.71,-290.8C37.47,-290.8 66.26,-290.8 94.91,-290.8"></path><polygon fill="black" stroke="black" points="95,-294.3 105,-290.8 95,-287.3 95,-294.3"></polygon></g><!-- dot3 --><g id="node14" class="node"><title>dot3</title>
-<ellipse fill="black" stroke="black" cx="34.62" cy="-182.8" rx="0" ry="0"></ellipse></g><!-- dot2&#45;&gt;dot3 --><g id="edge5" class="edge"><title>dot2-&gt;dot3</title>
-<path fill="none" stroke="black" d="M34.62,-290.38C34.62,-254.66 34.62,-218.94 34.62,-183.22"></path></g><!-- dot3&#45;&gt;outputs --><g id="edge13" class="edge"><title>dot3-&gt;outputs</title>
-<path fill="none" stroke="black" d="M35.71,-182.8C37.71,-182.8 74.42,-182.8 106.32,-182.8"></path><polygon fill="black" stroke="black" points="106.45,-186.3 116.45,-182.8 106.45,-179.3 106.45,-186.3"></polygon></g><!-- dot4 --><g id="node15" class="node"><title>dot4</title>
-<ellipse fill="black" stroke="black" cx="34.62" cy="-74.8" rx="0" ry="0"></ellipse></g><!-- dot3&#45;&gt;dot4 --><g id="edge6" class="edge"><title>dot3-&gt;dot4</title>
-<path fill="none" stroke="black" d="M34.62,-182.38C34.62,-146.66 34.62,-110.94 34.62,-75.22"></path></g><!-- dot4&#45;&gt;scripts --><g id="edge16" class="edge"><title>dot4-&gt;scripts</title>
-<path fill="none" stroke="black" d="M35.71,-74.8C37.71,-74.8 74.42,-74.8 106.32,-74.8"></path><polygon fill="black" stroke="black" points="106.45,-78.3 116.45,-74.8 106.45,-71.3 106.45,-78.3"></polygon></g><!-- dot21&#45;&gt;LOT1 --><g id="edge9" class="edge"><title>dot21-&gt;LOT1</title>
-<path fill="none" stroke="black" d="M155.49,-344.8C158.41,-344.8 215.37,-344.8 260.76,-344.8"></path><polygon fill="black" stroke="black" points="260.84,-348.3 270.84,-344.8 260.84,-341.3 260.84,-348.3"></polygon></g><!-- dot22&#45;&gt;LOT2 --><g id="edge12" class="edge"><title>dot22-&gt;LOT2</title>
-<path fill="none" stroke="black" d="M155.49,-236.8C158.54,-236.8 220.68,-236.8 266.89,-236.8"></path><polygon fill="black" stroke="black" points="267.08,-240.3 277.08,-236.8 267.08,-233.3 267.08,-240.3"></polygon></g><!-- dot23&#45;&gt;LOT3 --><g id="edge15" class="edge"><title>dot23-&gt;LOT3</title>
-<path fill="none" stroke="black" d="M155.49,-128.8C158.8,-128.8 231.57,-128.8 278.2,-128.8"></path><polygon fill="black" stroke="black" points="278.29,-132.3 288.29,-128.8 278.29,-125.3 278.29,-132.3"></polygon></g><!-- dot24&#45;&gt;LOT4 --><g id="edge18" class="edge"><title>dot24-&gt;LOT4</title>
-<path fill="none" stroke="black" d="M155.49,-20.8C157.75,-20.8 192.39,-20.8 228.97,-20.8"></path><polygon fill="black" stroke="black" points="229.32,-24.3 239.32,-20.8 229.32,-17.3 229.32,-24.3"></polygon></g></g></svg>
+<svg width="672" height="480" viewbox="0.00 0.00 384.32 478.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 474.8)"><polygon fill="white" stroke="transparent" points="-4,4 -4,-474.8 380.32,-474.8 380.32,4 -4,4"></polygon><!-- root --><g id="node1" class="node"><title>root</title>
+<ellipse fill="red" stroke="black" cx="27" cy="-452.8" rx="27" ry="18"></ellipse><text text-anchor="middle" x="27" y="-448.6" font-family="Times,serif" font-size="14.00">root</text></g><!-- dot01 --><g id="node11" class="node"><title>dot01</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-452.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot01 --><g id="edge1" class="edge"><title>root-&gt;dot01</title>
+<path fill="none" stroke="black" d="M54.14,-452.8C85.1,-452.8 132.88,-452.8 135.83,-452.8"></path></g><!-- dot1 --><g id="node12" class="node"><title>dot1</title>
+<ellipse fill="black" stroke="black" cx="27" cy="-398.8" rx="0" ry="0"></ellipse></g><!-- root&#45;&gt;dot1 --><g id="edge3" class="edge"><title>root-&gt;dot1</title>
+<path fill="none" stroke="black" d="M27,-434.38C27,-422.66 27,-410.94 27,-399.22"></path></g><!-- data --><g id="node2" class="node"><title>data</title>
+<ellipse fill="lightblue" stroke="black" cx="136.98" cy="-398.8" rx="27.24" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-394.6" font-family="Times,serif" font-size="14.00">data</text></g><!-- dot21 --><g id="node16" class="node"><title>dot21</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-344.8" rx="0" ry="0"></ellipse></g><!-- data&#45;&gt;dot21 --><g id="edge8" class="edge"><title>data-&gt;dot21</title>
+<path fill="none" stroke="black" d="M136.98,-380.38C136.98,-368.66 136.98,-356.94 136.98,-345.22"></path></g><!-- functions --><g id="node3" class="node"><title>functions</title>
+<ellipse fill="lightgreen" stroke="black" cx="136.98" cy="-290.8" rx="46.95" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-286.6" font-family="Times,serif" font-size="14.00">functions</text></g><!-- dot22 --><g id="node17" class="node"><title>dot22</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-236.8" rx="0" ry="0"></ellipse></g><!-- functions&#45;&gt;dot22 --><g id="edge11" class="edge"><title>functions-&gt;dot22</title>
+<path fill="none" stroke="black" d="M136.98,-272.38C136.98,-260.66 136.98,-248.94 136.98,-237.22"></path></g><!-- outputs --><g id="node4" class="node"><title>outputs</title>
+<ellipse fill="orange" stroke="black" cx="136.98" cy="-182.8" rx="39.45" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-178.6" font-family="Times,serif" font-size="14.00">outputs</text></g><!-- dot23 --><g id="node18" class="node"><title>dot23</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-128.8" rx="0" ry="0"></ellipse></g><!-- outputs&#45;&gt;dot23 --><g id="edge14" class="edge"><title>outputs-&gt;dot23</title>
+<path fill="none" stroke="black" d="M136.98,-164.38C136.98,-152.66 136.98,-140.94 136.98,-129.22"></path></g><!-- scripts --><g id="node5" class="node"><title>scripts</title>
+<ellipse fill="white" stroke="black" cx="136.98" cy="-74.8" rx="36.5" ry="18"></ellipse><text text-anchor="middle" x="136.98" y="-70.6" font-family="Times,serif" font-size="14.00">scripts</text></g><!-- dot24 --><g id="node19" class="node"><title>dot24</title>
+<ellipse fill="black" stroke="black" cx="136.98" cy="-20.8" rx="0" ry="0"></ellipse></g><!-- scripts&#45;&gt;dot24 --><g id="edge17" class="edge"><title>scripts-&gt;dot24</title>
+<path fill="none" stroke="black" d="M136.98,-56.38C136.98,-44.66 136.98,-32.94 136.98,-21.22"></path></g><!-- wd --><g id="node6" class="node"><title>wd</title>
+<polygon fill="lightgrey" stroke="black" points="370.99,-470.8 225.28,-470.8 225.28,-434.8 370.99,-434.8 370.99,-470.8"></polygon><text text-anchor="middle" x="298.14" y="-448.6" font-family="Times,serif" font-size="14.00">your working directory</text></g><!-- LOT1 --><g id="node7" class="node"><title>LOT1</title>
+<polygon fill="lightgrey" stroke="black" points="335.34,-374.2 260.94,-374.2 260.94,-315.4 335.34,-315.4 335.34,-374.2"></polygon><text text-anchor="middle" x="298.14" y="-357.4" font-family="Times,serif" font-size="14.00">raw</text><text text-anchor="middle" x="298.14" y="-340.6" font-family="Times,serif" font-size="14.00"> processed</text><text text-anchor="middle" x="298.14" y="-323.8" font-family="Times,serif" font-size="14.00"> metadata</text></g><!-- LOT2 --><g id="node8" class="node"><title>LOT2</title>
+<polygon fill="lightgrey" stroke="black" points="338.58,-254.8 257.7,-254.8 257.7,-218.8 338.58,-218.8 338.58,-254.8"></polygon><text text-anchor="middle" x="298.14" y="-232.6" font-family="Times,serif" font-size="14.00">R functions</text></g><!-- LOT4 --><g id="node9" class="node"><title>LOT4</title>
+<polygon fill="lightgrey" stroke="black" points="376.51,-41.4 219.77,-41.4 219.77,-0.2 376.51,-0.2 376.51,-41.4"></polygon><text text-anchor="middle" x="298.14" y="-25" font-family="Times,serif" font-size="14.00">analysis scripts</text><text text-anchor="middle" x="298.14" y="-8.2" font-family="Times,serif" font-size="14.00"> R markdown documents</text></g><!-- LOT3 --><g id="node10" class="node"><title>LOT3</title>
+<polygon fill="lightgrey" stroke="black" points="327.51,-158.2 268.76,-158.2 268.76,-99.4 327.51,-99.4 327.51,-158.2"></polygon><text text-anchor="middle" x="298.14" y="-141.4" font-family="Times,serif" font-size="14.00">pdf</text><text text-anchor="middle" x="298.14" y="-124.6" font-family="Times,serif" font-size="14.00"> html</text><text text-anchor="middle" x="298.14" y="-107.8" font-family="Times,serif" font-size="14.00"> figures</text></g><!-- dot01&#45;&gt;wd --><g id="edge2" class="edge"><title>dot01-&gt;wd</title>
+<path fill="none" stroke="black" d="M138.09,-452.8C140.41,-452.8 177.22,-452.8 214.84,-452.8"></path><polygon fill="black" stroke="black" points="214.92,-456.3 224.92,-452.8 214.92,-449.3 214.92,-456.3"></polygon></g><!-- dot1&#45;&gt;data --><g id="edge7" class="edge"><title>dot1-&gt;data</title>
+<path fill="none" stroke="black" d="M28.08,-398.8C30.05,-398.8 68.85,-398.8 99.36,-398.8"></path><polygon fill="black" stroke="black" points="99.73,-402.3 109.73,-398.8 99.73,-395.3 99.73,-402.3"></polygon></g><!-- dot2 --><g id="node13" class="node"><title>dot2</title>
+<ellipse fill="black" stroke="black" cx="27" cy="-290.8" rx="0" ry="0"></ellipse></g><!-- dot1&#45;&gt;dot2 --><g id="edge4" class="edge"><title>dot1-&gt;dot2</title>
+<path fill="none" stroke="black" d="M27,-398.38C27,-362.66 27,-326.94 27,-291.22"></path></g><!-- dot2&#45;&gt;functions --><g id="edge10" class="edge"><title>dot2-&gt;functions</title>
+<path fill="none" stroke="black" d="M28.08,-290.8C29.64,-290.8 54.32,-290.8 79.69,-290.8"></path><polygon fill="black" stroke="black" points="79.77,-294.3 89.77,-290.8 79.77,-287.3 79.77,-294.3"></polygon></g><!-- dot3 --><g id="node14" class="node"><title>dot3</title>
+<ellipse fill="black" stroke="black" cx="27" cy="-182.8" rx="0" ry="0"></ellipse></g><!-- dot2&#45;&gt;dot3 --><g id="edge5" class="edge"><title>dot2-&gt;dot3</title>
+<path fill="none" stroke="black" d="M27,-290.38C27,-254.66 27,-218.94 27,-183.22"></path></g><!-- dot3&#45;&gt;outputs --><g id="edge13" class="edge"><title>dot3-&gt;outputs</title>
+<path fill="none" stroke="black" d="M28.08,-182.8C29.8,-182.8 59.49,-182.8 87.28,-182.8"></path><polygon fill="black" stroke="black" points="87.39,-186.3 97.39,-182.8 87.39,-179.3 87.39,-186.3"></polygon></g><!-- dot4 --><g id="node15" class="node"><title>dot4</title>
+<ellipse fill="black" stroke="black" cx="27" cy="-74.8" rx="0" ry="0"></ellipse></g><!-- dot3&#45;&gt;dot4 --><g id="edge6" class="edge"><title>dot3-&gt;dot4</title>
+<path fill="none" stroke="black" d="M27,-182.38C27,-146.66 27,-110.94 27,-75.22"></path></g><!-- dot4&#45;&gt;scripts --><g id="edge16" class="edge"><title>dot4-&gt;scripts</title>
+<path fill="none" stroke="black" d="M28.08,-74.8C29.86,-74.8 61.69,-74.8 90.31,-74.8"></path><polygon fill="black" stroke="black" points="90.65,-78.3 100.65,-74.8 90.65,-71.3 90.65,-78.3"></polygon></g><!-- dot21&#45;&gt;LOT1 --><g id="edge9" class="edge"><title>dot21-&gt;LOT1</title>
+<path fill="none" stroke="black" d="M138.09,-344.8C141.16,-344.8 204.93,-344.8 250.77,-344.8"></path><polygon fill="black" stroke="black" points="250.83,-348.3 260.83,-344.8 250.83,-341.3 250.83,-348.3"></polygon></g><!-- dot22&#45;&gt;LOT2 --><g id="edge12" class="edge"><title>dot22-&gt;LOT2</title>
+<path fill="none" stroke="black" d="M138.09,-236.8C141.09,-236.8 202.05,-236.8 247.61,-236.8"></path><polygon fill="black" stroke="black" points="247.65,-240.3 257.65,-236.8 247.65,-233.3 247.65,-240.3"></polygon></g><!-- dot23&#45;&gt;LOT3 --><g id="edge15" class="edge"><title>dot23-&gt;LOT3</title>
+<path fill="none" stroke="black" d="M138.09,-128.8C141.34,-128.8 212.47,-128.8 258.5,-128.8"></path><polygon fill="black" stroke="black" points="258.75,-132.3 268.75,-128.8 258.75,-125.3 258.75,-132.3"></polygon></g><!-- dot24&#45;&gt;LOT4 --><g id="edge18" class="edge"><title>dot24-&gt;LOT4</title>
+<path fill="none" stroke="black" d="M138.09,-20.8C140.3,-20.8 173.97,-20.8 209.75,-20.8"></path><polygon fill="black" stroke="black" points="209.88,-24.3 219.88,-20.8 209.88,-17.3 209.88,-24.3"></polygon></g></g></svg>
 </div>
-<p></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dir-struc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.11: Recommended directory structure for analysis with R
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Dans notre répertoire de travail, nous avons les répertoires suivants :</p>
 <ul>
-<li><p><strong>Racine</strong> - C’est le répertoire de ton projet qui contient tes <code>.Rproj</code>fichier . Nous avons tendance à garder tous les scripts R ou [Rq]md nécessaires à l’analyse/au rapport dans ce dossier racine ou dans le dossier scripts lorsqu’il y en a trop.</p></li>
-<li><p><strong>données</strong> - Nous stockons toutes nos données dans ce répertoire. Le sous-répertoire appelé <code>data</code> contient des fichiers de données brutes et uniquement des fichiers de données brutes. Ces fichiers doivent être traités comme des <strong>en lecture seule</strong> et ne doivent en aucun cas être modifiés. Si tu as besoin de traiter/nettoyer/modifier tes données, fais-le dans R (et non dans MS Excel) car tu pourras documenter (et justifier) toutes les modifications apportées. Toutes les données traitées doivent être sauvegardées dans un fichier séparé et stockées dans le fichier <code>processed_data</code> et stockées dans le sous-répertoire Les informations sur les méthodes de collecte des données, les détails du téléchargement des données et toute autre métadonnée utile doivent être sauvegardés dans un document texte (voir les fichiers texte README ci-dessous) dans le sous-répertoire <code>metadata</code> dans le sous-répertoire</p></li>
+<li><p><strong>Racine</strong> - Il s’agit du répertoire de votre projet contenant votre <code>.Rproj</code> fichier. Nous avons tendance à garder tous les scripts R ou [Rq] md nécessaires à l’analyse/au rapport dans ce dossier racine ou dans le dossier scripts s’il y en a trop.</p></li>
+<li><p><strong>données</strong> - Nous stockons toutes nos données dans ce répertoire. Le sous-répertoire appelé <code>data</code> contient des fichiers de données brutes et uniquement des fichiers de données brutes. Ces fichiers doivent être traités comme des <strong>en lecture seule</strong> et ne doivent en aucun cas être modifiés. Si vous devez traiter/nettoyer/modifier vos données, faites-le dans R (et non dans MS Excel), car vous pourrez documenter (et justifier) toutes les modifications apportées. Toutes les données traitées doivent être sauvegardées dans un fichier séparé et stockées dans le fichier <code>processed_data</code> . Les informations sur les méthodes de collecte des données, les détails du téléchargement des données et toute autre métadonnée utile doivent être sauvegardés dans un document texte (voir les fichiers README ci-dessous) dans le sous-répertoire <code>metadata</code> dans le sous-répertoire</p></li>
 <li><p><strong>fonctions</strong> - Il s’agit d’un répertoire facultatif dans lequel nous enregistrons toutes les fonctions R personnalisées que nous avons écrites pour l’analyse en cours. Celles-ci peuvent ensuite être importées dans R à l’aide de la commande <code><a href="https://rdrr.io/r/base/source.html">source()</a></code> fonction.</p></li>
-<li><p><strong>scripts</strong> - Un répertoire facultatif dans lequel nous enregistrons nos documents R markdown et/ou les principaux scripts R que nous avons écrits pour le projet en cours sont enregistrés ici si ce n’est pas dans le dossier racine.</p></li>
-<li><p><strong>sortie</strong> - Les sorties de nos scripts R, telles que les tracés, les fichiers HTML et les résumés de données, sont enregistrées dans ce répertoire. Cela nous aide, ainsi que nos collaborateurs, à distinguer les fichiers qui sont des sorties et ceux qui sont des fichiers sources.</p></li>
+<li><p><strong>scripts</strong> - Un répertoire optionnel où nous enregistrons nos documents R markdown et/ou les principaux scripts R que nous avons écrits pour le projet en cours sont enregistrés ici si ce n’est pas dans le dossier racine.</p></li>
+<li><p><strong>sortie</strong> - Les résultats de nos scripts R, tels que les graphiques, les fichiers HTML et les résumés de données, sont enregistrés dans ce répertoire. Cela nous aide, ainsi que nos collaborateurs, à distinguer les fichiers qui sont des sorties de ceux qui sont des fichiers sources.</p></li>
 </ul>
-<p>Bien sûr, la structure décrite ci-dessus est juste ce qui fonctionne pour nous la plupart du temps et doit être considérée comme un point de départ pour tes propres besoins. Nous avons tendance à avoir une structure de répertoire assez cohérente dans tous nos projets, car cela nous permet de nous orienter rapidement lorsque nous revenons à un projet après un certain temps. Cela dit, les besoins varient d’un projet à l’autre, c’est pourquoi nous ajoutons et supprimons des répertoires selon les besoins.</p>
-<p>Tu peux créer ta structure de répertoires à l’aide de l’Explorateur Windows (ou du Finder sur Mac) ou dans ton IDE en cliquant sur le bouton “Nouveau dossier” dans le panneau “Fichiers”.</p>
+<p>Bien entendu, la structure décrite ci-dessus est celle qui nous convient le mieux la plupart du temps et doit être considérée comme un point de départ pour vos propres besoins. Nous avons tendance à avoir une structure de répertoires assez cohérente dans tous nos projets, car cela nous permet de nous orienter rapidement lorsque nous revenons à un projet après un certain temps. Cela dit, les besoins varient d’un projet à l’autre et nous ajoutons ou supprimons des répertoires en fonction des besoins.</p>
+<p>Vous pouvez créer votre structure de répertoire à l’aide de l’explorateur Windows (ou du Finder sur Mac) ou dans votre IDE en cliquant sur le bouton “Nouveau dossier” dans le panneau “Fichiers”.</p>
 <p>Une autre approche consiste à utiliser la fonction <code><a href="https://rdrr.io/r/base/files2.html">dir.create()</a></code> de la console R.</p>
-<div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create directory called 'data'</span></span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create directory called 'data'</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">"data"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="sec-rsprojs" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="sec-rsprojs">
-<span class="header-section-number">1.6</span> Organisation des projets</h2>
-<p>Comme pour la plupart des choses dans la vie, lorsqu’il s’agit de traiter des données et de les analyser, les choses sont tellement plus simples si tu es organisé. Une organisation claire du projet permet à la fois à toi (et surtout au futur toi) et à tes collaborateurs de donner un sens à ce que tu as fait. Il n’y a rien de plus frustrant que de revenir à un projet des mois (parfois des années) plus tard et de devoir passer des jours (ou des semaines) à comprendre où tout se trouve, ce que tu as fait et pourquoi tu l’as fait. Un projet bien documenté qui a une structure cohérente et logique augmente la probabilité que tu puisses reprendre là où tu t’es arrêté avec un minimum d’agitation, peu importe le temps qui s’est écoulé. En outre, il est beaucoup plus facile d’écrire du code pour automatiser des tâches lorsque les fichiers sont bien organisés et portent des noms judicieux. Cela est d’autant plus vrai aujourd’hui qu’il n’a jamais été aussi facile de collecter de grandes quantités de données qui peuvent être sauvegardées dans des milliers, voire des centaines de milliers de fichiers de données distincts. Enfin, un projet bien organisé réduit le risque d’introduire des bogues ou des erreurs dans ton flux de travail et, s’ils se produisent (ce qui arrivera inévitablement à un moment ou à un autre), il est plus facile de repérer ces erreurs et de les traiter efficacement.</p>
-<p>Il y a aussi quelques mesures simples que tu peux prendre dès le début d’un projet pour aider à maintenir les choses en bon état.</p>
-<p>Une bonne façon d’organiser les choses est d’utiliser les espaces de travail RStudio Projects ou VSCode, appelés par la suite <code>project</code>. A <code>project</code> conserve tous tes scripts R, tes documents R markdown, tes fonctions R et tes données en un seul endroit. Ce qu’il y a de bien avec <code>project</code> est que chacun a son propre répertoire, son propre historique et ses propres documents sources, de sorte que les différentes analyses sur lesquelles tu travailles restent complètement séparées les unes des autres. Cela signifie que tu peux très facilement passer d’une analyse à l’autre. <code>projects</code> sans craindre qu’elles n’interfèrent l’une avec l’autre.</p>
-<section id="rstudio-1" class="level3" data-number="1.6.1"><h3 data-number="1.6.1" class="anchored" data-anchor-id="rstudio-1">
-<span class="header-section-number">1.6.1</span> RStudio</h3>
-<p>Pour créer un projet, ouvre RStudio et sélectionne <code>File</code> -&gt; <code>New Project...</code> dans le menu. Tu peux créer soit un tout nouveau projet, soit un projet à partir d’un répertoire existant, soit un projet à version contrôlée (voir <span class="quarto-unresolved-ref">?sec-github_r</span> pour plus de détails à ce sujet). Dans ce chapitre, nous allons créer un projet dans un nouveau répertoire.</p>
+</section><section id="sec-rsprojs" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="sec-rsprojs">
+<span class="header-section-number">1.5</span> Organisation des projets</h2>
+<p>Comme pour la plupart des choses de la vie, lorsqu’il s’agit de traiter des données et de les analyser, les choses sont tellement plus simples si vous êtes organisé. Une organisation claire du projet permet à la fois à vous (et surtout au futur vous) et à vos collaborateurs de donner un sens à ce que vous avez fait. Il n’y a rien de plus frustrant que de revenir à un projet des mois (parfois des années) plus tard et de devoir passer des jours (ou des semaines) à comprendre où tout se trouve, ce que vous avez fait et pourquoi vous l’avez fait. Un projet bien documenté, doté d’une structure cohérente et logique, augmente les chances de pouvoir reprendre le projet là où il s’est arrêté sans trop de difficultés, quel que soit le temps qui s’est écoulé. En outre, il est beaucoup plus facile d’écrire du code pour automatiser des tâches lorsque les fichiers sont bien organisés et portent des noms judicieux. Cela est d’autant plus vrai aujourd’hui qu’il n’a jamais été aussi facile de collecter de grandes quantités de données qui peuvent être sauvegardées dans des milliers, voire des centaines de milliers de fichiers de données distincts. Enfin, un projet bien organisé réduit le risque d’introduire des bogues ou des erreurs dans votre flux de travail et, s’ils se produisent (ce qui est inévitable à un moment ou à un autre), il est plus facile de retrouver ces erreurs et de les traiter efficacement.</p>
+<p>Il existe également quelques mesures simples que vous pouvez prendre dès le début d’un projet pour aider à maintenir les choses en bon état.</p>
+<p>Un bon moyen de garder les choses organisées est d’utiliser les projets RStudio ou les espaces de travail VSCode, désignés sous le nom de <code>project</code>. A <code>project</code> conserve tous vos scripts R, vos documents R markdown, vos fonctions R et vos données en un seul endroit. Ce qu’il y a de bien avec <code>project</code> est que chacun a son propre répertoire, son propre historique et ses propres documents sources, de sorte que les différentes analyses sur lesquelles vous travaillez sont complètement séparées les unes des autres. Cela signifie que vous pouvez très facilement passer d’une analyse à l’autre. <code>projects</code> sans craindre qu’elles n’interfèrent l’une avec l’autre.</p>
+<section id="rstudio-1" class="level3" data-number="1.5.1"><h3 data-number="1.5.1" class="anchored" data-anchor-id="rstudio-1">
+<span class="header-section-number">1.5.1</span> RStudio</h3>
+<p>Pour créer un projet, ouvrez RStudio et sélectionnez <code>File</code> -&gt; <code>New Project...</code> dans le menu. Vous pouvez créer un projet entièrement nouveau, un projet à partir d’un répertoire existant ou un projet à version contrôlée (voir le <a href="07-github.html" class="quarto-xref"><span>Chapitre 7</span></a> pour plus de détails à ce sujet). Dans ce chapitre, nous allons créer un projet dans un nouveau répertoire.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new_proj" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.12: R Studio creating a Project step 1
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Tu peux également créer un nouveau projet en cliquant sur le bouton “Projet” en haut à droite de RStudio et en sélectionnant “Nouveau projet…</p>
+<p>Vous pouvez également créer un nouveau projet en cliquant sur le bouton “Projet” en haut à droite de RStudio et en sélectionnant “Nouveau projet…</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
-</figure>
+<div id="fig-new_proj1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.13: R Studio creating a Project step 2
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Dans la fenêtre suivante, sélectionne ‘Nouveau projet’.</p>
+<p>Dans la fenêtre suivante, sélectionnez “Nouveau projet”.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new_proj2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.14: R Studio creating a Project step 3
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Saisis maintenant le nom du répertoire que tu veux créer dans le champ “Nom du répertoire :” (nous l’appellerons <code>first_project</code> pour ce chapitre). Si tu veux changer l’emplacement du répertoire sur ton ordinateur, clique sur le bouton ‘Parcourir…’ et navigue jusqu’à l’endroit où tu souhaites créer le répertoire. Nous cochons toujours la case “Ouvrir dans une nouvelle session”. Enfin, clique sur ‘Créer un projet’ pour créer le nouveau projet.</p>
+<p>Saisissez le nom du répertoire que vous souhaitez créer dans le champ “Nom du répertoire :” (nous l’appellerons <code>first_project</code> pour ce chapitre). Si vous souhaitez modifier l’emplacement du répertoire sur votre ordinateur, cliquez sur le bouton “Parcourir…” et naviguez jusqu’à l’endroit où vous souhaitez créer le répertoire. Nous cochons toujours la case “Ouvrir dans une nouvelle session”. Enfin, cliquez sur le bouton “Créer un projet” pour créer le nouveau projet.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new_proj3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.15: R Studio creating a Project step 4
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Une fois ton nouveau projet créé, tu auras un nouveau dossier sur ton ordinateur qui contiendra un fichier de projet RStudio appelé <code>first_project.Rproj</code>. Ce projet <code>.Rproj</code> contient diverses options de projet (mais tu ne devrais pas vraiment interagir avec lui) et peut également être utilisé comme raccourci pour ouvrir le projet directement à partir du système de fichiers (il suffit de double-cliquer dessus). Tu peux le vérifier dans l’onglet ‘Fichiers’ de RStudio (ou dans Finder si tu es sur un Mac ou dans l’Explorateur de fichiers sous Windows).</p>
+<p>Une fois votre nouveau projet créé, vous disposerez d’un nouveau dossier sur votre ordinateur contenant un fichier de projet RStudio appelé <code>first_project.Rproj</code>. Ce projet <code>.Rproj</code> contient diverses options de projet (mais vous ne devriez pas vraiment interagir avec lui) et peut également être utilisé comme raccourci pour ouvrir le projet directement à partir du système de fichiers (il suffit de double-cliquer dessus). Vous pouvez le vérifier dans l’onglet “Fichiers” de RStudio (ou dans Finder si vous êtes sur Mac ou dans l’Explorateur de fichiers sous Windows).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
+<div id="fig-new_proj4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.16: R Studio creating a Project final step
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>La dernière chose que nous te suggérons de faire est de sélectionner <code>Tools</code> -&gt; <code>Project Options...</code> dans le menu. Clique sur l’onglet ‘Général’ sur le côté gauche et modifie les valeurs de ‘Restaurer .RData dans l’espace de travail au démarrage’ et ‘Sauvegarder l’espace de travail dans .RData à la sortie’ de ‘Par défaut’ à ‘Non’. Ainsi, à chaque fois que tu ouvres ton projet, tu démarres avec une session R propre. Tu n’es pas obligé de faire cela (beaucoup de gens ne le font pas) mais nous préférons commencer avec un espace de travail complètement propre chaque fois que nous ouvrons nos projets pour éviter tout conflit potentiel avec des choses que nous avons faites dans des sessions précédentes (ce qui conduit parfois à des résultats surprenants et à des maux de tête pour trouver le problème). L’inconvénient de cette méthode est que tu devras réexécuter ton code R à chaque fois que tu ouvriras ton projet.</p>
+<p>La dernière chose que nous vous suggérons de faire est de sélectionner <code>Tools</code> -&gt; <code>Project Options...</code> dans le menu. Cliquez sur l’onglet “Général” sur le côté gauche et modifiez les valeurs pour “Restaurer .RData dans l’espace de travail au démarrage” et “Sauvegarder l’espace de travail dans .RData à la sortie” de “Par défaut” à “Non”. Cela garantit que chaque fois que vous ouvrez votre projet, vous démarrez avec une session R propre. Vous n’êtes pas obligé de faire cela (beaucoup de gens ne le font pas), mais nous préférons commencer avec un espace de travail complètement propre chaque fois que nous ouvrons nos projets pour éviter tout conflit potentiel avec des choses que nous avons faites dans des sessions précédentes (ce qui conduit parfois à des résultats surprenants et à des maux de tête pour résoudre le problème). L’inconvénient est que vous devrez réexécuter votre code R à chaque fois que vous ouvrirez votre projet.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/new_proj5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-new_proj5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-new_proj5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/new_proj5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new_proj5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.17: R Studio creating a Project changing options
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Maintenant que tu as mis en place un projet RStudio, tu peux commencer à créer des scripts R (ou R markdown/ Quarto, <span class="quarto-unresolved-ref">?sec-rmarkdown_r</span>) ou tout ce dont tu as besoin pour compléter ton projet. Tous les scripts R seront maintenant contenus dans le projet RStudio et enregistrés dans le dossier du projet.</p>
-</section><section id="vscode-1" class="level3" data-number="1.6.2"><h3 data-number="1.6.2" class="anchored" data-anchor-id="vscode-1">
-<span class="header-section-number">1.6.2</span> VSCode</h3>
-<p>sont similaires aux projets RStudio. Tu dois cependant créer un nouveau dossier avec un fichier R (ou un fichier texte) et l’enregistrer en tant qu’espace de travail.</p>
-</section></section><section id="sec-file_names" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="sec-file_names">
-<span class="header-section-number">1.7</span> Noms des fichiers</h2>
-<p>Le nom que tu donnes à tes fichiers a plus d’importance que tu ne le penses. Nommer les fichiers est également plus difficile que tu ne le penses. Pour qu’un nom de fichier soit “bon”, il faut qu’il soit informatif et relativement court. Ce n’est pas toujours un compromis facile et il faut souvent y réfléchir. Dans l’idéal, tu devrais essayer d’éviter les éléments suivants !</p>
+<p>Maintenant que vous avez mis en place un projet RStudio, vous pouvez commencer à créer des scripts R (ou des documents R markdown /Quarto, voir <a href="06-quarto.html" class="quarto-xref"><span>Chapitre 6</span></a>) ou tout ce dont vous avez besoin pour compléter votre projet. Tous les scripts R seront désormais contenus dans le projet RStudio et enregistrés dans le dossier du projet.</p>
+</section><section id="vscode-1" class="level3" data-number="1.5.2"><h3 data-number="1.5.2" class="anchored" data-anchor-id="vscode-1">
+<span class="header-section-number">1.5.2</span> VSCode</h3>
+<p>sont similaires aux projets RStudio. Vous devez cependant créer un nouveau dossier avec un fichier R (ou un fichier texte) et l’enregistrer en tant qu’espace de travail.</p>
+</section></section><section id="sec-file-names" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="sec-file-names">
+<span class="header-section-number">1.6</span> Nom des fichiers</h2>
+<p>Le nom que vous donnez à vos fichiers a plus d’importance que vous ne le pensez. Nommer les fichiers est également plus difficile que vous ne le pensez. Pour qu’un nom de fichier soit “bon”, il faut qu’il soit informatif et relativement court. Ce n’est pas toujours un compromis facile et il faut souvent y réfléchir. L’idéal est d’éviter les éléments suivants !</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/xkcd_files.png" class="img-fluid figure-img" style="width:30.0%"></p>
-<figcaption>source:https://xkcd.com/1459/</figcaption></figure>
+<div id="fig-fn" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-fn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/xkcd_files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.18: File renaming song (source:<a href="https://xkcd.com/1459/" class="uri">https://xkcd.com/1459/</a>)
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Bien qu’il n’y ait pas vraiment d’approche standard reconnue pour nommer les fichiers (en fait <a href="https://en.wikipedia.org/wiki/Filename">il y a</a> mais tout le monde ne l’utilise pas), il y a quelques points à garder à l’esprit.</p>
+<p>Bien qu’il n’y ait pas vraiment d’approche standard reconnue pour nommer les fichiers (en fait <a href="https://en.wikipedia.org/wiki/Filename">il y en a une</a> mais tout le monde ne l’utilise pas), il y a quelques points à garder à l’esprit.</p>
 <ul>
-<li><p>Tout d’abord, évite d’utiliser des espaces dans les noms de fichiers en les remplaçant par des traits de soulignement ou même des traits d’union. Pourquoi cela est-il important ? L’une des raisons est que certains logiciels de ligne de commande (en particulier de nombreux outils bioinformatiques) ne reconnaissent pas un nom de fichier comportant un espace et que tu devras te livrer à toutes sortes de manigances en utilisant des caractères d’échappement pour t’assurer que les espaces sont traités correctement. Même si tu ne penses pas utiliser un jour un logiciel de ligne de commande, il se peut que tu le fasses indirectement. Prends R markdown par exemple, si tu veux convertir un document R markdown en pdf en utilisant la commande <code>rmarkdown</code> <span class="emoji" data-emoji="package">📦</span> tu utiliseras en fait un moteur <span class="math inline">\(\LaTeX\)</span> en ligne de commande sous le capot (appelé <a href="http://pandoc.org">Pandoc</a>). Une autre bonne raison de ne pas utiliser d’espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l’aide d’<a href="https://en.wikipedia.org/wiki/Regular_expression">expressions régulières</a> dans R (ou tout autre langage).</p></li>
-<li><p>Pour les raisons évoquées plus haut, évite également d’utiliser des caractères spéciaux (c’est-à-dire @£$%^&amp;*(:/)) dans tes noms de fichiers.</p></li>
-<li><p>Si tu mets en place des versions de tes fichiers avec des numéros séquentiels (par ex. fichier1, fichier2, fichier3, …) et que tu as plus de 9 fichiers, tu dois utiliser 01, 02, 03 … 10 pour t’assurer que les fichiers sont imprimés dans le bon ordre (vois ce qui se passe si tu ne le fais pas). Si tu as plus de 99 fichiers, utilise 001, 002, 003… etc.</p></li>
-<li><p>Si les noms de tes fichiers contiennent des dates, utilise le format ISO 8601 AAAA-MM-JJ (ou AAAAMMJJ) pour t’assurer que tes fichiers sont classés dans le bon ordre chronologique.</p></li>
-<li><p>N’utilise jamais le mot <em>final</em> dans un nom de fichier - il ne l’est jamais !</p></li>
+<li><p>Évitez d’utiliser des espaces dans les noms de fichiers en les remplaçant par des traits de soulignement ou des tirets. Pourquoi cela est-il important ? L’une des raisons est que certains logiciels de ligne de commande (en particulier de nombreux outils bioinformatiques) ne reconnaissent pas un nom de fichier comportant un espace et que vous devez vous livrer à toutes sortes de manigances en utilisant des caractères d’échappement pour vous assurer que les espaces sont traités correctement. Même si vous ne pensez pas utiliser un jour un logiciel de ligne de commande, il se peut que vous le fassiez indirectement. Prenez R markdown par exemple, si vous voulez rendre un document R markdown au format pdf en utilisant le paquetage <code>rmarkdown</code> :package : vous utiliserez en fait une ligne de commande <span class="math inline">\(\LaTeX\)</span> sous le capot. Une autre bonne raison de ne pas utiliser d’espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l’aide d’<a href="https://en.wikipedia.org/wiki/Regular_expression">expressions régulières</a> dans R (ou tout autre langage) beaucoup plus difficile.</p></li>
+<li><p>Évitez d’utiliser des caractères spéciaux (par exemple @£$%^&amp;*(:/)) dans vos noms de fichiers.</p></li>
+<li><p>Si vous créez des versions de vos fichiers à l’aide de nombres séquentiels (par ex. fichier1, fichier2, fichier3 …). Si vous prévoyez d’avoir plus de 9 fichiers, vous devez utiliser 01, 02, 03, …, 10 afin de garantir que les fichiers soient listés dans le bon ordre. Si vous prévoyez d’avoir plus de 99 fichiers, utilisez 001, 002, 003, ….</p></li>
+<li><p>Pour les dates, utilisez le format ISO 8601 AAAA-MM-JJ (ou AAAAMMJJ) afin de vous assurer que vos fichiers sont listés dans un ordre chronologique correct.</p></li>
+<li><p>N’utilisez jamais le mot <em>final</em> dans un nom de fichier - il est extrêmement rare qu’il le soit !</p></li>
 </ul>
-<p>Quelle que soit la convention de dénomination des fichiers que tu décides d’utiliser, essaie de l’adopter rapidement, de t’y tenir et d’être cohérent. Tu nous remercieras !</p>
-</section><section id="sec-proj_doc" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="sec-proj_doc">
-<span class="header-section-number">1.8</span> Documentation sur les scripts</h2>
-<p>Un petit mot ou deux sur l’écriture du code R et la création de scripts R. À moins que tu ne fasses quelque chose de vraiment rapide et sale, nous te suggérons de toujours écrire ton code R sous la forme d’un script R. Les scripts R sont ce qui rend R si utile. Non seulement tu as un enregistrement complet de ton analyse, de la manipulation des données à la visualisation et à l’analyse statistique, mais tu peux aussi partager ce code (et ces données) avec tes amis, tes collègues et, surtout, lorsque tu soumets et publies tes recherches dans une revue. Dans cette optique, assure-toi d’inclure dans ton script R toutes les informations nécessaires pour rendre ton travail reproductible (noms des auteurs, dates, plan d’échantillonnage, etc). Ces informations peuvent être incluses sous la forme d’une série de commentaires <code>#</code> ou, mieux encore, en mélangeant le code exécutable et la narration dans un script R markdown (<span class="quarto-unresolved-ref">?sec-rmarkdown_r</span>). C’est aussi une bonne pratique d’inclure la sortie de la fonction <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> à la fin de tout script qui imprime la version de R, les détails du système d’exploitation et les paquets chargés. Une très bonne alternative consiste à utiliser la fonction <code>session_info()</code> de la fonction <code>xfun</code> <span class="emoji" data-emoji="package">📦</span> pour obtenir un résumé plus concis de l’environnement de notre session.</p>
+<p>Quelle que soit la convention de dénomination des fichiers que vous décidez d’utiliser, essayez de l’adopter rapidement, de vous y tenir et d’être cohérent.</p>
+</section><section id="sec-proj-doc" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="sec-proj-doc">
+<span class="header-section-number">1.7</span> Documentation du script</h2>
+<p>Un petit mot sur l’écriture du code R et la création de scripts R. À moins que vous ne fassiez quelque chose de vraiment rapide et sale, nous vous suggérons de toujours écrire votre code R sous la forme d’un script R. Les scripts R sont ce qui permet à R d’être plus efficace. Les scripts R sont ce qui rend R si utile. Non seulement vous disposez d’un enregistrement complet de votre analyse, de la manipulation des données à la visualisation et à l’analyse statistique, mais vous pouvez également partager ce code (et ces données) avec vos amis, vos collègues et, surtout, lorsque vous soumettez et publiez votre recherche dans une revue. Dans cette optique, veillez à inclure dans votre script R toutes les informations nécessaires pour rendre votre travail reproductible (noms des auteurs, dates, plan d’échantillonnage, etc.). Ces informations peuvent être incluses sous la forme d’une série de commentaires <code>#</code> ou, mieux encore, en mélangeant code exécutable et narration dans un document R markdown (<a href="06-quarto.html" class="quarto-xref"><span>Chapitre 6</span></a>). C’est aussi une bonne pratique d’inclure la sortie de la fonction <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> à la fin de n’importe quel script qui affiche la version de R, les détails du système d’exploitation et les paquets chargés. Une très bonne alternative est d’utiliser la fonction <code>session_info()</code> du paquet <code>xfun</code> :package : pour un résumé plus concis de notre environnement de session.</p>
 <p>Voici un exemple d’inclusion de méta-informations au début d’un script R</p>
-<div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Title: Time series analysis of lasagna consumption</span></span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Title: Time series analysis of lasagna consumption</span></span>
 <span></span>
 <span><span class="co"># Purpose : This script performs a time series analyses on</span></span>
 <span><span class="co">#           lasagna meals kids want to have each week.</span></span>
@@ -973,8 +988,7 @@ Figure&nbsp;1.1: VS Code panneau de gauche
 <span></span>
 <span><span class="co"># data file: lasagna_dreams.csv</span></span>
 <span></span>
-<span><span class="co"># Author: A.</span></span>
-<span><span class="va">Stomach</span></span>
+<span><span class="co"># Author: A. Stomach</span></span>
 <span><span class="co"># Contact details: a.stomach@food.uni.com</span></span>
 <span></span>
 <span><span class="co"># Date script created: Fri Mar 29 17:06:44 2010 -----------</span></span>
@@ -989,53 +1003,64 @@ Figure&nbsp;1.1: VS Code panneau de gauche
 <span><span class="co"># good practice to include session information</span></span>
 <span></span>
 <span><span class="fu">xfun</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/xfun/man/session_info.html">session_info</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Ce n’est qu’un exemple et il n’y a pas de règles strictes, alors n’hésite pas à mettre au point un système qui te convient. Un raccourci très utile dans RStudio consiste à inclure automatiquement un horodatage dans ton script R. Pour ce faire, écris <code>ts</code> à l’endroit où tu veux insérer ton horodateur dans ton script R, puis appuie sur les touches ‘shift + tab’. RStudio convertira comme par magie <code>ts</code> en date et heure actuelles et commentera automatiquement cette ligne avec un <code>#</code>. Un autre raccourci RStudio très utile consiste à commenter plusieurs lignes de ton script à l’aide d’un <code>#</code> symbole. Pour ce faire, surligne les lignes de texte que tu veux commenter et appuie sur ‘ctrl + shift + c’ (ou ‘cmd + shift + c’ sur un mac). Pour décommenter les lignes, utilise à nouveau ‘ctrl + shift + c’.</p>
-<p>En plus d’inclure des métadonnées dans tes scripts R, il est également courant de créer un fichier texte séparé pour enregistrer les informations importantes. Par convention, ces fichiers texte sont nommés <code>README</code>. Nous incluons souvent un <code>README</code> dans le répertoire où nous conservons nos données brutes. Dans ce fichier, nous incluons des détails sur le moment où les données ont été collectées (ou téléchargées), la manière dont elles ont été collectées, des informations sur le matériel spécialisé, les méthodes de conservation, le type et la version de toute machine utilisée (c’est-à-dire. équipement de séquençage), etc. Tu peux créer un fichier README pour ton projet dans RStudio en cliquant sur le bouton <code>File</code> -&gt; <code>New File</code> -&gt; <code>Text File</code> menu.</p>
-</section><section id="guide-de-style-r" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="guide-de-style-r">
-<span class="header-section-number">1.9</span> Guide de style R</h2>
-<p>La façon dont tu écris ton code dépend plus ou moins de toi, même si ton objectif doit être de le rendre aussi facile à lire que possible (pour toi et pour les autres). Bien qu’il n’y ait pas de règles (ni de police du code), nous t’encourageons à prendre l’habitude d’écrire un code R lisible en adoptant un style particulier. Nous te suggérons de suivre le <a href="#guide-de-style-r">guide de style R</a>de Google <a href="https://google.github.io/styleguide/Rguide.html">style-google</a> dans la mesure du possible. Ce guide de style t’aidera à décider où utiliser les espaces, comment indenter le code et comment utiliser les carrés. <code>[ ]</code> et du curly <code><a href="https://rdrr.io/r/base/Paren.html">{ }</a></code> entre autres choses.</p>
-<p>Pour t’aider à formater ton code :</p>
+<p>Il ne s’agit que d’un exemple et il n’y a pas de règles strictes, alors n’hésitez pas à développer un système qui vous convienne. Un raccourci très utile dans RStudio est d’inclure automatiquement un horodatage dans votre script R. Pour ce faire, écrivez <code>ts</code> à l’endroit où vous souhaitez insérer votre horodatage dans votre script R. Pour ce faire, écrivez <code>ts</code> à l’endroit où vous souhaitez insérer votre horodateur dans votre script R, puis appuyez sur les touches ‘shift + tab’. RStudio convertira <code>ts</code> en date et heure actuelles et commentera automatiquement cette ligne avec un <code>#</code>. Un autre raccourci très utile de RStudio consiste à commenter plusieurs lignes de votre script avec le symbole <code>#</code>. Pour ce faire, mettez en surbrillance les lignes de texte que vous souhaitez commenter et appuyez sur ‘ctrl + shift + c’ (ou ‘cmd + shift + c’ sur un mac). Pour décommenter les lignes, utilisez à nouveau ‘ctrl + shift + c’.</p>
+<p>En plus d’inclure des métadonnées dans vos scripts R, il est également courant de créer un fichier texte séparé pour enregistrer les informations importantes. Par convention, ces fichiers texte sont nommés <code>README</code>. Nous incluons souvent un fichier <code>README</code> dans le répertoire où nous conservons nos données brutes. Dans ce fichier, nous indiquons la date à laquelle les données ont été collectées (ou téléchargées), la manière dont elles ont été collectées, des informations sur l’équipement spécialisé, les méthodes de conservation, le type et la version des machines utilisées (c’est-à-dire l’équipement de séquençage), etc. équipement de séquençage), etc. Vous pouvez créer un fichier README pour votre projet dans RStudio en cliquant sur le menu <code>Fichier</code> -&gt; <code>Nouveau fichier</code> -&gt; <code>Fichier texte</code>.</p>
+</section><section id="guide-de-style-r" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="guide-de-style-r">
+<span class="header-section-number">1.8</span> Guide de style R</h2>
+<p>La façon dont vous écrivez votre code dépend plus ou moins de vous, bien que votre objectif soit de le rendre aussi facile à lire que possible (pour vous et pour les autres). Bien qu’il n’y ait pas de règles (ni de police du code), nous vous encourageons à prendre l’habitude d’écrire un code R lisible en adoptant un style particulier. Nous vous suggérons de suivre le <a href="https://google.github.io/styleguide/Rguide.html">R style guide</a> de Google dans la mesure du possible. Ce guide de style vous aidera à décider où utiliser les espaces, comment indenter le code et comment utiliser les crochets <code>[ ]</code> et les parenthèses bouclées <code><a href="https://rdrr.io/r/base/Paren.html">{ }</a></code>, entre autres choses.</p>
+<p>Pour vous aider à formater le code :</p>
 <ul>
-<li>VSCode il y a un formateur intégré dans l’extension R pour VSCode. Il te suffit d’utiliser le raccourci clavier pour reformater joliment et automatiquement le code.</li>
-<li>Pour RStudio, tu peux installer l’extension <code>styler</code> <span class="emoji" data-emoji="package">📦</span> qui comprend un complément RStudio te permettant de remanier automatiquement le code sélectionné (ou des fichiers et des projets entiers) d’un simple clic de souris. Tu peux trouver plus d’informations sur le <code>styler</code> <span class="emoji" data-emoji="package">📦</span>y compris comment l’installer [ici][styliste]. Une fois installé, tu peux mettre en évidence le code que tu veux remanier, cliquer sur le bouton “Addins” en haut de RStudio et sélectionner l’option “Style Selection”. Voici un exemple de code R mal formaté</li>
+<li>VSCode il y a un formateur intégré dans l’extension R pour VSCode. Il vous suffit d’utiliser le raccourci clavier pour reformater le code de manière agréable et automatique.</li>
+<li>Pour RStudio, vous pouvez installer l’extension <code>styler</code> :package : qui inclut un complément RStudio vous permettant de reformater automatiquement le code sélectionné (ou des fichiers et projets entiers) d’un simple clic de souris. Vous pouvez trouver plus d’informations sur le paquet :package :. <code>styler</code> :package :, y compris comment l’installer <a href="https://styler.r-lib.org/">ici</a> . Une fois installé, vous pouvez mettre en évidence le code que vous souhaitez remodeler, cliquer sur le bouton “Addins” en haut de RStudio et sélectionner l’option “Style Selection”. Voici un exemple de code R mal formaté</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/before_rcode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-fig-poor_code" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-fig-poor_code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/before_rcode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig-poor_code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.19: Poorly styled code
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Mets maintenant le code en surbrillance et utilise l’option <code>styler</code> <span class="emoji" data-emoji="package">📦</span> pour reformater</p>
+<p>Mettez maintenant le code en surbrillance et utilisez la commande <code>styler</code> :package : package pour reformater</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/styler.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<div id="fig-styler" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-styler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/styler.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-styler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.20: Styling code with styler
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Pour produire un code joliment formaté</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/start/after_rcode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
+<div id="fig-better_code" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-better_code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/start/after_rcode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-better_code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.21: Nicely styled code
+</figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="sauvegarde-des-projets" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="sauvegarde-des-projets">
-<span class="header-section-number">1.10</span> Sauvegarde des projets</h2>
-<p>Ne sois pas cette personne qui perd des données et des analyses durement gagnées (et souvent coûteuses). Ne sois pas cette personne qui pense que ça ne m’arrivera jamais - ça arrivera ! Pense toujours au pire scénario absolu, à quelque chose qui te donne des sueurs froides en te réveillant la nuit, et fais tout ton possible pour que cela n’arrive jamais. Pour être clair, si tu comptes copier tes précieux fichiers sur un disque dur externe ou une clé USB, ce n’est… <strong>PAS</strong> une stratégie de sauvegarde efficace. Ces choses tournent mal tout le temps lorsque tu les glisses dans ton sac à dos ou ton “sac pour la vie” et que tu les trimballes entre ton bureau et ta maison. Même si tu les laisses branchés sur ton ordinateur, que se passe-t-il lorsque le bâtiment brûle (nous avons bien dit le pire des cas !) ?</p>
-<p>Idéalement, tes sauvegardes devraient être hors site et incrémentielles. Heureusement, il existe de nombreuses options pour sauvegarder tes fichiers. La première chose à faire est de chercher dans ton propre institut. La plupart (toutes ?) des universités disposent d’une forme de stockage en réseau qui devrait être facilement accessible et qui est également soutenue par un plan complet de reprise après sinistre. D’autres options incluent des services basés sur le cloud tels que Google Drive et Dropbox (pour n’en citer que quelques-uns), mais assure-toi que tu ne stockes pas de données sensibles sur ces services et que tu es à l’aise avec les politiques de confidentialité qui font souvent l’effet d’une douche froide.</p>
-<p>Alors que ces services sont plutôt bons pour stocker des fichiers, ils ne sont pas vraiment utiles pour les sauvegardes incrémentielles. Pour trouver les versions précédentes des fichiers, il faut souvent passer un temps fou à parcourir plusieurs fichiers nommés <em>‘final.doc’</em>, <em>‘final_v2.doc’</em> et <em>‘final_usethisone.doc’</em> etc. jusqu’à ce que tu trouves celui que tu cherches. Le meilleur moyen que nous connaissons pour à la fois sauvegarder les fichiers et gérer les différentes versions des fichiers est d’utiliser Git et GitHub. Pour en savoir plus sur la façon dont tu peux utiliser RStudio, Git et GitHub ensemble, consulte le <span class="quarto-unresolved-ref">?sec-github_r</span>.</p>
-</section><section id="citation-de-r" class="level2" data-number="1.11"><h2 data-number="1.11" class="anchored" data-anchor-id="citation-de-r">
-<span class="header-section-number">1.11</span> Citation de R</h2>
-<p>De nombreuses personnes ont investi énormément de temps et d’énergie pour faire de R l’excellent logiciel que tu utilises aujourd’hui. Si tu utilises R dans ton travail (et nous espérons que tu le feras), n’oublie pas de le citer. Pour obtenir la citation la plus récente de R, tu peux utiliser le site <code><a href="https://rdrr.io/r/utils/citation.html">citation()</a></code> fonction.</p>
+</section><section id="sauvegarde-des-projets" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="sauvegarde-des-projets">
+<span class="header-section-number">1.9</span> Sauvegarde des projets</h2>
+<p>Ne soyez pas la personne qui perd des données et des analyses durement acquises (et souvent coûteuses). Ne soyez pas cette personne qui pense que cela ne lui arrivera jamais - cela lui arrivera ! Pensez toujours au pire scénario, à quelque chose qui vous donne des sueurs froides la nuit, et faites tout ce qui est en votre pouvoir pour que cela n’arrive jamais. Pour être clair, si vous comptez copier vos précieux fichiers sur un disque dur externe ou une clé USB, il est préférable de ne pas le faire. <strong>PAS</strong> une stratégie de sauvegarde efficace. Ces objets tombent souvent en panne lorsque vous les glissez dans votre sac à dos ou votre “sac à vie” et que vous les trimballez entre votre bureau et votre domicile. Même si vous les laissez branchés sur votre ordinateur, que se passe-t-il lorsque le bâtiment brûle (nous avons bien dit le pire des cas !)?</p>
+<p>Idéalement, vos sauvegardes devraient être hors site et incrémentielles. Heureusement, il existe de nombreuses options pour sauvegarder vos fichiers. La première chose à faire est de chercher dans votre propre institut. La plupart (toutes ?) des universités disposent d’une forme de stockage en réseau qui devrait être facilement accessible et qui est également étayée par un plan complet de reprise après sinistre. D’autres options incluent des services basés sur le cloud tels que Google Drive et Dropbox (pour n’en citer que quelques-uns), mais assurez-vous que vous ne stockez pas de données sensibles sur ces services et que vous êtes à l’aise avec les politiques de confidentialité souvent exorbitantes.</p>
+<p>Si ces services sont très efficaces pour stocker des fichiers, ils ne sont pas vraiment utiles pour les sauvegardes incrémentielles. Pour retrouver les versions précédentes des fichiers, il faut souvent passer un temps fou à parcourir plusieurs fichiers nommés <em>‘final.doc’</em>, <em>‘final_v2.doc’</em> et <em>‘final_usethisone.doc’</em> etc. jusqu’à ce que vous trouviez celui que vous cherchiez. Le meilleur moyen que nous connaissons pour sauvegarder des fichiers et gérer différentes versions de fichiers est d’utiliser Git et GitHub. Pour en savoir plus sur la façon dont vous pouvez utiliser RStudio, Git et GitHub ensemble, consultez <a href="07-github.html" class="quarto-xref"><span>Chapitre 7</span></a>.</p>
+</section><section id="citer-r-et-les-paquets-r" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="citer-r-et-les-paquets-r">
+<span class="header-section-number">1.10</span> Citer R et les paquets R</h2>
+<p>De nombreuses personnes ont investi énormément de temps et d’énergie pour faire de R l’excellent logiciel que vous utilisez aujourd’hui. Si vous utilisez R dans votre travail (et nous espérons que vous le ferez), n’oubliez pas de citer non seulement R, mais aussi tous les paquets que vous avez utilisés. Pour obtenir la citation la plus récente pour R, vous pouvez utiliser le site web <code><a href="https://rdrr.io/r/utils/citation.html">citation()</a></code> fonction.</p>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>To cite R in publications use:
 
@@ -1059,9 +1084,9 @@ when using it for data analysis. See also 'citation("pkgname")' for
 citing R packages.</code></pre>
 </div>
 </div>
-<p>Si tu veux citer un logiciel particulier que tu as utilisé pour l’analyse de tes données.</p>
+<p>Si vous souhaitez citer un package particulier que vous avez utilisé pour votre analyse de données, vous pouvez également utiliser la fonction <code><a href="https://rdrr.io/r/utils/citation.html">citation()</a></code> pour obtenir l’information.</p>
 <div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">"here"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">"here"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>To cite package 'here' in publications use:
 
@@ -1079,7 +1104,7 @@ A BibTeX entry for LaTeX users is
   }</code></pre>
 </div>
 </div>
-<p>Pour citer plusieurs paquets, le paquet <code>grateful</code> <span class="emoji" data-emoji="package">📦</span> est extrêmement utile. Voir <a href="901-bibliographie.html#tbl-r-lib" class="quarto-xref">Table&nbsp;<span>1</span></a> pour un exemple de résultat produit avec grateful.</p>
+<p>Selon nous, l’outil le plus utile pour la citation est le package <code>grateful</code> :package : qui vous permet de générer les informations de citation dans un fichier, ainsi que de créer une phrase ou un tableau citant tous les packages utilisés. Cela devrait devenir la norme dans tout manuscrit honnêtement. Voir <a href="901-bibliographie.html#tbl-r-lib" class="quarto-xref">Table&nbsp;<span>1</span></a> pour un exemple de résultat produit avec grateful.</p>
 <!--course website Links-->
 <!--cran Links-->
 <!--RStudio-->
@@ -1665,8 +1690,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02-introR.html" class="pagination-link" aria-label="Introduction à R">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./02-base.html" class="pagination-link" aria-label="Quelques notions de base sur R">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

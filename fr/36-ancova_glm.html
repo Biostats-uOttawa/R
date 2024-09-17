@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr" xml:lang="fr-fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="En cours de traduction">
-<title>9&nbsp; ANCOVA et modèle linéaire général – Sur le chemin de l'enf-R</title>
+<title>14&nbsp; ANCOVA et modèle linéaire général – Sur le chemin de l'enf-R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -222,7 +222,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./36-ancova_glm.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./36-ancova_glm.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,8 +253,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span></a>
+  <a href="./02-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rapports reproductibles avec Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Contrôle de version avec Git et GitHub</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of stats</span></a>
+ <span class="menu-text">Principes de statistique</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -271,7 +301,7 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-power.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,43 +318,43 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31-reg_lin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./32-t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./33-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./34-anova_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./35-reg_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./36-ancova_glm.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./37-model_freq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
   </div>
 </li>
       </ul>
@@ -380,26 +410,26 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table des matières</h2>
    
   <ul>
-<li><a href="#set-anco" id="toc-set-anco" class="nav-link active" data-scroll-target="#set-anco"><span class="header-section-number">9.1</span> Paquets et données requises pour le labo</a></li>
-  <li><a href="#mod%C3%A8le-lin%C3%A9aire-g%C3%A9n%C3%A9ral" id="toc-modèle-linéaire-général" class="nav-link" data-scroll-target="#mod%C3%A8le-lin%C3%A9aire-g%C3%A9n%C3%A9ral"><span class="header-section-number">9.2</span> Modèle linéaire général</a></li>
-  <li><a href="#ancova" id="toc-ancova" class="nav-link" data-scroll-target="#ancova"><span class="header-section-number">9.3</span> ANCOVA</a></li>
+<li><a href="#set-anco" id="toc-set-anco" class="nav-link active" data-scroll-target="#set-anco"><span class="header-section-number">14.1</span> Paquets et données requises pour le labo</a></li>
+  <li><a href="#mod%C3%A8le-lin%C3%A9aire-g%C3%A9n%C3%A9ral" id="toc-modèle-linéaire-général" class="nav-link" data-scroll-target="#mod%C3%A8le-lin%C3%A9aire-g%C3%A9n%C3%A9ral"><span class="header-section-number">14.2</span> Modèle linéaire général</a></li>
+  <li><a href="#ancova" id="toc-ancova" class="nav-link" data-scroll-target="#ancova"><span class="header-section-number">14.3</span> ANCOVA</a></li>
   <li>
-<a href="#homog%C3%A9n%C3%A9it%C3%A9-des-pentes" id="toc-homogénéité-des-pentes" class="nav-link" data-scroll-target="#homog%C3%A9n%C3%A9it%C3%A9-des-pentes"><span class="header-section-number">9.4</span> Homogénéité des pentes</a>
+<a href="#homog%C3%A9n%C3%A9it%C3%A9-des-pentes" id="toc-homogénéité-des-pentes" class="nav-link" data-scroll-target="#homog%C3%A9n%C3%A9it%C3%A9-des-pentes"><span class="header-section-number">14.4</span> Homogénéité des pentes</a>
   <ul class="collapse">
-<li><a href="#cas-1---la-taille-en-fonction-de-l%C3%A2ge-exemple-avec-pente-commune" id="toc-cas-1---la-taille-en-fonction-de-lâge-exemple-avec-pente-commune" class="nav-link" data-scroll-target="#cas-1---la-taille-en-fonction-de-l%C3%A2ge-exemple-avec-pente-commune"><span class="header-section-number">9.4.1</span> Cas 1 - La taille en fonction de l’âge (exemple avec pente commune)</a></li>
-  <li><a href="#cas-2---taille-en-fonction-de-l%C3%A2ge-exemple-avec-des-pentes-diff%C3%A9rentes" id="toc-cas-2---taille-en-fonction-de-lâge-exemple-avec-des-pentes-différentes" class="nav-link" data-scroll-target="#cas-2---taille-en-fonction-de-l%C3%A2ge-exemple-avec-des-pentes-diff%C3%A9rentes"><span class="header-section-number">9.4.2</span> Cas 2 - Taille en fonction de l’âge (exemple avec des pentes différentes)</a></li>
+<li><a href="#cas-1---la-taille-en-fonction-de-l%C3%A2ge-exemple-avec-pente-commune" id="toc-cas-1---la-taille-en-fonction-de-lâge-exemple-avec-pente-commune" class="nav-link" data-scroll-target="#cas-1---la-taille-en-fonction-de-l%C3%A2ge-exemple-avec-pente-commune"><span class="header-section-number">14.4.1</span> Cas 1 - La taille en fonction de l’âge (exemple avec pente commune)</a></li>
+  <li><a href="#cas-2---taille-en-fonction-de-l%C3%A2ge-exemple-avec-des-pentes-diff%C3%A9rentes" id="toc-cas-2---taille-en-fonction-de-lâge-exemple-avec-des-pentes-différentes" class="nav-link" data-scroll-target="#cas-2---taille-en-fonction-de-l%C3%A2ge-exemple-avec-des-pentes-diff%C3%A9rentes"><span class="header-section-number">14.4.2</span> Cas 2 - Taille en fonction de l’âge (exemple avec des pentes différentes)</a></li>
   </ul>
 </li>
-  <li><a href="#le-mod%C3%A8le-dancova" id="toc-le-modèle-dancova" class="nav-link" data-scroll-target="#le-mod%C3%A8le-dancova"><span class="header-section-number">9.5</span> Le modèle d’ANCOVA</a></li>
-  <li><a href="#comparer-lajustement-de-mod%C3%A8les" id="toc-comparer-lajustement-de-modèles" class="nav-link" data-scroll-target="#comparer-lajustement-de-mod%C3%A8les"><span class="header-section-number">9.6</span> Comparer l’ajustement de modèles</a></li>
-  <li><a href="#bootstrap" id="toc-bootstrap" class="nav-link" data-scroll-target="#bootstrap"><span class="header-section-number">9.7</span> Bootstrap</a></li>
-  <li><a href="#permutation-test" id="toc-permutation-test" class="nav-link" data-scroll-target="#permutation-test"><span class="header-section-number">9.8</span> Permutation test</a></li>
+  <li><a href="#le-mod%C3%A8le-dancova" id="toc-le-modèle-dancova" class="nav-link" data-scroll-target="#le-mod%C3%A8le-dancova"><span class="header-section-number">14.5</span> Le modèle d’ANCOVA</a></li>
+  <li><a href="#comparer-lajustement-de-mod%C3%A8les" id="toc-comparer-lajustement-de-modèles" class="nav-link" data-scroll-target="#comparer-lajustement-de-mod%C3%A8les"><span class="header-section-number">14.6</span> Comparer l’ajustement de modèles</a></li>
+  <li><a href="#bootstrap" id="toc-bootstrap" class="nav-link" data-scroll-target="#bootstrap"><span class="header-section-number">14.7</span> Bootstrap</a></li>
+  <li><a href="#permutation-test" id="toc-permutation-test" class="nav-link" data-scroll-target="#permutation-test"><span class="header-section-number">14.8</span> Permutation test</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/36-ancova_glm.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./36-ancova_glm.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./36-ancova_glm.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span>
+<span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span>
 </h1>
 </div>
 
@@ -421,8 +451,8 @@ window.Quarto = {
 <li>Utiliser R pour comparer l’ajustement de modèles statistiques</li>
 <li>Utiliser R pour faire des tests de bootstrap et de permutation sur des modèles avec des variables indépendantes continues et discontinues.</li>
 </ul>
-<section id="set-anco" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="set-anco">
-<span class="header-section-number">9.1</span> Paquets et données requises pour le labo</h2>
+<section id="set-anco" class="level2" data-number="14.1"><h2 data-number="14.1" class="anchored" data-anchor-id="set-anco">
+<span class="header-section-number">14.1</span> Paquets et données requises pour le labo</h2>
 <p>Ce laboratoire nécessite:</p>
 <ul>
 <li>les paquets R:
@@ -438,18 +468,18 @@ window.Quarto = {
 <li>anc3dat.csv</li>
 </ul>
 </li>
-</ul></section><section id="modèle-linéaire-général" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="modèle-linéaire-général">
-<span class="header-section-number">9.2</span> Modèle linéaire général</h2>
+</ul></section><section id="modèle-linéaire-général" class="level2" data-number="14.2"><h2 data-number="14.2" class="anchored" data-anchor-id="modèle-linéaire-général">
+<span class="header-section-number">14.2</span> Modèle linéaire général</h2>
 <p>Les modèles linéaires généraux ou General Linear Model en anglais sont différent des modèles linéaires généralisés (ou generalized linear model, GLM). Les modèles linéaires généraux sont des modèles statistiques de la forme <span class="math inline">\(Y = B \mathbf{X} + E\)</span>, ou Y est un vecteur contenant la variable dépendante continue, B est un vecteur des paramètres estimés, <span class="math inline">\(\mathbf{X}\)</span> et la matrice des différents variables indépendantes et E est un vecteur de résidus homoscédastiques et normalement distribués. Tous les tests que nous avons étudiés à date (test de t, régression linéaire simple, ANOVA à un facteur de classification, ANOVA à plusieurs facteurs de classification et régression multiple) sont formulés ainsi. Notez que tous les modèles que nous avons rencontrés à ce jour ne contiennent qu’un type de variable indépendante (soit continue ou discontinue). Dans cet exercice de laboratoire, vous allez ajuster des modèles qui ont les deux types de variables indépendantes.</p>
-</section><section id="ancova" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="ancova">
-<span class="header-section-number">9.3</span> ANCOVA</h2>
+</section><section id="ancova" class="level2" data-number="14.3"><h2 data-number="14.3" class="anchored" data-anchor-id="ancova">
+<span class="header-section-number">14.3</span> ANCOVA</h2>
 <p>ANCOVA est l’abréviation pour l’analyse de covariance. C’est un type de modèle linéaire général dans lequel il y a une (ou plusieurs) variable indépendante continue (parfois appelé la covariable) et une (ou plusieurs) variable indépendante discontinue. Dans la présentation traditionnelle de l’ANCOVA dans les manuels de biostatistique, le modèle ANCOVA ne contient pas de termes d’interaction entre les variables continues et discontinues. Par conséquent, on doit précéder l’ajustement de ce modèle (réduit parce que sans terme d’interaction), par un test de signification de l’interaction qui correspond à éprouver l’égalité des pentes (coefficients pour la ou les variables continues) entre les différents niveaux de la ou les variables discontinues (i.e un test d’homogénéité des pentes).</p>
-</section><section id="homogénéité-des-pentes" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="homogénéité-des-pentes">
-<span class="header-section-number">9.4</span> Homogénéité des pentes</h2>
+</section><section id="homogénéité-des-pentes" class="level2" data-number="14.4"><h2 data-number="14.4" class="anchored" data-anchor-id="homogénéité-des-pentes">
+<span class="header-section-number">14.4</span> Homogénéité des pentes</h2>
 <p>Pour répondre à de nombreuses questions biologiques, il est nécessaire de déterminer si deux (ou plus de deux) régressions diffèrent significativement. Par exemple, pour comparer l’efficacité de deux insecticides on doit comparer la relation entre leur dose et la mortalité. Ou encore, pour comparer le taux de croissance des mâles et des femelles on doit comparer la relation entre la taille et l’âge des mâles et des femelles.</p>
 <p>Comme chaque régression linéaire est décrite par deux paramètres, la pente et l’ordonnée à l’origine, on doit considérer les deux dans la comparaison. Le modèle d’ANCOVA, à strictement parler, n’éprouve que l’hypothèse d’égalité des ordonnées à l’origine. Cependant, avant d’ajuster ce modèle, il faut éprouver l’hypothèse d’égalité des pentes (homogénéité des pentes).</p>
-<section id="cas-1---la-taille-en-fonction-de-lâge-exemple-avec-pente-commune" class="level3" data-number="9.4.1"><h3 data-number="9.4.1" class="anchored" data-anchor-id="cas-1---la-taille-en-fonction-de-lâge-exemple-avec-pente-commune">
-<span class="header-section-number">9.4.1</span> Cas 1 - La taille en fonction de l’âge (exemple avec pente commune)</h3>
+<section id="cas-1---la-taille-en-fonction-de-lâge-exemple-avec-pente-commune" class="level3" data-number="14.4.1"><h3 data-number="14.4.1" class="anchored" data-anchor-id="cas-1---la-taille-en-fonction-de-lâge-exemple-avec-pente-commune">
+<span class="header-section-number">14.4.1</span> Cas 1 - La taille en fonction de l’âge (exemple avec pente commune)</h3>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -571,8 +601,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <p>La conclusion ne change pas après avoir enlevé la valeur extrême. Comme on n’a pas de bonne raison d’éliminer cette valeur, il est probablement mieux de la conserver. Un examen des conditions d’application après avoir enlevé cette valeur révèle qu’elles sont toutes rencontrées.</p>
-</section><section id="cas-2---taille-en-fonction-de-lâge-exemple-avec-des-pentes-différentes" class="level3" data-number="9.4.2"><h3 data-number="9.4.2" class="anchored" data-anchor-id="cas-2---taille-en-fonction-de-lâge-exemple-avec-des-pentes-différentes">
-<span class="header-section-number">9.4.2</span> Cas 2 - Taille en fonction de l’âge (exemple avec des pentes différentes)</h3>
+</section><section id="cas-2---taille-en-fonction-de-lâge-exemple-avec-des-pentes-différentes" class="level3" data-number="14.4.2"><h3 data-number="14.4.2" class="anchored" data-anchor-id="cas-2---taille-en-fonction-de-lâge-exemple-avec-des-pentes-différentes">
+<span class="header-section-number">14.4.2</span> Cas 2 - Taille en fonction de l’âge (exemple avec des pentes différentes)</h3>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -696,8 +726,8 @@ Coefficients:
      1.4491       0.1597  </code></pre>
 </div>
 </div>
-</section></section><section id="le-modèle-dancova" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="le-modèle-dancova">
-<span class="header-section-number">9.5</span> Le modèle d’ANCOVA</h2>
+</section></section><section id="le-modèle-dancova" class="level2" data-number="14.5"><h2 data-number="14.5" class="anchored" data-anchor-id="le-modèle-dancova">
+<span class="header-section-number">14.5</span> Le modèle d’ANCOVA</h2>
 <p>Si le test d’homogénéité des pentes indique qu’elles diffèrent, alors on devrait estimer des régressions individuelles pour chaque niveau des variables discontinues. Cependant, si on accepte l’hypothèse d’égalité des pentes, l’étape suivante est de comparer les ordonnées à l’origine. Selon la “vieille école” i.e.&nbsp;l’approche traditionnelle, on ajuste un modèle avec la variable catégorique et la variable continue, mais sans interaction (le modèle ANCOVA sensus stricto) et on utilise la somme des carrés des écarts de type III, disons avec la fonction <code>Anova()</code>. C’est ce que la majorité des manuels de biostatistiques présentent.</p>
 <p>L’autre approche consiste à utiliser les résultats de l’analyse du modèle complet, et tester la signification de chaque terme à partir des sommes des carrés partiels. C’est plus rapide, mais moins puissant. Dans la plupart des cas, cette perte de puissance n’est pas trop préoccupante, sauf lorsque le modèle est très complexe et contient de nombreuses interactions non-significatives. Je vous suggère d’utiliser l’approche simplifiée, et de n’utiliser l’approche traditionnelle que lorsque vous acceptez l’hypothèse d’égalité des ordonnées à l’origine. Pourquoi?</p>
 <p>Puisque l’approche simplifiée est moins puissante, si vous rejetez quand même H0, alors votre conclusion ne changera pas, mais sera seulement renforcée, en utilisant l’approche traditionnelle.</p>
@@ -880,8 +910,8 @@ F-statistic: 200.1 on 1 and 90 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>Encore une fois, l’erreur-type des résidus (0.0285) pour cette régression unique est semblable à la variance du modèle d’ANCOVA (0.02837) et le modèle simplifié prédit presque aussi bien que le modèle plus complexe. (Ici encore, toutes les conditions d’application semblent remplies, si ce n’est de la valeur extrême).</p>
 <p>Donc, dans les deux cas (avec ou sans les valeurs extrêmes), l’addition d’un terme supplémentaire pour le sexe n’ajoute pas grand-chose. Il semble donc que le meilleur modèle soit celui de la régression simple. Un estimé raisonnablement précis de la taille des esturgeons peut être obtenu de la régression commune sur l’ensemble des résultats.</p>
 <p>Note: Il est fréquent que l’élimination de valeurs extrêmes en fasse apparaître d’autres. C’est parce que ces valeurs extrêmes dépendent de la variabilité résiduelle. Si on élimine les valeurs les plus déviantes, la variabilité résiduelle diminue, et certaines observations qui n’étaient pas si déviantes que cela deviennent proportionnellement plus déviantes. Notez aussi qu’en éliminant des valeurs extrêmes, l’effectif diminue et que la puissance décroît. Il faut donc être prudent.</p>
-</section><section id="comparer-lajustement-de-modèles" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="comparer-lajustement-de-modèles">
-<span class="header-section-number">9.6</span> Comparer l’ajustement de modèles</h2>
+</section><section id="comparer-lajustement-de-modèles" class="level2" data-number="14.6"><h2 data-number="14.6" class="anchored" data-anchor-id="comparer-lajustement-de-modèles">
+<span class="header-section-number">14.6</span> Comparer l’ajustement de modèles</h2>
 <p>Comme vous venez de le voir, le processus d’ajustement de modèles est itératif. La plupart du temps il y a plus d’un modèle qui peut être ajusté aux données et c’est à vous de choisir celui qui est le meilleur compromis entre la qualité d’ajustement (qu’on essaie de maximiser) et la complexité (qu’on essaie de minimiser). La stratégie de base en ajustant des modèles linéaires (ANOVA, régression, ANCOVA) est de privilégier le modèle le plus simple si la qualité d’ajustement n’est pas significativement plus mauvaise. R peut calculer une statistique F vous permettant de comparer l’ajustement de deux modèles. Dans ce cas, l’hypothèse nulle est que la qualité d’ajustement ne diffère pas entre les deux modèles.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -954,8 +984,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </div>
-</section><section id="bootstrap" class="level2" data-number="9.7"><h2 data-number="9.7" class="anchored" data-anchor-id="bootstrap">
-<span class="header-section-number">9.7</span> Bootstrap</h2>
+</section><section id="bootstrap" class="level2" data-number="14.7"><h2 data-number="14.7" class="anchored" data-anchor-id="bootstrap">
+<span class="header-section-number">14.7</span> Bootstrap</h2>
 <div class="cell">
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">############################################################</span></span>
 <span><span class="co">######</span></span>
@@ -1000,8 +1030,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/boot/man/boot.ci.html">boot.ci</a></span><span class="op">(</span><span class="va">results</span>, type <span class="op">=</span> <span class="st">"bca"</span>, index <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="permutation-test" class="level2" data-number="9.8"><h2 data-number="9.8" class="anchored" data-anchor-id="permutation-test">
-<span class="header-section-number">9.8</span> Permutation test</h2>
+</section><section id="permutation-test" class="level2" data-number="14.8"><h2 data-number="14.8" class="anchored" data-anchor-id="permutation-test">
+<span class="header-section-number">14.8</span> Permutation test</h2>
 <div class="cell">
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">############################################################</span></span>
 <span><span class="co">##########</span></span>
@@ -1594,12 +1624,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./35-reg_mult.html" class="pagination-link" aria-label="Régression multiple">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./37-model_freq.html" class="pagination-link" aria-label="Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

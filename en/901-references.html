@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -56,11 +56,11 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -465,8 +465,8 @@ Table&nbsp;1: R packages used in this book
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 18%">
-<col style="width: 12%">
-<col style="width: 68%">
+<col style="width: 13%">
+<col style="width: 67%">
 </colgroup>
 <thead><tr class="header">
 <th style="text-align: left;">Package</th>
@@ -480,23 +480,33 @@ Table&nbsp;1: R packages used in this book
 <td style="text-align: left;"><span class="citation" data-cites="asreml">The VSNi Team (<a href="06-quarto.html#ref-asreml" role="doc-biblioref">2023</a>)</span></td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">babeldown</td>
+<td style="text-align: left;">0.0.0.9000</td>
+<td style="text-align: left;"><span class="citation" data-cites="babeldown">Salmon (<a href="06-quarto.html#ref-babeldown" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">base</td>
 <td style="text-align: left;">4.4.1</td>
 <td style="text-align: left;"><span class="citation" data-cites="base">R Core Team (<a href="06-quarto.html#ref-base" role="doc-biblioref">2024</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">bayesplot</td>
 <td style="text-align: left;">1.11.1</td>
 <td style="text-align: left;">
 <span class="citation" data-cites="bayesplot2019">Gabry et al. (<a href="06-quarto.html#ref-bayesplot2019" role="doc-biblioref">2019</a>)</span>; <span class="citation" data-cites="bayesplot2024">Gabry and Mahr (<a href="06-quarto.html#ref-bayesplot2024" role="doc-biblioref">2024</a>)</span>
 </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">boot</td>
-<td style="text-align: left;">1.3.30</td>
+<td style="text-align: left;">1.3.31</td>
 <td style="text-align: left;">
 <span class="citation" data-cites="boot1997">A. C. Davison and D. V. Hinkley (<a href="06-quarto.html#ref-boot1997" role="doc-biblioref">1997</a>)</span>; <span class="citation" data-cites="boot2024">Angelo Canty and B. D. Ripley (<a href="06-quarto.html#ref-boot2024" role="doc-biblioref">2024</a>)</span>
 </td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">brio</td>
+<td style="text-align: left;">1.1.5</td>
+<td style="text-align: left;"><span class="citation" data-cites="brio">Hester and Csárdi (<a href="06-quarto.html#ref-brio" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">brms</td>
@@ -526,124 +536,134 @@ Table&nbsp;1: R packages used in this book
 <td style="text-align: left;"><span class="citation" data-cites="DHARMa">Hartig (<a href="06-quarto.html#ref-DHARMa" role="doc-biblioref">2022</a>)</span></td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">digest</td>
+<td style="text-align: left;">0.6.37</td>
+<td style="text-align: left;"><span class="citation" data-cites="digest">Eddelbuettel (<a href="06-quarto.html#ref-digest" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">effects</td>
 <td style="text-align: left;">4.2.2</td>
 <td style="text-align: left;">
 <span class="citation" data-cites="effects2003">Fox (<a href="06-quarto.html#ref-effects2003" role="doc-biblioref">2003</a>)</span>; <span class="citation" data-cites="effects2009">Fox and Hong (<a href="06-quarto.html#ref-effects2009" role="doc-biblioref">2009</a>)</span>; <span class="citation" data-cites="effects2018">Fox and Weisberg (<a href="06-quarto.html#ref-effects2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="effects2019">Fox and Weisberg (<a href="06-quarto.html#ref-effects2019" role="doc-biblioref">2019b</a>)</span>
 </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">emoji</td>
 <td style="text-align: left;">15.0</td>
 <td style="text-align: left;"><span class="citation" data-cites="emoji">Hvitfeldt (<a href="06-quarto.html#ref-emoji" role="doc-biblioref">2022</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">factoextra</td>
 <td style="text-align: left;">1.0.7</td>
 <td style="text-align: left;"><span class="citation" data-cites="factoextra">Kassambara and Mundt (<a href="06-quarto.html#ref-factoextra" role="doc-biblioref">2020</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">FactoMineR</td>
 <td style="text-align: left;">2.11</td>
 <td style="text-align: left;"><span class="citation" data-cites="FactoMineR">Lê et al. (<a href="06-quarto.html#ref-FactoMineR" role="doc-biblioref">2008</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">GGally</td>
 <td style="text-align: left;">2.2.1</td>
 <td style="text-align: left;"><span class="citation" data-cites="GGally">Schloerke et al. (<a href="06-quarto.html#ref-GGally" role="doc-biblioref">2024</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ggcleveland</td>
 <td style="text-align: left;">0.1.0</td>
 <td style="text-align: left;"><span class="citation" data-cites="ggcleveland">Prunello and Mari (<a href="06-quarto.html#ref-ggcleveland" role="doc-biblioref">2021</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">ggfortify</td>
 <td style="text-align: left;">0.4.17</td>
 <td style="text-align: left;">
 <span class="citation" data-cites="ggfortify2016">Tang et al. (<a href="06-quarto.html#ref-ggfortify2016" role="doc-biblioref">2016</a>)</span>; <span class="citation" data-cites="ggfortify2018">Horikoshi and Tang (<a href="06-quarto.html#ref-ggfortify2018" role="doc-biblioref">2018</a>)</span>
 </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ggpubr</td>
 <td style="text-align: left;">0.6.0</td>
 <td style="text-align: left;"><span class="citation" data-cites="ggpubr">Kassambara (<a href="06-quarto.html#ref-ggpubr" role="doc-biblioref">2023</a>)</span></td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">grateful</td>
-<td style="text-align: left;">0.2.4</td>
-<td style="text-align: left;"><span class="citation" data-cites="grateful">Francisco Rodriguez-Sanchez and Connor P. Jackson (<a href="06-quarto.html#ref-grateful" role="doc-biblioref">2023</a>)</span></td>
-</tr>
 <tr class="odd">
+<td style="text-align: left;">grateful</td>
+<td style="text-align: left;">0.2.10</td>
+<td style="text-align: left;"><span class="citation" data-cites="grateful">Rodriguez-Sanchez and Jackson (<a href="06-quarto.html#ref-grateful" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">gt</td>
-<td style="text-align: left;">0.10.1</td>
+<td style="text-align: left;">0.11.0</td>
 <td style="text-align: left;"><span class="citation" data-cites="gt">Iannone et al. (<a href="06-quarto.html#ref-gt" role="doc-biblioref">2024</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">hexbin</td>
 <td style="text-align: left;">1.28.3</td>
 <td style="text-align: left;"><span class="citation" data-cites="hexbin">Carr et al. (<a href="06-quarto.html#ref-hexbin" role="doc-biblioref">2023</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">kableExtra</td>
 <td style="text-align: left;">1.4.0</td>
 <td style="text-align: left;"><span class="citation" data-cites="kableExtra">Zhu (<a href="06-quarto.html#ref-kableExtra" role="doc-biblioref">2024</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">knitr</td>
-<td style="text-align: left;">1.47</td>
+<td style="text-align: left;">1.48</td>
 <td style="text-align: left;">
 <span class="citation" data-cites="knitr2014">Xie (<a href="06-quarto.html#ref-knitr2014" role="doc-biblioref">2014</a>)</span>; <span class="citation" data-cites="knitr2015">Xie (<a href="06-quarto.html#ref-knitr2015" role="doc-biblioref">2015</a>)</span>; <span class="citation" data-cites="knitr2024">Xie (<a href="06-quarto.html#ref-knitr2024" role="doc-biblioref">2024</a>)</span>
 </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">lattice</td>
 <td style="text-align: left;">0.22.6</td>
 <td style="text-align: left;"><span class="citation" data-cites="lattice">Sarkar (<a href="06-quarto.html#ref-lattice" role="doc-biblioref">2008</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">lme4</td>
-<td style="text-align: left;">1.1.35.3</td>
+<td style="text-align: left;">1.1.35.5</td>
 <td style="text-align: left;"><span class="citation" data-cites="lme4">Bates et al. (<a href="06-quarto.html#ref-lme4" role="doc-biblioref">2015</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">lmerTest</td>
 <td style="text-align: left;">3.1.3</td>
 <td style="text-align: left;"><span class="citation" data-cites="lmerTest">Kuznetsova et al. (<a href="06-quarto.html#ref-lmerTest" role="doc-biblioref">2017</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">lmPerm</td>
 <td style="text-align: left;">2.1.0</td>
 <td style="text-align: left;"><span class="citation" data-cites="lmPerm">Wheeler and Torchiano (<a href="06-quarto.html#ref-lmPerm" role="doc-biblioref">2016</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">lmtest</td>
 <td style="text-align: left;">0.9.40</td>
 <td style="text-align: left;"><span class="citation" data-cites="lmtest">Zeileis and Hothorn (<a href="06-quarto.html#ref-lmtest" role="doc-biblioref">2002</a>)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">MASS</td>
 <td style="text-align: left;">7.3.61</td>
 <td style="text-align: left;"><span class="citation" data-cites="MASS">Venables and Ripley (<a href="06-quarto.html#ref-MASS" role="doc-biblioref">2002</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">MCMCglmm</td>
 <td style="text-align: left;">2.36</td>
 <td style="text-align: left;"><span class="citation" data-cites="MCMCglmm">Hadfield (<a href="06-quarto.html#ref-MCMCglmm" role="doc-biblioref">2010</a>)</span></td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">memoise</td>
+<td style="text-align: left;">2.0.1</td>
+<td style="text-align: left;"><span class="citation" data-cites="memoise">Wickham et al. (<a href="06-quarto.html#ref-memoise" role="doc-biblioref">2021</a>)</span></td>
+</tr>
 <tr class="even">
 <td style="text-align: left;">multcomp</td>
-<td style="text-align: left;">1.4.25</td>
+<td style="text-align: left;">1.4.26</td>
 <td style="text-align: left;"><span class="citation" data-cites="multcomp">Hothorn et al. (<a href="06-quarto.html#ref-multcomp" role="doc-biblioref">2008</a>)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">MuMIn</td>
-<td style="text-align: left;">1.47.5</td>
-<td style="text-align: left;"><span class="citation" data-cites="MuMIn">Bartoń (<a href="06-quarto.html#ref-MuMIn" role="doc-biblioref">2023</a>)</span></td>
+<td style="text-align: left;">1.48.4</td>
+<td style="text-align: left;"><span class="citation" data-cites="MuMIn">Bartoń (<a href="06-quarto.html#ref-MuMIn" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">mvtnorm</td>
-<td style="text-align: left;">1.2.5</td>
+<td style="text-align: left;">1.3.1</td>
 <td style="text-align: left;"><span class="citation" data-cites="mvtnorm">Genz and Bretz (<a href="06-quarto.html#ref-mvtnorm" role="doc-biblioref">2009</a>)</span></td>
 </tr>
 <tr class="odd">
@@ -663,7 +683,7 @@ Table&nbsp;1: R packages used in this book
 </tr>
 <tr class="even">
 <td style="text-align: left;">performance</td>
-<td style="text-align: left;">0.12.0</td>
+<td style="text-align: left;">0.12.3</td>
 <td style="text-align: left;"><span class="citation" data-cites="performance">Lüdecke et al. (<a href="06-quarto.html#ref-performance" role="doc-biblioref">2021</a>)</span></td>
 </tr>
 <tr class="odd">
@@ -677,41 +697,41 @@ Table&nbsp;1: R packages used in this book
 <td style="text-align: left;"><span class="citation" data-cites="quantreg">Koenker (<a href="06-quarto.html#ref-quantreg" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">reshape</td>
-<td style="text-align: left;">0.8.9</td>
-<td style="text-align: left;"><span class="citation" data-cites="reshape">(<a href="06-quarto.html#ref-reshape" role="doc-biblioref"><strong>reshape?</strong></a>)</span></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">reshape2</td>
 <td style="text-align: left;">1.4.4</td>
 <td style="text-align: left;"><span class="citation" data-cites="reshape2">Wickham (<a href="06-quarto.html#ref-reshape2" role="doc-biblioref">2007</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">rmarkdown</td>
-<td style="text-align: left;">2.27</td>
+<td style="text-align: left;">2.28</td>
 <td style="text-align: left;">
 <span class="citation" data-cites="rmarkdown2018">Xie et al. (<a href="06-quarto.html#ref-rmarkdown2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="rmarkdown2020">Xie et al. (<a href="06-quarto.html#ref-rmarkdown2020" role="doc-biblioref">2020</a>)</span>; <span class="citation" data-cites="rmarkdown2024">Allaire et al. (<a href="06-quarto.html#ref-rmarkdown2024" role="doc-biblioref">2024</a>)</span>
 </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">rptR</td>
 <td style="text-align: left;">0.9.22</td>
 <td style="text-align: left;"><span class="citation" data-cites="rptR">Stoffel et al. (<a href="06-quarto.html#ref-rptR" role="doc-biblioref">2017</a>)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">shiny</td>
-<td style="text-align: left;">1.8.1.1</td>
+<td style="text-align: left;">1.9.1</td>
 <td style="text-align: left;"><span class="citation" data-cites="shiny">Chang et al. (<a href="06-quarto.html#ref-shiny" role="doc-biblioref">2024</a>)</span></td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">simpleboot</td>
-<td style="text-align: left;">1.1.7</td>
-<td style="text-align: left;"><span class="citation" data-cites="simpleboot">Peng (<a href="06-quarto.html#ref-simpleboot" role="doc-biblioref">2019</a>)</span></td>
-</tr>
 <tr class="odd">
+<td style="text-align: left;">simpleboot</td>
+<td style="text-align: left;">1.1.8</td>
+<td style="text-align: left;"><span class="citation" data-cites="simpleboot">Peng (<a href="06-quarto.html#ref-simpleboot" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">tidyverse</td>
 <td style="text-align: left;">2.0.0</td>
 <td style="text-align: left;"><span class="citation" data-cites="tidyverse">Wickham et al. (<a href="06-quarto.html#ref-tidyverse" role="doc-biblioref">2019</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tinkr</td>
+<td style="text-align: left;">0.2.0.9000</td>
+<td style="text-align: left;"><span class="citation" data-cites="tinkr">Salmon et al. (<a href="06-quarto.html#ref-tinkr" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">vcd</td>
@@ -727,8 +747,18 @@ Table&nbsp;1: R packages used in this book
 </tr>
 <tr class="even">
 <td style="text-align: left;">vioplot</td>
-<td style="text-align: left;">0.4.0</td>
-<td style="text-align: left;"><span class="citation" data-cites="vioplot">Adler et al. (<a href="06-quarto.html#ref-vioplot" role="doc-biblioref">2022</a>)</span></td>
+<td style="text-align: left;">0.5.0</td>
+<td style="text-align: left;"><span class="citation" data-cites="vioplot">Adler et al. (<a href="06-quarto.html#ref-vioplot" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">withr</td>
+<td style="text-align: left;">3.0.1</td>
+<td style="text-align: left;"><span class="citation" data-cites="withr">Hester et al. (<a href="06-quarto.html#ref-withr" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">yaml</td>
+<td style="text-align: left;">2.3.10</td>
+<td style="text-align: left;"><span class="citation" data-cites="yaml">Garbett et al. (<a href="06-quarto.html#ref-yaml" role="doc-biblioref">2024</a>)</span></td>
 </tr>
 </tbody>
 </table>
@@ -743,7 +773,7 @@ Table&nbsp;1: R packages used in this book
 A. C. Davison, and D. V. Hinkley. 1997. <a href="https://doi:10.1017/CBO9780511802843">Bootstrap methods and their applications</a>. Cambridge University Press, Cambridge.
 </div>
 <div id="ref-vioplot" class="csl-entry" role="listitem">
-Adler, D., S. T. Kelly, T. Elliott, and J. Adamson. 2022. <a href="https://github.com/TomKellyGenetics/vioplot"><span class="nocase">vioplot</span>: Violin plot</a>.
+Adler, D., S. T. Kelly, T. Elliott, and J. Adamson. 2024. <a href="https://github.com/TomKellyGenetics/vioplot"><span class="nocase">vioplot</span>: Violin plot</a>.
 </div>
 <div id="ref-rmarkdown2024" class="csl-entry" role="listitem">
 Allaire, J., Y. Xie, C. Dervieux, J. McPherson, J. Luraschi, K. Ushey, A. Atkins, H. Wickham, J. Cheng, W. Chang, and R. Iannone. 2024. <a href="https://github.com/rstudio/rmarkdown"><span class="nocase">rmarkdown</span>: Dynamic documents for r</a>.
@@ -752,7 +782,7 @@ Allaire, J., Y. Xie, C. Dervieux, J. McPherson, J. Luraschi, K. Ushey, A. Atkins
 Angelo Canty, and B. D. Ripley. 2024. <span class="nocase">boot</span>: Bootstrap r (s-plus) functions.
 </div>
 <div id="ref-MuMIn" class="csl-entry" role="listitem">
-Bartoń, K. 2023. <a href="https://CRAN.R-project.org/package=MuMIn"><span>MuMIn</span>: Multi-model inference</a>.
+Bartoń, K. 2024. <a href="https://CRAN.R-project.org/package=MuMIn"><span>MuMIn</span>: Multi-model inference</a>.
 </div>
 <div id="ref-lme4" class="csl-entry" role="listitem">
 Bates, D., M. Mächler, B. Bolker, and S. Walker. 2015. <a href="https://doi.org/10.18637/jss.v067.i01">Fitting linear mixed-effects models using <span class="nocase">lme4</span></a>. Journal of Statistical Software 67:1–48.
@@ -778,6 +808,9 @@ Champely, S. 2020. <a href="https://CRAN.R-project.org/package=pwr"><span class=
 <div id="ref-shiny" class="csl-entry" role="listitem">
 Chang, W., J. Cheng, J. Allaire, C. Sievert, B. Schloerke, Y. Xie, J. Allen, J. McPherson, A. Dipert, and B. Borges. 2024. <a href="https://CRAN.R-project.org/package=shiny"><span class="nocase">shiny</span>: Web application framework for r</a>.
 </div>
+<div id="ref-digest" class="csl-entry" role="listitem">
+Eddelbuettel, D. 2024. <a href="https://CRAN.R-project.org/package=digest"><span class="nocase">digest</span>: Create compact hash digests of r objects</a>.
+</div>
 <div id="ref-effects2003" class="csl-entry" role="listitem">
 Fox, J. 2003. <a href="https://doi.org/10.18637/jss.v008.i15">Effect displays in <span>R</span> for generalised linear models</a>. Journal of Statistical Software 8:1–27.
 </div>
@@ -793,9 +826,6 @@ Fox, J., and S. Weisberg. 2019a. <a href="https://socialsciences.mcmaster.ca/jfo
 <div id="ref-effects2019" class="csl-entry" role="listitem">
 Fox, J., and S. Weisberg. 2019b. <a href="https://socialsciences.mcmaster.ca/jfox/Books/Companion/index.html">An r companion to applied regression</a>. 3rd edition. Sage, Thousand Oaks CA.
 </div>
-<div id="ref-grateful" class="csl-entry" role="listitem">
-Francisco Rodriguez-Sanchez, and Connor P. Jackson. 2023. <a href="https://pakillo.github.io/grateful/"><span class="nocase">grateful</span>: Facilitate citation of r packages</a>.
-</div>
 <div id="ref-vcdExtra" class="csl-entry" role="listitem">
 Friendly, M. 2023. <a href="https://CRAN.R-project.org/package=vcdExtra"><span class="nocase">vcdExtra</span>: <span>“<span class="nocase">vcd</span>”</span> extensions and additions</a>.
 </div>
@@ -805,6 +835,9 @@ Gabry, J., and T. Mahr. 2024. <a href="https://mc-stan.org/bayesplot/"><span cla
 <div id="ref-bayesplot2019" class="csl-entry" role="listitem">
 Gabry, J., D. Simpson, A. Vehtari, M. Betancourt, and A. Gelman. 2019. <a href="https://doi.org/10.1111/rssa.12378">Visualization in bayesian workflow</a>. J. R. Stat. Soc. A 182:389–402.
 </div>
+<div id="ref-yaml" class="csl-entry" role="listitem">
+Garbett, S. P., J. Stephens, K. Simonov, Y. Xie, Z. Dong, H. Wickham, J. Horner, reikoch, W. Beasley, B. O’Connor, G. R. Warnes, M. Quinn, Z. N. Kamvar, and C. Gao. 2024. <a href="https://CRAN.R-project.org/package=yaml"><span class="nocase">yaml</span>: Methods to convert r data to YAML and back</a>.
+</div>
 <div id="ref-mvtnorm" class="csl-entry" role="listitem">
 Genz, A., and F. Bretz. 2009. Computation of multivariate normal and t probabilities. Springer-Verlag, Heidelberg.
 </div>
@@ -813,6 +846,12 @@ Hadfield, J. D. 2010. <a href="https://www.jstatsoft.org/v33/i02/">MCMC methods 
 </div>
 <div id="ref-DHARMa" class="csl-entry" role="listitem">
 Hartig, F. 2022. <a href="https://CRAN.R-project.org/package=DHARMa"><span>DHARMa</span>: Residual diagnostics for hierarchical (multi-level / mixed) regression models</a>.
+</div>
+<div id="ref-brio" class="csl-entry" role="listitem">
+Hester, J., and G. Csárdi. 2024. <a href="https://CRAN.R-project.org/package=brio"><span class="nocase">brio</span>: Basic r input output</a>.
+</div>
+<div id="ref-withr" class="csl-entry" role="listitem">
+Hester, J., L. Henry, K. Müller, K. Ushey, H. Wickham, and W. Chang. 2024. <a href="https://CRAN.R-project.org/package=withr"><span class="nocase">withr</span>: Run code <span>“<span>With</span>”</span> temporarily modified global state</a>.
 </div>
 <div id="ref-ggfortify2018" class="csl-entry" role="listitem">
 Horikoshi, M., and Y. Tang. 2018. <a href="https://CRAN.R-project.org/package=ggfortify"><span class="nocase">ggfortify</span>: Data visualization tools for statistical analysis results</a>.
@@ -827,7 +866,7 @@ Hothorn, T., F. Bretz, and P. Westfall. 2008. Simultaneous inference in general 
 Hvitfeldt, E. 2022. <a href="https://CRAN.R-project.org/package=emoji"><span class="nocase">emoji</span>: Data and function to work with emojis</a>.
 </div>
 <div id="ref-gt" class="csl-entry" role="listitem">
-Iannone, R., J. Cheng, B. Schloerke, E. Hughes, A. Lauer, and J. Seo. 2024. <a href="https://CRAN.R-project.org/package=gt"><span class="nocase">gt</span>: Easily create presentation-ready display tables</a>.
+Iannone, R., J. Cheng, B. Schloerke, E. Hughes, A. Lauer, J. Seo, K. Brevoort, and O. Roy. 2024. <a href="https://CRAN.R-project.org/package=gt"><span class="nocase">gt</span>: Easily create presentation-ready display tables</a>.
 </div>
 <div id="ref-ggpubr" class="csl-entry" role="listitem">
 Kassambara, A. 2023. <a href="https://CRAN.R-project.org/package=ggpubr"><span class="nocase">ggpubr</span>: <span>“<span class="nocase">ggplot2</span>”</span> based publication ready plots</a>.
@@ -857,7 +896,7 @@ Meyer, D., A. Zeileis, K. Hornik, and M. Friendly. 2023. <a href="https://CRAN.R
 Pedersen, T. L. 2024. <a href="https://CRAN.R-project.org/package=patchwork"><span class="nocase">patchwork</span>: The composer of plots</a>.
 </div>
 <div id="ref-simpleboot" class="csl-entry" role="listitem">
-Peng, R. D. 2019. <a href="https://CRAN.R-project.org/package=simpleboot"><span class="nocase">simpleboot</span>: Simple bootstrap routines</a>.
+Peng, R. D. 2024. <a href="https://CRAN.R-project.org/package=simpleboot"><span class="nocase">simpleboot</span>: Simple bootstrap routines</a>.
 </div>
 <div id="ref-coda" class="csl-entry" role="listitem">
 Plummer, M., N. Best, K. Cowles, and K. Vines. 2006. <a href="https://journal.r-project.org/archive/"><span>CODA</span>: Convergence diagnosis and output analysis for MCMC</a>. R News 6:7–11.
@@ -867,6 +906,15 @@ Prunello, M., and G. Mari. 2021. <a href="https://CRAN.R-project.org/package=ggc
 </div>
 <div id="ref-base" class="csl-entry" role="listitem">
 R Core Team. 2024. <a href="https://www.R-project.org/"><span>R</span>: A language and environment for statistical computing</a>. R Foundation for Statistical Computing, Vienna, Austria.
+</div>
+<div id="ref-grateful" class="csl-entry" role="listitem">
+Rodriguez-Sanchez, F., and C. P. Jackson. 2023. <a href="https://pakillo.github.io/grateful/"><span class="nocase">grateful</span>: Facilitate citation of r packages</a>.
+</div>
+<div id="ref-babeldown" class="csl-entry" role="listitem">
+Salmon, M. 2024. <a href="https://github.com/ropensci-review-tools/babeldown"><span class="nocase">babeldown</span>: Helpers for automatic translation of markdown-based content</a>.
+</div>
+<div id="ref-tinkr" class="csl-entry" role="listitem">
+Salmon, M., Z. N. Kamvar, and J. Ooms. 2024. <a href="https://docs.ropensci.org/tinkr/"><span class="nocase">tinkr</span>: Cast <span>“<span>(R)Markdown</span>”</span> files to <span>“<span>XML</span>”</span> and back again</a>.
 </div>
 <div id="ref-lattice" class="csl-entry" role="listitem">
 Sarkar, D. 2008. <a href="http://lmdvr.r-forge.r-project.org"><span>Lattice</span>: Multivariate data visualization with r</a>. Springer, New York.
@@ -894,6 +942,9 @@ Wickham, H. 2007. <a href="http://www.jstatsoft.org/v21/i12/">Reshaping data wit
 </div>
 <div id="ref-tidyverse" class="csl-entry" role="listitem">
 Wickham, H., M. Averick, J. Bryan, W. Chang, L. D. McGowan, R. François, G. Grolemund, A. Hayes, L. Henry, J. Hester, M. Kuhn, T. L. Pedersen, E. Miller, S. M. Bache, K. Müller, J. Ooms, D. Robinson, D. P. Seidel, V. Spinu, K. Takahashi, D. Vaughan, C. Wilke, K. Woo, and H. Yutani. 2019. <a href="https://doi.org/10.21105/joss.01686">Welcome to the <span class="nocase">tidyverse</span></a>. Journal of Open Source Software 4:1686.
+</div>
+<div id="ref-memoise" class="csl-entry" role="listitem">
+Wickham, H., J. Hester, W. Chang, K. Müller, and D. Cook. 2021. <a href="https://CRAN.R-project.org/package=memoise"><span class="nocase">memoise</span>: <span>“<span>Memoisation</span>”</span> of functions</a>.
 </div>
 <div id="ref-nadiv" class="csl-entry" role="listitem">
 Wolak, M. E. 2012. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.2041-210X.2012.00213.x"><span class="nocase">nadiv</span>: An <span>R</span> package to create relatedness matrices for estimating non-additive genetic variances in animal models</a>. Methods in Ecology and Evolution 3:792–796.

@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr" xml:lang="fr-fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="En cours de traduction">
-<title>8&nbsp; Régression multiple – Sur le chemin de l'enf-R</title>
+<title>13&nbsp; Régression multiple – Sur le chemin de l'enf-R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -222,7 +222,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./35-reg_mult.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./35-reg_mult.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,8 +253,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span></a>
+  <a href="./02-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rapports reproductibles avec Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Contrôle de version avec Git et GitHub</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of stats</span></a>
+ <span class="menu-text">Principes de statistique</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -271,7 +301,7 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-power.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,43 +318,43 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31-reg_lin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./32-t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./33-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./34-anova_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./35-reg_mult.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./36-ancova_glm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./37-model_freq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
   </div>
 </li>
       </ul>
@@ -380,24 +410,24 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table des matières</h2>
    
   <ul>
-<li><a href="#set-reg-mul" id="toc-set-reg-mul" class="nav-link active" data-scroll-target="#set-reg-mul"><span class="header-section-number">8.1</span> Paquets et données requises pour le labo</a></li>
-  <li><a href="#conseils-g%C3%A9n%C3%A9raux" id="toc-conseils-généraux" class="nav-link" data-scroll-target="#conseils-g%C3%A9n%C3%A9raux"><span class="header-section-number">8.2</span> Conseils généraux</a></li>
-  <li><a href="#premi%C3%A8res-r%C3%A9gressions-multiples" id="toc-premières-régressions-multiples" class="nav-link" data-scroll-target="#premi%C3%A8res-r%C3%A9gressions-multiples"><span class="header-section-number">8.3</span> Premières régressions multiples</a></li>
-  <li><a href="#r%C3%A9gression-multiple-pas-%C3%A0-pas-stepwise" id="toc-régression-multiple-pas-à-pas-stepwise" class="nav-link" data-scroll-target="#r%C3%A9gression-multiple-pas-%C3%A0-pas-stepwise"><span class="header-section-number">8.4</span> Régression multiple pas-à-pas (stepwise)</a></li>
-  <li><a href="#d%C3%A9tecter-la-multicolin%C3%A9arit%C3%A9" id="toc-détecter-la-multicolinéarité" class="nav-link" data-scroll-target="#d%C3%A9tecter-la-multicolin%C3%A9arit%C3%A9"><span class="header-section-number">8.5</span> Détecter la multicolinéarité</a></li>
-  <li><a href="#r%C3%A9gression-polynomiale" id="toc-régression-polynomiale" class="nav-link" data-scroll-target="#r%C3%A9gression-polynomiale"><span class="header-section-number">8.6</span> Régression polynomiale</a></li>
-  <li><a href="#v%C3%A9rifier-les-conditions-dapplication-de-mod%C3%A8les-de-r%C3%A9gression-multiple" id="toc-vérifier-les-conditions-dapplication-de-modèles-de-régression-multiple" class="nav-link" data-scroll-target="#v%C3%A9rifier-les-conditions-dapplication-de-mod%C3%A8les-de-r%C3%A9gression-multiple"><span class="header-section-number">8.7</span> Vérifier les conditions d’application de modèles de régression multiple</a></li>
-  <li><a href="#visualiser-la-taille-deffet" id="toc-visualiser-la-taille-deffet" class="nav-link" data-scroll-target="#visualiser-la-taille-deffet"><span class="header-section-number">8.8</span> Visualiser la taille d’effet</a></li>
-  <li><a href="#tester-la-pr%C3%A9sence-dinteractions" id="toc-tester-la-présence-dinteractions" class="nav-link" data-scroll-target="#tester-la-pr%C3%A9sence-dinteractions"><span class="header-section-number">8.9</span> Tester la présence d’interactions</a></li>
-  <li><a href="#recherche-du-meilleur-mod%C3%A8le-fond%C3%A9e-sur-la-th%C3%A9orie-de-linformation" id="toc-recherche-du-meilleur-modèle-fondée-sur-la-théorie-de-linformation" class="nav-link" data-scroll-target="#recherche-du-meilleur-mod%C3%A8le-fond%C3%A9e-sur-la-th%C3%A9orie-de-linformation"><span class="header-section-number">8.10</span> Recherche du meilleur modèle fondée sur la théorie de l’information</a></li>
-  <li><a href="#bootstrap-et-r%C3%A9gression-multiple" id="toc-bootstrap-et-régression-multiple" class="nav-link" data-scroll-target="#bootstrap-et-r%C3%A9gression-multiple"><span class="header-section-number">8.11</span> Bootstrap et régression multiple</a></li>
-  <li><a href="#perm_reg_mult" id="toc-perm_reg_mult" class="nav-link" data-scroll-target="#perm_reg_mult"><span class="header-section-number">8.12</span> Test de permutation</a></li>
+<li><a href="#set-reg-mul" id="toc-set-reg-mul" class="nav-link active" data-scroll-target="#set-reg-mul"><span class="header-section-number">13.1</span> Paquets et données requises pour le labo</a></li>
+  <li><a href="#conseils-g%C3%A9n%C3%A9raux" id="toc-conseils-généraux" class="nav-link" data-scroll-target="#conseils-g%C3%A9n%C3%A9raux"><span class="header-section-number">13.2</span> Conseils généraux</a></li>
+  <li><a href="#premi%C3%A8res-r%C3%A9gressions-multiples" id="toc-premières-régressions-multiples" class="nav-link" data-scroll-target="#premi%C3%A8res-r%C3%A9gressions-multiples"><span class="header-section-number">13.3</span> Premières régressions multiples</a></li>
+  <li><a href="#r%C3%A9gression-multiple-pas-%C3%A0-pas-stepwise" id="toc-régression-multiple-pas-à-pas-stepwise" class="nav-link" data-scroll-target="#r%C3%A9gression-multiple-pas-%C3%A0-pas-stepwise"><span class="header-section-number">13.4</span> Régression multiple pas-à-pas (stepwise)</a></li>
+  <li><a href="#d%C3%A9tecter-la-multicolin%C3%A9arit%C3%A9" id="toc-détecter-la-multicolinéarité" class="nav-link" data-scroll-target="#d%C3%A9tecter-la-multicolin%C3%A9arit%C3%A9"><span class="header-section-number">13.5</span> Détecter la multicolinéarité</a></li>
+  <li><a href="#r%C3%A9gression-polynomiale" id="toc-régression-polynomiale" class="nav-link" data-scroll-target="#r%C3%A9gression-polynomiale"><span class="header-section-number">13.6</span> Régression polynomiale</a></li>
+  <li><a href="#v%C3%A9rifier-les-conditions-dapplication-de-mod%C3%A8les-de-r%C3%A9gression-multiple" id="toc-vérifier-les-conditions-dapplication-de-modèles-de-régression-multiple" class="nav-link" data-scroll-target="#v%C3%A9rifier-les-conditions-dapplication-de-mod%C3%A8les-de-r%C3%A9gression-multiple"><span class="header-section-number">13.7</span> Vérifier les conditions d’application de modèles de régression multiple</a></li>
+  <li><a href="#visualiser-la-taille-deffet" id="toc-visualiser-la-taille-deffet" class="nav-link" data-scroll-target="#visualiser-la-taille-deffet"><span class="header-section-number">13.8</span> Visualiser la taille d’effet</a></li>
+  <li><a href="#tester-la-pr%C3%A9sence-dinteractions" id="toc-tester-la-présence-dinteractions" class="nav-link" data-scroll-target="#tester-la-pr%C3%A9sence-dinteractions"><span class="header-section-number">13.9</span> Tester la présence d’interactions</a></li>
+  <li><a href="#recherche-du-meilleur-mod%C3%A8le-fond%C3%A9e-sur-la-th%C3%A9orie-de-linformation" id="toc-recherche-du-meilleur-modèle-fondée-sur-la-théorie-de-linformation" class="nav-link" data-scroll-target="#recherche-du-meilleur-mod%C3%A8le-fond%C3%A9e-sur-la-th%C3%A9orie-de-linformation"><span class="header-section-number">13.10</span> Recherche du meilleur modèle fondée sur la théorie de l’information</a></li>
+  <li><a href="#bootstrap-et-r%C3%A9gression-multiple" id="toc-bootstrap-et-régression-multiple" class="nav-link" data-scroll-target="#bootstrap-et-r%C3%A9gression-multiple"><span class="header-section-number">13.11</span> Bootstrap et régression multiple</a></li>
+  <li><a href="#perm_reg_mult" id="toc-perm_reg_mult" class="nav-link" data-scroll-target="#perm_reg_mult"><span class="header-section-number">13.12</span> Test de permutation</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/35-reg_mult.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./35-reg_mult.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./35-reg_mult.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span>
+<span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span>
 </h1>
 </div>
 
@@ -419,8 +449,8 @@ window.Quarto = {
 <li>Utiliser R pour évaluer la multicolinéarité entre les variables indépendantes et en évaluer ses effets</li>
 <li>Utiliser R pour effectuer une régression curvilinéaire (polynomiale).</li>
 </ul>
-<section id="set-reg-mul" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="set-reg-mul">
-<span class="header-section-number">8.1</span> Paquets et données requises pour le labo</h2>
+<section id="set-reg-mul" class="level2" data-number="13.1"><h2 data-number="13.1" class="anchored" data-anchor-id="set-reg-mul">
+<span class="header-section-number">13.1</span> Paquets et données requises pour le labo</h2>
 <p>Ce laboratoire nécessite:</p>
 <ul>
 <li>les paquets R:
@@ -438,16 +468,16 @@ window.Quarto = {
 <li>Mregdat.csv</li>
 </ul>
 </li>
-</ul></section><section id="conseils-généraux" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="conseils-généraux">
-<span class="header-section-number">8.2</span> Conseils généraux</h2>
+</ul></section><section id="conseils-généraux" class="level2" data-number="13.2"><h2 data-number="13.2" class="anchored" data-anchor-id="conseils-généraux">
+<span class="header-section-number">13.2</span> Conseils généraux</h2>
 <p>Les variables qui intéressent les biologistes sont généralement influencées par plusieurs facteurs, et une description exacte ou une prédiction de la variable dépendante requiert que plus d’une variable soit incluse dans le modèle. La régression multiple permet de quantifier l’effet de plusieurs variables continues sur la variable dépendante.</p>
 <p>Il est important de réaliser que la maîtrise de la régression multiple ne s’acquiert pas instantanément. Les débutants doivent garder à l’esprit plusieurs points importants :</p>
 <ol type="1">
 <li>Un modèle de régression multiple peut être hautement significatif même si aucun des termes pris isolément ne l’est (ceci est causé par la multicolinéarité),</li>
 <li>Un modèle peut ne pas être significatif alors que l’un ou plusieurs des termes le sont (ceci est un signe d’un modèle trop complexe (“overfitting”)) et,</li>
 <li>À moins que les variables indépendantes soient parfaitement orthogonales (c’est-à-dire qu’il n’y ait aucune corrélation entre elles et donc pas de multicolinéarité) les diverses approches de sélection des variables indépendantes peuvent mener à des modèles différents.</li>
-</ol></section><section id="premières-régressions-multiples" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="premières-régressions-multiples">
-<span class="header-section-number">8.3</span> Premières régressions multiples</h2>
+</ol></section><section id="premières-régressions-multiples" class="level2" data-number="13.3"><h2 data-number="13.3" class="anchored" data-anchor-id="premières-régressions-multiples">
+<span class="header-section-number">13.3</span> Premières régressions multiples</h2>
 <p>Le fichier <code>Mregdat.csv</code> contient des données de richesse spécifique de quatre groupes d’organismes dans 30 marais de la région Ottawa-Cornwall-Kingston. Les variables sont:</p>
 <ul>
 <li>la richesse spécifique:
@@ -720,8 +750,8 @@ Model 2: logherp ~ logarea + thtden
 <li>Il y a une relation positive entre la richesse spécifique et la taille des marais.</li>
 </ol>
 <p>Notez que le “meilleur” modèle n’est pas nécessairement le modèle parfait, seulement le meilleur n’utilisant que ces trois variables indépendantes. Il est évident qu’il y a d’autres facteurs qui contrôlent la richesse spécifique dans les marais puisque, même le “meilleur” modèle n’explique que la moitié de la variabilité.</p>
-</section><section id="régression-multiple-pas-à-pas-stepwise" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="régression-multiple-pas-à-pas-stepwise">
-<span class="header-section-number">8.4</span> Régression multiple pas-à-pas (stepwise)</h2>
+</section><section id="régression-multiple-pas-à-pas-stepwise" class="level2" data-number="13.4"><h2 data-number="13.4" class="anchored" data-anchor-id="régression-multiple-pas-à-pas-stepwise">
+<span class="header-section-number">13.4</span> Régression multiple pas-à-pas (stepwise)</h2>
 <p>Quand le nombre de variables prédictives est restreint, comme dans l’exemple précédent, il est aisé de comparer manuellement les modèles pour sélectionner le plus adéquat. Cependant, lorsque le nombre de variables indépendantes augmente, cette approche n’est rapidement plus utilisable et il est alors utile d’utiliser une méthode automatisée.</p>
 <p>La sélection pas à pas avec R utilise le Critère Informatif de Akaike (Akaike Information Criterion, <span class="math inline">\(AIC = 2* ln(RSS) + 2K\)</span> où K le nombre de variables indépendantes, n est le nombre d’observations, et <em>RSS</em> est la somme des carrés des résidus) comme mesure de la qualité d’ajustement des modèles. Cette mesure favorise la précision des prédictions et pénalise la complexité. <strong>Lorsque l’on compare des modèles par AIC, le modèle avec le plus petit AIC est le modèle à préférer.</strong></p>
 <ul>
@@ -816,8 +846,8 @@ logherp ~ logarea + thtden
 <p>En bref, on abuse trop souvent de cette technique.</p>
 <ol start="3" type="1">
 <li>Il faut toujours garder à l’esprit que l’existence d’une régression significative n’est pas suffisante pour prouver une relation causale.</li>
-</ol></section><section id="détecter-la-multicolinéarité" class="level2" data-number="8.5"><h2 data-number="8.5" class="anchored" data-anchor-id="détecter-la-multicolinéarité">
-<span class="header-section-number">8.5</span> Détecter la multicolinéarité</h2>
+</ol></section><section id="détecter-la-multicolinéarité" class="level2" data-number="13.5"><h2 data-number="13.5" class="anchored" data-anchor-id="détecter-la-multicolinéarité">
+<span class="header-section-number">13.5</span> Détecter la multicolinéarité</h2>
 <p>La multicolinéarité est la présence de corrélations entre les variables indépendantes. Lorsqu’elle est extrême (multicolinéarité parfaite) elle empêche l’estimation des modèles statistiques. Lorsqu’elle est grande ou modérée, elle réduit la puissance de détection de l’effet des variables indépendantes individuellement, mais elle n’empêche pas le modèle de faire des prédictions.</p>
 <p>Un des indices les plus utilisés pour quantifier la multicolinéarité et le facteur d’inflation de la variance (VIF, variance inflation factor). Le fichier d’aide du package HH explique ainsi son calcul:</p>
 <blockquote class="blockquote">
@@ -825,7 +855,7 @@ logherp ~ logarea + thtden
 </blockquote>
 <p>Bref, les VIF indiquent de combien l’incertitude de chaque coefficient de régression est augmentée par la multicolinéarité.</p>
 <p><strong>Attrappe.</strong> Il y a plusieurs fonctions vif() (j’en connais au moins trois dans les extensions <code>car</code>, <code>HH</code> et <code>DAAG</code>), et je ne sais pas en quoi elles diffèrent.</p>
-<p>On peut calculer les VIF avec la fonction <code><a href="https://rdrr.io/pkg/car/man/vif.html">vif()</a></code> de l’extension <code>car</code>: :</p>
+<p>On peut calculer les VIF avec la fonction <code><a href="https://rdrr.io/pkg/car/man/vif.html">vif()</a></code> de l’extension <code>car</code>:</p>
 <div class="cell">
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/car/man/vif.html">vif</a></span><span class="op">(</span><span class="va">model.mtri</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -835,8 +865,8 @@ logherp ~ logarea + thtden
 </div>
 </div>
 <p>Ici, il n’y a pas d’évidence de multicolinéarité car toutes les valeurs de VIF sont près de 1.</p>
-</section><section id="régression-polynomiale" class="level2" data-number="8.6"><h2 data-number="8.6" class="anchored" data-anchor-id="régression-polynomiale">
-<span class="header-section-number">8.6</span> Régression polynomiale</h2>
+</section><section id="régression-polynomiale" class="level2" data-number="13.6"><h2 data-number="13.6" class="anchored" data-anchor-id="régression-polynomiale">
+<span class="header-section-number">13.6</span> Régression polynomiale</h2>
 <p>La régression requiert la linéarité de la relation entre les variables dépendante et indépendante(s). Lorsque la relation n’est pas linéaire, il est parfois possible de linéariser la relation en effectuant une transformation sur une ou plusieurs variables. Cependant, dans bien des cas il est impossible de transformer les axes pour rendre la relation linéaire. On doit alors utiliser une forme ou l’autre de régression nonlinéaire. La forme la plus simple de régression non-linéaire est la régression polynomiale dans laquelle les variables indépendantes sont à une puissance plus grande que 1 (Ex : <span class="math inline">\(X^2\)</span> ou <span class="math inline">\(X^3\)</span>).</p>
 <ul>
 <li>Faites un diagramme de dispersion des résidus (residual) de la régression <code>logherp ~ logarea</code> en fonction de swamp .</li>
@@ -1093,8 +1123,8 @@ F-statistic: 24.98 on 4 and 23 DF,  p-value: 4.405e-08</code></pre>
 </div>
 </div>
 <p>Les valeurs d’inflation de la variance (VIF) pour les deux termes de swamp sont beaucoup plus élevés que le seuil de 5. Cependant, c’est la norme pour les termes polynomiaux et on ne doit pas s’en préoccuper outre mesure, surtout quand les deux termes sont hautement significatifs dans le modèle. Les fortes valeurs de VIF indiquent que les coefficients pour ces deux termes ne sont pas estimés précisément, mais leur utilisation dans le modèle permet tout de même de faire de bonnes prédictions (i.e.&nbsp;ils décrivent la réponse à swamp).</p>
-</section><section id="vérifier-les-conditions-dapplication-de-modèles-de-régression-multiple" class="level2" data-number="8.7"><h2 data-number="8.7" class="anchored" data-anchor-id="vérifier-les-conditions-dapplication-de-modèles-de-régression-multiple">
-<span class="header-section-number">8.7</span> Vérifier les conditions d’application de modèles de régression multiple</h2>
+</section><section id="vérifier-les-conditions-dapplication-de-modèles-de-régression-multiple" class="level2" data-number="13.7"><h2 data-number="13.7" class="anchored" data-anchor-id="vérifier-les-conditions-dapplication-de-modèles-de-régression-multiple">
+<span class="header-section-number">13.7</span> Vérifier les conditions d’application de modèles de régression multiple</h2>
 <p>Toutes les techniques de sélection des modèles présument que les conditions d’applications (indépendance, normalité, homoscédasticité, linéarité) sont remplies. Comme il y a un grand nombre de modèles qui peuvent être ajustés, il peut paraître quasi impossible de vérifier si les conditions sont remplies à chaque étape de construction. Cependant, il est souvent suffisant d’examiner les résidus du modèle complet (saturé) puis du modèle final. Les termes qui ne contribuent pas significativement à l’ajustement n’affectent pas beaucoup les résidus et donc les résidus du modèle final sont généralement similaires à ceux du modèle complet.</p>
 <p>Examinons donc les graphiques diagnostiques du modèle final:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1169,8 +1199,8 @@ RESET = 0.9823, df1 = 8, df2 = 15, p-value = 0.4859</code></pre>
 </div>
 </div>
 <p>Et finalement, pas de déviation significative de la linéarité. Donc tout semble acceptable.</p>
-</section><section id="visualiser-la-taille-deffet" class="level2" data-number="8.8"><h2 data-number="8.8" class="anchored" data-anchor-id="visualiser-la-taille-deffet">
-<span class="header-section-number">8.8</span> Visualiser la taille d’effet</h2>
+</section><section id="visualiser-la-taille-deffet" class="level2" data-number="13.8"><h2 data-number="13.8" class="anchored" data-anchor-id="visualiser-la-taille-deffet">
+<span class="header-section-number">13.8</span> Visualiser la taille d’effet</h2>
 <p>Les coefficients de la régression multiple peuvent mesurer la taille d’effet, quoiqu’il puisse être nécessaire de les standardiser pour qu’ils ne soient pas influencés par les unités de mesure. Mais un graphique est souvent plus informatif. Dans ce contexte, les graphiques des résidus partiels (appelés components+residual plots dans R) sont particulièrement utiles. Ces graphique illustrent comment la variable dépendante, corrigée pour l’effet des autres variables dans le modèle, varie avec chacune des variables indépendantes du modèle. Voyons voir:</p>
 <div class="cell">
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Evaluate visually linearity and effect size</span></span>
@@ -1224,8 +1254,8 @@ data:  model.nopoly
 RESET = 6.7588, df1 = 6, df2 = 18, p-value = 0.0007066</code></pre>
 </div>
 </div>
-</section><section id="tester-la-présence-dinteractions" class="level2" data-number="8.9"><h2 data-number="8.9" class="anchored" data-anchor-id="tester-la-présence-dinteractions">
-<span class="header-section-number">8.9</span> Tester la présence d’interactions</h2>
+</section><section id="tester-la-présence-dinteractions" class="level2" data-number="13.9"><h2 data-number="13.9" class="anchored" data-anchor-id="tester-la-présence-dinteractions">
+<span class="header-section-number">13.9</span> Tester la présence d’interactions</h2>
 <p>Lorsqu’il y a plusieurs variables indépendantes, vous devriez toujours garder à l’esprit la possibilité d’interactions. Dans la majorité des situations de régression multiple cela n’est pas évident parce que l’addition de termes d’interaction augmente la multicolinéarité des termes du modèle, et parce qu’il n’y a souvent pas assez d’observations pour éprouver toutes les interactions ou que les observations ne sont pas suffisamment balancées pour faire des tests puissants pour les interactions. Retournons à notre modèle “final” et voyons ce qui se passe si on essaie d’ajuster un modèle saturé avec toutes les interactions:</p>
 <div class="cell">
 <div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fullmodel.withinteractions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span></span>
@@ -1396,8 +1426,8 @@ Model 2: logherp ~ logarea + cpfor2 + thtden + swamp + I(swamp^2) + logarea:cpfo
 </div>
 </div>
 <p>Le test indique que ces deux modèles ont des variances résiduelles comparables, et donc que l’addition des termes d’interaction et de cpfor2 au modèle final n’apporte pas grand chose.</p>
-</section><section id="recherche-du-meilleur-modèle-fondée-sur-la-théorie-de-linformation" class="level2" data-number="8.10"><h2 data-number="8.10" class="anchored" data-anchor-id="recherche-du-meilleur-modèle-fondée-sur-la-théorie-de-linformation">
-<span class="header-section-number">8.10</span> Recherche du meilleur modèle fondée sur la théorie de l’information</h2>
+</section><section id="recherche-du-meilleur-modèle-fondée-sur-la-théorie-de-linformation" class="level2" data-number="13.10"><h2 data-number="13.10" class="anchored" data-anchor-id="recherche-du-meilleur-modèle-fondée-sur-la-théorie-de-linformation">
+<span class="header-section-number">13.10</span> Recherche du meilleur modèle fondée sur la théorie de l’information</h2>
 <p>Une des principales critiques des méthodes pas-à-pas (stepwise) est que les valeurs de p ne sont pas strictement interprétables à cause du grand nombre de tests qui sont implicites dans le processus. C’est le problème des comparaisons ou tests multiples: en construisant un modèle linéaire (comme une régression multiple) à partir d’un grand nombre de variables et de leurs interactions, il y a tellement de combinaisons possibles qu’un ajustement de Bonferroni rendrait les tests trop conservateurs.</p>
 <p>Une alternative, défendue par Burnham et Anderson (2002, Model selection and multimodel inference: a practical information-theoretic approach. 2nd ed), est d’utiliser l’AIC (ou mieux encore AICc qui est plus approprié quand le nombre d’observations est inférieur à 40 fois le nombre de variables indépendantes) pour ordonner les modèles et identifier un sousensemble de modèles qui sont les meilleurs. On peut ensuite calculer les moyennes des coefficients pondérées par la probabilité que chacun des modèles soit le meilleur pour obtenir des coefficients qui sont plus robustes et moins sensibles à la multicolinéarité.</p>
 <p>L’approche de comparaison par <em>AIC</em> a d’abord été développé pour comparer un ensemble de modèle préalablement défini basé sur les connaissance du sytème et les hypothèses biologiques. Cependant, certains ont développé une approche plutôt brutale et sans scrupule de faire tous les modèles possibles et de les comparer par <em>AIC</em>. Cette approche a été suivie dans le package <code>MuMIn</code>. Les comparaisons de modèle par <code>AIC</code>doivent être faites en utilisant exactement le même jeu de données pour chaque modèle. Il faut donc s’arrurer d’enlever les données manquantes et de spécifier dans la fonction <code>lm</code> de ne pas marcher s’il y a des données manquantes.</p>
@@ -1489,8 +1519,8 @@ logarea:thtden -0.0050266778  0.082666701</code></pre>
 <li>La liste des modèles qui sont à 4 unités ou moins de l’AICc du meilleur modèle. Les variables dans chaque modèle sont codées et on retrouve la clé en dessous du tableau.</li>
 <li>Pour chaque modèle, en plus de l’AICc, le poids Akaike est calculé. C’est un estimé de la probabilité que ce modèle est le meilleur. Ici on voit que le premier modèle (le meilleur) a seulement 34% des chance d’être vraiment le meilleur.</li>
 <li>À partir de ce sous-ensemble de modèles, la moyenne pondérée des coefficients (en utilisant les poids Akaike) est calculée, avec in IC à 95%. Notez que les termes absents d’un modèle sont considérés avoir un coefficient de 0 pour ce terme.</li>
-</ol></section><section id="bootstrap-et-régression-multiple" class="level2" data-number="8.11"><h2 data-number="8.11" class="anchored" data-anchor-id="bootstrap-et-régression-multiple">
-<span class="header-section-number">8.11</span> Bootstrap et régression multiple</h2>
+</ol></section><section id="bootstrap-et-régression-multiple" class="level2" data-number="13.11"><h2 data-number="13.11" class="anchored" data-anchor-id="bootstrap-et-régression-multiple">
+<span class="header-section-number">13.11</span> Bootstrap et régression multiple</h2>
 <p>Quand les données ne rencontrent pas les conditions d’application de normalité et d’homoscédasticité et que les transformations n’arrivent pas à corriger ces violations, le bootstrap peut être utilisé pour calculer des intervalles de confiance pour les coefficients. Si la distribution des coefficients bootstrappés est symétrique et approximativement normale, on peut utiliser les percentiles empiriques pour calculer les limites de confiance.</p>
 <p>Le code qui suit, utilisant le package <code>simpleboot</code>, a été conçu pour être facilement modifiable et calcule les limites des IC à partir des percentiles empiriques.</p>
 <div class="cell">
@@ -1541,15 +1571,15 @@ logarea:thtden -0.0050266778  0.082666701</code></pre>
 <span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.005</span>, <span class="fl">0.01</span>, <span class="fl">0.025</span>, <span class="fl">0.05</span>, <span class="fl">0.95</span>, <span class="fl">0.975</span>, <span class="fl">0.99</span>, <span class="fl">0.995</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">tmyresults</span>, <span class="fl">2</span>, <span class="va">quantile</span>, <span class="va">p</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      (Intercept)   logarea       thtden      swamp    I(swamp^2)
-0.5%  -0.76307584 0.1291407 -0.047584473 0.01772250 -0.0003497203
-1%    -0.72831577 0.1409443 -0.046010909 0.01863688 -0.0003424577
-2.5%  -0.66810810 0.1575280 -0.042287583 0.02058147 -0.0003247691
-5%    -0.60753598 0.1681706 -0.039566732 0.02145910 -0.0003126071
-95%   -0.09290077 0.2808696 -0.011264473 0.03773842 -0.0001842991
-97.5% -0.03427477 0.2943330 -0.008526632 0.03888998 -0.0001770746
-99%   -0.01146876 0.3031307 -0.005051748 0.04089202 -0.0001621921
-99.5%  0.01210649 0.3091569 -0.002046873 0.04175795 -0.0001581856</code></pre>
+<pre><code>       (Intercept)   logarea       thtden      swamp    I(swamp^2)
+0.5%  -0.715665771 0.1328160 -0.047091753 0.01700933 -0.0003514142
+1%    -0.703417842 0.1384933 -0.045465359 0.01835361 -0.0003394943
+2.5%  -0.659088092 0.1542028 -0.041996467 0.02011878 -0.0003267279
+5%    -0.619090985 0.1645397 -0.039018056 0.02139736 -0.0003161081
+95%   -0.103512438 0.2828324 -0.011480778 0.03782436 -0.0001851286
+97.5% -0.055598072 0.2910309 -0.009272299 0.03940014 -0.0001712844
+99%   -0.004410099 0.2984886 -0.006926064 0.04084998 -0.0001586792
+99.5%  0.013955303 0.3072484 -0.005787337 0.04209763 -0.0001489675</code></pre>
 </div>
 </div>
 <p>Ces intervalles de confiances ne sont pas fiables si la distribution des estimés bootstrap n’est pas Gaussienne. Dans ce cas, il vaut mieux calculer des coefficients non-biaisés (bias-corrected accelerated confidence limits, BCa):</p>
@@ -1599,7 +1629,7 @@ boot.ci(boot.out = results, type = "bca", index = 2)
 
 Intervals : 
 Level       BCa          
-95%   ( 0.1118,  0.3206 )  
+95%   ( 0.1054,  0.3210 )  
 Calculations and Intervals on Original Scale</code></pre>
 </div>
 <div class="cell-output-display">
@@ -1610,8 +1640,8 @@ Calculations and Intervals on Original Scale</code></pre>
 </div>
 </div>
 <p>Notez que l’intervalle BCa va de 0.12 à 0.32, alors que l’intervalle standard était de 0.16 à 0.29. L’intervalle BCa est ici plus grand du côté inférieur et plus petit du côté supérieur comme il se doit compte tenu de la distribution non-Gaussienne et asymétrique des estimés bootstrap.</p>
-</section><section id="perm_reg_mult" class="level2" data-number="8.12"><h2 data-number="8.12" class="anchored" data-anchor-id="perm_reg_mult">
-<span class="header-section-number">8.12</span> Test de permutation</h2>
+</section><section id="perm_reg_mult" class="level2" data-number="13.12"><h2 data-number="13.12" class="anchored" data-anchor-id="perm_reg_mult">
+<span class="header-section-number">13.12</span> Test de permutation</h2>
 <p>Les tests de permutations sont plus rarement effectués en régression multiple que le bootstrap. Voici un fragment de code pour le faire tout de même.</p>
 <div class="cell">
 <div class="sourceCode" id="cb81"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">############################################################</span></span>
@@ -2198,12 +2228,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./34-anova_mult.html" class="pagination-link" aria-label="ANOVA à critères multiples : plans factoriels et hiérarchiques">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./36-ancova_glm.html" class="pagination-link" aria-label="ANCOVA et modèle linéaire général">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

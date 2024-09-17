@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -90,11 +90,11 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -152,7 +152,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-flag">
 <li>
-    <a class="dropdown-item" href="./../fr">
+    <a class="dropdown-item" href="./../fr/04-graphique.html">
  <span class="dropdown-text">Français</span></a>
   </li>  
     </ul>
@@ -496,7 +496,7 @@ gtag('config', 'G-SLXFYRXJR4', { 'anonymize_ip': true});
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-start.html">Using R</a></li><li class="breadcrumb-item"><a href="./04-graphics_short.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="sec-graphics_r" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></h1>
+<h1 class="title"><span id="sec-graphics-r" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></h1>
 </div>
 
 
@@ -531,7 +531,7 @@ Figure&nbsp;4.1: The Grammar of Graphics. Visual by Thomas de Beus
 <section id="sec-baseplot" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="sec-baseplot">
 <span class="header-section-number">4.1</span> Simple base R plots</h2>
 <p>There are many functions in R to produce plots ranging from the very basic to the highly complex. It’s impossible to cover every aspect of producing graphics in R in this book so we’ll introduce you to most of the common methods of graphing data and describe how to customise your graphs later on in <a href="#sec-custom-plot" class="quarto-xref"><span>Section 4.5</span></a>.</p>
-<p>The most common high level function used to produce plots in R is (rather unsurprisingly) the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function. For example, let’s plot the <code>weight</code> of unicorns from our <code>unicorns</code> data frame which we imported in <a href="03-data.html#sec-import_fnc" class="quarto-xref"><span>Section 3.3.2</span></a>.</p>
+<p>The most common high level function used to produce plots in R is (rather unsurprisingly) the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function. For example, let’s plot the <code>weight</code> of unicorns from our <code>unicorns</code> data frame which we imported in <a href="03-data.html#sec-import-fnc" class="quarto-xref"><span>Section 3.3.2</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">unicorns</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"data/unicorns.csv"</span><span class="op">)</span></span>
 <span></span>
@@ -571,7 +571,9 @@ Figure&nbsp;4.1: The Grammar of Graphics. Visual by Thomas de Beus
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-graphics_short_files/figure-html/fig-plot5-1.png" id="fig-plot5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -593,7 +595,7 @@ Figure&nbsp;4.1: The Grammar of Graphics. Visual by Thomas de Beus
 </div>
 </div>
 </div>
-<p>Admittedly the plots we’ve produced so far don’t look anything particularly special. However, the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function is incredibly versatile and can generate a large range of plots which you can customise to your own taste. We’ll cover how to customise ggplots in <a href="#sec-custom-plot" class="quarto-xref"><span>Section 4.5</span></a>. As a quick aside, the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function is also what’s known as a generic function which means it can change its default behaviour depending on the type of object used as an argument. You will see an example of this in <a href="31-reg_lin.html#sec-simple_lm" class="quarto-xref"><span>Section 9.6</span></a> where we use the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function to generate diagnostic plots of residuals from a linear model object (bet you can’t wait!).</p>
+<p>Admittedly the plots we’ve produced so far don’t look anything particularly special. However, the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function is incredibly versatile and can generate a large range of plots which you can customise to your own taste. We’ll cover how to customise ggplots in <a href="#sec-custom-plot" class="quarto-xref"><span>Section 4.5</span></a>. As a quick aside, the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function is also what’s known as a generic function which means it can change its default behaviour depending on the type of object used as an argument. You will see an example of this in <a href="31-reg_lin.html#sec-simple-lm" class="quarto-xref"><span>Section 9.6</span></a> where we use the <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> function to generate diagnostic plots of residuals from a linear model object (bet you can’t wait!).</p>
 </section><section id="ggplot2" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="ggplot2">
 <span class="header-section-number">4.2</span> ggplot2</h2>
 <p>As mentioned earlier <code>ggplot</code> grammar requires several elements to produce a graphic (<a href="#fig-ggplot-str" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>) and a minimum of 3 are required:</p>
@@ -616,7 +618,9 @@ Figure&nbsp;4.1: The Grammar of Graphics. Visual by Thomas de Beus
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-gg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-graphics_short_files/figure-html/fig-plot5-gg-1.png" id="fig-plot5-gg" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-plot5-gg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca"></figcaption></figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-plot5-gg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3
+</figcaption></figure>
 </div>
 </div>
 </div>

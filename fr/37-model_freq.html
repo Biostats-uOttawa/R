@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr" xml:lang="fr-fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="En cours de traduction">
-<title>10&nbsp; Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson – Sur le chemin de l'enf-R</title>
+<title>15&nbsp; Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson – Sur le chemin de l'enf-R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -222,7 +222,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./37-model_freq.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./37-model_freq.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,8 +253,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span></a>
+  <a href="./02-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rapports reproductibles avec Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Contrôle de version avec Git et GitHub</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of stats</span></a>
+ <span class="menu-text">Principes de statistique</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -271,7 +301,7 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-power.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,43 +318,43 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31-reg_lin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./32-t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./33-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./34-anova_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./35-reg_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./36-ancova_glm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./37-model_freq.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
   </div>
 </li>
       </ul>
@@ -380,19 +410,19 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table des matières</h2>
    
   <ul>
-<li><a href="#set-freq" id="toc-set-freq" class="nav-link active" data-scroll-target="#set-freq"><span class="header-section-number">10.1</span> Paquets et données requises pour le labo</a></li>
-  <li><a href="#organisation-des-donn%C3%A9es-3-formats" id="toc-organisation-des-données-3-formats" class="nav-link" data-scroll-target="#organisation-des-donn%C3%A9es-3-formats"><span class="header-section-number">10.2</span> Organisation des données: 3 formats</a></li>
-  <li><a href="#visualiser-graphiquement-les-tableaux-de-contingence-et-test-dind%C3%A9pendance" id="toc-visualiser-graphiquement-les-tableaux-de-contingence-et-test-dindépendance" class="nav-link" data-scroll-target="#visualiser-graphiquement-les-tableaux-de-contingence-et-test-dind%C3%A9pendance"><span class="header-section-number">10.3</span> Visualiser graphiquement les tableaux de contingence et test d’indépendance</a></li>
-  <li><a href="#r%C3%A9gression-de-poisson-une-alternative-au-test-de-chi-carr%C3%A9-pour-les-tableaux-de-contingence" id="toc-régression-de-poisson-une-alternative-au-test-de-chi-carré-pour-les-tableaux-de-contingence" class="nav-link" data-scroll-target="#r%C3%A9gression-de-poisson-une-alternative-au-test-de-chi-carr%C3%A9-pour-les-tableaux-de-contingence"><span class="header-section-number">10.4</span> Régression de Poisson: une alternative au test de Chi carré pour les tableaux de contingence</a></li>
-  <li><a href="#tester-une-hypoth%C3%A8se-extrins%C3%A8que" id="toc-tester-une-hypothèse-extrinsèque" class="nav-link" data-scroll-target="#tester-une-hypoth%C3%A8se-extrins%C3%A8que"><span class="header-section-number">10.5</span> Tester une hypothèse extrinsèque</a></li>
-  <li><a href="#r%C3%A9gression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-%C3%A0-plusieurs-crit%C3%A8res" id="toc-régression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-à-plusieurs-critères" class="nav-link" data-scroll-target="#r%C3%A9gression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-%C3%A0-plusieurs-crit%C3%A8res"><span class="header-section-number">10.6</span> Régression de Poisson pour l’analyse de tableaux de contingence à plusieurs critères</a></li>
-  <li><a href="#ex-glm" id="toc-ex-glm" class="nav-link" data-scroll-target="#ex-glm"><span class="header-section-number">10.7</span> Exercice</a></li>
+<li><a href="#set-freq" id="toc-set-freq" class="nav-link active" data-scroll-target="#set-freq"><span class="header-section-number">15.1</span> Paquets et données requises pour le labo</a></li>
+  <li><a href="#organisation-des-donn%C3%A9es-3-formats" id="toc-organisation-des-données-3-formats" class="nav-link" data-scroll-target="#organisation-des-donn%C3%A9es-3-formats"><span class="header-section-number">15.2</span> Organisation des données: 3 formats</a></li>
+  <li><a href="#visualiser-graphiquement-les-tableaux-de-contingence-et-test-dind%C3%A9pendance" id="toc-visualiser-graphiquement-les-tableaux-de-contingence-et-test-dindépendance" class="nav-link" data-scroll-target="#visualiser-graphiquement-les-tableaux-de-contingence-et-test-dind%C3%A9pendance"><span class="header-section-number">15.3</span> Visualiser graphiquement les tableaux de contingence et test d’indépendance</a></li>
+  <li><a href="#r%C3%A9gression-de-poisson-une-alternative-au-test-de-chi-carr%C3%A9-pour-les-tableaux-de-contingence" id="toc-régression-de-poisson-une-alternative-au-test-de-chi-carré-pour-les-tableaux-de-contingence" class="nav-link" data-scroll-target="#r%C3%A9gression-de-poisson-une-alternative-au-test-de-chi-carr%C3%A9-pour-les-tableaux-de-contingence"><span class="header-section-number">15.4</span> Régression de Poisson: une alternative au test de Chi carré pour les tableaux de contingence</a></li>
+  <li><a href="#tester-une-hypoth%C3%A8se-extrins%C3%A8que" id="toc-tester-une-hypothèse-extrinsèque" class="nav-link" data-scroll-target="#tester-une-hypoth%C3%A8se-extrins%C3%A8que"><span class="header-section-number">15.5</span> Tester une hypothèse extrinsèque</a></li>
+  <li><a href="#r%C3%A9gression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-%C3%A0-plusieurs-crit%C3%A8res" id="toc-régression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-à-plusieurs-critères" class="nav-link" data-scroll-target="#r%C3%A9gression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-%C3%A0-plusieurs-crit%C3%A8res"><span class="header-section-number">15.6</span> Régression de Poisson pour l’analyse de tableaux de contingence à plusieurs critères</a></li>
+  <li><a href="#ex-glm" id="toc-ex-glm" class="nav-link" data-scroll-target="#ex-glm"><span class="header-section-number">15.7</span> Exercice</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/37-model_freq.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./37-model_freq.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./37-model_freq.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span>
+<span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span>
 </h1>
 </div>
 
@@ -414,8 +444,8 @@ window.Quarto = {
 <li>Utiliser R pour éprouver l’hypothèse d’indépendance pour des tableaux de contingence à 2 dimensions.</li>
 <li>Utiliser R pour ajuster des régressions de Poisson et des modèles log-linéaires à des données de fréquence.</li>
 </ul>
-<section id="set-freq" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="set-freq">
-<span class="header-section-number">10.1</span> Paquets et données requises pour le labo</h2>
+<section id="set-freq" class="level2" data-number="15.1"><h2 data-number="15.1" class="anchored" data-anchor-id="set-freq">
+<span class="header-section-number">15.1</span> Paquets et données requises pour le labo</h2>
 <p>Ce laboratoire nécessite:</p>
 <ul>
 <li>les paquets R:
@@ -432,8 +462,8 @@ window.Quarto = {
 <li>sturgdat.csv</li>
 </ul>
 </li>
-</ul></section><section id="organisation-des-données-3-formats" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="organisation-des-données-3-formats">
-<span class="header-section-number">10.2</span> Organisation des données: 3 formats</h2>
+</ul></section><section id="organisation-des-données-3-formats" class="level2" data-number="15.2"><h2 data-number="15.2" class="anchored" data-anchor-id="organisation-des-données-3-formats">
+<span class="header-section-number">15.2</span> Organisation des données: 3 formats</h2>
 <p>Les résultats de certaines expériences sont sous forme de fréquences, par exemple le nombre de plantes infectées par un pathogène sous différents régimes d’infection, ou le nombre de tortues mâles et femelles qui éclosent à différentes températures (oui, chez les tortues le sexe dépends de la température!), etc. La question statistique qui se pose généralement est de savoir si la proportion des observations dans chaque catégorie (infecté vs non infecté, mâle vs femelle, etc) diffère significativement entre les traitements (régime d’infection ou température dans les deux exemples). Pour répondre à cette question, on peut organiser les données de manière à refléter comment les observations se retrouvent dans chaque catégorie. Il existe 3 façons d’organiser ces données. Vous devriez être capable de choisir la manière appropriée pour votre analyse, et savoir convertir entre elles avec R.</p>
 <p>Le fichier <code>USPopSurvey.csv</code> contient les donnée de recensement d’une ville du midwest américain en 1980:</p>
 <div class="cell">
@@ -553,8 +583,8 @@ ageclass female  male
 <td style="text-align: center;"></td>
 </tr>
 </tbody>
-</table></section><section id="visualiser-graphiquement-les-tableaux-de-contingence-et-test-dindépendance" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="visualiser-graphiquement-les-tableaux-de-contingence-et-test-dindépendance">
-<span class="header-section-number">10.3</span> Visualiser graphiquement les tableaux de contingence et test d’indépendance</h2>
+</table></section><section id="visualiser-graphiquement-les-tableaux-de-contingence-et-test-dindépendance" class="level2" data-number="15.3"><h2 data-number="15.3" class="anchored" data-anchor-id="visualiser-graphiquement-les-tableaux-de-contingence-et-test-dindépendance">
+<span class="header-section-number">15.3</span> Visualiser graphiquement les tableaux de contingence et test d’indépendance</h2>
 <p>Les tableaux de contingence peuvent servir à éprouver l’hypothèse d’indépendance des observations. Ceci équivaut à répondre à la question: est-ce que la classification des observations selon une variable (par exemple sex) indépendante de la classification par une autre variable (par exemple ageclass). En autres mots, est-ce que la proportion des mâles et femelles indépendante de l’âge ou varie avec l’âge?</p>
 <p>Le package <code>vcd</code> inclut la fonction <code><a href="https://rdrr.io/pkg/vcd/man/mosaic.html">mosaic()</a></code> qui permet de représenter graphiquement le contenu d’un tableau de contingence:</p>
 <div class="cell">
@@ -627,8 +657,8 @@ p-value = 9.999e-05
 alternative hypothesis: two.sided</code></pre>
 </div>
 </div>
-</section><section id="régression-de-poisson-une-alternative-au-test-de-chi-carré-pour-les-tableaux-de-contingence" class="level2" data-number="10.4"><h2 data-number="10.4" class="anchored" data-anchor-id="régression-de-poisson-une-alternative-au-test-de-chi-carré-pour-les-tableaux-de-contingence">
-<span class="header-section-number">10.4</span> Régression de Poisson: une alternative au test de Chi carré pour les tableaux de contingence</h2>
+</section><section id="régression-de-poisson-une-alternative-au-test-de-chi-carré-pour-les-tableaux-de-contingence" class="level2" data-number="15.4"><h2 data-number="15.4" class="anchored" data-anchor-id="régression-de-poisson-une-alternative-au-test-de-chi-carré-pour-les-tableaux-de-contingence">
+<span class="header-section-number">15.4</span> Régression de Poisson: une alternative au test de Chi carré pour les tableaux de contingence</h2>
 <p>Rendu à ce stade, vous devriez avoir appris à apprécier la flexibilité et la généralité des modèles linéaires, et réaliser que le test de t est un cas spécial d’un modèle linéaire avec une variable indépendante catégorique. L’analyse des tableaux de contingence par le test du Chi carré peut également être généralisé. Un modèle linéaire généralisé pour une distribution de Poisson peut être utilisé quand la variable dépendante est une fréquence d’observations et les variables indépendantes sont catégorique (comme pour les tableaux de contingence, on parle alors de modèles log-linéaires), continue (régression Poisson), ou une combinaison de variables indépendante continues et catégoriques (aussi appelé régression de Poisson, mais avec des variables catégoriques en plus, analogue à l’ANCOVA sensu largo).</p>
 <p>Ces modèles prédisent le logarithme naturel de la fréquence des observations en fonction des variables indépendantes. Comme pour les modèles linéaires qui présument de la normalité des résidus, on peut évaluer la qualité d’ajustement du modèle (par AICc par exemple) et la signification statistique des termes du modèle (par exemple en comparant l’ajustement d’un modèle “complet” et celui d’un modèle qui exclue un terme à tester). On peut également obtenir des estimés des paramètre pour chaque terme dans le modèle, avec des intervalles de confiance et des valeur p pour l’hypothèse nulle que ce terme n’a pas d’influence sur la fréquence.</p>
 <p>La fonction glm() avec l’option family=poisson() permet l’estimation, par la méthode du maximum de vraisemblance, de modèles linéaires pour des fréquences. Comparativement aux modèles linéaires vus précédemment, une des particularité de ces modèles est que seuls les termes d’interaction sont d’intérêt. En partant des données de recensement en forme tableau, on peut ajuster un glm aux fréquences observées par sexe et classe d’âge par:</p>
@@ -694,8 +724,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>Les arguments <code>type=3</code> and <code>test="LR"</code> font en sorte que le test effectué pour comparer le modèle complet aux modèles réduits est les test de Chi carré sur le rapport de vraisemblance (Likelihood Ratio Chi-Square) à partir de la variance résiduelle, et que c’est un test partiel, et non séquentiel.</p>
 <p>Selon ces tests, il n’y a pas d’effet principal de sex (p=0.667) mais il y a un effet principal de ageclass et une interaction significative sex:ageclass. L’interaction significative signifie que l’effet du sexe sur la fréquence varie selon les classes d’âge, bref que le rapport des sexe varie avec l’âge. L’effet principal de ageclass signifie que la fréquence des individus varie avec l’âge dans la population recensée (i.e.&nbsp;que certaines classes d’âge sont plus populeuses que d’autres). L’absence d’un effet principal du sexe suggère qu’il y a approximativement le même nombre de mâles et femelles dans l’échantillon (quoique, puisqu’il y a une interaction, vous devez être prudents en faisant cette déclaration. C’est “vrai” au total, mais semble incorrect pour certaines classes d’âge).</p>
-</section><section id="tester-une-hypothèse-extrinsèque" class="level2" data-number="10.5"><h2 data-number="10.5" class="anchored" data-anchor-id="tester-une-hypothèse-extrinsèque">
-<span class="header-section-number">10.5</span> Tester une hypothèse extrinsèque</h2>
+</section><section id="tester-une-hypothèse-extrinsèque" class="level2" data-number="15.5"><h2 data-number="15.5" class="anchored" data-anchor-id="tester-une-hypothèse-extrinsèque">
+<span class="header-section-number">15.5</span> Tester une hypothèse extrinsèque</h2>
 <p>Le test d’indépendance ci-dessus éprouve une hypothèse intrinsèque parce que les proportions utilisées pour calculer les valeurs attendues et tester l’indépendance sont celles observées (i.e.&nbsp;la proportion des mâles et femelles dans tout l’échantillon, et la proportion des individus dans chaque classe d’âge).</p>
 <p>Pour éprouver l’hypothèse (extrinsèque) que le rapport des sexes est 1:1 pour les individus les plus jeunes (ageclass 0-9), on doit produire le tableau 2X2 des fréquences observées et attendues. Les fréquences attendues sont obtenues simplement en divisant le total des mâles et femelles par 2.</p>
 <p>Code R pour créer et analyser un tableau de contingence 2X2 et éprouver une hypothèse extrinsèque</p>
@@ -753,8 +783,8 @@ X-squared = 0.088758, df = 1, p-value = 0.7658</code></pre>
 </div>
 </div>
 <p>Notez que pour un tableau 2X2, on devrait utiliser une correction de Yates ou un test de Fisher. Le test de Fisher ne pouvant être utilisé lorsque l’échantillon dépasse 200, on utilise la correction de Yates. Selon cette analyse, on accepte l’hypothèse nulle que le rapport des sexes est 1:1à la naissance. Ceci dit, ces données ne sont pas très appropriées pour éprouver l’hypothèse car la première classe d’âge est trop grossière. Il est possible que le rapport des sexes à la naissance soit différent de 1:1 mais que la mortalité différentielle des deux sexes compense au cours des 9 premières années (par exemple si il y a plus de mâles à la naissance, mais que les jeunes garçons ont une survie plus faible au cours de leurs 9 premières années). Dans un tel cas, le rapport des sexes n’est PAS de 1:1 à la naissance, mais on accepte l’hypothèse nulle à partir des données dans la classe d’âge 0-9.</p>
-</section><section id="régression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-à-plusieurs-critères" class="level2" data-number="10.6"><h2 data-number="10.6" class="anchored" data-anchor-id="régression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-à-plusieurs-critères">
-<span class="header-section-number">10.6</span> Régression de Poisson pour l’analyse de tableaux de contingence à plusieurs critères</h2>
+</section><section id="régression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-à-plusieurs-critères" class="level2" data-number="15.6"><h2 data-number="15.6" class="anchored" data-anchor-id="régression-de-poisson-pour-lanalyse-de-tableaux-de-contingence-à-plusieurs-critères">
+<span class="header-section-number">15.6</span> Régression de Poisson pour l’analyse de tableaux de contingence à plusieurs critères</h2>
 <p>Le principe d’éprouver l’indépendance en examinant les interactions peut être utilisé avec les tableaux de contingence à plusieurs critères. Par exemple, examinons si la température (2 niveaux: base et haute) et l’éclairage (2 niveaux: bas et haut) affectent si des plantes sont infectées (2 niveaux: infecté et non-infecté) par un pathogène. On peut représenter ces données par un tableau de contingence à 3 critères (température, lumière, statut d’infection).</p>
 <p>L’ajustement de modèles log-linéaires à des données de fréquence implique que l’on éprouve plusieurs modèles en les comparant au modèle complet (saturé). Une série de modèles contenant tous les termes sauf une des interactions qui nous intéressent est produite, et l’ajustement de chaque modèle est comparé à celui du modèle complet. Si la réduction de la qualité d’ajustement n’est pas significative, cela implique que l’interaction manquante contribue peu à la qualité de l’ajustement. Par contre, si le modèle réduit s’ajuste nettement moins bien aux données, alors l’interaction manquante contribue beaucoup à l’ajustement du modèle complet. Comme pour les tableaux de contingence 2X2, les termes qui nous intéressent le plus sont les interactions, pas les effets principaux, si l’on teste pour l’indépendance des différents facteurs.</p>
 <p>Le fichier <code>loglin.csv</code> contient les fréquences (frequency) des plantes infectées ou non infectées (<code>infected</code>) à basse et haute température (<code>temperature</code>) à basse et haute lumière (<code>light</code>). Pour visualiser ces données et déterminer si le taux d’infection dépends de la lumière et de la température, on peut faire une figure mosaïque et ajuster un modèle log-linéaire:</p>
@@ -798,8 +828,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <li>L’interation significative <code>temperature:infected</code> implique que le taux d’infection n’est pas indépendant de la température. D’ailleurs il est apparent dans la mosaïque que le taux d’infection (le nombre relatif de plantes infectées) est supérieur à haute température.</li>
 <li>L’interaction significative <code>light:infected</code> implique que le taux d’infection dépends de la lumière. La mosaïque illustre que la proportion des plantes infectées est plus élevée en basse lumière.</li>
 <li>L’interaction <code>temperature:light:infected</code> n’est pas significative. Cela implique que l’effet de la température et de la lumière sur le taux d’infection sont indépendants. Autrement dit, l’effet de la lumière sur le taux d’infection ne dépends pas de la température, et vice versa.</li>
-</ul></section><section id="ex-glm" class="level2" data-number="10.7"><h2 data-number="10.7" class="anchored" data-anchor-id="ex-glm">
-<span class="header-section-number">10.7</span> Exercice</h2>
+</ul></section><section id="ex-glm" class="level2" data-number="15.7"><h2 data-number="15.7" class="anchored" data-anchor-id="ex-glm">
+<span class="header-section-number">15.7</span> Exercice</h2>
 <p>Le fichier Sturgdat contient les données qui vous permettront d’éprouver l’hypothèse que le nombre d’esturgeons capturé est indépendants du site, de l’année, et du sexe. Avant de commencer l’analyse, les données devront être réorganisées pour pouvoir ajuster un modèle log-linéaire:</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1589,7 +1619,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./36-ancova_glm.html" class="pagination-link" aria-label="ANCOVA et modèle linéaire général">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr" xml:lang="fr-fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="En cours de traduction">
-<title>7&nbsp; ANOVA à critères multiples : plans factoriels et hiérarchiques – Sur le chemin de l'enf-R</title>
+<title>12&nbsp; ANOVA à critères multiples : plans factoriels et hiérarchiques – Sur le chemin de l'enf-R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -222,7 +222,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./34-anova_mult.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./34-anova_mult.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,8 +253,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span></a>
+  <a href="./02-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rapports reproductibles avec Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Contrôle de version avec Git et GitHub</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of stats</span></a>
+ <span class="menu-text">Principes de statistique</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -271,7 +301,7 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-power.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,43 +318,43 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31-reg_lin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./32-t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./33-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./34-anova_mult.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./35-reg_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./36-ancova_glm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./37-model_freq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
   </div>
 </li>
       </ul>
@@ -380,26 +410,26 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table des matières</h2>
    
   <ul>
-<li><a href="#set-anomul" id="toc-set-anomul" class="nav-link active" data-scroll-target="#set-anomul"><span class="header-section-number">7.1</span> Paquets et données requises pour le labo</a></li>
+<li><a href="#set-anomul" id="toc-set-anomul" class="nav-link active" data-scroll-target="#set-anomul"><span class="header-section-number">12.1</span> Paquets et données requises pour le labo</a></li>
   <li>
-<a href="#plan-factoriel-%C3%A0-deux-facteurs-de-classification-et-r%C3%A9plication" id="toc-plan-factoriel-à-deux-facteurs-de-classification-et-réplication" class="nav-link" data-scroll-target="#plan-factoriel-%C3%A0-deux-facteurs-de-classification-et-r%C3%A9plication"><span class="header-section-number">7.2</span> Plan factoriel à deux facteurs de classification et réplication</a>
+<a href="#plan-factoriel-%C3%A0-deux-facteurs-de-classification-et-r%C3%A9plication" id="toc-plan-factoriel-à-deux-facteurs-de-classification-et-réplication" class="nav-link" data-scroll-target="#plan-factoriel-%C3%A0-deux-facteurs-de-classification-et-r%C3%A9plication"><span class="header-section-number">12.2</span> Plan factoriel à deux facteurs de classification et réplication</a>
   <ul class="collapse">
-<li><a href="#anova-%C3%A0-effets-fixes" id="toc-anova-à-effets-fixes" class="nav-link" data-scroll-target="#anova-%C3%A0-effets-fixes"><span class="header-section-number">7.2.1</span> ANOVA à effets fixes</a></li>
-  <li><a href="#anova-%C3%A0-effets-mixtes" id="toc-anova-à-effets-mixtes" class="nav-link" data-scroll-target="#anova-%C3%A0-effets-mixtes"><span class="header-section-number">7.2.2</span> ANOVA à effets mixtes</a></li>
+<li><a href="#anova-%C3%A0-effets-fixes" id="toc-anova-à-effets-fixes" class="nav-link" data-scroll-target="#anova-%C3%A0-effets-fixes"><span class="header-section-number">12.2.1</span> ANOVA à effets fixes</a></li>
+  <li><a href="#anova-%C3%A0-effets-mixtes" id="toc-anova-à-effets-mixtes" class="nav-link" data-scroll-target="#anova-%C3%A0-effets-mixtes"><span class="header-section-number">12.2.2</span> ANOVA à effets mixtes</a></li>
   </ul>
 </li>
-  <li><a href="#plan-factoriel-%C3%A0-deux-facteurs-de-classification-sans-r%C3%A9plication" id="toc-plan-factoriel-à-deux-facteurs-de-classification-sans-réplication" class="nav-link" data-scroll-target="#plan-factoriel-%C3%A0-deux-facteurs-de-classification-sans-r%C3%A9plication"><span class="header-section-number">7.3</span> Plan factoriel à deux facteurs de classification sans réplication</a></li>
-  <li><a href="#plans-hi%C3%A9rarchiques" id="toc-plans-hiérarchiques" class="nav-link" data-scroll-target="#plans-hi%C3%A9rarchiques"><span class="header-section-number">7.4</span> Plans hiérarchiques</a></li>
-  <li><a href="#anova-non-param%C3%A9trique-avec-deux-facteurs-de-classification" id="toc-anova-non-paramétrique-avec-deux-facteurs-de-classification" class="nav-link" data-scroll-target="#anova-non-param%C3%A9trique-avec-deux-facteurs-de-classification"><span class="header-section-number">7.5</span> ANOVA non paramétrique avec deux facteurs de classification</a></li>
-  <li><a href="#comparaisons-multiples" id="toc-comparaisons-multiples" class="nav-link" data-scroll-target="#comparaisons-multiples"><span class="header-section-number">7.6</span> Comparaisons multiples</a></li>
-  <li><a href="#test-de-permutation-pour-lanova-%C3%A0-deux-facteurs-de-classification" id="toc-test-de-permutation-pour-lanova-à-deux-facteurs-de-classification" class="nav-link" data-scroll-target="#test-de-permutation-pour-lanova-%C3%A0-deux-facteurs-de-classification"><span class="header-section-number">7.7</span> Test de permutation pour l’ANOVA à deux facteurs de classification</a></li>
-  <li><a href="#bootstrap-pour-lanova-%C3%A0-deux-facteurs-de-classification" id="toc-bootstrap-pour-lanova-à-deux-facteurs-de-classification" class="nav-link" data-scroll-target="#bootstrap-pour-lanova-%C3%A0-deux-facteurs-de-classification"><span class="header-section-number">7.8</span> Bootstrap pour l’ANOVA à deux facteurs de classification</a></li>
+  <li><a href="#plan-factoriel-%C3%A0-deux-facteurs-de-classification-sans-r%C3%A9plication" id="toc-plan-factoriel-à-deux-facteurs-de-classification-sans-réplication" class="nav-link" data-scroll-target="#plan-factoriel-%C3%A0-deux-facteurs-de-classification-sans-r%C3%A9plication"><span class="header-section-number">12.3</span> Plan factoriel à deux facteurs de classification sans réplication</a></li>
+  <li><a href="#plans-hi%C3%A9rarchiques" id="toc-plans-hiérarchiques" class="nav-link" data-scroll-target="#plans-hi%C3%A9rarchiques"><span class="header-section-number">12.4</span> Plans hiérarchiques</a></li>
+  <li><a href="#anova-non-param%C3%A9trique-avec-deux-facteurs-de-classification" id="toc-anova-non-paramétrique-avec-deux-facteurs-de-classification" class="nav-link" data-scroll-target="#anova-non-param%C3%A9trique-avec-deux-facteurs-de-classification"><span class="header-section-number">12.5</span> ANOVA non paramétrique avec deux facteurs de classification</a></li>
+  <li><a href="#comparaisons-multiples" id="toc-comparaisons-multiples" class="nav-link" data-scroll-target="#comparaisons-multiples"><span class="header-section-number">12.6</span> Comparaisons multiples</a></li>
+  <li><a href="#test-de-permutation-pour-lanova-%C3%A0-deux-facteurs-de-classification" id="toc-test-de-permutation-pour-lanova-à-deux-facteurs-de-classification" class="nav-link" data-scroll-target="#test-de-permutation-pour-lanova-%C3%A0-deux-facteurs-de-classification"><span class="header-section-number">12.7</span> Test de permutation pour l’ANOVA à deux facteurs de classification</a></li>
+  <li><a href="#bootstrap-pour-lanova-%C3%A0-deux-facteurs-de-classification" id="toc-bootstrap-pour-lanova-à-deux-facteurs-de-classification" class="nav-link" data-scroll-target="#bootstrap-pour-lanova-%C3%A0-deux-facteurs-de-classification"><span class="header-section-number">12.8</span> Bootstrap pour l’ANOVA à deux facteurs de classification</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/34-anova_mult.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./34-anova_mult.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./34-anova_mult.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span>
+<span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span>
 </h1>
 </div>
 
@@ -423,8 +453,8 @@ window.Quarto = {
 <li>Utiliser R pour faire des comparaisons multiples</li>
 </ul>
 <p>Il existe une très grande variété de plans (designs) d’ANOVA que R peut analyser. Cet exercice n’est qu’une introduction aux plans les plus communs.</p>
-<section id="set-anomul" class="level2" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="set-anomul">
-<span class="header-section-number">7.1</span> Paquets et données requises pour le labo</h2>
+<section id="set-anomul" class="level2" data-number="12.1"><h2 data-number="12.1" class="anchored" data-anchor-id="set-anomul">
+<span class="header-section-number">12.1</span> Paquets et données requises pour le labo</h2>
 <p>Ce laboratoire nécessite:</p>
 <ul>
 <li>les paquets R:
@@ -450,12 +480,12 @@ window.Quarto = {
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="plan-factoriel-à-deux-facteurs-de-classification-et-réplication" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="plan-factoriel-à-deux-facteurs-de-classification-et-réplication">
-<span class="header-section-number">7.2</span> Plan factoriel à deux facteurs de classification et réplication</h2>
+</section><section id="plan-factoriel-à-deux-facteurs-de-classification-et-réplication" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="plan-factoriel-à-deux-facteurs-de-classification-et-réplication">
+<span class="header-section-number">12.2</span> Plan factoriel à deux facteurs de classification et réplication</h2>
 <p>Il est fréquent de vouloir analyser l’effet de plusieurs facteurs simultanément. L’ANOVA factorielle à deux critères de classification permet d’examiner deux facteurs à la fois, mais la même approche peut être utilisée pour 3, 4 ou même 5 facteurs quoique l’interprétation des résultats devienne beaucoup plus complexe.</p>
 <p>Supposons que vous êtes intéressés par l’effet de deux facteurs : site (location, Cumberland House ou The Pas) et sexe (sex, mâle ou femelle) sur la taille des esturgeons. Comme l’effectif n’est pas le même pour tous les groupes, c’est un plan qui n’est pas balancé. Notez aussi qu’il y a des valeurs manquantes pour certaines variables, ce qui veut dire que chaque mesure n’a pas été effectuée sur chaque poisson.</p>
-<section id="anova-à-effets-fixes" class="level3" data-number="7.2.1"><h3 data-number="7.2.1" class="anchored" data-anchor-id="anova-à-effets-fixes">
-<span class="header-section-number">7.2.1</span> ANOVA à effets fixes</h3>
+<section id="anova-à-effets-fixes" class="level3" data-number="12.2.1"><h3 data-number="12.2.1" class="anchored" data-anchor-id="anova-à-effets-fixes">
+<span class="header-section-number">12.2.1</span> ANOVA à effets fixes</h3>
 <ul>
 <li>Examinez d’abord les données en faisant des box plots de rdwght pour sex et location des données du fichier <code>Stu2wdat.csv</code> .</li>
 </ul>
@@ -768,8 +798,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <p>Ici la somme des carrées des résidus (19309) est beaucoup plus grande que celle de l’ANOVA factorielle (175306) parce qu’une partie importante de la variabilité expliquée par le modèle est associée à l’interaction. Notez que si on n’avait fait que cette analyse, on conclurait que les esturgeons mâles et femelles ont la même taille. Mais en fait leur taille diffère; seulement la différence est à l’avantage des mâles à un site et à l’avantage des femelles à l’autre. Il est donc délicat d’interpréter l’effet principal (sexe) en présence d’une interaction significative…</p>
-</section><section id="anova-à-effets-mixtes" class="level3" data-number="7.2.2"><h3 data-number="7.2.2" class="anchored" data-anchor-id="anova-à-effets-mixtes">
-<span class="header-section-number">7.2.2</span> ANOVA à effets mixtes</h3>
+</section><section id="anova-à-effets-mixtes" class="level3" data-number="12.2.2"><h3 data-number="12.2.2" class="anchored" data-anchor-id="anova-à-effets-mixtes">
+<span class="header-section-number">12.2.2</span> ANOVA à effets mixtes</h3>
 <p>Les analyses qui précèdent négligent un point important: <code>location</code> pourrait être traité comme un facteur aléatoire et <code>sex</code> est fixe. Par conséquent le modèle approprié d’ANOVA est de type mixte.</p>
 <p>Notez que dans toutes les analyses qui précèdent, R a traité cette ANOVA comme si elle etait de type effet fixe seulement, et les termes principaux et celui d’interaction ont été testés en utilisant le carré moyen des résidus comme dénominateur des tests de F. Cependant, pour une ANOVA de type mixte, ces effets devraient être testés en utilisant le carré moyen du terme d’interaction, ou en combinant la somme des carrés de l’erreur et de l’interaction (selon le statisticien consulté!).</p>
 <p>En utilisant <code>Stu2wdat</code>, refaites un tableau d’ANOVA pour RDWGHT en considérant location comme facteur aléatoire et sex comme un facteur fixe. Pour ce faire, vous devrez recalculer les valeurs de F pour sex et location en utilisant le carré moyen de l’interaction sex:location au lieu du carré moyen des résidus comme dénominateur. Le mieux c’est de le faire à la mitaine ent travaillant avec les Type III Sums of squares du tableau d’ANOVA.</p>
@@ -829,8 +859,8 @@ Note
 <p>Les modèles mixtes qui sont une généralisation de l’ANOVA à effets mixtes sont maintenant extrêmement bien développé et sont à favoriser lors d’analyse incluant des effets dit aléatoires.</p>
 </div>
 </div>
-</section></section><section id="plan-factoriel-à-deux-facteurs-de-classification-sans-réplication" class="level2" data-number="7.3"><h2 data-number="7.3" class="anchored" data-anchor-id="plan-factoriel-à-deux-facteurs-de-classification-sans-réplication">
-<span class="header-section-number">7.3</span> Plan factoriel à deux facteurs de classification sans réplication</h2>
+</section></section><section id="plan-factoriel-à-deux-facteurs-de-classification-sans-réplication" class="level2" data-number="12.3"><h2 data-number="12.3" class="anchored" data-anchor-id="plan-factoriel-à-deux-facteurs-de-classification-sans-réplication">
+<span class="header-section-number">12.3</span> Plan factoriel à deux facteurs de classification sans réplication</h2>
 <p>Dans certains plans d’expérience il n’y a pas de réplicats pour chaque combinaison de facteurs, par exemple parce qu’il serait trop coûteux de faire plus d’une observation. L’ANOVA à deux critères de classification est quand même possible dans ces circonstances, mais il y a une limitation importante.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -916,8 +946,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <p>Il y a donc un problème d’hétéroscédasticité, comme on peut très bien voir dans le graphique des résidus vs les valeurs estimées. Cette analyse n’est donc pas très satisfaisante: il y a des violations des conditions d’application et il semble y avoir une interaction entre depth et date qui pourrait invalider l’analyse.</p>
-</section><section id="plans-hiérarchiques" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="plans-hiérarchiques">
-<span class="header-section-number">7.4</span> Plans hiérarchiques</h2>
+</section><section id="plans-hiérarchiques" class="level2" data-number="12.4"><h2 data-number="12.4" class="anchored" data-anchor-id="plans-hiérarchiques">
+<span class="header-section-number">12.4</span> Plans hiérarchiques</h2>
 <p>Un design expérimental fréquent implique la division de chaque groupe du facteur majeur en sous-groupes aléatoires. Par exemple, une généticienne intéressée par l’effet du génotype sur la résistance à la dessiccation chez la drosophile effectue une expérience. Pour chaque génotype (facteur principal) elle prépare trois chambres de croissance (sous-groupes) avec une température et humidité contrôlées. Dans chaque chambre de croissance, elle place cinq larves, puis mesure le nombre d’heures pendant lesquelles chaque larve survit. Les données ont donc un structure hiérarchique. Il ya des observations répétées dans chaque chambre au sein de chaque génotype.</p>
 <ul>
 <li>Le fichier <code>nestdat.csv</code> contient les résultats d’une expérience semblable. Il contient trois variables : genotype, chamber et survival. Effectuez une ANOVA hiérarchique avec survival comme variable dépendante et genotype et chamber/genotype comme variables indépendantes.</li>
@@ -1031,8 +1061,8 @@ Solution
 </div>
 </div>
 <p>Donc, toutes les conditions d’application semblent être remplies, et on peut donc accepter les conclusions. Notez que si l’on compare le carré moyen des résidus de l’ANOVA hiérarchique et de l’ANOVA à un critère de classification (5.045 vs 5.292), ils sont presque identiques. Cela n’est pas surprenant compte tenu de la faible variabilité associée aux chambres de croissance pour chaque génotype.</p>
-</section><section id="anova-non-paramétrique-avec-deux-facteurs-de-classification" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="anova-non-paramétrique-avec-deux-facteurs-de-classification">
-<span class="header-section-number">7.5</span> ANOVA non paramétrique avec deux facteurs de classification</h2>
+</section><section id="anova-non-paramétrique-avec-deux-facteurs-de-classification" class="level2" data-number="12.5"><h2 data-number="12.5" class="anchored" data-anchor-id="anova-non-paramétrique-avec-deux-facteurs-de-classification">
+<span class="header-section-number">12.5</span> ANOVA non paramétrique avec deux facteurs de classification</h2>
 <p>L’ANOVA non paramétrique à deux critères de classification est une extension de celle à un critère de classification vue précédemment. Elle débute par une ANOVA faite sur les données transformées en rangs. Elle peut se faire sur des données avec ou sans réplicats.</p>
 <p>À partir du fichier <code>stu2wdat.csv</code>, effectuez une ANOVA non paramétrique à deux facteurs de classification pour examiner l’effet de <code>sex</code> et <code>location</code> sur <code>rank(rdwght)</code>.</p>
 <div class="cell">
@@ -1101,8 +1131,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>Ces résultats sont semblables aux résultats de l’ANOVA non-paramétrique à deux critères de classification. Malgré la puissance réduite, il y a encore un effet significatif du sexe, mais ni interaction ni effet du site.</p>
 <p>Il y a toutefois une différence importante. Rappelez-vous que dans l’ANOVA paramétrique il y avait un effet significatif de sex en considérant le problème comme un modèle ANOVA à effet fixe. Cependant, si on traite le problème comme un modèle d’ANOVA à effet mixte l’effet significatif de <code>sex</code> peut en principe disparaître parce que le nombre de degré de liberté (dl) associés au carré moyen (CM) de l’interaction est plus faible que le nombre de dl du CM de l’erreur du modèle à effet fixes. Dans ce cas ci, cependant, le CM de l’interaction est environ la moitié du CM de l’erreur. Par conséquent, l’effet significatif de <code>sex</code> pourrait devenir encore plus significatif si le problème est analysé (comme il se doit) comme une ANOVA mixte. Encore une fois on peut voir l’importance de spécifier le modèle adéquat en ANOVA.</p>
-</section><section id="comparaisons-multiples" class="level2" data-number="7.6"><h2 data-number="7.6" class="anchored" data-anchor-id="comparaisons-multiples">
-<span class="header-section-number">7.6</span> Comparaisons multiples</h2>
+</section><section id="comparaisons-multiples" class="level2" data-number="12.6"><h2 data-number="12.6" class="anchored" data-anchor-id="comparaisons-multiples">
+<span class="header-section-number">12.6</span> Comparaisons multiples</h2>
 <p>Les épreuves d’hypothèses subséquentes en ANOVA à plus d’un critère de classification dépendent des résultats initiaux de l’ANOVA. Si vous êtes intéressés à comparer des effets moyens d’un facteur pour tous les niveaux d’un autre facteur (par exemple l’effet du sexe sur la taille des esturgeons peu importe d’où ils viennent), alors vous pouvez procéder exactement tel que décrit dans la section sur les comparaisons multiples suivant l’ANOVA à un critère de classification. Pour comparer les moyennes des cellules entre elles, il faut spécifier l’interaction comme variable qui représente le groupe.</p>
 <p>Le fichier <code>wmcdat2.csv</code> contient des mesures de consommation d’oxygène, <code>o2cons</code>, de deux espèces, <code>species</code>, d’un mollusque (une patelle) à trois concentrations différentes d’eau de mer, <code>conc</code>. Ces données sont présentées à la p.&nbsp;332 de Sokal et Rohlf 1995.</p>
 <ul>
@@ -1350,8 +1380,8 @@ P value adjustment method: bonferroni </code></pre>
 <div class="sourceCode" id="cb84"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span><span class="va">old.par</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Dans cette analyse on a utilisé le CM = 9.474 du modèle d’ANOVA pour comparer les moyennes. En ce faisant, on présume qu’il s’agit d’une situation d’ANOVA à effet fixes, ce qui n’est peut-être pas le cas (conc est certainement fixe, mais species peut être fixe ou aléatoire).</p>
-</section><section id="test-de-permutation-pour-lanova-à-deux-facteurs-de-classification" class="level2" data-number="7.7"><h2 data-number="7.7" class="anchored" data-anchor-id="test-de-permutation-pour-lanova-à-deux-facteurs-de-classification">
-<span class="header-section-number">7.7</span> Test de permutation pour l’ANOVA à deux facteurs de classification</h2>
+</section><section id="test-de-permutation-pour-lanova-à-deux-facteurs-de-classification" class="level2" data-number="12.7"><h2 data-number="12.7" class="anchored" data-anchor-id="test-de-permutation-pour-lanova-à-deux-facteurs-de-classification">
+<span class="header-section-number">12.7</span> Test de permutation pour l’ANOVA à deux facteurs de classification</h2>
 <p>Quand les données ne rencontrent pas les conditions d’application des tests paramétriques d’ANOVA à un ou plusieurs facteurs de classification, il est possible d’utiliser les tests de permutation comme une alternative aux tests non-paramétriques pour calculer des p-valeurs. Le code suivant est pour un modèle I d’une ANOVA à deux facteurs de classification. Je vous laisse le soin d’adapter ce code pour d’autres modèles. (J’offre même des points boni pour une solution élégante pour des modèles à plusieurs facteurs de classification).</p>
 <div class="cell">
 <div class="sourceCode" id="cb85"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">###########################################################</span></span>
@@ -1430,8 +1460,8 @@ P value adjustment method: bonferroni </code></pre>
 <span><span class="co"># Calculate permutation p-value</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html">anova</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/lmPerm/man/lmp.html">lmp</a></span><span class="op">(</span><span class="va">myformula</span>, data <span class="op">=</span> <span class="va">mydata</span>, perm <span class="op">=</span> <span class="st">"Prob"</span>, center <span class="op">=</span> <span class="cn">FALSE</span>, Ca <span class="op">=</span> <span class="fl">0.001</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="bootstrap-pour-lanova-à-deux-facteurs-de-classification" class="level2" data-number="7.8"><h2 data-number="7.8" class="anchored" data-anchor-id="bootstrap-pour-lanova-à-deux-facteurs-de-classification">
-<span class="header-section-number">7.8</span> Bootstrap pour l’ANOVA à deux facteurs de classification</h2>
+</section><section id="bootstrap-pour-lanova-à-deux-facteurs-de-classification" class="level2" data-number="12.8"><h2 data-number="12.8" class="anchored" data-anchor-id="bootstrap-pour-lanova-à-deux-facteurs-de-classification">
+<span class="header-section-number">12.8</span> Bootstrap pour l’ANOVA à deux facteurs de classification</h2>
 <p>Dans la plupart des cas, les tests de permutation seront plus appropriés que le bootstrap pour les designs d’ANOVA. J’ai quand même un bout de code qui pourra servir si vous en avez besoin:</p>
 <div class="cell">
 <div class="sourceCode" id="cb87"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">############################################################</span></span>
@@ -2045,12 +2075,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./33-anova.html" class="pagination-link" aria-label="ANOVA à un critère de classification">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./35-reg_mult.html" class="pagination-link" aria-label="Régression multiple">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

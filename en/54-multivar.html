@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="Early version needed to be severely updated/modified">
@@ -90,11 +90,11 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -855,15 +855,15 @@ sample estimates:
 <span>  maxiter <span class="op">=</span> <span class="fl">100</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>ASReml Version 4.2 18/06/2024 09:50:51
+<pre><code>ASReml Version 4.2 16/09/2024 00:13:33
           LogLik        Sigma2     DF     wall
-  1     -333.1053           1.0    634   09:50:51
-  2     -303.6372           1.0    634   09:50:51
-  3     -274.8492           1.0    634   09:50:51
-  4     -260.2431           1.0    634   09:50:51
-  5     -256.1178           1.0    634   09:50:51
-  6     -255.8906           1.0    634   09:50:51
-  7     -255.8893           1.0    634   09:50:51</code></pre>
+  1     -333.1053           1.0    634   00:13:33
+  2     -303.6372           1.0    634   00:13:33
+  3     -274.8492           1.0    634   00:13:33
+  4     -260.2431           1.0    634   00:13:33
+  5     -256.1178           1.0    634   00:13:33
+  6     -255.8906           1.0    634   00:13:33
+  7     -255.8893           1.0    634   00:13:33</code></pre>
 </div>
 </div>
 <p>On the right hand side of our model formula, we use the <code>trait</code> keyword to specify that this is a multivariate model — <code>trait</code> itself tells the model to give us the intercept for each trait. We then interact <code>trait</code> with the fixed effects, <code>assay_rep_sc</code> and <code>body_size_sc</code>, so that we get estimates for the effect of these variables on each of teh 2 traits. The random effects structure starts with the random effects, where we tell the model to fit an <em>unstructured</em> (us) covariance matrix for the grouping variable ID. This means that the variance in exploration due to differences among individuals, the variance in boldness due to differences among individuals, and the covariance between these variances will be estimated. Next, we set a structure for the residual variation (<code>residual</code>), which is also sometimes known as the <em>within-individual variation</em>. As we have repeated measures for both traits at the individual level, we also set an <em>unstructured</em> covariance matrix, which estimates the residual variance for each trait and also allows the residuals to covary across the two traits. Finally, we provide the name of the data frame, and a maximum number of iterations for ASReml to attempt to fit the model. After the model has been fit by ASReml, we can check the fit using the same type of model diagnostic plots as we use for <code>lme4</code>:</p>
@@ -894,10 +894,10 @@ trait_exploration_sc:body_size_sc  7.269022e-02 0.07533421  9.649033e-01</code><
 </div>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">wa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/asreml/man/wald.html">wald</a></span><span class="op">(</span><span class="va">asr_us</span>, ssType <span class="op">=</span> <span class="st">"conditional"</span>, denDF <span class="op">=</span> <span class="st">"numeric"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>ASReml Version 4.2 18/06/2024 09:50:51
+<pre><code>ASReml Version 4.2 16/09/2024 00:13:33
           LogLik        Sigma2     DF     wall
-  1     -255.8893           1.0    634   09:50:51
-  2     -255.8893           1.0    634   09:50:51</code></pre>
+  1     -255.8893           1.0    634   00:13:34
+  2     -255.8893           1.0    634   00:13:34</code></pre>
 </div>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/attr.html">attr</a></span><span class="op">(</span><span class="va">wa</span><span class="op">$</span><span class="va">Wald</span>, <span class="st">"heading"</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="cn">NULL</span></span>
 <span><span class="va">wa</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -970,15 +970,15 @@ cor_expl_speed 0.2703462 0.1594097</code></pre>
 <span>  maxiter <span class="op">=</span> <span class="fl">100</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>ASReml Version 4.2 18/06/2024 09:50:52
+<pre><code>ASReml Version 4.2 16/09/2024 00:13:34
           LogLik        Sigma2     DF     wall
-  1     -327.0510           1.0    634   09:50:52
-  2     -299.8739           1.0    634   09:50:52
-  3     -273.6894           1.0    634   09:50:52
-  4     -260.8385           1.0    634   09:50:52
-  5     -257.3307           1.0    634   09:50:52
-  6     -257.1202           1.0    634   09:50:52
-  7     -257.1176           1.0    634   09:50:52</code></pre>
+  1     -327.0510           1.0    634   00:13:34
+  2     -299.8739           1.0    634   00:13:34
+  3     -273.6894           1.0    634   00:13:34
+  4     -260.8385           1.0    634   00:13:34
+  5     -257.3307           1.0    634   00:13:34
+  6     -257.1202           1.0    634   00:13:34
+  7     -257.1176           1.0    634   00:13:34</code></pre>
 </div>
 </div>
 <p>The likelihood ratio test is calculated as twice the difference between model log-likelihoods, on a single degree of freedom (the covariance term):</p>
@@ -1076,23 +1076,23 @@ need to add the selection aspect with trivariate model with fitness
  Thinning interval  = 100
  Sample size  = 4000 
 
- DIC: 1596.589 
+ DIC: 1596.569 
 
  G-structure:  ~us(trait):ID
 
                                            post.mean l-95% CI u-95% CI eff.samp
-traitspeed_sc:traitspeed_sc.ID               0.38860  0.22271   0.5765     4180
-traitexploration_sc:traitspeed_sc.ID         0.08106 -0.03705   0.1924     4000
-traitspeed_sc:traitexploration_sc.ID         0.08106 -0.03705   0.1924     4000
-traitexploration_sc:traitexploration_sc.ID   0.29625  0.13856   0.4544     4000
+traitspeed_sc:traitspeed_sc.ID               0.38671  0.22467   0.5642     3654
+traitexploration_sc:traitspeed_sc.ID         0.08092 -0.02678   0.2096     4000
+traitspeed_sc:traitexploration_sc.ID         0.08092 -0.02678   0.2096     4000
+traitexploration_sc:traitexploration_sc.ID   0.29298  0.14626   0.4519     4000
 
  R-structure:  ~us(trait):units
 
                                               post.mean l-95% CI u-95% CI
-traitspeed_sc:traitspeed_sc.units                0.6378   0.5268   0.7546
-traitexploration_sc:traitspeed_sc.units          0.3326   0.2314   0.4299
-traitspeed_sc:traitexploration_sc.units          0.3326   0.2314   0.4299
-traitexploration_sc:traitexploration_sc.units    0.7304   0.6058   0.8723
+traitspeed_sc:traitspeed_sc.units                0.6393   0.5239   0.7552
+traitexploration_sc:traitspeed_sc.units          0.3350   0.2415   0.4411
+traitspeed_sc:traitexploration_sc.units          0.3350   0.2415   0.4411
+traitexploration_sc:traitexploration_sc.units    0.7332   0.5996   0.8616
                                               eff.samp
 traitspeed_sc:traitspeed_sc.units                 4000
 traitexploration_sc:traitspeed_sc.units           4000
@@ -1102,19 +1102,19 @@ traitexploration_sc:traitexploration_sc.units     4000
  Location effects: cbind(speed_sc, exploration_sc) ~ trait - 1 + trait:assay_rep_sc + trait:body_size_sc 
 
                                   post.mean   l-95% CI   u-95% CI eff.samp
-traitspeed_sc                     0.0006123 -0.1669764  0.1595080     4000
-traitexploration_sc              -0.0006934 -0.1520144  0.1450396     4000
-traitspeed_sc:assay_rep_sc       -0.0368038 -0.1095796  0.0444805     4239
-traitexploration_sc:assay_rep_sc -0.0229744 -0.1082124  0.0591192     4000
-traitspeed_sc:body_size_sc        0.1054039 -0.0556588  0.2637025     4000
-traitexploration_sc:body_size_sc  0.0730408 -0.0674490  0.2303018     4000
+traitspeed_sc                     0.0003926 -0.1707282  0.1533965     4000
+traitexploration_sc               0.0002409 -0.1445867  0.1663545     3506
+traitspeed_sc:assay_rep_sc       -0.0354804 -0.1103118  0.0429651     4000
+traitexploration_sc:assay_rep_sc -0.0217276 -0.1071947  0.0606567     4000
+traitspeed_sc:body_size_sc        0.1046146 -0.0459259  0.2676814     4476
+traitexploration_sc:body_size_sc  0.0728591 -0.0713911  0.2179839     4209
                                  pMCMC
-traitspeed_sc                    0.986
-traitexploration_sc              0.998
-traitspeed_sc:assay_rep_sc       0.367
-traitexploration_sc:assay_rep_sc 0.592
-traitspeed_sc:body_size_sc       0.184
-traitexploration_sc:body_size_sc 0.333</code></pre>
+traitspeed_sc                    0.996
+traitexploration_sc              1.000
+traitspeed_sc:assay_rep_sc       0.368
+traitexploration_sc:assay_rep_sc 0.619
+traitspeed_sc:body_size_sc       0.194
+traitexploration_sc:body_size_sc 0.351</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1131,13 +1131,13 @@ traitexploration_sc:body_size_sc 0.333</code></pre>
 <div class="cell">
 <div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/MCMCglmm/man/posterior.mode.html">posterior.mode</a></span><span class="op">(</span><span class="va">mcmc_prop_f</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     var1 
-0.3796135 </code></pre>
+<pre><code>    var1 
+0.366126 </code></pre>
 </div>
 <div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/coda/man/HPDinterval.html">HPDinterval</a></span><span class="op">(</span><span class="va">mcmc_prop_f</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         lower     upper
-var1 0.2522578 0.4942062
+var1 0.2489611 0.4851926
 attr(,"Probability")
 [1] 0.95</code></pre>
 </div>
@@ -1155,12 +1155,12 @@ attr(,"Probability")
 <div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/MCMCglmm/man/posterior.mode.html">posterior.mode</a></span><span class="op">(</span><span class="va">mcmc_prop_e</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     var1 
-0.2691242 </code></pre>
+0.2763158 </code></pre>
 </div>
 <div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/coda/man/HPDinterval.html">HPDinterval</a></span><span class="op">(</span><span class="va">mcmc_prop_e</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         lower     upper
-var1 0.1626061 0.4039339
+var1 0.1583636 0.4004372
 attr(,"Probability")
 [1] 0.95</code></pre>
 </div>
@@ -1177,13 +1177,13 @@ attr(,"Probability")
 </div>
 <div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/MCMCglmm/man/posterior.mode.html">posterior.mode</a></span><span class="op">(</span><span class="va">mcmc_cor_fe</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     var1 
-0.2739376 </code></pre>
+<pre><code>    var1 
+0.273358 </code></pre>
 </div>
 <div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/coda/man/HPDinterval.html">HPDinterval</a></span><span class="op">(</span><span class="va">mcmc_cor_fe</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           lower     upper
-var1 -0.08703392 0.5100728
+var1 -0.09043835 0.5157353
 attr(,"Probability")
 [1] 0.95</code></pre>
 </div>
@@ -1231,9 +1231,9 @@ attr(,"Probability")
 </tr>
 <tr class="odd">
 <td style="text-align: left;">MCMCglmm</td>
-<td style="text-align: right;">0.274</td>
-<td style="text-align: right;">-0.087</td>
-<td style="text-align: right;">0.510</td>
+<td style="text-align: right;">0.273</td>
+<td style="text-align: right;">-0.090</td>
+<td style="text-align: right;">0.516</td>
 </tr>
 </tbody>
 </table>

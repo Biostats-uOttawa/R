@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr" xml:lang="fr-fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julien Martin">
 <meta name="description" content="En cours de traduction">
-<title>4&nbsp; Corrélation et régression linéaire simple – Sur le chemin de l'enf-R</title>
+<title>9&nbsp; Corrélation et régression linéaire simple – Sur le chemin de l'enf-R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,11 +70,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-37bb72f48501692975d9c066fdeb097b.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-758c5ce73771950a3d9b163c2677d9fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -222,7 +222,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./31-reg_lin.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./31-reg_lin.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,8 +253,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction à R</span></span></a>
+  <a href="./02-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quelques notions de base sur R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rapports reproductibles avec Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Contrôle de version avec Git et GitHub</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of stats</span></a>
+ <span class="menu-text">Principes de statistique</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -271,7 +301,7 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-power.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G\*Power</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,43 +318,43 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31-reg_lin.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./32-t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./33-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ANOVA à un critère de classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./34-anova_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ANOVA à critères multiples : plans factoriels et hiérarchiques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./35-reg_mult.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./36-ancova_glm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ANCOVA et modèle linéaire général</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./37-model_freq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Analyse de données de fréquence: Tableaux de contingence, modèles log-linéaires et régression de Poisson</span></span></a>
   </div>
 </li>
       </ul>
@@ -380,34 +410,34 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table des matières</h2>
    
   <ul>
-<li><a href="#set-lm" id="toc-set-lm" class="nav-link active" data-scroll-target="#set-lm"><span class="header-section-number">4.1</span> Extensions R et données requises pour le labo</a></li>
-  <li><a href="#diagrammes-de-dispersion" id="toc-diagrammes-de-dispersion" class="nav-link" data-scroll-target="#diagrammes-de-dispersion"><span class="header-section-number">4.2</span> Diagrammes de dispersion</a></li>
-  <li><a href="#transformations-et-le-coefficient-de-corr%C3%A9lation" id="toc-transformations-et-le-coefficient-de-corrélation" class="nav-link" data-scroll-target="#transformations-et-le-coefficient-de-corr%C3%A9lation"><span class="header-section-number">4.3</span> Transformations et le coefficient de corrélation</a></li>
-  <li><a href="#matrices-de-corr%C3%A9lations-et-correction-de-bonferroni" id="toc-matrices-de-corrélations-et-correction-de-bonferroni" class="nav-link" data-scroll-target="#matrices-de-corr%C3%A9lations-et-correction-de-bonferroni"><span class="header-section-number">4.4</span> Matrices de corrélations et correction de Bonferroni</a></li>
-  <li><a href="#corr%C3%A9lations-non-param%C3%A9triques-r-de-spearman-et-tau-de-kendall" id="toc-corrélations-non-paramétriques-r-de-spearman-et-tau-de-kendall" class="nav-link" data-scroll-target="#corr%C3%A9lations-non-param%C3%A9triques-r-de-spearman-et-tau-de-kendall"><span class="header-section-number">4.5</span> Corrélations non paramétriques: <em>r</em> de Spearman et <span class="math inline">\(\tau\)</span> de Kendall</a></li>
+<li><a href="#set-lm" id="toc-set-lm" class="nav-link active" data-scroll-target="#set-lm"><span class="header-section-number">9.1</span> Extensions R et données requises pour le labo</a></li>
+  <li><a href="#diagrammes-de-dispersion" id="toc-diagrammes-de-dispersion" class="nav-link" data-scroll-target="#diagrammes-de-dispersion"><span class="header-section-number">9.2</span> Diagrammes de dispersion</a></li>
+  <li><a href="#transformations-et-le-coefficient-de-corr%C3%A9lation" id="toc-transformations-et-le-coefficient-de-corrélation" class="nav-link" data-scroll-target="#transformations-et-le-coefficient-de-corr%C3%A9lation"><span class="header-section-number">9.3</span> Transformations et le coefficient de corrélation</a></li>
+  <li><a href="#matrices-de-corr%C3%A9lations-et-correction-de-bonferroni" id="toc-matrices-de-corrélations-et-correction-de-bonferroni" class="nav-link" data-scroll-target="#matrices-de-corr%C3%A9lations-et-correction-de-bonferroni"><span class="header-section-number">9.4</span> Matrices de corrélations et correction de Bonferroni</a></li>
+  <li><a href="#corr%C3%A9lations-non-param%C3%A9triques-r-de-spearman-et-tau-de-kendall" id="toc-corrélations-non-paramétriques-r-de-spearman-et-tau-de-kendall" class="nav-link" data-scroll-target="#corr%C3%A9lations-non-param%C3%A9triques-r-de-spearman-et-tau-de-kendall"><span class="header-section-number">9.5</span> Corrélations non paramétriques: <em>r</em> de Spearman et <span class="math inline">\(\tau\)</span> de Kendall</a></li>
   <li>
-<a href="#r%C3%A9gression-lin%C3%A9aire-simple" id="toc-régression-linéaire-simple" class="nav-link" data-scroll-target="#r%C3%A9gression-lin%C3%A9aire-simple"><span class="header-section-number">4.6</span> Régression linéaire simple</a>
+<a href="#sec-simple-lm" id="toc-sec-simple-lm" class="nav-link" data-scroll-target="#sec-simple-lm"><span class="header-section-number">9.6</span> Régression linéaire simple</a>
   <ul class="collapse">
-<li><a href="#v%C3%A9rifier-les-conditions-dapplication-de-la-r%C3%A9gression" id="toc-vérifier-les-conditions-dapplication-de-la-régression" class="nav-link" data-scroll-target="#v%C3%A9rifier-les-conditions-dapplication-de-la-r%C3%A9gression"><span class="header-section-number">4.6.1</span> Vérifier les conditions d’application de la régression</a></li>
-  <li><a href="#tests-formels-des-conditions-dapplication-pour-la-r%C3%A9gression" id="toc-tests-formels-des-conditions-dapplication-pour-la-régression" class="nav-link" data-scroll-target="#tests-formels-des-conditions-dapplication-pour-la-r%C3%A9gression"><span class="header-section-number">4.6.2</span> Tests formels des conditions d’application pour la régression</a></li>
+<li><a href="#v%C3%A9rifier-les-conditions-dapplication-de-la-r%C3%A9gression" id="toc-vérifier-les-conditions-dapplication-de-la-régression" class="nav-link" data-scroll-target="#v%C3%A9rifier-les-conditions-dapplication-de-la-r%C3%A9gression"><span class="header-section-number">9.6.1</span> Vérifier les conditions d’application de la régression</a></li>
+  <li><a href="#tests-formels-des-conditions-dapplication-pour-la-r%C3%A9gression" id="toc-tests-formels-des-conditions-dapplication-pour-la-régression" class="nav-link" data-scroll-target="#tests-formels-des-conditions-dapplication-pour-la-r%C3%A9gression"><span class="header-section-number">9.6.2</span> Tests formels des conditions d’application pour la régression</a></li>
   </ul>
 </li>
-  <li><a href="#transformation-des-donn%C3%A9es-en-r%C3%A9gression" id="toc-transformation-des-données-en-régression" class="nav-link" data-scroll-target="#transformation-des-donn%C3%A9es-en-r%C3%A9gression"><span class="header-section-number">4.7</span> Transformation des données en régression</a></li>
-  <li><a href="#traitement-des-valeurs-extr%C3%A8mes" id="toc-traitement-des-valeurs-extrèmes" class="nav-link" data-scroll-target="#traitement-des-valeurs-extr%C3%A8mes"><span class="header-section-number">4.8</span> Traitement des valeurs extrèmes</a></li>
+  <li><a href="#transformation-des-donn%C3%A9es-en-r%C3%A9gression" id="toc-transformation-des-données-en-régression" class="nav-link" data-scroll-target="#transformation-des-donn%C3%A9es-en-r%C3%A9gression"><span class="header-section-number">9.7</span> Transformation des données en régression</a></li>
+  <li><a href="#traitement-des-valeurs-extr%C3%A8mes" id="toc-traitement-des-valeurs-extrèmes" class="nav-link" data-scroll-target="#traitement-des-valeurs-extr%C3%A8mes"><span class="header-section-number">9.8</span> Traitement des valeurs extrèmes</a></li>
   <li>
-<a href="#quantifier-la-taille-deffet-et-analyse-de-puissance-en-r%C3%A9gression" id="toc-quantifier-la-taille-deffet-et-analyse-de-puissance-en-régression" class="nav-link" data-scroll-target="#quantifier-la-taille-deffet-et-analyse-de-puissance-en-r%C3%A9gression"><span class="header-section-number">4.9</span> Quantifier la taille d’effet et analyse de puissance en régression</a>
+<a href="#quantifier-la-taille-deffet-et-analyse-de-puissance-en-r%C3%A9gression" id="toc-quantifier-la-taille-deffet-et-analyse-de-puissance-en-régression" class="nav-link" data-scroll-target="#quantifier-la-taille-deffet-et-analyse-de-puissance-en-r%C3%A9gression"><span class="header-section-number">9.9</span> Quantifier la taille d’effet et analyse de puissance en régression</a>
   <ul class="collapse">
-<li><a href="#puissance-de-d%C3%A9tecter-une-pente-donn%C3%A9e" id="toc-puissance-de-détecter-une-pente-donnée" class="nav-link" data-scroll-target="#puissance-de-d%C3%A9tecter-une-pente-donn%C3%A9e"><span class="header-section-number">4.9.1</span> Puissance de détecter une pente donnée</a></li>
-  <li><a href="#effectif-requis-pour-atteindre-une-puissance-d%C3%A9sir%C3%A9e-test-a-priori" id="toc-effectif-requis-pour-atteindre-une-puissance-désirée-test-a-priori" class="nav-link" data-scroll-target="#effectif-requis-pour-atteindre-une-puissance-d%C3%A9sir%C3%A9e-test-a-priori"><span class="header-section-number">4.9.2</span> Effectif requis pour atteindre une puissance désirée (test A-priori)</a></li>
+<li><a href="#puissance-de-d%C3%A9tecter-une-pente-donn%C3%A9e" id="toc-puissance-de-détecter-une-pente-donnée" class="nav-link" data-scroll-target="#puissance-de-d%C3%A9tecter-une-pente-donn%C3%A9e"><span class="header-section-number">9.9.1</span> Puissance de détecter une pente donnée</a></li>
+  <li><a href="#effectif-requis-pour-atteindre-une-puissance-d%C3%A9sir%C3%A9e-test-a-priori" id="toc-effectif-requis-pour-atteindre-une-puissance-désirée-test-a-priori" class="nav-link" data-scroll-target="#effectif-requis-pour-atteindre-une-puissance-d%C3%A9sir%C3%A9e-test-a-priori"><span class="header-section-number">9.9.2</span> Effectif requis pour atteindre une puissance désirée (test A-priori)</a></li>
   </ul>
 </li>
-  <li><a href="#bootstrap-en-r%C3%A9gression-simple-avec-r" id="toc-bootstrap-en-régression-simple-avec-r" class="nav-link" data-scroll-target="#bootstrap-en-r%C3%A9gression-simple-avec-r"><span class="header-section-number">4.10</span> Bootstrap en régression simple avec R</a></li>
+  <li><a href="#bootstrap-en-r%C3%A9gression-simple-avec-r" id="toc-bootstrap-en-régression-simple-avec-r" class="nav-link" data-scroll-target="#bootstrap-en-r%C3%A9gression-simple-avec-r"><span class="header-section-number">9.10</span> Bootstrap en régression simple avec R</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/biostats-uottawa/R_way/edit/main/31-reg_lin.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/biostats-uottawa/R_way/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./31-reg_lin.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./31-reg_lin.html">Modèles linéaires</a></li><li class="breadcrumb-item"><a href="./31-reg_lin.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span>
+<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Corrélation et régression linéaire simple</span>
 </h1>
 </div>
 
@@ -433,8 +463,8 @@ window.Quarto = {
 <li>Utiliser R pour évaluer si un ensemble de données remplit les conditions d’application d’une analyse de régression simple.</li>
 <li>Quantifier la taille de l’effet d’une régression simple et effectuer une analyse de puissance avec G*Power.</li>
 </ul>
-<section id="set-lm" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="set-lm">
-<span class="header-section-number">4.1</span> Extensions R et données requises pour le labo</h2>
+<section id="set-lm" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="set-lm">
+<span class="header-section-number">9.1</span> Extensions R et données requises pour le labo</h2>
 <p>Ce laboratoire nécessite:</p>
 <ul>
 <li>les paquets R:
@@ -476,8 +506,8 @@ Note
 <p>Notez que la ligne de code pour lire les données considère que le fichier de données se trouve dans un dossier <code>data</code> au sein de votre répertoire de travail. Si ce n’est pas le cas veuillez ajuster la ligne de commande.</p>
 </div>
 </div>
-</section><section id="diagrammes-de-dispersion" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="diagrammes-de-dispersion">
-<span class="header-section-number">4.2</span> Diagrammes de dispersion</h2>
+</section><section id="diagrammes-de-dispersion" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="diagrammes-de-dispersion">
+<span class="header-section-number">9.2</span> Diagrammes de dispersion</h2>
 <p>Les analyses de corrélation et de régression devraient toujours commencer par un examen des données.C’est une étape critique qui sert à évaluer si ce type d’analyse est approprié pour un ensemble de données. Supposons que nous sommes intéressés à évaluer si la longueur d’esturgeons mâles dans la région de <em>The Pas</em> covarie avec leur poids. Pour répondre à cette question, regardons d’abord la corrélation entre la longueur et le poids. Souvenez-vous qu’une des conditions d’application de l’analyse de corrélation est que la relation entre les deux variables est linéaire. Pour évaluer cela, commençons par faire un diagramme de dispersion.</p>
 <ul>
 <li>Les données sur les esturgeons son disponibles dans le fichier <code>sturgeon.csv</code>. Après avoir chargé les données dnas un objet <code>sturgeon</code>, faites un diagramme de dispersion avec une droite de régression et une courbe LOWESS de la longueur en fonction du poids.</li>
@@ -537,8 +567,8 @@ manquantes qui posent problème pour obtenir la trace loess). -->
 </div>
 </div>
 <p>Comparez les diagrammes de dispersion avant et après transformation (Figures @ref(fig:stur-2) et @ref(fig:stur-log)). Comme l’analyse de corrélation présuppose une relation linéaire entre les variables, on devrait donc privilégier l’analyse sur les données log-transformées.</p>
-</section><section id="transformations-et-le-coefficient-de-corrélation" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="transformations-et-le-coefficient-de-corrélation">
-<span class="header-section-number">4.3</span> Transformations et le coefficient de corrélation</h2>
+</section><section id="transformations-et-le-coefficient-de-corrélation" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="transformations-et-le-coefficient-de-corrélation">
+<span class="header-section-number">9.3</span> Transformations et le coefficient de corrélation</h2>
 <p>Une autre condition préalable à l’analyse de corrélation est que les deux variables concernées suivent une distribution normale bidimensionnelle. On peut aisément vérifier la normalité de chacune des 2 variables séparément tel que décrit dans le laboratoire précédent. Si les deux variables sont normalement distribuées, on présume généralement qu’elles suivent une distribution normale bidimensionnelle lorsqu’analysées simultanément (notez que ce n’est pas toujours le cas cependant).</p>
 <ul>
 <li>Examinez la distribution des quatre variables (les deux variables originales et les variables transformées). Que concluez-vous de l’inspection visuelle de ces graphiques ?</li>
@@ -612,8 +642,8 @@ rdwght   0.9175435 0.8756203 0.9265513 1.0000000</code></pre>
 <li>Deuxièmement, la corrélation est plus forte pour les données transformées que pour les données brutes.</li>
 </ul>
 <p><strong>Pourquoi?</strong> Parce que le coefficient de corrélation est inversement proportionnel au bruit autour de la relation linéaire. Si la relation est curvilinéaire (comme dans le cas des données non transformées), le bruit est plus grand que si la relation est parfaitement linéaire. Par conséquent, la corrélation est plus faible.</p>
-</section><section id="matrices-de-corrélations-et-correction-de-bonferroni" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="matrices-de-corrélations-et-correction-de-bonferroni">
-<span class="header-section-number">4.4</span> Matrices de corrélations et correction de Bonferroni</h2>
+</section><section id="matrices-de-corrélations-et-correction-de-bonferroni" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="matrices-de-corrélations-et-correction-de-bonferroni">
+<span class="header-section-number">9.4</span> Matrices de corrélations et correction de Bonferroni</h2>
 <p>Une pratique courante est d’examiner une matrice de corrélation à la recherche des associations significatives. Comme exemple, essayons de tester si la corrélation entre lfklngth et rdwght est significative (c’est le plus faible coefficient de corrélation de cette matrice).</p>
 <ul>
 <li>Estimer la correlation entre la longueur (fklngth) et le poids (rdwght) des esturgeons:</li>
@@ -640,8 +670,8 @@ sample estimates:
 </div>
 <p>On voit ici que la corrélation est hautement significative (<span class="math inline">\(p &lt; 2.2e-16\)</span>),ce qui n’est pas surprenant étant donné la valeur du coefficient de corrélation (0.8756). Il est important de réaliser que si une matrice contient un grand nombre de corrélations, il n’est pas surprenant d’en trouver au moins une qui soit “significative”. En effet, on s’attend à en trouver 5% en moyenne lorsqu’il n’y a en fait aucune corrélation entre les paires de moyennes. Une façon de corriger pour cette tendance est d’ajuster le niveau <span class="math inline">\(\alpha\)</span> critique auquel on attribue une signification statistique en divisant <span class="math inline">\(\alpha\)</span> par le nombre <span class="math inline">\(k\)</span> de corrélations qui sont examinées : <span class="math inline">\(\alpha' =
 \alpha / k\)</span> (ajustement de Bonferroni). Si initialement <span class="math inline">\(\alpha = 0.05\)</span> et qu’il y a 10 corrélations qui sont examinées, alors <span class="math inline">\(\alpha'= 0.005\)</span>. Donc, afin de rejeter l’hypothèse nulle, la valeur de p devra être plus petite que <span class="math inline">\(\alpha'\)</span>, en l’occurrence 0.005. Dans l’exemple qui précède, on devrait donc ajuster <span class="math inline">\(\alpha\)</span> critique en divisant par le nombre total de corrélations dans la matrice (6 dans ce cas, donc <span class="math inline">\(\alpha'=0.00833\)</span>). Cette correction modifie-t-elle votre conclusion quant à la corrélation entre <code>lkfl</code> et <code>rdwght</code>?</p>
-</section><section id="corrélations-non-paramétriques-r-de-spearman-et-tau-de-kendall" class="level2" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="corrélations-non-paramétriques-r-de-spearman-et-tau-de-kendall">
-<span class="header-section-number">4.5</span> Corrélations non paramétriques: <em>r</em> de Spearman et <span class="math inline">\(\tau\)</span> de Kendall</h2>
+</section><section id="corrélations-non-paramétriques-r-de-spearman-et-tau-de-kendall" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="corrélations-non-paramétriques-r-de-spearman-et-tau-de-kendall">
+<span class="header-section-number">9.5</span> Corrélations non paramétriques: <em>r</em> de Spearman et <span class="math inline">\(\tau\)</span> de Kendall</h2>
 <p>L’analyse faite à la section précédente avec les esturgeons suggère que l’une des conditions préalables à l’analyse de corrélation, soit la distribution normale bidimensionnelle de données, pourrait ne pas être remplie pour <code>fklngth</code> et <code>rdwght</code>, ni pour les paires de variables transformées. La recherche d’une transformation appropriée peut parfois être difficile. Pire encore, pour certaines distributions il n’existe pas de transformation qui va normaliser les données. Dans ces cas-là, la meilleure option est de faire une analyse non paramétrique qui ne présume ni de la normalité ni de la linéarité. Ces analyses sont basées sur les rangs. Les deux plus communes sont le coefficient de rang de Spearman et le <span class="math inline">\(\tau\)</span> (tau) de Kendall.</p>
 <ul>
 <li>Dans R, testez la corrélation entre <code>fklngth</code> et <code>rdwght</code> en utilisant Spearman et Kendall’s .</li>
@@ -691,8 +721,8 @@ sample estimates:
 <p>Notez que les corrélations obtenues avec le tau de Kendall (0.820) sont plus faibles que celles du coefficient de Spearman (0.952). Le tau de Kendall pondère un peu plus les grandes différences entre les rangs alors que le coefficient de Spearman donne le même poids à chaque paire d’observations. En général, on préfère le tau de Kendall lorsqu’il y a plus d’incertitude quant aux rangs qui sont près les uns des autres.</p>
 <p>Les esturgeons de cet échantillon ont été capturés à l’aide de filets et d’hameçons d’une taille fixe. Quel impact cette méthode de capture peut-elle avoir eu sur la forme de la distribution de <code>fklngth</code> et <code>rdwght</code>? Compte tenu de ces circonstances, l’analyse de corrélation est-elle appropriée ?</p>
 <p>Rappelez-vous que l’analyse de corrélation présume aussi que chaque variable est échantillonnée aléatoirement. Dans le cas de nos esturgeons, ce n’est pas le cas: les hameçons appâtés et les filets ne capturent pas de petits esturgeons (et c’est pourquoi il n’y en a pas dans l’échantillon). Il faut donc réaliser que les coefficients de corrélation obtenus dans cette analyse ne reflètent pas nécessairement ceux de la population totale des esturgeons.</p>
-</section><section id="régression-linéaire-simple" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="régression-linéaire-simple">
-<span class="header-section-number">4.6</span> Régression linéaire simple</h2>
+</section><section id="sec-simple-lm" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="sec-simple-lm">
+<span class="header-section-number">9.6</span> Régression linéaire simple</h2>
 <p>L’analyse de corrélation vise à décrire comment deux variables covarient. L’analyse de régression vise plutôt à produire un modèle permettant de prédire une variable (la variable dépendante) par l’autre (la variable indépendante).</p>
 <p>Comme pour l’analyse de corrélation, on devrait commencer en examinant des graphiques. Puisque l’on est intéressé à quantifier la relation entre deux variables, un graphique de la variable dépendante (Y) en fonction de la variable indépendante (X) est tout à fait approprié.</p>
 <ul>
@@ -768,8 +798,8 @@ F-statistic: 144.3 on 1 and 73 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>La régression estimée est donc:</p>
 <p><span class="math display">\[ Fklngth = 28.50359 + 0.70724 * age\]</span></p>
 <p>Étant donné la valeur significative du test de F ainsi que pour le test de t pour la pente de la droite, on rejette l’hypothèse nulle qu’il n’y a pas de relation entre la taille et l’âge.</p>
-<section id="vérifier-les-conditions-dapplication-de-la-régression" class="level3" data-number="4.6.1"><h3 data-number="4.6.1" class="anchored" data-anchor-id="vérifier-les-conditions-dapplication-de-la-régression">
-<span class="header-section-number">4.6.1</span> Vérifier les conditions d’application de la régression</h3>
+<section id="vérifier-les-conditions-dapplication-de-la-régression" class="level3" data-number="9.6.1"><h3 data-number="9.6.1" class="anchored" data-anchor-id="vérifier-les-conditions-dapplication-de-la-régression">
+<span class="header-section-number">9.6.1</span> Vérifier les conditions d’application de la régression</h3>
 <p>La régression simple de type I a quatre conditions préalables :</p>
 <ol type="1">
 <li>il n’y a pas d’erreur de mesure sur la variable indépendante (X)</li>
@@ -822,8 +852,8 @@ Avertissement
 </div>
 </div>
 <p>Finalement, quel est le verdict concernant la régression linéaire entre fklngth et age ? Elle viole la condition de linéarité, possiblement celle de normalité, remplit la condition d’homoscédasticité, et ne semble pas influencée outre mesure par des valeurs bizarres ou extrêmes.</p>
-</section><section id="tests-formels-des-conditions-dapplication-pour-la-régression" class="level3" data-number="4.6.2"><h3 data-number="4.6.2" class="anchored" data-anchor-id="tests-formels-des-conditions-dapplication-pour-la-régression">
-<span class="header-section-number">4.6.2</span> Tests formels des conditions d’application pour la régression</h3>
+</section><section id="tests-formels-des-conditions-dapplication-pour-la-régression" class="level3" data-number="9.6.2"><h3 data-number="9.6.2" class="anchored" data-anchor-id="tests-formels-des-conditions-dapplication-pour-la-régression">
+<span class="header-section-number">9.6.2</span> Tests formels des conditions d’application pour la régression</h3>
 <p>Personnellement, je n’utilise jamais les tests formels des conditions d’application de la régression et me contente des graphiques des résidus pour guider mes décisions. C’est ce que la plupart des praticiens font. Cependant, lors de mes premières analyses, je n’étais pas toujours certain de bien interpréter les graphiques et j’aurais aimé un indice plus formel ou un test permettant de détecter les violations des conditions d’application de la régression.</p>
 <p>Le package <code>lmtest</code>, qui ne fait pas partie de l’installation de base, mais qui est disponible sur CRAN, permet de faire plusieurs tests de linéarité et d’homoscédasticité. Et on peut tester la normalité avec le test Shapiro-Wilk test vu précédemment.</p>
 <p>Charger le package lmtest de CRAN (et installer le si besoin).</p>
@@ -903,8 +933,8 @@ W = 0.98037, p-value = 0.2961</code></pre>
 </div>
 </div>
 <p>Le test de normalité Shapiro-Wilk sur les résidus confirme que la déviation par rapport à une distribution normale des résidus n’est pas grande.</p>
-</section></section><section id="transformation-des-données-en-régression" class="level2" data-number="4.7"><h2 data-number="4.7" class="anchored" data-anchor-id="transformation-des-données-en-régression">
-<span class="header-section-number">4.7</span> Transformation des données en régression</h2>
+</section></section><section id="transformation-des-données-en-régression" class="level2" data-number="9.7"><h2 data-number="9.7" class="anchored" data-anchor-id="transformation-des-données-en-régression">
+<span class="header-section-number">9.7</span> Transformation des données en régression</h2>
 <p>La relation entre <code>fklngth</code> et <code>age</code> n’étant pas linéaire, on devrait donc essayer de transformer les données pour tenter de les linéariser :</p>
 <ul>
 <li>Voyons ce qu’une transformation log donne:</li>
@@ -999,8 +1029,8 @@ W = 0.98998, p-value = 0.8246</code></pre>
 </div>
 </div>
 <p>Oui, les conclusions sont les mêmes: les résidus sont encore homoscédastiques (test Breusch-Pagan), ne sont pas autocorrélés (test Durbin-Watson), sont normaux (test Shapiro-Wilk), et sont plus linéaires (la valeur de P du test RESET est maintenant 0.015, au lieu de 0.000005). Donc la linéarité a augmenté, mais cette condition d’application semble encore légèrement violée.</p>
-</section><section id="traitement-des-valeurs-extrèmes" class="level2" data-number="4.8"><h2 data-number="4.8" class="anchored" data-anchor-id="traitement-des-valeurs-extrèmes">
-<span class="header-section-number">4.8</span> Traitement des valeurs extrèmes</h2>
+</section><section id="traitement-des-valeurs-extrèmes" class="level2" data-number="9.8"><h2 data-number="9.8" class="anchored" data-anchor-id="traitement-des-valeurs-extrèmes">
+<span class="header-section-number">9.8</span> Traitement des valeurs extrèmes</h2>
 <p>Dans cet exemple, il n’y a pas de valeur vraiment extrème. Oui, je sais, R a quand même identifié les observations 8, 24, et 112 dans le dernier graphique diagnostique. Mais ces valeurs sont encore dans la fourchette de valeurs que je juge “acceptables”. Mais comment déterminer objectivement ce qui est acceptable? À quel moment juge t’on qu’une valeur extrême est vraiment trop invraisemblable pour ne pas l’exclure? Il n’y a malheureusement pas de règle absolue là-dessus. Les opinions varient, mais je penche vers le conservatisme sur cette question.</p>
 <p>Ma position est que, à moins que la valeur soit biologiquement impossible ou clairement une erreur d’entrée de données, je n’élimine pas les valeurs extrêmes et j’utilise toutes mes données dans leur analyse. Pourquoi?</p>
 <p>Parce que je veux que mes données reflètent bien la variabilité naturelle ou réelle. C’est d’ailleurs parfois cette variabilité qui est intéressante.</p>
@@ -1079,8 +1109,8 @@ W = 0.98318, p-value = 0.4502</code></pre>
 </div>
 </div>
 <p>Il n’y a pas vraiment de différence ici non plus avec l’analyse des données en entier. Bref, tout pointe vers la conclusion que les valeurs les plus extrêmes de cet ensemble de donnée n’influencent pas indûment les résultats statistiques.</p>
-</section><section id="quantifier-la-taille-deffet-et-analyse-de-puissance-en-régression" class="level2" data-number="4.9"><h2 data-number="4.9" class="anchored" data-anchor-id="quantifier-la-taille-deffet-et-analyse-de-puissance-en-régression">
-<span class="header-section-number">4.9</span> Quantifier la taille d’effet et analyse de puissance en régression</h2>
+</section><section id="quantifier-la-taille-deffet-et-analyse-de-puissance-en-régression" class="level2" data-number="9.9"><h2 data-number="9.9" class="anchored" data-anchor-id="quantifier-la-taille-deffet-et-analyse-de-puissance-en-régression">
+<span class="header-section-number">9.9</span> Quantifier la taille d’effet et analyse de puissance en régression</h2>
 <p>L’interprétation biologique des résultats n’est pas la même chose que l’interprétation statistique. Dans l’analyse qui précède, on conclue statistiquement que la taille augmente avec l’âge (puisque la pente est positive et et p&lt;0.05). Mais cette augmentation “statistique” de la taille avec l’âge ne donne pas d’information sur la différence de taille entre les jeunes et vieux individus. La pente et un graphique sont plus informatifs à ce sujet que la valeur p.&nbsp;La pente (dans l’espace log-log) est 0.34. Cela veut dire que pour chaque unité d’accroissement de X (log10(age)), il y a une augmentation de 0.34 unités de log10(fklngth). En d’autres mots, quand l’âge est multiplié par 10, la longueur à la fourche est multipliée environ par 2 (10<sup>0.34</sup>). Donc la longueur des esturgeons augmente plus lentement que leur âge (contrairement à mon tour de taille, semble-t-il….). La valeur de la pente (0.34) est un estimé de la taille de l’effet de l’âge sur la longueur.</p>
 <p>Il est aussi importnat d’estimer l’intervalle de confiance sur la pente pour pouvoir estimer si l’intervalle inclus ou non que des valeurs biologiquement importantes. Cela peut être fait simplement avec la fonction <code><a href="https://rdrr.io/r/stats/confint.html">confint()</a></code>.</p>
 <div class="cell">
@@ -1092,8 +1122,8 @@ log10(age)  0.2976433 0.384068</code></pre>
 </div>
 </div>
 <p>L’intervalle de confiance à 95% de la pente est 0.29-0.38. L,intervalle de confiance est assez faible et éloigné de zéro.</p>
-<section id="puissance-de-détecter-une-pente-donnée" class="level3" data-number="4.9.1"><h3 data-number="4.9.1" class="anchored" data-anchor-id="puissance-de-détecter-une-pente-donnée">
-<span class="header-section-number">4.9.1</span> Puissance de détecter une pente donnée</h3>
+<section id="puissance-de-détecter-une-pente-donnée" class="level3" data-number="9.9.1"><h3 data-number="9.9.1" class="anchored" data-anchor-id="puissance-de-détecter-une-pente-donnée">
+<span class="header-section-number">9.9.1</span> Puissance de détecter une pente donnée</h3>
 <p>Pour les calculs de puissance avec G*Power vous devrez cependant utiliser une autre métrique de la taille de l’effet, calculée à partir de la pente, de son erreur-type, et de la taille de l’échantillon (ce qui facilite les calculs pour G*Power, mais malheureusement pas pour vous ;-) La métrique (d) est calculée comme: <span class="math display">\[ d = \frac{b}{s_b\sqrt{n-k-1}} \]</span> où <span class="math inline">\(b\)</span> est l’estimé de la pente, <span class="math inline">\(s_b\)</span> est l’erreur type de la pente, <span class="math inline">\(n\)</span> est le nombre d’observations, et <span class="math inline">\(k\)</span> est le nombre de variables indépendantes (1 pour la régression linéaire simple).</p>
 <p>Vous pouvez calculer approximativement la puissance avec G*Power pour une valeur de pente que vous jugez assez grande pour mériter d’être détectée. Allez à <strong>Tests: Means: One group: difference from constant</strong>, là, vous devrez remplacer la valeur de <span class="math inline">\(b\)</span> dans l’équation pour la taille d’effet (d) par la pente que vous voudriez détecter, mais utiliser l’erreur type calculée à partir de vos données.</p>
 <p>Par exemple, supposons que les ichthyologues considèrent qu’une pente de 0.1 pour la relation entre log10(fklngth) et log10(age) est signifiante biologiquement, et qu’ils désirent estimer la puissance de détecter une telle pente à partir d’un échantillon de 20 esturgeons. Les résultats de la régression log-log nous fournissent ce dont on a besoin:</p>
@@ -1149,8 +1179,8 @@ F-statistic: 247.1 on 1 and 73 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <p>La puissance de détecter une pente comme étant statistiquement significative (au niveau alpha), si la pente est 0.1, que la variabilité résiduelle autour de la régression est semblable à celle de notre échantillon (ce qui revient à une taille d’effet de 0.54, pour un échantillon de 20 esturgeons et alpha=0.05) est de 0.629. Seulement environ 2/3 des échantillons de cette taille détecteraient un effet significatif de l’âge sur <code>fklngth</code>.</p>
-</section><section id="effectif-requis-pour-atteindre-une-puissance-désirée-test-a-priori" class="level3" data-number="4.9.2"><h3 data-number="4.9.2" class="anchored" data-anchor-id="effectif-requis-pour-atteindre-une-puissance-désirée-test-a-priori">
-<span class="header-section-number">4.9.2</span> Effectif requis pour atteindre une puissance désirée (test A-priori)</h3>
+</section><section id="effectif-requis-pour-atteindre-une-puissance-désirée-test-a-priori" class="level3" data-number="9.9.2"><h3 data-number="9.9.2" class="anchored" data-anchor-id="effectif-requis-pour-atteindre-une-puissance-désirée-test-a-priori">
+<span class="header-section-number">9.9.2</span> Effectif requis pour atteindre une puissance désirée (test A-priori)</h3>
 <p>Pour estimer la taille d’échantillon (effectif) requis pour avoir une puissance de 99% de détecter un effet de l’âge si la pente est 0.1 (sur une échelle log-log), avec alpha=0.05, on utilise la même valeur de d (0.54):</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -1178,8 +1208,8 @@ F-statistic: 247.1 on 1 and 73 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <p>En augmentant la taille de l’échantillon à 65, selon le même scénario que précédemment, la puissance augmente à 99%.</p>
-</section></section><section id="bootstrap-en-régression-simple-avec-r" class="level2" data-number="4.10"><h2 data-number="4.10" class="anchored" data-anchor-id="bootstrap-en-régression-simple-avec-r">
-<span class="header-section-number">4.10</span> Bootstrap en régression simple avec R</h2>
+</section></section><section id="bootstrap-en-régression-simple-avec-r" class="level2" data-number="9.10"><h2 data-number="9.10" class="anchored" data-anchor-id="bootstrap-en-régression-simple-avec-r">
+<span class="header-section-number">9.10</span> Bootstrap en régression simple avec R</h2>
 <p>Un test non paramétrique pour l’ordonnée à l’origine et la pente d’une régression simple peut être effectué par bootstrap.</p>
 <div class="cell">
 <div class="sourceCode" id="cb67"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># charger le paquet boot</span></span>
@@ -1209,9 +1239,9 @@ boot(data = sturgeon.male, statistic = bs, R = 1000, formula = log10(fklngth) ~
 
 
 Bootstrap Statistics :
-     original        bias    std. error
-t1* 1.1919926  0.0011567837  0.03387942
-t2* 0.3408557 -0.0007755788  0.02683725</code></pre>
+     original       bias    std. error
+t1* 1.1919926  0.003052227  0.03422700
+t2* 0.3408557 -0.002262719  0.02697708</code></pre>
 </div>
 </div>
 <p>Pour chaque paramètre du modèle (ici l’ordonnée à l’origine est appelée t1* et la pente de la régression t2*), R imprime :</p>
@@ -1257,11 +1287,12 @@ boot.ci(boot.out = results, type = "all", index = 1)
 
 Intervals : 
 Level      Normal              Basic         
-95%   ( 1.124,  1.257 )   ( 1.120,  1.258 )  
+95%   ( 1.122,  1.256 )   ( 1.125,  1.254 )  
 
 Level     Percentile            BCa          
-95%   ( 1.125,  1.264 )   ( 1.114,  1.251 )  
-Calculations and Intervals on Original Scale</code></pre>
+95%   ( 1.130,  1.259 )   ( 1.117,  1.251 )  
+Calculations and Intervals on Original Scale
+Some BCa intervals may be unstable</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1280,10 +1311,10 @@ boot.ci(boot.out = results, type = "all", index = 2)
 
 Intervals : 
 Level      Normal              Basic         
-95%   ( 0.2890,  0.3942 )   ( 0.2894,  0.3968 )  
+95%   ( 0.2902,  0.3960 )   ( 0.2908,  0.3945 )  
 
 Level     Percentile            BCa          
-95%   ( 0.2849,  0.3923 )   ( 0.2937,  0.4029 )  
+95%   ( 0.2872,  0.3909 )   ( 0.2947,  0.3995 )  
 Calculations and Intervals on Original Scale</code></pre>
 </div>
 </div>
@@ -1855,12 +1886,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./25-power.html" class="pagination-link" aria-label="Analyse de puissance avec R et G\*Power">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G*Power</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analyse de puissance avec R et G*Power</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./32-t_test.html" class="pagination-link" aria-label="Comparaison de deux échantillons">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Comparaison de deux échantillons</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
