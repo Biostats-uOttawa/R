@@ -22,3 +22,6 @@ else
   echo "run _fix-links.r and commit your changes then run _publish.sh again"
 fi
 fi
+
+
+# use simply npm run deploy config in package.json with gh-pages and npm
