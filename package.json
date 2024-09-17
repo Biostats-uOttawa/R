@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "scripts": {
+  "deploy": "gh-pages -d _book"
+  }
+
+}
+

@@ -18,3 +18,4 @@ book_plan.html
 /_book/
 
 /.luarc.json
+node_modules/
