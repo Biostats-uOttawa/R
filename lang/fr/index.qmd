@@ -16,23 +16,19 @@ Certaine section non encore développée
 
 L'objectif de ce livre est double :
 
-1. vous présenter R, un environnement interactif puissant et flexible pour le calcul et la recherche statistiques.
-    pour le calcul et la recherche statistiques.
-2. vous présenter (ou vous familiariser à nouveau) avec l'analyse statistique effectuée
+1. Vous présenter R, un environnement interactif puissant et flexible pour le calcul et la recherche statistiques.
+2. Vous présenter (ou vous familiariser à nouveau) avec l'analyse statistique effectuée
     dans R.
 
-R n'est pas difficile à apprendre en soi, mais comme pour toute nouvelle langue (parlée ou informatique), la courbe d'apprentissage initiale peut être difficile à suivre.
-langue (parlée ou informatique), la courbe d'apprentissage initiale peut être raide
-et quelque peu intimidante. L'objectif n'est pas de tout couvrir (ni avec R, ni avec les statistiques), mais simplement de vous aider à franchir le cap.
-(ni avec R, ni avec les statistiques), mais simplement de vous aider à gravir la courbe d'apprentissage
-la courbe d'apprentissage initiale (potentiellement plus rapide) et à vous fournir les
-compétences de base (et la confiance !) nécessaires pour commencer votre propre voyage avec R et des analyses spécifiques.
-avec des analyses spécifiques.
+R n'est pas difficile à apprendre en soi, mais comme pour toute nouvelle langue (parlée ou informatique), la courbe d'apprentissage initiale peut être raide
+et quelque peu intimidante. L'objectif n'est pas de tout couvrir (ni avec R, ni avec les statistiques), mais simplement de vous aider à franchir le cap
+(potentiellement plus rapidement) et à vous fournir les
+compétences de base (et la confiance !) nécessaires pour commencer votre propre voyage avec R et avec des analyses spécifiques.
 
 ## Livre multilingue
 
 Le livre est fourni comme un livre multilingue qui brise la barrière de la langue et permet potentiellement de faciliter l'apprentissage de R et de son environnement principalement anglophone.
-Nous sommes toujours à la recherche de bénévoles pour nous aider à développer le livre et à ajouter d'autres langues à la liste qui ne cesse de s'allonger . N'hésite pas à [Contacte-nous](#qui) si tu veux nous aider
+Nous sommes toujours à la recherche de bénévoles pour nous aider à développer le livre et à ajouter d'autres langues à la liste qui ne cesse de s'allonger . N'hésite pas à [Nous contacter](#qui) si tu veux nous aider
 
 Sur la page web, tu peux changer de langue via le {{< fa flag >}} dans la barre de navigation. Après avoir changer de langue, tu peux télécharger le document en pdf ou epub pour cet langue {{< fa download >}}.
 
@@ -40,7 +36,8 @@ Liste des langues :
 
 - anglais (publié mais à peaufiner)
 - français (en développement, en attendant que l'anglais soit peaufiné)
-- espagnol (en développement, en attendant que l'anglais soit peaufiné)
+- espagnol (un jour peut-être...)
+- ... des volontaires pour plus ??
 
 ## Comment utiliser ce livre {.unnumbered}
 
@@ -69,9 +66,10 @@ Les paquets R dans le texte sont indiqués en utilisant la police de code et sui
 
 Une série d'actions nécessaires pour accéder aux commandes de menu dans RStudio ou VSCode sont identifiées comme suit `File` -> `New File` -> `R Script` ce qui se traduit par "clique sur le menu Fichier, puis clique sur Nouveau fichier et sélectionne R Script".
 
-Lorsque nous faisons référence à **IDE** (**I**ntégrée **D**développement **E**nvironnement) dans la suite du texte, il s'agit de RStudio ou de VScode.
+Lorsque nous faisons référence à **IDE** (**I**ntegrated **D**evelopment **E**nvironment : Logiciel d'**E**nvironnement de **D**éveloppement **I**ntégré) dans la suite du
+texte, il s'agit de RStudio ou de VScode.
 
-Lorsque nous parlons de **.[Rq]md** Nous entendons par là les documents R markdown (.Rmd) ou Quarto (.qmd) et nous parlerons généralement des documents R markdown en faisant référence à l'un ou l'autre des fichiers `.Rmd` ou `.qmd`.
+Lorsque nous parlons de **.[Rq]md**, nous entendons par là les documents R markdown (.Rmd) ou Quarto (.qmd) et nous parlerons généralement des documents R markdown en faisant référence à l'un ou l'autre des fichiers `.Rmd` ou `.qmd`.
 
 Le manuel tente de mettre en évidence certaines parties du texte à l'aide des encadrés et icônes suivants.
 
@@ -90,15 +88,15 @@ Code R et explications
 :::
 
 ::: {.callout-warning}
-avertissements
+Avertissements
 :::
 
 ::: {.callout-important}
-points importants
+Points importants
 :::
 
 ::: {.callout-note}
-notes
+Notes
 :::
 
 ## Qui sommes-nous ? {#sec-qui}
@@ -114,7 +112,7 @@ notes
 ::: {.content-visible when-format="pdf"}
 -   {{< fa bookmark >}}: uOttawa
     <https://www.uottawa.ca/faculty-science/professors/julien-martin/>,
-    lab page <https://juliengamartin.github.io>
+    page du labo <https://juliengamartin.github.io>
 -   {{< fa brands twitter >}}: <https://twitter.com/jgamartin>
 -   {{< fa brands github >}}: <https://github.com/juliengamartin>
 :::
@@ -135,21 +133,20 @@ notes
 
 ## Remerciements {.unnumbered}
 
-La première partie du livre sur l'utilisation de R a commencé comme un fork sur github à partir de l'excellent livre de Douglas, Roos, Mancini.
-[An introduction to R](https://intro2r.com/) par Douglas, Roos, Mancini,
+La première partie du livre sur l'utilisation de R a commencé comme un fork sur github à partir de l'excellent livre
+[An introduction to R](https://intro2r.com/) de Douglas, Roos, Mancini,
 Couto et Lusseau [@douglas2023]. Il a été forké le 23 avril 2023 à partir de
 [Alexd106 github repository](https://github.com/alexd106/Rbook) puis
 modifié et mis à jour en fonction de mes propres besoins et de ma perspective d'enseignement de
 R. Le contenu n'a pas été revu ni approuvé par les développeurs précédents.
-développeurs précédents.
 
 Plusieurs parties du livre sont basées sur des manuels de laboratoire pour les cours de biostatistique à l'Université d'Ottawa écrits par
 Martin, Findlay, Morin et Rundle.
 
-Site qui a fourni beaucoup d'informations pour le livre :
+Sites ayant fourni de nombreuses informations pour le livre :
 
-- [Introduction à dplyr](https://dplyr.tidyverse.org/articles/dplyr.html)
-- Introduction à gam](https://m-clark.github.io/generalized-additive-models/)
+- [dplyr introduction](https://dplyr.tidyverse.org/articles/dplyr.html)
+- [Introduction to gam](https://m-clark.github.io/generalized-additive-models/)
 - [Intoduction to gams by Noam Ross](https://noamross.github.io/gams-in-r-course/)
 
 
@@ -163,10 +160,10 @@ indiqué dans la légende.
 a été générée par [Nightcafe Ai Art generator](https://creator.nightcafe.studio). Le Favicon et l'autocollant hexagonal
 ont été créés à partir de l'image de couverture.
 
-:: : callout-note
+::: callout-note
 plusieurs captures d'écran sont actuellement réalisées par Alex Douglas et sont en train d'être refaites pour
 pour se conformer à la déclaration précédente
-:: :
+:::
 
 
 ## Licence {.unnumbered}
@@ -200,20 +197,20 @@ library(emoji)
 library(dplyr)
 tribble(
   ~Part, ~Chapter, ~BioXx58, ~Bio8940,
-  "Using R", "1.-4.", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
-#  "Using R", "  2. R basics", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
-#  "Using R", "  3. Data", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
-#  "Using R", "  4. Figures", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
-  "Using R", "5. Programming", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
-  "Using R", "6. Reproducible reports", emoji("check_mark"), paste(rep(emoji("white_check_mark"), 2), collapse = ""),
-  "Using R", "7. Version control", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
-  "Stats fundamentals", "all chapters", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
-  "Linear models", "all chapters", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
-  "Generalized linear models", "all chapters", paste(rep(emoji("check_mark"), 1), collapse = ""), paste(rep(emoji("white_check_mark"), 2), collapse = ""),
-  "Mixed models", "all chapters", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
-  "Generalized additive models", "all chapters", "", paste(rep(emoji("check_mark"), 1), collapse = ""),
-  "Multivariate analysis", "all chapters", "", paste(rep(emoji("check_mark"), 1), collapse = ""),
-  "Bayesian approach", "all chapters", "", paste(rep(emoji("white_check_mark"), 2), collapse = "")
+  "Utiliser R", "1.-4.", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
+#  "Utiliser R", "  2. R basics", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
+#  "Utiliser R", "  3. Data", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
+#  "Utiliser R", "  4. Figures", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
+  "Utiliser R", "5. Programmation", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
+  "Utiliser R", "6. Rapports reproductibles", emoji("check_mark"), paste(rep(emoji("white_check_mark"), 2), collapse = ""),
+  "Utiliser R", "7. Contrôle de version", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
+  "Principes de statistiques", "tous les chapitres", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
+  "Modèles linéaires", "tous les chapitres", paste(rep(emoji("white_check_mark"), 2), collapse = ""), emoji("smiley"),
+  "Modèles linéaires généralisés", "tous les chapitres", paste(rep(emoji("check_mark"), 1), collapse = ""), paste(rep(emoji("white_check_mark"), 2), collapse = ""),
+  "Modèles mixtes", "tous les chapitres", "", paste(rep(emoji("white_check_mark"), 2), collapse = ""),
+  "Modèles additifs généralisés", "tous les chapitres", "", paste(rep(emoji("check_mark"), 1), collapse = ""),
+  "Analyses multivariées", "tous les chapitres", "", paste(rep(emoji("check_mark"), 1), collapse = ""),
+  "Approche Bayésienne", "tous les chapitres", "", paste(rep(emoji("white_check_mark"), 2), collapse = "")
 ) |>
   group_by(Part) |>
   gt() |>
@@ -222,7 +219,7 @@ tribble(
     columns = starts_with("Bio")
   ) |>
   tab_footnote(
-    footnote = paste("Suggested", emoji::emoji("check_mark"), "; mandatory", paste(rep(emoji::emoji("white_check_mark"), 2), collapse = ""), "; expected knowledge (might need a refresher)", emoji::emoji("smiley"))
+    footnote = paste("Suggéré", emoji::emoji("check_mark"), "; Obligatoire", paste(rep(emoji::emoji("white_check_mark"), 2), collapse = ""), "; connaissances attendues (pourraient avoir besoin d'une remise à niveau)", emoji::emoji("smiley"))
   ) |>
   cols_label(
     BioXx58 = md('[BioXx58 ![](images/hex/bio4x58_logo_hex.png){width="60px"}](https://biostats-uottawa.github.io/bioXx58/en/)'),
@@ -244,8 +241,8 @@ tribble(
 #| eval: false
 
 # used only once or when cover image is modified
-lang <- "en"
-title <- "R Way to hell"
+lang <- "fr"
+title <- "Sur le chemin de l'enf-R"
 
 library(showtext)
 ## Loading Google fonts (http://www.google.com/fonts)
