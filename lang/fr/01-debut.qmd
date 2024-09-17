@@ -10,7 +10,7 @@ Voici quelques raisons :
 - Disponible pour les systèmes d'exploitation Windows, Mac et Linux.
 - un ensemble complet et cohérent d'outils d'analyse statistique.
 - un outil graphique étendu et très flexible, capable de produire des figures de qualité professionnelle.
-- un ensemble de "paquets" :package : disponibles gratuitement pour étendre les capacités de R.
+- un ensemble de "paquets" :package: disponibles gratuitement pour étendre les capacités de R.
 - un vaste réseau d'assistance avec de nombreux documents en ligne et disponibles gratuitement.
 
 Toutes les raisons ci-dessus sont d'excellentes raisons d'utiliser R.
@@ -101,7 +101,7 @@ Pour faire de VSCode une véritable centrale pour travailler avec R, nous vous r
 
 - [radian](https://github.com/randy3k/radian) radian : Une console R moderne qui corrige de nombreuses limitations du terminal R officiel et prend en charge de nombreuses fonctionnalités telles que la coloration syntaxique et l'autocomplétion.
 - [VSCode-R-Debugger](https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger) VSCode-R-Debugger : Une extension de VS Code pour supporter les capacités de débogage de R.
-- [httpgd](https://cran.r-project.org/web/packages/httpgd/index.html) httpgd : Un paquetage R :paquetage : pour fournir un dispositif graphique qui sert de manière asynchrone des graphiques SVG via HTTP et WebSockets.
+- [httpgd](https://cran.r-project.org/web/packages/httpgd/index.html) httpgd : Un paquet R :package: pour fournir un dispositif graphique qui sert de manière asynchrone des graphiques SVG via HTTP et WebSockets.
 
 #### Alternatives à RStudio et VSCode
 
@@ -623,7 +623,7 @@ Bien qu'il n'y ait pas vraiment d'approche standard reconnue pour nommer les fic
 - Évitez d'utiliser des espaces dans les noms de fichiers en les remplaçant par des traits de soulignement ou des tirets.
 Pourquoi cela est-il important ? L'une des raisons est que certains logiciels de ligne de commande (en particulier de nombreux outils bioinformatiques) ne reconnaissent pas un nom de fichier comportant un espace et que vous devez vous livrer à toutes sortes de manigances en utilisant des caractères d'échappement pour vous assurer que les espaces sont traités correctement.
 Même si vous ne pensez pas utiliser un jour un logiciel de ligne de commande, il se peut que vous le fassiez indirectement.
-Prenez R markdown par exemple, si vous voulez rendre un document R markdown au format pdf en utilisant le paquetage `rmarkdown` :package : vous utiliserez en fait une ligne de commande {{< latex >}} sous le capot.
+Prenez R markdown par exemple, si vous voulez rendre un document R markdown au format pdf en utilisant le paquet `rmarkdown` :package: vous utiliserez en fait une ligne de commande {{< latex >}} sous le capot.
 Une autre bonne raison de ne pas utiliser d'espaces dans les noms de fichiers est que cela rend la recherche de noms de fichiers (ou de parties de noms de fichiers) à l'aide d'[expressions régulières][regex] dans R (ou tout autre langage) beaucoup plus difficile.
 
 - Évitez d'utiliser des caractères spéciaux (par exemple
@@ -650,7 +650,7 @@ Non seulement vous disposez d'un enregistrement complet de votre analyse, de la 
 Dans cette optique, veillez à inclure dans votre script R toutes les informations nécessaires pour rendre votre travail reproductible (noms des auteurs, dates, plan d'échantillonnage, etc.).
 Ces informations peuvent être incluses sous la forme d'une série de commentaires `#` ou, mieux encore, en mélangeant code exécutable et narration dans un document R markdown (@sec-rmarkdown-r).
 C'est aussi une bonne pratique d'inclure la sortie de la fonction `sessionInfo()` à la fin de n'importe quel script qui affiche la version de R, les détails du système d'exploitation et les paquets chargés.
-Une très bonne alternative est d'utiliser la fonction `session_info()` du paquet `xfun` :package : pour un résumé plus concis de notre environnement de session.
+Une très bonne alternative est d'utiliser la fonction `session_info()` du paquet `xfun` :package: pour un résumé plus concis de notre environnement de session.
 
 Voici un exemple d'inclusion de méta-informations au début d'un script R
 
@@ -709,8 +709,8 @@ Pour vous aider à formater le code :
 
 - VSCode il y a un formateur intégré dans l'extension R pour VSCode.
   Il vous suffit d'utiliser le raccourci clavier pour reformater le code de manière agréable et automatique.
-- Pour RStudio, vous pouvez installer l'extension `styler` :package : qui inclut un complément RStudio vous permettant de reformater automatiquement le code sélectionné (ou des fichiers et projets entiers) d'un simple clic de souris.
-  Vous pouvez trouver plus d'informations sur le paquet :package :. `styler` :package :, y compris comment l'installer [ici][styler] .
+- Pour RStudio, vous pouvez installer l'extension `styler` :package: qui inclut un complément RStudio vous permettant de reformater automatiquement le code sélectionné (ou des fichiers et projets entiers) d'un simple clic de souris.
+  Vous pouvez trouver plus d'informations sur le paquet :package:. `styler` :package:, y compris comment l'installer [ici][styler] .
   Une fois installé, vous pouvez mettre en évidence le code que vous souhaitez remodeler, cliquer sur le bouton "Addins" en haut de RStudio et sélectionner l'option "Style Selection".
   Voici un exemple de code R mal formaté
 
@@ -723,7 +723,7 @@ Pour vous aider à formater le code :
 knitr::include_graphics(path = "images/start/before_rcode.png")
 ```
 
-Mettez maintenant le code en surbrillance et utilisez la commande `styler` :package : package pour reformater
+Mettez maintenant le code en surbrillance et utilisez la commande `styler` :package: package pour reformater
 
 ```{r}
 #| label: fig-styler
@@ -786,7 +786,7 @@ Si vous souhaitez citer un package particulier que vous avez utilisé pour votre
 citation(package = "here")
 ```
 
-Selon nous, l'outil le plus utile pour la citation est le package `grateful` :package : qui vous permet de générer les informations de citation dans un fichier, ainsi que de créer une phrase ou un tableau citant tous les packages utilisés. Cela devrait devenir la norme dans tout manuscrit honnêtement.
+Selon nous, l'outil le plus utile pour la citation est le package `grateful` :package: qui vous permet de générer les informations de citation dans un fichier, ainsi que de créer une phrase ou un tableau citant tous les packages utilisés. Cela devrait devenir la norme dans tout manuscrit honnêtement.
 Voir @tbl-r-lib pour un exemple de résultat produit avec grateful.
 
 ```{r}

@@ -37,7 +37,7 @@ Quoi qu'il en soit, le point principal est que R markdown est très facile à ap
 ### Quarto ?
 
 Quarto est une version multilingue de la nouvelle génération de R Markdown de Posit, avec de nombreuses nouvelles fonctionnalités et capacités, compatible non seulement avec R mais aussi avec d'autres langages comme Python et Julia.
-Comme R Markdown, Quarto utilise `knitr` :package : package pour exécuter le code R, et est donc capable de rendre la plupart des codes R existants. **.Rmd** existants sans modification.
+Comme R Markdown, Quarto utilise `knitr` :package: package pour exécuter le code R, et est donc capable de rendre la plupart des codes R existants. **.Rmd** existants sans modification.
 Cependant, il s'accompagne également d'une pléthore de nouvelles fonctionnalités.
 Plus important encore, il facilite grandement la création de différents types de sorties puisque le codage est homogénéisé pour un format spécifique sans avoir à se fier à différents paquets r ayant chacun leurs propres spécificités (*Par exemple* bookdown, hugodown, blogdown, thesisdown, rticles, xaringan, ...).
 
@@ -118,7 +118,7 @@ Quarto s'intègre très bien avec [R Studio](https://quarto.org/docs/tools/rstud
 
 ### Installation de la solution
 
-Pour utiliser Quarto, vous devez d'abord installer le logiciel `Quarto` et le logiciel `quarto` :package : (avec ses dépendances).
+Pour utiliser Quarto, vous devez d'abord installer le logiciel `Quarto` et le logiciel `quarto` :package: (avec ses dépendances).
 Vous trouverez des instructions sur la façon de procéder dans @sec-install-r et sur le site web de [Quarto](https://quarto.org/docs/get-started/).
 Si vous souhaitez créer des documents PDF (ou des documents MS Word) à partir de votre fichier Quarto, vous devrez également installer une version de {{\< latex >}} sur votre ordinateur.
 Si vous n'avez pas installé {{\< latex >} }, nous vous recommandons d'installer [TinyTeX][tinytex] .
@@ -190,7 +190,7 @@ Cela créera un fichier appelé `my_first_quarto.pdf` que vous pouvez ouvrir en 
 Essayez-le !
 
 Vous pouvez également tricoter un `.qmd` en utilisant la ligne de commande dans la console plutôt qu'en cliquant sur l'icône de tricotage.
-Pour ce faire, il suffit d'utiliser la commande `quarto_render()` de la fonction `quarto` :package : package, comme indiqué ci-dessous.
+Pour ce faire, il suffit d'utiliser la commande `quarto_render()` de la fonction `quarto` :package: package, comme indiqué ci-dessous.
 Là encore, vous pouvez modifier le format de sortie à l'aide de la fonction `output_format =` ainsi que de nombreuses autres options.
 
 ```r
@@ -464,7 +464,7 @@ soit elles peuvent être écrites en utilisant une notation YAML à l'intérieur
 Nous utilisons la notation YAML pour les options du bloc de code car nous la trouvons beaucoup plus facile à lire lorsque vous avez plusieurs options de longues légendes.
 
 Vous pouvez également spécifier un nom (ou étiquette) facultatif pour le morceau de code, ce qui peut s'avérer utile en cas de problèmes de débogage et de rendu avancé de documents.
-Dans le bloc suivant, nous nommons le morceau de code `summary-stats`, nous chargeons le paquetage `ggplot2` `r emoji::emoji("package")` créer un cadre de données (`dataf`) avec deux variables `x` et `y`, utiliser la méthode `summary()` pour afficher des statistiques sommaires et tracer un nuage de points des données à l'aide de la fonction `ggplot()`.
+Dans le bloc suivant, nous nommons le morceau de code `summary-stats`, nous chargeons le paquet `ggplot2` `r emoji::emoji("package")` créer un cadre de données (`dataf`) avec deux variables `x` et `y`, utiliser la méthode `summary()` pour afficher des statistiques sommaires et tracer un nuage de points des données à l'aide de la fonction `ggplot()`.
 Lorsque nous exécutons le bloc de code, le code R et la sortie résultante sont affichés dans le document final.
 
 `````md
@@ -640,7 +640,7 @@ résultant en :
 
 ![En attendant l'éclipse](images/markdown/eclipse_ready.jpg){fig-align="center" width="75%" #fig-waiting}
 
-Une autre façon d'inclure des images dans votre document est d'utiliser la fonction `include_graphics()` de la fonction `knitr` du paquetage. Le code suivant produira un résultat similaire.
+Une autre façon d'inclure des images dans votre document est d'utiliser la fonction `include_graphics()` de la fonction `knitr` du paquet. Le code suivant produira un résultat similaire.
 
 ```{{r}}
 #| label: fig-knitr
@@ -713,7 +713,7 @@ dataf <- data.frame(x = x, y = y)
 plot(dataf$x, dataf$y, xlab = "x axis", ylab = "y axis")
 ```
 
-Si vous utilisez un logiciel comme `ggplot2` :package : pour créer vos parcelles, n'oubliez pas que vous devrez rendre le paquet disponible avec l'option `library()` dans le morceau de code (ou dans un morceau de code précédent).
+Si vous utilisez un logiciel comme `ggplot2` :package: pour créer vos parcelles, n'oubliez pas que vous devrez rendre le paquet disponible avec l'option `library()` dans le morceau de code (ou dans un morceau de code précédent).
 
 ```{r}
 #| label: fig-simple-ggplot
@@ -762,7 +762,7 @@ L'alignement à l'intérieur du tableau est déterminé par la position de la ba
 Pour centrer l'alignement, utilisez `:------:` pour aligner à gauche `:------` et aligner à droite `------:`.
 Bien qu'il puisse être amusant ( !) de créer des tableaux avec des balises brutes, cela n'est pratique que pour les tableaux très petits et très simples.
 
-La façon la plus simple d'inclure des tableaux dans un document Quarto est d'utiliser la fonction `kable()` de la fonction `knitr` :package : package.
+La façon la plus simple d'inclure des tableaux dans un document Quarto est d'utiliser la fonction `kable()` de la fonction `knitr` :package: package.
 La fonction `kable()` permet de créer des tableaux pour les formats HTML, PDF et Word.
 
 Pour créer un tableau des 2 premières lignes par espèce de l'échantillon `iris` à l'aide de la fonction `kable()` il suffit d'écrire
@@ -775,7 +775,7 @@ iris %>%
 kable()
 ```
 
-ou sans charger `knitr` :package : mais en indiquant où trouver le `kable()` fonction.
+ou sans charger `knitr` :package: mais en indiquant où trouver le `kable()` fonction.
 
 ```r
 iris %>%
@@ -833,7 +833,7 @@ iris %>%
   )
 ```
 
-Vous pouvez encore améliorer l'aspect de votre `kable` tables en utilisant la fonction `kableExtra` :package : package (n'oubliez pas d'installer le package au préalable !).
+Vous pouvez encore améliorer l'aspect de votre `kable` tables en utilisant la fonction `kableExtra` :package: package (n'oubliez pas d'installer le package au préalable !).
  Voir [ici][kableExtra] pour plus de détails et un tutoriel utile.
 
 Si vous voulez encore plus de contrôle et d'options de personnalisation pour vos tables, jetez un coup d'œil à l'option `gt` `r emoji::emoji("package")` [paquet][gt] .
@@ -1046,7 +1046,7 @@ suppressPackageStartupMessages(library(ggplot2))
 ```
 
 L'option `message = FALSE` et `warning = FALSE` suppriment les messages et les avertissements.
-Les `suppressPackageStartupMessages(library(ggplot2))` chargera le fichier `ggplot2` :package : mais supprimera les messages de démarrage.
+Les `suppressPackageStartupMessages(library(ggplot2))` chargera le fichier `ggplot2` :package: mais supprimera les messages de démarrage.
 
 **Le problème est le suivant :**
 

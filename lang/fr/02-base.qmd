@@ -765,7 +765,7 @@ ou vous pouvez utiliser le raccourci équivalent
 ```
 
 Les résultats de la recherche seront affichés dans RStudio sous l'onglet "Aide" comme précédemment.
-Les résultats de la recherche sont affichés dans RStudio sous l'onglet "Aide" comme précédemment. `help.search()` recherche dans la documentation d'aide, les démonstrations de code et les vignettes de paquetage et affiche les résultats sous forme de liens cliquables pour une exploration plus approfondie.
+Les résultats de la recherche sont affichés dans RStudio sous l'onglet "Aide" comme précédemment. `help.search()` recherche dans la documentation d'aide, les démonstrations de code et les vignettes de paquet et affiche les résultats sous forme de liens cliquables pour une exploration plus approfondie.
 
 ```{r}
 #| label: fig-rstudio_help2
@@ -890,13 +890,13 @@ Actuellement, le CRAN héberge plus de 15 000 paquets et est le dépôt officiel
 Bioconductor fournit des logiciels libres orientés vers la bioinformatique et héberge plus de 1800 paquets R.
 GitHub est un site web qui héberge des dépôts git pour toutes sortes de logiciels et de projets (pas seulement R).
 Souvent, les versions de développement de pointe des paquets R sont hébergées sur GitHub, donc si vous avez besoin de toutes les nouvelles fonctionnalités, cela peut être une option.
-Cependant, l'inconvénient potentiel de l'utilisation de la version de développement d'un paquetage R est qu'elle peut ne pas être aussi stable que la version hébergée sur CRAN (elle est en cours de développement !) et que la mise à jour des paquets ne sera pas automatique.
+Cependant, l'inconvénient potentiel de l'utilisation de la version de développement d'un paquet R est qu'elle peut ne pas être aussi stable que la version hébergée sur CRAN (elle est en cours de développement !) et que la mise à jour des paquets ne sera pas automatique.
 
 ### Utilisation des paquets
 
 Une fois que vous avez installé un paquet sur votre ordinateur, vous ne pouvez pas l'utiliser immédiatement.
 Pour utiliser un paquet, vous devez d'abord le charger à l'aide de la commande `library()` à l'aide de la fonction
-Par exemple, pour charger le paquet `remotes` :package : que vous avez installé précédemment
+Par exemple, pour charger le paquet `remotes` :package: que vous avez installé précédemment
 
 ```r
 library(remotes)
@@ -905,8 +905,8 @@ library(remotes)
 Les `library()` chargera également tous les paquets supplémentaires nécessaires et pourra imprimer des informations supplémentaires sur les paquets.
 Il est important de savoir que chaque fois que vous démarrez une nouvelle session R (ou que vous restaurez une session précédemment sauvegardée), vous devez charger les paquets que vous utiliserez.
 Nous avons tendance à mettre tous nos `library()` nécessaires à notre analyse en tête de nos scripts R afin de les rendre facilement accessibles et de pouvoir les compléter au fur et à mesure du développement de notre code.
-Si vous essayez d'utiliser une fonction sans avoir préalablement chargé le paquetage R correspondant, vous recevrez un message d'erreur indiquant que R n'a pas pu trouver la fonction.
-Par exemple, si vous essayez d'utiliser la fonction `install_github()` sans charger le paquetage `remotes` :package : en premier lieu, vous obtiendrez l'erreur suivante
+Si vous essayez d'utiliser une fonction sans avoir préalablement chargé le paquet R correspondant, vous recevrez un message d'erreur indiquant que R n'a pas pu trouver la fonction.
+Par exemple, si vous essayez d'utiliser la fonction `install_github()` sans charger le paquet `remotes` :package: en premier lieu, vous obtiendrez l'erreur suivante
 
 ```r
 install_github("tidyverse/dplyr")
@@ -915,14 +915,14 @@ install_github("tidyverse/dplyr")
 #  could not find function "install_github"
 ```
 
-Il peut parfois être utile d'utiliser une fonction sans utiliser au préalable le paquet :package :. `library()` fonction.
+Il peut parfois être utile d'utiliser une fonction sans utiliser au préalable le paquet :package:. `library()` fonction.
 Si, par exemple, vous n'utilisez qu'une ou deux fonctions dans votre script et que vous ne souhaitez pas charger toutes les autres fonctions d'un paquet, vous pouvez accéder directement à la fonction en spécifiant le nom du paquet, suivi de deux points, puis du nom de la fonction.
 
 ```r
 remotes::install_github("tidyverse/dplyr")
 ```
 
-C'est ainsi que nous avons pu utiliser la fonction `install()` et `install_github()` fonctions [ci-dessus] [Paquets Bioconductor] sans charger les paquets au préalable`BiocManager` :package : et `remotes` :package : .
+C'est ainsi que nous avons pu utiliser la fonction `install()` et `install_github()` fonctions [ci-dessus] [Paquets Bioconductor] sans charger les paquets au préalable`BiocManager` :package: et `remotes` :package: .
 La plupart du temps, nous recommandons d'utiliser l'option `library()` fonction.
 
 ### Installation des paquets R
@@ -951,7 +951,7 @@ La fonction `ask = FALSE` évite d'avoir à confirmer chaque téléchargement de
 #### Paquets Bioconductor
 
 Pour installer des paquets de Bioconductor, le processus est un peu différent. [un peu différent] [bioc-install] .
-Vous devez d'abord installer le programme `BiocManager` :package : package.
+Vous devez d'abord installer le programme `BiocManager` :package: package.
 Vous ne devez le faire qu'une seule fois, sauf si vous réinstallez ou mettez à jour R
 
 ```r
@@ -964,7 +964,7 @@ Une fois que le `BiocManager` a été installé, vous pouvez soit installer tous
 BiocManager::install()
 ```
 
-ou installer des paquets spécifiques tels que le `GenomicRanges` :package : et `edgeR` :package :
+ou installer des paquets spécifiques tels que le `GenomicRanges` :package: et `edgeR` :package:
 
 ```r
 BiocManager::install(c("GenomicRanges", "edgeR"))
@@ -981,16 +981,16 @@ Là encore, vous pouvez utiliser la fonction `ask = FALSE` pour éviter d'avoir 
 #### Paquets GitHub
 
 Il existe plusieurs options pour installer les paquets hébergés sur GitHub.
-La méthode la plus efficace est sans doute d'utiliser l'outil `install_github()` de la fonction `remotes` :package : package (vous avez installé ce package précédemment (@sec-cran-packages)).
+La méthode la plus efficace est sans doute d'utiliser l'outil `install_github()` de la fonction `remotes` :package: package (vous avez installé ce package précédemment (@sec-cran-packages)).
 Avant d'utiliser la fonction, vous devez connaître le nom d'utilisateur GitHub du propriétaire du dépôt ainsi que le nom du dépôt.
-Par exemple, la version de développement de `dplyr` :package : de Hadley Wickham est hébergée sur le compte GitHub de tidyverse et porte le nom de dépôt "dplyr" (recherchez simplement "github dplyr").
+Par exemple, la version de développement de `dplyr` :package: de Hadley Wickham est hébergée sur le compte GitHub de tidyverse et porte le nom de dépôt "dplyr" (recherchez simplement "github dplyr").
 Pour installer cette version depuis GitHub, utilisez
 
 ```r
 remotes::install_github("tidyverse/dplyr")
 ```
 
-Le moyen le plus sûr (à notre connaissance) de mettre à jour un paquetage installé depuis GitHub est de le réinstaller en utilisant la commande ci-dessus.
+Le moyen le plus sûr (à notre connaissance) de mettre à jour un paquet installé depuis GitHub est de le réinstaller en utilisant la commande ci-dessus.
 
 ```{r}
 #| label: links

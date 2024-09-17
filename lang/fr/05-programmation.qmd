@@ -1,7 +1,7 @@
 # Programmation {#sec-prog-r}
 
 Après avoir appris les bases, la programmation en R est la prochaine étape importante.
-Il existe déjà un grand nombre de paquets R disponibles, ce qui est certainement plus que suffisant pour couvrir tout ce que vous pourriez vouloir faire ? Pourquoi alors créer ses propres fonctions R ? Pourquoi ne pas s'en tenir aux fonctions d'un paquetage ? Dans certains cas, vous voudrez personnaliser ces fonctions existantes pour répondre à vos besoins spécifiques.
+Il existe déjà un grand nombre de paquets R disponibles, ce qui est certainement plus que suffisant pour couvrir tout ce que vous pourriez vouloir faire ? Pourquoi alors créer ses propres fonctions R ? Pourquoi ne pas s'en tenir aux fonctions d'un paquet ? Dans certains cas, vous voudrez personnaliser ces fonctions existantes pour répondre à vos besoins spécifiques.
 Il se peut aussi que vous souhaitiez mettre en œuvre une nouvelle approche, ce qui signifie qu'il n'y aura pas de packages préexistants qui fonctionneront pour vous.
 Ces deux cas de figure ne sont pas particulièrement courants.
 Les fonctions sont principalement utilisées pour faire une chose de manière simple sans avoir à taper le code nécessaire à l'exécution de cette fonction à chaque fois.
@@ -241,7 +241,7 @@ Pour cette nouvelle version de la fonction, nous avons ajouté un paramètre `da
 Nous supprimons également la `return()` puisqu'elle n'était pas nécessaire
 
 Notre fonction est maintenant compatible avec le pipe (soit en natif `|>` ou magrittr `%>%`).
-Toutefois, étant donné que la fonction utilise désormais le tuyau de `magrittr` :package : et `dplyr` :package :, nous devons charger le paquet :package : de tidyverse pour qu'elle fonctionne.
+Toutefois, étant donné que la fonction utilise désormais le tuyau de `magrittr` :package: et `dplyr` :package:, nous devons charger le paquet :package: de tidyverse pour qu'elle fonctionne.
 
 ```{r}
 #| label: mult-pipe

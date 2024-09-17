@@ -522,7 +522,7 @@ all_data <- fread(file = "data/unicorns.txt")
 ```
 
 Diverses fonctions du `readr` sont également très efficaces pour lire des fichiers de données volumineux.
-Les fonctions `readr` fait partie du paquetage ' [tidyverse][tidyverse] ' et fournit de nombreuses fonctions équivalentes à celles de la base R pour l'importation de données.
+Les fonctions `readr` fait partie du paquet ' [tidyverse][tidyverse] ' et fournit de nombreuses fonctions équivalentes à celles de la base R pour l'importation de données.
 Le programme `readr` sont utilisées de la même manière que les fonctions `read.table()` ou `read.csv()` et la plupart des arguments sont les mêmes (voir `?readr::read_table` pour plus de détails).
 Il existe cependant quelques différences.
 Par exemple, lors de l'utilisation de l'option `read_table()` la fonction `header = TRUE` est remplacé par `col_names = TRUE` et la fonction renvoie un `tibble` qui est l'équivalent dans le tidyverse d'un objet de classe `data.frame` (voir [ici][tibbles] pour les différences).
@@ -1110,7 +1110,7 @@ il semble que ce ne soit pas très ordonné ici et que nous devions l'améliorer
 ## Récapitulation des cadres de données
 
 Maintenant que nous sommes en mesure de manipuler et d'extraire des données de nos cadres de données, notre prochaine tâche est de commencer à explorer et à connaître nos données.
-Dans cette section, nous commencerons à produire des tableaux de statistiques récapitulatives utiles sur les variables de notre base de données et, dans les deux chapitres suivants, nous aborderons la visualisation de nos données à l'aide de graphiques R de base et l'utilisation de la fonction `ggplot2` et l'utilisation du paquetage
+Dans cette section, nous commencerons à produire des tableaux de statistiques récapitulatives utiles sur les variables de notre base de données et, dans les deux chapitres suivants, nous aborderons la visualisation de nos données à l'aide de graphiques R de base et l'utilisation de la fonction `ggplot2` et l'utilisation du paquet
 
 Un point de départ très utile consiste à produire des statistiques récapitulatives simples pour toutes les variables de notre cadre de données. `unicorns` à l'aide de la fonction `summary()` à l'aide de la fonction
 

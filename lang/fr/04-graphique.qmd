@@ -699,7 +699,7 @@ Une fois que vous avez terminé vos tracés, n'oubliez pas de réinitialiser vot
 En plus des fonctions facet_grid() et facet_wrap qui permettent de répéter et d'organiser facilement plusieurs tracés en fonction de variables spécifiques, ggplot permet d'organiser plusieurs ggplots ensemble.
 L'approche que nous recommandons est d'utiliser le paquet `patchwork`.
 
-Vous devrez d'abord l'installer (si vous ne l'avez pas encore) et créer le fichier `patchwork` :package : disponible.
+Vous devrez d'abord l'installer (si vous ne l'avez pas encore) et créer le fichier `patchwork` :package: disponible.
 
 ```{r}
 #| label: loading-patchwork
@@ -837,7 +837,7 @@ D'autres fonctions utiles sont ; `jpeg()`, `tiff()` et `bmp()`.
 Des arguments supplémentaires à ces fonctions vous permettent de modifier la taille, la résolution et la couleur d'arrière-plan de vos images enregistrées.
 Voir aussi `?png` pour plus de détails.
 
-`ggplot2` :package : fournir une fonction très utile `ggsave()` qui simplifie grandement la sauvegarde des tracés, mais ne fonctionne que pour les ggplots.
+`ggplot2` :package: fournir une fonction très utile `ggsave()` qui simplifie grandement la sauvegarde des tracés, mais ne fonctionne que pour les ggplots.
 
 Après avoir produit un tracé et l'avoir vu dans votre IDE, vous pouvez simplement exécuter ggsave() avec l'argument adéquat pour sauvegarder le dernier ggplot produit.
 Vous pouvez aussi, bien sûr, spécifier quel tracé doit être sauvegardé.

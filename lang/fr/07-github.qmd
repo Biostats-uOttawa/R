@@ -615,7 +615,7 @@ Dans RStudio, ouvrez le fichier `first_repo.Rproj` que vous avez créé précéd
 Apportez quelques modifications à ce document.
 Supprimez la ligne commençant par "Ma première version contrôlée..." et remplacez-la par quelque chose de plus informatif (voir figure ci-dessous).
 Nous allons également changer les symboles de tracé en rouge et donner des étiquettes aux axes de tracé.
-Enfin, ajoutons un tableau récapitulatif du cadre de données à l'aide de la commande `kable()` et `summary()` (il se peut que vous ayez besoin d'installer le programme `knitr` si vous ne l'avez pas fait auparavant pour utiliser le paquetage `kable()` ) et enfin rendre ce document au format pdf en changeant l'option YAML en `output: pdf_document`.
+Enfin, ajoutons un tableau récapitulatif du cadre de données à l'aide de la commande `kable()` et `summary()` (il se peut que vous ayez besoin d'installer le programme `knitr` si vous ne l'avez pas fait auparavant pour utiliser le paquet `kable()` ) et enfin rendre ce document au format pdf en changeant l'option YAML en `output: pdf_document`.
 
 ```{r}
 #| label: fig-mod1
