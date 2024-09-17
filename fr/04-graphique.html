@@ -504,7 +504,7 @@ Figure&nbsp;4.1: La grammaire graphique. Visuel de Thomas de Beus
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">fluffyness</span> <span class="op">~</span> <span class="va">weight</span>, data <span class="op">=</span> <span class="va">unicorns</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-plot5" class="quarto-float quarto-figure quarto-figure-center anchored" width="75%" data-fig-align="center">
+<div id="fig-plot5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="75%">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-graphique_files/figure-html/fig-plot5-1.png" id="fig-plot5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
 </div>
@@ -551,7 +551,7 @@ Figure&nbsp;4.2
 <span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-plot5-gg" class="quarto-float quarto-figure quarto-figure-center anchored" width="75%" data-fig-align="center">
+<div id="fig-plot5-gg" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="75%">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-plot5-gg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-graphique_files/figure-html/fig-plot5-gg-1.png" id="fig-plot5-gg" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:75.0%">
 </div>
@@ -1008,7 +1008,7 @@ Figure&nbsp;4.3
 </section><section id="ggplot" class="level3" data-number="4.4.2"><h3 data-number="4.4.2" class="anchored" data-anchor-id="ggplot">
 <span class="header-section-number">4.4.2</span> ggplot</h3>
 <p>En plus des fonctions facet_grid() et facet_wrap qui permettent de répéter et d’organiser facilement plusieurs tracés en fonction de variables spécifiques, ggplot permet d’organiser plusieurs ggplots ensemble. L’approche que nous recommandons est d’utiliser le paquet <code>patchwork</code>.</p>
-<p>Vous devrez d’abord l’installer (si vous ne l’avez pas encore) et créer le fichier <code>patchwork</code> :package : disponible.</p>
+<p>Vous devrez d’abord l’installer (si vous ne l’avez pas encore) et créer le fichier <code>patchwork</code> <span class="emoji" data-emoji="package">📦</span> disponible.</p>
 <div class="cell">
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"patchwork"</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com">patchwork</a></span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1091,7 +1091,7 @@ Figure&nbsp;4.3
 <span><span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html">dev.off</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>D’autres fonctions utiles sont ; <code><a href="https://rdrr.io/r/grDevices/png.html">jpeg()</a></code>, <code><a href="https://rdrr.io/r/grDevices/png.html">tiff()</a></code> et <code><a href="https://rdrr.io/r/grDevices/png.html">bmp()</a></code>. Des arguments supplémentaires à ces fonctions vous permettent de modifier la taille, la résolution et la couleur d’arrière-plan de vos images enregistrées. Voir aussi <code><a href="https://rdrr.io/r/grDevices/png.html">?png</a></code> pour plus de détails.</p>
-<p><code>ggplot2</code> :package : fournir une fonction très utile <code>ggsave()</code> qui simplifie grandement la sauvegarde des tracés, mais ne fonctionne que pour les ggplots.</p>
+<p><code>ggplot2</code> <span class="emoji" data-emoji="package">📦</span> fournir une fonction très utile <code>ggsave()</code> qui simplifie grandement la sauvegarde des tracés, mais ne fonctionne que pour les ggplots.</p>
 <p>Après avoir produit un tracé et l’avoir vu dans votre IDE, vous pouvez simplement exécuter ggsave() avec l’argument adéquat pour sauvegarder le dernier ggplot produit. Vous pouvez aussi, bien sûr, spécifier quel tracé doit être sauvegardé.</p>
 <div class="cell">
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggsave</span><span class="op">(</span><span class="st">"file.png"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
