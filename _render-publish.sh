@@ -17,3 +17,7 @@ done
   echo Done rendering now fixing links
 
 quarto run scripts/fix-links.r "${lang[@]}"
+
+  echo Now deploying to github-pages
+
+npm run deploy
