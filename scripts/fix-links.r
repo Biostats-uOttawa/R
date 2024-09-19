@@ -3,7 +3,7 @@
 
 args <- commandArgs(trailingOnly = TRUE)
 
-#lang <- c("en", "fr")
+# lang <- c("en", "fr")
 
 library(tidyverse)
 
@@ -18,6 +18,7 @@ files <- files[-length(files)]
 dat0 <- tibble(f_files = files, v1 = files) %>%
   separate(v1, into = c("lang", "file"), sep = "/") %>%
   separate(file, into = c("nb", "name"), sep = "-") %>%
+  mutate(name =gsub(".html", ".qmd", name)) %>%
   drop_na()
 
 
@@ -36,7 +37,11 @@ for (i in lang) {
           pattern = paste0("./../", j, '"'),
           replace = paste0("./../", dat_f$f_files.y[k], '"')
         ) |>
-        writeLines(con = paste0("_book/", dat_f$f_files.x[k]))
+        stringr::str_replace(
+          pattern = paste0("/edit/main/", dat_f$nb[k]),
+          replace = paste0("/edit/main/lang/", i,"/", dat_f$nb[k])
+        )|>
+      writeLines(con = paste0("_book/", dat_f$f_files.x[k]))
     }
   }
 }
