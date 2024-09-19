@@ -121,7 +121,7 @@ Un moyen léger mais efficace de travailler avec R est d'utiliser des éditeurs 
 - [gedit][gedit] (Linux ; livré avec la plupart des distributions Linux)
 - [MacVim][macvim] (Mac OS)
 - [Nano][nano] (Linux)
-- [Notepad++] [notepad] (en anglais) (Windows)
+- [Notepad++][notepad] (en anglais) (Windows)
 - [Sublime Text][sublime] (tous les systèmes d'exploitation)
 - [vim][vim] et son extension [NVim-R][nvim-r] (Linux)
 
@@ -372,7 +372,7 @@ ou
 dat <- read.csv("/home/julien/Documents/courses/biostats/R_way/data/mydata.csv")
 ```
 
-Pour ceux d'entre vous qui souhaitent pousser plus loin la notion de chemins d'accès relatifs aux fichiers, jetez un coup d'œil à la fonction `here()` du paquet `here` [paquet][here] .
+Pour ceux d'entre vous qui souhaitent pousser plus loin la notion de chemins d'accès relatifs aux fichiers, jetez un coup d'œil à la fonction `here()` du [paquet][here] `here` `r emoji::emoji("package")`.
 La fonction `here()` vous permet de créer des chemins d'accès pour n'importe quel fichier par rapport au répertoire racine du projet, qui ne dépendent pas du système d'exploitation (fonctionne sur une machine Mac, Windows ou Linux).
 Par exemple, pour importer notre `mydata.csv` à partir du répertoire `data` il suffit d'utiliser :
 
@@ -493,7 +493,7 @@ Une autre approche est d'utiliser la fonction `dir.create()` dans la console R.
 
 ```r
 # créer un répertoire appelé 'données'
-dir.create("donnée")
+dir.create("données")
 ```
 
 ## Organisation des projets {#sec-rsprojs}
