@@ -131,6 +131,33 @@ Notes
 
 ::::::
 
+
+:::::: {#sec-augustin layout="[29, -1, 70]"}
+![](images/author/default_circ.jpg){fig-align="center" width="100%"}
+
+<div>
+
+**Augustin Birot** est étudiant au doctorat à l'Université d'Ottawa en Écologie évolutive. 
+
+::: {.content-visible when-format="pdf"}
+-   {{< fa bookmark >}}: page du labo <https://juliengamartin.github.io/people/people/>
+<!-- -   {{< fa brands github >}}: <https://github.com/juliengamartin> -->
+:::
+
+::: {.content-visible when-format="html"}
+-   {{< fa bookmark >}}: [page du labo](https://juliengamartin.github.io/people/people/)
+<!---   {{< fa brands twitter >}}:
+    [jgamartin](https://twitter.com/jgamartin)
+-   {{< fa brands github >}}:
+    [juliengamartin](https://github.com/juliengamartin)
+-->
+:::
+
+</div>
+
+::::::
+
+
 ## Remerciements {.unnumbered}
 
 La première partie du livre sur l'utilisation de R a commencé comme un fork sur github à partir de l'excellent livre
