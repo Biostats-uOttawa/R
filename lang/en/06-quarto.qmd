@@ -17,7 +17,7 @@ screenshot are still with R markdown will be update soon
 This chapter will introduce you to creating reproducible reports using R markdown / Quarto to encourage best (or better) practice to facilitate open science.
 It will first describe what R markdown and Quarto are and why you might want to consider using it, describe how to create a Quarto document using RStudio and then how to convert this document to a html or pdf formatted report.
 During this Chapter you will learn:
-
+cgthcxgnxcgnxgcnh
 * the different components of a Quarto document
 * how to format text, graphics and tables within the document
 * how to avoid some of the common difficulties using Quarto.
