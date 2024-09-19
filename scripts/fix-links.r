@@ -18,8 +18,8 @@ files <- files[-length(files)]
 dat0 <- tibble(f_files = files, v1 = files) %>%
   separate(v1, into = c("lang", "file"), sep = "/") %>%
   separate(file, into = c("nb", "name"), sep = "-") %>%
-  mutate(name =gsub(".html", ".qmd", name)) %>%
-  drop_na()
+  mutate(nb =gsub(".html", "", nb))# %>%
+  #drop_na()
 
 
 for (i in lang) {
