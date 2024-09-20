@@ -1,7 +1,6 @@
 ---
 title: |
-  On the R-Way to hell </br>
-  Sur le chemin de l'enf-R
+  On the R-Way to hell
 
 #include-in-header:
 #  text: |
@@ -18,10 +17,7 @@ format:
 }
 </style>
 
-::: {layout-ncol=2}
+[![](images/hex/Rway_logo_hex_en.png){fig-align=center}](https://biostats-uottawa.github.io/Rway/)
 
-[![](images/hex/Rway_logo_hex_en.png)](https://biostats-uottawa.github.io/Rway/)
 
-[![](images/hex/Rway_logo_hex_fr.png)](https://biostats-uottawa.github.io/enfR/)
-
-:::
+The book site has migrated. Click on the image to go to the new site or use the link <https://biostats-uottawa.github.io/Rway/>
